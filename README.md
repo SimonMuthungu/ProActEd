@@ -8,7 +8,7 @@ Project Description (Brief overview of your project)
 - [Bentheaya Valagu](https://github.com/bentheayavalagu)
 - [Steven Ochieng](https://github.com/stevocy)
 - [Simon Muthungu](https://github.com/simonmuthungu)
-- [Amakalu Vitalis](https://github.com/Mer Vitz)
+- [Amakalu Vitalis](https://github.com/MerVitz)
 ## Introduction
 
 A brief introduction to your project. Explain its purpose, what it does, and why it's important.
