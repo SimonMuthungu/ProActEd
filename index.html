@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <button class="login-button" onclick="loginAsStudent()">Login as Student</button>
+        <button class="login-button" onclick="loginAsAdmin()">Login as Admin</button>
+    </div>
+    <!-- STUDENT PAGE -->
+    <div id="student-page" style="display: none;">
+        <!-- Navigation menu with Logout button -->
+        <div class="navigation-menu">
+            <button onclick="logout()">Logout</button>
+        </div>        
+        <div class="sidebar">
+            <ul>
+                <li><a href="#check-progress">Check my progress</a></li>
+                <li><a href="#intervention">Intervention</a></li>
+                <li><a href="#course-recommendation">Course Recommendation</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <!-- Your student page content goes here -->
+            <h1>Welcome, Student!</h1>
+            <!-- Add your content below -->
+        </div>
+    </div>
+    <!-- ADMINSTATOR PAGE -->
+    <div id="admin-page" style="display: none;">
+        <div class="navigation-menu">
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <div class="sidebar">
+            <ul>
+                <li><a href="#admin-dashboard">Admin Dashboard</a></li>
+                <li><a href="#manage-users">Manage Users</a></li>
+                <li><a href="#reports">Reports</a></li>
+            </ul>
+        </div>
+    </div>    
+    <script src="script.js"></script>
+</body>
+</html>
