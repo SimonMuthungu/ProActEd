@@ -4,12 +4,11 @@ Project Description (Brief overview of your project)
 
 ## Contributors
 
-- [Simon Muthungu](https://github.com/simonmuthungu)
-- [Amakalu Vitalis](https://github.com/amakaluvitalis)
 - [Mercy Achieng](https://github.com/mercyachieng)
 - [Bentheaya Valagu](https://github.com/bentheayavalagu)
 - [Steven Ochieng](https://github.com/stevenochieng)
-
+- [Simon Muthungu](https://github.com/simonmuthungu)
+- [Amakalu Vitalis](https://github.com/amakaluvitalis)
 ## Introduction
 
 A brief introduction to your project. Explain its purpose, what it does, and why it's important.
