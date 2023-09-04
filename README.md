@@ -5,7 +5,7 @@ Project Description (Brief overview of your project)
 ## Contributors
 
 - [Mercy Achieng](https://github.com/OkeyoMercy)
-- [Bentheaya Valagu](https://github.com/bentheayavalagu)
+- [bentheaya](https://github.com/bentheayavalagu)
 - [Steven Ochieng](https://github.com/stevocy)
 - [Simon Muthungu](https://github.com/simonmuthungu)
 - [Amakalu Vitalis](https://github.com/MerVitz)
