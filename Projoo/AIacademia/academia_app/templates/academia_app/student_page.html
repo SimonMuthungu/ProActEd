@@ -1,0 +1,28 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="navigation-menu">
+        {% comment %} <a href="{% url 'logout' %}" class="logout-button">Logout</a> {% endcomment %}
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#check-progress">Check my progress</a></li>
+            <li><a href="#intervention">Intervention</a></li>
+            <li><a href="#course-recommendation">Course Recommendation</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Welcome, Student!</h1>
+        <!-- Add your content specific to the student page here -->
+    </div>
+</body>
+</html>
