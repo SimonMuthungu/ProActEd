@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="navigation-menu">
+        {% comment %} <a href="{% url 'logout' %}" class="logout-button">Logout</a> {% endcomment %}
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#admin-dashboard">Admin Dashboard</a></li>
+            <li><a href="#manage-users">Manage Users</a></li>
+            <li><a href="#reports">Reports</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="welcome-admin">
+            <h1>Welcome, Admin!</h1>
+        </div>
+        <!-- Add your content specific to the admin page here -->
+    </div>
+</body>
+</html>
