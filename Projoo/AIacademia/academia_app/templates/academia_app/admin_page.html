@@ -6,24 +6,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Page</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'adminstyles.css' %}">
 </head>
 <body>
     <div class="navigation-menu">
-        {% comment %} <a href="{% url 'logout' %}" class="logout-button">Logout</a> {% endcomment %}
+        <h1>Welcome, Admin!</h1>
+        <a class= logout>Logout</a>
     </div>
-    <div class="sidebar">
-        <ul>
-            <li><a href="#admin-dashboard">Admin Dashboard</a></li>
-            <li><a href="#manage-users">Manage Users</a></li>
-            <li><a href="#reports">Reports</a></li>
-        </ul>
+    <div class="search-student">
+        <form action="search_student_endpoint"> <!-- Replace 'search_student_endpoint' with the actual endpoint for searching -->
+            <label for="registration_number">Student Registration Number:</label>
+            <input type="text" id="registration_number" name="registration_number" placeholder="Enter registration number">
+            <button type="submit">Search</button>
+        </form>
     </div>
-    <div class="content">
-        <div class="welcome-admin">
-            <h1>Welcome, Admin!</h1>
-        </div>
+
+<div class="content">
+    <div class="school-grid">
+        {% for school in school_data %}
+            <div class="content-item">
+                <a href="#{{ school.name }}" class="school-button">{{ school.name }}</a>
+                <div id="{{ school.name }}" class="departments-container">
+                    <select>
+                        <option>Select Department</option>
+                        {% for department in school.departments %}
+                            <option>{{ department }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>       
         <!-- Add your content specific to the admin page here -->
     </div>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Email: admin@example.com</p>
+            <p>Phone: +254 (7) 437-20033</p>
+        </div>
+        <div class="links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 ProActEd University. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
