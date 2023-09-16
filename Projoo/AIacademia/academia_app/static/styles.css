@@ -34,7 +34,7 @@ body {
 
     .navigation-menu button {
         background-color: #ff4500;
-        color: #fff;
+        color: #000;
         border: none;
         border-radius: 5px;
         padding: 5px 10px;
@@ -72,11 +72,10 @@ body {
         padding: 50px;
     }
     .welcome-admin {
-        position: absolute;
-        top: 0;
-        right: 0;
         padding: 20px;
-        background-color: #f0f0f0; /* You can change the background color to your preference */
+        text-align: right;
+        background-color: #007bff;
+        margin-top: 10px;
     }
 
     /* Add more specific styles for your content as needed */
