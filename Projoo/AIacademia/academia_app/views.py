@@ -33,6 +33,6 @@ def admin_page(request):
         {'name': 'School 19', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
         {'name': 'School 20', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
         # Add data for other schools similarly
-    ]
+]
     context = {'school_data': school_data}
     return render(request, 'academia_app/admin_page.html', context)
