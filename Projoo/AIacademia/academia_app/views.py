@@ -12,26 +12,20 @@ def admin_page(request):
 def admin_page(request):
     # Define school data with departments
     school_data = [
-        {'name': 'School 1', 'departments': ['Department A', 'Department B', 'Department C', 'Department D', 'Department E']},
-        {'name': 'School 2', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
-        {'name': 'School 3', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
-        {'name': 'School 4', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
-        {'name': 'School 5', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
-        {'name': 'School 6', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
-        {'name': 'School 7', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
-        {'name': 'School 8', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
-        {'name': 'School 9', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
-        {'name': 'School 10', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
-        {'name': 'School 11', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
-        {'name': 'School 12', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
-        {'name': 'School 13', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
-        {'name': 'School 14', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
-        {'name': 'School 15', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
-        {'name': 'School 16', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
-        {'name': 'School 17', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
-        {'name': 'School 18', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
-        {'name': 'School 19', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
-        {'name': 'School 20', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
+        {'name': 'SCI', 'departments': ['computer science', 'IT'], 'cs':['Computer Science', 'cct'], 'IT':['ict', 'it']},
+        {'name': 'SOE', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
+        {'name': 'SOP', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
+        {'name': 'SPA', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
+        {'name': 'SOM', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
+        {'name': 'SON', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
+        {'name': 'SDSS', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
+        {'name': 'SPDS', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
+        {'name': 'SAFE', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
+        {'name': 'SASS', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
+        {'name': 'SBE', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
+        {'name': 'SPCD', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
+        {'name': 'SMSAS', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
+        
         # Add data for other schools similarly
 ]
     context = {'school_data': school_data}

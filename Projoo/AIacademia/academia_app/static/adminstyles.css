@@ -121,6 +121,16 @@
     }
 }
 
+  .options {
+    display: none;
+    /* list-style: none; */
+    padding: 0;
+    margin: 0;
+}
+
+.hover-container:hover .options {
+    display: block;
+}
 
 
 /* Add more specific styles for your content as needed */
