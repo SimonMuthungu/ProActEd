@@ -27,7 +27,7 @@
     <div class="school-grid">
         {% for school in school_data %}
             <div class="content-item">
-                <a href="#{{ school.name }}" class="school-button">{{ school.name }}</a>
+                <a href="{{ school.name }}" class="school-button">{{ school.name }}</a>
                 <div id="{{ school.name }}" class="departments-container">
 
                     <div class="hover-container">

@@ -14,7 +14,7 @@
 .navigation-menu h1 {
     font-size: 20px;
     color: black; 
-    text-align: right;
+    text-align: center;
 }
 .navigation-menu a.logout-button {
     color: #fff;
