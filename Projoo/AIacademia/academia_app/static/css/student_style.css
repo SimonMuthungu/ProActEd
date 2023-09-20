@@ -1,0 +1,136 @@
+ /* Styles for the navigation menu */
+ .navigation-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 2px;
+    text-align: right;
+    margin-bottom: auto;
+    z-index: 1000;
+}
+.navigation-menu h1 {
+    font-size: 20px;
+    color: black; 
+    text-align: right;
+}
+.navigation-menu a.logout-button {
+    color: #fff;
+    text-decoration: dotted;
+}
+/* Styles for the "welcome-admin" section */
+.search-student {
+    position: fixed;
+    background-color: #f0f0f0;
+    padding: 5px;
+    right: 0;
+    top: 75px;
+    left: 0;
+    text-align: center;
+    z-index: 1000;
+}
+.search-student button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for the content section */
+/* .content {
+    float: left;
+    width: 80%;
+    padding: 0px;
+} */
+.content {
+    display: flex;/* Use Flexbox */
+    flex-direction: column; 
+    flex-wrap: wrap; /* Allow content to wrap to the next row if needed */
+    padding: 10px;
+    margin-top: 130px
+}
+.content-item {
+    flex: 1; /* Distribute space evenly among items */
+    margin: 10px; /* Add spacing between items */
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    text-align: center;
+    transition: transform 0.2s, background-color 0.2s, color 0.2s;
+}
+.content-item:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+    background-color: rgba(175, 185, 195, 0.7);; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+.school-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as needed */
+    grid-gap: 10px; /* Add spacing between items */
+}
+.content-item a.school-button {
+    color: #007bff; /* Use a distinct color for school names */
+    font-weight: bold; /* Make school names bold for visibility */
+    text-decoration: none;
+}
+
+/* Styles for the footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact-info, .links, .copyright {
+    flex: 1;
+    padding: 10px;
+}
+
+.links ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Display list items horizontally */
+}
+
+.links li {
+    margin-right: 20px; /* Add spacing between list items */
+    margin-bottom: 10px;
+}
+
+.links li:last-child {
+    margin-right: 0; /* Remove spacing from the last item */
+}
+
+/* Make sure to adjust the styles to match your design preferences */
+@media (max-width: 768px) {
+    /* Adjust the number of columns for smaller screens (e.g., 2 columns) */
+    .school-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    /* Adjust the number of columns for very small screens (e.g., 1 column) */
+    .school-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+  .options {
+    display: none;
+    /* list-style: none; */
+    padding: 0;
+    margin: 0;
+}
+
+.hover-container:hover .options {
+    display: block;
+}
+
+
+/* Add more specific styles for your content as needed */
