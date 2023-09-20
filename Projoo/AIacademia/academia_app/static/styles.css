@@ -21,7 +21,7 @@ body {
     cursor: pointer;
 }
     /* Styles for the student page section */
-    #student-page {
+     #student-page {
         display: none;
     }
 
@@ -71,11 +71,4 @@ body {
         width: 80%;
         padding: 50px;
     }
-    .welcome-admin {
-        padding: 20px;
-        text-align: right;
-        background-color: #007bff;
-        margin-top: 10px;
-    }
-
-    /* Add more specific styles for your content as needed */
+    
