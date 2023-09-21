@@ -21,103 +21,10 @@
             <button type="submit">Search</button>
         </form>
     </div>
-
-<div class="content">
-    <div class="school-grid">
-        {% for school in school_data %}
-            <div class="content-item">
-                <a href="#{{ school.name }}" class="school-button">{{ school.name }}</a>
-                <div id="{{ school.name }}" class="departments-container">
-
-                    <div class="hover-container">
-                    <select>
-                       
-                                {% for department in school.departments %}
-                                
-                                    <option value="option1">{{ department }}</option>
-                                    {% if department == 'computer science' %}
-                                    <optgroup class="options" label="program">
-                                        {% for course in school.cs %}
-                                        <option value="option3-1">{{ course }}</option>
-                                        {% endfor %}
-                                      </optgroup>
-                                    {% else %}
-                                    <optgroup class="options" label="program">
-                                        {% for course in school.IT %}
-                                        <option value="option3-1">{{ course }}</option>
-
-                                        {% endfor %}
-                                      </optgroup>
-                                      {% endif %}
-                                
-                                {% endfor %}
-                                
-                        
-                        </select>
-                    </div>
-                        
-                </div>
-            </div>
-        {% endfor %}
-    </div>
-</div>       
-
+    <div class="content">
+            
+    </div>              
         <!-- Add your content specific to the admin page here -->
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </div>
-
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </div>
-
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </div>
-
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </div>
-
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </div>
-    </div>
 <footer class="footer">
     <div class="footer-content">
         <div class="contact-info">
@@ -139,6 +46,33 @@
         </div>
     </div>
 </footer>
-
+<script src="{% static 'script.js' %}"></script>
 </body>
 </html>
+
+
+
+{% comment %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Dropdowns</title>
+<script src="{% static 'script.js' %}"></script>
+</head>
+<body>
+
+<select id="department" onchange="updateCourses()">
+    <option value="select">Select Department</option>
+    {% for department in departments %}
+        <option value="{{ department.id }}">{{ department.name }}</option>
+    {% endfor %}
+</select>
+
+<select id="courses" style="display:none;">
+    <!-- Courses will be added here dynamically -->
+</select>
+
+</body>
+</html> {% endcomment %}

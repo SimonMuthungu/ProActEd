@@ -77,10 +77,15 @@ WSGI_APPLICATION = 'AIacademia.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'proacteddb',
+        'USER': 'proacted',
+        'PASSWORD': ' ',
+        'HOST': 'localhost',  # Change this if your database is hosted elsewhere
+        'PORT': '',           # Leave empty to use the default MySQL port (3306)
     }
 }
+
 
 
 # Password validation
