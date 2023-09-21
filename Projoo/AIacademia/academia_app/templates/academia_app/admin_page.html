@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Page</title>
 
-    <link rel="stylesheet" type="text/css" href="{% static 'adminstyles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/adminstyles.css' %}">
+
 </head>
 <body>
     <div class="navigation-menu">
@@ -21,10 +22,48 @@
             <button type="submit">Search</button>
         </form>
     </div>
-    <div class="content">
-            
-    </div>              
-        <!-- Add your content specific to the admin page here -->
+
+<div class="content">
+    <div class="school-grid">
+        {% for school in school_data %}
+            <div class="content-item">
+                <a href="{{ school.name }}" class="school-button">{{ school.name }}</a>
+                <div id="{{ school.name }}" class="departments-container">
+
+                    <div class="hover-container">
+                    <select>
+                       
+                                {% for department in school.departments %}
+                                
+                                    <option value="option1">{{ department }}</option>
+                                    {% if department == 'computer science' %}
+                                    <optgroup class="options" label="program">
+                                        {% for course in school.cs %}
+                                        <option value="option3-1">{{ course }}</option>
+                                        {% endfor %}
+                                      </optgroup>
+                                    {% else %}
+                                    <optgroup class="options" label="program">
+                                        {% for course in school.IT %}
+                                        <option value="option3-1">{{ course }}</option>
+
+                                        {% endfor %}
+                                      </optgroup>
+                                      {% endif %}
+                                
+                                {% endfor %}
+                                
+                        
+                        </select>
+                    </div>
+                        
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>       
+
+
 <footer class="footer">
     <div class="footer-content">
         <div class="contact-info">
