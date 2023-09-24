@@ -41,37 +41,61 @@
     width: 80%;
     padding: 0px;
 } */
+
+
+
+/* Existing styles for other sections remain unchanged */
+
+/* Styles for the content section */
 .content {
-    display: flex;/* Use Flexbox */
-    flex-direction: column; 
-    flex-wrap: wrap; /* Allow content to wrap to the next row if needed */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     padding: 10px;
-    margin-top: 130px
+    margin-top: 130px;
 }
-.content-item {
-    flex: 1; /* Distribute space evenly among items */
-    margin: 10px; /* Add spacing between items */
-    padding: 20px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    text-align: center;
-    transition: transform 0.2s, background-color 0.2s, color 0.2s;
-}
-.content-item:hover {
-    transform: scale(1.05); /* Scale up slightly on hover */
-    background-color: rgba(175, 185, 195, 0.7);; /* Change background color on hover */
-    color: #fff; /* Change text color on hover */
-}
+
 .school-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as needed */
-    grid-gap: 10px; /* Add spacing between items */
+    grid-gap: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
 }
-.content-item a.school-button {
+
+/* Styles for school names within the school grid */
+.school-grid h2 {
+    font-size: 20px;
     color: #007bff; /* Use a distinct color for school names */
     font-weight: bold; /* Make school names bold for visibility */
-    text-decoration: none;
+    margin-bottom: 10px; /* Add spacing between school name and selects */
 }
+
+.departments-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styles for department selects within each school grid */
+.department-select, .course-select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.course-select {
+    display: none; /* Initially hide course selects */
+}
+
+/* Add more specific styles for your content as needed */
+
+
+
+
 
 /* Styles for the footer */
 .footer {
