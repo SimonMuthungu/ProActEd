@@ -5,7 +5,7 @@ from django.db import models
 class School_database(models.Model):
     School = models.CharField(max_length=200)
     Department = models.CharField(max_length=200)
-    Courses = models.CharField(max_length=200)
+    Courses = models.CharField(max_length=199)
 
 
 # class Choice(models.Model):

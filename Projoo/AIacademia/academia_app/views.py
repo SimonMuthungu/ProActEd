@@ -14,7 +14,7 @@ def admin_page(request):
     school_data = [
         {'name': 'SCI', 'departments': ['computer science', 'IT'], 'cs':['Computer Science', 'cct'], 'IT':['ict', 'it']},
         {'name': 'SOE', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
-        {'name': 'SOP', 'departments': ['Pharmacology and Pharmacognosy', 'Pharmaceutical chemistry and analysis'], 'ph&ph':[''], 'Phca': ['']}
+        {'name': 'SOP', 'departments': ['Pharmacology and Pharmacognosy', 'Pharmaceutical chemistry and analysis'], 'ph&ph':['']},
         {'name': 'SPA', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
         {'name': 'SOM', 'departments': ['Bachelor of Medicine and Surgery', 'Bachelor of Medicine in Family and Emergency Medicine', 'Bachelor of Medicine in General Surgery']},
         {'name': 'SON', 'departments': ['Community Health Nursing', 'Midwifery Nursing', 'Medical Surgical Nursing', 'Nursing Education, leadership & Research'], 'CHN': ['BSc. Nursing with IT']},
