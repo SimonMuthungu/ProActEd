@@ -1,14 +1,14 @@
+# models.py
+
 from django.db import models
 
-# Create your models here.
+class School(models.Model):
+    name = models.CharField(max_length=100)
 
-class School_database(models.Model):
-    School = models.CharField(max_length=200)
-    Department = models.CharField(max_length=200)
-    Courses = models.CharField(max_length=200)
+class Department(models.Model):
+    name = models.CharField(max_length=100)
+    school = models.ForeignKey(School, on_delete=models.CASCADE)
 
-
-# class Choice(models.Model):
-#     question = models.ForeignKey(Question, on_delete=models.CASCADE)
-#     choice_text = models.CharField(max_length=200)
-#     votes = models.IntegerField(default=0)
+class Course(models.Model):
+    name = models.CharField(max_length=100)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE)
