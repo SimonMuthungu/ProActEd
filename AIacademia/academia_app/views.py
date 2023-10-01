@@ -1,18 +1,36 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse  # Import JsonResponse for AJAX responses
+from academia_app.models import Department
 
-# Create your views here.
+# Other imports
+
+def department_list(request):
+    all_departments = Department.objects.all()
+    return render(request, 'template_name.html', {'departments': all_departments})
+
+
 def login(request):
     return render(request, "academia_app/login.html")
+
 def student_page(request):
     return render(request, "academia_app/student_page.html")
+
 def admin_page(request):
     return render(request, "academia_app/admin_page.html")
 
-
-from .models import School, Department
+from .models import School, Department, Course
 
 def school_list(request):
     schools = School.objects.all()
     departments = Department.objects.all()
-    return render(request, 'school_list.html', {'schools': schools, 'departments': departments})
+    return render(request, 'admin_page.html', {'schools': schools, 'departments': departments})
+
+def get_courses(request, department_id):
+    # Retrieve courses for the selected department
+    courses = Course.objects.filter(department_id=department_id).values('id', 'name')
+    
+    # Convert courses to a list of dictionaries
+    course_list = list(courses)
+
+    # Return courses as JSON response
+    return JsonResponse(course_list, safe=False)
