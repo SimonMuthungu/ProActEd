@@ -23,14 +23,14 @@
         </form>
     </div>
     <div class="content">
-        {% for school in schools %}
+        {% for school in school_data %}
             <div class="school-grid">
                 <h2>{{ school.name }}</h2>
                 <div class="departments-container">
                     <select class="department-select" data-school="{{ school.name }}" onchange="updateCourses(this)">
                         <option value="select">Select Department</option>
                         {% for department in school.departments %}
-                            <option value="{{ department.id }}">{{ department.name }}</option>
+                            <option value="{{ department.id }}">{{ department }}</option>
                         {% endfor %}
                     </select>
                     <select class="course-select" style="display:none;">
