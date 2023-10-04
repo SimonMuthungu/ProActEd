@@ -2,7 +2,6 @@
 import pandas as pd
 import random
 
-# df = pd.DataFrame(data)
 
 # Automatically creating one
 def create_dataset(total_lessons, no_of_students_to_create):
@@ -81,6 +80,7 @@ def create_dataset(total_lessons, no_of_students_to_create):
             passed.append(0)
             counting += 1
 
+
         dummy_data = {
         # 'Name': ['Galavu', 'Mercy', 'Simon', 'Moncrief', 'Mervitz', 'John', 'Julian'],
         'Lessons_Attended': lessons_attended,
@@ -89,10 +89,12 @@ def create_dataset(total_lessons, no_of_students_to_create):
         'passed': passed
         }
 
+    df = pd.DataFrame(dummy_data)
+    df.to_excel(r'C:\Users\Simon\proacted\ProActEd\Projoo\AIacademia\python_scripts\Dummy_dataset.xlsx', index=False)
+
+
     return lessons_attended, total_lessons_that_semester, aggregate_points, passed
 
 
 
-# # Saving the DataFrame to an Excel file
-# df.to_excel(r'C:\Users\Simon\proacted\ProActEd\Projoo\AIacademia\python_scripts\Dummy_dataset.xlsx', index=False)
-print(create_dataset(234, 5))
+create_dataset(234, 1000)
