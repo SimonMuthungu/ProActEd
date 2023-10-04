@@ -54,4 +54,4 @@ test_loss, test_accuracy = model.evaluate(test_dataset)
 print(f'Test Accuracy: {test_accuracy}')
 
 # Save the trained model using joblib
-# joblib.dump(model, 'trained_logistic_regression_model.joblib')
+joblib.dump(model, 'trained_logistic_regression_model.joblib')
