@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import JsonResponse
+import joblib
 
 # Create your views here.
 def login(request):
@@ -30,3 +31,17 @@ def admin_page(request):
 ]
     context = {'school_data': school_data}
     return render(request, 'academia_app/admin_page.html', context)
+
+# view to calculate probabilities
+def predict_view(request):
+    # Load the trained model
+    model = joblib.load(r'C:\Users\Simon\proacted\ProActEd\Projoo\trained_logistic_regression_model.joblib')
+
+    # Get input data (e.g., from request)
+    input_data = 
+
+    # Make predictions using the loaded model
+    predictions = model.predict(input_data)
+
+    # Return predictions as JSON response
+    return JsonResponse({'predictions': predictions.tolist()})
