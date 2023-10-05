@@ -90,11 +90,11 @@ def create_dataset(total_lessons, no_of_students_to_create):
         }
 
     df = pd.DataFrame(dummy_data)
-    df.to_excel(r'C:\Users\Simon\proacted\ProActEd\Projoo\AIacademia\python_scripts\Dummy_dataset.xlsx', index=False)
+    df.to_excel(r'C:\Users\Simon\proacted\ProActEd\Projoo\AIacademia\python_scripts\Dummy_dataset_5000.xlsx', index=False)
 
 
     return lessons_attended, total_lessons_that_semester, aggregate_points, passed
 
 
 
-create_dataset(234, 1000)
+create_dataset(234, 5000)
