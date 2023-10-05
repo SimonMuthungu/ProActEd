@@ -47,7 +47,7 @@ def predict_view(request):
 # view to calculate probabilities
 def predict_data(request):
     # Load the trained model
-    model = joblib.load(r'C:\Users\Simon\proacted\ProActEd\Projoo\trained_logistic_regression_model(5000).joblib')
+    # model = joblib.load(r'C:\Users\Simon\proacted\ProActEd\Projoo\trained_logistic_regression_model(5000).joblib')
 
     if request.method == 'POST':
         # Get the values of the form fields
@@ -59,7 +59,7 @@ def predict_data(request):
         input_data = [lessons_attended, aggregate_points]
 
         # Make predictions using the loaded model
-        predictions = model.predict(input_data)
+        # predictions = model.predict(input_data)
 
         # For demonstration purposes, let's return a response with the received data
         response_text = f"Lessons Attended: {lessons_attended}, Aggregate Points: {aggregate_points}"
