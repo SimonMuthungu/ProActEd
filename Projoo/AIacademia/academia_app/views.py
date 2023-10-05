@@ -53,8 +53,8 @@ def predict_data(request):
         # Get the values of the form fields
         lessons_attended = request.POST['lessons_attended']
         aggregate_points = request.POST['aggregate_points']
-        csrf_token = request.POST['csrfmiddlewaretoken']
 
+        
         # Get input data (e.g., from request) and making predictions using the values
         input_data = [lessons_attended, aggregate_points]
 
