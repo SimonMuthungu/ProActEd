@@ -3,7 +3,7 @@ import joblib
 import pandas as pd
 
 
-dummy_data_path = r'C:\Users\Simon\proacted\ProActEd\Projoo\AIacademia\python_scripts\Dummy_dataset.xlsx'
+dummy_data_path = r'C:\Users\Simon\proacted\ProActEd\Projoo\AIacademia\python_scripts\Dummy_dataset_5000.xlsx'
 
 # Load data from Excel into a DataFrame
 training_data = pd.read_excel(dummy_data_path)
@@ -47,11 +47,11 @@ model = tf.keras.Sequential([
 
 # Compile and train the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
-model.fit(train_dataset, epochs=50)
+model.fit(train_dataset, epochs=100)
 
 # Evaluate the model on the test dataset
 test_loss, test_accuracy = model.evaluate(test_dataset)
 print(f'Test Accuracy: {test_accuracy}')
 
 # Save the trained model using joblib
-joblib.dump(model, 'trained_logistic_regression_model.joblib')
+joblib.dump(model, r'C:\Users\Simon\proacted\ProActEd\Projoo\AIacademia\trained_models\trained_logistic_regression_model(5000).joblib')
