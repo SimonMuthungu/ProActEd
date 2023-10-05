@@ -1,17 +1,22 @@
 from django.shortcuts import render
-from django.http import JsonResponse
+from django.http import HttpResponse, JsonResponse
 import joblib
+from django.views.decorators.csrf import csrf_protect
+
 
 # Create your views here.
+
 def login(request):
     return render(request, "academia_app/login.html")
+
+
 def student_page(request):
     return render(request, "academia_app/student_page.html")
-# def admin_page(request):
-#     return render(request, "academia_app/admin_page.html")
+
 
 def admin_page(request):
-    # Define school data with departments
+    # Defining school data with departments
+
     school_data = [
         {'name': 'SCI', 'departments': ['computer science', 'IT'], 'cs':['Computer Science', 'cct'], 'IT':['ict', 'it']},
         {'name': 'SOE', 'departments': ['Department X', 'Department Y', 'Department Z', 'Department W', 'Department V']},
@@ -32,16 +37,34 @@ def admin_page(request):
     context = {'school_data': school_data}
     return render(request, 'academia_app/admin_page.html', context)
 
-# view to calculate probabilities
+
+# form to manually input probabilities for testing purposes
 def predict_view(request):
+    return render(request, "academia_app/predict.html")
+
+
+
+# view to calculate probabilities
+def predict_data(request):
     # Load the trained model
-    model = joblib.load(r'C:\Users\Simon\proacted\ProActEd\Projoo\trained_logistic_regression_model.joblib')
+    model = joblib.load(r'C:\Users\Simon\proacted\ProActEd\Projoo\trained_logistic_regression_model(5000).joblib')
 
-    # Get input data (e.g., from request)
-    input_data = 
+    if request.method == 'POST':
+        # Get the values of the form fields
+        lessons_attended = request.POST['lessons_attended']
+        aggregate_points = request.POST['aggregate_points']
+        csrf_token = request.POST['csrfmiddlewaretoken']
 
-    # Make predictions using the loaded model
-    predictions = model.predict(input_data)
+        # Get input data (e.g., from request) and making predictions using the values
+        input_data = [lessons_attended, aggregate_points]
+
+        # Make predictions using the loaded model
+        predictions = model.predict(input_data)
+
+        # For demonstration purposes, let's return a response with the received data
+        response_text = f"Lessons Attended: {lessons_attended}, Aggregate Points: {aggregate_points}"
+    return HttpResponse(response_text)
+
 
     # Return predictions as JSON response
-    return JsonResponse({'predictions': predictions.tolist()})
+    # return JsonResponse({'predictions': predictions.tolist()})

@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Machine Learning Input Form</title>
+</head>
+<body>
+    <h1>Machine Learning Input Form</h1>
+    <form method="post" action="predict_data/">
+        {% csrf_token %}
+        <label for="lessons_attended">Lessons Attended:</label>
+        <input type="text" id="lessons_attended" name="lessons_attended" required>
+        <br>
+        <label for="aggregate_points">Aggregate Points:</label>
+        <input type="text" id="aggregate_points" name="aggregate_points" required>
+        <br>
+        <input type="submit" value="Predict">
+    </form>
+    
+</body>
+</html>
