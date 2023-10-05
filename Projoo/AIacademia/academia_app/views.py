@@ -47,24 +47,20 @@ def predict_view(request):
 # view to calculate probabilities
 def predict_data(request):
     # Load the trained model
-    # model = joblib.load(r'C:\Users\Simon\proacted\ProActEd\Projoo\trained_logistic_regression_model(5000).joblib')
+    model = joblib.load(r'C:\Users\Simon\proacted\ProActEd\Projoo\AIacademia\trained_models\trained_logistic_regression_model(5000).joblib')
 
     if request.method == 'POST':
-        # Get the values of the form fields
-        lessons_attended = request.POST['lessons_attended']
-        aggregate_points = request.POST['aggregate_points']
 
-        
-        # Get input data (e.g., from request) and making predictions using the values
-        input_data = [lessons_attended, aggregate_points]
+        # Get the values of the form fields
+        lessons_attended = float(request.POST['lessons_attended'])
+        aggregate_points = float(request.POST['aggregate_points'])
+
+        # Get input data (e.g., from request) and make predictions using the values
+        input_data = [[lessons_attended, aggregate_points]]
 
         # Make predictions using the loaded model
-        # predictions = model.predict(input_data)
+        predictions = model.predict(input_data)
 
         # For demonstration purposes, let's return a response with the received data
-        response_text = f"Lessons Attended: {lessons_attended}, Aggregate Points: {aggregate_points}"
-    return HttpResponse(response_text)
-
-
-    # Return predictions as JSON response
-    # return JsonResponse({'predictions': predictions.tolist()})
+        response_text = f"Data we have received: Lessons Attended: {lessons_attended}, Aggregate Points: {aggregate_points}, Predictions: {predictions}"
+        return HttpResponse(response_text)
