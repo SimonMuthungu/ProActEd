@@ -1,9 +1,11 @@
 import tensorflow as tf
 import joblib
 import pandas as pd
+from tensorflow.keras.callbacks import EarlyStopping
 
 
-dummy_data_path = r'C:\Users\Simon\proacted\ProActEd\Projoo\AIacademia\python_scripts\Dummy_dataset_5000.xlsx'
+
+dummy_data_path = r'C:\Users\Simon\proacted\ProActEd\AIacademia\python_scripts\trainwith_100000.xlsx'
 
 # Load data from Excel into a DataFrame
 training_data = pd.read_excel(dummy_data_path)
@@ -45,13 +47,23 @@ model = tf.keras.Sequential([
     tf.keras.layers.Dense(1, activation='sigmoid')
 ])
 
+# to auto-monitor when were overfitting
+early_stopping = EarlyStopping(monitor='accuracy', 
+                               patience=5, 
+                               min_delta=0.001,
+                               mode='max',
+                               verbose=1) 
+
 # Compile and train the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
-model.fit(train_dataset, epochs=100)
+
+history = model.fit(train_dataset,
+                    epochs=30,
+                    callbacks=[early_stopping])
 
 # Evaluate the model on the test dataset
 test_loss, test_accuracy = model.evaluate(test_dataset)
 print(f'Test Accuracy: {test_accuracy}')
 
 # Save the trained model using joblib
-joblib.dump(model, r'C:\Users\Simon\proacted\ProActEd\Projoo\AIacademia\trained_models\trained_logistic_regression_model(5000).joblib')
+joblib.dump(model, r'C:\Users\Simon\proacted\ProActEd\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
