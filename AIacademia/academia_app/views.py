@@ -47,7 +47,7 @@ def predict_view(request):
 # view to calculate probabilities
 def predict_data(request):
     # Load the trained model
-    model = joblib.load(r'C:\Users\Simon\proacted\ProActEd\Projoo\AIacademia\trained_models\trained_logistic_regression_model(5000).joblib')
+    model = joblib.load(r'C:\Users\Simon\proacted\ProActEd\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
 
     if request.method == 'POST':
 
@@ -62,5 +62,5 @@ def predict_data(request):
         predictions = model.predict(input_data)
 
         # For demonstration purposes, let's return a response with the received data
-        response_text = f"Data we have received: Lessons Attended: {lessons_attended}, Aggregate Points: {aggregate_points}, Predictions: {predictions}"
+        response_text = f"Data we have received: Lessons Attended: {lessons_attended}, Aggregate Points: {aggregate_points}.\nOur Predictions are: {predictions}"
         return HttpResponse(response_text)
