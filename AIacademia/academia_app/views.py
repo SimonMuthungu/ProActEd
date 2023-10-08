@@ -1,6 +1,7 @@
-from django.shortcuts import render
-from django.http import HttpResponse, JsonResponse  # Import JsonResponse for AJAX responses
 from academia_app.models import Department
+from django.http import (  # Import JsonResponse for AJAX responses
+    HttpResponse, JsonResponse)
+from django.shortcuts import render
 
 # Other imports
 
@@ -18,7 +19,8 @@ def student_page(request):
 def admin_page(request):
     return render(request, "academia_app/admin_page.html")
 
-from .models import School, Department, Course
+from .models import Course, Department, School
+
 
 def school_list(request):
     schools = School.objects.all()
