@@ -1,6 +1,7 @@
 from django.contrib import admin
 
-from .models import (Attendance, Course, Department, FeeInformation,
+from .models import (Attendance, Course, CourseOfInterest, Department,
+                     FeeInformation, FieldOfInterest, HighSchoolSubject,
                      Performance, School, Student)
 
 
@@ -24,3 +25,6 @@ admin.site.register(Student, StudentAdmin)
 admin.site.register(FeeInformation)
 admin.site.register(Attendance)
 admin.site.register(Performance)
+admin.site.register(FieldOfInterest)
+admin.site.register(HighSchoolSubject)
+admin.site.register(CourseOfInterest)
