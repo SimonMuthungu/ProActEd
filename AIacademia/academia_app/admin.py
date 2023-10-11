@@ -1,6 +1,7 @@
 from django.contrib import admin
 
-from .models import Course, Department, School, Student
+from .models import (Attendance, Course, Department, FeeInformation,
+                     Performance, School, Student)
 
 
 class StudentAdmin(admin.ModelAdmin):
@@ -20,3 +21,6 @@ admin.site.register(School)
 admin.site.register(Department)
 admin.site.register(Course)
 admin.site.register(Student, StudentAdmin)
+admin.site.register(FeeInformation)
+admin.site.register(Attendance)
+admin.site.register(Performance)
