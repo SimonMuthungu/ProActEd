@@ -35,15 +35,6 @@
     background-color: #0056b3;
 }
 
-/* Styles for the content section */
-/* .content {
-    float: left;
-    width: 80%;
-    padding: 0px;
-} */
-
-
-
 /* Existing styles for other sections remain unchanged */
 
 /* Styles for the content section */
@@ -92,12 +83,6 @@
 }
 
 /* Add more specific styles for your content as needed */
-
-
-
-
-
-/* Styles for the footer */
 .footer {
     background-color: #333;
     color: #fff;
