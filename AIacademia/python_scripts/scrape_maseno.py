@@ -2,45 +2,37 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
-# Initialize an empty list to store the course information
-courses = []
-
-# URL of the Maseno University website
+# Send an HTTP GET request to the URL
 url = "https://www.maseno.ac.ke"
-
-# Send an HTTP GET request to the website
 response = requests.get(url)
-soup = BeautifulSoup(response.text, "html.parser")
 
-# Find the dropdown menu with school titles
-school_dropdown = soup.find("ul", class_="we-mega-menu-li dropdown-menu schools-dropdown")
+# Parse the HTML content of the page
+soup = BeautifulSoup(response.text, 'html.parser')
 
-if school_dropdown:
-    # Iterate through each school
-    for school in school_dropdown.find_all("li", class_="we-mega-menu-li"):
-        school_name = school.get_text()
-        school_url = school.a["href"]
-        school_page = requests.get(url + school_url)
-        school_soup = BeautifulSoup(school_page.text, "html.parser")
+# Find the school titles using a CSS selector
+school_titles = soup.select(".we-mega-menu-li.dropdown-menu.schools-dropdown .we-mega-menu-li")
 
-        # Check if the school page contains "undergraduate" text
-        undergraduate_text = school_soup.find(text="undergraduate")
-        if undergraduate_text:
-            undergraduate_link = undergraduate_text.find_next("a")
-            if undergraduate_link:
-                undergraduate_url = undergraduate_link["href"]
-                undergraduate_page = requests.get(url + undergraduate_url)
-                undergraduate_soup = BeautifulSoup(undergraduate_page.text, "html.parser")
+# Initialize lists to store the data
+titles_list = []
+courses_list = []
 
-                # Find the list of undergraduate courses
-                course_list = undergraduate_soup.find("ul")
-                if course_list:
-                    for course in course_list.find_all("li"):
-                        course_name = course.get_text()
-                        courses.append({"School": school_name, "Course": course_name})
+# Iterate through the school titles and collect the text
+for title in school_titles:
+    titles_list.append(title.get_text()) 
+    # Check if there is a link under the title
+    link = title.find('a')
+    if link:
+        course_page_url = link['href']
+        # Send a GET request to the course page
+        course_page_response = requests.get(course_page_url) 
+        print(course_page_response.response)
+        course_page_soup = BeautifulSoup(course_page_response.text, 'html.parser')
+        # Find the course names using a CSS selector
+        course_names = course_page_soup.select(".we-mega-menu-li .we-mega-menu-li") 
+        # Iterate through the course names and collect the text
+        course_names_list = [course.get_text() for course in course_names] 
+        courses_list.extend(course_names_list)
 
-# Create a DataFrame from the collected course information
-df = pd.DataFrame(courses)
-
-# Save the data to an Excel file
-df.to_excel("recommender_system_training_dataset1.xlsx", index=False)
+# Create a DataFrame and save it to an Excel file
+df = pd.DataFrame({'School Titles': titles_list, 'Courses': courses_list})
+df.to_excel('recommender_system_training_dataset1.xlsx', index=False)
