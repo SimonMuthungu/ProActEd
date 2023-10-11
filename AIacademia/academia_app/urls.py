@@ -6,7 +6,9 @@ urlpatterns = [
     path("", views.login, name="login"),
     path("student_page", views.student_page, name="student_page"),
     path("admin_page", views.admin_page, name="admin_page"),
-    path("predict", views.predict_view, name="manual_predict_view"),
-    path("predict_data/", views.predict_data, name="predict_data")
+     path('api/get_courses/<int:department_id>/', views.get_courses, name='get_courses')
 ]
 
+
+    
+   
