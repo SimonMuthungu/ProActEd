@@ -27,6 +27,24 @@ class Student(models.Model):
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     school = models.ForeignKey(School, on_delete=models.CASCADE)
     graduation_probability = models.FloatField(default=0.0)
+    
+class FeeInformation(models.Model):
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
+    semester = models.CharField(max_length=20)
+    required_fees = models.DecimalField(max_digits=10, decimal_places=2)
+    fees_paid = models.DecimalField(max_digits=10, decimal_places=2)
+class Attendance(models.Model):
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
+    semester = models.CharField(max_length=20)
+    total_classes = models.PositiveIntegerField()
+    attended_classes = models.PositiveIntegerField()
+
+class Performance(models.Model):
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
+    semester = models.CharField(max_length=20)
+    aggregate_points = models.DecimalField(max_digits=4, decimal_places=2)
+    agp = models.CharField(max_length=10)
+
 
     def __str__(self):
         return self.name
