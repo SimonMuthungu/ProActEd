@@ -1,6 +1,6 @@
-# Project Name
+# AI DRIVEN ACADEMIC MONITORING AND INTERVENTION SYSTEM 
+This project will mornitor students' academic progress and use machine learning to calculate the probability of the students to drop out of campus. The system will also use AI to recommend courses based on a student's career interest and the subjects they did in high school.
 
-Project Description (Brief overview of your project)
 
 ## Contributors
 
@@ -11,19 +11,21 @@ Project Description (Brief overview of your project)
 - [Amakalu Vitalis](https://github.com/MerVitz)
 ## Introduction
 
-A brief introduction to your project. Explain its purpose, what it does, and why it's important.
+This project is designed to mornitor campus students' academic progress and use machine learning to calculate the probability of the students to drop out of campus. Embedded in the system there is a course recommendation section that takes a student's academic interest and the subjects they did in high school and use AI to recommend a list of courses suitable for the student.
+This will help universities identify students who need help and also alter its study approach to best suit their students.
+The course recommendation section in the project will help guide students who are joining university or those who wish to change their current courses to pick a course based on their interests and therefore reduce their likelihood of dropping out of the course.
 
 ## Features
 
 List the key features of your project.
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Graphical Academic Progress Report
+- AI Course Recommendation 
+- AI Probability Determiner
 
 ## Getting Started
 
-Instructions on how to get your project up and running locally.
+We will communicate in due course on hiw the system can be set up locally.
 
 ### Prerequisites
 
