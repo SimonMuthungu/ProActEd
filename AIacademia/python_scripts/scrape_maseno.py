@@ -1,67 +1,74 @@
 import requests
 from bs4 import BeautifulSoup
+import pandas as pd
 
-# Send an HTTP GET request to the Undergraduate Programmes page
-url = "https://programmes.maseno.ac.ke"
-response = requests.get(url, verify=False)
+import requests
+
+# Set the user agent to mimic a web browser
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.1.68.67 Brave/117.1.68.67 Safari/537.36',
+}
+
+# Create a session to handle cookies
+session = requests.Session()
+session.headers.update(headers)
+
+# Define the URL to scrape
+url = "https://programmes.maseno.ac.ke/bachelors_programmes" 
+
+# Send a GET request to the URL
+response = session.get(url, verify=False)
 
 # Parse the HTML content of the page
 soup = BeautifulSoup(response.text, 'html.parser')
+print(soup.prettify())
 
-# Find the "Undergraduate Programmes" link
-programmes_link = soup.find('a', text='                           Undergraduate Programmes                        ')
+# Initialize lists to store data
+course_names = []
+first_headings = []
+link_texts = []
 
-# Check if the link exists
-if programmes_link:
-    
-    # Open the link
-    programmes_url = 'https://programmes.maseno.ac.ke' + programmes_link['href']
-    print(f'{programmes_url}\n')
-    programmes_response = requests.get(programmes_url, verify=False)
-    programmes_soup = BeautifulSoup(programmes_response.text, 'html.parser')
+# Find all list items (li) in the page
+list_items = soup.find_all('li')
 
-    # Find the "sub-title" div and extract its name
-    sub_title_div = programmes_soup.find('div', class_='sub-title')
-    sub_title = sub_title_div.text if sub_title_div else "No sub-title found"
+# Iterate through the list items
+for item in list_items:
+    # Check if the list item contains a link
+    link = item.find('a')
+    if link:
+        # Get the course name (anchor text)
+        print('got link')
+        course_name = link.text
+        course_names.append(course_name)
 
-    # Move up two levels to find the "column-content" div
-    column_content_div = sub_title_div.find_parent().find_parent().find('div', class_='column-content')
+        # Get the link text
+        link_text = link.get('href', 'no link to follow')
+        link_texts.append(link_text)
 
-    # Find ul elements and get the href and anchor text
-    ul_elements = column_content_div.find_all('ul')
-    if ul_elements:
-        print('got some ul elements')
+
+        # Follow the link and scrape the first heading on the new page
+        new_url = link.get('href')
+        print(new_url)
+        new_response = requests.get(new_url, verify=False)
+        new_soup = BeautifulSoup(new_response.text, 'html.parser')
+        heading = new_soup.find('h1')
+        first_heading = heading.text if heading else 'No heading found'
+        first_headings.append(first_heading)
     else:
-        print('no ul elements gotten')
-    data_list = []
+        print('no span')
+        # If no link found, set course name and link text as specified
+        span = item.find('span')
+        
+        course_name = span.text if span else 'No course name found'
+        course_names.append(course_name)
+        first_headings.append('No link to follow')
+        link_texts.append('No link to follow')
 
-    for ul in ul_elements:
-        anchor = ul.find('span', 'nav-item')
-        if anchor:
-            anchor_text = anchor.find('a')
-            if anchor_text:
-                href = anchor_text['href']
-                text = anchor_text.text
-                data_list.append((text, href))
-            else:
-                data_list.append(("No anchor to follow here", "No href"))
-        else:
-            data_list.append(("No anchor to follow here", "No href"))
+session.close()
 
-    # Check if the page produces a "page not found" error
-    page_not_found = "page not found" in programmes_response.text.lower()
+# Create a DataFrame to store the data
+data = {'Course Name': course_names, 'First Heading': first_headings, 'Link Text': link_texts}
+df = pd.DataFrame(data)
 
-    # Retrieve the headers of the content on pages that have content
-    content_headers = []
-    if not page_not_found:
-        content_divs = programmes_soup.find_all('div', class_='component-title')
-        content_headers = [header.text for header in content_divs]
-
-    # Display the results
-    print("Sub-title:", sub_title)
-    print("Data list:", data_list)
-    print("Page not found:", page_not_found)
-    print("Content headers:", content_headers)
-else:
-    print("Undergraduate Programmes link not found.")
-
+# Save the data to an Excel file
+df.to_excel(r'AIacademia/python_scripts/maseno_programs.xlsx', index=False)
