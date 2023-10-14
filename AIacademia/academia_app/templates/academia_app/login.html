@@ -1,6 +1,6 @@
 {% load static %}
 
-<!DOCTYPE html>
+{% comment %} <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,5 +14,140 @@
         <a href="student_page" class="login-button">Login as Student</a>
         <a href="admin_page" class="login-button">Login as Admin</a> 
     </div>
+</body>
+</html> {% endcomment %}
+{% comment %} <!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .login-container {
+            width: 300px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px #888888;
+        }
+        h2 {
+            text-align: center;
+        }
+        .login-option {
+            text-align: center;
+        }
+        .button {
+            width: 100%;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .password-container {
+            display: none;
+        }
+        .password-input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function showPasswordInput() {
+            var passwordContainer = document.getElementById("password-container");
+            passwordContainer.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <div class="login-option">
+            <button class="button" onclick="showPasswordInput()">Login as Student</button>
+            <button class="button" onclick="showPasswordInput()">Login as Admin</button>
+        </div>
+        <div class="password-container" id="password-container">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" class="password-input" required>
+            <input type="submit" value="Login">
+        </div>
+    </div>
+</body>
+</html> {% endcomment %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% comment %} <title>Login Page</title> {% endcomment %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .login-container {
+            width: 300px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px #888888;
+        }
+        h2 {
+            text-align: center;
+        }
+        .login-option {
+            text-align: center;
+        }
+        .button {
+            width: 100%;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <div class="login-option">
+            <button  href="student_page" class="login-button">Login as Student</button>
+            <button href="admin_page" class="login-button">Login as Admin</button> 
+            <button class="button" onclick="loginAsStudent()">Login as Student</button>
+            <button class="button" onclick="showPasswordInput()">Login as Admin</button>
+        </div>
+        <div class="password-container" id="password-container" style="display: none;">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" class="password-input" required>
+            <input type="submit" value="Login">
+            <a href="{% url 'admin_login' %}">Login as Admin</a>
+
+        </div>
+    </div>
+
+    <script>
+        function loginAsStudent() {
+            // You can add your student login logic here
+            alert("Logging in as a student");
+            // You can redirect to the student's dashboard or perform other actions
+        }
+
+        function showPasswordInput() {
+            var passwordContainer = document.getElementById("password-container");
+            passwordContainer.style.display = "block";
+        }
+    </script>
 </body>
 </html>
