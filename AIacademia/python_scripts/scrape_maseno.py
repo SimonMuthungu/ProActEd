@@ -24,51 +24,51 @@ soup = BeautifulSoup(response.text, 'html.parser')
 print(soup.prettify())
 
 # Initialize lists to store data
-course_names = []
-first_headings = []
-link_texts = []
+# course_names = []
+# first_headings = []
+# link_texts = []
 
-# Find all list items (li) in the page
-list_items = soup.find_all('li')
+# # Find all list items (li) in the page
+# list_items = soup.find_all('li')
 
-# Iterate through the list items
-for item in list_items:
-    # Check if the list item contains a link
-    link = item.find('a')
-    if link:
-        # Get the course name (anchor text)
-        print('got link')
-        course_name = link.text
-        course_names.append(course_name)
+# # Iterate through the list items
+# for item in list_items:
+#     # Check if the list item contains a link
+#     link = item.find('a')
+#     if link:
+#         # Get the course name (anchor text)
+#         print('got link')
+#         course_name = link.text
+#         course_names.append(course_name)
 
-        # Get the link text
-        link_text = link.get('href', 'no link to follow')
-        link_texts.append(link_text)
+#         # Get the link text
+#         link_text = link.get('href', 'no link to follow')
+#         link_texts.append(link_text)
 
 
-        # Follow the link and scrape the first heading on the new page
-        new_url = link.get('href')
-        print(new_url)
-        new_response = requests.get(new_url, verify=False)
-        new_soup = BeautifulSoup(new_response.text, 'html.parser')
-        heading = new_soup.find('h1')
-        first_heading = heading.text if heading else 'No heading found'
-        first_headings.append(first_heading)
-    else:
-        print('no span')
-        # If no link found, set course name and link text as specified
-        span = item.find('span')
+#         # Follow the link and scrape the first heading on the new page
+#         new_url = link.get('href')
+#         print(new_url)
+#         new_response = requests.get(new_url, verify=False)
+#         new_soup = BeautifulSoup(new_response.text, 'html.parser')
+#         heading = new_soup.find('h1')
+#         first_heading = heading.text if heading else 'No heading found'
+#         first_headings.append(first_heading)
+#     else:
+#         print('no span')
+#         # If no link found, set course name and link text as specified
+#         span = item.find('span')
         
-        course_name = span.text if span else 'No course name found'
-        course_names.append(course_name)
-        first_headings.append('No link to follow')
-        link_texts.append('No link to follow')
+#         course_name = span.text if span else 'No course name found'
+#         course_names.append(course_name)
+#         first_headings.append('No link to follow')
+#         link_texts.append('No link to follow')
 
-session.close()
+# session.close()
 
-# Create a DataFrame to store the data
-data = {'Course Name': course_names, 'First Heading': first_headings, 'Link Text': link_texts}
-df = pd.DataFrame(data)
+# # Create a DataFrame to store the data
+# data = {'Course Name': course_names, 'First Heading': first_headings, 'Link Text': link_texts}
+# df = pd.DataFrame(data)
 
-# Save the data to an Excel file
-df.to_excel(r'AIacademia/python_scripts/maseno_programs.xlsx', index=False)
+# # Save the data to an Excel file
+# df.to_excel(r'AIacademia/python_scripts/maseno_programs.xlsx', index=False)
