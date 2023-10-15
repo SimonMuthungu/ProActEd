@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Page</title>
+
+    {% comment %} <link rel="stylesheet" type="text/css" href="course_recommendation_styles.css"> {% endcomment %}
+    <style>
+        /* Your inline CSS styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color:blue ;
+        }
+        h1{
+            background-color:white;
+            text-color: pink;
+        }
+        form{
+            text-color:pink;
+            background-color: white;
+            border-radius: 10px;
+        }
+        .section form {
+            background-color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+   
+    <h1 size='Quick'>SELECT YOUR SUBJECTS</h1>
+    <form action="course_recommendation_page.html" method="post">
+        <label for="subject1">
+            <input type="checkbox" id="subject1" name="subjects[]" value="Mathematics"> MATHEMATICS
+        </label>
+        <br>
+        <label for="subject2">
+            <input type="checkbox" id="subject2" name="subjects[]" value="Science"> ENGLISH
+        </label>
+        <br>
+        <label for="subject3">
+            <input type="checkbox" id="subject3" name="subjects[]" value="History"> KISWAHILI
+        </label>
+        <br>
+        <label for="subject4">
+            <input type="checkbox" id="subject4" name="subjects[]" value="English"> CHEMISTRY
+        </label>
+        <br>
+        <label for="subject5">
+            <input type="checkbox" id="subject5" name="subjects[]" value="Computer Science"> BIOLOGY
+        </label>
+        <br>
+        <label for="subject6">
+            <input type="checkbox" id="subject6" name="subjects[]" value="Art"> PHYSICS
+        </label>
+        <br>
+        <label for="subject2">
+            <input type="checkbox" id="subject2" name="subjects[]" value="Science"> C.R.E
+        </label>
+        <br>
+        <label for="subject3">
+            <input type="checkbox" id="subject3" name="subjects[]" value="History"> HISTORY
+        </label>
+        <br>
+        <label for="subject4">
+            <input type="checkbox" id="subject4" name="subjects[]" value="English"> GEOGRAPHY
+        </label>
+        <br>
+        <label for="subject5">
+            <input type="checkbox" id="subject5" name="subjects[]" value="Computer Science"> AGRICULTURE
+        </label>
+        <br>
+        <label for="subject6">
+            <input type="checkbox" id="subject6" name="subjects[]" value="Art"> BUSINESS STUDIES
+        </label>
+        <br>
+        <label for="subject2">
+            <input type="checkbox" id="subject2" name="subjects[]" value="Science"> COMPUTER STUDIES
+        </label>
+        <br>
+        <label for="subject3">
+            <input type="checkbox" id="subject3" name="subjects[]" value="History"> HOME SCIENCE
+        </label>
+        <br>
+        <input type="submit" value="Submit">
+
+
+    <section>
+        <h2>SELECT YOUR INTERESTS</h2>
+        <form action="course_recommendation_page.html" method="post">
+            <label for="subject1">
+                <input type="checkbox" id="subject1" name="subjects[]" value="Mathematics"> POLITICS
+            </label>
+            <br>
+            <label for="subject2">
+                <input type="checkbox" id="subject2" name="subjects[]" value="Science"> SCIENCE
+            </label>
+            <br>
+            <label for="subject3">
+                <input type="checkbox" id="subject3" name="subjects[]" value="History">DESIGN
+            </label>
+            <br>
+            <label for="subject4">
+                <input type="checkbox" id="subject4" name="subjects[]" value="English"> ARTS
+            </label>
+            <br>
+            <label for="subject5">
+                <input type="checkbox" id="subject5" name="subjects[]" value="Computer Science"> TEACHING
+            </label>
+            <br>
+            <label for="subject6">
+                <input type="checkbox" id="subject6" name="subjects[]" value="Art"> PUBLIC SPEAKING
+            </label>
+            <br>
+            <label for="subject2">
+                <input type="checkbox" id="subject2" name="subjects[]" value="Science"> READING
+            </label>
+            <br>
+            <label for="subject3">
+                <input type="checkbox" id="subject3" name="subjects[]" value="History"> OUTDOOR ACTIVITIES
+            </label>
+            <br>
+            <label for="subject4">
+                <input type="checkbox" id="subject4" name="subjects[]" value="English"> MUSIC
+            </label>
+            <br>
+            <label for="subject5">
+                <input type="checkbox" id="subject5" name="subjects[]" value="Computer Science">ART AND CREATIVITY
+            </label>
+            <br>
+            <label for="subject6">
+                <input type="checkbox" id="subject6" name="subjects[]" value="Art"> GARDENING
+            </label>
+            <br>
+            <label for="subject2">
+                <input type="checkbox" id="subject2" name="subjects[]" value="Science"> GAMING
+            </label>
+            <br>
+            <label for="subject3">
+                <input type="checkbox" id="subject3" name="subjects[]" value="History"> WRITING
+            </label>
+            <br>
+            <label for="subject1">
+                <input type="checkbox" id="subject1" name="subjects[]" value="Mathematics"> TRAVELLING
+            </label>
+            <br>
+            <label for="subject2">
+                <input type="checkbox" id="subject2" name="subjects[]" value="Science"> TECHNOLOGY
+            </label>
+            <br>
+            <label for="subject3">
+                <input type="checkbox" id="subject3" name="subjects[]" value="History">CODING
+            </label>
+            <br>
+            <label for="subject4">
+                <input type="checkbox" id="subject4" name="subjects[]" value="English"> VOLUNTEERING
+            </label>
+            <br>
+            <label for="subject5">
+                <input type="checkbox" id="subject5" name="subjects[]" value="Computer Science"> COLLECTING
+            </label>
+            <br>
+            <label for="subject6">
+                <input type="checkbox" id="subject6" name="subjects[]" value="Art"> DANCE
+            </label>
+            <br>
+            <label for="subject2">
+                <input type="checkbox" id="subject2" name="subjects[]" value="Science"> FILM AND CINEMA
+            </label>
+            <br>
+            <label for="subject3">
+                <input type="checkbox" id="subject3" name="subjects[]" value="History"> ANIMAL PETS
+            </label>
+            <br>
+            <label for="subject4">
+                <input type="checkbox" id="subject4" name="subjects[]" value="English"> DIY AND CRAFTING
+            </label>
+            <br>
+            <label for="subject5">
+                <input type="checkbox" id="subject5" name="subjects[]" value="Computer Science"> HISTORY AND GENEOLGY
+            </label>
+            <br>
+            <label for="subject6">
+                <input type="checkbox" id="subject6" name="subjects[]" value="Art"> ASTRONOMY
+            </label>
+            <br>
+            <label for="subject2">
+                <input type="checkbox" id="subject2" name="subjects[]" value="Science"> READING AND LEARNNG
+            </label>
+            <br>
+            <label for="subject3">
+                <input type="checkbox" id="subject3" name="subjects[]" value="History"> FISHING
+            </label>
+            <br>
+            <label for="subject1">
+                <input type="checkbox" id="subject1" name="subjects[]" value="Mathematics"> BIRD WATCHING
+            </label>
+            <br>
+            <label for="subject2">
+                <input type="checkbox" id="subject2" name="subjects[]" value="Science"> CYCLNG
+            </label>
+            <br>
+            <label for="subject3">
+                <input type="checkbox" id="subject3" name="subjects[]" value="History">ARCHERY
+            </label>
+            <br>
+            <label for="subject4">
+                <input type="checkbox" id="subject4" name="subjects[]" value="English"> MARTIAL ARTS
+            </label>
+            <br>
+            <label for="subject5">
+                <input type="checkbox" id="subject5" name="subjects[]" value="Computer Science"> POTTERY AND CERAMICS
+            </label>
+            <br>
+            <label for="subject6">
+                <input type="checkbox" id="subject6" name="subjects[]" value="Art"> BOARD GAME DESIGN
+            </label>
+            <br>
+            <label for="subject2">
+                <input type="checkbox" id="subject2" name="subjects[]" value="Science"> HOME BREWING
+            </label>
+            <br>
+            <label for="subject3">
+                <input type="checkbox" id="subject3" name="subjects[]" value="History"> PHOTOGRAPHY
+            </label>
+            <br>
+            <label for="subject4">
+                <input type="checkbox" id="subject4" name="subjects[]" value="English"> GOLF
+            </label>
+            <br>
+            <label for="subject5">
+                <input type="checkbox" id="subject5" name="subjects[]" value="Computer Science">ROBOTICS
+            </label>
+            <br>
+            <label for="subject6">
+                <input type="checkbox" id="subject6" name="subjects[]" value="Art"> CALLIGRAPHY
+            </label>
+            <br>
+            <label for="subject2">
+                <input type="checkbox" id="subject2" name="subjects[]" value="Science"> HOME IMPROVEMENT
+            </label>
+            <br>
+            <label for="subject3">
+                <input type="checkbox" id="subject3" name="subjects[]" value="History"> METAL DETECTING
+            </label>
+            <br>
+         
+        <input type="submit" value="Submit">
+    </form>
+</section>
+</body>
+   
+</html>

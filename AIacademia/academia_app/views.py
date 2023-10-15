@@ -8,7 +8,8 @@ from django.shortcuts import render
 def department_list(request):
     all_departments = Department.objects.all()
     return render(request, 'template_name.html', {'departments': all_departments})
-
+def admin_login_view(request):
+    return render (request ,"academia_app/ admin_login-view.html" )
 
 def login(request):
     return render(request, "academia_app/login.html")
