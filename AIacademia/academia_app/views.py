@@ -8,13 +8,18 @@ from django.shortcuts import render
 def department_list(request):
     all_departments = Department.objects.all()
     return render(request, 'template_name.html', {'departments': all_departments})
-
+def admin_login_view(request):
+    return render (request ,"academia_app/ admin_login-view.html" )
 
 def login(request):
     return render(request, "academia_app/login.html")
 
 def student_page(request):
     return render(request, "academia_app/student_page.html")
+
+def course_recommendation_page(request):
+    return render (request,"academia_app/course_recommendation_page.html")
+
 
 def admin_page(request):
     return render(request, "academia_app/admin_page.html")
