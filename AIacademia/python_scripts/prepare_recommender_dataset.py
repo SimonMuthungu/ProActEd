@@ -1,10 +1,42 @@
 # this is to help with the etl and pre processing of the recommender training dataset
 
 import pandas as pd
+import nltk
+from nltk.corpus import stopwords 
+from nltk.tokenize import word_tokenize
 
-recommender_training_dataset = r"C:\Users\Simon\proacted\AIacademia\python_scripts\recommender_dataset.xlsx"
+df = pd.read_excel(r"C:\Users\Simon\proacted\AIacademia\python_scripts\preprocessed_data_two_cols.xlsx")
 
-df = pd.read_excel(recommender_training_dataset) 
+# Download the NLTK stopwords data if not already downloaded
+# nltk.download("stopwords")
+# nltk.download("punkt")
 
-first_column = df['Course Name'] 
-print(first_column)
+# Define a function to preprocess text
+def preprocess_text(text):
+    # Handle empty cells
+    if pd.isna(text):
+        text = ""
+
+    # Lowercasing
+    text = text.lower()
+
+    # Tokenization
+    tokens = word_tokenize(text)
+
+    # Remove stopwords
+    stop_words = set(stopwords.words("english"))
+    filtered_tokens = [word for word in tokens if word not in stop_words]
+
+    # Rejoin the filtered tokens to form cleaned text
+    cleaned_text = " ".join(filtered_tokens)
+
+    return cleaned_text
+
+columns_to_preprocess = ["Course Name", "Course Objectives"]
+
+# Apply text pre-processing to specified columns
+for column in columns_to_preprocess:
+    df[column] = df[column].apply(preprocess_text) 
+
+# Save the preprocessed data
+df.to_excel(r"C:\Users\Simon\proacted\AIacademia\python_scripts\preprocessed_data_two_columns.xlsx", index=False)
