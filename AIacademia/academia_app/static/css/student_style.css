@@ -2,19 +2,26 @@
  .navigation-menu {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 80%'   7 73fv3b7b47' [h];
     right: 0;
     background-color: #007bff;
     color: #fff;
     padding: 5px 2px;
+    margin-left: 100px;
     text-align: right;
-    margin-bottom: auto;
-    z-index: 1000;
+    margin-bottom: 20px;
+    /* z-index: 10; */
+}
+.navigation-menu div{
+    margin-top: 100px;
+    background-color: brown;
 }
 .navigation-menu h1 {
     font-size: 20px;
     color: black; 
     text-align: center;
+    margin-top: 100px;
+    background-color: brown;
 }
 .navigation-menu a.logout-button {
     color: #fff;
@@ -29,7 +36,7 @@
     top: 75px;
     left: 0;
     text-align: center;
-    z-index: 1000;
+    z-index: 1;
 }
 .search-student button[type="submit"]:hover {
     background-color: #0056b3;
@@ -132,5 +139,30 @@
     display: block;
 }
 
-
+.sidebar {
+    height: 100%;
+    background-color: #f1f1f1;
+    width: 250px;
+    padding-top: 20px;
+    position :fixed;
+    top:0;
+    left:0;
+     z-index: 100;
+}
+.sidebar ul{
+    list-style-type: none;
+    padding:0;
+    
+}
+.sidebar ul li{
+    color: pink;
+    padding:8px 16px;
+    
+}
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+   
+    
+}
 /* Add more specific styles for your content as needed */
