@@ -20,6 +20,8 @@ def student_page(request):
 def course_recommendation_page(request):
     return render (request,"academia_app/course_recommendation_page.html")
 
+def intervention (request):
+    return render (request, "academia_app/intervention.html")
 
 def admin_page(request):
     return render(request, "academia_app/admin_page.html")

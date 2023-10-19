@@ -1,0 +1,167 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <div class="login-box">
+     <h1>hello</h1>
+     <form action="your-server-action.php" method="post">
+     <div class="checkbox-container">
+        <label><input type="checkbox"> Option 1</label>
+        <label><input type="checkbox"> Option 2</label>
+        <label><input type="checkbox"> Option 3</label>
+    </div>
+    <form action="course_recommendation_page.html" method="post">
+        <div class="checkbox-container">
+            <label for="subject1">
+                <input type="checkbox" id="subject1" name="subjects[]" value="Mathematics"> MATHEMATICS
+            </label>
+            <label for="subject2">
+                <input type="checkbox" id="subject2" name="subjects[]" value="Science"> ENGLISH
+            </label> {% endcomment %}
+            <!-- Add more checkboxes here -->
+        {% comment %} </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <section>
+        <h2>SELECT YOUR INTERESTS</h2>
+        <form action="course_recommendation_page.html" method="post">
+            <div class="checkbox-container">
+                <label for="subject14">
+                    <input type="checkbox" id="subject14" name="subjects[]" value="Mathematics"> POLITICS
+                </label>
+                <label for "subject15">
+                    <input type="checkbox" id="subject15" name="subjects[]" value="Science"> SCIENCE
+                </label> {% endcomment %}
+                <!-- Add more checkboxes here -->
+            {% comment %} </div>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+    <br>
+    <input type="submit" value="Submit">    
+    </div>
+</body>
+</html> {% endcomment %}
+{% comment %} <!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .checkbox-container {
+            display: flex;
+        }
+
+        .checkbox-container label {
+            display: flex;
+            align-items: center;
+            margin-right: 20px; /* Adjust this value to control the spacing between checkboxes */
+        }
+    
+        /* Hide the login form initially */
+        #login-form {
+            display: none;
+        }
+    </style>
+    <script>
+        function showLoginForm() {
+            var password = prompt("Enter the password:");
+            if (password === "your_password") { {% endcomment %}
+                {% comment %} // Correct password, show the link or redirect to the desired page
+                document.getElementById("login-form").style.display = "none";
+                window.location.href = "your_desired_page.html";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="showLoginForm()">Click to access the link</button>
+    
+    <!-- Login Form -->
+    <div id="login-form">
+        <h2>Login Required</h2>
+        <form>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <button type="button" onclick="showLoginForm()">Submit</button>
+        </form>
+    </div>
+    <form action="course_recommendation_page.html" method="post">
+        <div class="checkbox-container">
+            <label for="subject1">
+                <input type="checkbox" id="subject1" name="subjects[]" value="Mathematics"> MATHEMATICS
+            </label>
+            <label for="subject2">
+                <input type="checkbox" id="subject2" name="subjects[]" value="Science"> ENGLISH
+            </label> {% endcomment %}
+            <!-- Add more checkboxes here -->
+        {% comment %} </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <section>
+        <h2>SELECT YOUR INTERESTS</h2>
+        <form action="course_recommendation_page.html" method="post">
+            <div class="checkbox-container">
+                <label for="subject14">
+                    <input type="checkbox" id="subject14" name="subjects[]" value="Mathematics"> POLITICS
+                </label>
+                <label for "subject15">
+                    <input type="checkbox" id="subject15" name "subjects[]" value="Science"> SCIENCE
+                </label> {% endcomment %}
+                <!-- Add more checkboxes here -->
+            {% comment %} </div>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+</body>
+</html> {% endcomment %}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Hide the login form initially */
+        #login-form {
+            display: none;
+        }
+    </style>
+    <script>
+        function showLoginForm() {
+            var admissionNumber = prompt("Enter your admission number:");
+            var password = prompt("Enter the password:");
+
+            if (admissionNumber === "your_admission_number" && password === "your_password") {
+                // Correct admission number and password, show the link or redirect to the desired page
+                document.getElementById("login-form").style.display = "none";
+                window.location.href = "your_desired_page.html";
+            } else {
+                alert("Incorrect admission number or password. Please try again.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="showLoginForm()">Click to access the link</button>
+    
+    <!-- Login Form -->
+    <div id="login-form">
+        <h2>Login Required</h2>
+        <form>
+            <label for="admission-number">Admission Number:</label>
+            <input type="text" id="admission-number" name="admission-number">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <button type="button" onclick="showLoginForm()">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
