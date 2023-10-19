@@ -1,0 +1,642 @@
+{
+    "schools": [
+      {
+        "name": "School of Agriculture and Food Security",
+        "abbreviation": "SAFS",
+        "departments": [
+          {
+            "name": "Department of Agribusiness Management"
+          },
+          {
+            "name": "Department of Agricultural Economics"
+          },
+          {
+            "name": "Department of Agriculture Education and Extension"
+          }
+        ],
+        "courses": [
+          {
+            "name": "Bachelor of Science (Agribusiness Management, With IT)",
+            "department": "Department of Agribusiness Management"
+          },
+          {
+            "name": "Bachelor of Science (Agricultural Economics, With IT)",
+            "department": "Department of Agricultural Economics"
+          },
+          {
+            "name": "Bachelor of Science (Agriculture Education and Extension, With IT)",
+            "department": "Department of Agriculture Education and Extension"
+          },
+          {
+            "name": "Bachelor of Science (Agronomy, With IT)",
+            "department": "Department of Agriculture Education and Extension"
+          },
+          {
+            "name": "Bachelor of Science (Animal Science, With IT)",
+            "department": "Department of Agriculture Education and Extension"
+          },
+          {
+            "name": "Bachelor of Science (Fisheries and Aquaculture, With IT)",
+            "department": "Department of Agriculture Education and Extension"
+          },
+          {
+            "name": "Bachelor of Science (Horticulture, With IT)",
+            "department": "Department of Agriculture Education and Extension"
+          },
+          {
+            "name": "Bachelor of Science (Soil Science & Plant Nutrition, With IT)",
+            "department": "Department of Agriculture Education and Extension"
+          },
+          {
+            "name": "Bachelor of Science (Aquatic Resources Conservation and Development, With IT)",
+            "department": "Department of Agriculture Education and Extension"
+          },
+          {
+            "name": "Bachelor of Science (Climate Change and Development, With IT)",
+            "department": "Department of Agriculture Education and Extension"
+          },
+          {
+            "name": "Bachelor of Science (Environmental Science, With IT)",
+            "department": "Department of Agriculture Education and Extension"
+          },
+          {
+            "name": "Bachelor of Science (Earth Science, With IT)",
+            "department": "Department of Agriculture Education and Extension"
+          }
+        ]
+      },
+      {
+        "name": "School of Arts and Social Sciences",
+        "abbreviation": "SASS",
+        "departments": [
+          {
+            "name": "Department of Communication & Media Technology"
+          },
+          {
+            "name": "Department of Criminology"
+          },
+          {
+            "name": "Department of Drama and Theatre Studies"
+          },
+          {
+            "name": "Department of Fine Art"
+          },
+          {
+            "name": "Department of French"
+          },
+          {
+            "name": "Department of History and Archaeology"
+          },
+          {
+            "name": "Department of Interior Design"
+          },
+          {
+            "name": "Department of Kiswahili"
+          },
+          {
+            "name": "Department of Language and Communication"
+          },
+          {
+            "name": "Department of Literature"
+          },
+          {
+            "name": "Department of Music"
+          },
+          {
+            "name": "Department of Philosophy"
+          },
+          {
+            "name": "Department of Religion"
+          },
+          {
+            "name": "Department of Sociology and Anthropology"
+          },
+          {
+            "name": "Department of Textiles, Apparel Design and Fashion Merchandising"
+          },
+          {
+            "name": "Department of Theology"
+          }
+        ],
+        "courses": [
+          {
+            "name": "Bachelor of Arts (Communication & Media Technology, With IT)",
+            "department": "Department of Communication & Media Technology"
+          },
+          {
+            "name": "Bachelor of Arts (Criminology, With IT)",
+            "department": "Department of Criminology"
+          },
+          {
+            "name": "Bachelor of Arts (Drama and Theatre Studies, With IT)",
+            "department": "Department of Drama and Theatre Studies"
+          },
+          {
+            "name": "Bachelor of Arts (Fine Art, With IT)",
+            "department": "Department of Fine Art"
+          },
+          {
+            "name": "Bachelor of Arts (French, With IT)",
+            "department": "Department of French"
+          },
+          {
+            "name": "Bachelor of Arts (History and Archaeology, With IT)",
+            "department": "Department of History and Archaeology"
+          },
+          {
+            "name": "Bachelor of Arts (Interior Design, With IT)",
+            "department": "Department of Interior Design"
+          },
+          {
+            "name": "Bachelor of Arts (Kiswahili, With IT)",
+            "department": "Department of Kiswahili"
+          },
+          {
+            "name": "Bachelor of Arts (Language and Communication, With IT)",
+            "department": "Department of Language and Communication"
+          },
+          {
+            "name": "Bachelor of Arts (Literature, With IT)",
+            "department": "Department of Literature"
+          },
+          {
+            "name": "Bachelor of Arts (Music, With IT)",
+            "department": "Department of Music"
+          },
+          {
+            "name": "Bachelor of Arts (Philosophy, With IT)",
+            "department": "Department of Philosophy"
+          },
+          {
+            "name": "Bachelor of Arts (Religion, With IT)",
+            "department": "Department of Religion"
+          },
+          {
+            "name": "Bachelor of Arts (Sociology and Anthropology, With IT)",
+            "department": "Department of Sociology and Anthropology"
+          },
+          {
+            "name": "Bachelor of Arts (Textiles, Apparel Design and Fashion Merchandising, With IT)",
+            "department": "Department of Textiles, Apparel Design and Fashion Merchandising"
+          },
+          {
+            "name": "Bachelor of Arts (Theology, With IT)",
+            "department": "Department of Theology"
+          }
+        ]
+      },
+      {
+        "name": "School of Business and Economics",
+        "abbreviation": "SBE",
+        "departments": [
+          {
+            "name": "Department of Business Studies"
+          },
+          {
+            "name": "Department of Economics"
+          },
+          {
+            "name": "Department of Business Administration"
+          },
+          {
+            "name": "Department of Procurement and Supply Chain Management"
+          },
+          {
+            "name": "Department of Business Entrepreneurship"
+          },
+          {
+            "name": "Department of Human Resource Management"
+          },
+          {
+            "name": "Department of Marketing"
+          },
+          {
+            "name": "Department of Accounting & Finance"
+          },
+          {
+            "name": "Department of Applied Economics"
+          },
+          {
+            "name": "Department of Economics & Statistics"
+          },
+          {
+            "name": "Department of Economics & Finance"
+          },
+          {
+            "name": "Department of Travel & Tourism Management"
+          },
+          {
+            "name": "Department of Eco-tourism, Hotel and Institution Management"
+          }
+        ],
+        "courses": [
+          {
+            "name": "Bachelor of Arts (Business Studies, With IT)",
+            "department": "Department of Business Studies"
+          },
+          {
+            "name": "Bachelor of Arts (Economics, With IT)",
+            "department": "Department of Economics"
+          },
+          {
+            "name": "Bachelor of Business Administration (With IT)",
+            "department": "Department of Business Administration"
+          },
+          {
+            "name": "Bachelor of Procurement and Supply Chain Management",
+            "department": "Department of Procurement and Supply Chain Management"
+          },
+          {
+            "name": "Bachelor of Business Entrepreneurship, with IT",
+            "department": "Department of Business Entrepreneurship"
+          },
+          {
+            "name": "Bachelor of Science in Human Resource Management",
+            "department": "Department of Human Resource Management"
+          },
+          {
+            "name": "Bachelor of Science in Marketing, with IT",
+            "department": "Department of Marketing"
+          },
+          {
+            "name": "Bachelor of Science in Accounting & Finance, with IT",
+            "department": "Department of Accounting & Finance"
+          },
+          {
+            "name": "Bachelor of Applied Economics with IT",
+            "department": "Department of Applied Economics"
+          },
+          {
+            "name": "Bachelor of Economics & Statistics, with IT",
+            "department": "Department of Economics & Statistics"
+          },
+          {
+            "name": "Bachelor of Economics & Finance with IT",
+            "department": "Department of Economics & Finance"
+          },
+          {
+            "name": "Bachelor of Science in Travel & Tourism Management",
+            "department": "Department of Travel & Tourism Management"
+          },
+          {
+            "name": "Bachelor of Science in Eco-tourism, Hotel and Institution Management",
+            "department": "Department of Eco-tourism, Hotel and Institution Management"
+          }
+        ]
+      },
+      {
+        "name": "School of Computing & Informatics",
+        "abbreviation": "SCI",
+        "departments": [
+          {
+            "name": "Department of Information & Communication Technology Management"
+          },
+          {
+            "name": "Department of Information Technology"
+          },
+          {
+            "name": "Department of Computer Science"
+          },
+          {
+            "name": "Department of Computer Technology"
+          },
+          {
+            "name": "Department of Information Systems"
+          }
+        ],
+        "courses": [
+          {
+            "name": "Bachelor of Science (Information & Communication Technology Management)",
+            "department": "Department of Information & Communication Technology Management"
+          },
+          {
+            "name": "Bachelor of Science (Information Technology)",
+            "department": "Department of Information Technology"
+          },
+          {
+            "name": "Bachelor of Science (Computer Science)",
+            "department": "Department of Computer Science"
+          },
+          {
+            "name": "Bachelor of Science (Computer Technology)",
+            "department": "Department of Computer Technology"
+          },
+          {
+            "name": "Bachelor of Science (Information Systems)",
+            "department": "Department of Information Systems"
+          }
+        ]
+      },
+      {
+        "name": "School of Development and Strategic Studies",
+        "abbreviation": "SDSS",
+        "departments": [
+          {
+            "name": "Department of International Relations and Diplomacy"
+          },
+          {
+            "name": "Department of Development Studies"
+          },
+          {
+            "name": "Department of Political Science"
+          }
+        ],
+        "courses": [
+          {
+            "name": "Bachelor of Arts (International Relations and Diplomacy, with IT)",
+            "department": "Department of International Relations and Diplomacy"
+          },
+          {
+            "name": "Bachelor of Arts (Development Studies, With IT)",
+            "department": "Department of Development Studies"
+          },
+          {
+            "name": "Bachelor of Arts (Political Science, With IT)",
+            "department": "Department of Political Science"
+          }
+        ]
+      },
+      {
+        "name": "School of Education",
+        "abbreviation": "SOE",
+        "departments": [
+          {
+            "name": "Department of Science Education"
+          },
+          {
+            "name": "Department of Special Needs Education"
+          },
+          {
+            "name": "Department of Arts Education"
+          },
+          {
+            "name": "Department of Early Childhood Education"
+          },
+          {
+            "name": "Department of Languages Education"
+          },
+          {
+            "name": "Department of Music Education"
+          },
+          {
+            "name": "Department of Home Science Education"
+          }
+        ],
+        "courses": [
+          {
+            "name": "Bachelor of Education (Science, With IT)",
+            "department": "Department of Science Education"
+          },
+          {
+            "name": "Bachelor of Education (Special Needs Education, With IT)",
+            "department": "Department of Special Needs Education"
+          },
+          {
+            "name": "Bachelor of Education (Arts, With IT)",
+            "department": "Department of Arts Education"
+          },
+          {
+            "name": "Bachelor of Education (Early Childhood Education, With IT)",
+            "department": "Department of Early Childhood Education"
+          },
+          {
+            "name": "Bachelor of Education (French, With IT)",
+            "department": "Department of Languages Education"
+          },
+          {
+            "name": "Bachelor of Education (Music, With IT)",
+            "department": "Department of Music Education"
+          },
+          {
+            "name": "Bachelor of Education (Home Science, with IT)",
+            "department": "Department of Home Science Education"
+          }
+        ]
+      },
+      {
+        "name": "School of Mathematics, Statistics & Actuarial Science",
+        "abbreviation": "SMSAS",
+        "departments": [
+          {
+            "name": "Department of Actuarial Science"
+          },
+          {
+            "name": "Department of Applied Statistics"
+          },
+          {
+            "name": "Department of Mathematical Sciences"
+          },
+          {
+            "name": "Department of Mathematics & Business Studies"
+          },
+          {
+            "name": "Department of Mathematics & Computer Science"
+          },
+          {
+            "name": "Department of Mathematics & Economics"
+          }
+        ],
+        "courses": [
+          {
+            "name": "Bachelor of Science (Actuarial Science, With IT)",
+            "department": "Department of Actuarial Science"
+          },
+          {
+            "name": "Bachelor of Science (Applied Statistics, With IT)",
+            "department": "Department of Applied Statistics"
+          },
+          {
+            "name": "Bachelor of Science (Mathematical Sciences, With IT)",
+            "department": "Department of Mathematical Sciences"
+          },
+          {
+            "name": "Bachelor of Science (Mathematics & Business Studies, With IT)",
+            "department": "Department of Mathematics & Business Studies"
+          },
+          {
+            "name": "Bachelor of Science (Mathematics & Computer Science)",
+            "department": "Department of Mathematics & Computer Science"
+          },
+          {
+            "name": "Bachelor of Science (Mathematics & Economics, With IT)",
+            "department": "Department of Mathematics & Economics"
+          }
+        ]
+      },
+      {
+        "name": "School of Medicine",
+        "abbreviation": "SOM",
+        "departments": [
+          {
+            "name": "Department of Medicine"
+          },
+          {
+            "name": "Department of Biochemistry"
+          },
+          {
+            "name": "Department of Medical Laboratory Sciences"
+          }
+        ],
+        "courses": [
+          {
+            "name": "Bachelor of Medicine and Bachelor of Surgery (With IT)",
+            "department": "Department of Medicine"
+          },
+          {
+            "name": "Bachelor of Science (Biochemistry, with IT)",
+            "department": "Department of Biochemistry"
+          },
+          {
+            "name": "Bachelor of Science (Medical Laboratory Sciences, With IT)",
+            "department": "Department of Medical Laboratory Sciences"
+          }
+        ]
+      },
+      {
+        "name": "School of Nursing",
+        "abbreviation": "SON",
+        "departments": [
+          {
+            "name": "Department of Nursing"
+          }
+        ],
+        "courses": [
+          {
+            "name": "Bachelor of Science (Nursing, With IT)",
+            "department": "Department of Nursing"
+          }
+        ]
+      },
+      {
+        "name": "School of Pharmacy",
+        "abbreviation": "SOP",
+        "departments": [
+          {
+            "name": "Department of Pharmacy"
+          }
+        ],
+        "courses": [
+          {
+            "name": "Bachelor of Pharmacy",
+            "department": "Department of Pharmacy"
+          }
+        ]
+      },
+      {
+        "name": "School of Physical & Biological Sciences",
+        "abbreviation": "SPBS",
+        "departments": [
+          {
+            "name": "Department of Biological Sciences"
+          },
+          {
+            "name": "Department of Physical Sciences"
+          }
+        ],
+        "courses": [
+          {
+            "name": "Bachelor of Science (Basic Science, With IT)",
+            "department": "Department of Biological Sciences"
+          },
+          {
+            "name": "Bachelor of Science (Industrial Chemistry, With IT)",
+            "department": "Department of Physical Sciences"
+          },
+          {
+            "name": "Bachelor of Science (Analytical Chemistry, with IT)",
+            "department": "Department of Physical Sciences"
+          },
+          {
+            "name": "Bachelor of Science (Botany, with IT)",
+            "department": "Department of Biological Sciences"
+          },
+          {
+            "name": "Bachelor of Science (Physics, with IT)",
+            "department": "Department of Physical Sciences"
+          },
+          {
+            "name": "Bachelor of Science (Ethnobotany & Medicinal Plants, with IT)",
+            "department": "Department of Biological Sciences"
+          }
+        ]
+      },
+      {
+        "name": "School of Planning and Architecture",
+        "abbreviation": "SPA",
+        "departments": [
+          {
+            "name": "Department of Urban and Regional Planning"
+          },
+          {
+            "name": "Department of Disaster Management"
+          }
+        ],
+        "courses": [
+          {
+            "name": "Bachelor of Science (Geospatial Information Science, With IT)",
+            "department": "Department of Urban and Regional Planning"
+          },
+          {
+            "name": "Bachelor of Arts (Urban and Regional Planning, With IT)",
+            "department": "Department of Urban and Regional Planning"
+          },
+          {
+            "name": "Bachelor of Arts (Disaster Management, With IT)",
+            "department": "Department of Disaster Management"
+          }
+        ]
+      },
+      {
+        "name": "School of Public Health & Community Development",
+        "abbreviation": "SPHCD",
+        "departments": [
+          {
+            "name": "Department of Medical Biotechnology"
+          },
+          {
+            "name": "Department of Nutrition and Dietetics"
+          },
+          {
+            "name": "Department of Public Health"
+          },
+          {
+            "name": "Department of Health Records"
+          }
+        ],
+        "courses": [
+          {
+            "name": "Bachelor of Science (Medical Biotechnology, With IT)",
+            "department": "Department of Medical Biotechnology"
+          },
+          {
+            "name": "Bachelor of Science (Nutrition and Dietetics, With IT)",
+            "department": "Department of Nutrition and Dietetics"
+          },
+          {
+            "name": "Bachelor of Science (Public Health, With IT)",
+            "department": "Department of Public Health"
+          },
+          {
+            "name": "Bachelor of Science (Health Records, with IT)",
+            "department": "Department of Health Records"
+          }
+        ]
+      },
+      {
+        "name": "School of Law",
+        "abbreviation": "SOL",
+        "departments": [
+          {
+            "name": "Department of Law"
+          }
+        ],
+        "courses": [
+          {
+            "name": "Bachelor of Laws (LL.B)",
+            "department": "Department of Law"
+          }
+        ]
+      }      
+    ]
+  }
+  
