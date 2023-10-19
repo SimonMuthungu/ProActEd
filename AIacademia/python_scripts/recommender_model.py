@@ -25,7 +25,7 @@ matrix = joblib.load(r"C:\Users\Simon\proacted\AIacademia\trained_models\matrix.
 vectorizer = joblib.load(r"C:\Users\Simon\proacted\AIacademia\trained_models\vectorizer.joblib")
 
 
-student_interests = "maths, bulding sytems, engineering"
+student_interests = "fisheries, agriculture and soil mgt"
 student_profile = vectorizer.transform([student_interests])
 
 
