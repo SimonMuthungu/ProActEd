@@ -7,29 +7,30 @@ import joblib
 
 
 path_to_data = r'C:\Users\Simon\proacted\AIacademia\python_scripts\preprocessed_data_two_columns.xlsx'
-
 df = pd.read_excel(path_to_data)
 
-# loading the joblib file
-vectorized_course_description = joblib.load(r"C:\Users\Simon\proacted\AIacademia\trained_models\initital_trained_recommendation_system.joblib")
+
+# tfidf_vectorizer = TfidfVectorizer()
 
 
-# vectorizing the Course Objectives column
+# # vectorizing the Course Objectives column
 # tfidf_matrix = tfidf_vectorizer.fit_transform(df['Course Objectives'])
 
 
-# saving the vectorized matrix into a file
-# joblib.dump(tfidf_matrix, r"C:\Users\Simon\proacted\AIacademia\trained_models\initital_trained_recommendation_system.joblib") 
+# # saving the vectorized matrix into a file
+# joblib.dump(tfidf_matrix, r"C:\Users\Simon\proacted\AIacademia\trained_models\matrix.joblib") 
+# joblib.dump(tfidf_vectorizer, r"C:\Users\Simon\proacted\AIacademia\trained_models\vectorizer.joblib") 
+
+matrix = joblib.load(r"C:\Users\Simon\proacted\AIacademia\trained_models\matrix.joblib")
+vectorizer = joblib.load(r"C:\Users\Simon\proacted\AIacademia\trained_models\vectorizer.joblib")
 
 
-# transform these using the same tf-idf
 student_interests = "maths, bulding sytems, engineering"
-tfidf_vectorizer_student = TfidfVectorizer()
-student_profile = tfidf_vectorizer_student.transform([student_interests])
+student_profile = vectorizer.transform([student_interests])
 
 
 # calculating cosine similarities b2n the dataset and student interests, and give an array
-similarities = cosine_similarity(student_profile, vectorized_course_description)
+similarities = cosine_similarity(student_profile, matrix)
 
 
 similar_courses_indices = similarities.argsort(axis=1)[:, ::-1]
