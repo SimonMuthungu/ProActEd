@@ -1,13 +1,7 @@
-from academia_app.models import Department
-from django.http import (  # Import JsonResponse for AJAX responses
-    HttpResponse, JsonResponse)
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 
-# Other imports
-
-def department_list(request):
-    all_departments = Department.objects.all()
-    return render(request, 'template_name.html', {'departments': all_departments})
+from .models import Course, School  # Import Course and School models
 
 
 def login(request):
@@ -19,20 +13,18 @@ def student_page(request):
 def admin_page(request):
     return render(request, "academia_app/admin_page.html")
 
-from .models import Course, Department, School
-
-
 def school_list(request):
     schools = School.objects.all()
-    departments = Department.objects.all()
-    return render(request, 'admin_page.html', {'schools': schools, 'departments': departments})
+    # Retrieve courses for all schools (you may need to adjust this based on your use case)
+    courses = Course.objects.all()
+    return render(request, 'admin_page.html', {'schools': schools, 'courses': courses})
 
-def get_courses(request, department_id):
-    # Retrieve courses for the selected department
-    courses = Course.objects.filter(department_id=department_id).values('id', 'name')
+def get_courses(request, school_id):
+    # Retrieve courses for the selected school
+    courses = Course.objects.filter(school_id=school_id).values('id', 'name')
     
     # Convert courses to a list of dictionaries
     course_list = list(courses)
 
-    # Return courses as JSON response
+    # Return courses as a JSON response
     return JsonResponse(course_list, safe=False)
