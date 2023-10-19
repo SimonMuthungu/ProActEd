@@ -10,6 +10,10 @@ def login(request):
 def student_page(request):
     return render(request, "academia_app/student_page.html")
 
+def course_recommendation_page(request):
+    return render (request,"academia_app/course_recommendation_page.html")
+
+
 def admin_page(request):
     return render(request, "academia_app/admin_page.html")
 
