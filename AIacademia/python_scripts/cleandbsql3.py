@@ -15,11 +15,11 @@ from nltk.tokenize import word_tokenize
 courses = Course_data_for_recommender.objects.all()
 
 for course in courses:
-    text = course.Course_name
+    text = course.Course_Objectives
     tokens = word_tokenize(text)
     tokens = [word for word in tokens if word.lower() not in stopwords.words('english')]
     cleaned_text = ' '.join(tokens)
     
-    course.Course_name = cleaned_text
+    course.Course_Objectives = cleaned_text
     course.save()
     print('done')
