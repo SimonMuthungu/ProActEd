@@ -5,7 +5,7 @@ import nltk
 from nltk.corpus import stopwords 
 from nltk.tokenize import word_tokenize
 
-df = pd.read_excel(r"AIacademia/data_files/gpt4_recommender_gen_training_data.xlsx")
+# df = pd.read_excel(r"AIacademia/data_files/gpt4_recommender_gen_training_data.xlsx")
 
 # Download the NLTK stopwords data if not already downloaded
 # nltk.download("stopwords")
@@ -32,11 +32,11 @@ def preprocess_text(text):
 
     return cleaned_text
 
-columns_to_preprocess = ["Course Objectives", "Course General Info and About", "General Prequisites", "Subject Prequisites"]
+# columns_to_preprocess = ["Course Objectives", "Course General Info and About", "General Prequisites", "Subject Prequisites"]
 
-# Apply text pre-processing to specified columns
-for column in columns_to_preprocess:
-    df[column] = df[column].apply(preprocess_text) 
+# # Apply text pre-processing to specified columns
+# for column in columns_to_preprocess:
+#     df[column] = df[column].apply(preprocess_text) 
 
 # Save the preprocessed data
-df.to_excel(r"AIacademia/data_files/gpt4_recommender_gen_training_data_preprocessed.xlsx", index=False)
+# df.to_excel(r"AIacademia/data_files/gpt4_recommender_gen_training_data_preprocessed.xlsx", index=False)
