@@ -6,6 +6,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 import joblib
 import sys
 from prepare_recommender_dataset import preprocess_text
+from scipy.sparse import hstack
+
 
 sys.path.append(r'C:\Users\Simon\proacted\AIacademia')
 
@@ -33,35 +35,38 @@ prerequisites_vectorizer = TfidfVectorizer()
 
 combined_matrix = combined_vectorizer.fit_transform(df['Combined Info'])
 prerequisites_matrix = prerequisites_vectorizer.fit_transform(df['Prerequisites'])
+stacked_courses_matrix = hstack([combined_matrix, prerequisites_matrix])
 
-student_interests = "farming and general agriculture"
-student_subject_strengths = "biology and agriculture"
+
+top_5 = 3
+
+
+student_interests = "business and entrepreneurship, everything that goes into being a billionaire"
+student_subject_strengths = "business, computer studies, maths"
+
 # Cleaning student interests using nltk
 clean_student_interests = preprocess_text(student_interests)
 clean_student_subject_strengths = preprocess_text(student_subject_strengths)
 
 
-top_5 = 5 
-
 # Getting cosine similarities based on the combined information
 combined_student_profile = combined_vectorizer.transform([student_interests])
-combined_similarities = cosine_similarity(combined_student_profile, combined_matrix)
-combined_courses_indices = combined_similarities.argsort(axis=1)[:, ::-1]
-combined_recommended_courses = combined_courses_indices[0][:top_5]
-combined_recommended_course_names = df['Course Name'].iloc[combined_recommended_courses].tolist()
-
-# Getting cosine similarities based on the prerequisites
 prerequisites_student_profile = prerequisites_vectorizer.transform([student_subject_strengths])
-prerequisites_similarities = cosine_similarity(prerequisites_student_profile, prerequisites_matrix)
-prerequisites_courses_indices = prerequisites_similarities.argsort(axis=1)[:, ::-1]
-prerequisites_recommended_courses = prerequisites_courses_indices[0][:top_5]
-prerequisites_recommended_course_names = df['Course Name'].iloc[prerequisites_recommended_courses].tolist()
+stacked_student_matrix = hstack([combined_student_profile, prerequisites_student_profile])
+
+
+combined_similarities = cosine_similarity(stacked_courses_matrix, stacked_student_matrix) 
+combined_courses_indices = combined_similarities.flatten().argsort()[::-1]
+combined_recommended_courses = combined_courses_indices[:top_5]
+combined_recommended_course_names = df['Course Name'].iloc[combined_recommended_courses].tolist()
 
 
 print("\nRecommended Courses based on Combined Info:\n")
 for course in combined_recommended_course_names:
     print(course)
 
-print("\nRecommended Courses based on Prerequisites:\n")
-for course in prerequisites_recommended_course_names:
-    print(course)
+# print(combined_similarities)
+# print('-------------------')
+# print(combined_courses_indices)
+# print('-------------------')
+# print(combined_recommended_courses)
