@@ -21,33 +21,47 @@ all_courses = Course_data_for_recommender.objects.all()
 
 courses_list = [{
     "Course Name": course.Course_name,
-    "Course Objectives": course.Course_Objectives,
-    "Course General Info and About": course.Course_General_Info_and_About,
+    "Combined Info": course.Course_Objectives + " " + course.Course_General_Info_and_About,
     "Prerequisites": course.Prerequisites
 } for course in all_courses]
 
 df = pd.DataFrame(courses_list)
 
+# Create separate vectorizers for the combined column and the Prerequisites column
+combined_vectorizer = TfidfVectorizer()
+prerequisites_vectorizer = TfidfVectorizer()
 
-tfidf_vectorizer = TfidfVectorizer()
-tfidf_matrix = tfidf_vectorizer.fit_transform(df['Prerequisites'])
+combined_matrix = combined_vectorizer.fit_transform(df['Combined Info'])
+prerequisites_matrix = prerequisites_vectorizer.fit_transform(df['Prerequisites'])
 
-matrix = tfidf_vectorizer.transform(df['Prerequisites'])
-
-student_interests = "I love technology and coding"
-# cleaning student interests using nltk
+student_interests = "farming and general agriculture"
+student_subject_strengths = "biology and agriculture"
+# Cleaning student interests using nltk
 clean_student_interests = preprocess_text(student_interests)
-print(clean_student_interests)
+clean_student_subject_strengths = preprocess_text(student_subject_strengths)
 
-student_profile = tfidf_vectorizer.transform([student_interests])
 
-similarities = cosine_similarity(student_profile, matrix)
-similar_courses_indices = similarities.argsort(axis=1)[:, ::-1]
+top_5 = 5 
 
-top_5 = 5
-recommended_courses = similar_courses_indices[0][:top_5]
-recommended_course_names = df['Course Name'].iloc[recommended_courses].tolist()
+# Getting cosine similarities based on the combined information
+combined_student_profile = combined_vectorizer.transform([student_interests])
+combined_similarities = cosine_similarity(combined_student_profile, combined_matrix)
+combined_courses_indices = combined_similarities.argsort(axis=1)[:, ::-1]
+combined_recommended_courses = combined_courses_indices[0][:top_5]
+combined_recommended_course_names = df['Course Name'].iloc[combined_recommended_courses].tolist()
+
+# Getting cosine similarities based on the prerequisites
+prerequisites_student_profile = prerequisites_vectorizer.transform([student_subject_strengths])
+prerequisites_similarities = cosine_similarity(prerequisites_student_profile, prerequisites_matrix)
+prerequisites_courses_indices = prerequisites_similarities.argsort(axis=1)[:, ::-1]
+prerequisites_recommended_courses = prerequisites_courses_indices[0][:top_5]
+prerequisites_recommended_course_names = df['Course Name'].iloc[prerequisites_recommended_courses].tolist()
+
+
+print("\nRecommended Courses based on Combined Info:\n")
+for course in combined_recommended_course_names:
+    print(course)
 
 print("\nRecommended Courses based on Prerequisites:\n")
-for course in recommended_course_names:
+for course in prerequisites_recommended_course_names:
     print(course)
