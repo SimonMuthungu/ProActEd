@@ -11,17 +11,20 @@ def student_page(request):
     return render(request, "academia_app/student_page.html")
 
 def course_recommendation_page(request):
-    return render (request,"academia_app/course_recommendation_page.html")
-
+    return render(request, "academia_app/course_recommendation_page.html")
 
 def admin_page(request):
     return render(request, "academia_app/admin_page.html")
+
+def admin_login_view(request):
+    # Your view logic for admin login goes here
+    return render(request, "admin_login.html")  # Replace "admin_login.html" with the actual template
 
 def school_list(request):
     schools = School.objects.all()
     # Retrieve courses for all schools (you may need to adjust this based on your use case)
     courses = Course.objects.all()
-    return render(request, 'admin_page.html', {'schools': schools, 'courses': courses})
+    return render(request, 'academia_app/admin_page.html', {'schools': schools, 'courses': courses})
 
 def get_courses(request, school_id):
     # Retrieve courses for the selected school
