@@ -58,5 +58,15 @@ class CourseOfInterest(models.Model):
     required_high_school_subjects = models.ManyToManyField(HighSchoolSubject, related_name='required_for_courses')
 
 
+# to save the excel data to a db.sqlite3
+
+class Course_data_for_recommender(models.Model):
+    Course_name = models.CharField(max_length=255)
+    Course_Objectives = models.TextField()
+    Course_General_Info_and_About = models.TextField()
+    Prerequisites = models.TextField()
+
+
+
     def __str__(self):
         return self.name
