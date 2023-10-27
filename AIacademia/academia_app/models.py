@@ -2,11 +2,14 @@ from django.db import models
 
 
 class School(models.Model):
+    id = models.AutoField(primary_key=True)  # Explicitly define an 'id' field
     name = models.CharField(max_length=100)
     abbreviation = models.CharField(max_length=10)
 
 class Course(models.Model):
+    program_code = models.CharField(max_length=15, null=True, unique=True, default='Course')
     name = models.CharField(max_length=100)
+    prefix = models.CharField(max_length=15)
     school = models.ForeignKey(School, on_delete=models.CASCADE)
     students_count = models.PositiveIntegerField(default=0)
     graduation_probability = models.FloatField(default=0.0)
