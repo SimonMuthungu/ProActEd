@@ -41,19 +41,17 @@ stacked_courses_matrix = hstack([combined_matrix, prerequisites_matrix])
 top_5 = 3
 
 
-student_interests = "business and entrepreneurship, everything that goes into being a billionaire"
-student_subject_strengths = "business, computer studies, maths"
+student_interests = "medicine and biological technology"
+student_subject_strengths = "maths, computer studies"
 
 # Cleaning student interests using nltk
 clean_student_interests = preprocess_text(student_interests)
 clean_student_subject_strengths = preprocess_text(student_subject_strengths)
 
 
-# Getting cosine similarities based on the combined information
 combined_student_profile = combined_vectorizer.transform([student_interests])
 prerequisites_student_profile = prerequisites_vectorizer.transform([student_subject_strengths])
 stacked_student_matrix = hstack([combined_student_profile, prerequisites_student_profile])
-
 
 combined_similarities = cosine_similarity(stacked_courses_matrix, stacked_student_matrix) 
 combined_courses_indices = combined_similarities.flatten().argsort()[::-1]
