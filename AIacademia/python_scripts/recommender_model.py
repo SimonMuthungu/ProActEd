@@ -41,8 +41,8 @@ stacked_courses_matrix = hstack([combined_matrix, prerequisites_matrix])
 top_5 = 3
 
 
-student_interests = "medicine and biological technology"
-student_subject_strengths = "maths, computer studies"
+student_interests = "technology"
+student_subject_strengths = "computer studies"
 
 # Cleaning student interests using nltk
 clean_student_interests = preprocess_text(student_interests)
