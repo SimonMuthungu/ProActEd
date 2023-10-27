@@ -9,6 +9,7 @@ This project will monitor students' academic progress and use machine learning t
 - [Steven Ochieng](https://github.com/stevocy)
 - [Simon Muthungu](https://github.com/simonmuthungu)
 - [Amakalu Vitalis](https://github.com/MerVitz)
+
 ## Introduction
 
 This project is designed to monitor campus students' academic progress and use machine learning to calculate the probability of the students to drop out of campus. Embedded in the system there is a course recommendation section that takes a student's academic interest and the subjects they did in high school and use AI to recommend a list of courses suitable for the student.
