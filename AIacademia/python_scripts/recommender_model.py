@@ -56,7 +56,7 @@ model = joblib.load(r'C:\Users\Simon\proacted\AIacademia\trained_models_recommen
 def weighted_vector(text, tfidf_scores, model, feature_names):
     words = [word for word in text.split() if word in model.key_to_index and word in feature_names]
     if not words:
-        print('\nfor some reson, we kinda didnt find words in your feature names to work with\n')
+        print(f'\nfor some reason, we dont know what some words you provided mean...\n')
         return np.zeros(model.vector_size)
     feature_names = feature_names.tolist()
     vectors = np.array([model[word] * tfidf_scores[feature_names.index(word)] for word in words])
@@ -96,16 +96,16 @@ student_vector_for_subjects = weighted_vector(user_subjects, prerequisites_vecto
 # Calculate cosine similarities
 interestvscoursedescription_similarities = cosine_similarity([student_vector_for_interests], course_vectors) 
 interestvsprerequisite_similarities = cosine_similarity([student_vector_for_subjects], prerequisites_vectors) 
-combined_total_similarity = (0.67 * interestvscoursedescription_similarities) + (0.33 * interestvsprerequisite_similarities)
+combined_total_similarity = (0.6 * interestvscoursedescription_similarities) + (0.4* interestvsprerequisite_similarities)
 
 
 # Get top 3 recommended courses
-top_3_indices = combined_total_similarity[0].argsort()[-3:][::-1] 
-top_3_courses = df['Course Name'].iloc[top_3_indices].tolist() 
+top_5_indices = combined_total_similarity[0].argsort()[-5:][::-1] 
+top_5_courses = df['Course Name'].iloc[top_5_indices].tolist() 
 
 
 # printing them, or returning to a view
-print("\n----------Courses we think would be best for you based on your interests:----------\n")
-print('|--------------------------------------------------------------------------------------|')
-for course in top_3_courses:
-    print(course)
+print('\n|-------------------Courses we think would be best for you based on your interests:-----------------|\n')
+for course in top_5_courses:
+    print(f'|                  {course}')
+print('\n|----------------------THANKS, THIS IS PRO-ACT-ED-----------------------------------------------------|\n\n\n')
