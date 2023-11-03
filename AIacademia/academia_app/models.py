@@ -2,7 +2,7 @@ from django.db import models
 
 
 class School(models.Model):
-    id = models.AutoField(primary_key=True)  # Explicitly define an 'id' field
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
     abbreviation = models.CharField(max_length=10)
 
@@ -52,13 +52,11 @@ class CourseOfInterest(models.Model):
 
 
 # to save the excel data to a db.sqlite3
-
 class Course_data_for_recommender(models.Model):
     Course_name = models.CharField(max_length=255)
     Course_Objectives = models.TextField()
     Course_General_Info_and_About = models.TextField()
     Prerequisites = models.TextField()
-
 
 
     def __str__(self):
