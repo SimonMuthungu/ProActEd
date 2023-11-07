@@ -50,7 +50,7 @@ class CourseOfInterest(models.Model):
     fields_of_interest = models.ManyToManyField(FieldOfInterest, related_name='courses_of_interest')
     required_high_school_subjects = models.ManyToManyField(HighSchoolSubject, related_name='required_for_courses')
 
-<<<<<<< HEAD
+
 class Recommender_training_data(models.Model):
     Course_name = models.CharField(max_length=100)
     Course_objectives = models.CharField(max_length=100)
@@ -58,19 +58,5 @@ class Recommender_training_data(models.Model):
     General_prereuisites = models.CharField(max_length=100)
     Subject_prerequisites = models.CharField(max_length=100)
 
-
-=======
-
-# to save the excel data to a db.sqlite3
-
-class Course_data_for_recommender(models.Model):
-    Course_name = models.CharField(max_length=255)
-    Course_Objectives = models.TextField()
-    Course_General_Info_and_About = models.TextField()
-    Prerequisites = models.TextField()
-
-
-
->>>>>>> c05bfde20735bbfed350f994a5a4c930eba30e28
     def __str__(self):
         return self.name
