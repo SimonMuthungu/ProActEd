@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import json
 import os
 import django
@@ -28,3 +29,16 @@ for course_data in courses_data:
     )
     course.save()
 print("Courses data successfully migrated!")
+=======
+import gensim
+
+# Load the model
+print('started reading')
+model = gensim.models.KeyedVectors.load_word2vec_format(r"C:\Users\Simon\proacted\GoogleNews-vectors-negative300.bin", binary=True)
+print('finished reading')
+# Get the vector for the word 'computer'
+m = model['computer']
+
+# Print the vector
+print(m)
+>>>>>>> c05bfde20735bbfed350f994a5a4c930eba30e28
