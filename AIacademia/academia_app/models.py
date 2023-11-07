@@ -7,7 +7,7 @@ class School(models.Model):
     abbreviation = models.CharField(max_length=10)
 
 class Course(models.Model):
-    program_code = models.CharField(max_length=15, null=True, unique=True, default='Course')
+    # program_code = models.CharField(max_length=15, null=True, unique=True, default='Course')
     name = models.CharField(max_length=100)
     prefix = models.CharField(max_length=15)
     school = models.ForeignKey(School, on_delete=models.CASCADE)
@@ -50,15 +50,12 @@ class CourseOfInterest(models.Model):
     fields_of_interest = models.ManyToManyField(FieldOfInterest, related_name='courses_of_interest')
     required_high_school_subjects = models.ManyToManyField(HighSchoolSubject, related_name='required_for_courses')
 
-
-# to save the excel data to a db.sqlite3
-
-class Course_data_for_recommender(models.Model):
-    Course_name = models.CharField(max_length=255)
-    Course_Objectives = models.TextField()
-    Course_General_Info_and_About = models.TextField()
-    Prerequisites = models.TextField()
-
+class Recommender_training_data(models.Model):
+    Course_name = models.CharField(max_length=100)
+    Course_objectives = models.CharField(max_length=100)
+    Course_general_info_and_about = models.CharField(max_length=100)
+    General_prereuisites = models.CharField(max_length=100)
+    Subject_prerequisites = models.CharField(max_length=100)
 
 
     def __str__(self):
