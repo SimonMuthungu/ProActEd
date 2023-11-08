@@ -36,11 +36,11 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'AIacademia.settings')
 django.setup()
 
 # getting courses from django dbsqlite3 and making them into a df
-from academia_app.models import Course_data_for_recommender
-all_courses = Course_data_for_recommender.objects.all()
+from academia_app.models import Recommender_training_data
+all_courses = Recommender_training_data.objects.all()
 courses_list = [{"Course Name": course.Course_name,
-                 "Combined Info": course.Course_Objectives + " " + course.Course_General_Info_and_About,
-                 "Prerequisites": course.Prerequisites} for course in all_courses]
+                 "Combined Info": course.Course_objectives + " " + course.Course_general_info_and_about,
+                 "Prerequisites": course.General_prereuisites} for course in all_courses]
 
 df = pd.DataFrame(courses_list)
 
