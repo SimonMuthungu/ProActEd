@@ -131,7 +131,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intervention  Page</title>
-
+    
 </head>
 <body>
             {% for message in messages %}
@@ -143,11 +143,11 @@
             </div>
             {% endfor%}
 
-            <h2> welcome to</h2>
+            <h2 > Hello, welcome !</h2>
 
             {% if user.is_authenticated %}
             <h3>Hello {{fname}} </h3>
-            <h4>You are successfully logged in.</h4>
+            <h4 text-color="green">You are successfully logged in.</h4>
 
             <button  type = "submit"> <a href="/signout">Sign out</a></button>
             {% else%}
