@@ -39,10 +39,11 @@ django.setup()
 from academia_app.models import Recommender_training_data
 all_courses = Recommender_training_data.objects.all()
 courses_list = [{"Course Name": course.Course_name,
-                 "Combined Info": course.Course_objectives + " " + course.Course_general_info_and_about,
-                 "Prerequisites": course.General_prereuisites} for course in all_courses]
+                 "Combined Info": preprocess_text(course.Course_objectives) + " " + preprocess_text(course.Course_general_info_and_about),
+                 "Prerequisites": preprocess_text(course.General_prereuisites)} for course in all_courses]
 
 df = pd.DataFrame(courses_list)
+# print(df) 
 
 
 # Loading Word2Vec model
@@ -53,11 +54,13 @@ model = joblib.load(r'C:\Users\Simon\proacted_googleds\word2vec_model.pkl')
 # these are hashed because they are already stored in the joblib file, no need to initialise them over
 
 # creating 2 vectorizers for course description and prequisites
-# vectorizer = TfidfVectorizer(stop_words='english')
-# prerequisites_vectorizer = TfidfVectorizer(stop_words='english')
-# tfidf_matrix = vectorizer.fit_transform(df['Combined Info'])
-# tfidf_matrix_prerequisites = prerequisites_vectorizer.fit_transform(df['Prerequisites'])
+vectorizer = TfidfVectorizer(stop_words='english')
+prerequisites_vectorizer = TfidfVectorizer(stop_words='english')
+tfidf_matrix = vectorizer.fit_transform(df['Combined Info'])
+tfidf_matrix_prerequisites = prerequisites_vectorizer.fit_transform(df['Prerequisites'])
 
+feature_names = vectorizer.get_feature_names_out()
+feature_names_for_prerequisites = prerequisites_vectorizer.get_feature_names_out()
 
 # Function to convert text into Word2Vec vectors weighted by TF-IDF scores
 def weighted_vector(text, tfidf_scores, model, feature_names):
@@ -72,8 +75,8 @@ def weighted_vector(text, tfidf_scores, model, feature_names):
 
 
 # Convert course descriptions and prerequisites to weighted vectors
-# course_vectors = np.array([weighted_vector(desc, tfidf_matrix[i].toarray()[0], model, feature_names) for i, desc in enumerate(df['Combined Info'])])
-# prerequisites_vectors = np.array([weighted_vector(prereq, tfidf_matrix_prerequisites[i].toarray()[0], model, feature_names_for_prerequisites) for i, prereq in enumerate(df['Prerequisites'])])
+course_vectors = np.array([weighted_vector(desc, tfidf_matrix[i].toarray()[0], model, feature_names) for i, desc in enumerate(df['Combined Info'])])
+prerequisites_vectors = np.array([weighted_vector(prereq, tfidf_matrix_prerequisites[i].toarray()[0], model, feature_names_for_prerequisites) for i, prereq in enumerate(df['Prerequisites'])])
 
 # saving the files in joblib, once
 # joblib.dump(vectorizer, r'C:\Users\Simon\proacted\AIacademia\trained_models_recommender\tfidf_vectorizer.pkl')
@@ -82,17 +85,16 @@ def weighted_vector(text, tfidf_scores, model, feature_names):
 # joblib.dump(tfidf_matrix_prerequisites, r'C:\Users\Simon\proacted\AIacademia\trained_models_recommender\tfidf_matrix_prerequisites.pkl')
 # joblib.dump(course_vectors, r'C:\Users\Simon\proacted\AIacademia\trained_models_recommender\course_vectors.pkl')
 # joblib.dump(prerequisites_vectors, r'C:\Users\Simon\proacted\AIacademia\trained_models_recommender\prerequisites_vectors.pkl')
-# joblib.dump(model, r'C:\Users\Simon\proacted\AIacademia\trained_models_recommender\word2vec_model.pkl')
+# print("\n\ndone with storing the pkl files\n")
 
-# loading them from dumped joblib file
+# loading them from dumped joblib file, everytime the program runs
 tfidf_matrix = joblib.load(r'C:\Users\Simon\proacted\AIacademia\trained_models_recommender\tfidf_matrix.pkl')
 vectorizer = joblib.load(r'C:\Users\Simon\proacted\AIacademia\trained_models_recommender\tfidf_vectorizer.pkl')
 prerequisites_vectorizer = joblib.load(r'C:\Users\Simon\proacted\AIacademia\trained_models_recommender\tfidf_prerequisites_vectorizer.pkl')
 tfidf_matrix_prerequisites = joblib.load(r'C:\Users\Simon\proacted\AIacademia\trained_models_recommender\tfidf_matrix_prerequisites.pkl')
 course_vectors = joblib.load(r'C:\Users\Simon\proacted\AIacademia\trained_models_recommender\course_vectors.pkl')
 prerequisites_vectors = joblib.load(r'C:\Users\Simon\proacted\AIacademia\trained_models_recommender\prerequisites_vectors.pkl')
-feature_names = vectorizer.get_feature_names_out()
-feature_names_for_prerequisites = prerequisites_vectorizer.get_feature_names_out() 
+ 
 
 
 # embedding student input for interests and subjects, this will come from ui input
