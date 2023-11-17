@@ -20,12 +20,17 @@ print('|------------------------------------------------------------------------
 print('|---------------------------------------------------------------------------------------------|')
 print('|---------------------------------------------------------------------------------------------|\n\n\n')
 
-print('\n\nEnter your interests. Feel free to talk... :)\n\n')
-user_interests = input()
-user_subjects = input('\nAnd subjects you excelled at in high school?\n\n')
+# working on building a comprehensive user profile
+user_interests = input('\n\Tell us your ambition in life, what would you like to accomplish or become?:\n\n')
+user_subjects = input('\nWhich subjects did you excel at in high school?\n\n')
+activities_enjoyed = input('\ntell us of activities you have enjoyed in the past, eg debating, repairing broken radios,  \nthat might help us know youre interests better:\n\n')
 
+
+# getting a bigger user profile from they themselves
 user_interests = preprocess_text(user_interests)
 user_subjects = preprocess_text(user_subjects)
+user_subjects = preprocess_text(user_subjects)
+
 
 
 print(f'\n\nGive us a moment, as we give you our best...\n\n')
