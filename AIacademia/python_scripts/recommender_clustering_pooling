@@ -1,3 +1,0 @@
-# the recommender model currently has a 40% accuracy for most courses
-# this will apply pooling and clustering to help the model identify a students course even with
-# a not so strong profile, ie, to be keen and accurate

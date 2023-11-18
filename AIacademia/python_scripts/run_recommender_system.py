@@ -21,15 +21,17 @@ print('|------------------------------------------------------------------------
 print('|---------------------------------------------------------------------------------------------|\n\n\n')
 
 # working on building a comprehensive user profile
-user_interests = input('\n\Tell us your ambition in life, what would you like to accomplish or become?:\n\n')
-user_subjects = input('\nWhich subjects did you excel at in high school?\n\n')
-activities_enjoyed = input('\ntell us of activities you have enjoyed in the past, eg debating, repairing broken radios,  \nthat might help us know youre interests better:\n\n')
+user_interests = input('\n\Tell us your ambition in life, what would you like to accomplish or become?:\n\n') #to be matched against objectives
+user_subjects = input('\nWhich subjects did you excel at in high school?\n\n') #against course pre-requisites
+activities_enjoyed = input('\ntell us of activities you have enjoyed in the past, eg debating, repairing broken radios,  \nthat might help us know youre interests better:\n\n') #general info & about
 
 
 # getting a bigger user profile from they themselves
 user_interests = preprocess_text(user_interests)
 user_subjects = preprocess_text(user_subjects)
-user_subjects = preprocess_text(user_subjects)
+activities_enjoyed = preprocess_text(activities_enjoyed)
+
+print(user_interests, '\n', user_subjects, '\n', activities_enjoyed)
 
 
 
