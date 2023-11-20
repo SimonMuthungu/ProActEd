@@ -23,22 +23,31 @@ from sklearn.cluster import KMeans
 print('\n\n\n|---------------------------------------------------------------------------------------------|')
 print('|---------------------------------------------------------------------------------------------|')
 print('|                       WELCOME TO PROACTED                                                   |')
-print('|                       @ PROACTED 1.1 2023                                                   |')
+print('|                       @ PROACTED 1.2 2023                                                   |')
 print('|---------------------------------------------------------------------------------------------|')
 print('|---------------------------------------------------------------------------------------------|')
 print('|---------------------------------------------------------------------------------------------|\n\n\n')
 
 # working on building a comprehensive user profile
-# user_interests = input('\nTell us your ambition in life, what would you like to accomplish or become?:\n\n') #to be matched against objectives
+user_interests = input('\nTell us your ambition in life, what would you like to accomplish or become?:\n\n') #to be matched against objectives
 # user_subjects = input('\nWhich subjects did you excel at in high school?\n\n') #against course pre-requisites
-# activities_enjoyed = input('\ntell us of activities you have enjoyed in the past, eg debating, repairing broken radios,  \nthat might help us know youre interests better:\n\n') #general info & about
+activities_enjoyed = input('\ntell us of activities you have enjoyed in the past, eg debating, repairing broken radios,  \nthat might help us know youre interests better:\n\n') #general info & about
 print("\nTemporarily halted user input, using predefined strings!!\n")
 amb = "I aspire to make a significant impact in the field of environmental conservation. My dream is to develop innovative solutions to reduce pollution and promote sustainable living practices. I am passionate about researching renewable energy sources and implementing eco-friendly technologies in urban areas to combat climate change and protect natural habitats"
 act_e = "Throughout high school, I found myself deeply engrossed in activities like debating and public speaking. I enjoyed participating in debate clubs, where I honed my skills in persuasive communication and critical thinking. Additionally, I have a keen interest in technology, particularly in building and programming small electronic devices. This hobby of mine has sparked a curiosity in how technology can be leveraged to solve everyday problems."
+
+health_amb = "I am deeply passionate about health and fitness. My ultimate goal is to innovate in the field of sports medicine, contributing to the well-being and peak performance of athletes. I dream of creating new therapies and nutrition plans that revolutionize how we approach physical training and recovery."
+act_enj = "I've always been active in sports, particularly enjoying soccer and swimming. On weekends, I volunteer as a coach for a local youth sports team, teaching them the basics of teamwork and physical fitness. I also spend a lot of time reading about nutrition and experimenting with healthy recipes."
+
+amb_tech = "I aspire to be at the forefront of technological innovation, particularly in the realm of user experience design. My ambition is to design digital products that are not only technically efficient but also user-friendly and accessible to all. Integrating aesthetics with functionality is my ultimate design philosophy."
+tech_acte = "I love coding, especially working on website design. I often participate in online hackathons and enjoy the challenge of creating functional web apps under time constraints. In my free time, I dabble in graphic design, creating digital art and experimenting with various design software."
+
+
+
 # getting a bigger user profile from they themselves
-user_interests = preprocess_text(amb)
+user_interests = preprocess_text(user_interests)
 # user_subjects = preprocess_text(user_subjects)
-activities_enjoyed = preprocess_text(act_e)
+activities_enjoyed = preprocess_text(activities_enjoyed)
 
 
 
@@ -233,14 +242,30 @@ General_Info_Similarity = calculate_similarity(vectorized_activities_enjoyed, df
 combined_total_similarity = np.array(Objective_Similarity) * 0.60 + np.array(General_Info_Similarity) * 0.40
 # df['Prerequisites similarity'] = calculate_similarity(user_tfidf_prerequisites, df['Pooled General Info'])
 
+print(combined_total_similarity.shape)
 
-top_5_indices = combined_total_similarity[0].argsort()[-5:][::-1] 
+# Create a DataFrame to display course names with their corresponding similarity scores
+similarity_df = pd.DataFrame({
+    'Course Name': df['Course Name'],
+    'Combined Similarity': combined_total_similarity
+})
+
+# Display the DataFrame sorted by combined similarity scores
+excel_file_path = r'C:\Users\Simon\proacted\AIacademia\data_files\similarity_scores_courses.xlsx'
+similarity_df.to_excel(excel_file_path, index=False, engine='openpyxl')
+# print(similarity_df.sort_values(by='Combined Similarity', ascending=False))
+
+
+top_5_indices = combined_total_similarity.argsort()[-5:][::-1]
 top_5_courses = df['Course Name'].iloc[top_5_indices].tolist() 
+for index in top_5_indices:
+    print(f"Course: {df.iloc[index]['Course Name']}, Score: {combined_total_similarity[index]}")
+
 
 
 # printing them, or returning to a view
 print('\n\n\n|-------------------Courses we think would be best for you based on your interests:-----------------|\n\n')
 for course in top_5_courses:
     print(f'|                  {course}.')
-print('\n\n|----------------------THANKS, THIS IS PRO-ACT-ED 1.1-------------------------------------------------|\n\n\n')
+print('\n\n|----------------------THANKS, THIS IS PRO-ACT-ED 1.2-------------------------------------------------|\n\n\n')
 
