@@ -29,9 +29,9 @@ print('|------------------------------------------------------------------------
 print('|---------------------------------------------------------------------------------------------|\n\n\n')
 
 # working on building a comprehensive user profile
-user_interests = input('\nTell us your ambition in life, what would you like to accomplish or become?:\n\n') #to be matched against objectives
-# user_subjects = input('\nWhich subjects did you excel at in high school?\n\n') #against course pre-requisites
-activities_enjoyed = input('\ntell us of activities you have enjoyed in the past, eg debating, repairing broken radios,  \nthat might help us know youre interests better:\n\n') #general info & about
+# user_interests = input('\nTell us your ambition in life, what would you like to accomplish or become?:\n\n') #to be matched against objectives
+# # user_subjects = input('\nWhich subjects did you excel at in high school?\n\n') #against course pre-requisites
+# activities_enjoyed = input('\ntell us of activities you have enjoyed in the past, eg debating, repairing broken radios,  \nthat might help us know youre interests better:\n\n') #general info & about
 print("\nTemporarily halted user input, using predefined strings!!\n")
 amb = "I aspire to make a significant impact in the field of environmental conservation. My dream is to develop innovative solutions to reduce pollution and promote sustainable living practices. I am passionate about researching renewable energy sources and implementing eco-friendly technologies in urban areas to combat climate change and protect natural habitats"
 act_e = "Throughout high school, I found myself deeply engrossed in activities like debating and public speaking. I enjoyed participating in debate clubs, where I honed my skills in persuasive communication and critical thinking. Additionally, I have a keen interest in technology, particularly in building and programming small electronic devices. This hobby of mine has sparked a curiosity in how technology can be leveraged to solve everyday problems."
@@ -45,9 +45,9 @@ tech_acte = "I love coding, especially working on website design. I often partic
 
 
 # getting a bigger user profile from they themselves
-user_interests = preprocess_text(user_interests)
+user_interests = amb_tech
 # user_subjects = preprocess_text(user_subjects)
-activities_enjoyed = preprocess_text(activities_enjoyed)
+activities_enjoyed = tech_acte 
 
 
 

@@ -16,7 +16,7 @@ import numpy as np
 from prepare_recommender_dataset import preprocess_text
 # from run_recommender_system import weighted_vector # has to work with name == _main_
 from scipy.sparse import hstack
-from nltk.tokenize import sent_tokenize
+from nltk.tokenize import word_tokenize
 from sklearn.cluster import KMeans
 
 
@@ -31,9 +31,9 @@ print('|------------------------------------------------------------------------
 print('|---------------------------------------------------------------------------------------------|\n\n\n')
 
 # working on building a comprehensive user profile
-user_interests = input('\nTell us your ambition in life, what would you like to accomplish or become?:\n\n') #to be matched against objectives
-# user_subjects = input('\nWhich subjects did you excel at in high school?\n\n') #against course pre-requisites
-activities_enjoyed = input('\ntell us of activities you have enjoyed in the past, eg debating, repairing broken radios,  \nthat might help us know youre interests better:\n\n') #general info & about
+# user_interests = input('\nTell us your ambition in life, what would you like to accomplish or become?:\n\n') #to be matched against objectives
+# # user_subjects = input('\nWhich subjects did you excel at in high school?\n\n') #against course pre-requisites
+# activities_enjoyed = input('\ntell us of activities you have enjoyed in the past, eg debating, repairing broken radios,  \nthat might help us know youre interests better:\n\n') #general info & about
 print("\nTemporarily halted user input, using predefined strings!!\n")
 amb = "I aspire to make a significant impact in the field of environmental conservation. My dream is to develop innovative solutions to reduce pollution and promote sustainable living practices. I am passionate about researching renewable energy sources and implementing eco-friendly technologies in urban areas to combat climate change and protect natural habitats"
 act_e = "Throughout high school, I found myself deeply engrossed in activities like debating and public speaking. I enjoyed participating in debate clubs, where I honed my skills in persuasive communication and critical thinking. Additionally, I have a keen interest in technology, particularly in building and programming small electronic devices. This hobby of mine has sparked a curiosity in how technology can be leveraged to solve everyday problems."
@@ -47,9 +47,9 @@ tech_acte = "I love coding, especially working on website design. I often partic
 
 
 # getting a bigger user profile from they themselves
-user_interests = amb_tech
+user_interests = preprocess_text(amb_tech)
 # user_subjects = preprocess_text(user_subjects)
-activities_enjoyed = tech_acte
+activities_enjoyed = preprocess_text(tech_acte)
 
 
 
@@ -67,6 +67,7 @@ all_courses = Recommender_training_data.objects.all()
 courses_list = [{"Course Name": course.Course_name,
                  "Course Objectives": preprocess_text(course.Course_objectives),
                  "Course_general_info_and_about":  preprocess_text(course.Course_general_info_and_about),
+                 "combinedprereqandabout": preprocess_text(course.Course_general_info_and_about),
                  "Prerequisites": preprocess_text(course.General_prereuisites)} for course in all_courses]
 
 df = pd.DataFrame(courses_list)
@@ -75,9 +76,11 @@ df = pd.DataFrame(courses_list)
 # creating 2 vectorizers for course description and prequisites
 objectives_vectorizer = TfidfVectorizer(stop_words='english')
 generalinfoandabout_vectorizer = TfidfVectorizer(stop_words='english')
+combinedvectorizer = TfidfVectorizer(stop_words='english')
 # prerequisites_vectorizer = TfidfVectorizer(stop_words='english') #use case halted for the moment
 objectives_tfidf_matrix = objectives_vectorizer.fit_transform(df['Course Objectives'])
 generalinfoandabout__tfidf_matrix = generalinfoandabout_vectorizer.fit_transform(df['Course_general_info_and_about'])
+combinedvectorizer_tfidfmatrix = combinedvectorizer.fit_transform(df['combinedprereqandabout'])
 # prerequisites_tfidf_matrix = prerequisites_vectorizer.fit_transform(df['Prerequisites'])
 
 
@@ -91,13 +94,13 @@ model = joblib.load(r'C:\Users\Simon\proacted_googleds\word2vec_model.pkl')
 
 
 # Tokenize sentences in course objectives and general info
-df['Tokenized Objectives'] = df['Course Objectives'].apply(sent_tokenize)
-df['Tokenized General Info'] = df['Course_general_info_and_about'].apply(sent_tokenize)
+df['Tokenized Objectives'] = df['Course Objectives'].apply(word_tokenize)
+df['Tokenized General Info'] = df['Course_general_info_and_about'].apply(word_tokenize)
 print('\n\n\nSent tokenize... Done!\n')
 
 
 # Function to vectorize sentences using Word2Vec and calculate their weighted average
-def vectorize_sentences(sentences, model, tfidf_vectorizer):
+def vectorize_sentences(sentences, model, tfidf_vectorizer): # needs to now use words, not sentences
     feature_names = tfidf_vectorizer.get_feature_names_out()
     tfidf_matrix = tfidf_vectorizer.transform(sentences)
 
@@ -116,14 +119,18 @@ def vectorize_sentences(sentences, model, tfidf_vectorizer):
 
     return sentence_vectors
 
-# Vectorize each sentence
+# Vectorize each sentence -> word
 df['Vectorized Objectives'] = df['Tokenized Objectives'].apply(lambda x: vectorize_sentences(x, model, objectives_vectorizer))
 df['Vectorized General Info'] = df['Tokenized General Info'].apply(lambda x: vectorize_sentences(x, model, generalinfoandabout_vectorizer))
-print('Vectorize sentences... Done!\n')
+# Display the DataFrame sorted by combined similarity scores
+print("DataFrame head:\n", df.head())
+excel_file_path = r'C:\Users\Simon\proacted\AIacademia\data_files\coursevectorstobeginat.xlsx'
+df.to_excel(excel_file_path, index=False, engine='openpyxl')
+print('Vectorize sentences... Done!\n') 
 
 
 # function for clustering the sentences
-def cluster_sentences(vectors, num_clusters=2):
+def cluster_sentences(vectors, num_clusters=8):
     # Create an array to store the cluster labels
     cluster_labels = np.zeros(len(vectors), dtype=int)
 
@@ -174,8 +181,8 @@ def concatenate_max_pooled_vectors(vectors, clusters):
     concatenated_vector = np.concatenate([max_pooled_vectors[cluster] for cluster in sorted(max_pooled_vectors.keys())])
 
     # padding with zero for cosine calculation
-    if concatenated_vector.shape[0] < 900:
-        padding_length = 900 - concatenated_vector.shape[0]
+    if concatenated_vector.shape[0] < 2400:
+        padding_length = 2400 - concatenated_vector.shape[0]
         concatenated_vector = np.concatenate((concatenated_vector, np.zeros(padding_length)))
 
     return concatenated_vector
@@ -190,7 +197,7 @@ print('Poling and concatenation... Done!\n')
 
 
 # Function to convert user input into Word2Vec vectors weighted by TF-IDF scores
-def clustered_weighted_vector(user_text, model, tfidf_vectorizer, num_clusters=2):
+def clustered_weighted_vector(user_text, model, tfidf_vectorizer, num_clusters=8):
     words = user_text.split()
     tfidf_scores = tfidf_vectorizer.transform([user_text]).toarray()[0]
     feature_names = tfidf_vectorizer.get_feature_names_out()
@@ -218,8 +225,8 @@ def clustered_weighted_vector(user_text, model, tfidf_vectorizer, num_clusters=2
         concatenated_vector = np.concatenate((concatenated_vector, cluster_center))
 
     # Padding the vector to ensure 900 dimensions
-    if concatenated_vector.shape[0] < 900:
-        padding_length = 900 - concatenated_vector.shape[0]
+    if concatenated_vector.shape[0] < 2400:
+        padding_length = 2400 - concatenated_vector.shape[0]
         concatenated_vector = np.concatenate((concatenated_vector, np.zeros(padding_length)))
 
     return concatenated_vector
@@ -229,8 +236,8 @@ def clustered_weighted_vector(user_text, model, tfidf_vectorizer, num_clusters=2
 
 # vectorizing student input from UI
 # embedding student input for interests and subjects, this will come from ui input
-vectorized_user_interests = clustered_weighted_vector(user_interests, model, objectives_vectorizer)
-vectorized_activities_enjoyed = clustered_weighted_vector(activities_enjoyed, model, generalinfoandabout_vectorizer)
+vectorized_user_interests = clustered_weighted_vector(user_interests, model, combinedvectorizer)
+vectorized_activities_enjoyed = clustered_weighted_vector(activities_enjoyed, model, combinedvectorizer)
 print('User input vectorization... Done!\n')
 
 
@@ -253,8 +260,8 @@ similarity_df = pd.DataFrame({
 })
 
 # Display the DataFrame sorted by combined similarity scores
-excel_file_path = r'C:\Users\Simon\proacted\AIacademia\data_files\similarity_scores_courses.xlsx'
-similarity_df.to_excel(excel_file_path, index=False, engine='openpyxl')
+# excel_file_path = r'C:\Users\Simon\proacted\AIacademia\data_files\similarity_scores_courses.xlsx'
+# similarity_df.to_excel(excel_file_path, index=False, engine='openpyxl')
 # print(similarity_df.sort_values(by='Combined Similarity', ascending=False))
 
 
