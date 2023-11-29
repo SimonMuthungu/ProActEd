@@ -47,9 +47,9 @@ tech_acte = "I love coding, especially working on website design. I often partic
 
 
 # getting a bigger user profile from they themselves
-user_interests = preprocess_text(amb_tech)
+user_interests = preprocess_text(health_amb)
 # user_subjects = preprocess_text(user_subjects)
-activities_enjoyed = preprocess_text(tech_acte)
+activities_enjoyed = preprocess_text(act_enj)
 
 
 
@@ -93,44 +93,52 @@ feature_names_for_generalinfoandabout = generalinfoandabout_vectorizer.get_featu
 model = joblib.load(r'C:\Users\Simon\proacted_googleds\word2vec_model.pkl')
 
 
-# Tokenize sentences in course objectives and general info
+# Tokenize words in course objectives and general info
 df['Tokenized Objectives'] = df['Course Objectives'].apply(word_tokenize)
 df['Tokenized General Info'] = df['Course_general_info_and_about'].apply(word_tokenize)
 print('\n\n\nSent tokenize... Done!\n')
 
-
-# Function to vectorize sentences using Word2Vec and calculate their weighted average
-def vectorize_sentences(sentences, model, tfidf_vectorizer): # needs to now use words, not sentences
+zerocountfornovectorizedwords = 0
+word_vectorsnotempty = 0
+# Function to vectorize words using Word2Vec and calculate their weighted average
+def vectorize_words(words, model, tfidf_vectorizer): # needs to now use words, not words
     feature_names = tfidf_vectorizer.get_feature_names_out()
-    tfidf_matrix = tfidf_vectorizer.transform(sentences)
+    tfidf_matrix = tfidf_vectorizer.transform(words)
 
     sentence_vectors = []
-    for i, sentence in enumerate(sentences):
+    zerocountfornovectorizedwords = 0
+    word_vectorsnotempty = 0
+    for i, sentence in enumerate(words):
         words = sentence.split()
         word_vectors = [model[word] for word in words if word in model.key_to_index and word in feature_names]
         word_tfidf = [tfidf_matrix[i, feature_names.tolist().index(word)] for word in words if word in model.key_to_index and word in feature_names]
 
         if word_vectors:
+            word_vectorsnotempty += 1
             weighted_avg_vector = np.average(word_vectors, weights=word_tfidf, axis=0)
             sentence_vectors.append(weighted_avg_vector)
         else:
             # Handle cases where none of the words in the sentence are in the model or TF-IDF feature names
             sentence_vectors.append(np.zeros(model.vector_size))
+            zerocountfornovectorizedwords += 1
 
     return sentence_vectors
 
+print("\nnumber of words not vectorized:\n", zerocountfornovectorizedwords)
+print("number of words vectorized:\n", word_vectorsnotempty)
+
 # Vectorize each sentence -> word
-df['Vectorized Objectives'] = df['Tokenized Objectives'].apply(lambda x: vectorize_sentences(x, model, objectives_vectorizer))
-df['Vectorized General Info'] = df['Tokenized General Info'].apply(lambda x: vectorize_sentences(x, model, generalinfoandabout_vectorizer))
+df['Vectorized Objectives'] = df['Tokenized Objectives'].apply(lambda x: vectorize_words(x, model, objectives_vectorizer))
+df['Vectorized General Info'] = df['Tokenized General Info'].apply(lambda x: vectorize_words(x, model, generalinfoandabout_vectorizer))
 # Display the DataFrame sorted by combined similarity scores
-print("DataFrame head:\n", df.head())
-excel_file_path = r'C:\Users\Simon\proacted\AIacademia\data_files\coursevectorstobeginat.xlsx'
-df.to_excel(excel_file_path, index=False, engine='openpyxl')
-print('Vectorize sentences... Done!\n') 
+# print("DataFrame head:\n", df.head())
+# excel_file_path = r'C:\Users\Simon\proacted\AIacademia\data_files\coursevectorstobeginat.xlsx'
+# df.to_excel(excel_file_path, index=False, engine='openpyxl')
+# print('Vectorize words... Done!\n') 
 
 
-# function for clustering the sentences
-def cluster_sentences(vectors, num_clusters=8):
+# function for clustering the words
+def cluster_words(vectors, num_clusters=8):
     # Create an array to store the cluster labels
     cluster_labels = np.zeros(len(vectors), dtype=int)
 
@@ -138,7 +146,7 @@ def cluster_sentences(vectors, num_clusters=8):
     if len(vectors) == 0:
         return cluster_labels
 
-    # If there are fewer sentences than the desired number of clusters
+    # If there are fewer words than the desired number of clusters
     if len(vectors) < num_clusters:
         # Assign each sentence to a separate cluster
         for i in range(len(vectors)):
@@ -152,10 +160,10 @@ def cluster_sentences(vectors, num_clusters=8):
     return cluster_labels
 
 
-# Apply clustering to vectorized sentences
-df['Objective Clusters'] = df['Vectorized Objectives'].apply(lambda x: cluster_sentences(x))
-df['General Info Clusters'] = df['Vectorized General Info'].apply(lambda x: cluster_sentences(x))
-print('Sentences clusterised... Done!\n')
+# Apply clustering to vectorized words
+df['Objective Clusters'] = df['Vectorized Objectives'].apply(lambda x: cluster_words(x))
+df['General Info Clusters'] = df['Vectorized General Info'].apply(lambda x: cluster_words(x))
+print('words clusterised... Done!\n')
 
 
 # now pooling (max and avg)
@@ -219,9 +227,10 @@ def clustered_weighted_vector(user_text, model, tfidf_vectorizer, num_clusters=8
     for cluster in range(num_clusters):
         cluster_vectors = [word_vectors[i] for i, label in enumerate(labels) if label == cluster]
         if cluster_vectors:
-            cluster_center = np.mean(cluster_vectors, axis=0)
+            cluster_center = np.mean(cluster_vectors, axis=0) # improvement: find average not mean!
         else:
             cluster_center = np.zeros(model.vector_size)
+            print("Instead of cluster center, we put zeros, line 226") 
         concatenated_vector = np.concatenate((concatenated_vector, cluster_center))
 
     # Padding the vector to ensure 900 dimensions
@@ -248,7 +257,7 @@ def calculate_similarity(user_vector, course_vectors):
 
 Objective_Similarity = calculate_similarity(vectorized_user_interests, df['Concatenated Max Pooled Vectors'].tolist())
 General_Info_Similarity = calculate_similarity(vectorized_activities_enjoyed, df['Concatenated Max Pooled General Info'].tolist())
-combined_total_similarity = np.array(Objective_Similarity) * 0.60 + np.array(General_Info_Similarity) * 0.40
+combined_total_similarity = np.array(Objective_Similarity) * 0.30 + np.array(General_Info_Similarity) * 0.70
 # df['Prerequisites similarity'] = calculate_similarity(user_tfidf_prerequisites, df['Pooled General Info'])
 
 print(combined_total_similarity.shape)
@@ -278,3 +287,4 @@ for course in top_5_courses:
     print(f'|                  {course}.')
 print('\n\n|----------------------THANKS, THIS IS PRO-ACT-ED 1.2-------------------------------------------------|\n\n\n')
 
+# usage of this has been suspended till later.
