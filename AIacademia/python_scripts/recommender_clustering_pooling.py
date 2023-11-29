@@ -45,9 +45,9 @@ tech_acte = "I love coding, especially working on website design. I often partic
 
 
 # getting a bigger user profile from they themselves
-user_interests = amb_tech
+user_interests = preprocess_text(health_amb)
 # user_subjects = preprocess_text(user_subjects)
-activities_enjoyed = tech_acte 
+activities_enjoyed = preprocess_text(act_enj) 
 
 
 
@@ -239,7 +239,7 @@ def calculate_similarity(user_vector, course_vectors):
 
 Objective_Similarity = calculate_similarity(vectorized_user_interests, df['Concatenated Max Pooled Vectors'].tolist())
 General_Info_Similarity = calculate_similarity(vectorized_activities_enjoyed, df['Concatenated Max Pooled General Info'].tolist())
-combined_total_similarity = np.array(Objective_Similarity) * 0.60 + np.array(General_Info_Similarity) * 0.40
+combined_total_similarity = np.array(Objective_Similarity) * 0.30 + np.array(General_Info_Similarity) * 0.70
 # df['Prerequisites similarity'] = calculate_similarity(user_tfidf_prerequisites, df['Pooled General Info'])
 
 print(combined_total_similarity.shape)
