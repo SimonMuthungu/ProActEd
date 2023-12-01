@@ -36,11 +36,12 @@ print("\nTemporarily halted user input, using predefined strings!!\n")
 amb = "I aspire to make a significant impact in the field of environmental conservation. My dream is to develop innovative solutions to reduce pollution and promote sustainable living practices. I am passionate about researching renewable energy sources and implementing eco-friendly technologies in urban areas to combat climate change and protect natural habitats"
 act_e = "Throughout high school, I found myself deeply engrossed in activities like debating and public speaking. I enjoyed participating in debate clubs, where I honed my skills in persuasive communication and critical thinking. Additionally, I have a keen interest in technology, particularly in building and programming small electronic devices. This hobby of mine has sparked a curiosity in how technology can be leveraged to solve everyday problems."
 
-health_amb = "I am deeply passionate about health and fitness. My ultimate goal is to innovate in the field of sports medicine, contributing to the well-being and peak performance of athletes. I dream of creating new therapies and nutrition plans that revolutionize how we approach physical training and recovery."
-act_enj = "I've always been active in sports, particularly enjoying soccer and swimming. On weekends, I volunteer as a coach for a local youth sports team, teaching them the basics of teamwork and physical fitness. I also spend a lot of time reading about nutrition and experimenting with healthy recipes."
+health_amb =  "I am interested in pursuing a career in healthcare, specifically as a nurse. I want to provide care and support to patients in hospitals."
+act_enj = "I volunteer at local health clinics and enjoy learning about medical sciences. In my leisure time, I read about healthcare advancements and participate in health awareness campaigns."
 
-amb_tech = "I aspire to be at the forefront of technological innovation, particularly in the realm of user experience design. My ambition is to design digital products that are not only technically efficient but also user-friendly and accessible to all. Integrating aesthetics with functionality is my ultimate design philosophy."
-tech_acte = "I love coding, especially working on website design. I often participate in online hackathons and enjoy the challenge of creating functional web apps under time constraints. In my free time, I dabble in graphic design, creating digital art and experimenting with various design software."
+
+amb_tech = "My ambition is to delve into the world of artificial intelligence and machine learning. I aim to develop cutting-edge AI solutions that can transform industries."
+tech_acte = "My ambition is to delve into the world of artificial intelligence and machine learning. I aim to develop cutting-edge AI solutions that can transform industries."
 
 
 

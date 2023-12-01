@@ -41,15 +41,15 @@ act_e = "Throughout high school, I found myself deeply engrossed in activities l
 health_amb = "I am deeply passionate about health and fitness. My ultimate goal is to innovate in the field of sports medicine, contributing to the well-being and peak performance of athletes. I dream of creating new therapies and nutrition plans that revolutionize how we approach physical training and recovery."
 act_enj = "I've always been active in sports, particularly enjoying soccer and swimming. On weekends, I volunteer as a coach for a local youth sports team, teaching them the basics of teamwork and physical fitness. I also spend a lot of time reading about nutrition and experimenting with healthy recipes."
 
-amb_tech = "I aspire to be at the forefront of technological innovation, particularly in the realm of user experience design. My ambition is to design digital products that are not only technically efficient but also user-friendly and accessible to all. Integrating aesthetics with functionality is my ultimate design philosophy."
-tech_acte = "I love coding, especially working on website design. I often participate in online hackathons and enjoy the challenge of creating functional web apps under time constraints. In my free time, I dabble in graphic design, creating digital art and experimenting with various design software."
+amb_tech = "My ambition is to delve into the world of artificial intelligence and machine learning. I aim to develop cutting-edge AI solutions that can transform industries."
+tech_acte = "My ambition is to delve into the world of artificial intelligence and machine learning. I aim to develop cutting-edge AI solutions that can transform industries."
 
 
 
 # getting a bigger user profile from they themselves
-user_interests = preprocess_text(health_amb)
+user_interests = preprocess_text(amb_tech)
 # user_subjects = preprocess_text(user_subjects)
-activities_enjoyed = preprocess_text(act_enj)
+activities_enjoyed = preprocess_text(tech_acte) 
 
 
 
