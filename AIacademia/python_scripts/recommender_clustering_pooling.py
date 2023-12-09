@@ -16,6 +16,11 @@ from prepare_recommender_dataset import preprocess_text
 from scipy.sparse import hstack
 from nltk.tokenize import sent_tokenize
 from sklearn.cluster import KMeans
+import logging 
+
+
+logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\logfile.log',level=logging.DEBUG, format='%(levelname)s - %(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+
 
 
 # welcome
@@ -104,11 +109,12 @@ def vectorize_sentences(sentences, model, tfidf_vectorizer):
     for i, sentence in enumerate(sentences):
         words = sentence.split()
         word_vectors = [model[word] for word in words if word in model.key_to_index and word in feature_names]
-        word_tfidf = [tfidf_matrix[i, feature_names.tolist().index(word)] for word in words if word in model.key_to_index and word in feature_names]
+        word_tfidf = [tfidf_matrix[i, feature_names.tolist().index(word)] for word in words if word in model.key_to_index and word in feature_names] 
 
         if word_vectors:
             weighted_avg_vector = np.average(word_vectors, weights=word_tfidf, axis=0)
             sentence_vectors.append(weighted_avg_vector)
+
         else:
             # Handle cases where none of the words in the sentence are in the model or TF-IDF feature names
             sentence_vectors.append(np.zeros(model.vector_size))
@@ -121,20 +127,24 @@ df['Vectorized General Info'] = df['Tokenized General Info'].apply(lambda x: vec
 print('Vectorize sentences... Done!\n')
 
 
-# function for clustering the sentences
-def cluster_sentences(vectors, num_clusters=2):
+# function for clustering the sentences into 10 clusters to produce dim 3000 vectors 
+def cluster_sentences(vectors, num_clusters=10):
     # Create an array to store the cluster labels
     cluster_labels = np.zeros(len(vectors), dtype=int)
 
     # If there are no vectors, return an empty array
     if len(vectors) == 0:
+        logging.info(f'line 136: len(vectors) == 0 meaning some sentence somewhere doesnt exist when it should')
         return cluster_labels
 
+
     # If there are fewer sentences than the desired number of clusters
-    if len(vectors) < num_clusters:
-        # Assign each sentence to a separate cluster
-        for i in range(len(vectors)):
-            cluster_labels[i] = i
+    # if len(vectors) < num_clusters:
+    #     # Assign each sentence to a separate cluster
+    #     for i in range(len(vectors)):
+    #         cluster_labels[i] = i
+
+
     else:
         # Fit KMeans clustering
         kmeans = KMeans(n_clusters=num_clusters, n_init=10)
@@ -150,31 +160,33 @@ df['General Info Clusters'] = df['Vectorized General Info'].apply(lambda x: clus
 print('Sentences clusterised... Done!\n')
 
 
-# now pooling (max and avg)
-def max_pool_vectors_per_cluster(vectors, clusters):
-    max_pooled_vectors = {}
-    for cluster in set(clusters):
-        cluster_vectors = [vectors[i] for i, c in enumerate(clusters) if c == cluster]
-        max_pooled_vectors[cluster] = np.max(cluster_vectors, axis=0)
-    return max_pooled_vectors
+# # now pooling (max and avg)
+# def max_pool_vectors_per_cluster(vectors, clusters):
+#     max_pooled_vectors = {}
+#     for cluster in set(clusters):
+#         cluster_vectors = [vectors[i] for i, c in enumerate(clusters) if c == cluster]
+#         max_pooled_vectors[cluster] = np.max(cluster_vectors, axis=0)
+#     return max_pooled_vectors
 
 
+# getting the average of what sentences in each label is saying; 10 clusters with have 10 sentences that represent what the courses are saying
 def avg_pooling(vectors, clusters):
     pooled_vectors = []
     for cluster in set(clusters):
         cluster_vectors = [vectors[i] for i, c in enumerate(clusters) if c == cluster]
         pooled_vectors.append(np.mean(cluster_vectors, axis=0))
-    return np.mean(pooled_vectors, axis=0)
+    # return np.mean(pooled_vectors, axis=0)
+    return pooled_vectors
 
 
 # concatenating the max pooled vectors to form one high dimensional vector with all disctinctions captures well
 def concatenate_max_pooled_vectors(vectors, clusters):
-    max_pooled_vectors = max_pool_vectors_per_cluster(vectors, clusters)
-    concatenated_vector = np.concatenate([max_pooled_vectors[cluster] for cluster in sorted(max_pooled_vectors.keys())])
+    avg_pooled_vectors = avg_pooling(vectors, clusters)
+    concatenated_vector = np.concatenate(avg_pooled_vectors) 
 
     # padding with zero for cosine calculation
-    if concatenated_vector.shape[0] < 900:
-        padding_length = 900 - concatenated_vector.shape[0]
+    if concatenated_vector.shape[0] < 3000:
+        padding_length = 3000 - concatenated_vector.shape[0]
         concatenated_vector = np.concatenate((concatenated_vector, np.zeros(padding_length)))
 
     return concatenated_vector
