@@ -97,7 +97,7 @@ model = joblib.load(r'C:\Users\Simon\proacted_googleds\word2vec_model.pkl')
 # Tokenize sentences in course objectives and general info
 df['Tokenized Objectives'] = df['Course Objectives'].apply(sent_tokenize)
 df['Tokenized General Info'] = df['Course_general_info_and_about'].apply(sent_tokenize)
-print('\n\n\nSent tokenize... Done!\n')
+print('\n\n\nTokenized sentences!\n')
 
 
 # Function to vectorize sentences using Word2Vec and calculate their weighted average
@@ -119,16 +119,18 @@ def vectorize_sentences(sentences, model, tfidf_vectorizer):
             # Handle cases where none of the words in the sentence are in the model or TF-IDF feature names
             sentence_vectors.append(np.zeros(model.vector_size))
 
+        # print(len(sentence_vectors)) 
+
     return sentence_vectors
 
 # Vectorize each sentence
 df['Vectorized Objectives'] = df['Tokenized Objectives'].apply(lambda x: vectorize_sentences(x, model, objectives_vectorizer))
 df['Vectorized General Info'] = df['Tokenized General Info'].apply(lambda x: vectorize_sentences(x, model, generalinfoandabout_vectorizer))
-print('Vectorize sentences... Done!\n')
+print('Vectorized sentences!\n')
 
 
-# function for clustering the sentences into 10 clusters to produce dim 3000 vectors 
-def cluster_sentences(vectors, num_clusters=10):
+# function for clustering the sentence vectors into 10 clusters to produce dim 2100 vectors 
+def cluster_sentences(vectors, num_clusters=7):
     # Create an array to store the cluster labels
     cluster_labels = np.zeros(len(vectors), dtype=int)
 
@@ -147,7 +149,7 @@ def cluster_sentences(vectors, num_clusters=10):
 
     else:
         # Fit KMeans clustering
-        kmeans = KMeans(n_clusters=num_clusters, n_init=10)
+        kmeans = KMeans(n_clusters=num_clusters, n_init=5)
         kmeans.fit(vectors)
         cluster_labels = kmeans.labels_
 
@@ -157,21 +159,24 @@ def cluster_sentences(vectors, num_clusters=10):
 # Apply clustering to vectorized sentences
 df['Objective Clusters'] = df['Vectorized Objectives'].apply(lambda x: cluster_sentences(x))
 df['General Info Clusters'] = df['Vectorized General Info'].apply(lambda x: cluster_sentences(x))
-print('Sentences clusterised... Done!\n')
+print('Sentences clusterised!\n')
 
 
-# # now pooling (max and avg)
-# def max_pool_vectors_per_cluster(vectors, clusters):
-#     max_pooled_vectors = {}
+# # now pooling (Avg and avg)
+# def Avg_pool_vectors_per_cluster(vectors, clusters):
+#     Avg_pooled_vectors = {}
 #     for cluster in set(clusters):
 #         cluster_vectors = [vectors[i] for i, c in enumerate(clusters) if c == cluster]
-#         max_pooled_vectors[cluster] = np.max(cluster_vectors, axis=0)
-#     return max_pooled_vectors
+#         Avg_pooled_vectors[cluster] = np.Avg(cluster_vectors, axis=0)
+#     return Avg_pooled_vectors
 
 
-# getting the average of what sentences in each label is saying; 10 clusters with have 10 sentences that represent what the courses are saying
+# getting the average of what sentences in each label is saying; 10 clusters will now have 10 sentences that represent what the courses are saying
+
+
 def avg_pooling(vectors, clusters):
-    pooled_vectors = []
+    pooled_vectors = []    
+
     for cluster in set(clusters):
         cluster_vectors = [vectors[i] for i, c in enumerate(clusters) if c == cluster]
         pooled_vectors.append(np.mean(cluster_vectors, axis=0))
@@ -179,29 +184,33 @@ def avg_pooling(vectors, clusters):
     return pooled_vectors
 
 
-# concatenating the max pooled vectors to form one high dimensional vector with all disctinctions captures well
-def concatenate_max_pooled_vectors(vectors, clusters):
+
+# concatenating the Avg pooled vectors to form one high dimensional vector with all disctinctions captures well
+def concatenate_avg_pooled_vectors(vectors, clusters):
     avg_pooled_vectors = avg_pooling(vectors, clusters)
     concatenated_vector = np.concatenate(avg_pooled_vectors) 
 
     # padding with zero for cosine calculation
-    if concatenated_vector.shape[0] < 3000:
-        padding_length = 3000 - concatenated_vector.shape[0]
+    if concatenated_vector.shape[0] < 2100:
+        print("Were padding due to dim < 2100")
+        padding_length = 2100 - concatenated_vector.shape[0]
         concatenated_vector = np.concatenate((concatenated_vector, np.zeros(padding_length)))
 
     return concatenated_vector
 
 
 # Applying the function to the DataFrame
-df['Concatenated Max Pooled Vectors'] = df.apply(lambda row: concatenate_max_pooled_vectors(row['Vectorized Objectives'], row['Objective Clusters']), axis=1)
-df['Concatenated Max Pooled General Info'] = df.apply(lambda x: concatenate_max_pooled_vectors(x['Vectorized General Info'], x['General Info Clusters']), axis=1)
+df['Concatenated Avg Pooled Objective Vectors'] = df.apply(lambda row: concatenate_avg_pooled_vectors(row['Vectorized Objectives'], row['Objective Clusters']), axis=1)
+df['Concatenated Avg Pooled General Info Vectors'] = df.apply(lambda x: concatenate_avg_pooled_vectors(x['Vectorized General Info'], x['General Info Clusters']), axis=1)
 print('Poling and concatenation... Done!\n')
+
+
 # have left out so as to focus first on the first 2 columns
 # df['Pooled Prerequisites'] = df.apply(lambda x: avg_pooling(x['Vectorized General Info'], x['General Info Clusters']), axis=1)
 
 
 # Function to convert user input into Word2Vec vectors weighted by TF-IDF scores
-def clustered_weighted_vector(user_text, model, tfidf_vectorizer, num_clusters=2):
+def clustered_weighted_vector(user_text, model, tfidf_vectorizer, num_clusters=7):
     words = user_text.split()
     tfidf_scores = tfidf_vectorizer.transform([user_text]).toarray()[0]
     feature_names = tfidf_vectorizer.get_feature_names_out()
@@ -211,12 +220,13 @@ def clustered_weighted_vector(user_text, model, tfidf_vectorizer, num_clusters=2
                     for word in words if word in model.key_to_index and word in feature_names]
 
     if not word_vectors:  # Handling case with no words found
+        print("no words the user used are in the tfidf. consider using combined descriptions' tfidf for a more comprehensive plethora ") 
         return np.zeros(model.vector_size * num_clusters)
 
     # Clustering
     kmeans = KMeans(n_clusters=num_clusters, n_init=10)
     kmeans.fit(word_vectors)
-    labels = kmeans.labels_
+    labels = kmeans.labels_ 
 
     # Concatenating cluster vectors
     concatenated_vector = np.array([])
@@ -228,9 +238,9 @@ def clustered_weighted_vector(user_text, model, tfidf_vectorizer, num_clusters=2
             cluster_center = np.zeros(model.vector_size)
         concatenated_vector = np.concatenate((concatenated_vector, cluster_center))
 
-    # Padding the vector to ensure 900 dimensions
-    if concatenated_vector.shape[0] < 900:
-        padding_length = 900 - concatenated_vector.shape[0]
+    # Padding the vector to ensure 2100 dimensions
+    if concatenated_vector.shape[0] < 2100:
+        padding_length = 2100 - concatenated_vector.shape[0]
         concatenated_vector = np.concatenate((concatenated_vector, np.zeros(padding_length)))
 
     return concatenated_vector
@@ -238,8 +248,7 @@ def clustered_weighted_vector(user_text, model, tfidf_vectorizer, num_clusters=2
 
 
 
-# vectorizing student input from UI
-# embedding student input for interests and subjects, this will come from ui input
+# vectorizing student input from UI : embedding student input for interests and subjects, this will come from ui input
 vectorized_user_interests = clustered_weighted_vector(user_interests, model, objectives_vectorizer)
 vectorized_activities_enjoyed = clustered_weighted_vector(activities_enjoyed, model, generalinfoandabout_vectorizer)
 print('User input vectorization... Done!\n')
@@ -250,9 +259,15 @@ def calculate_similarity(user_vector, course_vectors):
     return [cosine_similarity([user_vector], [course_vector])[0][0] for course_vector in course_vectors]
 
 
-Objective_Similarity = calculate_similarity(vectorized_user_interests, df['Concatenated Max Pooled Vectors'].tolist())
-General_Info_Similarity = calculate_similarity(vectorized_activities_enjoyed, df['Concatenated Max Pooled General Info'].tolist())
-combined_total_similarity = np.array(Objective_Similarity) * 0.30 + np.array(General_Info_Similarity) * 0.70
+Userambition_courseojective_similarity = calculate_similarity(vectorized_user_interests, df['Concatenated Avg Pooled Objective Vectors'].tolist())
+
+Activitiesenjoyedbyuser_coursegeneralinfo_similarity = calculate_similarity(vectorized_activities_enjoyed, df['Concatenated Avg Pooled General Info Vectors'].tolist())
+
+Userambition_coursegeneralinfo_similarity = calculate_similarity(vectorized_user_interests, df['Concatenated Avg Pooled General Info Vectors'].tolist())
+
+Activitiesenjoyedbyuser_courseojective_similarity = calculate_similarity(vectorized_activities_enjoyed, df['Concatenated Avg Pooled Objective Vectors'].tolist())
+
+combined_total_similarity = np.array(Userambition_courseojective_similarity) * 0.30 + np.array(Activitiesenjoyedbyuser_coursegeneralinfo_similarity) * 0.70 + np.array(Userambition_coursegeneralinfo_similarity) + np.array(Activitiesenjoyedbyuser_courseojective_similarity) 
 # df['Prerequisites similarity'] = calculate_similarity(user_tfidf_prerequisites, df['Pooled General Info'])
 
 print(combined_total_similarity.shape)
