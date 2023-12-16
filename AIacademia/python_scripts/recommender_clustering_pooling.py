@@ -51,9 +51,9 @@ tech_acte = "My ambition is to delve into the world of artificial intelligence a
 
 
 # getting a bigger user profile from they themselves
-user_interests = preprocess_text(health_amb)
+user_interests = preprocess_text(amb)
 # user_subjects = preprocess_text(user_subjects)
-activities_enjoyed = preprocess_text(act_enj) 
+activities_enjoyed = preprocess_text(act_e) 
 
 
 
@@ -259,7 +259,7 @@ def calculate_similarity(user_vector, course_vectors):
     return [cosine_similarity([user_vector], [course_vector])[0][0] for course_vector in course_vectors]
 
 
-Userambition_courseojective_similarity = calculate_similarity(vectorized_user_interests, df['Concatenated Avg Pooled Objective Vectors'].tolist())
+Userambition_courseojective_similarity = calculate_similarity(vectorized_user_interests, df['Concatenated Avg Pooled Objective Vectors'].tolist()) 
 
 Activitiesenjoyedbyuser_coursegeneralinfo_similarity = calculate_similarity(vectorized_activities_enjoyed, df['Concatenated Avg Pooled General Info Vectors'].tolist())
 
@@ -267,7 +267,7 @@ Userambition_coursegeneralinfo_similarity = calculate_similarity(vectorized_user
 
 Activitiesenjoyedbyuser_courseojective_similarity = calculate_similarity(vectorized_activities_enjoyed, df['Concatenated Avg Pooled Objective Vectors'].tolist())
 
-combined_total_similarity = np.array(Userambition_courseojective_similarity) * 0.30 + np.array(Activitiesenjoyedbyuser_coursegeneralinfo_similarity) * 0.70 + np.array(Userambition_coursegeneralinfo_similarity) + np.array(Activitiesenjoyedbyuser_courseojective_similarity) 
+combined_total_similarity = np.array(Userambition_courseojective_similarity) * 0.30 + np.array(Activitiesenjoyedbyuser_coursegeneralinfo_similarity) * 0.50 + np.array(Userambition_coursegeneralinfo_similarity) * 0.10 + np.array(Activitiesenjoyedbyuser_courseojective_similarity) * 0.10
 # df['Prerequisites similarity'] = calculate_similarity(user_tfidf_prerequisites, df['Pooled General Info'])
 
 print(combined_total_similarity.shape)
