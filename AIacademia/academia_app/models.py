@@ -55,7 +55,7 @@ class School(models.Model):
 
 # Course Model
 class Course(models.Model):
-    program_code = models.CharField(max_length=15, null=True, unique=True, default='Course')
+    # program_code = models.CharField(max_length=15, null=True, unique=True, default='Course')
     name = models.CharField(max_length=100)
     prefix = models.CharField(max_length=15)
     school = models.ForeignKey(School, on_delete=models.CASCADE)
