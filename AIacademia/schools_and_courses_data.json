@@ -2,72 +2,72 @@
   "schools": [
     {
       "id": 14,
-      "name": "School of Agriculture & Food Security",
+      "Course Name": "School of Agriculture & Food Security",
       "abbreviation": "SAFS"
     },
     {
       "id": 13,
-      "name": "School of Arts and Social Sciences",
+      "Course Name": "School of Arts and Social Sciences",
       "abbreviation": "SASS"
     },
     {
       "id": 12,
-      "name": "School of Business and Economics",
+      "Course Name": "School of Business and Economics",
       "abbreviation": "SBE"
     },
     {
       "id": 11,
-      "name": "School of Computing & Informatics",
+      "Course Name": "School of Computing & Informatics",
       "abbreviation": "SCI"
     },
     {
       "id": 10,
-      "name": "School of Development and Strategic Studies",
+      "Course Name": "School of Development and Strategic Studies",
       "abbreviation": "SDSS"
     },
     {
       "id": 9,
-      "name": "School of Education",
+      "Course Name": "School of Education",
       "abbreviation": "SE"
     },
     {
       "id": 8,
-      "name": "School of Mathematics, Statistics & Actuarial Science",
+      "Course Name": "School of Mathematics, Statistics & Actuarial Science",
       "abbreviation": "SMSAS"
     },
     {
       "id": 7,
-      "name": "School of Medicine",
+      "Course Name": "School of Medicine",
       "abbreviation": "SM"
     },
     {
       "id": 6,
-      "name": "School of Nursing",
+      "Course Name": "School of Nursing",
       "abbreviation": "SN"
     },
     {
       "id": 5,
-      "name": "School of Pharmacy",
+      "Course Name": "School of Pharmacy",
       "abbreviation": "SP"
     },
     {
       "id": 4,
-      "name": "School of Physical & Biological Sciences",
+      "Course Name": "School of Physical & Biological Sciences",
       "abbreviation": "SPBS"
     },
     {
       "id": 3,
-      "name": "School of Planning and Architecture",
+      "Course Name": "School of Planning and Architecture",
       "abbreviation": "SPA"
     },
     {
       "id": 2,
-      "name": "School of Public Health & Community Development",
+      "Course Name": "School of Public Health & Community Development",
       "abbreviation": "SPHCD"
     },
     {
       "id": 1,
-      "name": "School of Law",
+      "Course Name": "School of Law",
       "abbreviation": "SL"
     }
   ],
@@ -230,109 +230,109 @@
     },
     {
       "id": 12,
-      "name": "Bachelor of Arts (Business Studies, With IT)",
+      "Course Name": "Bachelor of Arts (Business Studies, With IT)",
       "prefix": "BAB",
       "program_code": "1229586"
     },
     {
       "id": 12,
-      "name": "Bachelor of Arts (Economics, With IT)",
+      "Course Name": "Bachelor of Arts (Economics, With IT)",
       "prefix": "BAE",
       "program_code": "1229646"
     },
     {
       "id": 12,
-      "name": "Bachelor of Business Administration (With IT)",
+      "Course Name": "Bachelor of Business Administration (With IT)",
       "prefix": "BBA",
       "program_code": "1229153"
     },
     {
       "id": 12,
-      "name": "Bachelor of Procurement and Supply Chain Management",
+      "Course Name": "Bachelor of Procurement and Supply Chain Management",
       "prefix": "BPS",
       "program_code": "1229245"
     },
     {
       "id": 12,
-      "name": "Bachelor of Business Entrepreneurship, with IT",
+      "Course Name": "Bachelor of Business Entrepreneurship, with IT",
       "prefix": "BBE",
       "program_code": "1229299"
     },
     {
       "id": 12,
-      "name": "Bachelor of Science in Human Resource Management",
+      "Course Name": "Bachelor of Science in Human Resource Management",
       "prefix": "BSH",
       "program_code": "1229189"
     },
     {
       "id": 12,
-      "name": "Bachelor of Science in Marketing, with IT",
+      "Course Name": "Bachelor of Science in Marketing, with IT",
       "prefix": "BSM",
       "program_code": "1229151"
     },
     {
       "id": 12,
-      "name": "Bachelor of Science in Accounting & Finance, with IT",
+      "Course Name": "Bachelor of Science in Accounting & Finance, with IT",
       "prefix": "BSAF",
       "program_code": "1229539"
     },
     {
       "id": 12,
-      "name": "Bachelor of Applied Economics with IT",
+      "Course Name": "Bachelor of Applied Economics with IT",
       "prefix": "BAE",
       "program_code": "B1229198"
     },
     {
       "id": 12,
-      "name": "Bachelor of Economics & Statistics, with IT",
+      "Course Name": "Bachelor of Economics & Statistics, with IT",
       "prefix": "BES",
       "program_code": "1229199"
     },
     {
       "id": 12,
-      "name": "Bachelor of Economics & Finance with IT",
+      "Course Name": "Bachelor of Economics & Finance with IT",
       "prefix": "BEF",
       "program_code": "1229540"
     },
     {
       "id": 12,
-      "name": "Bachelor of Science in Travel & Tourism Management",
+      "Course Name": "Bachelor of Science in Travel & Tourism Management",
       "prefix": "BST",
       "program_code": "1229684"
     },
     {
       "id": 12,
-      "name": "Bachelor of Science in Eco-tourism, Hotel and Institution Management",
+      "Course Name": "Bachelor of Science in Eco-tourism, Hotel and Institution Management",
       "prefix": "BEH",
       "program_code": "1229B52"
     },
     {
       "id": 11,
-      "name": "Bachelor of Science (Information & Communication Technology Management)",
+      "Course Name": "Bachelor of Science (Information & Communication Technology Management)",
       "prefix": "ICTM",
       "program_code": "1234567"
     },
     {
       "id": 11,
-      "name": "Bachelor of Science (Information Technology)",
+      "Course Name": "Bachelor of Science (Information Technology)",
       "prefix": "IT",
       "program_code": "7654321"
     },
     {
       "id": 11,
-      "name": "Bachelor of Science (Computer Science)",
+      "Course Name": "Bachelor of Science (Computer Science)",
       "prefix": "CS",
       "program_code": "9876543"
     },
     {
       "id": 11,
-      "name": "Bachelor of Science (Computer Technology)",
+      "Course Name": "Bachelor of Science (Computer Technology)",
       "prefix": "CT",
       "program_code": "3456789"
     },
     {
       "id": 11,
-      "name": "Bachelor of Science (Information Systems)",
+      "Course Name": "Bachelor of Science (Information Systems)",
       "prefix": "IS",
       "program_code": "6543210"
     },
@@ -530,7 +530,7 @@
     {
 
       "id": 1,
-      "name": "Bachelor of Laws (LLB)",
+      "Course Name": "Bachelor of Laws (LLB)",
       "prefix": "LLB",
       "program_code": "1229134"
     }
