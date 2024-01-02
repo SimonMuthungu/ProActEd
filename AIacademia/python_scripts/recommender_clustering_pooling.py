@@ -2,24 +2,24 @@
 # this will apply pooling and clustering to help the model identify a students course even with
 # a not so strong profile, ie, to be keen and accurate
 
+import logging
 import os
-import django
-import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
-import joblib
 import sys
+
+import django
 import gensim
+import joblib
 import numpy as np
+import pandas as pd
+from nltk.tokenize import sent_tokenize
 from prepare_recommender_dataset import preprocess_text
 # from run_recommender_system import weighted_vector # has to work with name == _main_
 from scipy.sparse import hstack
-from nltk.tokenize import sent_tokenize
 from sklearn.cluster import KMeans
-import logging 
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 
-
-logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\logfile.log',level=logging.DEBUG, format='%(levelname)s - %(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+logging.basicConfig(filename=r'C:\Users\user\Desktop\ProActEd\AIacademia\logfile.log',level=logging.DEBUG, format='%(levelname)s - %(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 
 
@@ -51,9 +51,9 @@ tech_acte = "My ambition is to delve into the world of artificial intelligence a
 
 
 # getting a bigger user profile from they themselves
-user_interests = preprocess_text(amb)
+user_interests = preprocess_text(input("Enter User Intrests"))
 # user_subjects = preprocess_text(user_subjects)
-activities_enjoyed = preprocess_text(act_e) 
+activities_enjoyed = preprocess_text(input("Activities")) 
 
 
 
@@ -61,12 +61,13 @@ print(f'\n\nGive us a moment, as we give you our best...\n\n')
 
 
 # setting up django environment to interact with django from this script
-sys.path.append(r'C:\Users\Simon\proacted\AIacademia')
+sys.path.append(r'C:\Users\user\Desktop\ProActEd\AIacademia')
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'AIacademia.settings')
 django.setup()
 
 # getting courses from django dbsqlite3 and making them into a df
 from academia_app.models import Recommender_training_data
+
 all_courses = Recommender_training_data.objects.all()
 courses_list = [{"Course Name": course.Course_name,
                  "Course Objectives": preprocess_text(course.Course_objectives),
@@ -74,7 +75,7 @@ courses_list = [{"Course Name": course.Course_name,
                  "Prerequisites": preprocess_text(course.General_prereuisites)} for course in all_courses]
 
 df = pd.DataFrame(courses_list)
-
+print(df.head())
 
 # creating 2 vectorizers for course description and prequisites
 objectives_vectorizer = TfidfVectorizer(stop_words='english')
@@ -91,7 +92,7 @@ feature_names_for_generalinfoandabout = generalinfoandabout_vectorizer.get_featu
 
 
 # Loading Word2Vec model
-model = joblib.load(r'C:\Users\Simon\proacted_googleds\word2vec_model.pkl')
+#model = joblib.load(r'C:\Users\Simon\proacted_googleds\word2vec_model.pkl')
 
 
 # Tokenize sentences in course objectives and general info
@@ -109,7 +110,7 @@ def vectorize_sentences(sentences, model, tfidf_vectorizer):
     for i, sentence in enumerate(sentences):
         words = sentence.split()
         word_vectors = [model[word] for word in words if word in model.key_to_index and word in feature_names]
-        word_tfidf = [tfidf_matrix[i, feature_names.tolist().index(word)] for word in words if word in model.key_to_index and word in feature_names] 
+        word_tfidf = [tfidf_matrix[i, feature_names.tolist().index(word)] for word in words if word in model.key_to_index and word in feature_names]
 
         if word_vectors:
             weighted_avg_vector = np.average(word_vectors, weights=word_tfidf, axis=0)
@@ -119,17 +120,17 @@ def vectorize_sentences(sentences, model, tfidf_vectorizer):
             # Handle cases where none of the words in the sentence are in the model or TF-IDF feature names
             sentence_vectors.append(np.zeros(model.vector_size))
 
-        # print(len(sentence_vectors)) 
+        # print(len(sentence_vectors))
 
     return sentence_vectors
 
 # Vectorize each sentence
-df['Vectorized Objectives'] = df['Tokenized Objectives'].apply(lambda x: vectorize_sentences(x, model, objectives_vectorizer))
-df['Vectorized General Info'] = df['Tokenized General Info'].apply(lambda x: vectorize_sentences(x, model, generalinfoandabout_vectorizer))
-print('Vectorized sentences!\n')
+# df['Vectorized Objectives'] = df['Tokenized Objectives'].apply(lambda x: vectorize_sentences(x, model, objectives_vectorizer))
+# df['Vectorized General Info'] = df['Tokenized General Info'].apply(lambda x: vectorize_sentences(x, model, generalinfoandabout_vectorizer))
+# print('Vectorized sentences!\n')
 
 
-# function for clustering the sentence vectors into 10 clusters to produce dim 2100 vectors 
+# function for clustering the sentence vectors into 10 clusters to produce dim 2100 vectors
 def cluster_sentences(vectors, num_clusters=7):
     # Create an array to store the cluster labels
     cluster_labels = np.zeros(len(vectors), dtype=int)
@@ -175,7 +176,7 @@ print('Sentences clusterised!\n')
 
 
 def avg_pooling(vectors, clusters):
-    pooled_vectors = []    
+    pooled_vectors = []
 
     for cluster in set(clusters):
         cluster_vectors = [vectors[i] for i, c in enumerate(clusters) if c == cluster]
@@ -216,17 +217,17 @@ def clustered_weighted_vector(user_text, model, tfidf_vectorizer, num_clusters=7
     feature_names = tfidf_vectorizer.get_feature_names_out()
 
     # Generate word vectors
-    word_vectors = [model[word] * tfidf_scores[feature_names.tolist().index(word)] 
+    word_vectors = [model[word] * tfidf_scores[feature_names.tolist().index(word)]
                     for word in words if word in model.key_to_index and word in feature_names]
 
     if not word_vectors:  # Handling case with no words found
-        print("no words the user used are in the tfidf. consider using combined descriptions' tfidf for a more comprehensive plethora ") 
+        print("no words the user used are in the tfidf. consider using combined descriptions' tfidf for a more comprehensive plethora ")
         return np.zeros(model.vector_size * num_clusters)
 
     # Clustering
     kmeans = KMeans(n_clusters=num_clusters, n_init=10)
     kmeans.fit(word_vectors)
-    labels = kmeans.labels_ 
+    labels = kmeans.labels_
 
     # Concatenating cluster vectors
     concatenated_vector = np.array([])
@@ -249,9 +250,9 @@ def clustered_weighted_vector(user_text, model, tfidf_vectorizer, num_clusters=7
 
 
 # vectorizing student input from UI : embedding student input for interests and subjects, this will come from ui input
-vectorized_user_interests = clustered_weighted_vector(user_interests, model, objectives_vectorizer)
-vectorized_activities_enjoyed = clustered_weighted_vector(activities_enjoyed, model, generalinfoandabout_vectorizer)
-print('User input vectorization... Done!\n')
+# vectorized_user_interests = clustered_weighted_vector(user_interests, model, objectives_vectorizer)
+# vectorized_activities_enjoyed = clustered_weighted_vector(activities_enjoyed, model, generalinfoandabout_vectorizer)
+# print('User input vectorization... Done!\n')
 
 
 # Example cosine similarity calculation
@@ -259,23 +260,23 @@ def calculate_similarity(user_vector, course_vectors):
     return [cosine_similarity([user_vector], [course_vector])[0][0] for course_vector in course_vectors]
 
 
-Userambition_courseojective_similarity = calculate_similarity(vectorized_user_interests, df['Concatenated Avg Pooled Objective Vectors'].tolist()) 
+# Userambition_courseojective_similarity = calculate_similarity(vectorized_user_interests, df['Concatenated Avg Pooled Objective Vectors'].tolist()) 
 
-Activitiesenjoyedbyuser_coursegeneralinfo_similarity = calculate_similarity(vectorized_activities_enjoyed, df['Concatenated Avg Pooled General Info Vectors'].tolist())
+# Activitiesenjoyedbyuser_coursegeneralinfo_similarity = calculate_similarity(vectorized_activities_enjoyed, df['Concatenated Avg Pooled General Info Vectors'].tolist())
 
-Userambition_coursegeneralinfo_similarity = calculate_similarity(vectorized_user_interests, df['Concatenated Avg Pooled General Info Vectors'].tolist())
+# Userambition_coursegeneralinfo_similarity = calculate_similarity(vectorized_user_interests, df['Concatenated Avg Pooled General Info Vectors'].tolist())
 
-Activitiesenjoyedbyuser_courseojective_similarity = calculate_similarity(vectorized_activities_enjoyed, df['Concatenated Avg Pooled Objective Vectors'].tolist())
+# Activitiesenjoyedbyuser_courseojective_similarity = calculate_similarity(vectorized_activities_enjoyed, df['Concatenated Avg Pooled Objective Vectors'].tolist())
 
-combined_total_similarity = np.array(Userambition_courseojective_similarity) * 0.30 + np.array(Activitiesenjoyedbyuser_coursegeneralinfo_similarity) * 0.50 + np.array(Userambition_coursegeneralinfo_similarity) * 0.10 + np.array(Activitiesenjoyedbyuser_courseojective_similarity) * 0.10
+# combined_total_similarity = np.array(Userambition_courseojective_similarity) * 0.30 + np.array(Activitiesenjoyedbyuser_coursegeneralinfo_similarity) * 0.50 + np.array(Userambition_coursegeneralinfo_similarity) * 0.10 + np.array(Activitiesenjoyedbyuser_courseojective_similarity) * 0.10
 # df['Prerequisites similarity'] = calculate_similarity(user_tfidf_prerequisites, df['Pooled General Info'])
 
-print(combined_total_similarity.shape)
+# print(combined_total_similarity.shape)
 
 # Create a DataFrame to display course names with their corresponding similarity scores
 similarity_df = pd.DataFrame({
     'Course Name': df['Course Name'],
-    'Combined Similarity': combined_total_similarity
+    # 'Combined Similarity': combined_total_similarity
 })
 
 # Display the DataFrame sorted by combined similarity scores
@@ -284,16 +285,16 @@ similarity_df.to_excel(excel_file_path, index=False, engine='openpyxl')
 # print(similarity_df.sort_values(by='Combined Similarity', ascending=False))
 
 
-top_5_indices = combined_total_similarity.argsort()[-5:][::-1]
-top_5_courses = df['Course Name'].iloc[top_5_indices].tolist() 
-for index in top_5_indices:
-    print(f"Course: {df.iloc[index]['Course Name']}, Score: {combined_total_similarity[index]}")
+# top_5_indices = combined_total_similarity.argsort()[-5:][::-1]
+# top_5_courses = df['Course Name'].iloc[top_5_indices].tolist() 
+# for index in top_5_indices:
+#     print(f"Course: {df.iloc[index]['Course Name']}, Score: {combined_total_similarity[index]}")
 
 
 
 # printing them, or returning to a view
 print('\n\n\n|-------------------Courses we think would be best for you based on your interests:-----------------|\n\n')
-for course in top_5_courses:
-    print(f'|                  {course}.')
+# for course in top_5_courses:
+    # print(f'|                  {course}.')
 print('\n\n|----------------------THANKS, THIS IS PRO-ACT-ED 1.2-------------------------------------------------|\n\n\n')
 

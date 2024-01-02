@@ -112,11 +112,13 @@ class CourseOfInterest(models.Model):
     required_high_school_subjects = models.ManyToManyField(HighSchoolSubject, related_name='required_for_courses')
 
 # Course Data for Recommender Model
-class CourseDataForRecommender(models.Model):
-    course_name = models.CharField(max_length=255)
-    course_objectives = models.TextField()
-    general_info = models.TextField()
-    prerequisites = models.TextField()
+
+class Recommender_training_data(models.Model):
+    Course_name = models.CharField(max_length=100)
+    Course_objectives = models.CharField(max_length=100)
+    Course_general_info_and_about = models.CharField(max_length=100)
+    General_prereuisites = models.CharField(max_length=100)
+    Subject_prerequisites = models.CharField(max_length=100)
 
     def __str__(self):
         return self.course_name
