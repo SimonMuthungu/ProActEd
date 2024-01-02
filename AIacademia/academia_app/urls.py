@@ -3,7 +3,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    # Assuming 'login_view' is your main login view
+
     path('', views.course_recommendation, name='course_recommendation'),
     path('login/', views.login_view, name='login'),
     # Dashboard view

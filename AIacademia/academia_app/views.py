@@ -18,14 +18,14 @@ def login_view(request):
             if user.is_superuser:
                 return redirect('/admin/')  # Superadmin to Django admin
             elif user.is_staff:
-                return redirect('admin_page')  # Admin to custom admin page
+                return redirect('/admin/')  # Admin to custom admin page
             else:
                 return redirect('student_page')  # Students to student page
         else:
             # Handle invalid login
-            return render(request, 'login.html', {'error': 'Invalid credentials.'})
+            return render(request, 'academia_app/login.html', {'error': 'Invalid credentials.'})
 
-    return render(request, 'login.html')
+    return render(request, 'academia_app/login.html')
 
 
 @login_required

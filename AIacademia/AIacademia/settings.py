@@ -102,6 +102,5 @@ STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'academia_app.BaseUser'
 LOGIN_REDIRECT_URL = 'dashboard'
 
-
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

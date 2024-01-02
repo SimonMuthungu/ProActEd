@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Page</title>
+    <title>Course Recommendation</title>
 
-    {% comment %} <link rel="stylesheet" type="text/css" href="course_recommendation_styles.css"> {% endcomment %}
     <style>
         /* Your inline CSS styles go here */
+        .header {
+            background-color: #f8f9fa;
+            padding: 10px;
+            text-align: right;
+        }
+        .login-button {
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .login-button:hover {
+            background-color: #0056b3;
+        }
         body {
             font-family: Arial, sans-serif;
             background-color:blue ;
@@ -29,6 +44,10 @@
 
 </head>
 <body>
+    <div class="header">
+        <a href="{% url 'login' %}" class="login-button">Login</a>
+    </div>
+
     <h1 size='Quick'>SELECT YOUR SUBJECTS</h1>
     <form action="course_recommendation_page.html" method="post">
         <label for="subject1">
