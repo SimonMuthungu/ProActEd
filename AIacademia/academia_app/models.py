@@ -26,16 +26,22 @@ class CustomUserManager(BaseUserManager):
 # Base User Model
 class BaseUser(AbstractUser):
     objects = CustomUserManager()
+    def __str__(self):
+        return f"Base User: {self.username}"
 
     # If needed, add any common fields here
 
 # Admin User Model
 class AdminUser(BaseUser):
     admin_field = models.CharField(max_length=100)
+    def __str__(self):
+        return f"Admin User: {self.username}"
 
 # Super Admin User Model
 class SuperAdminUser(BaseUser):
     superadmin_field = models.CharField(max_length=100)
+    def __str__(self):
+        return f"SuperAdmin User: {self.username}"
 
 # Student User Model
 class StudentUser(BaseUser):
