@@ -37,8 +37,8 @@ List any prerequisites here.
 Provide step-by-step installation instructions.
 
 ## Usage
-
-Explain how to use your project. Include examples if applicable.
+Navigate to the app directorty "AIacademia"
+Run `pip install -r requirements.txt` to install the required modules, for academia_app
 
 ## Contributing
 
