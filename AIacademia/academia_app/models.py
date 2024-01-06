@@ -50,7 +50,6 @@ class CourseOfInterest(models.Model):
     fields_of_interest = models.ManyToManyField(FieldOfInterest, related_name='courses_of_interest')
     required_high_school_subjects = models.ManyToManyField(HighSchoolSubject, related_name='required_for_courses')
 
-
 class Recommender_training_data(models.Model):
     Course_name = models.CharField(max_length=100)
     Course_objectives = models.CharField(max_length=100)
