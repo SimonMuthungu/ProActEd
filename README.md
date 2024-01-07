@@ -1,6 +1,6 @@
-# AI DRIVEN ACADEMIC MONITORING AND INTERVENTION SYSTEM 
-This project will monitor students' academic progress and use machine learning to calculate the probability of the students to drop out of campus. The system will also use AI to recommend courses based on a student's career interest and the subjects they did in high school.
+# AI DRIVEN ACADEMIC MONITORING AND INTERVENTION SYSTEM
 
+This project will monitor students' academic progress and use machine learning to calculate the probability of the students to drop out of campus. The system will also use AI to recommend courses based on a student's career interest and the subjects they did in high school.
 
 ## Contributors
 
@@ -21,7 +21,7 @@ The course recommendation section in the project will help guide students who ar
 List the key features of your project.
 
 - Graphical Academic Progress Report
-- AI Course Recommendation 
+- AI Course Recommendation
 - AI Probability Determiner
 
 ## Getting Started
@@ -39,8 +39,12 @@ Provide step-by-step installation instructions.
 ## Usage
 
 Explain how to use your project. Include examples if applicable.
+================================================================
 
-## Contributing
+Navigate to the app directorty "AIacademia"
+Run `pip install -r requirements.txt` to install the required modules, for academia_app
+
+Contributing
 
 Explain how others can contribute to your project.
 

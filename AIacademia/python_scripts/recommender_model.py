@@ -15,8 +15,12 @@ from scipy.sparse import hstack
 
 
 # Loading Word2Vec model
+<<<<<<< HEAD
 # model = gensim.models.KeyedVectors.load_word2vec_format(r"C:\Users\Simon\proacted\GoogleNews-vectors-negative300.bin", binary=True)
 model = joblib.load(r'C:\Users\Simon\proacted_googleds\word2vec_model.pkl')
+=======
+model = gensim.models.KeyedVectors.load_word2vec_format(r"C:\Users\Simon\proacted\GoogleNews-vectors-negative300.bin", binary=True)
+>>>>>>> 00d3a7fd4ff67c9407df1d0bc90c897b7cad7c51
 
 
 # these are hashed because they are already stored in the joblib file, no need to initialise them over
