@@ -6,47 +6,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Page</title>
-    <style>
-        {% comment %} /* Style for the navigation bar */
-        ul.sidebar {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            background-color: #156; /* Background color for the bar */
-        }
+    
 
-        /* Style for the navigation bar items (links) */
-        ul.sidebar li {
-            display: block;
-            margin-bottom: 35px; /* Spacing between items */
-        }
-
-        /* Style for the navigation bar links */
-        ul.sidebar li a {
-            text-decoration: none;
-            color: blue; /* Link color */
-            padding: 15px 20px;
-        }
-
-        /* Hover effect for links */
-        ul.sidebar li a:hover {
-            background-color: #686; /* Background color on hover */
-        }{% endcomment %}
-    </style> 
-
-    <link rel="stylesheet" type="text/css" href="{% static 'css/student_style.css' %}">
+    <link rel="stylesheet" type="text/css" href="static\css\student_style.css"/>
     
 
 </head>
 <body>
-    <div>
-        <h1>Welcome, Student!</h1>
+    {% comment %} <div>
+        <h1 text-align= "center:" >Welcome, Student!</h1>
         <a class= logout>Logout</a>
-    </div>
+    </div> {% endcomment %}
     <div class="sidebar">
         <ul>
         <li><a href="course_recommendation_page">Course Recommendation</a></li>
-        <li><a href="#"></a>Intervention</li>
+        <li><a href="intervention">Intervention</a></li>
         {% comment %} <li><a href="#">Services</a></li>
         <li><a href="#">Portfolio</a></li>1
         <li><a href="#">Contact</a></li> {% endcomment %}

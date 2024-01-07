@@ -84,7 +84,7 @@
 .footer {
     background-color: #333;
     color: #fff;
-    padding: 0;
+    padding: 20;
     text-align: center;
 }
 
@@ -140,12 +140,13 @@
 }
 
 .sidebar {
-    height: 100%;
-    background-color: #f1f1f1;
+    height: 20%;
+    /* background-color: #12dfea; */
     width: 250px;
     padding-top: 20px;
     position :fixed;
     top:0;
+    bottom: 200px;
     left:0;
      z-index: 100;
 }
@@ -154,14 +155,15 @@
     padding:0;
     
 }
-.sidebar ul li{
-    color: pink;
-    padding:8px 16px;
+.sidebar ul li {
+    margin-bottom: 10px;
     
 }
+    
+
 .sidebar ul li a {
     text-decoration: none;
-    color: white;
+    color: rgb(57, 187, 242);
    
     
 }

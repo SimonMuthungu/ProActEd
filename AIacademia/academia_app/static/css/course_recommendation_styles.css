@@ -1,0 +1,47 @@
+
+        /* Your inline CSS styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color:rgb(21, 21, 21) ;
+            text-align: center;
+        }
+        h1{
+            /* background-color:white; */
+           color: rgb(8, 20, 194);
+           size: 10px;
+    
+        }
+        /* form{
+            color:rgb(13, 216, 223);
+            background-color: rgb(17, 17, 17);
+            border-radius: 10px;
+            flex-direction: column;  */
+        
+        .section form {
+            background-color: white;
+            color: indigo;
+        }
+        .checkbox-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+            
+        }
+
+        .checkbox-container label {
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+
+        }
+        div{
+            color:rgb(13, 216, 223);
+            background-color: rgb(17, 17, 17);
+            border-radius: 10px; 
+        }
+        h2{
+            color: rgb(123, 237, 74);
+        }
+        h3{
+            color: rgb(146, 241, 105);
+        }
