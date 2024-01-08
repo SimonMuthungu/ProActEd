@@ -3,14 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>Student Page</title>
 
-<<<<<<< HEAD
-    {% comment %} <link rel="stylesheet" type="text/css" href="course_recommendation_styles.css"> {% endcomment %}
-    <style>
-        /* Your inline CSS styles go here */
-=======
     <title>Course Recommendation</title>
 
     <style>
@@ -31,7 +24,6 @@
         .login-button:hover {
             background-color: #0056b3;
         }
->>>>>>> 00d3a7fd4ff67c9407df1d0bc90c897b7cad7c51
         body {
             font-family: Arial, sans-serif;
             background-color:blue ;
@@ -53,16 +45,11 @@
 
 </head>
 <body>
-<<<<<<< HEAD
-   
-=======
     <div class="header">
         <a href="{% url 'login' %}" class="login-button">Login</a>
     </div>
 
->>>>>>> 00d3a7fd4ff67c9407df1d0bc90c897b7cad7c51
     <h1 size='Quick'>SELECT YOUR SUBJECTS</h1>
-=======
     <link rel="stylesheet" type="text/css" href="static\css\course_recommendation_styles.css">
     
 
@@ -71,33 +58,32 @@
     <h1>HELLO , WELCOME!</h1>
     
     <h2 >SELECT YOUR SUBJECTS</h2>
->>>>>>> fa2c235629929ee385a48e14b2883b1189893ae8
     <form action="course_recommendation_page.html" method="post">
        <div>
         <ul class="checkbox-list">
             <li>
-        <label for="subject1">
-            <input type="checkbox" id="subject1" name="subjects[]" value="Mathematics"> MATHEMATICS
-        </label>
-    </li>
+                <label for="subject1">
+                    <input type="checkbox" id="subject1" name="subjects[]" value="Mathematics"> MATHEMATICS
+                </label>
+            </li>
+        <br>
+            <li>
+                <label for="subject2">
+                    <input type="checkbox" id="subject2" name="subjects[]" value="Science"> ENGLISH
+                </label>
+            </li>
         <br>
         <li>
-        <label for="subject2">
-            <input type="checkbox" id="subject2" name="subjects[]" value="Science"> ENGLISH
-        </label>
-    </li>
-        <li>
-        <br>
-        <label for="subject3">
-            <input type="checkbox" id="subject3" name="subjects[]" value="History"> KISWAHILI
-        </label>
-    </li>
+            <label for="subject3">
+                <input type="checkbox" id="subject3" name="subjects[]" value="History"> KISWAHILI
+            </label>
+        </li>
         <br>
         <li>
         <label for="subject4">
             <input type="checkbox" id="subject4" name="subjects[]" value="English"> CHEMISTRY
         </label>
-    </li>
+        </li>
         <br>
         <li>
         <label for="subject5">

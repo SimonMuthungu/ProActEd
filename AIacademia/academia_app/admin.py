@@ -1,14 +1,8 @@
 from django.contrib import admin
 
-<<<<<<< HEAD
-from .models import (Attendance, Course, CourseOfInterest, FeeInformation,
-                     FieldOfInterest, HighSchoolSubject, Performance, School,
-                     Student)
-=======
 from .models import (AdminUser, Attendance, BaseUser, Course, CourseOfInterest,
                      FeeInformation, FieldOfInterest, HighSchoolSubject,
                      Performance, School, Student, SuperAdminUser)
->>>>>>> 00d3a7fd4ff67c9407df1d0bc90c897b7cad7c51
 
 
 class StudentAdmin(admin.ModelAdmin):
@@ -24,17 +18,6 @@ class StudentAdmin(admin.ModelAdmin):
         }),
     )
 
-<<<<<<< HEAD
-admin.site.register(School)
-admin.site.register(Course)
-admin.site.register(Student, StudentAdmin)
-admin.site.register(FeeInformation)
-admin.site.register(Attendance)
-admin.site.register(Performance)
-admin.site.register(FieldOfInterest)
-admin.site.register(HighSchoolSubject)
-admin.site.register(CourseOfInterest)
-=======
 class BaseUserAdmin(admin.ModelAdmin):
     list_display = ('username', 'email', 'first_name', 'last_name', 'is_active', 'is_staff')
     # other custom options
@@ -92,4 +75,3 @@ admin.site.register(Performance, PerformanceAdmin)
 admin.site.register(FieldOfInterest)  # Add custom admin if needed
 admin.site.register(HighSchoolSubject)  # Add custom admin if needed
 admin.site.register(CourseOfInterest)  # Add custom admin if needed
->>>>>>> 00d3a7fd4ff67c9407df1d0bc90c897b7cad7c51
