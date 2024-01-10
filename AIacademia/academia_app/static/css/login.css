@@ -1,42 +1,93 @@
-/* static/css/login.css */
+/* Updated CSS */
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+body, html {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.header {
+    background-color: #020225;
+    color: #FFDB58;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer {
+    background-color: #020225;
+    color: #FFDB58;
+    padding: 5px 0;
+    text-align: center;
 }
 
 .login-box {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    padding: 20px;
-}
-
-h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.login-button {
-    display: block;
-    width: 200px;
-    margin: 10px auto;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-    background-color: #007bff;
+    width: 300px;
+    margin: 0 auto;
+    background-color: #ffffff;
     border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-box h2 {
+    margin: 0;
+    padding: 20px 0;
+    color: #FFDB58;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+/* Label styles */
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #020225;
+    font-weight: bold;
+    text-align: left;
+    
+}
+
+/* Input field styles */
+.input-group input {
+    width: 70%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    text-align: center;
+}
+
+/* Button styles */
+.input-group button {
+    width: 30%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #FFDB58;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.login-button:hover {
+.input-group button:hover {
     background-color: #0056b3;
+}
+
+.error-message {
+    color: #ff0000;
+    margin-bottom: 15px;
+    text-align: center;
 }
