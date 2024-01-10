@@ -1,4 +1,4 @@
-from django.contrib.auth.models import AbstractUser, BaseUserManager
+from django.contrib.auth.models import AbstractUser, BaseUserManager, Group
 from django.db import models
 
 
@@ -23,29 +23,68 @@ class CustomUserManager(BaseUserManager):
 
         return self.create_user(username, password, **extra_fields)
 
+# Intermediate model for BaseUser-Group many-to-many relationship
+class BaseUserGroup(models.Model):
+    base_user = models.ForeignKey('BaseUser', on_delete=models.CASCADE)
+    group = models.ForeignKey(Group, on_delete=models.CASCADE)
+
 # Base User Model
 class BaseUser(AbstractUser):
     objects = CustomUserManager()
+    groups = models.ManyToManyField(Group, through='BaseUserGroup')
+
     def __str__(self):
         return f"Base User: {self.username}"
 
-    # If needed, add any common fields here
+    def has_module_perms(self, app_label):
+        if self.groups.filter(name='Student Users').exists():
+            return False
+        return super().has_module_perms(app_label)
 
+    def has_perm(self, perm, obj=None):
+        if self.groups.filter(name='Student Users').exists():
+            return False
+        return super().has_perm(perm, obj)
+    
 # Admin User Model
 class AdminUser(BaseUser):
     admin_field = models.CharField(max_length=100)
+
     def __str__(self):
         return f"Admin User: {self.username}"
 
 # Super Admin User Model
 class SuperAdminUser(BaseUser):
     superadmin_field = models.CharField(max_length=100)
+
     def __str__(self):
         return f"SuperAdmin User: {self.username}"
 
 # Student User Model
 class StudentUser(BaseUser):
     student_field = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"Student User: {self.username}"
+
+# Proxy Models for different user roles
+class AdminUserProxy(AdminUser):
+    class Meta:
+        proxy = True
+        verbose_name = 'Staff User'
+        verbose_name_plural = 'Staff Users'
+
+class StudentUserProxy(StudentUser):
+    class Meta:
+        proxy = True
+        verbose_name = 'Student User'
+        verbose_name_plural = 'Student Users'
+
+class SuperAdminUserProxy(SuperAdminUser):
+    class Meta:
+        proxy = True
+        verbose_name = 'Super Admin'
+        verbose_name_plural = 'Super Admins'
 
 # School Model
 class School(models.Model):
@@ -55,7 +94,6 @@ class School(models.Model):
 
 # Course Model
 class Course(models.Model):
-    # program_code = models.CharField(max_length=15, null=True, unique=True, default='Course')
     name = models.CharField(max_length=100)
     prefix = models.CharField(max_length=15)
     school = models.ForeignKey(School, on_delete=models.CASCADE)
@@ -112,13 +150,12 @@ class CourseOfInterest(models.Model):
     required_high_school_subjects = models.ManyToManyField(HighSchoolSubject, related_name='required_for_courses')
 
 # Course Data for Recommender Model
-
 class Recommender_training_data(models.Model):
-    Course_name = models.CharField(max_length=100)
-    Course_objectives = models.CharField(max_length=100)
-    Course_general_info_and_about = models.CharField(max_length=100)
-    General_prereuisites = models.CharField(max_length=100)
-    Subject_prerequisites = models.CharField(max_length=100)
+    course_name = models.CharField(max_length=100)
+    course_objectives = models.CharField(max_length=100)
+    course_general_info_and_about = models.CharField(max_length=100)
+    general_prerequisites = models.CharField(max_length=100)
+    subject_prerequisites = models.CharField(max_length=100)
 
     def __str__(self):
         return self.course_name

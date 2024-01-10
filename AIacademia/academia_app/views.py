@@ -13,17 +13,19 @@ def login_view(request):
         user = authenticate(request, username=username, password=password)
         
         if user is not None:
-            login(request, user)
-            # Redirect based on user type
-            if user.is_superuser:
-                return redirect('/admin/')  # Superadmin to Django admin
-            elif user.is_staff:
-                return redirect('/admin/')  # Admin to custom admin page
+            if user.is_active:
+                login(request, user)
+                # Redirect based on user type
+                if user.is_superuser or user.is_staff:
+                    return redirect('/admin/')
+                else:
+                    return redirect('student_page')
             else:
-                return redirect('student_page')  # Students to student page
+                # User is not active
+                return render(request, 'academia_app/login.html', {'error': 'Account is inactive.'})
         else:
-            # Handle invalid login
-            return render(request, 'academia_app/login.html', {'error': 'Invalid credentials.'})
+            # Authentication failed
+            return render(request, 'academia_app/login.html', {'error': 'Invalid username or password.'})
 
     return render(request, 'academia_app/login.html')
 
@@ -31,53 +33,34 @@ def login_view(request):
 @login_required
 def dashboard(request):
     # Redirect users based on their type
-    if request.user.is_superuser:
-        # Superadmin users
-        return redirect('/admin/')
-    elif request.user.is_staff:
-        # Admin users
-        return render(request, "academia_app/admin_page.html")
+    if request.user.is_superuser or request.user.is_staff:
+        return redirect('/admin/')  # Superadmin and Staff to Django admin
     else:
-        # Student users
-        return render(request, "academia_app/student_page.html")
+        return render(request, "academia_app/student_page.html")  # Students to student page
 
-
+@login_required
 def student_page(request):
-    # Ensure only logged in students can access this page
-    if request.user.is_authenticated and not request.user.is_staff:
+    if request.user.groups.filter(name='Student').exists():
         return render(request, "academia_app/student_page.html")
     else:
+        if request.user.is_superuser or request.user.is_staff:
+            return redirect('/admin/')
         return redirect('login')
-
 
 def course_recommendation(request):
     return render(request, 'academia_app/course_recommendation_page.html')
 
-def admin_page(request):
-    # Ensure only logged in admins can access this page
-    if request.user.is_authenticated and request.user.is_staff:
-        return render(request, "academia_app/admin_page.html")
-    else:
-        return redirect('login')
-
-
-def admin_login_view(request):
-    # Your view logic for admin login goes here
-    return render(request, "academia_app/admin_login.html")  # Updated to point to the correct template
-
-
+@login_required
 def school_list(request):
-    # Ensure only logged in admins can access this page
-    if request.user.is_authenticated and request.user.is_staff:
+    if request.user.is_staff:
         schools = School.objects.all()
         courses = Course.objects.all()
         return render(request, 'academia_app/school_list.html', {'schools': schools, 'courses': courses})
     else:
         return redirect('login')
 
-
+@login_required
 def get_courses(request, school_id):
-    # Ensure only logged in users can access this page
     if request.user.is_authenticated:
         courses = Course.objects.filter(school_id=school_id).values('id', 'name')
         course_list = list(courses)
