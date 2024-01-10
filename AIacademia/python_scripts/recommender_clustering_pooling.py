@@ -3,22 +3,22 @@
 # a not so strong profile, ie, to be keen and accurate
 
 <<<<<<< HEAD
+import logging
 import os
-import django
-import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
-import joblib
 import sys
+
+import django
 import gensim
+import joblib
 import numpy as np
+import pandas as pd
+from nltk.tokenize import sent_tokenize
 from prepare_recommender_dataset import preprocess_text
 # from run_recommender_system import weighted_vector # has to work with name == _main_
 from scipy.sparse import hstack
-from nltk.tokenize import sent_tokenize
 from sklearn.cluster import KMeans
-import logging 
-
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 
 logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\logfile.log',level=logging.DEBUG, format='%(levelname)s - %(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 =======
@@ -98,6 +98,7 @@ django.setup()
 
 # getting courses from django dbsqlite3 and making them into a df
 from academia_app.models import Recommender_training_data
+
 <<<<<<< HEAD
 =======
 

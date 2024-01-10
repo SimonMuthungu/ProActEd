@@ -1,14 +1,15 @@
 import os
-import django
-import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
-import joblib
 import sys
+
+import django
 import gensim
+import joblib
 import numpy as np
+import pandas as pd
 from prepare_recommender_dataset import preprocess_text
 from scipy.sparse import hstack
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 
 # welcome
 
@@ -45,6 +46,7 @@ django.setup()
 
 # getting courses from django dbsqlite3 and making them into a df
 from academia_app.models import Recommender_training_data
+
 all_courses = Recommender_training_data.objects.all()
 courses_list = [{"Course Name": course.Course_name,
                  "Combined Info": preprocess_text(course.Course_objectives) + " " + preprocess_text(course.Course_general_info_and_about),

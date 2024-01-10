@@ -1,4 +1,6 @@
-from django.contrib.auth.models import AbstractUser, BaseUserManager, Group as AuthGroup, Permission as AuthPermission
+from django.contrib.auth.models import AbstractUser, BaseUserManager
+from django.contrib.auth.models import Group 
+from django.contrib.auth.models import Permission 
 from django.db import models
 
 
@@ -40,10 +42,10 @@ class BaseUser(AbstractUser):
     def __str__(self):
         return f"Base User: {self.username}"
     
-BaseUser.groups.related_name = 'baseuser_groups'
-BaseUser.user_permissions.related_name = 'baseuser_user_permissions'
 
     # If needed, add any common fields here
+
+
 
 # Admin User Model
 class AdminUser(BaseUser):

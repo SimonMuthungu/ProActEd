@@ -1,6 +1,7 @@
 # this is to help with creating the datasets we will need to train the regression model
-import pandas as pd
 import random
+
+import pandas as pd
 
 
 # Automatically creating one

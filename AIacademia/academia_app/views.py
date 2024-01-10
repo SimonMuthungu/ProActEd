@@ -1,31 +1,21 @@
-from django.contrib.auth import authenticate, login
-from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse, JsonResponse
-from django.shortcuts import redirect, render
-
 from sre_constants import BRANCH
 from telnetlib import LOGOUT
+
+from django.contrib import messages
+# Other imports
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
+# from .forms import UserLoginForm
+from django.contrib.auth.views import LoginView
+from django.http import HttpRequest, HttpResponse, JsonResponse
 # from academia_app.models import Department 
 # from django.http import git BRANCH(  # Import JsonResponse for AJAX responses
 #     HttpResponse, JsonResponse)
-from django.shortcuts import render, redirect
-# from .forms import UserLoginForm
-from django.contrib.auth.views import LoginView
-from django.contrib.auth import authenticate ,login
+from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
-from django.contrib.auth import authenticate
-# Other imports
-from django.contrib.auth import authenticate ,login , logout
-from django.contrib.auth import login
-from django.http import HttpResponse, JsonResponse
-from django.shortcuts import render
-from django.http import HttpRequest
-from .models import Course, School # Import Course and School models
-from django.contrib.auth.models import User
-from django.contrib import messages
 
 from .models import Course, School  # Import Course and School models
-
 
 
 def login(request):

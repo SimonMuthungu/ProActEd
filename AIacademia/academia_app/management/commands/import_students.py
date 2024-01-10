@@ -1,8 +1,9 @@
 import csv
 import os
 
-from academia_app.models import StudentUser  # Import your StudentUser model
 from django.core.management.base import BaseCommand, CommandError
+
+from academia_app.models import StudentUser  # Import your StudentUser model
 
 
 class Command(BaseCommand):

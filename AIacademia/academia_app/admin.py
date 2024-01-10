@@ -1,4 +1,6 @@
 from django.contrib import admin
+from academia_app.models import BaseUser
+
 
 from .models import (AdminUser, Attendance, BaseUser, Course, CourseOfInterest,
                      FeeInformation, FieldOfInterest, HighSchoolSubject,
@@ -63,7 +65,7 @@ class PerformanceAdmin(admin.ModelAdmin):
     search_fields = ('student__name',)
 
 # Register your models here
-admin.site.register(BaseUser, BaseUserAdmin)
+# admin.site.register(BaseUser, BaseUserAdmin)
 admin.site.register(AdminUser, AdminUserAdmin)
 admin.site.register(SuperAdminUser, SuperAdminUserAdmin)
 admin.site.register(School, SchoolAdmin)

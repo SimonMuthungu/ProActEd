@@ -1,12 +1,7 @@
 from contextlib import ContextDecorator, contextmanager
 
-from django.db import (
-    DEFAULT_DB_ALIAS,
-    DatabaseError,
-    Error,
-    ProgrammingError,
-    connections,
-)
+from django.db import (DEFAULT_DB_ALIAS, DatabaseError, Error,
+                       ProgrammingError, connections)
 
 
 class TransactionManagementError(ProgrammingError):

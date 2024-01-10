@@ -1,7 +1,8 @@
 import json
 import os
-import django
 import sys
+
+import django
 
 sys.path.append(r'C:\Users\Simon\proacted\AIacademia')
 

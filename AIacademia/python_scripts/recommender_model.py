@@ -1,18 +1,22 @@
 # this is the file responsible for all training of the model.
 
 import os
-import django
-import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
-import joblib
 import sys
+
+import django
 import gensim
+import joblib
 import numpy as np
-from AIacademia.python_scripts.run_recommender_system import weighted_vector, vectorizer, tfidf_matrix, tfidf_matrix_prerequisites, prerequisites_vectorizer, feature_names, feature_names_for_prerequisites, df
+import pandas as pd
 from prepare_recommender_dataset import preprocess_text
 from scipy.sparse import hstack
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 
+from AIacademia.python_scripts.run_recommender_system import (
+    df, feature_names, feature_names_for_prerequisites,
+    prerequisites_vectorizer, tfidf_matrix, tfidf_matrix_prerequisites,
+    vectorizer, weighted_vector)
 
 # Loading Word2Vec model
 <<<<<<< HEAD
