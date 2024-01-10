@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Page</title>
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="{% static 'css/student_style.css' %}">
 
     <!-- Additional internal styles can go here -->
@@ -97,6 +98,83 @@
             <p>&copy; 2023 ProActEd; University of Maseno. All Rights Reserved.</p>
         </div>
     </footer>
+=======
+    
+
+    <link rel="stylesheet" type="text/css" href="static\css\student_style.css"/>
+    
+
+</head>
+<body>
+    {% comment %} <div>
+        <h1 text-align= "center:" >Welcome, Student!</h1>
+        <a class= logout>Logout</a>
+    </div> {% endcomment %}
+    <div class="sidebar">
+        <ul>
+        <li><a href="course_recommendation_page">Course Recommendation</a></li>
+        <li><a href="intervention">Intervention</a></li>
+        {% comment %} <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>1
+        <li><a href="#">Contact</a></li> {% endcomment %}
+        </ul>
+    </div>
+  
+<div class="content">
+    <div class="school-grid">
+        {% for school in school_data %}
+            <div class="content-item">
+                <a href="#{{ school.name }}" class="school-button">{{ school.name }}</a>
+                <div id="{{ school.name }}" class="departments-container">
+
+                    <div class="hover-container">
+                    <select>
+                       
+                                {% for department in school.departments %}
+                                
+                                    <option value="option1">{{ department }}</option>
+                                    {% if department == 'computer science' %}
+                                    <optgroup class="options" label="program">
+                                        {% for course in school.cs %}
+                                        <option value="option3-1">{{ course }}</option>
+                                        {% endfor %}
+                                      </optgroup>
+                                    {% else %}
+                                    <optgroup class="options" label="program">
+                                        {% for course in school.IT %}
+                                        <option value="option3-1">{{ course }}</option>
+
+                                        {% endfor %}
+                                      </optgroup>
+                                      {% endif %}
+                                
+                                {% endfor %}
+                                
+                        
+                        </select>
+                    </div>
+                        
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>       
+
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Email: info@proacted.com</p>
+            <p>Phone: +254 (7) 437-20033</p>
+        </div>
+    </div>
+        <div class="copyright">
+            <p>&copy; 2023 ProActEd; University of Maseno. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+>>>>>>> a8aafc1f4e0b7897d2500120900e0786f14f61be
 
 </body>
 </html>
