@@ -11,14 +11,6 @@ This project is designed to monitor campus students' academic progress and use m
 This will help universities identify students who need help hence allowing the institutions to intervene where necessary.
 The course recommendation section in the project will help guide students who are joining university or those who wish to change their current courses to pick a course based on their interests and therefore reduce their likelihood of dropping out of the course.
 
-Features
-
-List the key features of your project.
-
-- Feature 1
-- Feature 2
-- Feature 3
-
 ## Getting Started
 
 Instructions on how to get your project up and running locally.
