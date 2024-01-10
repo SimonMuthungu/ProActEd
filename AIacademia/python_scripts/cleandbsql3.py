@@ -1,16 +1,19 @@
 import os
+import sys
+
 import django
 import nltk
-import sys
+
 sys.path.append(r'C:\Users\Simon\proacted\AIacademia')
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'AIacademia.settings')
 django.setup()
 
-from academia_app.models import Course_data_for_recommender
 # nltk.download('stopwords')
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
+
+from academia_app.models import Course_data_for_recommender
 
 courses = Course_data_for_recommender.objects.all()
 

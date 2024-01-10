@@ -1,7 +1,8 @@
 import json
 
-from academia_app.models import Course, School
 from django.core.management.base import BaseCommand
+
+from academia_app.models import Course, School
 
 
 class Command(BaseCommand):

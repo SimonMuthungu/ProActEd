@@ -11,6 +11,7 @@
 <body>
     <div class="login-box">
         <h2>Login</h2>
+<<<<<<< HEAD
         <a href="student_page" class="login-button">Login as Student</a>
         <a href="admin_page" class="login-button">Login as Admin</a> 
     </div>
@@ -196,3 +197,16 @@ def admin_login_view(request):
     </div>
 </body>
 </html> {% endcomment %}
+=======
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <!-- Username and Password fields -->
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <!-- Submit button -->
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
+>>>>>>> 00d3a7fd4ff67c9407df1d0bc90c897b7cad7c51

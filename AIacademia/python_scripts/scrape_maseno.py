@@ -1,8 +1,6 @@
+import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-import pandas as pd
-
-import requests
 
 # Set the user agent to mimic a web browser
 headers = {

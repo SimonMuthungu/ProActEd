@@ -1,8 +1,8 @@
 # this is to help with the etl and pre processing of the recommender training dataset
 
-import pandas as pd
 import nltk
-from nltk.corpus import stopwords 
+import pandas as pd
+from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
 # df = pd.read_excel(r"AIacademia/data_files/gpt4_recommender_gen_training_data.xlsx")

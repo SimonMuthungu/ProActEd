@@ -1,9 +1,11 @@
 # this file can only run on the main directory of this project
 
 import os
+import sys
+
 import django
 import pandas as pd
-import sys
+
 # sys.path.append('/AIacademia/')
 
 
@@ -13,6 +15,7 @@ django.setup()
 
 # Django model import here
 from academia_app.models import Course_data_for_recommender
+
 
 def import_data_from_excel(excel_file_path):
     # Read the Excel file

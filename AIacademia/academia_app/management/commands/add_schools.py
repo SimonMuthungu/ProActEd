@@ -1,6 +1,7 @@
 # academia_app/management/commands/add_schools.py
-from academia_app.models import School
 from django.core.management.base import BaseCommand
+
+from academia_app.models import School
 
 
 class Command(BaseCommand):

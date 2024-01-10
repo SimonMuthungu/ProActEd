@@ -2,6 +2,7 @@
 # this will help know how predictable random generation can be
 
 import pandas as pd
+
 data_source = r'C:\Users\Simon\proacted\ProActEd\AIacademia\python_scripts\trainwith_100000.xlsx'
 
 # reading from excel and making it a df
