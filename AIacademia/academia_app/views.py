@@ -69,7 +69,7 @@ def get_courses(request, school_id):
         return JsonResponse({"error": "Not authorized"}, status=403)
 from sre_constants import BRANCH
 from telnetlib import LOGOUT
-from academia_app.models import Department
+# from academia_app.models import Department
 # from django.http import git BRANCH(  # Import JsonResponse for AJAX responses
 #     HttpResponse, JsonResponse)
 from django.shortcuts import render, redirect
