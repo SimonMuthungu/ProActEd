@@ -12,7 +12,7 @@ This project will monitor students' academic progress and use machine learning t
 ## Introduction
 
 This project is designed to monitor campus students' academic progress and use machine learning to calculate the probability of the students to drop out of campus. Embedded in the system there is a course recommendation section that takes a student's academic interest and the subjects they did in high school and use AI to recommend a list of courses suitable for the student.
-This will help universities identify students who need help hence allowing the institutions to intervene where necessary.
+This will help universities identify students who need help hence allowing the institutions to intervene where necessary. 
 The course recommendation section in the project will help guide students who are joining university or those who wish to change their current courses to pick a course based on their interests and therefore reduce their likelihood of dropping out of the course.
 
 ## Features
