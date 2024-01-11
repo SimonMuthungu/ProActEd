@@ -12,8 +12,8 @@
     {% for course in courses %}
       <li class="course-item">
         <a href="{% url 'course_detail' course.pk %}">
-          <h3>{{ course.title }}</h3>
-          <p>{{ course.description|truncatechars:150 }}</p>
+          <h3>Here are courses we found for you:</h3>
+          <h4>{{ course.title }}</h4>
         </a>
       </li>
     {% endfor %}

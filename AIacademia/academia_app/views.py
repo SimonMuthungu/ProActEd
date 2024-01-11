@@ -1,7 +1,13 @@
+import sys
+sys.path.append(r'C:\Users\Simon\proacted\AIacademia') 
+
+
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect, render
+from python_scripts.recommender_clustering_pooling import load_model
+
 
 from .models import Course, School  # Import Course and School models
 
@@ -205,19 +211,19 @@ def signout(request):
     return redirect("intervention")
 
 
-# loading the model and generating output
-import joblib
+# loading the script and generating output
 
 def recommend_courses(request):
     if request.method == 'POST':
-        # Get selected course IDs from checkboxes
-        selected_course_ids = [int(id) for id in request.POST.getlist('course_checkbox')]
+        # Getting selected subjects with name
+        user_subjects_done = request.POST.getlist('subjects[]')
 
-        # Load the model from the joblib file
-        model = joblib.load('recommender_model.joblib')
+        # Getting values from the interests field
+        user_interests = request.POST.get('interests[]')
 
-        # Get recommendations based on selected courses
-        recommendations = model.recommend_courses(selected_course_ids)  # Replace with your model's recommendation method
+        # Load the model and get the output
+        print("\nBeginning to run the recommender script")
+        recommendations = load_model(user_subjects_done, user_interests)
 
         # Pass recommendations to the template
         context = {'recommendations': recommendations}

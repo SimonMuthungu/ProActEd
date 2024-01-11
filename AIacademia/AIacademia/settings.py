@@ -16,6 +16,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '<71NDC/D`7$:f[B99<W|D~WHoKOJAWnLEOSZ\zuGPFO_B%D6kd'
 
