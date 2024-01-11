@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recommended Courses</title>
+  <link rel="stylesheet" href="{% static 'css/recommended_courses.css' %}">
+</head>
+<body>
+  <h1>Recommended Courses for You</h1>
+  <ul class="courses-list"> 
+    {% for course in courses %}
+      <li class="course-item">
+        <a href="{% url 'course_detail' course.pk %}">
+          <h3>{{ course.title }}</h3>
+          <p>{{ course.description|truncatechars:150 }}</p>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

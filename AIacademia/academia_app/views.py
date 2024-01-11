@@ -203,3 +203,22 @@ def signout(request):
     logout(request)
     messages.success(request, "Logged out successfully!")
     return redirect("intervention")
+
+
+# loading the model and generating output
+import joblib
+
+def recommend_courses(request):
+    if request.method == 'POST':
+        # Get selected course IDs from checkboxes
+        selected_course_ids = [int(id) for id in request.POST.getlist('course_checkbox')]
+
+        # Load the model from the joblib file
+        model = joblib.load('recommender_model.joblib')
+
+        # Get recommendations based on selected courses
+        recommendations = model.recommend_courses(selected_course_ids)  # Replace with your model's recommendation method
+
+        # Pass recommendations to the template
+        context = {'recommendations': recommendations}
+        return render(request, 'recommended_courses.html', context)
