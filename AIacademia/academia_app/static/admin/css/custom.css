@@ -1,0 +1,28 @@
+body {
+    background-color: #0f203f;
+    color: #ffffff;
+}
+#header {
+    background-color: #020225;
+    color: #FFDB58;
+}
+.custom-footer {
+    background-color: #020225;
+    color: #FFDB58;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.footer-content {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .custom-footer {
+        font-size: 12px;
+    }
+}
+

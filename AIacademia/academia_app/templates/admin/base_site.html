@@ -1,0 +1,41 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="{% static 'admin/css/custom.css' %}" />
+{% endblock %}
+
+{% block branding %}
+<div id="site-name">
+    {% if request.user.is_superuser %}
+    <a href="{% url 'admin:index' %}">Super Admin</a>
+    {% else %}
+    <a href="{% url 'admin:index' %}">Staff</a>
+    {% endif %}
+</div>
+{% if user.is_anonymous %}
+  {% include "admin/color_theme_toggle.html" %}
+{% endif %}
+{% endblock %}
+
+{% block user-tools %}
+    {% if has_permission %}
+    <ul id="user-tools">
+        <li>
+            Welcome, {{ request.user.get_full_name|default:request.user.username }}.
+        </li>
+    </ul>
+    {% endif %}
+{% endblock %}
+
+
+{% block nav-global %}{% endblock %}
+
+{% block footer %}
+<div class="custom-footer">
+    <div class="footer-content">
+        <p>© 2024 AIacademia Management System. All rights reserved.</p>
+        <!-- Add additional footer elements here -->
+    </div>
+</div>
+{% endblock %}

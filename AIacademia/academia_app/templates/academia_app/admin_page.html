@@ -13,7 +13,7 @@
 <body>
     <div class="navigation-menu">
         <h1>Welcome, Admin!</h1>
-        <a class= logout>Logout</a>
+        <a href="login">Logout</a>
     </div>
     <div class="search-student">
         <form action="search_student_endpoint"> <!-- Replace 'search_student_endpoint' with the actual endpoint for searching -->
@@ -23,14 +23,14 @@
         </form>
     </div>
     <div class="content">
-        {% for school in schools %}
+        {% for school in school_data %}
             <div class="school-grid">
                 <h2>{{ school.name }}</h2>
                 <div class="departments-container">
                     <select class="department-select" data-school="{{ school.name }}" onchange="updateCourses(this)">
                         <option value="select">Select Department</option>
                         {% for department in school.departments %}
-                            <option value="{{ department.id }}">{{ department.name }}</option>
+                            <option value="{{ department.id }}">{{ department }}</option>
                         {% endfor %}
                     </select>
                     <select class="course-select" style="display:none;">

@@ -6,74 +6,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Page</title>
-
     <link rel="stylesheet" type="text/css" href="{% static 'css/student_style.css' %}">
 
+    <!-- Additional internal styles can go here -->
+    <style>
+        /* Styles for the sidebar navigation */
+        .sidebar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #156;
+        }
 
+        .sidebar ul li {
+            display: block;
+            margin-bottom: 35px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: blue;
+            padding: 15px 20px;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #686;
+        }
+
+        /* Additional styles can go here */
+    </style>
 </head>
 <body>
-    <div class="navigation-menu">
+    <div>
         <h1>Welcome, Student!</h1>
-        <a class= logout>Logout</a>
-    </div>
-    <div class="search-student">
-        <h1>The student stuff goes here, really no need for 50 graphs</h1>
+        <a href="{% url 'logout' %}" class="logout">Logout</a> <!-- Ensure the logout URL is correctly set -->
     </div>
 
-<div class="content">
-    <div class="school-grid">
-        {% for school in school_data %}
-            <div class="content-item">
-                <a href="#{{ school.name }}" class="school-button">{{ school.name }}</a>
-                <div id="{{ school.name }}" class="departments-container">
+    <div class="sidebar">
+        <ul>
+            <li><a href="{% url 'course_recommendation_page' %}">Course Recommendation</a></li>
+            <li><a href="{% url 'intervention_page' %}">Intervention</a></li>
+            <!-- Additional sidebar items can go here -->
+        </ul>
+    </div>
 
-                    <div class="hover-container">
-                    <select>
-                       
+    <div class="content">
+        <!-- Content for school and department display -->
+        <div class="school-grid">
+            {% for school in school_data %}
+                <div class="content-item">
+                    <a href="#{{ school.name }}" class="school-button">{{ school.name }}</a>
+                    <div id="{{ school.name }}" class="departments-container">
+                        <!-- Department and course selection -->
+                        <div class="hover-container">
+                            <select>
                                 {% for department in school.departments %}
-                                
-                                    <option value="option1">{{ department }}</option>
+                                    <option value="{{ department }}">{{ department }}</option>
+                                    <!-- Course options based on department -->
                                     {% if department == 'computer science' %}
-                                    <optgroup class="options" label="program">
-                                        {% for course in school.cs %}
-                                        <option value="option3-1">{{ course }}</option>
-                                        {% endfor %}
-                                      </optgroup>
+                                        <optgroup label="program">
+                                            {% for course in school.cs %}
+                                                <option value="{{ course }}">{{ course }}</option>
+                                            {% endfor %}
+                                        </optgroup>
                                     {% else %}
-                                    <optgroup class="options" label="program">
-                                        {% for course in school.IT %}
-                                        <option value="option3-1">{{ course }}</option>
-
-                                        {% endfor %}
-                                      </optgroup>
-                                      {% endif %}
-                                
+                                        <optgroup label="program">
+                                            {% for course in school.IT %}
+                                                <option value="{{ course }}">{{ course }}</option>
+                                            {% endfor %}
+                                        </optgroup>
+                                    {% endif %}
                                 {% endfor %}
-                                
-                        
-                        </select>
+                            </select>
+                        </div>                        
                     </div>
-                        
                 </div>
-            </div>
-        {% endfor %}
-    </div>
-</div>       
-
-
-<footer class="footer">
-    <div class="footer-content">
-        <div class="contact-info">
-            <h2>Contact Us</h2>
-            <p>Email: info@proacted.com</p>
-            <p>Phone: +254 (7) 437-20033</p>
+            {% endfor %}
         </div>
-    </div>
+    </div>       
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>Email: info@proacted.com</p>
+                <p>Phone: +254 (7) 437-20033</p>
+            </div>
+        </div>
         <div class="copyright">
             <p>&copy; 2023 ProActEd; University of Maseno. All Rights Reserved.</p>
         </div>
-    </div>
-</footer>
+    </footer>
 
 </body>
 </html>
