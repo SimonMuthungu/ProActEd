@@ -18,11 +18,38 @@ body {
     max-width: 1140px;
     margin: 0 auto;
 }
+.custom-logo {
+    height: auto;  /*height automatically */
+    width: auto;   /*width automatically */
+    max-height: 55px; /* Maximum height of the logo */
+    transform: scale(1.2); /* Scale the logo up */
+    vertical-align: middle; /* Align vertically */
+}
+.header-texts{
+    margin-bottom: 2px;
+    margin-left: 5px;
+}
 
-/* Responsive design adjustments */
+#site-name{
+    display: flex;
+    align-items: flex-end;
+    justify-content: start;
+    height: 100%;
+}
+
+.welcome-msg {
+    margin-bottom: 5px;
+}
+.user-tools{
+    margin-bottom: 5px;
+}
+
 @media (max-width: 768px) {
     .custom-footer {
         font-size: 12px;
     }
+    .custom-logo {
+        transform: scale(1);
+    }    
 }
 

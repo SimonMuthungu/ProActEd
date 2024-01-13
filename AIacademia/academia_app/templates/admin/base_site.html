@@ -7,11 +7,16 @@
 
 {% block branding %}
 <div id="site-name">
+    <img src="{% static 'academia_app/logo.png' %}" alt="proacted_Logo" class="custom-logo">
+    {% comment %} this was used to test if the logged in account is for a super admin or not  {% endcomment %}
+    {% comment %}<p>Is superuser: {{ request.user.is_superuser }}</p>{% endcomment %}
+    <div class="header-texts">
     {% if request.user.is_superuser %}
     <a href="{% url 'admin:index' %}">Super Admin</a>
     {% else %}
     <a href="{% url 'admin:index' %}">Staff</a>
     {% endif %}
+    </div>
 </div>
 {% if user.is_anonymous %}
   {% include "admin/color_theme_toggle.html" %}
