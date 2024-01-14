@@ -24,7 +24,6 @@ def login_view(request):
                 # User is not active
                 return render(request, 'academia_app/login.html', {'error': 'Account is inactive.'})
         else:
-            # Authentication failed
             return render(request, 'academia_app/login.html', {'error': 'Invalid username or password.'})
 
     return render(request, 'academia_app/login.html')
@@ -36,11 +35,11 @@ def dashboard(request):
     if request.user.is_superuser or request.user.is_staff:
         return redirect('/admin/')  # Superadmin and Staff to Django admin
     else:
-        return render(request, "academia_app/student_page.html")  # Students to student page
+        return redirect('student_page')  # Students to student page
 
 @login_required
 def student_page(request):
-    if request.user.groups.filter(name='Student').exists():
+    if request.user.groups.filter(name='Student Users').exists():
         return render(request, "academia_app/student_page.html")
     else:
         if request.user.is_superuser or request.user.is_staff:

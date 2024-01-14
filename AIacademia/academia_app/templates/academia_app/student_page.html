@@ -39,13 +39,13 @@
 <body>
     <div>
         <h1>Welcome, Student!</h1>
-        <a href="{% url 'logout' %}" class="logout">Logout</a> <!-- Ensure the logout URL is correctly set -->
+        <a href="" class="logout">Logout</a> <!-- Ensure the logout URL is correctly set -->
     </div>
 
     <div class="sidebar">
         <ul>
-            <li><a href="{% url 'course_recommendation_page' %}">Course Recommendation</a></li>
-            <li><a href="{% url 'intervention_page' %}">Intervention</a></li>
+            <li><a href="">Course Recommendation</a></li>
+            <li><a href="">Intervention</a></li>
             <!-- Additional sidebar items can go here -->
         </ul>
     </div>
@@ -78,7 +78,7 @@
                                     {% endif %}
                                 {% endfor %}
                             </select>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
             {% endfor %}
