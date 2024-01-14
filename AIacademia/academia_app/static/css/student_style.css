@@ -2,7 +2,7 @@
  .navigation-menu {
     position: fixed;
     top: 0;
-    left: 80%'   7 73fv3b7b47' [h];
+    left: 80%;
     right: 0;
     background-color: #007bff;
     color: #fff;
@@ -10,7 +10,7 @@
     margin-left: 100px;
     text-align: right;
     margin-bottom: 20px;
-    /* z-index: 10; */
+    
 }
 .navigation-menu div{
     margin-top: 100px;
@@ -80,11 +80,12 @@
     text-decoration: none;
 }
 
-/* Styles for the footer */
+
 .footer {
     background-color: #333;
-    color: #fff;
-    padding: 0;
+    padding-bottom: 10px;
+    text-align: center;
+    padding: 20px;
     text-align: center;
 }
 
@@ -165,4 +166,36 @@
    
     
 }
-/* Add more specific styles for your content as needed */
+
+body{
+    margin-bottom: 1000px;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #156;
+}
+
+.sidebar ul li {
+    display: block;
+    margin-bottom: 35px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: blue;
+    padding: 15px 20px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #686;
+}
+
