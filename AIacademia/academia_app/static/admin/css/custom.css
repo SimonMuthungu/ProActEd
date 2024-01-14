@@ -2,10 +2,16 @@ body {
     background-color: #0f203f;
     color: #ffffff;
 }
+
 #header {
     background-color: #020225;
     color: #FFDB58;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px;
 }
+
 .custom-footer {
     background-color: #020225;
     color: #FFDB58;
@@ -18,30 +24,57 @@ body {
     max-width: 1140px;
     margin: 0 auto;
 }
+
 .custom-logo {
-    height: auto;  /*height automatically */
-    width: auto;   /*width automatically */
-    max-height: 55px; /* Maximum height of the logo */
-    transform: scale(1.2); /* Scale the logo up */
-    vertical-align: middle; /* Align vertically */
+    height: auto;
+    width: auto;
+    max-height: 55px;
+    transform: scale(1.2);
+    vertical-align: middle;
 }
-.header-texts{
-    margin-bottom: 2px;
+
+.header-texts {
+    margin-bottom: 0px;
     margin-left: 5px;
 }
 
-#site-name{
+#site-name {
     display: flex;
     align-items: flex-end;
     justify-content: start;
-    height: 100%;
 }
 
-.welcome-msg {
-    margin-bottom: 5px;
+.header-right-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
-.user-tools{
-    margin-bottom: 5px;
+
+.custom-welcome-message {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #FFDB58;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle {
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.theme-toggle img, .theme-toggle svg {
+    width: 24px;
+    filter: invert(75%) sepia(95%) saturate(3000%) hue-rotate(20deg) brightness(100%) contrast(101%);
+    transition: filter 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -50,6 +83,5 @@ body {
     }
     .custom-logo {
         transform: scale(1);
-    }    
+    }
 }
-

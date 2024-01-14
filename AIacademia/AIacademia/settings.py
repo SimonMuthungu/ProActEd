@@ -26,8 +26,8 @@ ALLOWED_HOSTS = ['testserver', '127.0.0.1']
 
 # Application definition
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'academia_app.apps.AcademiaAppConfig',
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
