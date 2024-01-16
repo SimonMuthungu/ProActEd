@@ -12,14 +12,35 @@
 </head>
 <body>
     <div>
-        <h1>Welcome, Student!</h1>
-        <a href="C:\Users\user\Desktop\ProActEd\ProActEd\AIacademia\academia_app\templates\academia_app\login.html" class="logout">Logout</a> 
+        <h1 >Welcome, Student!</h1>
+     <a href="{% url 'login' %}">Logout</a>
     </div>
-
+    <form action="/your-name/" method="post">
+        <label for="your_name">Your name: </label>
+        <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+        <input type="submit" value="OK">
+    </form>
+</br>
+</br>
+</br>
+</br>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if form.errors %}
+            <div class="form-errors">
+                <!-- Display form errors here -->
+                {{ form.non_field_errors }}
+                {% for field in form %}
+                    {{ field.errors }}
+                {% endfor %}
+            </div>
+        {% endif %}
+        <button type="submit">Save changes</button>
+    </form>
     
-
     <div class="content">
-        <!-- Content for school and department display -->
+       
         <div class="school-grid">
             {% for school in school_data %}
                 <div class="content-item">
@@ -51,7 +72,14 @@
                 </div>
             {% endfor %}
         </div>
-    </div>       
+    </div>   
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+    <h2> PROGRESS GRAPH </h2>
 
     <footer class="footer">
         <div class="footer-content">

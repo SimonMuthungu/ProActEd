@@ -2,9 +2,19 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect, render
+from django.shortcuts import render, redirect
 
+
+
+
+from .forms import UserProfileForm
+from .models import UserProfile
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from .forms import UserProfileForm
 from .models import Course, School  # Import Course and School models
-
+from django.core.mail import send_mail
 
 def login_view(request):
     if request.method == 'POST':
@@ -66,3 +76,40 @@ def get_courses(request, school_id):
         return JsonResponse(course_list, safe=False)
     else:
         return JsonResponse({"error": "Not authorized"}, status=403)
+def edit_profile(request):
+    try:
+        profile = request.user.userprofile
+    except UserProfile.DoesNotExist:
+        UserProfile.objects.create(user=request.user)
+        profile = request.user.userprofile
+
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, instance=profile)
+        if form.is_valid():
+            form.save()
+            
+            
+            return redirect('profile_view')  # Redirect to a profile view
+    else:
+        form = UserProfileForm(instance=profile)
+
+        if form.is_valid():
+            subject = form.cleaned_data["subject"]
+    message = form.cleaned_data["message"]
+    sender = form.cleaned_data["sender"]
+    cc_myself = form.cleaned_data["cc_myself"]
+
+    recipients = ["info@example.com"]
+    if cc_myself:
+        recipients.append(sender)
+
+    send_mail(subject, message, sender, recipients)
+    return HttpResponseRedirect("/thanks/")
+
+    return render(request, 'Student_Page.html', {'form': form})
+
+def index(request):
+    form = forms()
+    rendered_form = form.render("Student_Page.html")
+    context = {"form": rendered_form}
+    return render(request, "index.html", context)

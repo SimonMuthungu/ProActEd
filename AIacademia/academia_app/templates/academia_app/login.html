@@ -15,26 +15,26 @@
       <form method="post" action="{% url 'login' %}">
         {% csrf_token %}
 
-        <!-- Display error messages -->
+        
         {% if error %}
         <div class="error-message">
           {{ error }}
         </div>
         {% endif %}
 
-        <!-- Username field -->
+        
         <div class="input-group">
           <label for="username">Username</label>
           <input type="text" id="username" name="username" placeholder="Enter your username" required>
         </div>
 
-        <!-- Password field -->
+        
         <div class="input-group">
           <label for="password">Password</label>
           <input type="password" id="password" name="password" placeholder="Enter your password" required>
         </div>
 
-        <!-- Submit button -->
+      
         <div class="input-group">
           <button type="submit">Login</button>
         </div>
