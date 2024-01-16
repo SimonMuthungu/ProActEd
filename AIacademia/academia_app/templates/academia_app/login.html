@@ -10,7 +10,8 @@
 <body>
     <div class="login-box">
       <div class="header" style="background-color: #020225;">
-        <h2>AIacademia</h2>
+        <img src="{% static 'academia_app/logo.png' %}" alt="proacted_Logo" class="custom-logo">
+        <h2 id="thetitle"  >AIacademia</h2>
       </div>
       <form method="post" action="{% url 'login' %}">
         {% csrf_token %}
@@ -24,13 +25,13 @@
 
         <!-- Username field -->
         <div class="input-group">
-          <label for="username">Username</label>
+          <label for="username">Username :</label>
           <input type="text" id="username" name="username" placeholder="Enter your username" required>
         </div>
 
         <!-- Password field -->
         <div class="input-group">
-          <label for="password">Password</label>
+          <label for="password">Password :</label>
           <input type="password" id="password" name="password" placeholder="Enter your password" required>
         </div>
 
