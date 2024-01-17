@@ -7,7 +7,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('academia_app', '0002_alter_adminuserproxy_options_and_more'),
-        ('academia_app', '0003_fieldofinterest_highschoolsubject_courseofinterest'),
+        # ('academia_app', '0003_fieldofinterest_highschoolsubject_courseofinterest'),
     ]
 
     operations = [

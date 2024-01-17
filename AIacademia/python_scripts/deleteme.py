@@ -1,9 +1,6 @@
-from sklearn.feature_extraction.text import TfidfVectorizer
+import logging
 
-corpus = ["your", "list", "of", "text", "documents"]
-vectorizer = TfidfVectorizer()
-vectorizer.fit(corpus)
+logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\logfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
-# Now you can access feature names
-feature_names = vectorizer.get_feature_names_out()
-print(feature_names)
+
+logging.info('Processing request...')
