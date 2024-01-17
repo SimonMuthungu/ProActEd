@@ -217,14 +217,19 @@ def recommend_courses(request):
     if request.method == 'POST':
         # Getting selected subjects with name
         user_subjects_done = request.POST.getlist('subjects[]')
+        user_subjects_done = ' '.join(user_subjects_done).lower() 
+        print(user_subjects_done)
 
         # Getting values from the interests field
-        user_interests = request.POST.get('interests[]')
+        user_interests = request.POST.getlist('interests[]')
+        user_interests = ' '.join(user_interests).lower() 
+        print(user_interests) 
 
         # Load the model and get the output
         print("\nBeginning to run the recommender script")
         recommendations = load_model(user_subjects_done, user_interests)
+        print(recommendations)
 
         # Pass recommendations to the template
         context = {'recommendations': recommendations}
-        return render(request, 'recommended_courses.html', context)
+        return render(request, 'academia_app/recommended_courses.html', context)

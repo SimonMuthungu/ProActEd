@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +9,11 @@
   <link rel="stylesheet" href="{% static 'css/recommended_courses.css' %}">
 </head>
 <body>
-  <h1>Recommended Courses for You</h1>
+  <h1>Recommended Courses for You:</h1>
   <ul class="courses-list"> 
-    {% for course in courses %}
+    {% for course in recommendations %}
       <li class="course-item">
-        <a href="{% url 'course_detail' course.pk %}">
-          <h3>Here are courses we found for you:</h3>
+        <a href="#">
           <h4>{{ course.title }}</h4>
         </a>
       </li>

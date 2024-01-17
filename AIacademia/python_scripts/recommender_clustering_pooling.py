@@ -30,7 +30,7 @@ def load_model(user_interests, activities_enjoyed):
     print('\n\n\n|---------------------------------------------------------------------------------------------|')
     print('|---------------------------------------------------------------------------------------------|')
     print('|                       WELCOME TO PROACTED                                                   |')
-    print('|                       @ PROACTED 1.2 2023                                                   |')
+    print('|                       @ PROACTED 1.3 2023                                                   |')
     print('|---------------------------------------------------------------------------------------------|')
     print('|---------------------------------------------------------------------------------------------|')
     print('|---------------------------------------------------------------------------------------------|\n\n\n')
@@ -39,23 +39,14 @@ def load_model(user_interests, activities_enjoyed):
     # user_interests = input('\nTell us your ambition in life, what would you like to accomplish or become?:\n\n') #to be matched against objectives
     # # user_subjects = input('\nWhich subjects did you excel at in high school?\n\n') #against course pre-requisites
     # activities_enjoyed = input('\ntell us of activities you have enjoyed in the past, eg debating, repairing broken radios,  \nthat might help us know youre interests better:\n\n') #general info & about
-    print("\nTemporarily halted user input, using predefined strings!!\n")
-    amb = "I aspire to make a significant impact in the field of environmental conservation. My dream is to develop innovative solutions to reduce pollution and promote sustainable living practices. I am passionate about researching renewable energy sources and implementing eco-friendly technologies in urban areas to combat climate change and protect natural habitats"
-    act_e = "Throughout high school, I found myself deeply engrossed in activities like debating and public speaking. I enjoyed participating in debate clubs, where I honed my skills in persuasive communication and critical thinking. Additionally, I have a keen interest in technology, particularly in building and programming small electronic devices. This hobby of mine has sparked a curiosity in how technology can be leveraged to solve everyday problems."
-
-    health_amb =  "I am interested in pursuing a career in healthcare, specifically as a nurse. I want to provide care and support to patients in hospitals."
-    act_enj = "I volunteer at local health clinics and enjoy learning about medical sciences. In my leisure time, I read about healthcare advancements and participate in health awareness campaigns."
-
-
-    amb_tech = "My ambition is to delve into the world of artificial intelligence and machine learning. I aim to develop cutting-edge AI solutions that can transform industries."
-    tech_acte = "My ambition is to delve into the world of artificial intelligence and machine learning. I aim to develop cutting-edge AI solutions that can transform industries."
+    
 
 
 
     # getting a bigger user profile from they themselves
-    user_interests = preprocess_text(amb)
+    user_interests = preprocess_text(user_interests)
     # user_subjects = preprocess_text(user_subjects)
-    activities_enjoyed = preprocess_text(act_e) 
+    activities_enjoyed = preprocess_text(activities_enjoyed) 
 
 
 
@@ -63,7 +54,7 @@ def load_model(user_interests, activities_enjoyed):
 
 
     # setting up django environment to interact with django from this script
-    sys.path.append(r'C:\Users\user\Desktop\ProActEd\AIacademia')
+    sys.path.append(r'C:\Users\Simon\proacted\AIacademia') 
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'AIacademia.settings')
     django.setup()
 
@@ -71,25 +62,25 @@ def load_model(user_interests, activities_enjoyed):
     from academia_app.models import Recommender_training_data
 
     all_courses = Recommender_training_data.objects.all()
-    courses_list = [{"Course Name": course.Course_name,
-                    "Course Objectives": preprocess_text(course.Course_objectives),
-                    "Course_general_info_and_about":  preprocess_text(course.Course_general_info_and_about),
-                    "Prerequisites": preprocess_text(course.General_prereuisites)} for course in all_courses]
+    courses_list = [{"Course Name": course.course_name,
+                    "Course Objectives": preprocess_text(course.course_objectives),
+                    "Course_general_info_and_about":  preprocess_text(course.course_general_info_and_about),
+                    "Prerequisites": preprocess_text(course.general_prerequisites)} for course in all_courses]
 
     df = pd.DataFrame(courses_list)
 
     # creating 2 vectorizers for course description and prequisites
     objectives_vectorizer = TfidfVectorizer(stop_words='english')
     generalinfoandabout_vectorizer = TfidfVectorizer(stop_words='english')
-    # prerequisites_vectorizer = TfidfVectorizer(stop_words='english') #use case halted for the moment
+    prerequisites_vectorizer = TfidfVectorizer(stop_words='english') 
     objectives_tfidf_matrix = objectives_vectorizer.fit_transform(df['Course Objectives'])
     generalinfoandabout__tfidf_matrix = generalinfoandabout_vectorizer.fit_transform(df['Course_general_info_and_about'])
-    # prerequisites_tfidf_matrix = prerequisites_vectorizer.fit_transform(df['Prerequisites'])
+    prerequisites_tfidf_matrix = prerequisites_vectorizer.fit_transform(df['Prerequisites'])
 
 
     objectives_feature_names = objectives_vectorizer.get_feature_names_out()
     feature_names_for_generalinfoandabout = generalinfoandabout_vectorizer.get_feature_names_out()
-    # feature_names_for_prerequisites = prerequisites_vectorizer.get_feature_names_out()  #use case halted for the moment
+    feature_names_for_prerequisites = prerequisites_vectorizer.get_feature_names_out()  
 
 
     # Loading Word2Vec model
@@ -155,12 +146,12 @@ def load_model(user_interests, activities_enjoyed):
             kmeans.fit(vectors)
             cluster_labels = kmeans.labels_
 
-        return cluster_labels
+        return cluster_labels,
 
 
     # Apply clustering to vectorized sentences
-    df['Objective Clusters'] = df['Vectorized Objectives'].apply(lambda x: cluster_sentences(x))
-    df['General Info Clusters'] = df['Vectorized General Info'].apply(lambda x: cluster_sentences(x))
+    df['Objective Clusters'] = df['Vectorized Objectives'].apply(lambda x: pd.Series(cluster_sentences(x)))
+    df['General Info Clusters'] = df['Vectorized General Info'].apply(lambda x: pd.Series(cluster_sentences(x)))
     print('Sentences clusterised!\n')
 
 
@@ -187,7 +178,7 @@ def load_model(user_interests, activities_enjoyed):
 
 
 
-    # concatenating the Avg pooled vectors to form one high dimensional vector with all disctinctions captures well
+    # concatenating the Avg pooled vectors to form one high dimensional vector with all disctinctions captured well
     def concatenate_avg_pooled_vectors(vectors, clusters):
         avg_pooled_vectors = avg_pooling(vectors, clusters)
         concatenated_vector = np.concatenate(avg_pooled_vectors) 
@@ -252,13 +243,13 @@ def load_model(user_interests, activities_enjoyed):
 
     # vectorizing student input from UI : embedding student input for interests and subjects, this will come from ui input
     vectorized_user_interests = clustered_weighted_vector(user_interests, model, objectives_vectorizer)
-    vectorized_activities_enjoyed = clustered_weighted_vector(activities_enjoyed, model, generalinfoandabout_vectorizer)
+    vectorized_activities_enjoyed = clustered_weighted_vector(activities_enjoyed, model, generalinfoandabout_vectorizer) 
     print('User input vectorization... Done!\n')
 
 
     # Example cosine similarity calculation
     def calculate_similarity(user_vector, course_vectors):
-        return [cosine_similarity([user_vector], [course_vector])[0][0] for course_vector in course_vectors]
+        return [cosine_similarity(np.array([user_vector]), np.array(course_vectors))[0][0] for course_vector in course_vectors]
 
 
     Userambition_courseojective_similarity = calculate_similarity(vectorized_user_interests, df['Concatenated Avg Pooled Objective Vectors'].tolist()) 
@@ -303,3 +294,17 @@ def load_model(user_interests, activities_enjoyed):
     # print('\n\n|----------------------THANKS, THIS IS PRO-ACT-ED 1.2-------------------------------------------------|\n\n\n')
         
     return top_5_courses
+
+
+
+
+
+#this is for testing the script above, during production, it should hashed out
+
+
+# user_int = "I aspire to make a significant impact in the field of environmental conservation. My dream is to develop innovative solutions to reduce pollution and promote sustainable living practices. I am passionate about researching renewable energy sources and implementing eco-friendly technologies in urban areas to combat climate change and protect natural habitats"
+
+# activities_enjyd = act_e = "Throughout high school, I found myself deeply engrossed in activities like debating and public speaking. I enjoyed participating in debate clubs, where I honed my skills in persuasive communication and critical thinking. Additionally, I have a keen interest in technology, particularly in building and programming small electronic devices. This hobby of mine has sparked a curiosity in how technology can be leveraged to solve everyday problems."
+
+
+# print(load_model(user_int, activities_enjyd))
