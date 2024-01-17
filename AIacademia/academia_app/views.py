@@ -7,6 +7,14 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect, render
 from python_scripts.recommender_clustering_pooling import load_model
+from .forms import UserProfileForm
+from .models import UserProfile
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from .forms import UserProfileForm
+from .models import Course, School  # Import Course and School models
+from django.core.mail import send_mail
 
 
 from .models import Course, School  # Import Course and School models
@@ -210,22 +218,8 @@ def signout(request):
     messages.success(request, "Logged out successfully!")
     return redirect("intervention")
 
-from django.shortcuts import render, redirect
-
-
-
-
-from .forms import UserProfileForm
-from .models import UserProfile
-from django.http import HttpResponseRedirect
-from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
-from .forms import UserProfileForm
-from .models import Course, School  # Import Course and School models
-from django.core.mail import send_mail
 
 # loading the script and generating output
-
 def recommend_courses(request):
     if request.method == 'POST':
         # Getting selected subjects with name
@@ -240,11 +234,11 @@ def recommend_courses(request):
         # Load the model and get the output
         print("\nBeginning to run the recommender script")
         recommendations = load_model(user_subjects_done, user_interests)
-        print(recommendations)
+        print(f"here are the recommendations: {recommendations}")
 
         # Pass recommendations to the template
         context = {'recommendations': recommendations}
-        return render(request, 'academia_app/recommended_courses.html', context)
+    return render(request, 'academia_app/recommended_courses.html', context)
         
         # username = request.POST.get('username')
         # password = request.POST.get('password')
