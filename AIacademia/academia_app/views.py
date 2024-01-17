@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 import sys
-sys.path.append(r'C:\Users\Simon\proacted\AIacademia') 
+# sys.path.append(r'C:\Users\Simon\proacted\AIacademia') 
 
 
-=======
->>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect, render
-<<<<<<< HEAD
 from python_scripts.recommender_clustering_pooling import load_model
 
 
@@ -214,7 +210,6 @@ def signout(request):
     messages.success(request, "Logged out successfully!")
     return redirect("intervention")
 
-=======
 from django.shortcuts import render, redirect
 
 
@@ -228,37 +223,15 @@ from django.contrib.auth.decorators import login_required
 from .forms import UserProfileForm
 from .models import Course, School  # Import Course and School models
 from django.core.mail import send_mail
->>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
 
 # loading the script and generating output
 
 def recommend_courses(request):
     if request.method == 'POST':
-<<<<<<< HEAD
         # Getting selected subjects with name
         user_subjects_done = request.POST.getlist('subjects[]')
         user_subjects_done = ' '.join(user_subjects_done).lower() 
         print(user_subjects_done)
-=======
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-        user = authenticate(request, username=username, password=password)
-        
-        if user is not None:
-            if user.is_active:
-                login(request, user)
-                # Redirect based on user type
-                if user.is_superuser or user.is_staff:
-                    return redirect('/admin/')
-                else:
-                    return redirect('student_page')
-            else:
-                # User is not active
-                return render(request, 'academia_app/login.html', {'error': 'Account is inactive.'})
-        else:
-            return render(request, 'academia_app/login.html', {'error': 'Invalid username or password.'})
->>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
-
         # Getting values from the interests field
         user_interests = request.POST.getlist('interests[]')
         user_interests = ' '.join(user_interests).lower() 
@@ -269,11 +242,31 @@ def recommend_courses(request):
         recommendations = load_model(user_subjects_done, user_interests)
         print(recommendations)
 
-<<<<<<< HEAD
         # Pass recommendations to the template
         context = {'recommendations': recommendations}
         return render(request, 'academia_app/recommended_courses.html', context)
-=======
+        
+        # username = request.POST.get('username')
+        # password = request.POST.get('password')
+        # user = authenticate(request, username=username, password=password)
+        
+        # if user is not None:
+        #     if user.is_active:
+        #         login(request, user)
+        #         # Redirect based on user type
+        #         if user.is_superuser or user.is_staff:
+        #             return redirect('/admin/')
+        #         else:
+        #             return redirect('student_page')
+        #     else:
+        #         # User is not active
+        #         return render(request, 'academia_app/login.html', {'error': 'Account is inactive.'})
+        # else:
+        #     return render(request, 'academia_app/login.html', {'error': 'Invalid username or password.'})
+
+        
+
+       
 @login_required
 def dashboard(request):
     # Redirect users based on their type
@@ -348,4 +341,3 @@ def index(request):
     rendered_form = form.render("Student_Page.html")
     context = {"form": rendered_form}
     return render(request, "index.html", context)
->>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39

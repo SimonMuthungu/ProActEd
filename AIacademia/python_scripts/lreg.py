@@ -1,14 +1,14 @@
 import tensorflow as tf
 import joblib
 import pandas as pd
-#from tensorflow.keras.callbacks import EarlyStopping
+from tensorflow.keras.callbacks import EarlyStopping
 
 
 
-dummy_data_path = r'C:\Users\Simon\proacted\ProActEd\AIacademia\python_scripts\trainwith_100000.xlsx'
+path_totrainingdata = r'C:\Users\Simon\proacted\AIacademia\data_files\trainwith_100000.xlsx'
 
 # Load data from Excel into a DataFrame
-training_data = pd.read_excel(dummy_data_path)
+training_data = pd.read_excel(path_totrainingdata)
 
 X = training_data[['Lessons_Attended', 'Aggregate points']]
 y = training_data['passed']
@@ -66,4 +66,4 @@ test_loss, test_accuracy = model.evaluate(test_dataset)
 print(f'Test Accuracy: {test_accuracy}')
 
 # Save the trained model using joblib
-joblib.dump(model, r'C:\Users\Simon\proacted\ProActEd\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
+joblib.dump(model, r'C:\Users\Simon\proacted\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
