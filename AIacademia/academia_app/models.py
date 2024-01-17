@@ -29,12 +29,12 @@ class CustomUserManager(BaseUserManager):
 
         return self.create_user(username, password, **extra_fields)
 
-
+# Intermediate model for BaseUser-Group many-to-many relationship
 class BaseUserGroup(models.Model):
     base_user = models.ForeignKey('BaseUser', on_delete=models.CASCADE)
     group = models.ForeignKey(Group, on_delete=models.CASCADE)
 
-
+# Base User Model
 class BaseUser(AbstractUser):
     objects = CustomUserManager()
     groups = models.ManyToManyField(Group, through='BaseUserGroup')
@@ -155,7 +155,7 @@ class CourseOfInterest(models.Model):
     fields_of_interest = models.ManyToManyField(FieldOfInterest, related_name='courses_of_interest')
     required_high_school_subjects = models.ManyToManyField(HighSchoolSubject, related_name='required_for_courses')
 
-
+# Course Data for Recommender Model
 class Recommender_training_data(models.Model):
     course_name = models.CharField(max_length=100)
     course_objectives = models.CharField(max_length=100)

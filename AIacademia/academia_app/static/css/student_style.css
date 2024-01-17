@@ -13,8 +13,17 @@ h2{
 
 .footer {
     background-color: #333;
+<<<<<<< HEAD
+    color: #fff;
+<<<<<<< HEAD
+    padding: 0;
+=======
+    padding: 20;
+>>>>>>> a8aafc1f4e0b7897d2500120900e0786f14f61be
+=======
     padding-top: 20px; 
     padding-bottom: 10px; 
+>>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
     text-align: center;
     color: white; 
     font-size: 14px;
@@ -58,3 +67,58 @@ h2{
 }
 
 
+<<<<<<< HEAD
+.hover-container:hover .options {
+    display: block;
+}
+
+.sidebar {
+<<<<<<< HEAD
+    height: 100%;
+    background-color: #f1f1f1;
+=======
+    height: 20%;
+    /* background-color: #12dfea; */
+>>>>>>> a8aafc1f4e0b7897d2500120900e0786f14f61be
+    width: 250px;
+    padding-top: 20px;
+    position :fixed;
+    top:0;
+<<<<<<< HEAD
+=======
+    bottom: 200px;
+>>>>>>> a8aafc1f4e0b7897d2500120900e0786f14f61be
+    left:0;
+     z-index: 100;
+}
+.sidebar ul{
+    list-style-type: none;
+    padding:0;
+    
+}
+<<<<<<< HEAD
+.sidebar ul li{
+    color: pink;
+    padding:8px 16px;
+    
+}
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+=======
+.sidebar ul li {
+    margin-bottom: 10px;
+    
+}
+    
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: rgb(57, 187, 242);
+>>>>>>> a8aafc1f4e0b7897d2500120900e0786f14f61be
+   
+    
+}
+/* Add more specific styles for your content as needed */
+=======
+>>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
