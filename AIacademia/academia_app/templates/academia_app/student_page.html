@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Page</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="{% static 'css/student_style.css' %}">
 
     <!-- Additional internal styles can go here -->
@@ -103,9 +104,14 @@
 
     <link rel="stylesheet" type="text/css" href="static\css\student_style.css"/>
     
+=======
+    <link rel="stylesheet" type="text/css" href="{% static 'css/student_style.css' %}">
+>>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
 
+   
 </head>
 <body>
+<<<<<<< HEAD
     {% comment %} <div>
         <h1 text-align= "center:" >Welcome, Student!</h1>
         <a class= logout>Logout</a>
@@ -155,26 +161,96 @@
                     </div>
                         
                 </div>
+=======
+    <div>
+        <h1 >Welcome, Student!</h1>
+     <a href="{% url 'login' %}">Logout</a>
+    </div>
+    <form action="/your-name/" method="post">
+        <label for="your_name">Your name: </label>
+        <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+        <input type="submit" value="OK">
+    </form>
+</br>
+</br>
+</br>
+</br>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if form.errors %}
+            <div class="form-errors">
+                <!-- Display form errors here -->
+                {{ form.non_field_errors }}
+                {% for field in form %}
+                    {{ field.errors }}
+                {% endfor %}
             </div>
-        {% endfor %}
-    </div>
-</div>       
-
-
-<footer class="footer">
-    <div class="footer-content">
-        <div class="contact-info">
-            <h2>Contact Us</h2>
-            <p>Email: info@proacted.com</p>
-            <p>Phone: +254 (7) 437-20033</p>
+        {% endif %}
+        <button type="submit">Save changes</button>
+    </form>
+    
+    <div class="content">
+       
+        <div class="school-grid">
+            {% for school in school_data %}
+                <div class="content-item">
+                    <a href="#{{ school.name }}" class="school-button">{{ school.name }}</a>
+                    <div id="{{ school.name }}" class="departments-container">
+                        <!-- Department and course selection -->
+                        <div class="hover-container">
+                            <select>
+                                {% for department in school.departments %}
+                                    <option value="{{ department }}">{{ department }}</option>
+                                    <!-- Course options based on department -->
+                                    {% if department == 'computer science' %}
+                                        <optgroup label="program">
+                                            {% for course in school.cs %}
+                                                <option value="{{ course }}">{{ course }}</option>
+                                            {% endfor %}
+                                        </optgroup>
+                                    {% else %}
+                                        <optgroup label="program">
+                                            {% for course in school.IT %}
+                                                <option value="{{ course }}">{{ course }}</option>
+                                            {% endfor %}
+                                        </optgroup>
+                                    {% endif %}
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
-    </div>
+    </div>   
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+    <h2> PROGRESS GRAPH </h2>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>Email: info@proacted.com</p>
+                <p>Phone: +254 (7) 437-20033</p>
+>>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
+            </div>
+        </div>
         <div class="copyright">
             <p>&copy; 2023 ProActEd; University of Maseno. All Rights Reserved.</p>
         </div>
+<<<<<<< HEAD
     </div>
 </footer>
 >>>>>>> a8aafc1f4e0b7897d2500120900e0786f14f61be
+=======
+    </footer>
+>>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
 
 </body>
 </html>

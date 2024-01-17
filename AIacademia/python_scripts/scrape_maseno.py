@@ -2,7 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
-<<<<<<< HEAD
 import requests
 
 # Set the user agent to mimic a web browser
@@ -73,7 +72,6 @@ print(soup.prettify())
 
 # # Save the data to an Excel file
 # df.to_excel(r'AIacademia/python_scripts/maseno_programs.xlsx', index=False)
-=======
 # Send an HTTP GET request to the URL
 url = "https://www.maseno.ac.ke"
 response = requests.get(url)
@@ -108,4 +106,3 @@ for title in school_titles:
 # Create a DataFrame and save it to an Excel file
 df = pd.DataFrame({'School Titles': titles_list, 'Courses': courses_list})
 df.to_excel('recommender_system_training_dataset1.xlsx', index=False)
->>>>>>> a8aafc1f4e0b7897d2500120900e0786f14f61be

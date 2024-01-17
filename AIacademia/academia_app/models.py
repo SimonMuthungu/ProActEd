@@ -1,5 +1,11 @@
 from django.contrib.auth.models import AbstractUser, BaseUserManager, Group
+from django.contrib.auth.models import User
 from django.db import models
+from django.conf import settings
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from django.contrib.auth.models import Permission
+
 
 
 # Custom User Manager
@@ -135,15 +141,15 @@ class Performance(models.Model):
     aggregate_points = models.DecimalField(max_digits=4, decimal_places=2)
     agp = models.CharField(max_length=10)
 
-# Field of Interest Model
+
 class FieldOfInterest(models.Model):
     name = models.CharField(max_length=100)
 
-# High School Subject Model
+
 class HighSchoolSubject(models.Model):
     name = models.CharField(max_length=100)
 
-# Course of Interest Model
+
 class CourseOfInterest(models.Model):
     name = models.CharField(max_length=100)
     fields_of_interest = models.ManyToManyField(FieldOfInterest, related_name='courses_of_interest')
@@ -159,3 +165,26 @@ class Recommender_training_data(models.Model):
 
     def __str__(self):
         return self.course_name
+    
+class UserProfile(models.Model):
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    bio = models.TextField(max_length=500, blank=True)
+    full_name = models.CharField(max_length=100, blank=True)
+    phone_number = models.CharField(max_length=20, blank=True)
+    parents_phone_number = models.CharField(max_length=20, blank=True)
+
+    def __str__(self):
+        return f'Profile of {self.user.username}'
+    
+class CustomUser(AbstractUser):
+    # Add any additional fields for your user here
+    # For example, a phone number field
+    phone_number = models.CharField(max_length=15, blank=True)
+
+    user_permissions = models.ManyToManyField(
+        Permission,
+        related_name="customuser_set"  # <-- Add this line
+    )
+
+    def __str__(self):
+        return self.username

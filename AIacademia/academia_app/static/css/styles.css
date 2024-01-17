@@ -46,12 +46,17 @@ body {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     .sidebar {
         background-color: #f1f1f1;
 =======
     /* .sidebar {
         background-color: #c41919;
 >>>>>>> a8aafc1f4e0b7897d2500120900e0786f14f61be
+=======
+    .sidebar {
+        background-color: #f1f1f1;
+>>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
         float: center;
         width: 20%;
         padding: 20px;
@@ -70,10 +75,14 @@ body {
         text-decoration: none;
         color: #333;
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 =======
     } */
 >>>>>>> a8aafc1f4e0b7897d2500120900e0786f14f61be
+=======
+    }
+>>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
 
     .content {
         float: left;

@@ -12,10 +12,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 from pathlib import Path
-
+from django import forms
+from django.forms.renderers import TemplatesSetting
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '<71NDC/D`7$:f[B99<W|D~WHoKOJAWnLEOSZ\zuGPFO_B%D6kd'
@@ -27,13 +27,13 @@ ALLOWED_HOSTS = ['testserver', '127.0.0.1']
 
 # Application definition
 INSTALLED_APPS = [
+    'academia_app.apps.AcademiaAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'academia_app',
 ]
 
 MIDDLEWARE = [
@@ -102,7 +102,13 @@ STATIC_URL = '/static/'
 
 # Custom user model
 AUTH_USER_MODEL = 'academia_app.BaseUser'
+
+
 LOGIN_REDIRECT_URL = 'dashboard'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+class MyForm(forms.Form):
+    template_name = "Student_Page.html"
+    ...

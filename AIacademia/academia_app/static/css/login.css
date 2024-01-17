@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 /* Updated CSS */
 
+=======
+>>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
 body, html {
     margin: 0;
     padding: 0;
@@ -10,8 +13,32 @@ body, html {
 .header {
     background-color: #020225;
     color: #FFDB58;
+<<<<<<< HEAD
     padding: 10px;
     text-align: center;
+=======
+    display: flex; gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+}
+
+.header h2 {
+    margin-left: 50px;
+    margin-right: auto;
+  }
+
+
+.custom-logo {
+    height: auto;
+    width: auto;
+    max-height: 70px;
+    transform: scale(1.2);
+    vertical-align: middle;
+    align-items: right;
+    margin-right: 20px;
+>>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
 }
 
 .footer {
@@ -22,7 +49,11 @@ body, html {
 }
 
 .login-box {
+<<<<<<< HEAD
     width: 300px;
+=======
+    width: 450px;
+>>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
     margin: 0 auto;
     background-color: #ffffff;
     border-radius: 5px;
@@ -57,9 +88,14 @@ body, html {
     
 }
 
+<<<<<<< HEAD
 /* Input field styles */
 .input-group input {
     width: 70%;
+=======
+.input-group input {
+    width: 50%;
+>>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -68,9 +104,14 @@ body, html {
     text-align: center;
 }
 
+<<<<<<< HEAD
 /* Button styles */
 .input-group button {
     width: 30%;
+=======
+.input-group button {
+    width: 20%;
+>>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
     padding: 10px;
     background-color: #007BFF;
     color: #FFDB58;
@@ -90,4 +131,11 @@ body, html {
     color: #ff0000;
     margin-bottom: 15px;
     text-align: center;
+<<<<<<< HEAD
 }
+=======
+}
+
+
+
+>>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39

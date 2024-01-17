@@ -5,37 +5,42 @@
 <link rel="stylesheet" type="text/css" href="{% static 'admin/css/custom.css' %}" />
 {% endblock %}
 
-{% block branding %}
-<div id="site-name">
-    {% if request.user.is_superuser %}
-    <a href="{% url 'admin:index' %}">Super Admin</a>
-    {% else %}
-    <a href="{% url 'admin:index' %}">Staff</a>
-    {% endif %}
-</div>
-{% if user.is_anonymous %}
-  {% include "admin/color_theme_toggle.html" %}
-{% endif %}
+{% block header %}
+<header id="header">
+    <div id="branding">
+        {% block branding %}
+        <div id="site-name">
+            <img src="{% static 'academia_app/logo.png' %}" alt="proacted_Logo" class="custom-logo">
+            <div class="header-texts">
+                {% if request.user.is_superuser %}
+                <a href="{% url 'admin:index' %}">Super Admin</a>
+                {% else %}
+                <a href="{% url 'admin:index' %}">Staff</a>
+                {% endif %}
+            </div>
+        </div>
+        {% endblock %}
+    </div>
+
+    <div class="header-right-content">
+        {% if not user.is_anonymous %}
+            {% include "admin/color_theme_toggle.html" %}
+        {% endif %}
+
+        <div class="custom-welcome-message">
+            Welcome, {% if request.user.first_name %}{{ request.user.first_name }}{% else %}{{ request.user.username }}{% endif %}
+        </div>
+    </div>
+</header>
 {% endblock %}
 
-{% block user-tools %}
-    {% if has_permission %}
-    <ul id="user-tools">
-        <li>
-            Welcome, {{ request.user.get_full_name|default:request.user.username }}.
-        </li>
-    </ul>
-    {% endif %}
-{% endblock %}
-
-
+{% block user-tools %}{% endblock %}
 {% block nav-global %}{% endblock %}
 
 {% block footer %}
 <div class="custom-footer">
     <div class="footer-content">
         <p>© 2024 AIacademia Management System. All rights reserved.</p>
-        <!-- Add additional footer elements here -->
     </div>
 </div>
 {% endblock %}

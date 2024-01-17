@@ -2,10 +2,23 @@ body {
     background-color: #0f203f;
     color: #ffffff;
 }
+<<<<<<< HEAD
 #header {
     background-color: #020225;
     color: #FFDB58;
 }
+=======
+
+#header {
+    background-color: #020225;
+    color: #FFDB58;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+>>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
 .custom-footer {
     background-color: #020225;
     color: #FFDB58;
@@ -19,10 +32,72 @@ body {
     margin: 0 auto;
 }
 
+<<<<<<< HEAD
 /* Responsive design adjustments */
+=======
+.custom-logo {
+    height: auto;
+    width: auto;
+    max-height: 55px;
+    transform: scale(1.2);
+    vertical-align: middle;
+}
+
+.header-texts {
+    margin-bottom: 0px;
+    margin-left: 5px;
+}
+
+#site-name {
+    display: flex;
+    align-items: flex-end;
+    justify-content: start;
+}
+
+.header-right-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.custom-welcome-message {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #FFDB58;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle {
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.theme-toggle img, .theme-toggle svg {
+    width: 24px;
+    filter: invert(75%) sepia(95%) saturate(3000%) hue-rotate(20deg) brightness(100%) contrast(101%);
+    transition: filter 0.3s ease;
+}
+
+>>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
 @media (max-width: 768px) {
     .custom-footer {
         font-size: 12px;
     }
+<<<<<<< HEAD
 }
 
+=======
+    .custom-logo {
+        transform: scale(1);
+    }
+}
+>>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
