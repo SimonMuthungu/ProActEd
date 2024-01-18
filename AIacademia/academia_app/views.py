@@ -1,3 +1,4 @@
+from django import forms
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
@@ -113,3 +114,8 @@ def index(request):
     rendered_form = form.render("Student_Page.html")
     context = {"form": rendered_form}
     return render(request, "index.html", context)
+def student (request):
+    return render (request, 'Student_Page.html', context ={ 'text': 'Hello world'})
+
+def forms ( request):
+    return render (request, 'forms.html',{})
