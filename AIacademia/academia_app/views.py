@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect, render
 from django.shortcuts import render, redirect
-
+from django.http import HttpResponseRedirect
 
 
 
@@ -108,7 +108,24 @@ def edit_profile(request):
     return HttpResponseRedirect("/thanks/")
 
     return render(request, 'Student_Page.html', {'form': form})
-
+def Profile (request):
+    
+    try:
+        profile = request.user.userprofile
+    except UserProfile.DoesNotExist:
+        UserProfile.objects.create(user=request.user)
+    form = UserProfileForm
+    updated = False
+    if request.method == "POST":
+        form = UserProfileForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/Profile?updated=True')
+        else:
+            form: UserProfileForm
+            if 'updated' in request.GET:
+                updated = True
+    return render (request, 'academia_app/Profile.html', {'form': form, 'updated' : updated})
 def index(request):
     form = forms()
     rendered_form = form.render("Student_Page.html")
@@ -117,5 +134,3 @@ def index(request):
 def student (request):
     return render (request, 'Student_Page.html', context ={ 'text': 'Hello world'})
 
-def forms ( request):
-    return render (request, 'forms.html',{})

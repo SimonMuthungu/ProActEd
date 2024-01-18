@@ -1,0 +1,30 @@
+
+<center  >
+<h1> add venue to database </h1>
+</br>
+
+
+
+
+{% if updated %}
+        {% for message in messages %}
+            <div class="alert {{ message.tags }}">
+                  {{ SUCCESS }}
+            </div>
+        {% endfor %}
+{% else %}
+    <form action ="" method= POST>
+     {% csrf_token %}
+
+     {{ form.as_p }}
+
+        <input type ="submit" value ="update" class="btn btn-secondary" >
+
+    </form>
+{% endif %}
+
+
+
+</center >
+
+
