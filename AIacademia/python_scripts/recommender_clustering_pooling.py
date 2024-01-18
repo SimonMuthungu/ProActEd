@@ -12,14 +12,14 @@ import joblib
 import numpy as np
 import pandas as pd
 from nltk.tokenize import sent_tokenize
-from .prepare_recommender_dataset import preprocess_text
+from prepare_recommender_dataset import preprocess_text
 # from run_recommender_system import weighted_vector # has to work with name == _main_
 from scipy.sparse import hstack
 from sklearn.cluster import KMeans
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\logfile.log',level=logging.DEBUG, format='%(levelname)s - %(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\logfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 
 def load_model(user_interests, activities_enjoyed):
@@ -51,6 +51,7 @@ def load_model(user_interests, activities_enjoyed):
 
 
     print(f'\n\nGive us a moment, as we give you our best...\n\n')
+    logging.info('Processing request...')
 
 
     # setting up django environment to interact with django from this script
@@ -277,7 +278,7 @@ def load_model(user_interests, activities_enjoyed):
     # print(similarity_df.sort_values(by='Combined Similarity', ascending=False))
 
 
-    top_5_indices = combined_total_similarity.argsort()[-5:][::-1]
+    top_5_indices = combined_total_similarity.argsort()[-10:][::-1]
     top_5_courses = df['Course Name'].iloc[top_5_indices].tolist() 
 
 
@@ -302,9 +303,9 @@ def load_model(user_interests, activities_enjoyed):
 #this is for testing the script above, during production, it should hashed out
 
 
-# user_int = "I aspire to make a significant impact in the field of environmental conservation. My dream is to develop innovative solutions to reduce pollution and promote sustainable living practices. I am passionate about researching renewable energy sources and implementing eco-friendly technologies in urban areas to combat climate change and protect natural habitats"
+user_int = "I aspire to make a significant impact in the field of environmental conservation. My dream is to develop innovative solutions to reduce pollution and promote sustainable living practices. I am passionate about researching renewable energy sources and implementing eco-friendly technologies in urban areas to combat climate change and protect natural habitats"
 
-# activities_enjyd = act_e = "Throughout high school, I found myself deeply engrossed in activities like debating and public speaking. I enjoyed participating in debate clubs, where I honed my skills in persuasive communication and critical thinking. Additionally, I have a keen interest in technology, particularly in building and programming small electronic devices. This hobby of mine has sparked a curiosity in how technology can be leveraged to solve everyday problems."
+activities_enjyd = act_e = "Throughout high school, I found myself deeply engrossed in activities like debating and public speaking. I enjoyed participating in debate clubs, where I honed my skills in persuasive communication and critical thinking. Additionally, I have a keen interest in technology, particularly in building and programming small electronic devices. This hobby of mine has sparked a curiosity in how technology can be leveraged to solve everyday problems."
 
 
-# print(load_model(user_int, activities_enjyd))
+print(load_model(user_int, activities_enjyd))
