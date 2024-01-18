@@ -12,24 +12,17 @@
    
 </head>
 <body>
-    <div>
+    
         <h1 >Welcome, Student!</h1>
-     <a href="{% url 'login' %}">Logout</a>
-    </div>
-    <form action="/your-name/" method="post">
-        <label for="your_name">Your name: </label>
-        <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
-        <input type="submit" value="OK">
-    </form>
-    <a href="{% url 'login' %}" class="login-button">Login</a>
-   
+    <nav>
+        <a href="{% url 'login' %}">Logout</a>
         <a  href = "{% url 'addprofile' %}"> Profile </a>
-       
+    </nav>  
 </br>
 </br>
 </br>
 </br>
-    <form method="post">
+    {% comment %} <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         {% if form.errors %}
@@ -43,7 +36,7 @@
         {% endif %}
         <button type="submit">Save changes</button>
     </form>
-    
+     {% endcomment %}
     <div class="content">
        
         <div class="school-grid">
@@ -78,12 +71,7 @@
             {% endfor %}
         </div>
     </div>   
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+
     <h2> PROGRESS GRAPH </h2>
 
 <div class="container">
@@ -94,7 +82,22 @@
         </div>
     </div>
 </div>
-        
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>      
 
 
     <footer class="footer">
