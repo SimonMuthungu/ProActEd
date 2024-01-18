@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect, render
 
-from .models import Course, School  # Import Course and School models
+from .models import Course, School
 
 
 def login_view(request):
