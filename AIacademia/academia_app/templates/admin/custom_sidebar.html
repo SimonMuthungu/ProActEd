@@ -85,9 +85,18 @@
     </div>
 
     <!-- Settings Section -->
-    <div class="sidebar-section">
-        <h3>Settings</h3>
-        <a href="{% url 'admin:password_change' %}">Change Password</a>
-        <a href="{% url 'logout' %}">Logout</a>
-    </div>
+    <!-- Settings Section -->
+<div class="sidebar-section">
+    <h3>Settings</h3>
+    <a href="{% url 'admin:password_change' %}">Change Password</a>
+
+    <!-- Logout Form -->
+    <form action="{% url 'logout' %}" method="post" style="display: inline;">
+        {% csrf_token %}
+        <button type="submit" style="background: none; border: none; padding: 0; margin: 0; text-decoration: underline; cursor: pointer; color: inherit; font: inherit;">
+            Logout
+        </button>
+    </form>
+</div>
+
 </div>
