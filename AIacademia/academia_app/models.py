@@ -1,5 +1,6 @@
-from django.contrib.auth.models import AbstractUser, BaseUserManager, Group
+from django.contrib.auth.models import AbstractUser, BaseUserManager, Group 
 from django.db import models
+from django.conf import settings
 
 
 # Custom User Manager
@@ -159,3 +160,12 @@ class Recommender_training_data(models.Model):
 
     def __str__(self):
         return self.course_name
+#model for messages
+class Message(models.Model):
+    sender = models.ForeignKey(BaseUser, on_delete=models.CASCADE, related_name='sent_messages')
+    recipient = models.ForeignKey(BaseUser, on_delete=models.CASCADE, related_name='received_messages')
+    content = models.TextField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.sender} to {self.recipient} at {self.timestamp}'    

@@ -1,70 +1,66 @@
 {% load static %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/mess_styles.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/student_style.css' %}">
+{% endblock %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Page</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/student_style.css' %}">
+{% block sidebar %}
+<!-- Other sidebar content -->
+<h3>Messaging</h3>
+<ul>
+    <li><a href="{% url 'inbox' %}">Inbox</a></li>
+</ul>
+{% endblock %}
 
-   
-</head>
-<body>
-    <div>
-        <h1>Welcome, Student!</h1>
-        <a href="C:\Users\user\Desktop\ProActEd\ProActEd\AIacademia\academia_app\templates\academia_app\login.html" class="logout">Logout</a> 
-    </div>
+{% block content %}
+<div class="content">
+    <h1>Welcome, Student!</h1>
+    <a href="{% url 'logout' %}" class="logout">Logout</a>
 
-    
-
-    <div class="content">
-        <!-- Content for school and department display -->
-        <div class="school-grid">
-            {% for school in school_data %}
-                <div class="content-item">
-                    <a href="#{{ school.name }}" class="school-button">{{ school.name }}</a>
-                    <div id="{{ school.name }}" class="departments-container">
-                        <!-- Department and course selection -->
-                        <div class="hover-container">
-                            <select>
-                                {% for department in school.departments %}
-                                    <option value="{{ department }}">{{ department }}</option>
-                                    <!-- Course options based on department -->
-                                    {% if department == 'computer science' %}
-                                        <optgroup label="program">
-                                            {% for course in school.cs %}
-                                                <option value="{{ course }}">{{ course }}</option>
-                                            {% endfor %}
-                                        </optgroup>
-                                    {% else %}
-                                        <optgroup label="program">
-                                            {% for course in school.IT %}
-                                                <option value="{{ course }}">{{ course }}</option>
-                                            {% endfor %}
-                                        </optgroup>
-                                    {% endif %}
-                                {% endfor %}
-                            </select>
-                        </div>
-                    </div>
+    <!-- Content for school and department display -->
+    <div class="school-grid">
+        {% for school in school_data %}
+        <div class="content-item">
+            <a href="#{{ school.name }}" class="school-button">{{ school.name }}</a>
+            <div id="{{ school.name }}" class="departments-container">
+                <!-- Department and course selection -->
+                <div class="hover-container">
+                    <select>
+                        {% for department in school.departments %}
+                        <option value="{{ department }}">{{ department }}</option>
+                        <!-- Course options based on department -->
+                        {% if department == 'computer science' %}
+                        <optgroup label="program">
+                            {% for course in school.cs %}
+                            <option value="{{ course }}">{{ course }}</option>
+                            {% endfor %}
+                        </optgroup>
+                        {% else %}
+                        <optgroup label="program">
+                            {% for course in school.IT %}
+                            <option value="{{ course }}">{{ course }}</option>
+                            {% endfor %}
+                        </optgroup>
+                        {% endif %}
+                        {% endfor %}
+                    </select>
                 </div>
-            {% endfor %}
-        </div>
-    </div>       
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="contact-info">
-                <h2>Contact Us</h2>
-                <p>Email: info@proacted.com</p>
-                <p>Phone: +254 (7) 437-20033</p>
             </div>
         </div>
-        <div class="copyright">
-            <p>&copy; 2023 ProActEd; University of Maseno. All Rights Reserved.</p>
-        </div>
-    </footer>
+        {% endfor %}
+    </div>
+</div>
 
-</body>
-</html>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Email: info@proacted.com</p>
+            <p>Phone: +254 (7) 437-20033</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2023 ProActEd; University of Maseno. All Rights Reserved.</p>
+    </div>
+</footer>
+{% endblock %}
