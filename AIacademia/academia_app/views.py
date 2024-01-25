@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect, render
-from python_scripts.recommender_clustering_pooling import load_model
+# from python_scripts.recommender_clustering_pooling import load_model
 from .forms import UserProfileForm
 from .models import UserProfile
 from django.http import HttpResponseRedirect

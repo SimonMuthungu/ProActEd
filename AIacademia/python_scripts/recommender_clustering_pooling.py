@@ -121,22 +121,6 @@ def load_model(us_interests, activities_enjyed):
     df['Tokenized General Prerequisites'] = df['Prerequisites'].apply(sent_tokenize)
     print('\n\n\nTokenized sentences!\n')
 
-    #code to save recommender preprocessed tokenized sentences to a new table in the database
-    from academia_app.models import Recommender_training_data_tokenized_sentences 
-    for index, row in df.iterrows():
-    # Create an instance of the model and set the fields accordingly
-        tokenized_sentences_entry = Recommender_training_data_tokenized_sentences(
-            course_name=row['Course Name'],
-            course_objectives='\n'.join(row['Tokenized Objectives']),
-            course_general_info_and_about='\n'.join(row['Tokenized General Info']),
-            general_prerequisites='\n'.join(row['Tokenized General Prerequisites']),  
-        
-        )
-
-        tokenized_sentences_entry.save()
-
-    print('Done, you can cancel now')
-
 
 
 
