@@ -142,12 +142,20 @@ class FieldOfInterest(models.Model):
 # High School Subject Model
 class HighSchoolSubject(models.Model):
     name = models.CharField(max_length=100)
+        # other fields...
+
+    def __str__(self):
+        return self.name
 
 # Course of Interest Model
 class CourseOfInterest(models.Model):
     name = models.CharField(max_length=100)
     fields_of_interest = models.ManyToManyField(FieldOfInterest, related_name='courses_of_interest')
     required_high_school_subjects = models.ManyToManyField(HighSchoolSubject, related_name='required_for_courses')
+        # other fields...
+
+    def __str__(self):
+        return self.name
 
 # Course Data for Recommender Model
 class Recommender_training_data(models.Model):

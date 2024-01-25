@@ -1,9 +1,11 @@
 body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
     background-color: #0f203f;
-    color: #ffffff;
+    color: #A6B0CF;
 }
 #header {
-    background-color: #020225;
+    background-color: #01010600;
     color: #FFDB58;
     display: flex;
     justify-content: space-between;
@@ -81,63 +83,74 @@ body {
 /* Customizing the side bar */
 
 #custom-sidebar {
-    background-color: #020225;
+    background-color: #32325d; /* Deep blue color */
     padding: 20px;
     position: fixed;
-    top: 73px; /* Adjust based on your header's height */
+    top: 73px;
     bottom: 0px;
     left: 0;
     width: 200px;
-    margin-left: 0;
     overflow-y: auto;
     z-index: 0;
+    border-radius: 0 15px 15px 0; /* Rounded corners on the right side */
+    box-shadow: 5px 0 15px rgba(0,0,0,0.5); /* Shadow for lifted effect */
+}
+.sidebar-section h3,
+.sidebar-section .collapsible-item,
+.sub-content a,
+.sub-content form {
+    color: #ffffff;
 }
 
 .sidebar-section {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     margin-left: 0;
 }
 
 .sidebar-section h3,
 .sidebar-section .collapsible-item {
     cursor: pointer;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 3px;
     margin-left: 0;
-    color:#FFDB58;
+    color : #A6B0CF;
 }
 
 .sub-content {
     display: none;
     padding-left: 15px;
     font-size: 14px;
-    margin-top: 5px;
-    margin-left: 0;
+    margin-top: 3px;
 }
 
-.sub-content a {
+.sub-content a, .sub-content form {
     display: block;
     color: #eaeef2;
-    margin-left: 0;
     text-decoration: none;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
+}
+.sub-content.visible {
+    display: block;
 }
 
 .sub-content a:hover {
     text-decoration: underline;
 }
+.collapsible-item {
+    display: block; 
+    margin-left: 0;
+}
 
 #footer {
-    background-color: #020225;
+    background-color: #09090d00;
     color: #FFDB58;
     text-align: center;
     padding: 10px 0;
     position: fixed;
     bottom: 0;
-    left: 0;
+    left: 180px;
     width: 100%;
-    z-index: 100;
+    z-index: 0;
 }
 
 #content, .content{
@@ -157,9 +170,13 @@ body {
         top: 0;
         bottom: auto;
         left: 0;
+        border-right: none;
     }
 
     .custom-logo {
         transform: scale(1);
+    }
+    #footer {
+        left: 0;
     }
 }

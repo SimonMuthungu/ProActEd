@@ -16,11 +16,13 @@
             <div class="sub-content">
                 <a href="{% url 'admin:academia_app_highschoolsubject_add' %}">Add Highschool Subjects</a>
                 <a href="{% url 'admin:academia_app_highschoolsubject_changelist' %}">Change Highschool Subjects</a>
+                <a href="{% url 'admin:academia_app_highschoolsubject_changelist' %}">View Highschool Subjects</a>
             </div>
             <span class="collapsible-item">Courses of Interest</span>
             <div class="sub-content">
                 <a href="{% url 'admin:academia_app_courseofinterest_add' %}">Add Courses of Interest</a>
                 <a href="{% url 'admin:academia_app_courseofinterest_changelist' %}">Change Courses of Interest</a>
+                <a href="{% url 'admin:academia_app_courseofinterest_changelist' %}">View Courses of Interest</a>
             </div>
         </div>
     </div>
@@ -33,11 +35,13 @@
             <div class="sub-content">
                 <a href="{% url 'admin:academia_app_performance_add' %}">Add Performance</a>
                 <a href="{% url 'admin:academia_app_performance_changelist' %}">Change Performance</a>
+                <a href="{% url 'admin:academia_app_performance_changelist' %}">View Performance</a>
             </div>
             <span class="collapsible-item">Attendance</span>
             <div class="sub-content">
                 <a href="{% url 'admin:academia_app_attendance_add' %}">Add Attendance</a>
-                <a href="{% url 'admin:academia_app_attendance_changelist' %}">Change Attendance</a>
+                <a href="{% url 'admin:academia_app_attendance_changelist' %}">Change Attendances</a>
+                <a href="{% url 'admin:academia_app_attendance_changelist' %}">View Attendances</a>
             </div>
             <span class="collapsible-item">Fee Information</span>
             <div class="sub-content">
@@ -54,49 +58,52 @@
             <span class="collapsible-item">Super Admins</span>
             <div class="sub-content">
                 <a href="{% url 'admin:academia_app_superadminuserproxy_add' %}">Add Super Admin</a>
-                <a href="{% url 'admin:academia_app_superadminuserproxy_changelist' %}">Change Super Admin</a>                
+                <a href="{% url 'admin:academia_app_superadminuserproxy_changelist' %}">Change Super Admin</a>
             </div>
             <span class="collapsible-item">Staff Users</span>
             <div class="sub-content">
                 <a href="{% url 'admin:academia_app_studentuserproxy_add' %}">Add Staff</a>
-                <a href="{% url 'admin:academia_app_studentuserproxy_changelist' %}">Change Staff</a>              
+                <a href="{% url 'admin:academia_app_studentuserproxy_changelist' %}">Change Staff</a>
             </div>
             <span class="collapsible-item">Student Users</span>
             <div class="sub-content">
                 <a href="{% url 'admin:academia_app_superadminuserproxy_add' %}">Add Student</a>
-                <a href="{% url 'admin:academia_app_superadminuserproxy_changelist' %}">Change Student</a>                
+                <a href="{% url 'admin:academia_app_superadminuserproxy_changelist' %}">Change Student</a>
             </div>
         </div>
     </div>
 
-    <!-- Schools and Courses Section -->
-    <div class="sidebar-section">
-        <h3 class="collapsible">Schools and Courses</h3>
-        <div class="side_bar_content">
-            <span class="collapsible-item">Schools</span>
-            <div class="sub-content">
-                {% for school in schools %}
-                    <a href="{% url 'admin:academia_app_school_change' school.id %}">{{ school.name }}</a>
-                {% endfor %}
-                <a href="{% url 'admin:academia_app_school_add' %}">Add School</a>
-                <a href="{% url 'admin:academia_app_school_changelist' %}">Change School</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Settings Section -->
-    <!-- Settings Section -->
+   <!-- Schools and Courses Section -->
 <div class="sidebar-section">
-    <h3>Settings</h3>
-    <a href="{% url 'admin:password_change' %}">Change Password</a>
-
-    <!-- Logout Form -->
-    <form action="{% url 'logout' %}" method="post" style="display: inline;">
-        {% csrf_token %}
-        <button type="submit" style="background: none; border: none; padding: 0; margin: 0; text-decoration: underline; cursor: pointer; color: inherit; font: inherit;">
-            Logout
-        </button>
-    </form>
+    <h3 class="collapsible">Schools and Courses</h3>
+    <div class="side_bar_content">
+        <span class="collapsible-item">Schools</span>
+        <div class="sub-content">
+            {% for school in schools %}
+                <a href="{% url 'admin:academia_app_school_change' school.id %}">{{ school.name }}</a>
+            {% endfor %}
+            <a href="{% url 'admin:academia_app_school_add' %}">Add School</a>
+            <a href="{% url 'admin:academia_app_school_changelist' %}">Change School</a>
+            <a href="{% url 'admin:academia_app_school_changelist' %}">View Schools</a>
+        </div>
+    </div>
 </div>
 
+<!-- Settings Section -->
+<div class="sidebar-section">
+    <h3>Settings</h3>
+    <div class="side_bar_content">
+        <div class="sub-content">
+            <a href="{% url 'admin:password_change' %}">Change Password</a>
+        </div>
+        <!-- Logout Form -->
+        <div class="sub-content">
+            <form action="{% url 'logout' %}" method="post" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit" style="background: none; border: none; padding: 0; margin: 0; text-decoration: underline; cursor: pointer; color: inherit; font: inherit;">
+                    Logout
+                </button>
+            </form>
+        </div>
+    </div>
 </div>
