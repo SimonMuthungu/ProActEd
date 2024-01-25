@@ -172,7 +172,14 @@ class Recommender_training_data_tokenized_sentences(models.Model):
     subject_prerequisites = models.CharField(max_length=100)
 
 
-class Recommender_training_data_vectors(models.Model):
+class Recommender_training_data_byte_vectors(models.Model):
+    course_name = models.CharField(max_length=100)
+    course_objectives = models.CharField(max_length=100)
+    course_general_info_and_about = models.CharField(max_length=100)
+    general_prerequisites = models.CharField(max_length=100)
+    subject_prerequisites = models.CharField(max_length=100)
+
+class Recommender_training_data_number_vectors(models.Model):
     course_name = models.CharField(max_length=100)
     course_objectives = models.CharField(max_length=100)
     course_general_info_and_about = models.CharField(max_length=100)
