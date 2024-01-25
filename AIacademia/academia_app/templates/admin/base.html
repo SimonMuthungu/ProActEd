@@ -4,15 +4,21 @@
 <head>
 <title>{% block title %}{% endblock %}</title>
 <link rel="stylesheet" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}">
+
 {% block dark-mode-vars %}
   <link rel="stylesheet" href="{% static "admin/css/dark_mode.css" %}">
   <script src="{% static "admin/js/theme.js" %}" defer></script>
 {% endblock %}
+
 {% block extrastyle %}{% endblock %}
+
 {% if LANGUAGE_BIDI %}<link rel="stylesheet" href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}">{% endif %}
+
 {% block extrahead %}
-<script src="{% static 'js/custom_admin.js' %}"></script>
+<script src="{% static 'js/custom_sidebar.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'admin/css/custom.css' %}" />
 {% endblock %}
+
 {% block responsive %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static "admin/css/responsive.css" %}">
@@ -26,8 +32,8 @@
 <a href="#content-start" class="skip-to-content-link">{% translate 'Skip to main content' %}</a>
 <!-- Container -->
 <div id="container">
-
-    {% if not is_popup %}
+    {% if not is_popup %}{% endif %}
+    
     <!-- Header -->
     {% block header %}
       <header id="header">
@@ -35,6 +41,7 @@
         {% block branding %}{% endblock %}
         </div>
         {% block usertools %}
+
         {% if has_permission %}
         <div id="user-tools">
             {% block userlinks %}
@@ -53,17 +60,17 @@
       </header>
     {% endblock %}
     <!-- END Header -->
+
     {% block nav-breadcrumbs %}
-      <nav aria-label="{% translate 'Breadcrumbs' %}">
-        {% block breadcrumbs %}
-          <div class="breadcrumbs">
-            <a href="{% url 'admin:index' %}">{% translate 'Home' %}</a>
-            {% if title %} &rsaquo; {{ title }}{% endif %}
-          </div>
-        {% endblock %}
-      </nav>
-    {% endblock %}
-    {% endif %}
+    <nav aria-label="{% translate 'Breadcrumbs' %}">
+      {% block breadcrumbs %}
+        <div class="breadcrumbs">
+          <a href="{% url 'admin:index' %}">{% translate 'Home' %}</a>
+          {% if title %} &rsaquo; {{ title }}{% endif %}
+        </div>
+      {% endblock %}
+    </nav>
+  {% endblock %}
 
     <div class="main" id="main">
       <main id="content-start" class="content" tabindex="-1">
@@ -80,8 +87,10 @@
           {% block pretitle %}{% endblock %}
           {% block content_subtitle %}{% if subtitle %}<h2>{{ subtitle }}</h2>{% endif %}{% endblock %}
           {% block content %}
-            {% block object-tools %}{% endblock %}
-            {{ content }}
+              <div class="main-content-area">
+                  {% include "admin/profile.html" %}
+                  {{ block.super }}
+              </div>
           {% endblock %}
           <br class="clear">
         </div>

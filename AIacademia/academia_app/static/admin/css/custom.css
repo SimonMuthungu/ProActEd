@@ -1,7 +1,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
-    background-color: #0f203f;
+    background-color: #262b3c;
     color: #A6B0CF;
 }
 #header {
@@ -11,8 +11,10 @@ body {
     justify-content: space-between;
     align-items: flex-end;
     padding: 10px;
-    position: relative; /* Needed for z-index to work */
+    position: relative;
     z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
 }
 
 .custom-footer {
@@ -86,7 +88,7 @@ body {
     background-color: #32325d; /* Deep blue color */
     padding: 20px;
     position: fixed;
-    top: 73px;
+    top: 93px;
     bottom: 0px;
     left: 0;
     width: 200px;
@@ -137,7 +139,7 @@ body {
     text-decoration: underline;
 }
 .collapsible-item {
-    display: block; 
+    display: block;
     margin-left: 0;
 }
 
@@ -160,8 +162,50 @@ body {
     margin-left: 200px;
 }
 
-.breadcrumbs { /* Replace with the actual class or ID */
-    margin-left: 240px;
+.breadcrumbs {
+    margin-left: 260px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding:10px;
+    margin-top: 10px;
+    background-color: #32325d;
+}
+
+/* profile section for the  admin-site */
+.profile-section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin: 20px;
+    padding: 15px;
+    width: 500px;
+    z-index: 100;
+}
+
+.profile-header {
+    background-color: #f4f4f4;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.profile-content {
+    padding: 5px;
+}
+
+.profile-picture {
+    display: block;
+    margin: 10px auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.profile-name, .profile-role, .profile-email {
+    font-size: 14px;
+    margin: 5px 0;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
