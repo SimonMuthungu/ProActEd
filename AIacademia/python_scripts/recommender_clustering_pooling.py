@@ -1,6 +1,14 @@
-# the recommender model currently has a 40% accuracy for most courses
-# this will apply pooling and clustering to help the model identify a students course even with
-# a not so strong profile, ie, to be keen and accurate
+import sys
+import os
+
+# Get the directory path of the current script
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Add the directory containing your custom module to the Python path
+module_dir = os.path.join(current_dir, r'C:\Users\Simon\proacted\AIacademia\python_scripts\prepare_recommender_dataset.py') 
+sys.path.append(module_dir)
+
+
 
 import logging
 import os
@@ -12,7 +20,6 @@ import joblib
 import numpy as np
 import pandas as pd
 from nltk.tokenize import sent_tokenize
-from prepare_recommender_dataset import preprocess_text
 # from run_recommender_system import weighted_vector # has to work with name == _main_
 from scipy.sparse import hstack
 from sklearn.cluster import KMeans
@@ -22,31 +29,49 @@ from sklearn.metrics.pairwise import cosine_similarity
 logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\logfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 
-def load_model(user_interests, activities_enjoyed):
+def load_model(us_interests, activities_enjyed):
 
 
-    # welcome
+    # preprocessing function from the prepare recommender
+    # this is to help with the etl and pre processing of the recommender training dataset
 
-    # print('\n\n\n|---------------------------------------------------------------------------------------------|')
-    # print('|---------------------------------------------------------------------------------------------|')
-    # print('|                       WELCOME TO PROACTED                                                   |')
-    # print('|                       @ PROACTED 1.3 2023                                                   |')
-    # print('|---------------------------------------------------------------------------------------------|')
-    # print('|---------------------------------------------------------------------------------------------|')
-    # print('|---------------------------------------------------------------------------------------------|\n\n\n')
+#   import nltk
+    from nltk.corpus import stopwords 
+    from nltk.tokenize import word_tokenize
 
-    # working on building a comprehensive user profile
-    # user_interests = input('\nTell us your ambition in life, what would you like to accomplish or become?:\n\n') #to be matched against objectives
-    # # user_subjects = input('\nWhich subjects did you excel at in high school?\n\n') #against course pre-requisites
-    # activities_enjoyed = input('\ntell us of activities you have enjoyed in the past, eg debating, repairing broken radios,  \nthat might help us know youre interests better:\n\n') #general info & about
-    
+    # df = pd.read_excel(r"AIacademia/data_files/gpt4_recommender_gen_training_data.xlsx")
+
+    # Download the NLTK stopwords data if not already downloaded
+    # nltk.download("stopwords")
+    # nltk.download("punkt")
+
+    # Define a function to preprocess text
+    def preprocess_text(text):
+        # Handle empty cells
+        if pd.isna(text):
+            text = ""
+
+        # Lowercasing
+        text = text.lower()
+
+        # Tokenization
+        tokens = word_tokenize(text)
+
+        # Remove stopwords
+        stop_words = set(stopwords.words("english"))
+        filtered_tokens = [word for word in tokens if word not in stop_words]
+
+        # Rejoin the filtered tokens to form cleaned text
+        cleaned_text = " ".join(filtered_tokens)
+
+        return cleaned_text
 
 
 
     # getting a bigger user profile from they themselves
-    user_interests = preprocess_text(user_interests)
+    user_interests = preprocess_text(us_interests)
     # user_subjects = preprocess_text(user_subjects)
-    activities_enjoyed = preprocess_text(activities_enjoyed) 
+    activities_enjoyed = preprocess_text(activities_enjyed) 
 
 
 
@@ -70,10 +95,12 @@ def load_model(user_interests, activities_enjoyed):
 
     df = pd.DataFrame(courses_list)
 
-    # creating 2 vectorizers for course description and prequisites
+    # creating 3 vectorizers for course description and prequisites and general info
     objectives_vectorizer = TfidfVectorizer(stop_words='english')
     generalinfoandabout_vectorizer = TfidfVectorizer(stop_words='english')
     prerequisites_vectorizer = TfidfVectorizer(stop_words='english') 
+
+
     objectives_tfidf_matrix = objectives_vectorizer.fit_transform(df['Course Objectives'])
     generalinfoandabout__tfidf_matrix = generalinfoandabout_vectorizer.fit_transform(df['Course_general_info_and_about'])
     prerequisites_tfidf_matrix = prerequisites_vectorizer.fit_transform(df['Prerequisites'])
@@ -91,7 +118,26 @@ def load_model(user_interests, activities_enjoyed):
     # Tokenize sentences in course objectives and general info
     df['Tokenized Objectives'] = df['Course Objectives'].apply(sent_tokenize)
     df['Tokenized General Info'] = df['Course_general_info_and_about'].apply(sent_tokenize)
+    df['Tokenized General Prerequisites'] = df['Prerequisites'].apply(sent_tokenize)
     print('\n\n\nTokenized sentences!\n')
+
+    #code to save recommender preprocessed tokenized sentences to a new table in the database
+    from academia_app.models import Recommender_training_data_tokenized_sentences 
+    for index, row in df.iterrows():
+    # Create an instance of the model and set the fields accordingly
+        tokenized_sentences_entry = Recommender_training_data_tokenized_sentences(
+            course_name=row['Course Name'],
+            course_objectives='\n'.join(row['Tokenized Objectives']),
+            course_general_info_and_about='\n'.join(row['Tokenized General Info']),
+            general_prerequisites='\n'.join(row['Tokenized General Prerequisites']),  
+        
+        )
+
+        tokenized_sentences_entry.save()
+
+    print('Done, you can cancel now')
+
+
 
 
     # Function to vectorize sentences using Word2Vec and calculate their weighted average
@@ -117,13 +163,14 @@ def load_model(user_interests, activities_enjoyed):
 
         return sentence_vectors
 
+
     # Vectorize each sentence
     df['Vectorized Objectives'] = df['Tokenized Objectives'].apply(lambda x: vectorize_sentences(x, model, objectives_vectorizer))
     df['Vectorized General Info'] = df['Tokenized General Info'].apply(lambda x: vectorize_sentences(x, model, generalinfoandabout_vectorizer))
     print('Vectorized sentences!\n')
 
 
-    # function for clustering the sentence vectors into 10 clusters to produce dim 2100 vectors 
+    # function for clustering the sentence vectors into 7 clusters to produce dim 2100 vectors 
     def cluster_sentences(vectors, num_clusters=7):
         # Create an array to store the cluster labels
         cluster_labels = np.zeros(len(vectors), dtype=int)
@@ -156,17 +203,7 @@ def load_model(user_interests, activities_enjoyed):
     print('Sentences clusterised!\n')
 
 
-    # # now pooling (Avg and avg)
-    # def Avg_pool_vectors_per_cluster(vectors, clusters):
-    #     Avg_pooled_vectors = {}
-    #     for cluster in set(clusters):
-    #         cluster_vectors = [vectors[i] for i, c in enumerate(clusters) if c == cluster]
-    #         Avg_pooled_vectors[cluster] = np.Avg(cluster_vectors, axis=0)
-    #     return Avg_pooled_vectors
-
-
     # getting the average of what sentences in each label is saying; 10 clusters will now have 10 sentences that represent what the courses are saying
-
 
     def avg_pooling(vectors, clusters):
         pooled_vectors = []    
@@ -196,10 +233,8 @@ def load_model(user_interests, activities_enjoyed):
     # Applying the function to the DataFrame
     df['Concatenated Avg Pooled Objective Vectors'] = df.apply(lambda row: concatenate_avg_pooled_vectors(row['Vectorized Objectives'], row['Objective Clusters']), axis=1)
     df['Concatenated Avg Pooled General Info Vectors'] = df.apply(lambda x: concatenate_avg_pooled_vectors(x['Vectorized General Info'], x['General Info Clusters']), axis=1)
-    print('Poling and concatenation... Done!\n')
+    print('Pooling and concatenation... Done!\n')
 
-
-    # have left out so as to focus first on the first 2 columns
     # df['Pooled Prerequisites'] = df.apply(lambda x: avg_pooling(x['Vectorized General Info'], x['General Info Clusters']), axis=1)
 
 
@@ -261,31 +296,14 @@ def load_model(user_interests, activities_enjoyed):
 
     Activitiesenjoyedbyuser_courseojective_similarity = calculate_similarity(vectorized_activities_enjoyed, df['Concatenated Avg Pooled Objective Vectors'].tolist())
 
-    combined_total_similarity = np.array(Userambition_courseojective_similarity) * 0.30 + np.array(Activitiesenjoyedbyuser_coursegeneralinfo_similarity) * 0.50 + np.array(Userambition_coursegeneralinfo_similarity) * 0.10 + np.array(Activitiesenjoyedbyuser_courseojective_similarity) * 0.10
+    combined_total_similarity = np.array(Userambition_courseojective_similarity) * 0.40 + np.array(Activitiesenjoyedbyuser_coursegeneralinfo_similarity) * 0.40 + np.array(Userambition_coursegeneralinfo_similarity) * 0.10 + np.array(Activitiesenjoyedbyuser_courseojective_similarity) * 0.10
     # df['Prerequisites similarity'] = calculate_similarity(user_tfidf_prerequisites, df['Pooled General Info'])
 
-    print(combined_total_similarity.shape)
 
-    # Create a DataFrame to display course names with their corresponding similarity scores
-    # similarity_df = pd.DataFrame({
-    #     'Course Name': df['Course Name'],
-    #     'Combined Similarity': combined_total_similarity
-    # })
-
-    # Display the DataFrame sorted by combined similarity scores
-    # excel_file_path = r'C:\Users\Simon\proacted\AIacademia\data_files\similarity_scores_courses.xlsx'
-    # similarity_df.to_excel(excel_file_path, index=False, engine='openpyxl')
-    # print(similarity_df.sort_values(by='Combined Similarity', ascending=False))
 
 
     top_5_indices = combined_total_similarity.argsort()[-10:][::-1]
     top_5_courses = df['Course Name'].iloc[top_5_indices].tolist() 
-
-
-
-    # for index in top_5_indices:
-    #     print(f"Course: {df.iloc[index]['Course Name']}, Score: {combined_total_similarity[index]}")
-
 
 
     # Instead of printing, it returns a list 
@@ -303,9 +321,9 @@ def load_model(user_interests, activities_enjoyed):
 #this is for testing the script above, during production, it should hashed out
 
 
-user_int = "I aspire to make a significant impact in the field of environmental conservation. My dream is to develop innovative solutions to reduce pollution and promote sustainable living practices. I am passionate about researching renewable energy sources and implementing eco-friendly technologies in urban areas to combat climate change and protect natural habitats"
+user_int = "I am dedicated to making a meaningful contribution to the realm of education and learning. My goal is to revolutionize traditional teaching methods and enhance access to quality education for all. I am enthusiastic about exploring innovative technologies and digital tools to create engaging and interactive learning experiences. I aspire to empower educators and learners alike by promoting inclusive and accessible educational platforms that cater to diverse needs and foster a lifelong love for learning."
 
-activities_enjyd = act_e = "Throughout high school, I found myself deeply engrossed in activities like debating and public speaking. I enjoyed participating in debate clubs, where I honed my skills in persuasive communication and critical thinking. Additionally, I have a keen interest in technology, particularly in building and programming small electronic devices. This hobby of mine has sparked a curiosity in how technology can be leveraged to solve everyday problems."
+activities_enjyd = "I engage in various activities that align with my passion for education and technology. I enjoy creating and sharing educational content on online platforms, such as developing instructional videos and interactive lessons. Additionally, I actively participate in educational technology workshops and conferences to stay updated on the latest advancements in the field. Furthermore, I volunteer my time to tutor and mentor students, helping them grasp challenging concepts and cultivate a love for learning. These activities not only allow me to pursue my interests but also contribute to my professional growth in the field of education and technology."
 
 
 print(load_model(user_int, activities_enjyd))

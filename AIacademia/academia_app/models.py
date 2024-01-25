@@ -163,6 +163,23 @@ class Recommender_training_data(models.Model):
     general_prerequisites = models.CharField(max_length=100)
     subject_prerequisites = models.CharField(max_length=100)
 
+# Model to store the optimizations for the recommender model
+class Recommender_training_data_tokenized_sentences(models.Model):
+    course_name = models.CharField(max_length=100)
+    course_objectives = models.CharField(max_length=100)
+    course_general_info_and_about = models.CharField(max_length=100)
+    general_prerequisites = models.CharField(max_length=100)
+    subject_prerequisites = models.CharField(max_length=100)
+
+
+class Recommender_training_data_vectorized_sentences(models.Model):
+    course_name = models.CharField(max_length=100)
+    course_objectives = models.CharField(max_length=100)
+    course_general_info_and_about = models.CharField(max_length=100)
+    general_prerequisites = models.CharField(max_length=100)
+    subject_prerequisites = models.CharField(max_length=100)
+
+
     def __str__(self):
         return self.course_name
     
