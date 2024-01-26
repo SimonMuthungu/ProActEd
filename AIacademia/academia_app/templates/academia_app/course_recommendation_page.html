@@ -1,47 +1,15 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/course_recommendation_styles.css' %}">
+
     <title>Course Recommendation</title>
 
-    <style>
-        /* Your inline CSS styles go here */
-        .header {
-            background-color: #f8f9fa;
-            padding: 10px;
-            text-align: right;
-        }
-        .login-button {
-            padding: 8px 15px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-        .login-button:hover {
-            background-color: #0056b3;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background-color:blue ;
-        }
-        h1{
-            background-color:white;
-            text-color: pink;
-        }
-        form{
-            text-color:pink;
-            background-color: white;
-            border-radius: 10px;
-        }
-        .section form {
-            background-color: white;
-        }
-
-    </style>
-
+    
 </head>
 <body>
     <div class="header">
@@ -51,61 +19,9 @@
     <h1 size='Quick'>SELECT YOUR SUBJECTS</h1>
     <form action="{% url 'recommend_courses' %}" method="post">
         {% csrf_token %}
-        <label for="subject1">
-            <input type="checkbox" id="MATHEMATICS" name="subjects[]" value="MATHEMATICS"> MATHEMATICS
-        </label>
-        <br>
-        <label for="subject2">
-            <input type="checkbox" id="ENGLISH" name="subjects[]" value="ENGLISH"> ENGLISH
-        </label>
-        <br>
-        <label for="subject3">
-            <input type="checkbox" id="KISWAHILI" name="subjects[]" value="KISWAHILI"> KISWAHILI
-        </label>
-        <br>
-        <label for="subject4">
-            <input type="checkbox" id="CHEMISTRY" name="subjects[]" value="CHEMISTRY"> CHEMISTRY
-        </label>
-        <br>
-        <label for="subject5">
-            <input type="checkbox" id="BIOLOGY" name="subjects[]" value="BIOLOGY"> BIOLOGY
-        </label>
-        <br>
-        <label for="subject6">
-            <input type="checkbox" id="PHYSICS" name="subjects[]" value="PHYSICS"> PHYSICS
-        </label>
-        <br>
-        <label for="subject2">
-            <input type="checkbox" id="CRE" name="subjects[]" value="CRE"> C.R.E
-        </label>
-        <br>
-        <label for="subject3">
-            <input type="checkbox" id="HISTORY" name="subjects[]" value="HISTORY"> HISTORY
-        </label>
-        <br>
-        <label for="subject4">
-            <input type="checkbox" id="GEOGRAPHY" name="subjects[]" value="GEOGRAPHY"> GEOGRAPHY
-        </label>
-        <br>
-        <label for="subject5">
-            <input type="checkbox" id="AGRICULTURE" name="subjects[]" value="AGRICULTURE"> AGRICULTURE
-        </label>
-        <br>
-        <label for="subject6">
-            <input type="checkbox" id="BUSINESS" name="subjects[]" value="BUSINESS STUDIES"> BUSINESS STUDIES
-        </label>
-        <br>
-        <label for="subject2">
-            <input type="checkbox" id="COMPUTER" name="subjects[]" value="COMPUTER STUDIES"> COMPUTER STUDIES
-        </label>
-        <br>
-        <label for="subject3">
-            <input type="checkbox" id="HOME" name="subjects[]" value="HOME SCIENCE"> HOME SCIENCE
-        </label>
-        <br>
 
     <section>
-        <h2>SELECT YOUR INTERESTS</h2>
+        <h3>Please Tell Us Your Interests, we're eager to hear</h3>
 
             <label for="subject1">
                 <input type="checkbox" id="POLITICS" name="interests[]" value="POLITICS"> POLITICS
@@ -263,7 +179,68 @@
                 <input type="checkbox" id="METAL DETECTING" name="interests[]" value="METAL DETECTING"> METAL DETECTING
             </label>
             <br>
-         
+
+            <div class="text-area">
+                <h2 for="additionalInfo">Please describe yourself and your interests:</h2><br>
+                <textarea id="additionalInfo" name="additionalInfo" placeholder="E.g. I love music and art. Music is my passion. Since i was a child, ive always produced music and video entertainment. It makes me feel alive, that life is worth living. I also love media and video production"></textarea>
+            </div>
+            <section>
+                <h2>Tell us of subjects you excelled at in high school</h2>
+                <label for="subject1">
+                    <input type="checkbox" id="MATHEMATICS" name="subjects[]" value="MATHEMATICS"> MATHEMATICS
+                </label>
+                <br>
+                <label for="subject2">
+                    <input type="checkbox" id="ENGLISH" name="subjects[]" value="ENGLISH"> ENGLISH
+                </label>
+                <br>
+                <label for="subject3">
+                    <input type="checkbox" id="KISWAHILI" name="subjects[]" value="KISWAHILI"> KISWAHILI
+                </label>
+                <br>
+                <label for="subject4">
+                    <input type="checkbox" id="CHEMISTRY" name="subjects[]" value="CHEMISTRY"> CHEMISTRY
+                </label>
+                <br>
+                <label for="subject5">
+                    <input type="checkbox" id="BIOLOGY" name="subjects[]" value="BIOLOGY"> BIOLOGY
+                </label>
+                <br>
+                <label for="subject6">
+                    <input type="checkbox" id="PHYSICS" name="subjects[]" value="PHYSICS"> PHYSICS
+                </label>
+                <br>
+                <label for="subject2">
+                    <input type="checkbox" id="CRE" name="subjects[]" value="CRE"> C.R.E
+                </label>
+                <br>
+                <label for="subject3">
+                    <input type="checkbox" id="HISTORY" name="subjects[]" value="HISTORY"> HISTORY
+                </label>
+                <br>
+                <label for="subject4">
+                    <input type="checkbox" id="GEOGRAPHY" name="subjects[]" value="GEOGRAPHY"> GEOGRAPHY
+                </label>
+                <br>
+                <label for="subject5">
+                    <input type="checkbox" id="AGRICULTURE" name="subjects[]" value="AGRICULTURE"> AGRICULTURE
+                </label>
+                <br>
+                <label for="subject6">
+                    <input type="checkbox" id="BUSINESS" name="subjects[]" value="BUSINESS STUDIES"> BUSINESS STUDIES
+                </label>
+                <br>
+                <label for="subject2">
+                    <input type="checkbox" id="COMPUTER" name="subjects[]" value="COMPUTER STUDIES"> COMPUTER STUDIES
+                </label>
+                <br>
+                <label for="subject3">
+                    <input type="checkbox" id="HOME" name="subjects[]" value="HOME SCIENCE"> HOME SCIENCE
+                </label>
+                <br>
+        
+            </section>
+    </section>
         <input type="submit" value="Submit">
     </form>
 </section>

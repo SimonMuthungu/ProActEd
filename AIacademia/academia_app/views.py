@@ -229,34 +229,38 @@ def recommend_courses(request):
         # Getting selected subjects with name
         user_subjects_done = request.POST.getlist('subjects[]')
         user_subjects_done = ' '.join(user_subjects_done).lower() 
-        print(user_subjects_done)
-        logging.info(user_subjects_done)
         # Getting values from the interests field
-        user_interests = request.POST.getlist('interests[]')
-        user_interests = ' '.join(user_interests).lower() 
-        print(user_interests) 
-        logging.info(user_interests) 
+        user_activities_enjoyed = request.POST.getlist('interests[]')
+        user_activities_enjoyed = ' '.join(user_activities_enjoyed).lower() 
+        # textarea
+        user_description_about_interests = request.POST.getlist('additionalInfo')
+        user_description_about_interests = ''.join(user_activities_enjoyed).lower() 
+        print(user_description_about_interests)
         try: 
             # Load the model and get the output
             print("\nBeginning to run the recommender script")
             logging.info("Beginning to run the recommender script")
-            recommendations = load_model(user_subjects_done, user_interests)
+            recommendations = load_model(user_description_about_interests, user_activities_enjoyed)
             print(f"here are the recommendations: {recommendations}")
+            context = {'recommendations': recommendations}
+            return render(request, 'academia_app/recommended_courses.html', context)
         except:
             print('Something came up, please rerun the system...')
             logging.critical('Something came up, please rerun the system...')
         # Pass recommendations to the template
-        context = {'recommendations': recommendations}
-        return render(request, 'academia_app/recommended_courses.html', context)
+        finally:
+            logging.info('Recommender system has run')
+            
+            
         
         
 def predict_probability(request):
     model = joblib.load('AIacademia/trained_models/no_bias_trainedw_100000_10288genii.joblib')
+    logging.info('Probability model loaded')
+    # request_data = 
 
-    request_data = 
-
-    # Predict probabilities
-    probabilities = model.predict_proba(request_data)
+    # # Predict probabilities
+    # probabilities = model.predict_proba(request_data)
 
     return probabilities
     

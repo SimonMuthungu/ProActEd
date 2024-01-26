@@ -21,7 +21,6 @@ import numpy as np
 import pandas as pd
 from nltk.tokenize import sent_tokenize
 # from run_recommender_system import weighted_vector # has to work with name == _main_
-from scipy.sparse import hstack
 from sklearn.cluster import KMeans
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -30,7 +29,7 @@ logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.lo
 
 
 def load_model(users_interests, activities_users_have_enjoyed_in_the_past):
-
+    logging.info('Recommender model loaded and running')
 
     # preprocessing function from the prepare recommender
     # this is to help with the etl and pre processing of the recommender training dataset
@@ -309,11 +308,11 @@ def load_model(users_interests, activities_users_have_enjoyed_in_the_past):
 #this is for testing the script above, during production, it should hashed out
 
 
-user_int = "I have a deep interest in health and fitness, focusing on nutrition, exercise, and mental well-being. My goal is to understand the science behind physical fitness and to apply this knowledge in developing holistic health programs. I am keen on exploring the psychological aspects of fitness and how they intersect with physical health, aiming to promote a balanced lifestyle."
+# user_int = "I have a deep interest in health and fitness, focusing on nutrition, exercise, and mental well-being. My goal is to understand the science behind physical fitness and to apply this knowledge in developing holistic health programs. I am keen on exploring the psychological aspects of fitness and how they intersect with physical health, aiming to promote a balanced lifestyle."
 
-activities_enjyd = "I regularly engage in various physical activities like yoga, running, and weight training. I enjoy preparing nutritious meals and experimenting with healthy recipes. I often participate in local fitness challenges and marathons. Additionally, I attend workshops on nutrition and mental wellness, and enjoy reading books and articles related to health and fitness. I also volunteer as a fitness coach at my local community center, helping others achieve their health goals."
-
-
+# activities_enjyd = "I regularly engage in various physical activities like yoga, running, and weight training. I enjoy preparing nutritious meals and experimenting with healthy recipes. I often participate in local fitness challenges and marathons. Additionally, I attend workshops on nutrition and mental wellness, and enjoy reading books and articles related to health and fitness. I also volunteer as a fitness coach at my local community center, helping others achieve their health goals."
 
 
-print(load_model(user_int, activities_enjyd))
+
+
+# print(load_model(user_int, activities_enjyd))
