@@ -58,7 +58,7 @@ early_stopping = EarlyStopping(monitor='accuracy',
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
 history = model.fit(train_dataset,
-                    epochs=30,
+                    epochs=10,
                     callbacks=[early_stopping])
 
 # Evaluate the model on the test dataset

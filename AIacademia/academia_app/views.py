@@ -1,3 +1,4 @@
+import logging
 import sys
 # sys.path.append(r'C:\Users\Simon\proacted\AIacademia') 
 
@@ -6,7 +7,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect, render
-# from python_scripts.recommender_clustering_pooling import load_model
+from python_scripts.recommender_engine import load_model
 from .forms import UserProfileForm
 from .models import UserProfile
 from django.http import HttpResponseRedirect
@@ -16,9 +17,12 @@ from .forms import UserProfileForm
 from .models import Course, School  # Import Course and School models
 from django.core.mail import send_mail
 
+
 import joblib
 from .models import Course, School, Recommender_training_data  # Import Course and School models
 
+
+logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 def login_view(request):
     if request.method == 'POST':
@@ -226,47 +230,35 @@ def recommend_courses(request):
         user_subjects_done = request.POST.getlist('subjects[]')
         user_subjects_done = ' '.join(user_subjects_done).lower() 
         print(user_subjects_done)
+        logging.info(user_subjects_done)
         # Getting values from the interests field
         user_interests = request.POST.getlist('interests[]')
         user_interests = ' '.join(user_interests).lower() 
         print(user_interests) 
-
-        # Load the model and get the output
-        print("\nBeginning to run the recommender script")
-        recommendations = load_model(user_subjects_done, user_interests)
-        print(f"here are the recommendations: {recommendations}")
-
+        logging.info(user_interests) 
+        try: 
+            # Load the model and get the output
+            print("\nBeginning to run the recommender script")
+            logging.info("Beginning to run the recommender script")
+            recommendations = load_model(user_subjects_done, user_interests)
+            print(f"here are the recommendations: {recommendations}")
+        except:
+            print('Something came up, please rerun the system...')
+            logging.critical('Something came up, please rerun the system...')
         # Pass recommendations to the template
         context = {'recommendations': recommendations}
         return render(request, 'academia_app/recommended_courses.html', context)
         
-        # username = request.POST.get('username')
-        # password = request.POST.get('password')
-        # user = authenticate(request, username=username, password=password)
-        
-        # if user is not None:
-        #     if user.is_active:
-        #         login(request, user)
-        #         # Redirect based on user type
-        #         if user.is_superuser or user.is_staff:
-        #             return redirect('/admin/')
-        #         else:
-        #             return redirect('student_page')
-        #     else:
-        #         # User is not active
-        #         return render(request, 'academia_app/login.html', {'error': 'Account is inactive.'})
-        # else:
-        #     return render(request, 'academia_app/login.html', {'error': 'Invalid username or password.'})
-
         
 def predict_probability(request):
     model = joblib.load('AIacademia/trained_models/no_bias_trainedw_100000_10288genii.joblib')
 
-    try:
-        # were getting data from the db thatll be used to predict student probability of success
-        database_data = Recommender_training_data.objects.values_list('field1', 'field2', flat=True)
-    except Recommender_training_data.DoesNotExist:
-        return JsonResponse({'error': 'No data found in the database'}, status=404)
+    request_data = 
+
+    # Predict probabilities
+    probabilities = model.predict_proba(request_data)
+
+    return probabilities
     
      # Processing the fetched data as needed
     
