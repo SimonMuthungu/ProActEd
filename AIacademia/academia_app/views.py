@@ -71,11 +71,6 @@ def login_view(request):
 
 
 
-
-
-# Other imports
-
-
 def course_recommendation_page(request):
     return render (request,"academia_app/course_recommendation_page.html")
 
