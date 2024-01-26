@@ -60,13 +60,14 @@
             </div>
             <span class="collapsible-item">Student Users</span>
             <div class="sub-content">
-                <a href="{% url 'admin:academia_app_superadminuserproxy_add' %}">Add Student</a>
-                <a href="{% url 'admin:academia_app_superadminuserproxy_changelist' %}">Change Student</a>
+                <a href="{% url 'admin:academia_app_superadminuserproxy_add' %}">Add Student User</a>
+                <a href="{% url 'admin:academia_app_superadminuserproxy_changelist' %}">Change Student User</a>
+                <a href="{% url 'admin:academia_app_student_add' %}">Add Student</a>
             </div>
         </div>
     </div>
 
-   <!-- Schools and Courses Section -->
+<!-- Schools and Courses Section -->
 <div class="sidebar-section">
     <h3 class="collapsible">Schools and Courses</h3>
     <div class="side_bar_content">
@@ -78,6 +79,12 @@
             <a href="{% url 'admin:academia_app_school_add' %}">Add School</a>
             <a href="{% url 'admin:academia_app_school_changelist' %}">Change School</a>
             <a href="{% url 'admin:academia_app_school_changelist' %}">View Schools</a>
+        </div>
+        <span class="collapsible-item">Courses</span>
+        <div class="sub-content">
+            <a href="{% url 'admin:academia_app_course_add' %}">Add Course</a>
+            <a href="{% url 'admin:academia_app_course_changelist' %}">Change Course</a>
+            <a href="{% url 'admin:academia_app_course_changelist' %}">View Courses</a>
         </div>
     </div>
 </div>

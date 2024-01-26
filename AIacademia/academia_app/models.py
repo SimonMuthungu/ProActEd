@@ -92,13 +92,18 @@ class School(models.Model):
     name = models.CharField(max_length=100)
     abbreviation = models.CharField(max_length=10)
 
+    def __str__(self):
+        return self.name
+
 # Course Model
 class Course(models.Model):
     name = models.CharField(max_length=100)
     prefix = models.CharField(max_length=15)
     school = models.ForeignKey(School, on_delete=models.CASCADE)
     students_count = models.PositiveIntegerField(default=0)
-    graduation_probability = models.FloatField(default=0.0)
+
+    def __str__(self):
+        return f"{self.prefix} - {self.name}"
 
 # Student Model
 class Student(models.Model):
@@ -106,13 +111,16 @@ class Student(models.Model):
         StudentUser,
         on_delete=models.CASCADE,
         related_name='student_profile',
-        null=True  # Allow null values for the user field
+        null=True
     )
     name = models.CharField(max_length=100)
     registration_number = models.CharField(max_length=20, unique=True)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     school = models.ForeignKey(School, on_delete=models.CASCADE)
-    graduation_probability = models.FloatField(default=0.0)
+
+    def __str__(self):
+        return f"{self.name} ({self.registration_number})"
+
 
 # Fee Information Model
 class FeeInformation(models.Model):

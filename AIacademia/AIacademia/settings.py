@@ -37,7 +37,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'AIacademia.urls'
@@ -92,7 +91,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'academia_app', 'static')]  # Add this line
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'academia_app', 'static')]
 
 # Custom user model
 AUTH_USER_MODEL = 'academia_app.BaseUser'

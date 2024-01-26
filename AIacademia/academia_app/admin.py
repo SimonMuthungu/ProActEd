@@ -93,7 +93,7 @@ class CourseAdmin(admin.ModelAdmin):
     search_fields = ('name', 'prefix')
 
 class StudentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'registration_number', 'course', 'school', 'graduation_probability')
+    list_display = ('name', 'registration_number', 'course', 'school')
     list_filter = ('course', 'school')
     search_fields = ('name', 'registration_number')
 
