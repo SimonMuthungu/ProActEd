@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.contrib.auth.models import AbstractUser, BaseUserManager, Group
 from django.contrib.auth.models import User
 from django.db import models
@@ -6,6 +7,11 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.contrib.auth.models import Permission
 
+=======
+from django.contrib.auth.models import AbstractUser, BaseUserManager, Group 
+from django.db import models
+from django.conf import settings
+>>>>>>> cbce90812759da94a41e41f4109eed779f900c50
 
 
 # Custom User Manager
@@ -182,6 +188,7 @@ class Recommender_training_data_vectors(models.Model):
 
     def __str__(self):
         return self.course_name
+<<<<<<< HEAD
     
 class UserProfile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
@@ -205,3 +212,14 @@ class CustomUser(AbstractUser):
 
     def __str__(self):
         return self.username
+=======
+#model for messages
+class Message(models.Model):
+    sender = models.ForeignKey(BaseUser, on_delete=models.CASCADE, related_name='sent_messages')
+    recipient = models.ForeignKey(BaseUser, on_delete=models.CASCADE, related_name='received_messages')
+    content = models.TextField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.sender} to {self.recipient} at {self.timestamp}'    
+>>>>>>> cbce90812759da94a41e41f4109eed779f900c50

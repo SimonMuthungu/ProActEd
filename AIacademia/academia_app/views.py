@@ -4,8 +4,9 @@ import sys
 
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse, JsonResponse
+from django.http import Http404 , JsonResponse
 from django.shortcuts import redirect, render
+
 # from python_scripts.recommender_clustering_pooling import load_model
 from .forms import UserProfileForm
 from .models import UserProfile
@@ -16,8 +17,12 @@ from .forms import UserProfileForm
 from .models import Course, School  # Import Course and School models
 from django.core.mail import send_mail
 
-import joblib
+from django import joblib
 from .models import Course, School, Recommender_training_data  # Import Course and School models
+
+from django.contrib import messages
+from .models import BaseUser, Course, School, Message   # Import Course and School models
+
 
 
 def login_view(request):
@@ -296,7 +301,8 @@ def student_page(request):
         return redirect('login')
 
 def course_recommendation(request):
-    return render(request, 'academia_app/course_recommendation_page.html')
+    return render(request, 'academia_app/course_recommendation_page.html',)
+
 
 @login_required
 def school_list(request):
@@ -315,6 +321,7 @@ def get_courses(request, school_id):
         return JsonResponse(course_list, safe=False)
     else:
         return JsonResponse({"error": "Not authorized"}, status=403)
+
 def edit_profile(request):
     try:
         profile = request.user.userprofile
@@ -352,3 +359,25 @@ def index(request):
     rendered_form = form.render("Student_Page.html")
     context = {"form": rendered_form}
     return render(request, "index.html", context)
+
+
+@login_required
+def inbox(request):
+    received_messages = Message.objects.filter(recipient=request.user)
+    sent_messages = Message.objects.filter(sender=request.user)
+    users = BaseUser.objects.exclude(id=request.user.id)
+    return render(request, 'academia_app/inbox.html', {'received_messages': received_messages, 'sent_messages': sent_messages, 'users': users})
+
+@login_required
+def send_message(request, recipient_id):
+    if request.method == 'POST':
+        recipient = BaseUser.objects.get(id=recipient_id)
+        content = request.POST.get('content', '')
+        message = Message.objects.create(sender=request.user, recipient=recipient, content=content)
+        return render(request, 'academia_app/send_message.html', {'message_sent': True, 'recipient_id': recipient_id})
+
+    # Added the following for debugging
+    print("Recipient ID:", recipient_id)
+
+    return render(request, 'academia_app/send_message.html', {'recipient_id': recipient_id})
+

@@ -1,5 +1,10 @@
 {% load static %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/mess_styles.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/student_style.css' %}">
+{% endblock %}
 
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -251,6 +256,65 @@
 =======
     </footer>
 >>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
+=======
+{% block sidebar %}
+<!-- Other sidebar content -->
+<h3>Messaging</h3>
+<ul>
+    <li><a href="{% url 'inbox' %}">Inbox</a></li>
+</ul>
+{% endblock %}
 
-</body>
-</html>
+{% block content %}
+<div class="content">
+    <h1>Welcome, Student!</h1>
+    <a href="{% url 'logout' %}" class="logout">Logout</a>
+
+    <!-- Content for school and department display -->
+    <div class="school-grid">
+        {% for school in school_data %}
+        <div class="content-item">
+            <a href="#{{ school.name }}" class="school-button">{{ school.name }}</a>
+            <div id="{{ school.name }}" class="departments-container">
+                <!-- Department and course selection -->
+                <div class="hover-container">
+                    <select>
+                        {% for department in school.departments %}
+                        <option value="{{ department }}">{{ department }}</option>
+                        <!-- Course options based on department -->
+                        {% if department == 'computer science' %}
+                        <optgroup label="program">
+                            {% for course in school.cs %}
+                            <option value="{{ course }}">{{ course }}</option>
+                            {% endfor %}
+                        </optgroup>
+                        {% else %}
+                        <optgroup label="program">
+                            {% for course in school.IT %}
+                            <option value="{{ course }}">{{ course }}</option>
+                            {% endfor %}
+                        </optgroup>
+                        {% endif %}
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+>>>>>>> cbce90812759da94a41e41f4109eed779f900c50
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Email: info@proacted.com</p>
+            <p>Phone: +254 (7) 437-20033</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2023 ProActEd; University of Maseno. All Rights Reserved.</p>
+    </div>
+</footer>
+{% endblock %}
