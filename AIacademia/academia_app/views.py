@@ -293,7 +293,8 @@ def student_page(request):
         return redirect('login')
 
 def course_recommendation(request):
-    return render(request, 'academia_app/course_recommendation_page.html')
+    return render(request, 'academia_app/course_recommendation_page.html',)
+
 
 @login_required
 def school_list(request):

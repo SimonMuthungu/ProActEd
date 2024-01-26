@@ -5,14 +5,11 @@
 
 {% block coltype %}colMS{% endblock %}
 
-{% block bodyclass %}{{ block.super }} dashboard{% endblock %}
-
 {% block nav-breadcrumbs %}{% endblock %}
 
 {% block nav-sidebar %}{% endblock %}
 
 {% block content %}
 <div id="content-main">
-  {% include "admin/app_list.html" with app_list=app_list show_changelinks=True %}
 </div>
 {% endblock %}

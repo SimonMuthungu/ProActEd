@@ -3,6 +3,8 @@
 {% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
 {% block extrahead %}
 <link rel="stylesheet" type="text/css" href="{% static 'admin/css/custom.css' %}" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+<script src="{% static 'js/custom_sidebar.js' %}"></script>
 {% endblock %}
 
 {% block header %}
@@ -31,16 +33,12 @@
             Welcome, {% if request.user.first_name %}{{ request.user.first_name }}{% else %}{{ request.user.username }}{% endif %}
         </div>
     </div>
+    <!-- Custom Sidebar Here -->
+    {% include "admin/custom_sidebar.html" %}
 </header>
-{% endblock %}
-
-{% block user-tools %}{% endblock %}
-{% block nav-global %}{% endblock %}
-
-{% block footer %}
-<div class="custom-footer">
-    <div class="footer-content">
-        <p>© 2024 AIacademia Management System. All rights reserved.</p>
-    </div>
+<div id="footer">
+    <p>© 2023 AIacademia Management System. All rights reserved.</p>
 </div>
 {% endblock %}
+{% block user-tools %}{% endblock %}
+{% block nav-global %}{% endblock %}
