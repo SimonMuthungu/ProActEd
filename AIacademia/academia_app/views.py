@@ -8,7 +8,7 @@ from django.http import Http404 , JsonResponse
 from django.shortcuts import redirect, render
 
 # from python_scripts.recommender_clustering_pooling import load_model
-from .forms import UserProfileForm
+
 from .models import UserProfile
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
@@ -17,7 +17,6 @@ from .forms import UserProfileForm
 from .models import Course, School  # Import Course and School models
 from django.core.mail import send_mail
 
-from django import joblib
 from .models import Course, School, Recommender_training_data  # Import Course and School models
 
 from django.contrib import messages

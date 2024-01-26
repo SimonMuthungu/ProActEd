@@ -3,7 +3,6 @@ from django.urls import include, path
 
 from django.urls import path
 
-from .views import inbox, send_message
 
 from . import views
 from . import admin
@@ -20,7 +19,7 @@ urlpatterns = [
     
    
 
-    path('admin/', admin.site.urls),
+    
     path('', views.course_recommendation, name='course_recommendation'),
     path('login/', views.login_view, name='login'),
     path('dashboard/', views.dashboard, name='dashboard'),
