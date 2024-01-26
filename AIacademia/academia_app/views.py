@@ -2,7 +2,8 @@ import logging
 import sys
 # sys.path.append(r'C:\Users\Simon\proacted\AIacademia') 
 
-
+from django.http import Http404 , JsonResponse
+from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
@@ -348,3 +349,22 @@ def index(request):
     rendered_form = form.render("Student_Page.html")
     context = {"form": rendered_form}
     return render(request, "index.html", context)
+@login_required
+def inbox(request):
+    received_messages = Message.objects.filter(recipient=request.user)
+    sent_messages = Message.objects.filter(sender=request.user)
+    users = BaseUser.objects.exclude(id=request.user.id)
+    return render(request, 'academia_app/inbox.html', {'received_messages': received_messages, 'sent_messages': sent_messages, 'users': users})
+
+@login_required
+def send_message(request, recipient_id):
+    if request.method == 'POST':
+        recipient = BaseUser.objects.get(id=recipient_id)
+        content = request.POST.get('content', '')
+        message = Message.objects.create(sender=request.user, recipient=recipient, content=content)
+        return render(request, 'academia_app/send_message.html', {'message_sent': True, 'recipient_id': recipient_id})
+
+    # Added the following for debugging
+    print("Recipient ID:", recipient_id)
+
+    return render(request, 'academia_app/send_message.html', {'recipient_id': recipient_id})
