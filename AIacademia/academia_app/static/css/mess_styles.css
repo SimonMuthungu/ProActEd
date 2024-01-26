@@ -1,0 +1,49 @@
+/* static/css/styles.css */
+
+/* Add styles for inbox */
+#inbox-container {
+	display: flex;
+}
+
+	#inbox-container > div {
+		margin-right: 20px;
+	}
+
+/* Style for messages */
+.message-list {
+	list-style-type: none;
+	padding: 0;
+}
+
+	.message-list li {
+		margin-bottom: 10px;
+	}
+
+/* Style for new message form */
+#new-message-form {
+	margin-top: 20px;
+}
+
+/* Style for links in the sidebar */
+#sidebar a {
+	text-decoration: none;
+	color: #333;
+}
+
+#sidebar ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+#sidebar li {
+	margin-bottom: 5px;
+}
+
+/* Style for message preview in inbox */
+.message-preview {
+	cursor: pointer;
+}
+
+	.message-preview:hover {
+		background-color: #f0f0f0;
+	}

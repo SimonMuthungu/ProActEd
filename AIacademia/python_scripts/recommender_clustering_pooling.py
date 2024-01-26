@@ -300,7 +300,7 @@ if __name__ == 'main':
 
 
 
-    top_5_indices = combined_total_similarity.argsort()[-10:][::-1]
+    top_5_indices = combined_total_similarity.argsort()[-5:][::-1]
     top_5_courses = df['Course Name'].iloc[top_5_indices].tolist() 
 
 

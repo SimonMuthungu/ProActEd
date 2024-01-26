@@ -52,7 +52,9 @@ def login_view(request):
         password = request.POST.get('password')
         user = authenticate(request, username=username, password=password)
         
+
         if user is not None:
+
             if user.is_active:
                 login(request, user)
                 # Redirect based on user type

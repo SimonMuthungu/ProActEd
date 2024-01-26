@@ -115,3 +115,36 @@ INFO || 26-Jan-24 05:18:19 || Beginning to run the recommender script
 INFO || 26-Jan-24 05:18:19 || Recommender model loaded and running
 INFO || 26-Jan-24 05:18:19 || Processing request...
 INFO || 26-Jan-24 05:18:58 || Recommender system has run
+INFO || 26-Jan-24 07:58:16 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 26-Jan-24 08:02:57 || Beginning to run the recommender script
+INFO || 26-Jan-24 08:02:57 || Recommender model loaded and running
+INFO || 26-Jan-24 08:02:57 || Processing request...
+CRITICAL || 26-Jan-24 08:03:48 || Something came up, please rerun the system...
+INFO || 26-Jan-24 08:03:48 || Recommender system has run
+ERROR || 26-Jan-24 08:03:48 || Internal Server Error: /recommend_courses
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view academia_app.views.recommend_courses didn't return an HttpResponse object. It returned None instead.
+INFO || 26-Jan-24 08:05:16 || Beginning to run the recommender script
+INFO || 26-Jan-24 08:05:16 || Recommender model loaded and running
+INFO || 26-Jan-24 08:05:16 || Processing request...
+INFO || 26-Jan-24 08:05:59 || Recommender system has run
+INFO || 26-Jan-24 08:06:47 || Beginning to run the recommender script
+INFO || 26-Jan-24 08:06:47 || Recommender model loaded and running
+INFO || 26-Jan-24 08:06:47 || Processing request...
+INFO || 26-Jan-24 08:07:26 || Recommender system has run
+INFO || 26-Jan-24 08:08:01 || Beginning to run the recommender script
+INFO || 26-Jan-24 08:08:01 || Recommender model loaded and running
+INFO || 26-Jan-24 08:08:01 || Processing request...
+INFO || 26-Jan-24 08:08:50 || Recommender system has run
+INFO || 26-Jan-24 08:13:13 || Beginning to run the recommender script
+INFO || 26-Jan-24 08:13:13 || Recommender model loaded and running
+INFO || 26-Jan-24 08:13:13 || Processing request...
+INFO || 26-Jan-24 08:13:49 || Recommender system has run
+INFO || 26-Jan-24 08:16:03 || C:\Users\Simon\proacted\AIacademia\academia_app\urls.py changed, reloading.
