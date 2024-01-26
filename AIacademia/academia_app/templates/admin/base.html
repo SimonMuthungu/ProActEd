@@ -2,72 +2,64 @@
 {% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
 <html lang="{{ LANGUAGE_CODE|default:"en-us" }}" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr,auto' }}">
 <head>
-<title>{% block title %}{% endblock %}</title>
-<link rel="stylesheet" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}">
-{% block dark-mode-vars %}
-  <link rel="stylesheet" href="{% static "admin/css/dark_mode.css" %}">
-  <script src="{% static "admin/js/theme.js" %}" defer></script>
-{% endblock %}
-{% block extrastyle %}{% endblock %}
-{% if LANGUAGE_BIDI %}<link rel="stylesheet" href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}">{% endif %}
-{% block extrahead %}
-<script src="{% static 'js/custom_admin.js' %}"></script>
-{% endblock %}
-{% block responsive %}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static "admin/css/responsive.css" %}">
-    {% if LANGUAGE_BIDI %}<link rel="stylesheet" href="{% static "admin/css/responsive_rtl.css" %}">{% endif %}
-{% endblock %}
-{% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE">{% endblock %}
+      <title>{% block title %}{% endblock %}</title>
+      <link rel="stylesheet" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}">
+
+      {% block dark-mode-vars %}
+        <link rel="stylesheet" href="{% static "admin/css/dark_mode.css" %}">
+        <script src="{% static "admin/js/theme.js" %}" defer></script>
+      {% endblock %}
+
+      {% block extrastyle %}{% endblock %}
+
+      {% if LANGUAGE_BIDI %}<link rel="stylesheet" href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}">{% endif %}
+
+      {% block extrahead %}
+      <script src="{% static 'js/custom_sidebar.js' %}"></script>
+      <link rel="stylesheet" type="text/css" href="{% static 'admin/css/custom.css' %}" />
+      {% endblock %}
+
+      {% block responsive %}
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="{% static "admin/css/responsive.css" %}">
+          {% if LANGUAGE_BIDI %}<link rel="stylesheet" href="{% static "admin/css/responsive_rtl.css" %}">{% endif %}
+      {% endblock %}
+
+      {% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE">{% endblock %}
 </head>
 
-<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}"
-  data-admin-utc-offset="{% now "Z" %}">
+<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}" data-admin-utc-offset="{% now "Z" %}">
 <a href="#content-start" class="skip-to-content-link">{% translate 'Skip to main content' %}</a>
 <!-- Container -->
 <div id="container">
-
-    {% if not is_popup %}
+    {% if not is_popup %}{% endif %}
+    
     <!-- Header -->
     {% block header %}
       <header id="header">
         <div id="branding">
-        {% block branding %}{% endblock %}
+        {% block branding %}
+        {% endblock %}
         </div>
         {% block usertools %}
-        {% if has_permission %}
-        <div id="user-tools">
-            {% block welcome-msg %}
-                {% translate 'Welcome,' %}
-                <strong>{% firstof user.get_short_name user.get_username %}</strong>.
-            {% endblock %}
-            {% block userlinks %}
-                {% if user.is_active and user.is_staff %}
-                    {% url 'django-admindocs-docroot' as docsroot %}
-                    {% if docsroot %}
-                        <a href="{{ docsroot }}">{% translate 'Documentation' %}</a> /
-                    {% endif %}
-                {% endif %}
-                {% include "admin/color_theme_toggle.html" %}
-            {% endblock %}
-        </div>
-        {% endif %}
+          {% if has_permission %}
+          <div id="user-tools">
+              {% block userlinks %}
+                  {% if user.is_active and user.is_staff %}
+                      {% url 'django-admindocs-docroot' as docsroot %}
+                      {% if docsroot %}
+                          <a href="{{ docsroot }}">{% translate 'Documentation' %}</a> /
+                      {% endif %}
+                  {% endif %}
+                  {% include "admin/color_theme_toggle.html" %}
+              {% endblock %}
+            </div>
+          {% endif %}
         {% endblock %}
         {% block nav-global %}{% endblock %}
       </header>
     {% endblock %}
     <!-- END Header -->
-    {% block nav-breadcrumbs %}
-      <nav aria-label="{% translate 'Breadcrumbs' %}">
-        {% block breadcrumbs %}
-          <div class="breadcrumbs">
-            <a href="{% url 'admin:index' %}">{% translate 'Home' %}</a>
-            {% if title %} &rsaquo; {{ title }}{% endif %}
-          </div>
-        {% endblock %}
-      </nav>
-    {% endblock %}
-    {% endif %}
 
     <div class="main" id="main">
       <main id="content-start" class="content" tabindex="-1">
@@ -81,11 +73,12 @@
         
         <!-- Content -->
         <div id="content" class="{% block coltype %}colM{% endblock %}">
+          {% if request.path == '/' or request.path == '/admin/' %}
+          {% include "admin/profile.html" %}
+          {% endif %}
           {% block pretitle %}{% endblock %}
           {% block content_subtitle %}{% if subtitle %}<h2>{{ subtitle }}</h2>{% endif %}{% endblock %}
           {% block content %}
-            {% block object-tools %}{% endblock %}
-            {{ content }}
           {% endblock %}
           <br class="clear">
         </div>

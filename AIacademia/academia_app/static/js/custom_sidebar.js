@@ -1,14 +1,26 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var coll = document.querySelectorAll(".collapsible, .collapsible-item");
+    console.log("Script loaded and DOM fully loaded");
+    var collapsibleHeaders = document.querySelectorAll(".collapsible");
+    var collapsibleItems = document.querySelectorAll(".collapsible-item");
 
-    coll.forEach(function(el) {
-        el.addEventListener("click", function() {
-            this.classList.toggle("active");
+    collapsibleHeaders.forEach(function(header) {
+        console.log("Collapsible headers");
+        header.addEventListener("click", function() {
             var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
+
+            if (content && content.classList.contains('side_bar_content')) {
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            }
+        });
+    });
+
+    collapsibleItems.forEach(function(item) {
+        console.log("Collapsible-items");
+        item.addEventListener("click", function() {
+            var content = this.nextElementSibling;
+
+            if (content && content.classList.contains('sub-content')) {
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
             }
         });
     });
