@@ -15,5 +15,6 @@ urlpatterns = [
     path("recommend_courses", views.recommend_courses, name="recommend_courses"),
     path('logout/', LogoutView.as_view(next_page='course_recommendation'), name='logout'),
     path('course_recommendation/', views.course_recommendation, name='course_recommendation'),
-    path('predict_probability/', views.pred)
-]
+    # path('predict/', views.predict, name='predict'),
+    # path('predict/probability/', views.predict_probability, name='predict_probability'),
+    ]

@@ -1,12 +1,7 @@
 import sys
 import os
 
-# Get the directory path of the current script
-current_dir = os.path.dirname(os.path.abspath(__file__))
-
-# Add the directory containing your custom module to the Python path
-module_dir = os.path.join(current_dir, r'C:\Users\Simon\proacted\AIacademia\python_scripts\prepare_recommender_dataset.py') 
-sys.path.append(module_dir)
+sys.path.append(r'C:\Users\Simon\proacted\AIacademia') 
 
 
 
@@ -217,8 +212,28 @@ def load_model(users_interests, activities_users_have_enjoyed_in_the_past):
     df['Concatenated Avg Pooled Objective Vectors'] = df.apply(lambda row: concatenate_avg_pooled_vectors(row['Vectorized Objectives'], row['Objective Clusters']), axis=1)
     df['Concatenated Avg Pooled General Info Vectors'] = df.apply(lambda x: concatenate_avg_pooled_vectors(x['Vectorized General Info'], x['General Info Clusters']), axis=1)
     print('Pooling and concatenation... Done!\n')
+    print(np.array(df['Concatenated Avg Pooled General Info Vectors'][0]).shape)
+
+    # excel_file_path = 'data_files/checkingvectors.xlsx'
+
+    # with pd.ExcelWriter(excel_file_path, engine='openpyxl', mode='w') as writer:
+    #     df['Concatenated Avg Pooled Objective Vectors'].to_excel(writer, sheet_name='Sheet1', index=False)
+
+    print('done writing, cancel now')
 
     # df['Pooled Prerequisites'] = df.apply(lambda x: avg_pooling(x['Vectorized General Info'], x['General Info Clusters']), axis=1)
+
+    from academia_app.models import Recommender_training_data_number_vectors
+
+    for index, row in df.iterrows():
+        vector_record = Recommender_training_data_number_vectors(
+            course_name=row['Course Name'],
+            course_objectives=row['Concatenated Avg Pooled Objective Vectors'],
+            course_general_info_and_about=row['Concatenated Avg Pooled General Info Vectors']
+        )
+        vector_record.save()
+
+    print('Number vectors saved, cancel now...')
 
 
     # Function to convert user input into Word2Vec vectors weighted by TF-IDF scores
@@ -308,11 +323,11 @@ def load_model(users_interests, activities_users_have_enjoyed_in_the_past):
 #this is for testing the script above, during production, it should hashed out
 
 
-# user_int = "I have a deep interest in health and fitness, focusing on nutrition, exercise, and mental well-being. My goal is to understand the science behind physical fitness and to apply this knowledge in developing holistic health programs. I am keen on exploring the psychological aspects of fitness and how they intersect with physical health, aiming to promote a balanced lifestyle."
+user_int = "I have a deep interest in health and fitness, focusing on nutrition, exercise, and mental well-being. My goal is to understand the science behind physical fitness and to apply this knowledge in developing holistic health programs. I am keen on exploring the psychological aspects of fitness and how they intersect with physical health, aiming to promote a balanced lifestyle."
 
-# activities_enjyd = "I regularly engage in various physical activities like yoga, running, and weight training. I enjoy preparing nutritious meals and experimenting with healthy recipes. I often participate in local fitness challenges and marathons. Additionally, I attend workshops on nutrition and mental wellness, and enjoy reading books and articles related to health and fitness. I also volunteer as a fitness coach at my local community center, helping others achieve their health goals."
-
-
+activities_enjyd = "I regularly engage in various physical activities like yoga, running, and weight training. I enjoy preparing nutritious meals and experimenting with healthy recipes. I often participate in local fitness challenges and marathons. Additionally, I attend workshops on nutrition and mental wellness, and enjoy reading books and articles related to health and fitness. I also volunteer as a fitness coach at my local community center, helping others achieve their health goals."
 
 
-# print(load_model(user_int, activities_enjyd))
+
+
+print(load_model(user_int, activities_enjyd))

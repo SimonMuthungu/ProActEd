@@ -88,7 +88,8 @@ def admin_page(request):
 def admin_login_view(request):
     # Your view logic for admin login goes here
     return render(request, "admin_login.html")  # Replace "admin_login.html" with the actual template
-
+def predict(request):
+    return render(request, 'academia_app/predict.html')
     
 
 # loading the script and generating output
@@ -123,19 +124,29 @@ def recommend_courses(request):
         
         
 def predict_probability(request):
-    model = joblib.load('AIacademia/trained_models/no_bias_trainedw_100000_10288genii.joblib')
-    logging.info('Probability model loaded')
-    # request_data = 
+    if request.method == 'POST':
+        model = joblib.load('AIacademia/trained_models/no_bias_trainedw_100000_10288genii.joblib')
+        logging.info('Probability model loaded')
 
-    # # Predict probabilities
-    # probabilities = model.predict_proba(request_data)
+        feature1 = request.POST.get('feature1')
+        feature2 = request.POST.get('feature2')
+        
 
-    return probabilities
+        input_data = [[feature1, feature2]]
+
+
+        # # Predict probabilities
+        prediction = model.predict_proba(input_data)
+
+        context = {'prediction': prediction[0]}
+        return HttpResponse(f'Calculated Probability: {prediction}')
+
+    return render(request, 'academia_app/predict.html') 
+
     
-     # Processing the fetched data as needed
+
     
 
-   # probabilities = model.predict_proba(list(zip(feature1_values, feature2_values)))[:, 1]           
 @login_required
 def dashboard(request):
     # Redirect users based on their type
