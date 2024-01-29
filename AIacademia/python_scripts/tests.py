@@ -50,5 +50,3 @@ else:
 # else:
 #     print("Failed to retrieve the CSRF token from the API.")
 
-
-
