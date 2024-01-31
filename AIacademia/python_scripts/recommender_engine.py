@@ -226,10 +226,14 @@ def load_model(users_interests, activities_users_have_enjoyed_in_the_past):
     from academia_app.models import Recommender_training_data_number_vectors
 
     for index, row in df.iterrows():
+
+        objective_hex = row['Concatenated Avg Pooled Objective Vectors'].tobytes().hex()
+        general_info_hex = row['Concatenated Avg Pooled General Info Vectors'].tobytes().hex()
+
         vector_record = Recommender_training_data_number_vectors(
             course_name=row['Course Name'],
-            course_objectives=row['Concatenated Avg Pooled Objective Vectors'],
-            course_general_info_and_about=row['Concatenated Avg Pooled General Info Vectors']
+            course_objectives=objective_hex,
+            course_general_info_and_about=general_info_hex
         )
         vector_record.save()
 
@@ -331,3 +335,9 @@ activities_enjyd = "I regularly engage in various physical activities like yoga,
 
 
 print(load_model(user_int, activities_enjyd))
+
+
+
+
+for the hexadecimal data, i wrote a dataframe to a database as follows: objective_hex = row['Concatenated Avg Pooled Objective Vectors'].tobytes().hex()
+        general_info_hex = row['Concatenated Avg Pooled General Info Vectors'].tobytes().hex(). Now, the data is stored in dbsqlite3 browser

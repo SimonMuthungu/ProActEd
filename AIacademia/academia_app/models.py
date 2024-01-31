@@ -173,18 +173,21 @@ class Recommender_training_data_tokenized_sentences(models.Model):
 
 
 class Recommender_training_data_byte_vectors(models.Model):
-    course_name = models.CharField(max_length=100)
-    course_objectives = models.CharField(max_length=100)
-    course_general_info_and_about = models.CharField(max_length=100)
-    general_prerequisites = models.CharField(max_length=100)
-    subject_prerequisites = models.CharField(max_length=100)
-
-class Recommender_training_data_number_vectors(models.Model):
     course_name = models.CharField(max_length=200)
     course_objectives = models.BinaryField()
     course_general_info_and_about = models.BinaryField()
     general_prerequisites = models.BinaryField()
     subject_prerequisites = models.BinaryField()
+
+
+# to store hexadec values, seemingly direct numbers cant be stored
+    
+class Recommender_training_data_number_vectors(models.Model):
+    course_name = models.CharField(max_length=200)
+    course_objectives = models.CharField(max_length=5000)  # Adjust max_length as needed
+    course_general_info_and_about = models.CharField(max_length=5000)
+    general_prerequisites = models.CharField(max_length=5000)
+    subject_prerequisites = models.CharField(max_length=5000)
 
 
     def __str__(self):
