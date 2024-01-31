@@ -27,9 +27,9 @@ if __name__ == 'main':
 
 
         # getting courses descriptions' vectors from django dbsqlite3
-        from academia_app.models import Recommender_training_data_byte_vectors
+        from academia_app.models import Recommender_training_data_number_vectors
 
-        all_courses = Recommender_training_data_byte_vectors.objects.all()
+        all_courses = Recommender_training_data_number_vectors.objects.all()
 
         
         # Loading the word2Vec model
@@ -40,16 +40,27 @@ if __name__ == 'main':
         vectorized_user_interests = clustered_weighted_vector(users_interests, model, objectives_vectorizer)
         # vectorized_activities_enjoyed = clustered_weighted_vector(activities_users_have_enjoyed_in_the_past, model, generalinfoandabout_vectorizer)
         print('Successfully vectorized student input...')
-        print(vectorized_user_interests.shape)
+        logging.info('Successfully vectorized student input...')
+        print(f"vectorized_user_interests' shape: {vectorized_user_interests.shape}")
 
 
         # Iterate through the courses in the database to calculate cosine similarity
         for course in all_courses:
-            # Deserialize the byte vectors to NumPy arrays
-            objective_vector = np.frombuffer(course.course_objectives.encode('utf-8'), dtype=np.float32)
-            print(len(objective_vector))
-            # general_info_vector = np.frombuffer(course.course_general_info_and_about.encode('utf-8'), dtype=np.float32)
+            # Read and Deserialize the hex vectors to bytes first
+            course_objectives_hex = course.course_objectives
 
+            # Convert hexadecimal string to bytes
+            course_objectives_bytes = bytes.fromhex(course_objectives_hex)
+
+            # Convert bytes to a NumPy array (assuming the data is stored as float64)
+            course_objectives_array = np.frombuffer(course_objectives_bytes, dtype=np.float64)
+
+            # Reshape the array to the desired shape (e.g., 2100 dimensions)
+            course_objectives_array = course_objectives_array.reshape((2100,))
+
+
+            # now with the vector representing this course, we want to calculate cosine similarity
+            # between the users inputs and this course's vector
             vectorized_user_interests_matrix = np.array([vectorized_user_interests])
             objective_vector_matrix = np.array([objective_vector])
 
