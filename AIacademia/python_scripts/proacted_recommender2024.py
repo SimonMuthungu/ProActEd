@@ -1,6 +1,9 @@
 if __name__ == '__main__': 
     # This is the final proacted recommender system
 
+    import time
+
+    starttime = time.time()
     import logging
     import sys, os, django
     import joblib
@@ -15,7 +18,7 @@ if __name__ == '__main__':
 
     logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S') 
 
-    def proacted2024(users_interests, activities_users_have_enjoyed_in_the_past, top_n=5):
+    def proacted2024(users_interests, activities_users_have_enjoyed_in_the_past, top_n=5, showtime=True):
 
         logging.info('Pro-Act-Ed 2024 Recommender Engine Initialized')
         print("started proacted 2024")
@@ -49,7 +52,6 @@ if __name__ == '__main__':
         vectorized_activities_enjoyed_2d = vectorized_activities_enjoyed.reshape(1, -1)
 
         print('Successfully vectorized and reshaped student input...')
-        logging.info('Successfully vectorized student input...')
         print(f"vectorized_user_interests' shape: {vectorized_user_interests.shape}")
 
 
@@ -93,13 +95,22 @@ if __name__ == '__main__':
         top_courses = combined_scores[:top_n]
         
         # print(f"Top {top_n} courses list: {combined_scores[:top_n]}")
+
+        # reporting time used in mainlog file
+        if showtime == True:
+            endtime = time.time()
+            timespent = f"time recommender model has used: {endtime - starttime}"
+            print(timespent) 
+            logging.info(timespent)
+
+
         return top_courses
 
 
 
-    user_int = "I am dedicated to making a meaningful contribution to the realm of education and learning. My goal is to revolutionize traditional teaching methods and enhance access to quality education for all. I am enthusiastic about exploring innovative technologies and digital tools to create engaging and interactive learning experiences. I aspire to empower educators and learners alike by promoting inclusive and accessible educational platforms that cater to diverse needs and foster a lifelong love for learning."
+    user_int = "I have a deep interest in health and fitness, focusing on nutrition, exercise, and mental well-being. My goal is to understand the science behind physical fitness and to apply this knowledge in developing holistic health programs. I am keen on exploring the psychological aspects of fitness and how they intersect with physical health, aiming to promote a balanced lifestyle."
 
-    activities_enjyd = "I engage in various activities that align with my passion for education and technology. I enjoy creating and sharing educational content on online platforms, such as developing instructional videos and interactive lessons. Additionally, I actively participate in educational technology workshops and conferences to stay updated on the latest advancements in the field. Furthermore, I volunteer my time to tutor and mentor students, helping them grasp challenging concepts and cultivate a love for learning. These activities not only allow me to pursue my interests but also contribute to my professional growth in the field of education and technology."
+    activities_enjyd = "I regularly engage in various physical activities like yoga, running, and weight training. I enjoy preparing nutritious meals and experimenting with healthy recipes. I often participate in local fitness challenges and marathons. Additionally, I attend workshops on nutrition and mental wellness, and enjoy reading books and articles related to health and fitness. I also volunteer as a fitness coach at my local community center, helping others achieve their health goals."
 
 
     print(proacted2024(user_int, activities_enjyd))
