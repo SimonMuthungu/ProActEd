@@ -1,4 +1,4 @@
-if __name__ == 'main': 
+if __name__ == '__main__': 
     # This is the final proacted recommender system
 
     import logging
@@ -15,9 +15,10 @@ if __name__ == 'main':
 
     logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S') 
 
-    def proacted2024(users_interests, activities_users_have_enjoyed_in_the_past):
+    def proacted2024(users_interests, activities_users_have_enjoyed_in_the_past, top_n=5):
 
         logging.info('Pro-Act-Ed 2024 Recommender Engine Initialized')
+        print("started proacted 2024")
 
 
         # setting up django environment to interact with django from this script
@@ -28,47 +29,72 @@ if __name__ == 'main':
 
         # getting courses descriptions' vectors from django dbsqlite3
         from academia_app.models import Recommender_training_data_number_vectors
+        print("Imported records from db")
 
         all_courses = Recommender_training_data_number_vectors.objects.all()
 
         
-        # Loading the word2Vec model
+        print("Loading word2vec...")
+        # Loading the model, download the word2Vec binary file and specify its location here
         model = joblib.load(r'C:\Users\Simon\proacted_googleds\word2vec_model.pkl')
 
 
         # vectorizing student input from the UI
+        print("Vectorizing student input")
         vectorized_user_interests = clustered_weighted_vector(users_interests, model, objectives_vectorizer)
-        # vectorized_activities_enjoyed = clustered_weighted_vector(activities_users_have_enjoyed_in_the_past, model, generalinfoandabout_vectorizer)
-        print('Successfully vectorized student input...')
+        vectorized_activities_enjoyed = clustered_weighted_vector(activities_users_have_enjoyed_in_the_past, model, generalinfoandabout_vectorizer)
+        print("vectorized all student input")
+
+        vectorized_user_interests_2d = vectorized_user_interests.reshape(1, -1)
+        vectorized_activities_enjoyed_2d = vectorized_activities_enjoyed.reshape(1, -1)
+
+        print('Successfully vectorized and reshaped student input...')
         logging.info('Successfully vectorized student input...')
         print(f"vectorized_user_interests' shape: {vectorized_user_interests.shape}")
 
 
+        # Create an empty list to store combined similarity scores and course identifiers
+        combined_scores = []
+
         # Iterate through the courses in the database to calculate cosine similarity
+        print("beginning to iterate the db for hexadecs")
         for course in all_courses:
             # Read and Deserialize the hex vectors to bytes first
             course_objectives_hex = course.course_objectives
+            generalinfoandabout_hex = course.course_general_info_and_about
 
             # Convert hexadecimal string to bytes
             course_objectives_bytes = bytes.fromhex(course_objectives_hex)
+            generalinfoandabout_bytes = bytes.fromhex(generalinfoandabout_hex)
 
             # Convert bytes to a NumPy array (assuming the data is stored as float64)
             course_objectives_array = np.frombuffer(course_objectives_bytes, dtype=np.float64)
+            generalinfoandabout_array = np.frombuffer(generalinfoandabout_bytes, dtype=np.float64)
 
             # Reshape the array to the desired shape (e.g., 2100 dimensions)
             course_objectives_array = course_objectives_array.reshape((2100,))
+            generalinfoandabout_array = generalinfoandabout_array.reshape((2100,))
 
+            # Calculate cosine similarity for each vector (objectives vs student input)
+            objective_similarity = cosine_similarity(vectorized_user_interests_2d, course_objectives_array.reshape(1, -1))[0][0]
+            general_info_similarity = cosine_similarity(vectorized_activities_enjoyed_2d, generalinfoandabout_array.reshape(1, -1))[0][0] 
 
-            # now with the vector representing this course, we want to calculate cosine similarity
-            # between the users inputs and this course's vector
-            vectorized_user_interests_matrix = np.array([vectorized_user_interests])
-            objective_vector_matrix = np.array([objective_vector])
+            # Combining the similarities - here were simply take the average
+            combined_similarity = (objective_similarity + general_info_similarity) / 2
 
-            # Calculate cosine similarity for each vector
-            objective_similarity = cosine_similarity(vectorized_user_interests_matrix, objective_vector_matrix)[0][0]
-            # general_info_similarity = cosine_similarity(vectorized_activities_enjoyed, general_info_vector)[0][0]
+            # Appending the combined score and course identifier to the list
+            combined_scores.append((course.course_name, combined_similarity)) 
 
-            print(objective_similarity)
+            # Sort the combined scores in descending order based on similarity score
+            combined_scores.sort(key=lambda x: x[1], reverse=True)
+
+            
+        # Recommended N courses
+        top_courses = combined_scores[:top_n]
+        
+        # print(f"Top {top_n} courses list: {combined_scores[:top_n]}")
+        return top_courses
+
 
 
     user_int = "I am dedicated to making a meaningful contribution to the realm of education and learning. My goal is to revolutionize traditional teaching methods and enhance access to quality education for all. I am enthusiastic about exploring innovative technologies and digital tools to create engaging and interactive learning experiences. I aspire to empower educators and learners alike by promoting inclusive and accessible educational platforms that cater to diverse needs and foster a lifelong love for learning."
@@ -76,4 +102,4 @@ if __name__ == 'main':
     activities_enjyd = "I engage in various activities that align with my passion for education and technology. I enjoy creating and sharing educational content on online platforms, such as developing instructional videos and interactive lessons. Additionally, I actively participate in educational technology workshops and conferences to stay updated on the latest advancements in the field. Furthermore, I volunteer my time to tutor and mentor students, helping them grasp challenging concepts and cultivate a love for learning. These activities not only allow me to pursue my interests but also contribute to my professional growth in the field of education and technology."
 
 
-    proacted2024(user_int, activities_enjyd)
+    print(proacted2024(user_int, activities_enjyd))

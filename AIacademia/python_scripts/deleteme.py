@@ -1,18 +1,14 @@
-import os
-import sys
-import django
-import re
+from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 
-sys.path.append(r'C:\Users\Simon\proacted\AIacademia') 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'AIacademia.settings')
-django.setup()
+x = [[1.2, 1.0, 2.4]]
+y = [[10.9, 10.04, 11.3]]
+z = np.array(x)
+u = np.array(y) 
 
-from academia_app.models import Recommender_training_data
+# z.reshape(1, -1)
+# u.reshape(1, -1) 
 
-# Query the database to find the row with the longest course description
-longest_description_row = Recommender_training_data.objects.order_by('-course_general_info_and_about').first()
 
-# Print the course name and the length of the course description
-print("Course Name:", longest_description_row.course_name)
-print("Length of Course Description:", len(longest_description_row.course_general_info_and_about))
+sim = cosine_similarity(z, u)
+print(sim[0][0])

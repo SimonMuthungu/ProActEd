@@ -26,7 +26,7 @@ if record:
     # Convert hexadecimal string to bytes
     course_objectives_bytes = bytes.fromhex(course_objectives_hex)
     
-    # Convert bytes to a NumPy array (assuming the data is stored as float32)
+    # Convert bytes to a NumPy array (assuming the data is stored as float64)
     course_objectives_array = np.frombuffer(course_objectives_bytes, dtype=np.float64)
     
     # Reshape the array to the desired shape (e.g., 2100 dimensions)
@@ -34,6 +34,6 @@ if record:
     
     # print("Hexadecimal:", course_objectives_hex)
     print("Array Shape:", course_objectives_array.shape)
-    print("Array Data:", course_objectives_array)
+    print("Array Data:", type(course_objectives_array))
 else:
     print("No records found in the original table.")
