@@ -87,12 +87,15 @@ if __name__ == '__main__':
             # Appending the combined score and course identifier to the list
             combined_scores.append((course.course_name, combined_similarity)) 
 
-            # Sort the combined scores in descending order based on similarity score
-            combined_scores.sort(key=lambda x: x[1], reverse=True)
+        # Sort the combined scores in descending order based on similarity score
+        combined_scores.sort(key=lambda x: x[1], reverse=True)
 
             
         # Recommended N courses
         top_courses = combined_scores[:top_n]
+
+        top_course_names = [course_name for course_name, _ in top_courses]
+
         
         # print(f"Top {top_n} courses list: {combined_scores[:top_n]}")
 
@@ -104,7 +107,7 @@ if __name__ == '__main__':
             logging.info(timespent)
 
 
-        return top_courses
+        return top_course_names
 
 
 
