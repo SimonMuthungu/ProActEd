@@ -791,3 +791,12 @@ INFO || 02-Feb-24 07:32:00 || Pro-Act-Ed 2024 Recommender Engine Initialized
 INFO || 02-Feb-24 07:32:11 || time recommender model has used: 12.439636945724487
 INFO || 02-Feb-24 07:35:19 || Pro-Act-Ed 2024 Recommender Engine Initialized
 INFO || 02-Feb-24 07:35:29 || time recommender model has used: 12.27060317993164
+INFO || 02-Feb-24 07:36:43 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 02-Feb-24 07:36:53 || time recommender model has used: 12.057013273239136
+INFO || 04-Feb-24 19:56:25 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 04-Feb-24 19:56:55 || time recommender model has used: 38.0347158908844
+WARNING || 04-Feb-24 19:57:17 || Not Found: /favicon.ico
+INFO || 04-Feb-24 19:58:14 || Beginning to run the recommender script
+INFO || 04-Feb-24 19:58:14 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 04-Feb-24 19:58:44 || time recommender model has used: 146.59151935577393
+INFO || 04-Feb-24 19:58:44 || Recommender system has run

@@ -1,6 +1,4 @@
-import time
+import os
 
-starttime = time.time()
-time.sleep(3)
-endtime = time.time()
-print(endtime - starttime)  
+directory_path = 'C:/Users/Simon/proacted_googleds/sbert_files'
+print(os.listdir(directory_path))

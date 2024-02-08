@@ -8,7 +8,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect, render
-from python_scripts.recommender_engine import load_model
+from python_scripts.proacted_recommender2024 import proacted2024
 from .forms import UserProfileForm
 from .models import UserProfile
 from django.http import HttpResponseRedirect
@@ -109,7 +109,7 @@ def recommend_courses(request):
             # Load the model and get the output
             print("\nBeginning to run the recommender script")
             logging.info("Beginning to run the recommender script")
-            recommendations = load_model(user_description_about_interests, user_activities_enjoyed)
+            recommendations = proacted2024(user_description_about_interests, user_activities_enjoyed)
             print(f"here are the recommendations: {recommendations}")
             context = {'recommendations': recommendations}
             return render(request, 'academia_app/recommended_courses.html', context)
