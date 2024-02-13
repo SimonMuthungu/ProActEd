@@ -800,3 +800,7 @@ INFO || 04-Feb-24 19:58:14 || Beginning to run the recommender script
 INFO || 04-Feb-24 19:58:14 || Pro-Act-Ed 2024 Recommender Engine Initialized
 INFO || 04-Feb-24 19:58:44 || time recommender model has used: 146.59151935577393
 INFO || 04-Feb-24 19:58:44 || Recommender system has run
+INFO || 12-Feb-24 12:07:00 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 12-Feb-24 12:07:33 || time recommender model has used: 38.16014814376831
+INFO || 12-Feb-24 12:07:46 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 12-Feb-24 12:08:03 || time recommender model has used: 18.790717363357544

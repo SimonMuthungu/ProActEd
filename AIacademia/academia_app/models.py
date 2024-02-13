@@ -184,10 +184,15 @@ class Recommender_training_data_byte_vectors(models.Model):
     
 class Recommender_training_data_number_vectors(models.Model):
     course_name = models.CharField(max_length=200)
-    course_objectives = models.CharField(max_length=5000)  # Adjust max_length as needed
+    course_objectives = models.CharField(max_length=5000) 
     course_general_info_and_about = models.CharField(max_length=5000)
     general_prerequisites = models.CharField(max_length=5000)
     subject_prerequisites = models.CharField(max_length=5000)
+
+class RecommenderSBERTVectors(models.Model):
+    course_name = models.CharField(max_length=255, unique=True)
+    description_embedding = models.CharField(max_length=10000)
+    objectives_embedding = models.CharField(max_length=10000) 
 
 
     def __str__(self):
