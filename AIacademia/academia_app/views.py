@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect, render
 from python_scripts.proacted_recommender2024 import proacted2024
+from python_scripts.sbert_recommender import sbert_proactedrecomm2024
 from .forms import UserProfileForm
 from .models import UserProfile
 from django.http import HttpResponseRedirect
@@ -98,25 +99,32 @@ def recommend_courses(request):
         # Getting selected subjects with name
         user_subjects_done = request.POST.getlist('subjects[]')
         user_subjects_done = ' '.join(user_subjects_done).lower() 
+
+
         # Getting values from the interests field
         user_activities_enjoyed = request.POST.getlist('interests[]')
         user_activities_enjoyed = ' '.join(user_activities_enjoyed).lower() 
+
+
         # textarea
         user_description_about_interests = request.POST.getlist('additionalInfo')
-        user_description_about_interests = ''.join(user_activities_enjoyed).lower() 
+        user_description_about_interests = ''.join(user_description_about_interests).lower() 
         print(user_description_about_interests)
         try: 
             # Load the model and get the output
             print("\nBeginning to run the recommender script")
-            logging.info("Beginning to run the recommender script")
-            recommendations = proacted2024(user_description_about_interests, user_activities_enjoyed)
-            print(f"here are the recommendations: {recommendations}")
-            context = {'recommendations': recommendations}
+            logging.info("Beginning to run the proacted recommender script")
+            proacted_recommendations = proacted2024(user_description_about_interests, user_activities_enjoyed)
+            print(f"here are the proacted_recommendations: {proacted_recommendations}")
+            print(f"Done with proacted, proceeding to sbert recommender")
+            sbert_recommendations = sbert_proactedrecomm2024(user_description_about_interests, user_activities_enjoyed)
+            print(f"here are the sbert_recommendations: {sbert_recommendations}") 
+            context = {'proacted_recommendations': proacted_recommendations}
             return render(request, 'academia_app/recommended_courses.html', context)
         except:
             print('Something came up, please rerun the system...')
             logging.critical('Something came up, please rerun the system...')
-        # Pass recommendations to the template
+        # Pass proacted_recommendations to the template
         finally:
             logging.info('Recommender system has run')
             
