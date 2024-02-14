@@ -804,3 +804,38 @@ INFO || 12-Feb-24 12:07:00 || Pro-Act-Ed 2024 Recommender Engine Initialized
 INFO || 12-Feb-24 12:07:33 || time recommender model has used: 38.16014814376831
 INFO || 12-Feb-24 12:07:46 || Pro-Act-Ed 2024 Recommender Engine Initialized
 INFO || 12-Feb-24 12:08:03 || time recommender model has used: 18.790717363357544
+INFO || 14-Feb-24 06:29:54 || S-Bert 2024 Recommender Engine Initialized
+INFO || 14-Feb-24 06:29:54 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Feb-24 06:29:54 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Feb-24 06:29:54 || Starting new HTTPS connection (2): huggingface.co:443
+DEBUG || 14-Feb-24 06:29:54 || Starting new HTTPS connection (3): huggingface.co:443
+DEBUG || 14-Feb-24 06:29:54 || Starting new HTTPS connection (4): huggingface.co:443
+DEBUG || 14-Feb-24 06:29:54 || Starting new HTTPS connection (5): huggingface.co:443
+DEBUG || 14-Feb-24 06:29:54 || Starting new HTTPS connection (6): huggingface.co:443
+DEBUG || 14-Feb-24 06:29:55 || Starting new HTTPS connection (7): huggingface.co:443
+DEBUG || 14-Feb-24 06:29:55 || Starting new HTTPS connection (8): huggingface.co:443
+INFO || 14-Feb-24 06:29:55 || Use pytorch device_name: cpu
+INFO || 14-Feb-24 06:30:08 || Time taken by sbert model: 13.605860710144043
+INFO || 14-Feb-24 06:31:45 || S-Bert 2024 Recommender Engine Initialized
+INFO || 14-Feb-24 06:31:45 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Feb-24 06:31:45 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Feb-24 06:31:45 || Starting new HTTPS connection (2): huggingface.co:443
+DEBUG || 14-Feb-24 06:31:45 || Starting new HTTPS connection (3): huggingface.co:443
+DEBUG || 14-Feb-24 06:31:45 || Starting new HTTPS connection (4): huggingface.co:443
+DEBUG || 14-Feb-24 06:31:45 || Starting new HTTPS connection (5): huggingface.co:443
+DEBUG || 14-Feb-24 06:31:45 || Starting new HTTPS connection (6): huggingface.co:443
+DEBUG || 14-Feb-24 06:31:46 || Starting new HTTPS connection (7): huggingface.co:443
+DEBUG || 14-Feb-24 06:31:46 || Starting new HTTPS connection (8): huggingface.co:443
+INFO || 14-Feb-24 06:31:46 || Use pytorch device_name: cpu
+INFO || 14-Feb-24 06:31:57 || Time taken by sbert model: 11.895556926727295
+INFO || 14-Feb-24 06:35:50 || S-Bert 2024 Recommender Engine Initialized
+INFO || 14-Feb-24 06:35:50 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Feb-24 06:35:50 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Feb-24 06:35:50 || Starting new HTTPS connection (2): huggingface.co:443
+DEBUG || 14-Feb-24 06:35:50 || Starting new HTTPS connection (3): huggingface.co:443
+DEBUG || 14-Feb-24 06:35:50 || Starting new HTTPS connection (4): huggingface.co:443
+DEBUG || 14-Feb-24 06:35:50 || Starting new HTTPS connection (5): huggingface.co:443
+DEBUG || 14-Feb-24 06:35:50 || Starting new HTTPS connection (6): huggingface.co:443
+DEBUG || 14-Feb-24 06:35:51 || Starting new HTTPS connection (7): huggingface.co:443
+DEBUG || 14-Feb-24 06:35:51 || Starting new HTTPS connection (8): huggingface.co:443
+INFO || 14-Feb-24 06:35:51 || Use pytorch device_name: cpu

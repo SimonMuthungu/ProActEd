@@ -335,9 +335,3 @@ activities_enjyd = "I regularly engage in various physical activities like yoga,
 
 
 print(load_model(user_int, activities_enjyd))
-
-
-
-
-for the hexadecimal data, i wrote a dataframe to a database as follows: objective_hex = row['Concatenated Avg Pooled Objective Vectors'].tobytes().hex()
-        general_info_hex = row['Concatenated Avg Pooled General Info Vectors'].tobytes().hex(). Now, the data is stored in dbsqlite3 browser
