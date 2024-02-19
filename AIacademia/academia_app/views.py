@@ -51,7 +51,7 @@ def dashboard(request):
 @login_required
 def student_page(request):
     if request.user.groups.filter(name='Student Users').exists():
-        return render(request, "academia_app/student_page.html")
+        return render(request, "academia_app/student_page.html",context ={ 'text': 'Hello world'})
     else:
         if request.user.is_superuser or request.user.is_staff:
             return redirect('/admin/')
@@ -126,11 +126,12 @@ def Profile (request):
             if 'updated' in request.GET:
                 updated = True
     return render (request, 'academia_app/Profile.html', {'form': form, 'updated' : updated})
-def index(request):
-    form = forms()
-    rendered_form = form.render("Student_Page.html")
-    context = {"form": rendered_form}
-    return render(request, "index.html", context)
-def student (request):
-    return render (request, 'Student_Page.html', context ={ 'text': 'Hello world'})
+# def index(request):
+#     form = forms()
+#     rendered_form = form.render("Student_Page.html")
+#     context = {"form": rendered_form}
+#     return render(request, "index.html", context)
+#     return render(request, "student_page.html", context={'text': 'Hello world'})
+# def index (request):
+#     return render (request, 'academia_app/student_page.html', context ={ 'text': 'Hello world'})
 

@@ -35,3 +35,13 @@ function updateCourses(selectElement) {
 }
 
 // Add any additional JavaScript functionality as needed
+
+const button = document.querySelectorAll('.button');
+button.forEach(button => {
+    button.addEventListener('click', (event)=> {
+    event.preventDefault();
+    button.style.backgroundColor='#5e0361';
+    button.style.boxShadow= '0 0 40px pink ';
+    button.style.transition = '.2s ease';
+    });
+});

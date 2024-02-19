@@ -1,113 +1,44 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Recommendation</title>
-
-    <style>
-        /* Your inline CSS styles go here */
-        .header {
-            background-color: #f8f9fa;
-            padding: 10px;
-            text-align: right;
-        }
-        .login-button {
-            padding: 8px 15px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-        .login-button:hover {
-            background-color: #0056b3;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background-color:blue ;
-        }
-        h1{
-            background-color:white;
-            text-color: pink;
-        }
-        form{
-            text-color:pink;
-            background-color: white;
-            border-radius: 10px;
-        }
-        .section form {
-            background-color: white;
-        }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/course.css' %}">
+   
 
 </head>
 <body>
     <div class="header">
+       <nav>
         <a href="{% url 'login' %}" class="login-button">Login</a>
+       </nav>
     </div>
 
-    <h1 size='Quick'>SELECT YOUR SUBJECTS</h1>
+    <h2 size='Quick'>SELECT YOUR SUBJECTS</h2>
     <form action="course_recommendation_page.html" method="post">
-        <label for="subject1">
-            <input type="checkbox" id="subject1" name="subjects[]" value="Mathematics"> MATHEMATICS
-        </label>
-        <br>
-        <label for="subject2">
-            <input type="checkbox" id="subject2" name="subjects[]" value="Science"> ENGLISH
-        </label>
-        <br>
-        <label for="subject3">
-            <input type="checkbox" id="subject3" name="subjects[]" value="History"> KISWAHILI
-        </label>
-        <br>
-        <label for="subject4">
-            <input type="checkbox" id="subject4" name="subjects[]" value="English"> CHEMISTRY
-        </label>
-        <br>
-        <label for="subject5">
-            <input type="checkbox" id="subject5" name="subjects[]" value="Computer Science"> BIOLOGY
-        </label>
-        <br>
-        <label for="subject6">
-            <input type="checkbox" id="subject6" name="subjects[]" value="Art"> PHYSICS
-        </label>
-        <br>
-        <label for="subject2">
-            <input type="checkbox" id="subject2" name="subjects[]" value="Science"> C.R.E
-        </label>
-        <br>
-        <label for="subject3">
-            <input type="checkbox" id="subject3" name="subjects[]" value="History"> HISTORY
-        </label>
-        <br>
-        <label for="subject4">
-            <input type="checkbox" id="subject4" name="subjects[]" value="English"> GEOGRAPHY
-        </label>
-        <br>
-        <label for="subject5">
-            <input type="checkbox" id="subject5" name="subjects[]" value="Computer Science"> AGRICULTURE
-        </label>
-        <br>
-        <label for="subject6">
-            <input type="checkbox" id="subject6" name="subjects[]" value="Art"> BUSINESS STUDIES
-        </label>
-        <br>
-        <label for="subject2">
-            <input type="checkbox" id="subject2" name="subjects[]" value="Science"> COMPUTER STUDIES
-        </label>
-        <br>
-        <label for="subject3">
-            <input type="checkbox" id="subject3" name="subjects[]" value="History"> HOME SCIENCE
-        </label>
-        <br>
-        <input type="submit" value="Submit">
+        <button class="button">MATHEMATICS</button>
+        <button class="button">English</button>
+        <button class="button">KISWAHILI</button>
+        <button class="button">BIOLOGY</button>
+        <button class="button">PHYSICS</button>
+        <button class="button">CHEMISTRY</button>
+        <button class="button">GEOGRAPHY</button>
+        <button class="button">HISTORY</button>
+        <button class="button">BUSSINESS STUDIES</button>
+        <button class="button">COMPUTER STUDIES</button>
+        <button class="button">HOME SCIENCE</button>
+        <button class="button">MUSIC</button>
+        <button class="button">AGRICULTURE</button>
+        <button button type = "submit"> SUBMIT </button>
 
-
+    </form>
     <section>
         <h2>SELECT YOUR INTERESTS</h2>
         <form action="course_recommendation_page.html" method="post">
+            <button class="my-button">Click Me</button>
             <label for="subject1">
                 <input type="checkbox" id="subject1" name="subjects[]" value="Mathematics"> POLITICS
             </label>
@@ -264,10 +195,29 @@
                 <input type="checkbox" id="subject3" name="subjects[]" value="History"> METAL DETECTING
             </label>
             <br>
+            <input type="hidden" id="input-Mathematics" name="subjects[]" value="">
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var button = document.querySelector('.subject-btn[data-value="Mathematics"]');
+        button.addEventListener('click', function() {
+            button.classList.toggle('selected');
+            var input = document.getElementById('input-Mathematics');
+            if (button.classList.contains('selected')) {
+                input.value = button.getAttribute('data-value');
+            } else {
+                input.value = '';
+            }
+        });
+    });
+</script>
          
         <input type="submit" value="Submit">
     </form>
 </section>
+
+<script src="{% static 'js/script.js' %}"></script>
 </body>
-   
+
+
 </html>
