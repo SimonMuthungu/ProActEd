@@ -75,8 +75,6 @@ def sbert_proactedrecomm2024(users_interests, activities_users_have_enjoyed_in_t
         # Retrieve the top N most similar courses
         top_course_names = [score[0] for score in combined_scores[:top_n]]
 
-        print(f"top recommended courses: {top_course_names}") 
-
     except Exception as e:
         print(f"An error occurred: {e}")
 
