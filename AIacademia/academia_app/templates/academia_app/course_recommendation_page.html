@@ -18,13 +18,20 @@
     </div>
 
     <h2 size='Quick'>SELECT YOUR SUBJECTS</h2>
-    <form action="course_recommendation_page.html" method="post">
+    {% comment %} <form action="course_recommendation_page.html" method="post"> {% endcomment %}
+       <div>
         <button class="button">MATHEMATICS</button>
-        <button class="button">English</button>
+     
+        <button class="button">ENGLISH</button>
+      
         <button class="button">KISWAHILI</button>
+
         <button class="button">BIOLOGY</button>
+
         <button class="button">PHYSICS</button>
+
         <button class="button">CHEMISTRY</button>
+
         <button class="button">GEOGRAPHY</button>
         <button class="button">HISTORY</button>
         <button class="button">BUSSINESS STUDIES</button>
@@ -33,170 +40,68 @@
         <button class="button">MUSIC</button>
         <button class="button">AGRICULTURE</button>
         <button button type = "submit"> SUBMIT </button>
-
-    </form>
+       </div>
+   
+       {% comment %} </form> {% endcomment %}
     <section>
         <h2>SELECT YOUR INTERESTS</h2>
         <form action="course_recommendation_page.html" method="post">
-            <button class="my-button">Click Me</button>
-            <label for="subject1">
-                <input type="checkbox" id="subject1" name="subjects[]" value="Mathematics"> POLITICS
-            </label>
-            <br>
-            <label for="subject2">
-                <input type="checkbox" id="subject2" name="subjects[]" value="Science"> SCIENCE
-            </label>
-            <br>
-            <label for="subject3">
-                <input type="checkbox" id="subject3" name="subjects[]" value="History">DESIGN
-            </label>
-            <br>
-            <label for="subject4">
-                <input type="checkbox" id="subject4" name="subjects[]" value="English"> ARTS
-            </label>
-            <br>
-            <label for="subject5">
-                <input type="checkbox" id="subject5" name="subjects[]" value="Computer Science"> TEACHING
-            </label>
-            <br>
-            <label for="subject6">
-                <input type="checkbox" id="subject6" name="subjects[]" value="Art"> PUBLIC SPEAKING
-            </label>
-            <br>
-            <label for="subject2">
-                <input type="checkbox" id="subject2" name="subjects[]" value="Science"> READING
-            </label>
-            <br>
-            <label for="subject3">
-                <input type="checkbox" id="subject3" name="subjects[]" value="History"> OUTDOOR ACTIVITIES
-            </label>
-            <br>
-            <label for="subject4">
-                <input type="checkbox" id="subject4" name="subjects[]" value="English"> MUSIC
-            </label>
-            <br>
-            <label for="subject5">
-                <input type="checkbox" id="subject5" name="subjects[]" value="Computer Science">ART AND CREATIVITY
-            </label>
-            <br>
-            <label for="subject6">
-                <input type="checkbox" id="subject6" name="subjects[]" value="Art"> GARDENING
-            </label>
-            <br>
-            <label for="subject2">
-                <input type="checkbox" id="subject2" name="subjects[]" value="Science"> GAMING
-            </label>
-            <br>
-            <label for="subject3">
-                <input type="checkbox" id="subject3" name="subjects[]" value="History"> WRITING
-            </label>
-            <br>
-            <label for="subject1">
-                <input type="checkbox" id="subject1" name="subjects[]" value="Mathematics"> TRAVELLING
-            </label>
-            <br>
-            <label for="subject2">
-                <input type="checkbox" id="subject2" name="subjects[]" value="Science"> TECHNOLOGY
-            </label>
-            <br>
-            <label for="subject3">
-                <input type="checkbox" id="subject3" name="subjects[]" value="History">CODING
-            </label>
-            <br>
-            <label for="subject4">
-                <input type="checkbox" id="subject4" name="subjects[]" value="English"> VOLUNTEERING
-            </label>
-            <br>
-            <label for="subject5">
-                <input type="checkbox" id="subject5" name="subjects[]" value="Computer Science"> COLLECTING
-            </label>
-            <br>
-            <label for="subject6">
-                <input type="checkbox" id="subject6" name="subjects[]" value="Art"> DANCE
-            </label>
-            <br>
-            <label for="subject2">
-                <input type="checkbox" id="subject2" name="subjects[]" value="Science"> FILM AND CINEMA
-            </label>
-            <br>
-            <label for="subject3">
-                <input type="checkbox" id="subject3" name="subjects[]" value="History"> ANIMAL PETS
-            </label>
-            <br>
-            <label for="subject4">
-                <input type="checkbox" id="subject4" name="subjects[]" value="English"> DIY AND CRAFTING
-            </label>
-            <br>
-            <label for="subject5">
-                <input type="checkbox" id="subject5" name="subjects[]" value="Computer Science"> HISTORY AND GENEOLGY
-            </label>
-            <br>
-            <label for="subject6">
-                <input type="checkbox" id="subject6" name="subjects[]" value="Art"> ASTRONOMY
-            </label>
-            <br>
-            <label for="subject2">
-                <input type="checkbox" id="subject2" name="subjects[]" value="Science"> READING AND LEARNNG
-            </label>
-            <br>
-            <label for="subject3">
-                <input type="checkbox" id="subject3" name="subjects[]" value="History"> FISHING
-            </label>
-            <br>
-            <label for="subject1">
-                <input type="checkbox" id="subject1" name="subjects[]" value="Mathematics"> BIRD WATCHING
-            </label>
-            <br>
-            <label for="subject2">
-                <input type="checkbox" id="subject2" name="subjects[]" value="Science"> CYCLNG
-            </label>
-            <br>
-            <label for="subject3">
-                <input type="checkbox" id="subject3" name="subjects[]" value="History">ARCHERY
-            </label>
-            <br>
-            <label for="subject4">
-                <input type="checkbox" id="subject4" name="subjects[]" value="English"> MARTIAL ARTS
-            </label>
-            <br>
-            <label for="subject5">
-                <input type="checkbox" id="subject5" name="subjects[]" value="Computer Science"> POTTERY AND CERAMICS
-            </label>
-            <br>
-            <label for="subject6">
-                <input type="checkbox" id="subject6" name="subjects[]" value="Art"> BOARD GAME DESIGN
-            </label>
-            <br>
-            <label for="subject2">
-                <input type="checkbox" id="subject2" name="subjects[]" value="Science"> HOME BREWING
-            </label>
-            <br>
-            <label for="subject3">
-                <input type="checkbox" id="subject3" name="subjects[]" value="History"> PHOTOGRAPHY
-            </label>
-            <br>
-            <label for="subject4">
-                <input type="checkbox" id="subject4" name="subjects[]" value="English"> GOLF
-            </label>
-            <br>
-            <label for="subject5">
-                <input type="checkbox" id="subject5" name="subjects[]" value="Computer Science">ROBOTICS
-            </label>
-            <br>
-            <label for="subject6">
-                <input type="checkbox" id="subject6" name="subjects[]" value="Art"> CALLIGRAPHY
-            </label>
-            <br>
-            <label for="subject2">
-                <input type="checkbox" id="subject2" name="subjects[]" value="Science"> HOME IMPROVEMENT
-            </label>
-            <br>
-            <label for="subject3">
-                <input type="checkbox" id="subject3" name="subjects[]" value="History"> METAL DETECTING
-            </label>
-            <br>
-            <input type="hidden" id="input-Mathematics" name="subjects[]" value="">
+         <div> 
+        <button class="button">POLITICS</button>
+      
+        <button class="button">SCIENCE</button>
 
+        <button class="button">ART</button>
+
+        <button class="button">DESIGN</button>
+
+        <button class="button">TEACHING</button>
+
+        <button class="button">PUBLIC SPEAKING</button>
+        <button class="button">READING</button>
+        <button class="button">MUSIC</button>
+        <button class="button">ART AND CREATIVITY</button>
+        <button class="button">GARDENING</button>
+        <button class="button">GAMING</button>
+        <button class="button">WRITING</button>
+            
+        <button class="button">TRAVELLING</button>
+      
+        <button class="button">TECHNOLOGY</button>
+
+        <button class="button">CODING</button>
+
+        <button class="button">VOLUNTEERING</button>
+
+        <button class="button">COLLECTING</button>
+
+        <button class="button">DANCE</button>
+        <button class="button">FILM AND CINEMA</button>
+        <button class="button">ANIMAL PETS</button>
+        <button class="button">DIY AND CRAFTING</button>
+        <button class="button">HISTORY AND GENEOLOGY</button>
+        <button class="button">ASTRONOMY</button>
+        <button class="button">READING AND LEARNING</button>
+           
+        <button class="button">FISHING</button>
+      
+        <button class="button">BIRD WATCHING</button>
+
+        <button class="button">CYCLING</button>
+
+        <button class="button">ARCHERY</button>
+
+        <button class="button">MARTIAL ARTS</button>
+
+        <button class="button">PHOTOGRAPHY</button>
+        <button class="button">GOLF</button>
+        <button class="button">ROBOTICS</button>
+        <button class="button">CALLIGRAPH</button>
+        <button class="button">HOME IMPROVEMENT</button>
+        <button class="button">MUSIC</button>
+        <button class="button">METAL DETECTING</button>
+         </div>      
+       
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var button = document.querySelector('.subject-btn[data-value="Mathematics"]');
@@ -218,6 +123,17 @@
 
 <script src="{% static 'js/script.js' %}"></script>
 </body>
-
+<footer class="footer">
+    <div class="footer-content">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Email: info@proacted.com</p>
+            <p>Phone: +254 (7) 437-20033</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2023 ProActEd; University of Maseno. All Rights Reserved.</p>
+    </div>
+</footer>
 
 </html>

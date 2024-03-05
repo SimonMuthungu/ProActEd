@@ -1,7 +1,7 @@
 import json
 from random import randint
 from time import sleep
-from channels.generic.websocket import WebsocketConsumer
+from channels.generic.websocket import AsyncJsonWebsocketConsumerWebsocketConsumer
 
 class GraphStudent (WebsocketConsumer) :
     def connect (self):

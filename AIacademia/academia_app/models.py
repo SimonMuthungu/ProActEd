@@ -37,7 +37,7 @@ class BaseUserGroup(models.Model):
 
 class BaseUser(AbstractUser):
     objects = CustomUserManager()
-    groups = models.ManyToManyField(Group, through='BaseUserGroup')
+    groups = models.ManyToManyField(Group, through= BaseUserGroup)
 
     def __str__(self):
         return f"Base User: {self.username}"
@@ -176,24 +176,7 @@ class UserProfile(models.Model):
     def __str__(self):
         return f'Profile of {self.user.username}'
     
-class CustomUser(AbstractUser):
-    # Add any additional fields for your user here
-    # For example, a phone number field
-    phone_number = models.CharField(max_length=15, blank=True)
+class Unit(models.Model):
+    title = models.CharField(max_length=100)
+    semester = models.CharField(max_length=20)  # For simplicity, we're using a CharField
 
-    user_permissions = models.ManyToManyField(
-        Permission,
-        related_name="customuser_set"  # <-- Add this line
-    )
-
-    def __str__(self):
-        return self.username
-    
-    from django.db import models
-
-class Revenue(models.Model):
-    MonthlyRevenue = models.CharField(max_length=50)
-    Month = models.CharField(max_length=50)
-
-    def __unicode__(self):
-        return u'%s %s' % (self.MonthlyRevenue, self.Month)

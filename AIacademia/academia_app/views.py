@@ -5,16 +5,13 @@ from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect, render
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
-
-
-
+from django.contrib import messages
 from .forms import UserProfileForm
-from .models import UserProfile
+from .models import UserProfile,Course,School,Performance,Student
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from .forms import UserProfileForm
-from .models import Course, School  # Import Course and School models
 from django.core.mail import send_mail
 
 def login_view(request):
@@ -55,7 +52,7 @@ def student_page(request):
     else:
         if request.user.is_superuser or request.user.is_staff:
             return redirect('/admin/')
-        return redirect('login')
+        return redirect('login') 
 
 def course_recommendation(request):
     return render(request, 'academia_app/course_recommendation_page.html')
@@ -135,3 +132,20 @@ def Profile (request):
 # def index (request):
 #     return render (request, 'academia_app/student_page.html', context ={ 'text': 'Hello world'})
 
+# views.py
+
+from django.shortcuts import render
+from .models import Performance
+
+def student_performance_view(request, student_id):
+    performances = Performance.objects.filter(student_id=student_id).select_related('unit').order_by('unit__semester')
+    
+    # Prepare data for the graph
+    labels = [performance.unit.semester for performance in performances]
+    data = [performance.score for performance in performances]
+    
+    context = {
+        'labels': labels,
+        'data': data,
+    }
+    return render(request, 'student_performance.html', context)

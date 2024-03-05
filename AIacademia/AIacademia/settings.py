@@ -118,4 +118,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 class MyForm(forms.Form):
     template_name = "Student_Page.html"
-    
