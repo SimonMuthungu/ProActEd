@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-from django.contrib.auth.models import AbstractUser, BaseUserManager, Group 
-from django.db import models
-from django.conf import settings
-=======
 from django.contrib.auth.models import AbstractUser, BaseUserManager, Group
 from django.contrib.auth.models import User
 from django.db import models
@@ -10,9 +5,6 @@ from django.conf import settings
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.contrib.auth.models import Permission
-
->>>>>>> okeyo
-
 
 # Custom User Manager
 class CustomUserManager(BaseUserManager):
@@ -171,7 +163,7 @@ class Recommender_training_data(models.Model):
 
     def __str__(self):
         return self.course_name
-<<<<<<< HEAD
+
 #model for messages
 class Message(models.Model):
     sender = models.ForeignKey(BaseUser, on_delete=models.CASCADE, related_name='sent_messages')
@@ -181,7 +173,7 @@ class Message(models.Model):
 
     def __str__(self):
         return f'{self.sender} to {self.recipient} at {self.timestamp}'    
-=======
+
     
 class UserProfile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
@@ -197,4 +189,4 @@ class Unit(models.Model):
     title = models.CharField(max_length=100)
     semester = models.CharField(max_length=20)  # For simplicity, we're using a CharField
 
->>>>>>> okeyo
+
