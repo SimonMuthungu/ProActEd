@@ -11,7 +11,15 @@
 
 </head>
 <body>
+   {% comment %} <div class="login-box">
+        <div class="header" style="background-color: #020225;">
+          <img src="{% static 'academia_app/logo.png' %}" alt="proacted_Logo" class="custom-logo">
+          <h2 id="thetitle"  >AIacademia</h2>
+        </div>  {% endcomment %}
     <div class="header">
+        
+        <img src="{% static 'academia_app/logo.png' %}" alt="proacted_Logo" class="custom-logo">
+        <h1> HELLO&#128075;, WELCOME!! </H1>
        <nav>
         <a href="{% url 'login' %}" class="login-button">Login</a>
        </nav>
@@ -39,6 +47,8 @@
         <button class="button">HOME SCIENCE</button>
         <button class="button">MUSIC</button>
         <button class="button">AGRICULTURE</button>
+        <br>
+        <br>
         <button button type = "submit"> SUBMIT </button>
        </div>
    
@@ -102,7 +112,7 @@
         <button class="button">METAL DETECTING</button>
          </div>      
        
-<script>
+{% comment %} <script>
     document.addEventListener('DOMContentLoaded', function() {
         var button = document.querySelector('.subject-btn[data-value="Mathematics"]');
         button.addEventListener('click', function() {
@@ -115,9 +125,9 @@
             }
         });
     });
-</script>
+</script> {% endcomment %}
          
-        <input type="submit" value="Submit">
+        <input type="submit" value="SUBMIT">
     </form>
 </section>
 

@@ -10,12 +10,16 @@
     <script src="{% static 'js/main.js' %}" defer></script>
 </head>
 <body>
-    <h1>Welcome, Student!</h1>
+    <div class="header">
+      
+    
     <nav>
         <a href="{% url 'login' %}">Logout</a>
         <a href="{% url 'addprofile' %}">Profile</a>
     </nav>
+    <h1>Welcome, Student!</h1>
 
+</div>
     <div class="content"> 
         <h2>PROGRESS GRAPH</h2>
         <div class="container">

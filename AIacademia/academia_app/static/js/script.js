@@ -36,12 +36,33 @@ function updateCourses(selectElement) {
 
 // Add any additional JavaScript functionality as needed
 
-const button = document.querySelectorAll('.button');
-button.forEach(button => {
-    button.addEventListener('click', (event)=> {
-    event.preventDefault();
-    button.style.backgroundColor='#5e0361';
-    button.style.boxShadow= '0 0 40px pink ';
-    button.style.transition = '.2s ease';
+// const button = document.querySelectorAll('.button');
+// button.forEach(button => {
+//     button.addEventListener('click', (event)=> {
+//     event.preventDefault();
+//     button.style.backgroundColor='#5e0361';
+//     button.style.boxShadow= '0 0 40px pink ';
+//     button.style.transition = '.2s ease';
+//     });
+// });
+const buttons = document.querySelectorAll('.button');
+buttons.forEach(button => {
+    button.addEventListener('click', (event) => {
+        event.preventDefault();
+        
+        // Check if the button is already selected
+        if (button.classList.contains('selected')) {
+            // Button is selected, revert to original style
+            button.style.backgroundColor = ''; // Revert to the original background color
+            button.style.boxShadow = ''; // Revert to the original box shadow
+            button.classList.remove('selected'); // Remove the 'selected' class
+        } else {
+            // Button is not selected, apply the new style
+            button.style.backgroundColor = '#5e0361';
+            button.style.boxShadow = '0 0 40px pink';
+            button.classList.add('selected'); // Add the 'selected' class to indicate the button is selected
+        }
+
+        button.style.transition = '.2s ease';
     });
 });
