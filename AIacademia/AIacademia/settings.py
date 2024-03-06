@@ -12,7 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 from pathlib import Path
-
+from django import forms
+from django.forms.renderers import TemplatesSetting
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -33,6 +34,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'channels',  
+    
 ]
 
 MIDDLEWARE = [
@@ -65,6 +68,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'AIacademia.wsgi.application'
+ASGI_APPLICATION = 'AIacademia.asgi.application'
 
 # Database
 DATABASES = {
@@ -98,10 +102,19 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    # BASE_DIR.joinpath('static')
+    os.path.join(BASE_DIR, 'academia_app', 'static')
+]
 
 # Custom user model
 AUTH_USER_MODEL = 'academia_app.BaseUser'
+
+
 LOGIN_REDIRECT_URL = 'dashboard'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+class MyForm(forms.Form):
+    template_name = "Student_Page.html"

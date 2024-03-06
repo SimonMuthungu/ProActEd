@@ -36,6 +36,8 @@ body, html {
     color: #FFDB58;
     padding: 5px 0;
     text-align: center;
+    margin-bottom: 5px;
+    margin-top: 220px;
 }
 
 .login-box {

@@ -1,66 +1,99 @@
 {% load static %}
-{% block head %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/mess_styles.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'css/student_style.css' %}">
-{% endblock %}
-
-{% block sidebar %}
-<!-- Other sidebar content -->
-<h3>Messaging</h3>
-<ul>
-    <li><a href="{% url 'inbox' %}">Inbox</a></li>
-</ul>
-{% endblock %}
-
-{% block content %}
-<div class="content">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/student_style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="{% static 'js/main.js' %}" defer></script>
+</head>
+<body>
     <h1>Welcome, Student!</h1>
-    <a href="{% url 'logout' %}" class="logout">Logout</a>
+    <nav>
+        <a href="{% url 'login' %}">Logout</a>
+        <a href="{% url 'addprofile' %}">Profile</a>
+        <h3>Messaging</h3>
+        <li><a href="{% url 'inbox' %}">Inbox</a></li>
+    </nav>
 
-    <!-- Content for school and department display -->
-    <div class="school-grid">
-        {% for school in school_data %}
-        <div class="content-item">
-            <a href="#{{ school.name }}" class="school-button">{{ school.name }}</a>
-            <div id="{{ school.name }}" class="departments-container">
-                <!-- Department and course selection -->
-                <div class="hover-container">
-                    <select>
-                        {% for department in school.departments %}
-                        <option value="{{ department }}">{{ department }}</option>
-                        <!-- Course options based on department -->
-                        {% if department == 'computer science' %}
-                        <optgroup label="program">
-                            {% for course in school.cs %}
-                            <option value="{{ course }}">{{ course }}</option>
-                            {% endfor %}
-                        </optgroup>
-                        {% else %}
-                        <optgroup label="program">
-                            {% for course in school.IT %}
-                            <option value="{{ course }}">{{ course }}</option>
-                            {% endfor %}
-                        </optgroup>
-                        {% endif %}
-                        {% endfor %}
-                    </select>
-                </div>
+    <div class="content"> 
+        <h2>PROGRESS GRAPH</h2>
+        <div class="container">
+            <canvas id="performanceChart" width="400" height="400"></canvas>
+        </div>
+    </div>
+
+    {% comment %} <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var ctx = document.getElementById('performanceChart').getContext('2d');
+            var performanceChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: {{ labels|safe }},
+                    datasets: [{
+                        label: 'Student Performance Over Time',
+                        data: {{ data|safe }},
+                        fill: false,
+                        borderColor: 'rgb(75, 192, 192)',
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script> {% endcomment %}
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var ctx = document.getElementById('performanceChart').getContext('2d');
+        var performanceChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                // Hard-coded labels for the x-axis (e.g., representing semesters or months)
+                labels: ['Semester 1', 'Semester 2', 'Semester 3', 'Semester 4', 'Semester 5'],
+                datasets: [{
+                    label: 'Student Performance Over Time',
+                    // Hard-coded data values for each label on the x-axis (e.g., representing grades or scores)
+                    data: [75, 88, 80, 95, 92],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true  // Ensures that the y-axis starts at 0
+                    }
+                }
+            }
+        });
+    });
+    </script> 
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>Email: info@proacted.com</p>
+                <p>Phone: +254 (7) 437-20033</p>
             </div>
         </div>
-        {% endfor %}
-    </div>
-</div>
-
-<footer class="footer">
-    <div class="footer-content">
-        <div class="contact-info">
-            <h2>Contact Us</h2>
-            <p>Email: info@proacted.com</p>
-            <p>Phone: +254 (7) 437-20033</p>
+        <div class="copyright">
+            <p>&copy; 2023 ProActEd; University of Maseno. All Rights Reserved.</p>
         </div>
-    </div>
-    <div class="copyright">
-        <p>&copy; 2023 ProActEd; University of Maseno. All Rights Reserved.</p>
-    </div>
-</footer>
-{% endblock %}
+    </footer>
+</body>
+</html>
+
