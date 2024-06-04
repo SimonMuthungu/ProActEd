@@ -23,5 +23,7 @@ urlpatterns = [
     path('course_recommendation/', views.course_recommendation, name='course_recommendation'),
     path('predict/', views.predict_probability, name='predict_probability'),
     # path('predict/probability/', views.predict_probability, name='predict_probability'),
+    path('predict/', views.predict, name='predict'),
+    path('predict/probability/', views.predict_probability, name='predict_probability'),
     ]
 

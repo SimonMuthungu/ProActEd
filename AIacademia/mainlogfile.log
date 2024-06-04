@@ -1239,3 +1239,18 @@ Traceback (most recent call last):
     raise DisallowedHost(msg)
 django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
 WARNING || 05-Jun-24 00:22:57 || Bad Request: /ws/academia_app/
+DEBUG || 05-Jun-24 00:33:16 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:33:17 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:33:17 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:33:17 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:33:17 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:33:22 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 05-Jun-24 00:34:26 || C:\Users\Simon\proacted\AIacademia\academia_app\migrations\0001_initial.py changed, reloading.
+DEBUG || 05-Jun-24 00:34:37 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:34:37 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:34:37 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:34:37 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:34:37 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:34:42 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
