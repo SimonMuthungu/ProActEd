@@ -64,9 +64,24 @@ body, html {
 }
 
 .footer {
+<<<<<<< HEAD
     background-color: #020225;
     color: #FFDB58;
     padding: 5px 0;
+=======
+    background-color: #333;
+<<<<<<< HEAD
+    color: #fff;
+<<<<<<< HEAD
+    padding: 0;
+=======
+    padding: 20;
+>>>>>>> a8aafc1f4e0b7897d2500120900e0786f14f61be
+=======
+    padding-top: 20px; 
+    padding-bottom: 10px; 
+>>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
+>>>>>>> 0d3a04f1ae76035c8f447375afc4f96be8dbd5fd
     text-align: center;
 }
 
@@ -145,3 +160,40 @@ body, html {
 }
 
 
+<<<<<<< HEAD
+.hover-container:hover .options {
+    display: block;
+}
+
+.sidebar {
+
+/*    height: 100%;*/
+    background-color: #f1f1f1;
+
+    height: 20%;
+    /* background-color: #12dfea; */
+    width: 250px;
+    padding-top: 20px;
+    position :fixed;
+    top:0;
+    bottom: 200px;
+    left:0;
+     z-index: 100;
+}
+.sidebar ul{
+    list-style-type: none;
+    padding:0;
+    
+}
+
+.sidebar ul li{
+    color: pink;
+    padding:8px 16px;
+    margin-bottom: 10px;
+    
+}    
+.sidebar ul li a {
+    text-decoration: none;
+    color: rgb(57, 187, 242);
+   
+}

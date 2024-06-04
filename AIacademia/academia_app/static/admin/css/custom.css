@@ -8,6 +8,7 @@ body {
     margin: 0;
 }
 
+
 #header {
     background-color: #01010600;
     color: #FFDB58;
@@ -20,6 +21,8 @@ body {
     z-index: 1010;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+
 
 
 .custom-logo {
@@ -202,7 +205,6 @@ body {
         left: 0;
         border-right: none;
     }
-
     .custom-logo {
         transform: scale(1);
     }

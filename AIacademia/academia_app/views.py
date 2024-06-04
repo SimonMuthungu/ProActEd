@@ -1,4 +1,9 @@
 from django import forms
+import logging
+import sys
+# sys.path.append(r'C:\Users\Simon\proacted\AIacademia') 
+from django.http import Http404 , JsonResponse
+from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.http import Http404 , JsonResponse
@@ -6,6 +11,7 @@ from django.shortcuts import redirect, render
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.contrib import messages
+from python_scripts.recommender_engine import load_model
 from .forms import UserProfileForm
 from .models import BaseUser,UserProfile,Course,School,Performance,Student,Message
 from django.http import HttpResponseRedirect
@@ -13,6 +19,34 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from .forms import UserProfileForm
 from django.core.mail import send_mail
+from sre_constants import BRANCH
+from telnetlib import LOGOUT
+# from academia_app.models import Department
+# from django.http import git BRANCH(  # Import JsonResponse for AJAX responses
+#     HttpResponse, JsonResponse)
+from django.shortcuts import render, redirect
+# from .forms import UserLoginForm
+from django.contrib.auth.views import LoginView
+from django.contrib.auth import authenticate ,login
+from django.urls import reverse_lazy
+from django.contrib.auth import authenticate
+# Other imports
+from django.contrib.auth import authenticate ,login , logout
+from django.contrib.auth import login
+from django.http import HttpResponse, JsonResponse
+from django.shortcuts import render
+from django.http import HttpRequest
+from .models import Course, School # Import Course and School models
+from django.contrib.auth.models import User
+from django.contrib import messages
+
+
+
+import joblib
+from .models import Course, School, Recommender_training_data  # Import Course and School models
+
+
+logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 
 def login_view(request):
@@ -21,7 +55,9 @@ def login_view(request):
         password = request.POST.get('password')
         user = authenticate(request, username=username, password=password)
         
+
         if user is not None:
+
             if user.is_active:
                 login(request, user)
                 # Redirect based on user type
@@ -33,10 +69,86 @@ def login_view(request):
                 # User is not active
                 return render(request, 'academia_app/login.html', {'error': 'Account is inactive.'})
         else:
+            # Authentication failed
             return render(request, 'academia_app/login.html', {'error': 'Invalid username or password.'})
 
     return render(request, 'academia_app/login.html')
 
+
+
+def course_recommendation_page(request):
+    return render (request,"academia_app/course_recommendation_page.html")
+
+def intervention (request):
+    return render (request, "academia_app/intervention.html")
+
+def intervention_page (request):
+    return render (request, "academia_app/intervention_page.html")
+
+def admin_page(request):
+    return render(request, "academia_app/admin_page.html")
+
+def admin_login_view(request):
+    # Your view logic for admin login goes here
+    return render(request, "admin_login.html")  # Replace "admin_login.html" with the actual template
+def predict(request):
+    return render(request, 'academia_app/predict.html')
+    
+
+# loading the script and generating output
+def recommend_courses(request):
+    if request.method == 'POST':
+        # Getting selected subjects with name
+        user_subjects_done = request.POST.getlist('subjects[]')
+        user_subjects_done = ' '.join(user_subjects_done).lower() 
+        # Getting values from the interests field
+        user_activities_enjoyed = request.POST.getlist('interests[]')
+        user_activities_enjoyed = ' '.join(user_activities_enjoyed).lower() 
+        # textarea
+        user_description_about_interests = request.POST.getlist('additionalInfo')
+        user_description_about_interests = ''.join(user_activities_enjoyed).lower() 
+        print(user_description_about_interests)
+        try: 
+            # Load the model and get the output
+            print("\nBeginning to run the recommender script")
+            logging.info("Beginning to run the recommender script")
+            recommendations = load_model(user_description_about_interests, user_activities_enjoyed)
+            print(f"here are the recommendations: {recommendations}")
+            context = {'recommendations': recommendations}
+            return render(request, 'academia_app/recommended_courses.html', context)
+        except:
+            print('Something came up, please rerun the system...')
+            logging.critical('Something came up, please rerun the system...')
+        # Pass recommendations to the template
+        finally:
+            logging.info('Recommender system has run')
+            
+            
+        
+        
+def predict_probability(request):
+    if request.method == 'POST':
+        model = joblib.load('AIacademia/trained_models/no_bias_trainedw_100000_10288genii.joblib')
+        logging.info('Probability model loaded')
+
+        feature1 = request.POST.get('feature1')
+        feature2 = request.POST.get('feature2')
+        
+
+        input_data = [[feature1, feature2]]
+
+
+        # # Predict probabilities
+        prediction = model.predict_proba(input_data)
+
+        context = {'prediction': prediction[0]}
+        return HttpResponse(f'Calculated Probability: {prediction}')
+
+    return render(request, 'academia_app/predict.html') 
+
+    
+
+    
 
 @login_required
 def dashboard(request):
@@ -127,35 +239,58 @@ def edit_profile(request):
     send_mail(subject, message, sender, recipients)
     return HttpResponseRedirect("/thanks/")
 
-    return render(request, 'Student_Page.html', {'form': form})
-def Profile (request):
+# <<<<<<< HEAD
+#     return render(request, 'Student_Page.html', {'form': form})
+# def Profile (request):
     
-    try:
-        profile = request.user.userprofile
-    except UserProfile.DoesNotExist:
-        UserProfile.objects.create(user=request.user)
-    form = UserProfileForm
-    updated = False
-    if request.method == "POST":
-        form = UserProfileForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect('/Profile?updated=True')
-        else:
-            form: UserProfileForm
-            if 'updated' in request.GET:
-                updated = True
+#     try:
+#         profile = request.user.userprofile
+#     except UserProfile.DoesNotExist:
+#         UserProfile.objects.create(user=request.user)
+#     form = UserProfileForm
+#     updated = False
+#     if request.method == "POST":
+#         form = UserProfileForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return HttpResponseRedirect('/Profile?updated=True')
+#         else:
+#             form: UserProfileForm
+#             if 'updated' in request.GET:
+#                 updated = True
 
-def student_performance_view(request, student_id):
-    performances = Performance.objects.filter(student_id=student_id).select_related('unit').order_by('unit__semester')
+# def student_performance_view(request, student_id):
+#     performances = Performance.objects.filter(student_id=student_id).select_related('unit').order_by('unit__semester')
     
-    # Prepare data for the graph
-    labels = [performance.unit.semester for performance in performances]
-    data = [performance.score for performance in performances]
+#     # Prepare data for the graph
+#     labels = [performance.unit.semester for performance in performances]
+#     data = [performance.score for performance in performances]
     
-    context = {
-        'labels': labels,
-        'data': data,
-    }
-    return render(request, 'student_performance.html', context)
+#     context = {
+#         'labels': labels,
+#         'data': data,
+#     }
+#     return render(request, 'student_performance.html', context)
 
+# =======
+    #return render(request, 'Student_Page.html', {'form': form})
+
+@login_required
+def inbox(request):
+    received_messages = Message.objects.filter(recipient=request.user)
+    sent_messages = Message.objects.filter(sender=request.user)
+    users = BaseUser.objects.exclude(id=request.user.id)
+    return render(request, 'academia_app/inbox.html', {'received_messages': received_messages, 'sent_messages': sent_messages, 'users': users})
+
+@login_required
+def send_message(request, recipient_id):
+    if request.method == 'POST':
+        recipient = BaseUser.objects.get(id=recipient_id)
+        content = request.POST.get('content', '')
+        message = Message.objects.create(sender=request.user, recipient=recipient, content=content)
+        return render(request, 'academia_app/send_message.html', {'message_sent': True, 'recipient_id': recipient_id})
+
+    # Added the following for debugging
+    print("Recipient ID:", recipient_id)
+
+    return render(request, 'academia_app/send_message.html', {'recipient_id': recipient_id})
