@@ -14,10 +14,11 @@
       
     
     <nav>
-        <a href="{% url 'login' %}">Logout</a>
-        <a href="{% url 'addprofile' %}">Profile</a>
-        <h3>Messaging</h3>
-        <li><a href="{% url 'inbox' %}">Inbox</a></li>
+        <li>
+            <a href="{% url 'login' %}">Logout</a>
+            <a href="{% url 'addprofile' %}">Profile</a>
+            <a href="{% url 'inbox' %}">Inbox</a>
+        </li>
     </nav>
     <h1>Welcome, Student!</h1>
 
