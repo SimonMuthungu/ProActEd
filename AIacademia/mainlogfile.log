@@ -791,3 +791,18 @@ INFO || 02-Feb-24 07:32:00 || Pro-Act-Ed 2024 Recommender Engine Initialized
 INFO || 02-Feb-24 07:32:11 || time recommender model has used: 12.439636945724487
 INFO || 02-Feb-24 07:35:19 || Pro-Act-Ed 2024 Recommender Engine Initialized
 INFO || 02-Feb-24 07:35:29 || time recommender model has used: 12.27060317993164
+INFO || 04-Jun-24 17:37:17 || C:\Users\Hp\Desktop\ProActEd\AIacademia\python_scripts\recommender_engine.py changed, reloading.
+INFO || 04-Jun-24 17:37:21 || Recommender model loaded and running
+INFO || 04-Jun-24 17:37:21 || Recommender model loaded and running
+INFO || 04-Jun-24 18:02:27 || Recommender model loaded and running
+INFO || 04-Jun-24 18:02:27 || Recommender model loaded and running
+INFO || 04-Jun-24 18:05:25 || Recommender model loaded and running
+INFO || 04-Jun-24 18:05:25 || Processing request...
+INFO || 04-Jun-24 18:05:25 || Recommender model loaded and running
+INFO || 04-Jun-24 18:05:25 || Processing request...
+INFO || 04-Jun-24 18:10:00 || Recommender model loaded and running
+INFO || 04-Jun-24 18:10:00 || Processing request...
+INFO || 04-Jun-24 18:10:00 || Recommender model loaded and running
+INFO || 04-Jun-24 18:10:00 || Processing request...
+INFO || 04-Jun-24 18:12:03 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 04-Jun-24 18:12:17 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
