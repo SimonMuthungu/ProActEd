@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,10 +8,10 @@
     <form method="post" action="predict_data/">
         {% csrf_token %}
         <label for="lessons_attended">Lessons Attended:</label>
-        <input type="text" id="lessons_attended" name="lessons_attended" required>
+        <input type="text" id="lessons_attended" name="feature1" required>
         <br>
         <label for="aggregate_points">Aggregate Points:</label>
-        <input type="text" id="aggregate_points" name="aggregate_points" required>
+        <input type="text" id="aggregate_points" name="feature2" required>
         <br>
         <input type="submit" value="Predict">
     </form>

@@ -1,152 +1,182 @@
- /* Styles for the navigation menu */
- .navigation-menu {
-    position: fixed;
-    top: 0;
-    left: 80%;
-    right: 0;
-    background-color: #007bff;
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.header {
+    height: 20px;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Center items vertically */
+    width: 100%;
+    height: 60px; /* Adjust based on your design */
+    background-color: #020225;/* Dark background for the header */
+    padding-right: 20px;
+    
+        background-color: #333; /* Example background color */
+        padding: 10px 20px; /* Reduced padding */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    background-color: #06063d;
+    color: #FFDB58;
+    display: flex; gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.nav{
+    color: #0d0dd9;
+    text-align: end;
+}
+.header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: end;
+}
+.header h1 {
+    margin: 0; /* Adjust as necessary */
+}
+/* #h
+.header h2 {
+    margin-left: 50px;
+    margin-right: auto;
+  }
+
+
+.custom-logo {
+    height: auto;
+    width: auto;
+    max-height: 70px;
+    transform: scale(1.2);
+    vertical-align: middle;
+    align-items: right;
+    margin-right: 20px;
+}
+
+.footer {
+<<<<<<< HEAD
+    background-color: #020225;
+    color: #FFDB58;
+    padding: 5px 0;
+=======
+    background-color: #333;
+<<<<<<< HEAD
     color: #fff;
-    padding: 5px 2px;
-    margin-left: 100px;
-    text-align: right;
+<<<<<<< HEAD
+    padding: 0;
+=======
+    padding: 20;
+>>>>>>> a8aafc1f4e0b7897d2500120900e0786f14f61be
+=======
+    padding-top: 20px; 
+    padding-bottom: 10px; 
+>>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
+>>>>>>> 0d3a04f1ae76035c8f447375afc4f96be8dbd5fd
+    text-align: center;
+}
+
+.login-box {
+    width: 450px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-box h2 {
+    margin: 0;
+    padding: 20px 0;
+    color: #FFDB58;
+}
+
+.input-group {
     margin-bottom: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+/* Label styles */
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #020225;
+    font-weight: bold;
+    text-align: left;
     
 }
-.navigation-menu div{
-    margin-top: 100px;
-    background-color: brown;
-}
-.navigation-menu h1 {
-    font-size: 20px;
-    color: black; 
+
+.input-group input {
+    width: 50%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
     text-align: center;
-    margin-top: 100px;
-    background-color: brown;
 }
-.navigation-menu a.logout-button {
-    color: #fff;
-    text-decoration: dotted;
-}
-/* Styles for the "welcome-admin" section */
-.search-student {
-    position: fixed;
-    background-color: #f0f0f0;
-    padding: 5px;
-    right: 0;
-    top: 75px;
-    left: 0;
+
+.input-group button {
+    width: 20%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #FFDB58;
+    border: none;
     text-align: center;
-    z-index: 1;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-.search-student button[type="submit"]:hover {
+
+.input-group button:hover {
     background-color: #0056b3;
 }
 
-/* Styles for the content section */
-/* .content {
-    float: left;
-    width: 80%;
-    padding: 0px;
-} */
-.content {
-    display: flex;/* Use Flexbox */
-    flex-direction: column; 
-    flex-wrap: wrap; /* Allow content to wrap to the next row if needed */
-    padding: 10px;
-    margin-top: 130px
-}
-.content-item {
-    flex: 1; /* Distribute space evenly among items */
-    margin: 10px; /* Add spacing between items */
-    padding: 20px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    text-align: center;
-    transition: transform 0.2s, background-color 0.2s, color 0.2s;
-}
-.content-item:hover {
-    transform: scale(1.05); /* Scale up slightly on hover */
-    background-color: rgba(175, 185, 195, 0.7);; /* Change background color on hover */
-    color: #fff; /* Change text color on hover */
-}
-.school-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as needed */
-    grid-gap: 10px; /* Add spacing between items */
-}
-.content-item a.school-button {
-    color: #007bff; /* Use a distinct color for school names */
-    font-weight: bold; /* Make school names bold for visibility */
-    text-decoration: none;
-}
-
-
-.footer {
-    background-color: #333;
-    padding-bottom: 10px;
-    text-align: center;
-    padding: 20px;
+.error-message {
+    color: #ff0000;
+    margin-bottom: 15px;
     text-align: center;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.nav{
+    color: #06063d;
+    text-align: end;
 }
 
-.contact-info, .links, .copyright {
-    flex: 1;
-    padding: 10px;
-}
 
-.links ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex; /* Display list items horizontally */
-}
-
-.links li {
-    margin-right: 20px; /* Add spacing between list items */
-    margin-bottom: 10px;
-}
-
-.links li:last-child {
-    margin-right: 0; /* Remove spacing from the last item */
-}
-
-/* Make sure to adjust the styles to match your design preferences */
-@media (max-width: 768px) {
-    /* Adjust the number of columns for smaller screens (e.g., 2 columns) */
-    .school-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 480px) {
-    /* Adjust the number of columns for very small screens (e.g., 1 column) */
-    .school-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-  .options {
-    display: none;
-    /* list-style: none; */
-    padding: 0;
-    margin: 0;
-}
-
+<<<<<<< HEAD
 .hover-container:hover .options {
     display: block;
 }
 
 .sidebar {
-    height: 100%;
+
+/*    height: 100%;*/
     background-color: #f1f1f1;
+
+    height: 20%;
+    /* background-color: #12dfea; */
     width: 250px;
     padding-top: 20px;
     position :fixed;
     top:0;
+    bottom: 200px;
     left:0;
      z-index: 100;
 }
@@ -155,47 +185,15 @@
     padding:0;
     
 }
+
 .sidebar ul li{
     color: pink;
     padding:8px 16px;
+    margin-bottom: 10px;
     
-}
+}    
 .sidebar ul li a {
     text-decoration: none;
-    color: white;
+    color: rgb(57, 187, 242);
    
-    
 }
-
-body{
-    margin-bottom: 1000px;
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-
-.sidebar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #156;
-}
-
-.sidebar ul li {
-    display: block;
-    margin-bottom: 35px;
-}
-
-.sidebar ul li a {
-    text-decoration: none;
-    color: blue;
-    padding: 15px 20px;
-}
-
-.sidebar ul li a:hover {
-    background-color: #686;
-}
-

@@ -1,0 +1,28 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/send_message_style.css' %}">
+
+<!DOCTYPE html>
+<html>
+<head>
+    {% block head %}
+    <!-- Add any head content here, if needed -->
+    <script>
+        {% if message_sent %}
+        alert("Message sent successfully!");
+        window.location.href = "{% url 'inbox' %}";
+        {% endif %}
+    </script>
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+    <h2>New Message</h2>
+    <form method="post" action="{% if recipient_id %}{% url 'send_message' recipient_id %}{% endif %}">
+        {% csrf_token %}
+        <textarea name="content" rows="4" cols="50" placeholder="Type your message here"></textarea><br>
+        <button type="submit">Send</button>
+    </form>
+    <p>Recipient ID: {{ recipient_id }}</p>
+    {% endblock %}
+</body>
+</html>
