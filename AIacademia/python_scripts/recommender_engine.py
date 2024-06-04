@@ -1,7 +1,7 @@
 import sys
 import os
 
-sys.path.append(r'C:\Users\Simon\proacted\AIacademia') 
+sys.path.append(r'C:\Users\Hp\Desktop\ProActEd\AIacademia') 
 
 
 
@@ -20,7 +20,7 @@ from sklearn.cluster import KMeans
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 
 def load_model(users_interests, activities_users_have_enjoyed_in_the_past):
@@ -324,7 +324,7 @@ def load_model(users_interests, activities_users_have_enjoyed_in_the_past):
 
 
 
-#this is for testing the script above, during production, it should hashed out
+# this is for testing the script above, during production, it should hashed out
 
 
 user_int = "I have a deep interest in health and fitness, focusing on nutrition, exercise, and mental well-being. My goal is to understand the science behind physical fitness and to apply this knowledge in developing holistic health programs. I am keen on exploring the psychological aspects of fitness and how they intersect with physical health, aiming to promote a balanced lifestyle."
@@ -334,10 +334,10 @@ activities_enjyd = "I regularly engage in various physical activities like yoga,
 
 
 
-print(load_model(user_int, activities_enjyd))
+# print(load_model(user_int, activities_enjyd))
 
 
 
 
-for the hexadecimal data, i wrote a dataframe to a database as follows: objective_hex = row['Concatenated Avg Pooled Objective Vectors'].tobytes().hex()
-        general_info_hex = row['Concatenated Avg Pooled General Info Vectors'].tobytes().hex(). Now, the data is stored in dbsqlite3 browser
+# for the hexadecimal data, i wrote a dataframe to a database as follows: objective_hex = row['Concatenated Avg Pooled Objective Vectors'].tobytes().hex()
+#         general_info_hex = row['Concatenated Avg Pooled General Info Vectors'].tobytes().hex(). Now, the data is stored in dbsqlite3 browser

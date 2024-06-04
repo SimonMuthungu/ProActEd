@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,131 +10,15 @@
    
 </head>
 <body>
-   {% comment %} <div class="login-box">
-        <div class="header" style="background-color: #020225;">
-          <img src="{% static 'academia_app/logo.png' %}" alt="proacted_Logo" class="custom-logo">
-          <h2 id="thetitle"  >AIacademia</h2>
-        </div>  {% endcomment %}
     <div class="header">
-        
         <img src="{% static 'academia_app/logo.png' %}" alt="proacted_Logo" class="custom-logo">
         <h1> HELLO&#128075;, WELCOME!! </h1>
        <nav>
         <a href="{% url 'login' %}" class="login-button">Login</a>
        </nav>
     </div>
-
-<!-- <<<<<<< HEAD
-    <h2 size='Quick'>SELECT YOUR SUBJECTS</h2>
-    {% comment %} <form action="course_recommendation_page.html" method="post"> {% endcomment %}
-       <div>
-        <button class="button">MATHEMATICS</button>
-     
-        <button class="button">ENGLISH</button>
-      
-        <button class="button">KISWAHILI</button>
-
-        <button class="button">BIOLOGY</button>
-======= -->
-    <h1 size='Quick'>SELECT YOUR SUBJECTS</h1>
-    <form action="{% url 'recommend_courses' %}" method="post">
-        {% csrf_token %}
-
-        <button class="button">PHYSICS</button>
-
-        <button class="button">CHEMISTRY</button>
-
-        <button class="button">GEOGRAPHY</button>
-        <button class="button">HISTORY</button>
-        <button class="button">BUSSINESS STUDIES</button>
-        <button class="button">COMPUTER STUDIES</button>
-        <button class="button">HOME SCIENCE</button>
-        <button class="button">MUSIC</button>
-        <button class="button">AGRICULTURE</button>
-        <br>
-        <br>
-        <button button type = "submit"> SUBMIT </button>
-       </div>
-   
-       {% comment %} </form> {% endcomment %}
     <section>
-<!-- <<<<<<< HEAD
-        <h2>SELECT YOUR INTERESTS</h2>
-        <form action="course_recommendation_page.html" method="post">
-         <div> 
-        <button class="button">POLITICS</button>
-      
-        <button class="button">SCIENCE</button>
-
-        <button class="button">ART</button>
-
-        <button class="button">DESIGN</button>
-
-        <button class="button">TEACHING</button>
-
-        <button class="button">PUBLIC SPEAKING</button>
-        <button class="button">READING</button>
-        <button class="button">MUSIC</button>
-        <button class="button">ART AND CREATIVITY</button>
-        <button class="button">GARDENING</button>
-        <button class="button">GAMING</button>
-        <button class="button">WRITING</button>
-            
-        <button class="button">TRAVELLING</button>
-      
-        <button class="button">TECHNOLOGY</button>
-
-        <button class="button">CODING</button>
-
-        <button class="button">VOLUNTEERING</button>
-
-        <button class="button">COLLECTING</button>
-
-        <button class="button">DANCE</button>
-        <button class="button">FILM AND CINEMA</button>
-        <button class="button">ANIMAL PETS</button>
-        <button class="button">DIY AND CRAFTING</button>
-        <button class="button">HISTORY AND GENEOLOGY</button>
-        <button class="button">ASTRONOMY</button>
-        <button class="button">READING AND LEARNING</button>
-           
-        <button class="button">FISHING</button>
-      
-        <button class="button">BIRD WATCHING</button>
-
-        <button class="button">CYCLING</button>
-
-        <button class="button">ARCHERY</button>
-
-        <button class="button">MARTIAL ARTS</button>
-
-        <button class="button">PHOTOGRAPHY</button>
-        <button class="button">GOLF</button>
-        <button class="button">ROBOTICS</button>
-        <button class="button">CALLIGRAPH</button>
-        <button class="button">HOME IMPROVEMENT</button>
-        <button class="button">MUSIC</button>
-        <button class="button">METAL DETECTING</button>
-         </div>      
-       
-{% comment %} <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var button = document.querySelector('.subject-btn[data-value="Mathematics"]');
-        button.addEventListener('click', function() {
-            button.classList.toggle('selected');
-            var input = document.getElementById('input-Mathematics');
-            if (button.classList.contains('selected')) {
-                input.value = button.getAttribute('data-value');
-            } else {
-                input.value = '';
-            }
-        });
-    });
-</script> {% endcomment %}
-         
-        <input type="submit" value="SUBMIT">
-======= -->
-        <h3>Please Tell Us Your Interests, we're eager to hear</h3>
+        <h3>Please Tell Us Your Interests, we're eager to hear from you</h3>
 
             <label for="subject1">
                 <input type="checkbox" id="POLITICS" name="interests[]" value="POLITICS"> POLITICS
@@ -375,4 +258,4 @@
     </div>
 </footer>
 
-</html>
+</html> 
