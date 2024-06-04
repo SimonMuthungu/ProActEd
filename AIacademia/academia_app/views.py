@@ -8,17 +8,14 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.http import Http404 , JsonResponse
 from django.shortcuts import redirect, render
-<<<<<<< HEAD
 from python_scripts.proacted_recommender2024 import proacted2024
 from python_scripts.sbert_recommender import sbert_proactedrecomm2024
-=======
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from python_scripts.recommender_engine import load_model
->>>>>>> eaed234c7cd416593c88b0b6eeb012d0e713c449
 from .forms import UserProfileForm
-from .models import BaseUser,UserProfile,Course,School,Performance,Student,Message
+from .models import BaseUser,UserProfile,Course,School,Performance,Student,Message, probabilitydatatable
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
@@ -49,6 +46,8 @@ from django.contrib import messages
 
 import joblib
 from .models import Course, School, Recommender_training_data  # Import Course and School models
+import tensorflow as tf
+import numpy as np
 
 
 logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
@@ -139,26 +138,28 @@ def recommend_courses(request):
         
         
 def predict_probability(request):
-    if request.method == 'POST':
-        model = joblib.load('AIacademia/trained_models/no_bias_trainedw_100000_10288genii.joblib')
-        logging.info('Probability model loaded')
+    model = joblib.load(r'C:\Users\Simon\proacted\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
+    logging.info('Probability model loaded')
 
-        feature1 = request.POST.get('feature1')
-        feature2 = request.POST.get('feature2')
-        
+    student_id = 6
 
-        input_data = [[feature1, feature2]]
+    try:
+        student_data = probabilitydatatable.objects.get(id=student_id) 
+        lessonsattended = student_data.Lessons_Attended
+        aggrpoints = student_data.Aggregate_points
 
+    except probabilitydatatable.DoesNotExist:
+        # the student doesnt exist
+        pass
 
-        # # Predict probabilities
-        prediction = model.predict_proba(input_data)
+    input_data = [[lessonsattended, aggrpoints]]
 
-        context = {'prediction': prediction[0]}
-        return HttpResponse(f'Calculated Probability: {prediction}')
+    # Predict probabilities
+    prediction = model.predict(input_data)
 
-    return render(request, 'academia_app/predict.html') 
+    context = {'prediction': prediction[0]} 
+    return HttpResponse(f'Calculated Probability: {prediction[0]} for inputs {input_data} of student {student_id}') 
 
-    
 
     
 

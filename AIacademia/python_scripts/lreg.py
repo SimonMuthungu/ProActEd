@@ -67,4 +67,3 @@ print(f'Test Accuracy: {test_accuracy}')
 
 # Save the trained model using joblib
 joblib.dump(model, r'C:\Users\Simon\proacted\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
-

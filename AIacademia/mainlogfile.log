@@ -880,3 +880,362 @@ INFO || 06-Mar-24 04:46:53 || Pro-Act-Ed 2024 Recommender Engine Initialized
 INFO || 06-Mar-24 04:47:20 || time recommender model has used: 35.07317113876343
 INFO || 06-Mar-24 04:47:33 || Pro-Act-Ed 2024 Recommender Engine Initialized
 INFO || 06-Mar-24 04:47:44 || time recommender model has used: 12.324629068374634
+INFO || 04-Jun-24 20:58:06 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 04-Jun-24 20:58:38 || time recommender model has used: 48.2198965549469
+WARNING || 04-Jun-24 20:58:52 || Not Found: /favicon.ico
+INFO || 04-Jun-24 21:01:18 || C:\Users\Simon\proacted\AIacademia\python_scripts\proacted_recommender2024.py changed, reloading.
+INFO || 04-Jun-24 21:22:29 || C:\Users\Simon\proacted\AIacademia\python_scripts\proacted_recommender2024.py changed, reloading.
+INFO || 04-Jun-24 21:31:25 || C:\Users\Simon\proacted\AIacademia\python_scripts\proacted_recommender2024.py changed, reloading.
+INFO || 04-Jun-24 21:32:29 || C:\Users\Simon\proacted\AIacademia\python_scripts\proacted_recommender2024.py changed, reloading.
+INFO || 04-Jun-24 21:42:08 || C:\Users\Simon\proacted\AIacademia\academia_app\models.py changed, reloading.
+ERROR || 04-Jun-24 22:50:05 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING || 04-Jun-24 22:50:05 || Bad Request: /ws/academia_app/
+ERROR || 04-Jun-24 22:50:46 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING || 04-Jun-24 22:50:46 || Bad Request: /ws/academia_app/
+INFO || 04-Jun-24 23:43:52 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 04-Jun-24 23:49:26 || C:\Users\Simon\proacted\AIacademia\academia_app\urls.py changed, reloading.
+INFO || 04-Jun-24 23:50:48 || C:\Users\Simon\proacted\AIacademia\academia_app\urls.py changed, reloading.
+INFO || 04-Jun-24 23:52:24 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 04-Jun-24 23:52:50 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 04-Jun-24 23:53:01 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 04-Jun-24 23:53:08 || Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 139, in predict_probability
+    model = joblib.load('AIacademia/trained_models/no_bias_trainedw_100000_10288genii.joblib')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\joblib\numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'AIacademia/trained_models/no_bias_trainedw_100000_10288genii.joblib'
+INFO || 04-Jun-24 23:54:52 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 04-Jun-24 23:55:15 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 04-Jun-24 23:55:17 || Creating converter from 7 to 5
+DEBUG || 04-Jun-24 23:55:17 || Creating converter from 5 to 7
+DEBUG || 04-Jun-24 23:55:17 || Creating converter from 7 to 5
+DEBUG || 04-Jun-24 23:55:17 || Creating converter from 5 to 7
+WARNING || 04-Jun-24 23:55:27 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING || 04-Jun-24 23:55:28 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 04-Jun-24 23:55:28 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 04-Jun-24 23:55:29 || Probability model loaded
+ERROR || 04-Jun-24 23:55:29 || Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: academia_app_probabilitydatatable.Activity_in_group_discussions
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 145, in predict_probability
+    student_data = probabilitydatatable.objects.get(id=student_id)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: academia_app_probabilitydatatable.Activity_in_group_discussions
+INFO || 04-Jun-24 23:56:55 || C:\Users\Simon\proacted\AIacademia\academia_app\models.py changed, reloading.
+DEBUG || 04-Jun-24 23:57:15 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 04-Jun-24 23:57:16 || Creating converter from 7 to 5
+DEBUG || 04-Jun-24 23:57:16 || Creating converter from 5 to 7
+DEBUG || 04-Jun-24 23:57:16 || Creating converter from 7 to 5
+DEBUG || 04-Jun-24 23:57:16 || Creating converter from 5 to 7
+WARNING || 04-Jun-24 23:57:26 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING || 04-Jun-24 23:57:27 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 04-Jun-24 23:57:27 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 04-Jun-24 23:57:27 || Probability model loaded
+ERROR || 04-Jun-24 23:57:27 || Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 156, in predict_probability
+    prediction = model.predict_proba(input_data)
+                 ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Sequential' object has no attribute 'predict_proba'
+WARNING || 04-Jun-24 23:57:28 || Not Found: /favicon.ico
+INFO || 05-Jun-24 00:04:47 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 05-Jun-24 00:05:42 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 05-Jun-24 00:06:46 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:06:55 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:06:56 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:06:56 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:06:56 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:06:56 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:07:01 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 05-Jun-24 00:09:39 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:09:49 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:09:49 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:09:49 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:09:49 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:09:49 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:09:55 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING || 05-Jun-24 00:09:57 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 05-Jun-24 00:09:57 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 05-Jun-24 00:09:58 || Probability model loaded
+INFO || 05-Jun-24 00:10:19 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:10:28 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:10:29 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:10:29 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:10:29 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:10:29 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:10:34 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 05-Jun-24 00:11:02 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:11:11 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:11:11 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:11:11 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:11:11 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:11:11 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:11:16 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING || 05-Jun-24 00:11:23 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 05-Jun-24 00:11:23 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 05-Jun-24 00:11:23 || Probability model loaded
+INFO || 05-Jun-24 00:11:42 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:11:51 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:11:52 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:11:52 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:11:52 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:11:52 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:11:57 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING || 05-Jun-24 00:12:02 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 05-Jun-24 00:12:02 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 05-Jun-24 00:12:02 || Probability model loaded
+INFO || 05-Jun-24 00:12:24 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:12:35 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:12:35 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:12:35 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:12:35 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:12:35 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:12:41 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING || 05-Jun-24 00:12:47 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 05-Jun-24 00:12:47 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 05-Jun-24 00:12:47 || Probability model loaded
+INFO || 05-Jun-24 00:13:06 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:13:15 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:13:16 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:13:16 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:13:16 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:13:16 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:13:21 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING || 05-Jun-24 00:13:28 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 05-Jun-24 00:13:29 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 05-Jun-24 00:13:29 || Probability model loaded
+INFO || 05-Jun-24 00:14:05 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:14:15 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:14:16 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:14:16 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:14:16 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:14:16 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:14:21 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 05-Jun-24 00:14:28 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:14:37 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:14:38 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:14:38 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:14:38 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:14:38 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:14:43 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING || 05-Jun-24 00:14:47 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 05-Jun-24 00:14:47 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 05-Jun-24 00:14:48 || Probability model loaded
+INFO || 05-Jun-24 00:15:00 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:15:09 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:15:09 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:15:09 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:15:09 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:15:09 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:15:14 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING || 05-Jun-24 00:15:19 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 05-Jun-24 00:15:19 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 05-Jun-24 00:15:19 || Probability model loaded
+INFO || 05-Jun-24 00:15:31 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:15:39 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:15:40 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:15:40 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:15:40 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:15:40 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:15:45 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING || 05-Jun-24 00:15:48 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 05-Jun-24 00:15:48 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 05-Jun-24 00:15:48 || Probability model loaded
+INFO || 05-Jun-24 00:16:13 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:16:22 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:16:23 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:16:23 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:16:23 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:16:23 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:16:27 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING || 05-Jun-24 00:16:34 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 05-Jun-24 00:16:34 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 05-Jun-24 00:16:34 || Probability model loaded
+ERROR || 05-Jun-24 00:21:09 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING || 05-Jun-24 00:21:09 || Bad Request: /ws/academia_app/
+ERROR || 05-Jun-24 00:21:46 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING || 05-Jun-24 00:21:46 || Bad Request: /ws/academia_app/
+ERROR || 05-Jun-24 00:22:06 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING || 05-Jun-24 00:22:06 || Bad Request: /ws/academia_app/
+ERROR || 05-Jun-24 00:22:57 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING || 05-Jun-24 00:22:57 || Bad Request: /ws/academia_app/
