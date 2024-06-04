@@ -1,26 +1,34 @@
-import numpy as np
-from sklearn.metrics.pairwise import cosine_similarity
+import pandas as pd
+import os
+import django
 
-# Define a set of vectors (for example, document embeddings)
-vectors = np.array([
-    [0.1, 0.2, 0.3],  # Vector 1
-    [0.4, 0.5, 0.6],  # Vector 2
-    [0.7, 0.8, 0.9],  # Vector 3
-    [0.0, 0.1, 0.0],  # Vector 4
-    [0.9, 0.8, 0.7]   # Vector 5
-])
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'academia_app.settings')
+django.setup()
 
-# Define a query vector
-query_vector = np.array([[0.05, 0.01, 0.05]])
+from academia_app.models import probabilitydatatable  # Import your model
 
-# Calculate cosine similarity between the query vector and each of the other vectors
-similarities = cosine_similarity(query_vector, vectors)
-print(similarities[0])
+# Path to your Excel file
+excel_path = r'C:\Users\Simon\proacted\AIacademia\data_files\trainwith_100000.xlsx'
 
-# # Use argsort to get the indices of vectors in descending order of similarity
-# # Note: [0] is used to get the first row of similarities since query_vector has only one row
-sorted_indices = np.argsort(similarities[0])[::-1]
+# Read the Excel file
+df = pd.read_excel(excel_path, engine='openpyxl')
 
-# # Print the sorted indices and their corresponding similarity scores
-print("Sorted indices:", sorted_indices)
-print("Corresponding similarity scores:", similarities[0][sorted_indices])
+# Iterate over DataFrame rows
+for index, row in df.iterrows():
+    # Create and save an instance of the model for each row in the DataFrame
+    instance = probabilitydatatable(
+        Lessons_Attended=row['Lessons_Attended'],  # Match Excel column names with model fields
+        Total_lessons_in_that_period=row['Total_lessons_in_that_period'],
+        Aggregate_points = row['Aggregate_points']
+        passed = row['passed']
+        pcnt_of_lessons_attended = row['%_of_lessons_attended']
+        homework_submission_rates = row['homework_submission_rates']
+        activity_on_learning_platforms = row['activity_on_learning_platforms']
+        CAT_1_marks = row['CAT_1_marks']
+        Activity_in_group_discussions = row['Activity_in_group_discussions']
+        CAT_2_marks = row['CAT_2_marks']
+        Deadline_Adherence = row['Deadline_Adherence']
+    )
+    instance.save()
+
+print("Data imported successfully.")

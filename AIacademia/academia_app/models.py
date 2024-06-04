@@ -229,3 +229,16 @@ class Message(models.Model):
 
     def __str__(self):
         return f'{self.sender} to {self.recipient} at {self.timestamp}'   
+    
+class probabilitydatatable(models.Model):
+    Lessons_Attended = models.FloatField()
+    Total_lessons_in_that_period = models.FloatField()
+    Aggregate_points = models.FloatField()
+    passed = models.FloatField()
+    pcnt_of_lessons_attended = models.FloatField()
+    homework_submission_rates = models.FloatField()
+    activity_on_learning_platforms = models.FloatField()
+    CAT_1_marks = models.FloatField()
+    Activity_in_group_discussions = models.FloatField()
+    CAT_2_marks = models.FloatField()
+    Deadline_Adherence = models.FloatField()

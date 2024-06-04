@@ -874,3 +874,9 @@ DEBUG || 14-Feb-24 06:52:55 || Starting new HTTPS connection (16): huggingface.c
 INFO || 14-Feb-24 06:52:55 || Use pytorch device_name: cpu
 INFO || 14-Feb-24 06:53:00 || Time taken by sbert model: 5.043795824050903
 INFO || 14-Feb-24 06:53:00 || Recommender system has run
+INFO || 22-Feb-24 12:27:58 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 22-Feb-24 12:28:25 || time recommender model has used: 34.890103340148926
+INFO || 06-Mar-24 04:46:53 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 06-Mar-24 04:47:20 || time recommender model has used: 35.07317113876343
+INFO || 06-Mar-24 04:47:33 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 06-Mar-24 04:47:44 || time recommender model has used: 12.324629068374634
