@@ -10,16 +10,25 @@
     <script src="{% static 'js/main.js' %}" defer></script>
     <style>
         /* Styles for the sidebar navigation */
+        .sidebar {
+            width: 200px; 
+            background-color: #020225;
+            padding: 10px 0; 
+            position: fixed;
+            height: 100vh;
+            box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
         .sidebar ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
-            background-color: #156;
+            background-color: #020225;
         }
 
         .sidebar ul li {
             display: block;
-            margin-bottom: 35px;
+            margin-bottom: 20px;
         }
 
         .sidebar ul li a {
@@ -31,81 +40,65 @@
         .sidebar ul li a:hover {
             background-color: #686;
         }
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%; /* Make sidebar full width on small screens */
+            }
+        }
         .footer {
-            position: sticky;
-            bottom: 0;
+            background-color: #020225;
+            color: #FFDB58;
+            padding: 5px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .header {
+            position: sticky;*/
+            top: 0;
         }
         .container {
-        width: 60%; /* Ensures container takes full width */
-        height: 80%;
+            width: 60%; 
+            height: 400px; 
         }
     </style>
 </head>
 <body>
     <div class="header">    
-    <nav>
-        <div class="sidebar">
-        <ul>
-            <li><a href="#">Profile</a></li>
-            <li><a href="{% url 'course_recommendation' %}">Course Recommendation</a></li>
-            <li><a href="#">Intervention</a></li>
-            <li><a href="{% url 'inbox' %}">Inbox</a></li>
-            <li><a href="{% url 'login' %}">Logout</a></li>
-        </ul>
-        </div>
-    </nav>
-    <h1>Welcome, Student!</h1>
-
-</div>
+        <nav>
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="{% url 'course_recommendation' %}">Course Recommendation</a></li>
+                    <li><a href="#">Intervention</a></li>
+                    <li><a href="{% url 'inbox' %}">Inbox</a></li>
+                    <li><a href="{% url 'login' %}">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1>Welcome, Student!</h1>
+    </div>
     <div class="content"> 
         <h2>PROGRESS GRAPH</h2>
         <div class="container">
-            <canvas id="performanceChart" width="80%" height="400"></canvas>
+            <canvas id="performanceChart" ></canvas>
+            <!-- width="80%" height="400" -->
         </div>
     </div>
-
-    {% comment %} <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var ctx = document.getElementById('performanceChart').getContext('2d');
-            var performanceChart = new Chart(ctx, {
-                width: 80%, 
-                height: 60%,
-                type: 'line',
-                data: {
-                    labels: {{ labels|safe }},
-                    datasets: [{
-                        label: 'Student Performance Over Time',
-                        data: {{ data|safe }},
-                        fill: false,
-                        borderColor: 'rgb(75, 192, 192)',
-                        tension: 0.1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
-        });
-    </script> {% endcomment %}
-    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         var ctx = document.getElementById('performanceChart').getContext('2d');
         var performanceChart = new Chart(ctx, {
-            type: 'line',
+            width: 600, 
+            height: 300,
+            type: 'bar',
             data: {
                 // Hard-coded labels for the x-axis (e.g., representing semesters or months)
-                labels: ['Semester 1', 'Semester 2', 'Semester 3', 'Semester 4', 'Semester 5'],
+                labels: ['Semester 1', 'Semester 2', 'Semester 3', 'Semester 4'],
                 datasets: [{
                     label: 'Student Performance Over Time',
                     // Hard-coded data values for each label on the x-axis (e.g., representing grades or scores)
-                    data: [75, 88, 80, 95, 92],
+                    data: [75, 88, 80, 95],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
                     tension: 0.1
@@ -156,19 +149,18 @@
             {% endfor %}
         </div>
     </div>       
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="contact-info">
-                <h2>Contact Us</h2>
-                <p>Email: info@proacted.com</p>
-                <p>Phone: +254 (7) 437-20033</p>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2024 ProActEd; Maseno University. All Rights Reserved.</p>
-        </div>
-    </footer>
 </body>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Email: info@proacted.com</p>
+            <p>Phone: +254 (7) 437-20033</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2024 ProActEd; Maseno University. All Rights Reserved.</p>
+    </div>
+</footer>
 </html>
 

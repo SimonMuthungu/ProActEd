@@ -106,7 +106,8 @@ def recommend_courses(request):
         user_activities_enjoyed = ' '.join(user_activities_enjoyed).lower() 
         # textarea
         user_description_about_interests = request.POST.getlist('additionalInfo')
-        user_description_about_interests = ''.join(user_activities_enjoyed).lower() 
+        user_description_about_interests = ''.join(user_description_about_interests).lower() 
+        #user_description_about_interests = ''.join(user_activities_enjoyed).lower() 
         print(user_description_about_interests)
         try: 
             # Load the model and get the output
@@ -122,7 +123,9 @@ def recommend_courses(request):
         # Pass recommendations to the template
         finally:
             logging.info('Recommender system has run')
-            
+    else:
+        return render(request, 'academia_app/login.html')        
+
             
         
         
