@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'channels',  
+    
 ]
 
 MIDDLEWARE = [
@@ -59,6 +61,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'AIacademia.wsgi.application'
+ASGI_APPLICATION = 'AIacademia.asgi.application'
 
 # Database
 DATABASES = {
@@ -92,6 +95,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'academia_app', 'static')]
 
 # Custom user model
@@ -105,4 +109,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 class MyForm(forms.Form):
     template_name = "Student_Page.html"
-    ...

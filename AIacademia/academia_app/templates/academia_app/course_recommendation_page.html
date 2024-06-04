@@ -1,27 +1,24 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/course_recommendation_styles.css' %}">
-
     <title>Course Recommendation</title>
-
-    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/course.css' %}">
+   
 </head>
 <body>
     <div class="header">
+        <img src="{% static 'academia_app/logo.png' %}" alt="proacted_Logo" class="custom-logo">
+        <h1> HELLO&#128075;, WELCOME!! </h1>
+       <nav>
         <a href="{% url 'login' %}" class="login-button">Login</a>
+       </nav>
     </div>
-
-    <h1 size='Quick'>SELECT YOUR SUBJECTS</h1>
-    <form action="{% url 'recommend_courses' %}" method="post">
-        {% csrf_token %}
-
     <section>
-        <h3>Please Tell Us Your Interests, we're eager to hear</h3>
+        <h3>Please Tell Us Your Interests, we're eager to hear from you</h3>
 
             <label for="subject1">
                 <input type="checkbox" id="POLITICS" name="interests[]" value="POLITICS"> POLITICS
@@ -242,8 +239,23 @@
             </section>
     </section>
         <input type="submit" value="Submit">
+
     </form>
 </section>
+
+<script src="{% static 'js/script.js' %}"></script>
 </body>
-   
-</html>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Email: info@proacted.com</p>
+            <p>Phone: +254 (7) 437-20033</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2024 ProActEd; Maseno University. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</html> 

@@ -55,13 +55,14 @@
             </div>
             <span class="collapsible-item">Staff Users</span>
             <div class="sub-content">
-                <a href="{% url 'admin:academia_app_studentuserproxy_add' %}">Add Staff</a>
-                <a href="{% url 'admin:academia_app_studentuserproxy_changelist' %}">Change Staff</a>
+                <a href="{% url 'admin:academia_app_adminuserproxy_add' %}">Add Staff</a>
+                <a href="{% url 'admin:academia_app_adminuserproxy_changelist' %}">Change Staff</a>
             </div>
             <span class="collapsible-item">Student Users</span>
             <div class="sub-content">
-                <a href="{% url 'admin:academia_app_superadminuserproxy_add' %}">Add Student User</a>
-                <a href="{% url 'admin:academia_app_superadminuserproxy_changelist' %}">Change Student User</a>
+                <a href="{% url 'admin:academia_app_studentuserproxy_add' %}">Add Student User</a>
+                <a href="{% url 'admin:academia_app_studentuserproxy_changelist' %}">Change Student User</a>
+                <a href="{% url 'admin:academia_app_studentuserproxy_changelist' %}">View Student User</a>
                 <a href="{% url 'admin:academia_app_student_add' %}">Add Student</a>
             </div>
         </div>
@@ -89,7 +90,16 @@
     </div>
 </div>
 
-<!-- Settings Section -->
+    <!-- Messaging Section -->
+    <div class="sidebar-section">
+        <h3  class="collapsible">Messaging</h3>
+        <span class="collapsible-item">Inbox</span>   
+        <div>
+            <a href="{% url 'inbox' %}">Inbox</a>
+        </div>         
+    </div>
+    <!-- Settings Section -->
+
 <div class="sidebar-section">
     <h3>Settings</h3>
     <div class="side_bar_content">

@@ -1,22 +1,28 @@
+from django import forms
 import logging
 import sys
 # sys.path.append(r'C:\Users\Simon\proacted\AIacademia') 
-
 from django.http import Http404 , JsonResponse
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse, JsonResponse
+from django.http import Http404 , JsonResponse
 from django.shortcuts import redirect, render
+<<<<<<< HEAD
 from python_scripts.proacted_recommender2024 import proacted2024
 from python_scripts.sbert_recommender import sbert_proactedrecomm2024
+=======
+from django.shortcuts import render, redirect
+from django.http import HttpResponseRedirect
+from django.contrib import messages
+from python_scripts.recommender_engine import load_model
+>>>>>>> eaed234c7cd416593c88b0b6eeb012d0e713c449
 from .forms import UserProfileForm
-from .models import UserProfile
+from .models import BaseUser,UserProfile,Course,School,Performance,Student,Message
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from .forms import UserProfileForm
-from .models import Course, School  # Import Course and School models
 from django.core.mail import send_mail
 from sre_constants import BRANCH
 from telnetlib import LOGOUT
@@ -46,6 +52,7 @@ from .models import Course, School, Recommender_training_data  # Import Course a
 
 
 logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+
 
 def login_view(request):
     if request.method == 'POST':
@@ -166,11 +173,11 @@ def dashboard(request):
 @login_required
 def student_page(request):
     if request.user.groups.filter(name='Student Users').exists():
-        return render(request, "academia_app/student_page.html")
+        return render(request, "academia_app/student_page.html",context ={ 'text': 'Hello world'})
     else:
         if request.user.is_superuser or request.user.is_staff:
             return redirect('/admin/')
-        return redirect('login')
+        return redirect('login') 
 
 def course_recommendation(request):
     return render(request, 'academia_app/course_recommendation_page.html',)
@@ -193,6 +200,27 @@ def get_courses(request, school_id):
         return JsonResponse(course_list, safe=False)
     else:
         return JsonResponse({"error": "Not authorized"}, status=403)
+
+@login_required
+def inbox(request):
+    received_messages = Message.objects.filter(recipient=request.user)
+    sent_messages = Message.objects.filter(sender=request.user)
+    users = BaseUser.objects.exclude(id=request.user.id)
+    return render(request, 'academia_app/inbox.html', {'received_messages': received_messages, 'sent_messages': sent_messages, 'users': users})
+
+@login_required
+def send_message(request, recipient_id):
+    if request.method == 'POST':
+        recipient = BaseUser.objects.get(id=recipient_id)
+        content = request.POST.get('content', '')
+        message = Message.objects.create(sender=request.user, recipient=recipient, content=content)
+        return render(request, 'academia_app/send_message.html', {'message_sent': True, 'recipient_id': recipient_id})
+
+    # Added the following for debugging
+    print("Recipient ID:", recipient_id)
+
+    return render(request, 'academia_app/send_message.html', {'recipient_id': recipient_id})
+
 def edit_profile(request):
     try:
         profile = request.user.userprofile
@@ -223,6 +251,40 @@ def edit_profile(request):
     send_mail(subject, message, sender, recipients)
     return HttpResponseRedirect("/thanks/")
 
+# <<<<<<< HEAD
+#     return render(request, 'Student_Page.html', {'form': form})
+# def Profile (request):
+    
+#     try:
+#         profile = request.user.userprofile
+#     except UserProfile.DoesNotExist:
+#         UserProfile.objects.create(user=request.user)
+#     form = UserProfileForm
+#     updated = False
+#     if request.method == "POST":
+#         form = UserProfileForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return HttpResponseRedirect('/Profile?updated=True')
+#         else:
+#             form: UserProfileForm
+#             if 'updated' in request.GET:
+#                 updated = True
+
+# def student_performance_view(request, student_id):
+#     performances = Performance.objects.filter(student_id=student_id).select_related('unit').order_by('unit__semester')
+    
+#     # Prepare data for the graph
+#     labels = [performance.unit.semester for performance in performances]
+#     data = [performance.score for performance in performances]
+    
+#     context = {
+#         'labels': labels,
+#         'data': data,
+#     }
+#     return render(request, 'student_performance.html', context)
+
+# =======
     #return render(request, 'Student_Page.html', {'form': form})
 
 @login_required

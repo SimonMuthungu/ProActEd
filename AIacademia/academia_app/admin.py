@@ -3,7 +3,8 @@ from django.contrib import admin
 from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import Group
-
+from django.contrib import admin
+from .models import UserProfile
 from .models import (AdminUserProxy, Attendance, Course, CourseOfInterest,
                      FeeInformation, FieldOfInterest, HighSchoolSubject,
                      Performance, School, Student, StudentUserProxy,
@@ -137,3 +138,4 @@ admin.site.register(Performance, PerformanceAdmin)
 admin.site.register(FieldOfInterest)
 admin.site.register(HighSchoolSubject)
 admin.site.register(CourseOfInterest)
+admin.site.register(UserProfile)

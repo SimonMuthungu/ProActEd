@@ -6,8 +6,6 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.contrib.auth.models import Permission
 
-
-
 # Custom User Manager
 class CustomUserManager(BaseUserManager):
     def create_user(self, username, password=None, **extra_fields):
@@ -37,7 +35,7 @@ class BaseUserGroup(models.Model):
 # Base User Model
 class BaseUser(AbstractUser):
     objects = CustomUserManager()
-    groups = models.ManyToManyField(Group, through='BaseUserGroup')
+    groups = models.ManyToManyField(Group, through= BaseUserGroup)
 
     def __str__(self):
         return f"Base User: {self.username}"
@@ -197,6 +195,17 @@ class RecommenderSBERTVectors(models.Model):
 
     def __str__(self):
         return self.course_name
+
+#model for messages
+class Message(models.Model):
+    sender = models.ForeignKey(BaseUser, on_delete=models.CASCADE, related_name='sent_messages')
+    recipient = models.ForeignKey(BaseUser, on_delete=models.CASCADE, related_name='received_messages')
+    content = models.TextField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.sender} to {self.recipient} at {self.timestamp}'    
+
     
 class UserProfile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
@@ -208,16 +217,9 @@ class UserProfile(models.Model):
     def __str__(self):
         return f'Profile of {self.user.username}'
     
-class CustomUser(AbstractUser):
-    # Add any additional fields for your user here
-    # For example, a phone number field
-    phone_number = models.CharField(max_length=15, blank=True)
-
-    user_permissions = models.ManyToManyField(
-        Permission,
-        related_name="customuser_set"  # <-- Add this line
-    )
-
+class Unit(models.Model):
+    title = models.CharField(max_length=100)
+    semester = models.CharField(max_length=20)  # For simplicity, we're using a CharField
     def __str__(self):
         return self.username
 # model for messages
@@ -229,6 +231,7 @@ class Message(models.Model):
 
     def __str__(self):
         return f'{self.sender} to {self.recipient} at {self.timestamp}'   
+<<<<<<< HEAD
     
 class probabilitydatatable(models.Model):
     Lessons_Attended = models.FloatField()
@@ -242,3 +245,5 @@ class probabilitydatatable(models.Model):
     Activity_in_group_discussions = models.FloatField()
     CAT_2_marks = models.FloatField()
     Deadline_Adherence = models.FloatField()
+=======
+>>>>>>> eaed234c7cd416593c88b0b6eeb012d0e713c449
