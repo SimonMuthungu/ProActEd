@@ -20,8 +20,7 @@ urlpatterns = [
     path("admin_page", views.admin_page, name="admin_page"),
     path("recommend_courses", views.recommend_courses, name="recommend_courses"),
     path('logout/', LogoutView.as_view(next_page='course_recommendation'), name='logout'),
-    path('course_recommendation/', views.course_recommendation, name='course_recommendation'),
-    # path('predict/', views.predict, name='predict'),
-    # path('predict/probability/', views.predict_probability, name='predict_probability'),
+    path('predict/', views.predict, name='predict'),
+    path('predict/probability/', views.predict_probability, name='predict_probability'),
     ]
 

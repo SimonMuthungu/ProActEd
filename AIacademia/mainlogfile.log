@@ -1279,3 +1279,132 @@ Traceback (most recent call last):
     raise DisallowedHost(msg)
 django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
 WARNING || 04-Jun-24 20:20:38 || Bad Request: /ws/academia_app/
+ERROR || 04-Jun-24 20:47:21 || Internal Server Error: /recommend_courses
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view academia_app.views.recommend_courses didn't return an HttpResponse object. It returned None instead.
+ERROR || 04-Jun-24 20:49:24 || Internal Server Error: /recommend_courses
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view academia_app.views.recommend_courses didn't return an HttpResponse object. It returned None instead.
+ERROR || 04-Jun-24 21:21:43 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING || 04-Jun-24 21:21:43 || Bad Request: /ws/academia_app/
+INFO || 04-Jun-24 21:58:46 || C:\Users\Hp\Desktop\ProActEd\AIacademia\AIacademia\settings.py changed, reloading.
+WARNING || 04-Jun-24 21:59:56 || Not Found: /recommend_courses/
+ERROR || 04-Jun-24 22:00:09 || Internal Server Error: /recommend_courses
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view academia_app.views.recommend_courses didn't return an HttpResponse object. It returned None instead.
+INFO || 04-Jun-24 22:10:07 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 04-Jun-24 22:27:08 || Beginning to run the recommender script
+INFO || 04-Jun-24 22:27:08 || Recommender model loaded and running
+INFO || 04-Jun-24 22:27:08 || Processing request...
+CRITICAL || 04-Jun-24 22:27:08 || Something came up, please rerun the system...
+INFO || 04-Jun-24 22:27:08 || Recommender system has run
+ERROR || 04-Jun-24 22:27:08 || Internal Server Error: /student_page/recommend_courses
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view academia_app.views.recommend_courses didn't return an HttpResponse object. It returned None instead.
+INFO || 04-Jun-24 22:29:42 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 04-Jun-24 22:30:25 || Beginning to run the recommender script
+INFO || 04-Jun-24 22:30:25 || Recommender model loaded and running
+INFO || 04-Jun-24 22:30:25 || Processing request...
+CRITICAL || 04-Jun-24 22:30:25 || Something came up, please rerun the system...
+INFO || 04-Jun-24 22:30:25 || Recommender system has run
+ERROR || 04-Jun-24 22:30:25 || Internal Server Error: /student_page/recommend_courses
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view academia_app.views.recommend_courses didn't return an HttpResponse object. It returned None instead.
+INFO || 04-Jun-24 22:35:33 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+INFO || 04-Jun-24 22:37:16 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+INFO || 04-Jun-24 22:37:23 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 04-Jun-24 22:37:37 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+INFO || 04-Jun-24 22:37:56 || Beginning to run the recommender script
+INFO || 04-Jun-24 22:37:56 || Recommender model loaded and running
+INFO || 04-Jun-24 22:37:56 || Processing request...
+CRITICAL || 04-Jun-24 22:37:56 || Something came up, please rerun the system...
+INFO || 04-Jun-24 22:37:56 || Recommender system has run
+ERROR || 04-Jun-24 22:37:56 || Internal Server Error: /student_page/recommend_courses
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view academia_app.views.recommend_courses didn't return an HttpResponse object. It returned None instead.
+WARNING || 04-Jun-24 22:52:03 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 22:52:33 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 22:55:32 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 22:58:53 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 22:59:46 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 22:59:51 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:00:15 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:00:29 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:00:31 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:00:41 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:06:09 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:06:55 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:08:00 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:09:00 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:15:49 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:16:36 || Not Found: /favicon.ico
+WARNING || 04-Jun-24 23:16:37 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:18:07 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:18:18 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:18:41 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:18:55 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:19:08 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:23:48 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:23:51 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:27:09 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:27:50 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:28:06 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:31:51 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:35:37 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:44:40 || Not Found: /ws/academia_app/
+WARNING || 04-Jun-24 23:45:50 || Not Found: /ws/academia_app/
