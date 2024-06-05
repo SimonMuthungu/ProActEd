@@ -67,7 +67,7 @@
         <nav>
             <div class="sidebar">
                 <ul>
-                    <li><a href="#">Profile</a></li>
+                    <li><a href="{% url 'profile' %}">Profile</a></li>
                     <li><a href="{% url 'course_recommendation' %}">Course Recommendation</a></li>
                     <li><a href="#">Intervention</a></li>
                     <li><a href="{% url 'inbox' %}">Inbox</a></li>
@@ -98,7 +98,7 @@
                 datasets: [{
                     label: 'Student Performance Over Time',
                     // Hard-coded data values for each label on the x-axis (e.g., representing grades or scores)
-                    data: [75, 88, 80, 95],
+                    data: [0, 6],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
                     tension: 0.1

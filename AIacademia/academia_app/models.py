@@ -182,10 +182,15 @@ class Recommender_training_data_byte_vectors(models.Model):
     
 class Recommender_training_data_number_vectors(models.Model):
     course_name = models.CharField(max_length=200)
-    course_objectives = models.CharField(max_length=5000)  # Adjust max_length as needed
+    course_objectives = models.CharField(max_length=5000) 
     course_general_info_and_about = models.CharField(max_length=5000)
     general_prerequisites = models.CharField(max_length=5000)
     subject_prerequisites = models.CharField(max_length=5000)
+
+class RecommenderSBERTVectors(models.Model):
+    course_name = models.CharField(max_length=255, unique=True)
+    description_embedding = models.CharField(max_length=10000)
+    objectives_embedding = models.CharField(max_length=10000) 
 
 
     def __str__(self):
@@ -216,13 +221,18 @@ class Unit(models.Model):
     title = models.CharField(max_length=100)
     semester = models.CharField(max_length=20)  # For simplicity, we're using a CharField
     def __str__(self):
-        return self.username
-# model for messages
-class Message(models.Model):
-    sender = models.ForeignKey(BaseUser, on_delete=models.CASCADE, related_name='sent_messages')
-    recipient = models.ForeignKey(BaseUser, on_delete=models.CASCADE, related_name='received_messages')
-    content = models.TextField()
-    timestamp = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f'{self.sender} to {self.recipient} at {self.timestamp}'   
+        return self.username  
+    
+class probabilitydatatable(models.Model):
+    Lessons_Attended = models.FloatField()
+    Total_lessons_in_that_period = models.FloatField()
+    Aggregate_points = models.FloatField()
+    pcnt_of_lessons_attended = models.FloatField()
+    homework_submission_rates = models.FloatField()
+    activity_on_learning_platforms = models.FloatField()
+    CAT_1_marks = models.FloatField()
+    CAT_2_marks = models.FloatField()
+    Deadline_Adherence = models.FloatField()
+    teachers_comments_so_far = models.TextField()
+    activity_on_elearning_platforms = models.FloatField()
+    passed_or_not = models.FloatField()

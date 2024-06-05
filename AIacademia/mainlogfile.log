@@ -791,24 +791,502 @@ INFO || 02-Feb-24 07:32:00 || Pro-Act-Ed 2024 Recommender Engine Initialized
 INFO || 02-Feb-24 07:32:11 || time recommender model has used: 12.439636945724487
 INFO || 02-Feb-24 07:35:19 || Pro-Act-Ed 2024 Recommender Engine Initialized
 INFO || 02-Feb-24 07:35:29 || time recommender model has used: 12.27060317993164
-INFO || 04-Jun-24 17:37:17 || C:\Users\Hp\Desktop\ProActEd\AIacademia\python_scripts\recommender_engine.py changed, reloading.
-INFO || 04-Jun-24 17:37:21 || Recommender model loaded and running
-INFO || 04-Jun-24 17:37:21 || Recommender model loaded and running
-INFO || 04-Jun-24 18:02:27 || Recommender model loaded and running
-INFO || 04-Jun-24 18:02:27 || Recommender model loaded and running
-INFO || 04-Jun-24 18:05:25 || Recommender model loaded and running
-INFO || 04-Jun-24 18:05:25 || Processing request...
-INFO || 04-Jun-24 18:05:25 || Recommender model loaded and running
-INFO || 04-Jun-24 18:05:25 || Processing request...
-INFO || 04-Jun-24 18:10:00 || Recommender model loaded and running
-INFO || 04-Jun-24 18:10:00 || Processing request...
-INFO || 04-Jun-24 18:10:00 || Recommender model loaded and running
-INFO || 04-Jun-24 18:10:00 || Processing request...
-INFO || 04-Jun-24 18:12:03 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
-INFO || 04-Jun-24 18:12:17 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
-WARNING || 04-Jun-24 19:04:10 || Not Found: /favicon.ico
-WARNING || 04-Jun-24 19:07:47 || Not Found: /favicon.ico
-ERROR || 04-Jun-24 19:20:21 || Internal Server Error: /student_page/student_page/
+INFO || 02-Feb-24 07:36:43 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 02-Feb-24 07:36:53 || time recommender model has used: 12.057013273239136
+INFO || 04-Feb-24 19:56:25 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 04-Feb-24 19:56:55 || time recommender model has used: 38.0347158908844
+WARNING || 04-Feb-24 19:57:17 || Not Found: /favicon.ico
+INFO || 04-Feb-24 19:58:14 || Beginning to run the recommender script
+INFO || 04-Feb-24 19:58:14 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 04-Feb-24 19:58:44 || time recommender model has used: 146.59151935577393
+INFO || 04-Feb-24 19:58:44 || Recommender system has run
+INFO || 12-Feb-24 12:07:00 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 12-Feb-24 12:07:33 || time recommender model has used: 38.16014814376831
+INFO || 12-Feb-24 12:07:46 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 12-Feb-24 12:08:03 || time recommender model has used: 18.790717363357544
+INFO || 14-Feb-24 06:29:54 || S-Bert 2024 Recommender Engine Initialized
+INFO || 14-Feb-24 06:29:54 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Feb-24 06:29:54 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Feb-24 06:29:54 || Starting new HTTPS connection (2): huggingface.co:443
+DEBUG || 14-Feb-24 06:29:54 || Starting new HTTPS connection (3): huggingface.co:443
+DEBUG || 14-Feb-24 06:29:54 || Starting new HTTPS connection (4): huggingface.co:443
+DEBUG || 14-Feb-24 06:29:54 || Starting new HTTPS connection (5): huggingface.co:443
+DEBUG || 14-Feb-24 06:29:54 || Starting new HTTPS connection (6): huggingface.co:443
+DEBUG || 14-Feb-24 06:29:55 || Starting new HTTPS connection (7): huggingface.co:443
+DEBUG || 14-Feb-24 06:29:55 || Starting new HTTPS connection (8): huggingface.co:443
+INFO || 14-Feb-24 06:29:55 || Use pytorch device_name: cpu
+INFO || 14-Feb-24 06:30:08 || Time taken by sbert model: 13.605860710144043
+INFO || 14-Feb-24 06:31:45 || S-Bert 2024 Recommender Engine Initialized
+INFO || 14-Feb-24 06:31:45 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Feb-24 06:31:45 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Feb-24 06:31:45 || Starting new HTTPS connection (2): huggingface.co:443
+DEBUG || 14-Feb-24 06:31:45 || Starting new HTTPS connection (3): huggingface.co:443
+DEBUG || 14-Feb-24 06:31:45 || Starting new HTTPS connection (4): huggingface.co:443
+DEBUG || 14-Feb-24 06:31:45 || Starting new HTTPS connection (5): huggingface.co:443
+DEBUG || 14-Feb-24 06:31:45 || Starting new HTTPS connection (6): huggingface.co:443
+DEBUG || 14-Feb-24 06:31:46 || Starting new HTTPS connection (7): huggingface.co:443
+DEBUG || 14-Feb-24 06:31:46 || Starting new HTTPS connection (8): huggingface.co:443
+INFO || 14-Feb-24 06:31:46 || Use pytorch device_name: cpu
+INFO || 14-Feb-24 06:31:57 || Time taken by sbert model: 11.895556926727295
+INFO || 14-Feb-24 06:35:50 || S-Bert 2024 Recommender Engine Initialized
+INFO || 14-Feb-24 06:35:50 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Feb-24 06:35:50 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Feb-24 06:35:50 || Starting new HTTPS connection (2): huggingface.co:443
+DEBUG || 14-Feb-24 06:35:50 || Starting new HTTPS connection (3): huggingface.co:443
+DEBUG || 14-Feb-24 06:35:50 || Starting new HTTPS connection (4): huggingface.co:443
+DEBUG || 14-Feb-24 06:35:50 || Starting new HTTPS connection (5): huggingface.co:443
+DEBUG || 14-Feb-24 06:35:50 || Starting new HTTPS connection (6): huggingface.co:443
+DEBUG || 14-Feb-24 06:35:51 || Starting new HTTPS connection (7): huggingface.co:443
+DEBUG || 14-Feb-24 06:35:51 || Starting new HTTPS connection (8): huggingface.co:443
+INFO || 14-Feb-24 06:35:51 || Use pytorch device_name: cpu
+INFO || 14-Feb-24 06:43:45 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 14-Feb-24 06:44:09 || time recommender model has used: 27.704192638397217
+WARNING || 14-Feb-24 06:45:05 || Not Found: /favicon.ico
+INFO || 14-Feb-24 06:48:47 || Beginning to run the proacted recommender script
+INFO || 14-Feb-24 06:48:47 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 14-Feb-24 06:49:03 || time recommender model has used: 321.6681499481201
+INFO || 14-Feb-24 06:49:06 || S-Bert 2024 Recommender Engine Initialized
+INFO || 14-Feb-24 06:49:06 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Feb-24 06:49:06 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Feb-24 06:49:06 || Starting new HTTPS connection (2): huggingface.co:443
+DEBUG || 14-Feb-24 06:49:06 || Starting new HTTPS connection (3): huggingface.co:443
+DEBUG || 14-Feb-24 06:49:06 || Starting new HTTPS connection (4): huggingface.co:443
+DEBUG || 14-Feb-24 06:49:06 || Starting new HTTPS connection (5): huggingface.co:443
+DEBUG || 14-Feb-24 06:49:06 || Starting new HTTPS connection (6): huggingface.co:443
+DEBUG || 14-Feb-24 06:49:07 || Starting new HTTPS connection (7): huggingface.co:443
+DEBUG || 14-Feb-24 06:49:07 || Starting new HTTPS connection (8): huggingface.co:443
+INFO || 14-Feb-24 06:49:07 || Use pytorch device_name: cpu
+INFO || 14-Feb-24 06:49:13 || Time taken by sbert model: 6.248710632324219
+INFO || 14-Feb-24 06:49:13 || Recommender system has run
+INFO || 14-Feb-24 06:52:40 || Beginning to run the proacted recommender script
+INFO || 14-Feb-24 06:52:40 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 14-Feb-24 06:52:54 || time recommender model has used: 552.6749496459961
+INFO || 14-Feb-24 06:52:54 || S-Bert 2024 Recommender Engine Initialized
+INFO || 14-Feb-24 06:52:54 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Feb-24 06:52:54 || Starting new HTTPS connection (9): huggingface.co:443
+DEBUG || 14-Feb-24 06:52:55 || Starting new HTTPS connection (10): huggingface.co:443
+DEBUG || 14-Feb-24 06:52:55 || Starting new HTTPS connection (11): huggingface.co:443
+DEBUG || 14-Feb-24 06:52:55 || Starting new HTTPS connection (12): huggingface.co:443
+DEBUG || 14-Feb-24 06:52:55 || Starting new HTTPS connection (13): huggingface.co:443
+DEBUG || 14-Feb-24 06:52:55 || Starting new HTTPS connection (14): huggingface.co:443
+DEBUG || 14-Feb-24 06:52:55 || Starting new HTTPS connection (15): huggingface.co:443
+DEBUG || 14-Feb-24 06:52:55 || Starting new HTTPS connection (16): huggingface.co:443
+INFO || 14-Feb-24 06:52:55 || Use pytorch device_name: cpu
+INFO || 14-Feb-24 06:53:00 || Time taken by sbert model: 5.043795824050903
+INFO || 14-Feb-24 06:53:00 || Recommender system has run
+INFO || 22-Feb-24 12:27:58 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 22-Feb-24 12:28:25 || time recommender model has used: 34.890103340148926
+INFO || 06-Mar-24 04:46:53 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 06-Mar-24 04:47:20 || time recommender model has used: 35.07317113876343
+INFO || 06-Mar-24 04:47:33 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 06-Mar-24 04:47:44 || time recommender model has used: 12.324629068374634
+INFO || 04-Jun-24 20:58:06 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 04-Jun-24 20:58:38 || time recommender model has used: 48.2198965549469
+WARNING || 04-Jun-24 20:58:52 || Not Found: /favicon.ico
+INFO || 04-Jun-24 21:01:18 || C:\Users\Simon\proacted\AIacademia\python_scripts\proacted_recommender2024.py changed, reloading.
+INFO || 04-Jun-24 21:22:29 || C:\Users\Simon\proacted\AIacademia\python_scripts\proacted_recommender2024.py changed, reloading.
+INFO || 04-Jun-24 21:31:25 || C:\Users\Simon\proacted\AIacademia\python_scripts\proacted_recommender2024.py changed, reloading.
+INFO || 04-Jun-24 21:32:29 || C:\Users\Simon\proacted\AIacademia\python_scripts\proacted_recommender2024.py changed, reloading.
+INFO || 04-Jun-24 21:42:08 || C:\Users\Simon\proacted\AIacademia\academia_app\models.py changed, reloading.
+ERROR || 04-Jun-24 22:50:05 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING || 04-Jun-24 22:50:05 || Bad Request: /ws/academia_app/
+ERROR || 04-Jun-24 22:50:46 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING || 04-Jun-24 22:50:46 || Bad Request: /ws/academia_app/
+INFO || 04-Jun-24 23:43:52 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 04-Jun-24 23:49:26 || C:\Users\Simon\proacted\AIacademia\academia_app\urls.py changed, reloading.
+INFO || 04-Jun-24 23:50:48 || C:\Users\Simon\proacted\AIacademia\academia_app\urls.py changed, reloading.
+INFO || 04-Jun-24 23:52:24 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 04-Jun-24 23:52:50 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 04-Jun-24 23:53:01 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 04-Jun-24 23:53:08 || Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 139, in predict_probability
+    model = joblib.load('AIacademia/trained_models/no_bias_trainedw_100000_10288genii.joblib')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\joblib\numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'AIacademia/trained_models/no_bias_trainedw_100000_10288genii.joblib'
+INFO || 04-Jun-24 23:54:52 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 04-Jun-24 23:55:15 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 04-Jun-24 23:55:17 || Creating converter from 7 to 5
+DEBUG || 04-Jun-24 23:55:17 || Creating converter from 5 to 7
+DEBUG || 04-Jun-24 23:55:17 || Creating converter from 7 to 5
+DEBUG || 04-Jun-24 23:55:17 || Creating converter from 5 to 7
+WARNING || 04-Jun-24 23:55:27 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING || 04-Jun-24 23:55:28 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 04-Jun-24 23:55:28 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 04-Jun-24 23:55:29 || Probability model loaded
+ERROR || 04-Jun-24 23:55:29 || Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: academia_app_probabilitydatatable.Activity_in_group_discussions
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 145, in predict_probability
+    student_data = probabilitydatatable.objects.get(id=student_id)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: academia_app_probabilitydatatable.Activity_in_group_discussions
+INFO || 04-Jun-24 23:56:55 || C:\Users\Simon\proacted\AIacademia\academia_app\models.py changed, reloading.
+DEBUG || 04-Jun-24 23:57:15 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 04-Jun-24 23:57:16 || Creating converter from 7 to 5
+DEBUG || 04-Jun-24 23:57:16 || Creating converter from 5 to 7
+DEBUG || 04-Jun-24 23:57:16 || Creating converter from 7 to 5
+DEBUG || 04-Jun-24 23:57:16 || Creating converter from 5 to 7
+WARNING || 04-Jun-24 23:57:26 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING || 04-Jun-24 23:57:27 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 04-Jun-24 23:57:27 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 04-Jun-24 23:57:27 || Probability model loaded
+ERROR || 04-Jun-24 23:57:27 || Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 156, in predict_probability
+    prediction = model.predict_proba(input_data)
+                 ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Sequential' object has no attribute 'predict_proba'
+WARNING || 04-Jun-24 23:57:28 || Not Found: /favicon.ico
+INFO || 05-Jun-24 00:04:47 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 05-Jun-24 00:05:42 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 05-Jun-24 00:06:46 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:06:55 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:06:56 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:06:56 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:06:56 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:06:56 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:07:01 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 05-Jun-24 00:09:39 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:09:49 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:09:49 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:09:49 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:09:49 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:09:49 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:09:55 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING || 05-Jun-24 00:09:57 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 05-Jun-24 00:09:57 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 05-Jun-24 00:09:58 || Probability model loaded
+INFO || 05-Jun-24 00:10:19 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:10:28 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:10:29 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:10:29 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:10:29 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:10:29 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:10:34 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 05-Jun-24 00:11:02 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:11:11 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:11:11 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:11:11 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:11:11 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:11:11 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:11:16 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING || 05-Jun-24 00:11:23 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 05-Jun-24 00:11:23 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 05-Jun-24 00:11:23 || Probability model loaded
+INFO || 05-Jun-24 00:11:42 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:11:51 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:11:52 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:11:52 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:11:52 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:11:52 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:11:57 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING || 05-Jun-24 00:12:02 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 05-Jun-24 00:12:02 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 05-Jun-24 00:12:02 || Probability model loaded
+INFO || 05-Jun-24 00:12:24 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:12:35 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:12:35 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:12:35 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:12:35 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:12:35 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:12:41 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING || 05-Jun-24 00:12:47 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 05-Jun-24 00:12:47 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 05-Jun-24 00:12:47 || Probability model loaded
+INFO || 05-Jun-24 00:13:06 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:13:15 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:13:16 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:13:16 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:13:16 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:13:16 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:13:21 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING || 05-Jun-24 00:13:28 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 05-Jun-24 00:13:29 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 05-Jun-24 00:13:29 || Probability model loaded
+INFO || 05-Jun-24 00:14:05 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:14:15 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:14:16 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:14:16 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:14:16 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:14:16 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:14:21 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 05-Jun-24 00:14:28 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:14:37 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:14:38 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:14:38 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:14:38 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:14:38 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:14:43 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING || 05-Jun-24 00:14:47 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 05-Jun-24 00:14:47 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 05-Jun-24 00:14:48 || Probability model loaded
+INFO || 05-Jun-24 00:15:00 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:15:09 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:15:09 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:15:09 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:15:09 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:15:09 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:15:14 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING || 05-Jun-24 00:15:19 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 05-Jun-24 00:15:19 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 05-Jun-24 00:15:19 || Probability model loaded
+INFO || 05-Jun-24 00:15:31 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:15:39 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:15:40 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:15:40 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:15:40 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:15:40 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:15:45 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING || 05-Jun-24 00:15:48 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 05-Jun-24 00:15:48 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 05-Jun-24 00:15:48 || Probability model loaded
+INFO || 05-Jun-24 00:16:13 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 00:16:22 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:16:23 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:16:23 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:16:23 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:16:23 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:16:27 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING || 05-Jun-24 00:16:34 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 05-Jun-24 00:16:34 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 05-Jun-24 00:16:34 || Probability model loaded
+ERROR || 05-Jun-24 00:21:09 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING || 05-Jun-24 00:21:09 || Bad Request: /ws/academia_app/
+ERROR || 05-Jun-24 00:21:46 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING || 05-Jun-24 00:21:46 || Bad Request: /ws/academia_app/
+ERROR || 05-Jun-24 00:22:06 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING || 05-Jun-24 00:22:06 || Bad Request: /ws/academia_app/
+ERROR || 05-Jun-24 00:22:57 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING || 05-Jun-24 00:22:57 || Bad Request: /ws/academia_app/
+DEBUG || 05-Jun-24 00:33:16 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:33:17 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:33:17 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:33:17 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:33:17 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:33:22 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 05-Jun-24 00:34:26 || C:\Users\Simon\proacted\AIacademia\academia_app\migrations\0001_initial.py changed, reloading.
+DEBUG || 05-Jun-24 00:34:37 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 00:34:37 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:34:37 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 00:34:37 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 00:34:37 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 00:34:42 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+DEBUG || 05-Jun-24 14:32:44 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 14:32:52 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 14:32:52 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 14:32:52 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 14:32:52 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 14:33:53 || Not Found: /favicon.ico
+DEBUG || 05-Jun-24 14:36:24 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 14:36:27 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 14:36:27 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 14:36:27 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 14:36:27 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 14:37:15 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 14:37:15 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 14:37:15 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 14:37:15 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 14:37:15 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 14:41:21 || Not Found: /ws/academia_app/
+INFO || 05-Jun-24 14:42:08 || Beginning to run the proacted recommender script
+INFO || 05-Jun-24 14:42:08 || Pro-Act-Ed 2024 Recommender Engine Initialized
+CRITICAL || 05-Jun-24 14:48:01 || Something came up, please rerun the system...
+INFO || 05-Jun-24 14:48:24 || Recommender system has run
+ERROR || 05-Jun-24 14:48:35 || Internal Server Error: /student_page/recommend_courses
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view academia_app.views.recommend_courses didn't return an HttpResponse object. It returned None instead.
+WARNING || 05-Jun-24 14:50:13 || Not Found: /ws/academia_app/
+ERROR || 05-Jun-24 14:51:54 || Internal Server Error: /student_page/
 Traceback (most recent call last):
   File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
@@ -819,7 +1297,7 @@ Traceback (most recent call last):
   File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
     return view_func(request, *args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 164, in student_page
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 174, in student_page
     return render(request, "academia_app/student_page.html",context ={ 'text': 'Hello world'})
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Program Files\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
@@ -851,11 +1329,8 @@ Traceback (most recent call last):
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Program Files\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
     raise NoReverseMatch(msg)
-django.urls.exceptions.NoReverseMatch: Reverse for 'addprofile' not found. 'addprofile' is not a valid view function or pattern name.
-WARNING || 04-Jun-24 19:21:16 || Forbidden (CSRF token from POST incorrect.): /student_page/login/
-WARNING || 04-Jun-24 19:21:22 || Not Found: /favicon.ico
-WARNING || 04-Jun-24 19:21:26 || Not Found: /favicon.ico
-ERROR || 04-Jun-24 19:22:03 || Internal Server Error: /student_page/student_page/
+django.urls.exceptions.NoReverseMatch: Reverse for 'Profile' not found. 'Profile' is not a valid view function or pattern name.
+ERROR || 05-Jun-24 14:53:30 || Internal Server Error: /student_page/
 Traceback (most recent call last):
   File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
@@ -866,7 +1341,7 @@ Traceback (most recent call last):
   File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
     return view_func(request, *args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 164, in student_page
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 174, in student_page
     return render(request, "academia_app/student_page.html",context ={ 'text': 'Hello world'})
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Program Files\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
@@ -898,8 +1373,9 @@ Traceback (most recent call last):
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Program Files\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
     raise NoReverseMatch(msg)
-django.urls.exceptions.NoReverseMatch: Reverse for 'addprofile' not found. 'addprofile' is not a valid view function or pattern name.
-ERROR || 04-Jun-24 19:24:13 || Internal Server Error: /student_page/student_page/
+django.urls.exceptions.NoReverseMatch: Reverse for 'Profile' not found. 'Profile' is not a valid view function or pattern name.
+WARNING || 05-Jun-24 14:53:30 || Not Found: /favicon.ico
+ERROR || 05-Jun-24 14:54:04 || Internal Server Error: /student_page/
 Traceback (most recent call last):
   File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
@@ -910,7 +1386,7 @@ Traceback (most recent call last):
   File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
     return view_func(request, *args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 164, in student_page
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 174, in student_page
     return render(request, "academia_app/student_page.html",context ={ 'text': 'Hello world'})
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Program Files\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
@@ -942,8 +1418,9 @@ Traceback (most recent call last):
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Program Files\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
     raise NoReverseMatch(msg)
-django.urls.exceptions.NoReverseMatch: Reverse for 'addprofile' not found. 'addprofile' is not a valid view function or pattern name.
-ERROR || 04-Jun-24 19:26:06 || Internal Server Error: /student_page/student_page/
+django.urls.exceptions.NoReverseMatch: Reverse for 'profile' not found. 'profile' is not a valid view function or pattern name.
+WARNING || 05-Jun-24 14:54:04 || Not Found: /favicon.ico
+ERROR || 05-Jun-24 14:54:07 || Internal Server Error: /student_page/
 Traceback (most recent call last):
   File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
@@ -954,7 +1431,7 @@ Traceback (most recent call last):
   File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
     return view_func(request, *args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 164, in student_page
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 174, in student_page
     return render(request, "academia_app/student_page.html",context ={ 'text': 'Hello world'})
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Program Files\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
@@ -986,8 +1463,8 @@ Traceback (most recent call last):
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Program Files\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
     raise NoReverseMatch(msg)
-django.urls.exceptions.NoReverseMatch: Reverse for 'course_recommendation_page' not found. 'course_recommendation_page' is not a valid view function or pattern name.
-ERROR || 04-Jun-24 19:26:57 || Internal Server Error: /student_page/student_page/
+django.urls.exceptions.NoReverseMatch: Reverse for 'profile' not found. 'profile' is not a valid view function or pattern name.
+ERROR || 05-Jun-24 14:54:08 || Internal Server Error: /student_page/
 Traceback (most recent call last):
   File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
@@ -998,7 +1475,7 @@ Traceback (most recent call last):
   File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
     return view_func(request, *args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 164, in student_page
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 174, in student_page
     return render(request, "academia_app/student_page.html",context ={ 'text': 'Hello world'})
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Program Files\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
@@ -1030,381 +1507,350 @@ Traceback (most recent call last):
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Program Files\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
     raise NoReverseMatch(msg)
-django.urls.exceptions.NoReverseMatch: Reverse for 'intervention_page' not found. 'intervention_page' is not a valid view function or pattern name.
-WARNING || 04-Jun-24 19:32:29 || Not Found: /favicon.ico
-WARNING || 04-Jun-24 19:47:13 || Not Found: /favicon.ico
-WARNING || 04-Jun-24 19:50:36 || Not Found: /favicon.ico
-ERROR || 04-Jun-24 19:50:36 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+django.urls.exceptions.NoReverseMatch: Reverse for 'profile' not found. 'profile' is not a valid view function or pattern name.
+INFO || 05-Jun-24 14:54:46 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+DEBUG || 05-Jun-24 14:56:18 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 14:56:24 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 14:56:24 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 14:56:24 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 14:56:24 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 14:56:56 || Not Found: /ws/academia_app/
+ERROR || 05-Jun-24 14:56:58 || Internal Server Error: /student_page/Profile/
 Traceback (most recent call last):
   File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
                ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\middleware\common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\http\request.py", line 151, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-WARNING || 04-Jun-24 19:50:36 || Bad Request: /ws/academia_app/
-WARNING || 04-Jun-24 19:53:36 || Not Found: /favicon.ico
-ERROR || 04-Jun-24 19:53:36 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 243, in Profile
+    return render(request, 'Profile.html', {'user': request.user})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: Profile.html
+INFO || 05-Jun-24 14:57:29 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 14:57:34 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 14:57:34 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 14:57:34 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 14:57:34 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 14:57:34 || Creating converter from 5 to 7
+ERROR || 05-Jun-24 14:57:41 || Internal Server Error: /student_page/Profile/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
                ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\middleware\common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\http\request.py", line 151, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-WARNING || 04-Jun-24 19:53:36 || Bad Request: /ws/academia_app/
-WARNING || 04-Jun-24 20:02:43 || Not Found: /favicon.ico
-ERROR || 04-Jun-24 20:02:43 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 243, in Profile
+    return render(request, 'academia_app/Profile.html', {'user': request.user})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 565, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 7: 'static'. Did you forget to register or load this tag?
+ERROR || 05-Jun-24 14:57:44 || Internal Server Error: /student_page/Profile/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
                ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\middleware\common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\http\request.py", line 151, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-WARNING || 04-Jun-24 20:02:43 || Bad Request: /ws/academia_app/
-WARNING || 04-Jun-24 20:03:06 || Not Found: /favicon.ico
-ERROR || 04-Jun-24 20:03:06 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 243, in Profile
+    return render(request, 'academia_app/Profile.html', {'user': request.user})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 565, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 7: 'static'. Did you forget to register or load this tag?
+WARNING || 05-Jun-24 15:01:00 || Not Found: /ws/academia_app/
+WARNING || 05-Jun-24 15:01:45 || Not Found: /favicon.ico
+WARNING || 05-Jun-24 15:06:00 || Not Found: /favicon.ico
+INFO || 05-Jun-24 15:11:55 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 15:12:01 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 15:12:02 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 15:12:02 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 15:12:02 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 15:12:02 || Creating converter from 5 to 7
+ERROR || 05-Jun-24 15:12:23 || Internal Server Error: /predict/
 Traceback (most recent call last):
   File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
                ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\middleware\common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\http\request.py", line 151, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-WARNING || 04-Jun-24 20:03:06 || Bad Request: /ws/academia_app/
-WARNING || 04-Jun-24 20:04:41 || Not Found: /favicon.ico
-ERROR || 04-Jun-24 20:04:41 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 138, in predict_probability
+    model = joblib.load(r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1205, in load
+    dispatch[key[0]](self)
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1530, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1572, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src.saving.pickle_utils'
+DEBUG || 05-Jun-24 15:22:10 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 15:22:10 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 15:22:10 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 15:22:10 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 15:22:10 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 15:22:45 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 15:22:45 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 15:22:45 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 15:22:45 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 15:22:45 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 18:57:20 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 18:57:29 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 18:57:29 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 18:57:29 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 18:57:29 || Creating converter from 5 to 7
+ERROR || 05-Jun-24 19:00:20 || Internal Server Error: /predict/
 Traceback (most recent call last):
   File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
                ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\middleware\common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\http\request.py", line 151, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-WARNING || 04-Jun-24 20:04:41 || Bad Request: /ws/academia_app/
-WARNING || 04-Jun-24 20:07:49 || Not Found: /favicon.ico
-ERROR || 04-Jun-24 20:07:49 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 138, in predict_probability
+    model = joblib.load(r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1205, in load
+    dispatch[key[0]](self)
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1530, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1572, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src.saving.pickle_utils'
+DEBUG || 05-Jun-24 19:04:54 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 19:04:57 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 19:04:57 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 19:04:57 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 19:04:57 || Creating converter from 5 to 7
+ERROR || 05-Jun-24 19:06:14 || Internal Server Error: /predict/
 Traceback (most recent call last):
   File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
                ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\middleware\common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\http\request.py", line 151, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-WARNING || 04-Jun-24 20:07:49 || Bad Request: /ws/academia_app/
-ERROR || 04-Jun-24 20:09:52 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 138, in predict_probability
+    model = joblib.load(r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1205, in load
+    dispatch[key[0]](self)
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1530, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1572, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src.saving.pickle_utils'
+INFO || 05-Jun-24 19:11:02 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+DEBUG || 05-Jun-24 19:11:40 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 19:11:43 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 19:11:43 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 19:11:43 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 19:11:43 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 19:12:31 || Not Found: /predict/predict_data/
+DEBUG || 05-Jun-24 19:18:19 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 19:18:20 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 19:18:20 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 19:18:20 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 19:18:20 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 19:21:44 || Not Found: /predict/predict_data/
+WARNING || 05-Jun-24 19:22:10 || Not Found: /favicon.ico
+ERROR || 05-Jun-24 19:22:17 || Internal Server Error: /predict/probability/
 Traceback (most recent call last):
   File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
                ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\middleware\common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\http\request.py", line 151, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-WARNING || 04-Jun-24 20:09:52 || Bad Request: /ws/academia_app/
-ERROR || 04-Jun-24 20:10:17 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 141, in predict_probability
+    model = joblib.load(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1205, in load
+    dispatch[key[0]](self)
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1530, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1572, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src.saving.pickle_utils'
+INFO || 05-Jun-24 19:23:05 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 19:23:25 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 19:23:25 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 19:23:25 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 19:23:25 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 19:23:25 || Creating converter from 5 to 7
+ERROR || 05-Jun-24 19:24:10 || Internal Server Error: /predict/probability/
+Traceback (most recent call last):
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 142, in predict_probability
+    model = joblib.load(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1205, in load
+    dispatch[key[0]](self)
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1530, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1572, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src.saving.pickle_utils'
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
                ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\middleware\common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\http\request.py", line 151, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-WARNING || 04-Jun-24 20:10:17 || Bad Request: /ws/academia_app/
-ERROR || 04-Jun-24 20:17:35 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-Traceback (most recent call last):
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\middleware\common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\http\request.py", line 151, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-WARNING || 04-Jun-24 20:17:35 || Bad Request: /ws/academia_app/
-ERROR || 04-Jun-24 20:17:55 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-Traceback (most recent call last):
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\middleware\common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\http\request.py", line 151, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-WARNING || 04-Jun-24 20:17:55 || Bad Request: /ws/academia_app/
-ERROR || 04-Jun-24 20:18:57 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-Traceback (most recent call last):
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\middleware\common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\http\request.py", line 151, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-WARNING || 04-Jun-24 20:18:57 || Bad Request: /ws/academia_app/
-ERROR || 04-Jun-24 20:19:35 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-Traceback (most recent call last):
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\middleware\common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\http\request.py", line 151, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-WARNING || 04-Jun-24 20:19:36 || Bad Request: /ws/academia_app/
-ERROR || 04-Jun-24 20:19:50 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-Traceback (most recent call last):
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\middleware\common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\http\request.py", line 151, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-WARNING || 04-Jun-24 20:19:50 || Bad Request: /ws/academia_app/
-ERROR || 04-Jun-24 20:19:59 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-Traceback (most recent call last):
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\middleware\common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\http\request.py", line 151, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-WARNING || 04-Jun-24 20:19:59 || Bad Request: /ws/academia_app/
-ERROR || 04-Jun-24 20:20:36 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-Traceback (most recent call last):
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\middleware\common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\http\request.py", line 151, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-WARNING || 04-Jun-24 20:20:36 || Bad Request: /ws/academia_app/
-ERROR || 04-Jun-24 20:20:38 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-Traceback (most recent call last):
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\middleware\common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\http\request.py", line 151, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-WARNING || 04-Jun-24 20:20:38 || Bad Request: /ws/academia_app/
-ERROR || 04-Jun-24 20:47:21 || Internal Server Error: /recommend_courses
-Traceback (most recent call last):
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
-    self.check_response(response, callback)
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
-    raise ValueError(
-ValueError: The view academia_app.views.recommend_courses didn't return an HttpResponse object. It returned None instead.
-ERROR || 04-Jun-24 20:49:24 || Internal Server Error: /recommend_courses
-Traceback (most recent call last):
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
-    self.check_response(response, callback)
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
-    raise ValueError(
-ValueError: The view academia_app.views.recommend_courses didn't return an HttpResponse object. It returned None instead.
-ERROR || 04-Jun-24 21:21:43 || Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-Traceback (most recent call last):
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\middleware\common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\http\request.py", line 151, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
-WARNING || 04-Jun-24 21:21:43 || Bad Request: /ws/academia_app/
-INFO || 04-Jun-24 21:58:46 || C:\Users\Hp\Desktop\ProActEd\AIacademia\AIacademia\settings.py changed, reloading.
-WARNING || 04-Jun-24 21:59:56 || Not Found: /recommend_courses/
-ERROR || 04-Jun-24 22:00:09 || Internal Server Error: /recommend_courses
-Traceback (most recent call last):
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
-    self.check_response(response, callback)
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
-    raise ValueError(
-ValueError: The view academia_app.views.recommend_courses didn't return an HttpResponse object. It returned None instead.
-INFO || 04-Jun-24 22:10:07 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
-INFO || 04-Jun-24 22:27:08 || Beginning to run the recommender script
-INFO || 04-Jun-24 22:27:08 || Recommender model loaded and running
-INFO || 04-Jun-24 22:27:08 || Processing request...
-CRITICAL || 04-Jun-24 22:27:08 || Something came up, please rerun the system...
-INFO || 04-Jun-24 22:27:08 || Recommender system has run
-ERROR || 04-Jun-24 22:27:08 || Internal Server Error: /student_page/recommend_courses
-Traceback (most recent call last):
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
-    self.check_response(response, callback)
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
-    raise ValueError(
-ValueError: The view academia_app.views.recommend_courses didn't return an HttpResponse object. It returned None instead.
-INFO || 04-Jun-24 22:29:42 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
-INFO || 04-Jun-24 22:30:25 || Beginning to run the recommender script
-INFO || 04-Jun-24 22:30:25 || Recommender model loaded and running
-INFO || 04-Jun-24 22:30:25 || Processing request...
-CRITICAL || 04-Jun-24 22:30:25 || Something came up, please rerun the system...
-INFO || 04-Jun-24 22:30:25 || Recommender system has run
-ERROR || 04-Jun-24 22:30:25 || Internal Server Error: /student_page/recommend_courses
-Traceback (most recent call last):
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
-    self.check_response(response, callback)
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
-    raise ValueError(
-ValueError: The view academia_app.views.recommend_courses didn't return an HttpResponse object. It returned None instead.
-INFO || 04-Jun-24 22:35:33 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
-INFO || 04-Jun-24 22:37:16 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
-INFO || 04-Jun-24 22:37:23 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
-INFO || 04-Jun-24 22:37:37 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
-INFO || 04-Jun-24 22:37:56 || Beginning to run the recommender script
-INFO || 04-Jun-24 22:37:56 || Recommender model loaded and running
-INFO || 04-Jun-24 22:37:56 || Processing request...
-CRITICAL || 04-Jun-24 22:37:56 || Something came up, please rerun the system...
-INFO || 04-Jun-24 22:37:56 || Recommender system has run
-ERROR || 04-Jun-24 22:37:56 || Internal Server Error: /student_page/recommend_courses
-Traceback (most recent call last):
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
-    self.check_response(response, callback)
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
-    raise ValueError(
-ValueError: The view academia_app.views.recommend_courses didn't return an HttpResponse object. It returned None instead.
-WARNING || 04-Jun-24 22:52:03 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 22:52:33 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 22:55:32 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 22:58:53 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 22:59:46 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 22:59:51 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:00:15 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:00:29 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:00:31 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:00:41 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:06:09 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:06:55 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:08:00 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:09:00 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:15:49 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:16:36 || Not Found: /favicon.ico
-WARNING || 04-Jun-24 23:16:37 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:18:07 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:18:18 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:18:41 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:18:55 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:19:08 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:23:48 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:23:51 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:27:09 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:27:50 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:28:06 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:31:51 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:35:37 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:44:40 || Not Found: /ws/academia_app/
-WARNING || 04-Jun-24 23:45:50 || Not Found: /ws/academia_app/
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 146, in predict_probability
+    if os.path.exists(keras_model_path):
+       ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'
+INFO || 05-Jun-24 19:24:47 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 19:24:53 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 19:24:54 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 19:24:54 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 19:24:54 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 19:24:54 || Creating converter from 5 to 7
+ERROR || 05-Jun-24 19:25:08 || Model file not found: C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.h5
+ERROR || 05-Jun-24 19:25:08 || Internal Server Error: /predict/probability/
+INFO || 05-Jun-24 19:28:22 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 19:28:28 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 19:28:28 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 19:28:28 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 19:28:28 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 19:28:28 || Creating converter from 5 to 7

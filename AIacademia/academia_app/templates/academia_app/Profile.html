@@ -1,28 +1,49 @@
 {% load static %}
-<center  >
-<h1> Update Profile </h1>
-</br>
-<link rel="stylesheet" type="text/css" href="{% static 'css/student_style.css' %}">
-
-
-
-{% if updated %}
-        {% for message in messages %}
-            <div class="alert {{ message.tags }}">
-                  {{ SUCCESS }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Student Profile</h2>
             </div>
-        {% endfor %}
-{% else %}
-    <form action ="" method= POST>
-     {% csrf_token %}
-
-     {{ form.as_p }}
-
-        <input type ="submit" value ="update" class="btn btn-secondary" >
-
-    </form>
-{% endif %}
-
-
-
-</center >
+            <div class="card-body">
+                <div class="profile-row">
+                    <div class="profile-pic">
+                        <img src="{{ user.userprofile.profile_picture.url }}" alt="Profile Picture">
+                    </div>
+                    <div class="profile-info">
+                        <h3>{{ user.get_full_name }}</h3>
+                        <p><strong>Email:</strong> {{ user.email }}</p>
+                        <p><strong>Phone:</strong> {{ user.userprofile.phone_number }}</p>
+                        <hr>
+                        <h4>Academic Information</h4>
+                        <p><strong>Registration Number:</strong> {{ user.student_profile.registration_number }}</p>
+                        <p><strong>Course:</strong> {{ user.student_profile.course.name }}</p>
+                        <p><strong>School:</strong> {{ user.student_profile.school.name }}</p>
+                        <p><strong>Graduation Probability:</strong> {{ user.student_profile.graduation_probability }}%</p>
+                        <p><strong>Attendance:</strong></p>
+                        <ul>
+                            {% for attendance in user.student_profile.attendance_set.all %}
+                            <li>Semester: {{ attendance.semester }} - Attendance: {{ attendance.attended_classes }}/{{ attendance.total_classes }}</li>
+                            {% endfor %}
+                        </ul>
+                        <p><strong>Performance:</strong></p>
+                        <ul>
+                            {% for performance in user.student_profile.performance_set.all %}
+                            <li>Semester: {{ performance.semester }} - AGP: {{ performance.aggregate_points }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
