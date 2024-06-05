@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,16 +90,16 @@
     document.addEventListener('DOMContentLoaded', function() {
         var ctx = document.getElementById('performanceChart').getContext('2d');
         var performanceChart = new Chart(ctx, {
-            width: 600, 
-            height: 300,
+            width: 500, 
+            height: 50,
             type: 'bar',
             data: {
                 // Hard-coded labels for the x-axis (e.g., representing semesters or months)
                 labels: ['Semester 1', 'Semester 2', 'Semester 3', 'Semester 4'],
                 datasets: [{
-                    label: 'Student Performance Over Time',
+                    label: 'Student Progress by Key Metrics', // showing a line graph of the students progress 
                     // Hard-coded data values for each label on the x-axis (e.g., representing grades or scores)
-                    data: [0, 6],
+                    data: [0, 10],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
                     tension: 0.1
@@ -114,6 +115,57 @@
         });
     });
     </script> 
+
+    <h4>You're probability of finishing and graduating: {{ refined_prediction }}</h4>
+
+    <div id="progressBarContainer">
+        <div id="progressBar">
+
+            <style>
+                #progressBarContainer {
+                width: 70%; /* Set the width of the progress bar container */
+                height: 30px; /* Set the height of the progress bar container */
+                border: 1px solid #ccc; /* Add a border for visual clarity */
+                border-radius: 5px;
+                margin-left: 20%;
+              }
+              
+              #progressBar {
+                height: 100%; /* Set the height of the progress bar to fill the container */
+                background-color: rgb(7, 252, 142); /* Default color for the progress bar */
+                transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out; /* Add smooth transition effects */
+              }
+            </style>
+            
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                // Get the progress bar element
+                var progressBar = document.getElementById('progressBar');
+
+                // Set the value for the progress bar (between 0 and 100)
+                var value = 78; // Example value
+
+                // Set the width of the progress bar based on the value
+                progressBar.style.width = value + '%';
+
+                // Change the color of the progress bar based on the value
+                if (value >= 75) {
+                    progressBar.style.backgroundColor = 'green';
+                } else if (value >= 50) {
+                    progressBar.style.backgroundColor = 'yellow';
+                } else if (value >= 25) {
+                    progressBar.style.backgroundColor = 'orange';
+                } else if (value < 25) {
+                    progressBar.style.backgroundColor = 'red';
+                }
+                });
+
+            </script>
+              
+        </div>
+    </div>
+      
 
     <div class="content">
         <!-- Content for school and department display -->

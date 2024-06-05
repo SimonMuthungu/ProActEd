@@ -24,6 +24,6 @@ urlpatterns = [
     path('predict/', views.predict_probability, name='predict_probability'),
     # path('predict/probability/', views.predict_probability, name='predict_probability'),
     path('predict/', views.predict, name='predict'),
-    path('predict/probability/', views.predict_probability, name='predict_probability'),
+    path('predict_probability/', views.predict_probability, name='predict_probability'),
     ]
 

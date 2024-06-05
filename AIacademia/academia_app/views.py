@@ -140,13 +140,12 @@ def recommend_courses(request):
             
         
         
-def predict_probability(request):
+def predict_probability(request, student_id=22):
     model = joblib.load(r'C:\Users\Simon\proacted\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
     logging.info('Probability model loaded')
 
-    student_id = 6
 
-    try:
+    try: 
         student_data = probabilitydatatable.objects.get(id=student_id) 
         lessonsattended = student_data.Lessons_Attended
         aggrpoints = student_data.Aggregate_points
@@ -160,9 +159,10 @@ def predict_probability(request):
     # Predict probabilities
     prediction = model.predict(input_data)
 
-    context = {'prediction': prediction[0]} 
-    return HttpResponse(f'Calculated Probability: {prediction[0]} for inputs {input_data} of student {student_id}') 
+    context = {'prediction': prediction[0][0], 'refined_prediction': f"{prediction[0][0]*100:.1f}"}
+    print(f"'prediction': {prediction[0][0]}\n\n'refined_prediction': {prediction[0][0]*100:.1f}")
 
+    return render(request, "academia_app/student_page.html",context = context)
 
     
 
