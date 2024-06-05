@@ -1,7 +1,6 @@
 from django import forms
 import logging
 import sys
-# sys.path.append(r'C:\Users\Simon\proacted\AIacademia') 
 from django.http import Http404 , JsonResponse
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
@@ -23,16 +22,11 @@ from .forms import UserProfileForm
 from django.core.mail import send_mail
 from sre_constants import BRANCH
 from telnetlib import LOGOUT
-# from academia_app.models import Department
-# from django.http import git BRANCH(  # Import JsonResponse for AJAX responses
-#     HttpResponse, JsonResponse)
 from django.shortcuts import render, redirect
-# from .forms import UserLoginForm
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import authenticate ,login
 from django.urls import reverse_lazy
 from django.contrib.auth import authenticate
-# Other imports
 from django.contrib.auth import authenticate ,login , logout
 from django.contrib.auth import login
 from django.http import HttpResponse, JsonResponse
@@ -41,7 +35,7 @@ from django.http import HttpRequest
 from .models import Course, School # Import Course and School models
 from django.contrib.auth.models import User
 from django.contrib import messages
-
+import os
 
 
 import joblib
@@ -141,8 +135,15 @@ def recommend_courses(request):
         
         
 def predict_probability(request):
-    model = joblib.load(r'C:\Users\Simon\proacted\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
-    logging.info('Probability model loaded')
+    # model = joblib.load(r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
+    # logging.info('Probability model loaded')
+    try:
+        model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib'
+        model = joblib.load(model_path)
+        logging.info('Probability model loaded with joblib.')
+    except Exception as e:
+        logging.error(f"Error loading model: {e}")
+        return HttpResponse(f"Error loading model: {e}", status=500)
 
     student_id = 6
 
@@ -225,72 +226,6 @@ def send_message(request, recipient_id):
 
     return render(request, 'academia_app/send_message.html', {'recipient_id': recipient_id})
 
-def edit_profile(request):
-    try:
-        profile = request.user.userprofile
-    except UserProfile.DoesNotExist:
-        UserProfile.objects.create(user=request.user)
-        profile = request.user.userprofile
-
-    if request.method == 'POST':
-        form = UserProfileForm(request.POST, instance=profile)
-        if form.is_valid():
-            form.save()
-            
-            
-            return redirect('profile_view')  # Redirect to a profile view
-    else:
-        form = UserProfileForm(instance=profile)
-
-        if form.is_valid():
-            subject = form.cleaned_data["subject"]
-    message = form.cleaned_data["message"]
-    sender = form.cleaned_data["sender"]
-    cc_myself = form.cleaned_data["cc_myself"]
-
-    recipients = ["info@example.com"]
-    if cc_myself:
-        recipients.append(sender)
-
-    send_mail(subject, message, sender, recipients)
-    return HttpResponseRedirect("/thanks/")
-
-# <<<<<<< HEAD
-#     return render(request, 'Student_Page.html', {'form': form})
-# def Profile (request):
-    
-#     try:
-#         profile = request.user.userprofile
-#     except UserProfile.DoesNotExist:
-#         UserProfile.objects.create(user=request.user)
-#     form = UserProfileForm
-#     updated = False
-#     if request.method == "POST":
-#         form = UserProfileForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             return HttpResponseRedirect('/Profile?updated=True')
-#         else:
-#             form: UserProfileForm
-#             if 'updated' in request.GET:
-#                 updated = True
-
-# def student_performance_view(request, student_id):
-#     performances = Performance.objects.filter(student_id=student_id).select_related('unit').order_by('unit__semester')
-    
-#     # Prepare data for the graph
-#     labels = [performance.unit.semester for performance in performances]
-#     data = [performance.score for performance in performances]
-    
-#     context = {
-#         'labels': labels,
-#         'data': data,
-#     }
-#     return render(request, 'student_performance.html', context)
-
-# =======
-    #return render(request, 'Student_Page.html', {'form': form})
-
 @login_required
 def inbox(request):
     received_messages = Message.objects.filter(recipient=request.user)
@@ -310,3 +245,6 @@ def send_message(request, recipient_id):
     print("Recipient ID:", recipient_id)
 
     return render(request, 'academia_app/send_message.html', {'recipient_id': recipient_id})
+@login_required
+def Profile(request):
+    return render(request, 'academia_app/Profile.html', {'user': request.user})

@@ -221,16 +221,7 @@ class Unit(models.Model):
     title = models.CharField(max_length=100)
     semester = models.CharField(max_length=20)  # For simplicity, we're using a CharField
     def __str__(self):
-        return self.username
-# model for messages
-class Message(models.Model):
-    sender = models.ForeignKey(BaseUser, on_delete=models.CASCADE, related_name='sent_messages')
-    recipient = models.ForeignKey(BaseUser, on_delete=models.CASCADE, related_name='received_messages')
-    content = models.TextField()
-    timestamp = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f'{self.sender} to {self.recipient} at {self.timestamp}'   
+        return self.username  
     
 class probabilitydatatable(models.Model):
     Lessons_Attended = models.FloatField()

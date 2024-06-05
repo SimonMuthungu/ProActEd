@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #020225;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.profile-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile-pic {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: 2;
+    padding: 20px;
+}
+
+.profile-info h3 {
+    margin-top: 0;
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+
+.profile-info ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.profile-info ul li {
+    margin: 5px 0;
+}
+
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
