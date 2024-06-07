@@ -1,47 +1,31 @@
-from django import forms
-import logging
+import os
 import sys
-from django.http import Http404 , JsonResponse
+import joblib
+import logging
+import numpy as np
+import tensorflow as tf
+from django import forms
+from telnetlib import LOGOUT
+from sre_constants import BRANCH
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
-from django.contrib.auth.decorators import login_required
-from django.http import Http404 , JsonResponse
+from django.urls import reverse_lazy
+from django.core.mail import send_mail
+from django.http import HttpResponseRedirect
+from django.contrib.auth.models import User
 from django.shortcuts import redirect, render
+from django.shortcuts import render, redirect
+from django.http import Http404 , JsonResponse
+from django.contrib.auth.views import LoginView
+from django.contrib.auth import authenticate, login
+from python_scripts.recommender_engine import load_model
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login, logout
+from .models import Course, School, Recommender_training_data  # Import Course and School models
+from django.http import HttpResponse, JsonResponse, HttpRequest
 from python_scripts.proacted_recommender2024 import proacted2024
 from python_scripts.sbert_recommender import sbert_proactedrecomm2024
-from django.shortcuts import render, redirect
-from django.http import HttpResponseRedirect
-from django.contrib import messages
-from python_scripts.recommender_engine import load_model
-from .forms import UserProfileForm
 from .models import BaseUser,UserProfile,Course,School,Performance,Student,Message, probabilitydatatable
-from django.http import HttpResponseRedirect
-from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
-from .forms import UserProfileForm
-from django.core.mail import send_mail
-from sre_constants import BRANCH
-from telnetlib import LOGOUT
-from django.shortcuts import render, redirect
-from django.contrib.auth.views import LoginView
-from django.contrib.auth import authenticate ,login
-from django.urls import reverse_lazy
-from django.contrib.auth import authenticate
-from django.contrib.auth import authenticate ,login , logout
-from django.contrib.auth import login
-from django.http import HttpResponse, JsonResponse
-from django.shortcuts import render
-from django.http import HttpRequest
-from .models import Course, School # Import Course and School models
-from django.contrib.auth.models import User
-from django.contrib import messages
-import os
 
-
-import joblib
-from .models import Course, School, Recommender_training_data  # Import Course and School models
-import tensorflow as tf
-import numpy as np
 
 
 logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
@@ -135,15 +119,15 @@ def recommend_courses(request):
         
         
 def predict_probability(request):
-    # model = joblib.load(r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
-    # logging.info('Probability model loaded')
-    try:
-        model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib'
-        model = joblib.load(model_path)
-        logging.info('Probability model loaded with joblib.')
-    except Exception as e:
-        logging.error(f"Error loading model: {e}")
-        return HttpResponse(f"Error loading model: {e}", status=500)
+    model = joblib.load(r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
+    logging.info('Probability model loaded')
+    # try:
+    #     model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib'
+    #     model = joblib.load(model_path)
+    #     logging.info('Probability model loaded with joblib.')
+    # except Exception as e:
+    #     logging.error(f"Error loading model: {e}")
+    #     return HttpResponse(f"Error loading model: {e}", status=500)
 
     student_id = 6
 

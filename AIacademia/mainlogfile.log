@@ -1854,3 +1854,51 @@ DEBUG || 05-Jun-24 19:28:28 || Creating converter from 7 to 5
 DEBUG || 05-Jun-24 19:28:28 || Creating converter from 5 to 7
 DEBUG || 05-Jun-24 19:28:28 || Creating converter from 7 to 5
 DEBUG || 05-Jun-24 19:28:28 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 21:02:18 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 21:02:23 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 21:02:23 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 21:02:23 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 21:02:23 || Creating converter from 5 to 7
+WARNING || 05-Jun-24 21:03:59 || Not Found: /favicon.ico
+ERROR || 05-Jun-24 21:04:15 || Error loading model: No module named 'keras.src.saving.pickle_utils'
+ERROR || 05-Jun-24 21:04:15 || Internal Server Error: /predict/probability/
+INFO || 05-Jun-24 21:06:55 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 05-Jun-24 21:07:03 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 05-Jun-24 21:07:04 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 21:07:04 || Creating converter from 5 to 7
+DEBUG || 05-Jun-24 21:07:04 || Creating converter from 7 to 5
+DEBUG || 05-Jun-24 21:07:04 || Creating converter from 5 to 7
+ERROR || 05-Jun-24 21:07:17 || Internal Server Error: /predict/probability/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 138, in predict_probability
+    model = joblib.load(r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1205, in load
+    dispatch[key[0]](self)
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1530, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1572, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src.saving.pickle_utils'
+DEBUG || 06-Jun-24 18:24:05 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 06-Jun-24 18:24:10 || Creating converter from 7 to 5
+DEBUG || 06-Jun-24 18:24:10 || Creating converter from 5 to 7
+DEBUG || 06-Jun-24 18:24:10 || Creating converter from 7 to 5
+DEBUG || 06-Jun-24 18:24:10 || Creating converter from 5 to 7
+WARNING || 06-Jun-24 18:27:45 || Not Found: /favicon.ico
+INFO || 06-Jun-24 19:14:17 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 06-Jun-24 19:15:43 || Not Found: /home
+WARNING || 06-Jun-24 19:16:23 || Not Found: /ws/academia_app/
