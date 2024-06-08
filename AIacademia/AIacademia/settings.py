@@ -109,3 +109,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 class MyForm(forms.Form):
     template_name = "Student_Page.html"
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

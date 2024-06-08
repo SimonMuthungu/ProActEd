@@ -10,20 +10,22 @@ from sre_constants import BRANCH
 from django.contrib import messages
 from django.urls import reverse_lazy
 from django.core.mail import send_mail
-from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
+from .forms import UpdateStudentProfileForm
+from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render
 from django.shortcuts import render, redirect
 from django.http import Http404 , JsonResponse
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import authenticate, login
+from django.shortcuts import render, get_object_or_404
 from python_scripts.recommender_engine import load_model
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
-from .models import Course, School, Recommender_training_data  # Import Course and School models
 from django.http import HttpResponse, JsonResponse, HttpRequest
 from python_scripts.proacted_recommender2024 import proacted2024
 from python_scripts.sbert_recommender import sbert_proactedrecomm2024
+from .models import StudentUser, Attendance, Performance, Course, School, Recommender_training_data 
 from .models import BaseUser,UserProfile,Course,School,Performance,Student,Message, probabilitydatatable
 
 
@@ -229,6 +231,30 @@ def send_message(request, recipient_id):
     print("Recipient ID:", recipient_id)
 
     return render(request, 'academia_app/send_message.html', {'recipient_id': recipient_id})
+
 @login_required
-def Profile(request):
-    return render(request, 'academia_app/Profile.html', {'user': request.user})
+def profile(request):
+    student_user = get_object_or_404(StudentUser, username=request.user.username)
+
+    attendance_records = Attendance.objects.filter(student=student_user)
+    performance_records = Performance.objects.filter(student=student_user)
+
+    if request.method == 'POST':
+        form = UpdateStudentProfileForm(request.POST, request.FILES, instance=student_user)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your profile was updated successfully.')
+            return redirect('profile')
+        else:
+            messages.error(request, 'Please correct the error below.')
+    else:
+        form = UpdateStudentProfileForm(instance=student_user)
+
+    context = {
+        'student': student_user,
+        'attendance_records': attendance_records,
+        'performance_records': performance_records,
+        'form': form,
+    }
+
+    return render(request, 'academia_app/Profile.html', context)

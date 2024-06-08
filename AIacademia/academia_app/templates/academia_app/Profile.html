@@ -16,34 +16,105 @@
             <div class="card-body">
                 <div class="profile-row">
                     <div class="profile-pic">
-                        <img src="{{ user.userprofile.profile_picture.url }}" alt="Profile Picture">
+                        {% if student.profile_picture %}
+                            <img src="{{ student.profile_picture.url }}" alt="Profile Picture">
+                        {% else %}
+                            <img src="{% static 'images/default_profile_picture.png' %}" alt="Default Profile Picture">
+                        {% endif %}
                     </div>
                     <div class="profile-info">
-                        <h3>{{ user.get_full_name }}</h3>
-                        <p><strong>Email:</strong> {{ user.email }}</p>
-                        <p><strong>Phone:</strong> {{ user.userprofile.phone_number }}</p>
+                        <h3>{{ student.user.get_full_name }}</h3>
+                        <p><strong>Email:</strong> {{ student.user.email }}</p>
+                        <p><strong>Phone:</strong> {{ student.user.userprofile.phone_number }}</p>
                         <hr>
                         <h4>Academic Information</h4>
-                        <p><strong>Registration Number:</strong> {{ user.student_profile.registration_number }}</p>
-                        <p><strong>Course:</strong> {{ user.student_profile.course.name }}</p>
-                        <p><strong>School:</strong> {{ user.student_profile.school.name }}</p>
-                        <p><strong>Graduation Probability:</strong> {{ user.student_profile.graduation_probability }}%</p>
+                        <p><strong>Registration Number:</strong> {{ student.registration_number }}</p>
+                        <p><strong>Course:</strong> {{ student.course.name }}</p>
+                        <p><strong>School:</strong> {{ student.school.name }}</p>
+                        <p><strong>Graduation Probability:</strong> {{ student.graduation_probability }}%</p>
                         <p><strong>Attendance:</strong></p>
                         <ul>
-                            {% for attendance in user.student_profile.attendance_set.all %}
-                            <li>Semester: {{ attendance.semester }} - Attendance: {{ attendance.attended_classes }}/{{ attendance.total_classes }}</li>
+                            {% for attendance in attendance_records %}
+                                <li>Semester: {{ attendance.semester }} - Attendance: {{ attendance.attended_classes }}/{{ attendance.total_classes }}</li>
                             {% endfor %}
                         </ul>
                         <p><strong>Performance:</strong></p>
                         <ul>
-                            {% for performance in user.student_profile.performance_set.all %}
-                            <li>Semester: {{ performance.semester }} - AGP: {{ performance.aggregate_points }}</li>
+                            {% for performance in performance_records %}
+                                <li>Semester: {{ performance.semester }} - AGP: {{ performance.aggregate_points }}</li>
                             {% endfor %}
                         </ul>
+                        <button id="updateProfileBtn">Update Profile</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- The Modal -->
+    <div id="updateProfileModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="updateProfileForm" method="post" enctype="multipart/form-data" action="{% url 'profile' %}">
+                {% csrf_token %}
+                <label for="id_full_name">Full Name:</label>
+                <input type="text" id="id_full_name" name="full_name" value="{{ student.user.get_full_name }}">
+                
+                <label for="id_registration_number">Registration Number:</label>
+                <input type="text" id="id_registration_number" name="registration_number" value="{{ student.registration_number }}">
+                
+                <label for="id_course">Course:</label>
+                <input type="text" id="id_course" name="course" value="{{ student.course.name }}">
+                
+                <label for="id_school">School:</label>
+                <input type="text" id="id_school" name="school" value="{{ student.school.name }}">
+                
+                <label for="id_email">Email:</label>
+                <input type="email" id="id_email" name="email" value="{{ student.user.email }}">
+                
+                <label for="id_phone_number">Phone Number:</label>
+                <input type="text" id="id_phone_number" name="phone_number" value="{{ student.user.userprofile.phone_number }}">
+                
+                <label for="id_parents_phone_number">Parent's Phone Number:</label>
+                <input type="text" id="id_parents_phone_number" name="parents_phone_number" value="{{ student.user.userprofile.parents_phone_number }}">
+                
+                <label for="id_bio">Bio:</label>
+                <textarea id="id_bio" name="bio">{{ student.user.userprofile.bio }}</textarea>
+                
+                <label for="id_profile_picture">Profile Picture:</label>
+                <input type="file" id="id_profile_picture" name="profile_picture">
+                
+                <button type="submit">Update</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("updateProfileModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("updateProfileBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
