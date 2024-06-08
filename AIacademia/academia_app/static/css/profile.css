@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #020225;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.profile-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile-pic {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: 2;
+    padding: 20px;
+}
+
+.profile-info h3 {
+    margin-top: 0;
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+
+.profile-info ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.profile-info ul li {
+    margin: 5px 0;
+}
+
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+/* Styles for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+form label {
+    flex: 0 0 100%;
+    margin-top: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="file"],
+form textarea {
+    flex: 1 1 45%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+form button {
+    flex: 0 0 100%;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}

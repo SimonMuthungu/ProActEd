@@ -1,10 +1,10 @@
-from django.contrib.auth.models import AbstractUser, BaseUserManager, Group
-from django.contrib.auth.models import User
 from django.db import models
 from django.conf import settings
-from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
 from django.contrib.auth.models import Permission
+from django.contrib.auth.models import AbstractUser, BaseUserManager, Group
 
 # Custom User Manager
 class CustomUserManager(BaseUserManager):
@@ -96,6 +96,9 @@ class School(models.Model):
     name = models.CharField(max_length=100)
     abbreviation = models.CharField(max_length=10)
 
+    def __str__(self):
+        return self.name
+
 # Course Model
 class Course(models.Model):
     name = models.CharField(max_length=100)
@@ -103,6 +106,9 @@ class Course(models.Model):
     school = models.ForeignKey(School, on_delete=models.CASCADE)
     students_count = models.PositiveIntegerField(default=0)
     graduation_probability = models.FloatField(default=0.0)
+
+    def __str__(self):
+        return self.name
 
 # Student Model
 class Student(models.Model):
@@ -117,24 +123,28 @@ class Student(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     school = models.ForeignKey(School, on_delete=models.CASCADE)
     graduation_probability = models.FloatField(default=0.0)
+    profile_picture = models.ImageField(upload_to='profile_pictures/', null=True, blank=True)
+
+    def __str__(self):
+        return self.name
 
 # Fee Information Model
 class FeeInformation(models.Model):
-    student = models.ForeignKey(Student, on_delete=models.CASCADE)
+    student = models.ForeignKey(StudentUser, on_delete=models.CASCADE)
     semester = models.CharField(max_length=20)
     required_fees = models.DecimalField(max_digits=10, decimal_places=2)
     fees_paid = models.DecimalField(max_digits=10, decimal_places=2)
 
 # Attendance Model
 class Attendance(models.Model):
-    student = models.ForeignKey(Student, on_delete=models.CASCADE)
+    student = models.ForeignKey(StudentUser, on_delete=models.CASCADE)
     semester = models.CharField(max_length=20)
     total_classes = models.PositiveIntegerField()
     attended_classes = models.PositiveIntegerField()
 
 # Performance Model
 class Performance(models.Model):
-    student = models.ForeignKey(Student, on_delete=models.CASCADE)
+    student = models.ForeignKey(StudentUser, on_delete=models.CASCADE)
     semester = models.CharField(max_length=20)
     aggregate_points = models.DecimalField(max_digits=4, decimal_places=2)
     agp = models.CharField(max_length=10)
@@ -146,6 +156,9 @@ class FieldOfInterest(models.Model):
 
 class HighSchoolSubject(models.Model):
     name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
 
 
 class CourseOfInterest(models.Model):
@@ -221,16 +234,7 @@ class Unit(models.Model):
     title = models.CharField(max_length=100)
     semester = models.CharField(max_length=20)  # For simplicity, we're using a CharField
     def __str__(self):
-        return self.username
-# model for messages
-class Message(models.Model):
-    sender = models.ForeignKey(BaseUser, on_delete=models.CASCADE, related_name='sent_messages')
-    recipient = models.ForeignKey(BaseUser, on_delete=models.CASCADE, related_name='received_messages')
-    content = models.TextField()
-    timestamp = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f'{self.sender} to {self.recipient} at {self.timestamp}'   
+        return self.username  
     
 class probabilitydatatable(models.Model):
     Lessons_Attended = models.FloatField()

@@ -1,53 +1,33 @@
-from django import forms
-import logging
+import os
 import sys
-# sys.path.append(r'C:\Users\Simon\proacted\AIacademia') 
-from django.http import Http404 , JsonResponse
+import joblib
+import logging
+import numpy as np
+import tensorflow as tf
+from django import forms
+from telnetlib import LOGOUT
+from sre_constants import BRANCH
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
-from django.contrib.auth.decorators import login_required
-from django.http import Http404 , JsonResponse
+from django.urls import reverse_lazy
+from django.core.mail import send_mail
+from django.contrib.auth.models import User
+from .forms import UpdateStudentProfileForm
+from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render
+from django.shortcuts import render, redirect
+from django.http import Http404 , JsonResponse
+from django.contrib.auth.views import LoginView
+from django.contrib.auth import authenticate, login
+from django.shortcuts import render, get_object_or_404
+from python_scripts.recommender_engine import load_model
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login, logout
+from django.http import HttpResponse, JsonResponse, HttpRequest
 from python_scripts.proacted_recommender2024 import proacted2024
 from python_scripts.sbert_recommender import sbert_proactedrecomm2024
-from django.shortcuts import render, redirect
-from django.http import HttpResponseRedirect
-from django.contrib import messages
-from python_scripts.recommender_engine import load_model
-from .forms import UserProfileForm
+from .models import StudentUser, Attendance, Performance, Course, School, Recommender_training_data 
 from .models import BaseUser,UserProfile,Course,School,Performance,Student,Message, probabilitydatatable
-from django.http import HttpResponseRedirect
-from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
-from .forms import UserProfileForm
-from django.core.mail import send_mail
-from sre_constants import BRANCH
-from telnetlib import LOGOUT
-# from academia_app.models import Department
-# from django.http import git BRANCH(  # Import JsonResponse for AJAX responses
-#     HttpResponse, JsonResponse)
-from django.shortcuts import render, redirect
-# from .forms import UserLoginForm
-from django.contrib.auth.views import LoginView
-from django.contrib.auth import authenticate ,login
-from django.urls import reverse_lazy
-from django.contrib.auth import authenticate
-# Other imports
-from django.contrib.auth import authenticate ,login , logout
-from django.contrib.auth import login
-from django.http import HttpResponse, JsonResponse
-from django.shortcuts import render
-from django.http import HttpRequest
-from .models import Course, School # Import Course and School models
-from django.contrib.auth.models import User
-from django.contrib import messages
 
-
-
-import joblib
-from .models import Course, School, Recommender_training_data  # Import Course and School models
-import tensorflow as tf
-import numpy as np
 
 
 logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
@@ -120,7 +100,7 @@ def recommend_courses(request):
         try: 
             # Load the model and get the output
             print("\nBeginning to run the recommender script")
-            logging.info("Beginning to run the proacted recommender script")
+            logging.info("Proacted recommender initialized...")
             proacted_recommendations = proacted2024(user_description_about_interests, user_activities_enjoyed)
             print(f"here are the proacted_recommendations: {proacted_recommendations}")
             print(f"Done with proacted, proceeding to sbert recommender")
@@ -140,27 +120,44 @@ def recommend_courses(request):
             
         
         
-def predict_probability(request, student_id=22):
+def predict_probability(request, student_id=3): 
     model = joblib.load(r'C:\Users\Simon\proacted\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
     logging.info('Probability model loaded')
+    # try:
+    #     model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib'
+    #     model = joblib.load(model_path)
+    #     logging.info('Probability model loaded with joblib.')
+    # except Exception as e:
+    #     logging.error(f"Error loading model: {e}")
+    #     return HttpResponse(f"Error loading model: {e}", status=500)
 
 
     try: 
+        model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        model = joblib.load(model_path)
+        logging.info('Probability model loaded with joblib.')
+
         student_data = probabilitydatatable.objects.get(id=student_id) 
         lessonsattended = student_data.Lessons_Attended
         aggrpoints = student_data.Aggregate_points
+        lessons_attended = student_data.pcnt_of_lessons_attended
+        homework_submission_rates = student_data.homework_submission_rates
+        activity_on_learning_platforms = student_data.activity_on_learning_platforms
+        CAT_1_marks = student_data.CAT_1_marks
+        CAT_2_marks = student_data.CAT_2_marks
+        activity_on_elearning_platforms = student_data.activity_on_elearning_platforms
 
     except probabilitydatatable.DoesNotExist:
         # the student doesnt exist
         pass
 
-    input_data = [[lessonsattended, aggrpoints]]
+    input_data = [[lessonsattended, aggrpoints, lessons_attended, homework_submission_rates, CAT_1_marks, CAT_2_marks, activity_on_elearning_platforms]] 
 
     # Predict probabilities
     prediction = model.predict(input_data)
 
-    context = {'prediction': prediction[0][0], 'refined_prediction': f"{prediction[0][0]*100:.1f}"}
-    print(f"'prediction': {prediction[0][0]}\n\n'refined_prediction': {prediction[0][0]*100:.1f}")
+    context = {'prediction': prediction[0][0], 'refined_prediction': f"{prediction[0][0]*100:.3f}"}
+    print(f"\n\nStudent {student_id} with lessonsattended: {lessonsattended} and aggrpoints: {aggrpoints}, lessons_attended: {lessons_attended}, homework_submission_rates: {homework_submission_rates}, activity_on_learning_platforms: {activity_on_learning_platforms}, CAT_1_marks: {CAT_1_marks}, CAT_2_marks: {CAT_2_marks}, activity_on_elearning_platforms: {activity_on_elearning_platforms} ; 'prediction': {prediction[0][0]}, 'refined_prediction': {prediction[0][0]*100:.3f}\n\n")
 
     return render(request, "academia_app/student_page.html",context = context)
 
@@ -225,72 +222,6 @@ def send_message(request, recipient_id):
 
     return render(request, 'academia_app/send_message.html', {'recipient_id': recipient_id})
 
-def edit_profile(request):
-    try:
-        profile = request.user.userprofile
-    except UserProfile.DoesNotExist:
-        UserProfile.objects.create(user=request.user)
-        profile = request.user.userprofile
-
-    if request.method == 'POST':
-        form = UserProfileForm(request.POST, instance=profile)
-        if form.is_valid():
-            form.save()
-            
-            
-            return redirect('profile_view')  # Redirect to a profile view
-    else:
-        form = UserProfileForm(instance=profile)
-
-        if form.is_valid():
-            subject = form.cleaned_data["subject"]
-    message = form.cleaned_data["message"]
-    sender = form.cleaned_data["sender"]
-    cc_myself = form.cleaned_data["cc_myself"]
-
-    recipients = ["info@example.com"]
-    if cc_myself:
-        recipients.append(sender)
-
-    send_mail(subject, message, sender, recipients)
-    return HttpResponseRedirect("/thanks/")
-
-# <<<<<<< HEAD
-#     return render(request, 'Student_Page.html', {'form': form})
-# def Profile (request):
-    
-#     try:
-#         profile = request.user.userprofile
-#     except UserProfile.DoesNotExist:
-#         UserProfile.objects.create(user=request.user)
-#     form = UserProfileForm
-#     updated = False
-#     if request.method == "POST":
-#         form = UserProfileForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             return HttpResponseRedirect('/Profile?updated=True')
-#         else:
-#             form: UserProfileForm
-#             if 'updated' in request.GET:
-#                 updated = True
-
-# def student_performance_view(request, student_id):
-#     performances = Performance.objects.filter(student_id=student_id).select_related('unit').order_by('unit__semester')
-    
-#     # Prepare data for the graph
-#     labels = [performance.unit.semester for performance in performances]
-#     data = [performance.score for performance in performances]
-    
-#     context = {
-#         'labels': labels,
-#         'data': data,
-#     }
-#     return render(request, 'student_performance.html', context)
-
-# =======
-    #return render(request, 'Student_Page.html', {'form': form})
-
 @login_required
 def inbox(request):
     received_messages = Message.objects.filter(recipient=request.user)
@@ -310,3 +241,30 @@ def send_message(request, recipient_id):
     print("Recipient ID:", recipient_id)
 
     return render(request, 'academia_app/send_message.html', {'recipient_id': recipient_id})
+
+@login_required
+def profile(request):
+    student_user = get_object_or_404(StudentUser, username=request.user.username)
+
+    attendance_records = Attendance.objects.filter(student=student_user)
+    performance_records = Performance.objects.filter(student=student_user)
+
+    if request.method == 'POST':
+        form = UpdateStudentProfileForm(request.POST, request.FILES, instance=student_user)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your profile was updated successfully.')
+            return redirect('profile')
+        else:
+            messages.error(request, 'Please correct the error below.')
+    else:
+        form = UpdateStudentProfileForm(instance=student_user)
+
+    context = {
+        'student': student_user,
+        'attendance_records': attendance_records,
+        'performance_records': performance_records,
+        'form': form,
+    }
+
+    return render(request, 'academia_app/Profile.html', context)
