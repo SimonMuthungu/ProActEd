@@ -2203,3 +2203,123 @@ DEBUG || 08-Jun-24 14:59:28 || Importing XbmImagePlugin
 DEBUG || 08-Jun-24 14:59:28 || Importing XpmImagePlugin
 DEBUG || 08-Jun-24 14:59:28 || Importing XVThumbImagePlugin
 WARNING || 08-Jun-24 14:59:40 || Not Found: /ws/academia_app/
+INFO || 08-Jun-24 20:17:22 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 08-Jun-24 20:55:59 || Not Found: /ws/academia_app/
+INFO || 08-Jun-24 21:03:58 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+INFO || 08-Jun-24 21:06:22 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 08-Jun-24 21:11:12 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 08-Jun-24 21:14:32 || Not Found: /ws/academia_app/
+ERROR || 08-Jun-24 21:14:52 || Internal Server Error: /student_page/inbox/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 197, in inbox
+    users = User.objects.exclude(id=request.user.id)
+            ^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\manager.py", line 196, in __get__
+    raise AttributeError(
+AttributeError: Manager isn't available; 'auth.User' has been swapped for 'academia_app.BaseUser'
+INFO || 08-Jun-24 21:21:54 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 08-Jun-24 21:23:01 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 08-Jun-24 21:23:22 || Internal Server Error: /student_page/chat/1/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: chat() got an unexpected keyword argument 'recipient_id'
+INFO || 08-Jun-24 21:29:06 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+ERROR || 08-Jun-24 21:30:09 || Internal Server Error: /student_page/chat/1/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 211, in chat
+    (Q(sender=request.user) & Q(recipient=other_user)) |
+     ^
+NameError: name 'Q' is not defined
+ERROR || 08-Jun-24 21:30:15 || Internal Server Error: /student_page/chat/1/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 211, in chat
+    (Q(sender=request.user) & Q(recipient=other_user)) |
+     ^
+NameError: name 'Q' is not defined
+WARNING || 08-Jun-24 21:30:29 || Not Found: /student_page/chat/
+WARNING || 08-Jun-24 21:30:35 || Not Found: /ws/academia_app/
+INFO || 08-Jun-24 21:33:00 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 08-Jun-24 21:34:12 || Not Found: /favicon.ico
+INFO || 08-Jun-24 21:47:24 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 08-Jun-24 21:55:50 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 08-Jun-24 22:00:06 || Not Found: /ws/academia_app/
+ERROR || 08-Jun-24 22:00:11 || Internal Server Error: /student_page/chat/1/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 213, in chat
+    return render(request, 'academia_app/chat.html', {'messages': messages, 'other_user': other_user})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'send_message' with keyword arguments '{'user_id': 1}' not found. 2 pattern(s) tried: ['student_page/send_message/(?P<recipient_id>[0-9]+)/\\Z', 'send_message/(?P<recipient_id>[0-9]+)/\\Z']
+INFO || 08-Jun-24 22:01:29 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
