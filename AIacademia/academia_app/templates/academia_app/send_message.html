@@ -1,11 +1,10 @@
-{% load static %}
+<!-- {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/send_message_style.css' %}">
 
 <!DOCTYPE html>
 <html>
 <head>
     {% block head %}
-    <!-- Add any head content here, if needed -->
     <script>
         {% if message_sent %}
         alert("Message sent successfully!");
@@ -24,5 +23,30 @@
     </form>
     <p>Recipient ID: {{ recipient_id }}</p>
     {% endblock %}
+</body>
+</html>
+ -->
+ {% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Send Message</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/send_message_style.css' %}">
+    <script>
+        {% if message_sent %}
+        alert("Message sent successfully!");
+        window.location.href = "{% url 'inbox' %}";
+        {% endif %}
+    </script>
+</head>
+<body>
+    <h2>New Message</h2>
+    <form method="post" action="{% url 'send_message' recipient_id %}">
+        {% csrf_token %}
+        <textarea name="content" rows="4" cols="50" placeholder="Type your message here"></textarea><br>
+        <button type="submit">Send</button>
+    </form>
+    <p>Recipient ID: {{ recipient_id }}</p>
 </body>
 </html>
