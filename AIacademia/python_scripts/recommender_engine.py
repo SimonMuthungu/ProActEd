@@ -1,7 +1,8 @@
-import sys
 import os
+import sys
 
-sys.path.append(r'C:\Users\Hp\Desktop\ProActEd\AIacademia') 
+sys.path.append(r'C:\Users\user\Desktop\ProActEd\AIacademia') 
+# sys.path.append(r'C:\Users\Hp\Desktop\ProActEd\AIacademia') 
 
 
 
@@ -20,8 +21,8 @@ from sklearn.cluster import KMeans
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-
+logging.basicConfig(filename=r'C:\Users\user\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+# logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 def load_model(users_interests, activities_users_have_enjoyed_in_the_past):
     logging.info('Recommender model loaded and running')
@@ -29,18 +30,17 @@ def load_model(users_interests, activities_users_have_enjoyed_in_the_past):
     # preprocessing function from the prepare recommender
     # this is to help with the etl and pre processing of the recommender training dataset
 
-#   import nltk
-    from nltk.corpus import stopwords 
-    from nltk.tokenize import word_tokenize
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+
 
     # df = pd.read_excel(r"AIacademia/data_files/gpt4_recommender_gen_training_data.xlsx")
-
     # Download the NLTK stopwords data if not already downloaded
     # nltk.download("stopwords")
     # nltk.download("punkt")
-
     # Define a function to preprocess text
-    def preprocess_text(text):
+def preprocess_text(text):
         # Handle empty cells
         if pd.isna(text):
             text = ""
@@ -63,83 +63,81 @@ def load_model(users_interests, activities_users_have_enjoyed_in_the_past):
 
 
     # getting a bigger user profile from they themselves
-    user_interests = preprocess_text(users_interests)
+user_interests = preprocess_text(users_interests)
     # user_subjects = preprocess_text(user_subjects)
-    activities_enjoyed = preprocess_text(activities_users_have_enjoyed_in_the_past) 
+activities_enjoyed = preprocess_text(activities_users_have_enjoyed_in_the_past) 
 
 
 
-    print(f'\n\nGive us a moment, as we give you our best...\n\n')
-    logging.info('Processing request...')
+print(f'\n\nGive us a moment, as we give you our best...\n\n')
+logging.info('Processing request...')
 
 
     # setting up django environment to interact with django from this script
-    sys.path.append(r'C:\Users\Simon\proacted\AIacademia') 
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'AIacademia.settings')
-    django.setup()
+sys.path.append(r'C:\Users\user\Desktop\ProActEd\AIacademia') 
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'AIacademia.settings')
+django.setup()
 
     # getting courses from django dbsqlite3 and making them into a df
-    from academia_app.models import Recommender_training_data
+from academia_app.models import Recommender_training_data
 
-    all_courses = Recommender_training_data.objects.all()
-    courses_list = [{"Course Name": course.course_name,
+all_courses = Recommender_training_data.objects.all()
+courses_list = [{"Course Name": course.course_name,
                     "Course Objectives": preprocess_text(course.course_objectives),
                     "Course_general_info_and_about":  preprocess_text(course.course_general_info_and_about),
                     "Prerequisites": preprocess_text(course.general_prerequisites)} for course in all_courses]
 
-    df = pd.DataFrame(courses_list)
+df = pd.DataFrame(courses_list)
 
     # creating 3 vectorizers for course description and prequisites and general info
-    objectives_vectorizer = TfidfVectorizer(stop_words='english')
-    generalinfoandabout_vectorizer = TfidfVectorizer(stop_words='english')
-    prerequisites_vectorizer = TfidfVectorizer(stop_words='english') 
+objectives_vectorizer = TfidfVectorizer(stop_words='english')
+generalinfoandabout_vectorizer = TfidfVectorizer(stop_words='english')
+prerequisites_vectorizer = TfidfVectorizer(stop_words='english') 
 
 
-    objectives_tfidf_matrix = objectives_vectorizer.fit_transform(df['Course Objectives'])
-    generalinfoandabout__tfidf_matrix = generalinfoandabout_vectorizer.fit_transform(df['Course_general_info_and_about'])
-    prerequisites_tfidf_matrix = prerequisites_vectorizer.fit_transform(df['Prerequisites'])
+objectives_tfidf_matrix = objectives_vectorizer.fit_transform(df['Course Objectives'])
+generalinfoandabout__tfidf_matrix = generalinfoandabout_vectorizer.fit_transform(df['Course_general_info_and_about'])
+prerequisites_tfidf_matrix = prerequisites_vectorizer.fit_transform(df['Prerequisites'])
 
 
-    objectives_feature_names = objectives_vectorizer.get_feature_names_out()
-    feature_names_for_generalinfoandabout = generalinfoandabout_vectorizer.get_feature_names_out()
-    feature_names_for_prerequisites = prerequisites_vectorizer.get_feature_names_out()  
+objectives_feature_names = objectives_vectorizer.get_feature_names_out()
+feature_names_for_generalinfoandabout = generalinfoandabout_vectorizer.get_feature_names_out()
+feature_names_for_prerequisites = prerequisites_vectorizer.get_feature_names_out()  
 
 
     # Loading Word2Vec model
-    model = joblib.load(r'C:\Users\Simon\proacted_googleds\word2vec_model.pkl')
+model = joblib.load(r'C:\Users\Simon\proacted_googleds\word2vec_model.pkl')
 
 
     # Tokenize sentences in course objectives and general info
-    df['Tokenized Objectives'] = df['Course Objectives'].apply(sent_tokenize)
-    df['Tokenized General Info'] = df['Course_general_info_and_about'].apply(sent_tokenize)
-    # df['Tokenized General Prerequisites'] = df['Prerequisites'].apply(sent_tokenize)
-    print('\n\n\nTokenized sentences!\n')
-
-
+df['Tokenized Objectives'] = df['Course Objectives'].apply(sent_tokenize)
+df['Tokenized General Info'] = df['Course_general_info_and_about'].apply(sent_tokenize)
+# df['Tokenized General Prerequisites'] = df['Prerequisites'].apply(sent_tokenize)
+print('\n\n\nTokenized sentences!\n')
 
 
     # Function to vectorize sentences using Word2Vec and calculate their weighted average
-    def vectorize_sentences(sentences, model, tfidf_vectorizer):
-        feature_names = tfidf_vectorizer.get_feature_names_out()
-        tfidf_matrix = tfidf_vectorizer.transform(sentences)
+def vectorize_sentences(sentences, model, tfidf_vectorizer):
+    feature_names = tfidf_vectorizer.get_feature_names_out()
+    tfidf_matrix = tfidf_vectorizer.transform(sentences)
 
-        sentence_vectors = []
-        for i, sentence in enumerate(sentences):
-            words = sentence.split()
-            word_vectors = [model[word] for word in words if word in model.key_to_index and word in feature_names]
-            word_tfidf = [tfidf_matrix[i, feature_names.tolist().index(word)] for word in words if word in model.key_to_index and word in feature_names] 
+    sentence_vectors = []
+    for i, sentence in enumerate(sentences):
+        words = sentence.split()
+        word_vectors = [model[word] for word in words if word in model.key_to_index and word in feature_names]
+        word_tfidf = [tfidf_matrix[i, feature_names.tolist().index(word)] for word in words if word in model.key_to_index and word in feature_names] 
 
-            if word_vectors:
-                weighted_avg_vector = np.average(word_vectors, weights=word_tfidf, axis=0)
-                sentence_vectors.append(weighted_avg_vector)
+        if word_vectors:
+            weighted_avg_vector = np.average(word_vectors, weights=word_tfidf, axis=0)
+            sentence_vectors.append(weighted_avg_vector)
 
-            else:
-                # Handle cases where none of the words in the sentence are in the model or TF-IDF feature names
-                sentence_vectors.append(np.zeros(model.vector_size))
+        else:
+            # Handle cases where none of the words in the sentence are in the model or TF-IDF feature names
+            sentence_vectors.append(np.zeros(model.vector_size))
 
-            # print(len(sentence_vectors)) 
+        # print(len(sentence_vectors))
 
-        return sentence_vectors
+    return sentence_vectors
 
 
     # Vectorize each sentence

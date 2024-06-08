@@ -1,9 +1,8 @@
 from django.contrib.auth.views import LogoutView
 from django.urls import include, path
+
+from . import admin, views
 from .views import inbox, send_message
-from django.urls import path
-from . import views
-from . import admin
 
 urlpatterns = [
 
