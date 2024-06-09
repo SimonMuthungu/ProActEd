@@ -4,7 +4,6 @@ from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
-
 # Custom User Manager
 class CustomUserManager(BaseUserManager):
     def create_user(self, username, password=None, **extra_fields):
@@ -25,7 +24,6 @@ class CustomUserManager(BaseUserManager):
             raise ValueError('Superuser must have is_superuser=True.')
 
         return self.create_user(username, password, **extra_fields)
-
 
 # Base User Model
 class BaseUser(AbstractUser):
@@ -232,7 +230,6 @@ class Message(models.Model):
 class NewMessageNotification(models.Model):
     user = models.ForeignKey(BaseUser, on_delete=models.CASCADE, related_name='notifications')
     is_new = models.BooleanField(default=True)
-
 
 class UserProfile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)

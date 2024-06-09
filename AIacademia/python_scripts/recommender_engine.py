@@ -13,18 +13,17 @@ from sklearn.cluster import KMeans
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-<<<<<<< HEAD
+
 logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-=======
+
 # Set up logging
-logging.basicConfig(
-    filename=r'C:\Users\user\Desktop\ProActEd\AIacademia\mainlogfile.log',
-    level=logging.DEBUG,
-    format='%(levelname)s || %(asctime)s || %(message)s',
-    datefmt='%d-%b-%y %H:%M:%S'
-)
-# logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
->>>>>>> f6d53a06eec91d7e12f81aa90ed5eb95db6cd0e4
+# logging.basicConfig(
+#     filename=r'C:\Users\user\Desktop\ProActEd\AIacademia\mainlogfile.log',
+#     level=logging.DEBUG,
+#     format='%(levelname)s || %(asctime)s || %(message)s',
+#     datefmt='%d-%b-%y %H:%M:%S'
+# )
+
 # logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 

@@ -31,14 +31,10 @@ from .models import (Attendance, BaseUser, Course, Message, Performance,
                      Recommender_training_data, School, Student, StudentUser,
                      UserProfile, probabilitydatatable)
 
-<<<<<<< HEAD
-
 # logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-=======
-logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+# logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
->>>>>>> f6d53a06eec91d7e12f81aa90ed5eb95db6cd0e4
 
 def login_view(request):
     print("Visited Login")
@@ -134,13 +130,9 @@ def predict_probability(request, student_id=3):
 
 
     try: 
-<<<<<<< HEAD
         # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-=======
-        model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
->>>>>>> f6d53a06eec91d7e12f81aa90ed5eb95db6cd0e4
+
         model = joblib.load(model_path)
         logging.info('Probability model loaded with joblib.')
 
@@ -239,7 +231,6 @@ def inbox(request):
 
     # Mark all notifications as read
     notifications.update(is_new=False)
-
     for user in users:
         user.has_new_messages = NewMessageNotification.objects.filter(user=user, is_new=True).exists()
 
