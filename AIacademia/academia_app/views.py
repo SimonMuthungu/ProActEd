@@ -23,7 +23,7 @@ from django.urls import reverse_lazy
 from python_scripts.proacted_recommender2024 import proacted2024
 # from python_scripts.sbert_recommender import sbert_proactedrecomm2024
 from python_scripts.recommender_engine import load_model
-from python_scripts.sbert_recommender import sbert_proactedrecomm2024
+# from python_scripts.sbert_recommender import sbert_proactedrecomm2024
 from .models import StudentUser, Attendance, Performance, Course, School, Recommender_training_data 
 from .models import BaseUser,UserProfile,Course,School,Performance,Student,Message, probabilitydatatable, NewMessageNotification
 
@@ -117,15 +117,16 @@ def recommend_courses(request):
         
 def predict_probability(request, student_id=3): 
     try: 
-        model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        # model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_prob_model2.joblib'
         model = joblib.load(model_path)
         logging.info('Probability model proacted_prob_model2 loaded') 
 
         student_data = probabilitydatatable.objects.get(id=student_id) 
         lessonsattended = student_data.Lessons_Attended
         aggrpoints = student_data.Aggregate_points
-        lessons_attended = student_data.pcnt_of_lessons_attended
+        pcnt_of_lessons_attended = student_data.pcnt_of_lessons_attended
         homework_submission_rates = student_data.homework_submission_rates
         activity_on_learning_platforms = student_data.activity_on_learning_platforms
         CAT_1_marks = student_data.CAT_1_marks
@@ -137,13 +138,14 @@ def predict_probability(request, student_id=3):
         print('the student doesnt exist')
         return render(request, "academia_app/student_page.html")
 
-    input_data = [[lessonsattended, aggrpoints, lessons_attended, homework_submission_rates, CAT_1_marks, CAT_2_marks, activity_on_elearning_platforms]] 
+    input_data = [[lessonsattended, aggrpoints, pcnt_of_lessons_attended, homework_submission_rates, CAT_1_marks, CAT_2_marks, activity_on_elearning_platforms]] 
+    # input_data = [[lessonsattended, aggrpoints]] 
 
     # Predict probabilities
     prediction = model.predict(input_data)
 
     context = {'prediction': prediction[0][0], 'refined_prediction': f"{prediction[0][0]*100:.3f}"}
-    print(f"\n\nStudent {student_id} with lessonsattended: {lessonsattended} and aggrpoints: {aggrpoints}, lessons_attended: {lessons_attended}, homework_submission_rates: {homework_submission_rates}, activity_on_learning_platforms: {activity_on_learning_platforms}, CAT_1_marks: {CAT_1_marks}, CAT_2_marks: {CAT_2_marks}, activity_on_elearning_platforms: {activity_on_elearning_platforms} ; 'prediction': {prediction[0][0]}, 'refined_prediction': {prediction[0][0]*100:.3f}\n\n")
+    print(f"\n\nStudent {student_id} with lessonsattended: {lessonsattended} and aggrpoints: {aggrpoints}, lessons_attended: {pcnt_of_lessons_attended}, homework_submission_rates: {homework_submission_rates}, activity_on_learning_platforms: {activity_on_learning_platforms}, CAT_1_marks: {CAT_1_marks}, CAT_2_marks: {CAT_2_marks}, activity_on_elearning_platforms: {activity_on_elearning_platforms} ; 'prediction': {prediction[0][0]}, 'refined_prediction': {prediction[0][0]*100:.3f}\n\n")
 
     return render(request, "academia_app/student_page.html",context = context)
 
