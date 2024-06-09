@@ -2953,3 +2953,196 @@ Traceback (most recent call last):
   File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 332, in check_response
     raise ValueError(
 ValueError: The view academia_app.views.recommend_courses didn't return an HttpResponse object. It returned None instead.
+INFO || 09-Jun-24 22:21:29 || S-Bert 2024 Recommender Engine Initialized
+INFO || 09-Jun-24 22:21:29 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 09-Jun-24 22:21:29 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 09-Jun-24 22:21:32 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 09-Jun-24 22:21:32 || Attempting to acquire lock 2726295758864 on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+DEBUG || 09-Jun-24 22:21:32 || Lock 2726295758864 acquired on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+DEBUG || 09-Jun-24 22:21:33 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 349
+DEBUG || 09-Jun-24 22:21:33 || Attempting to release lock 2726295758864 on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+DEBUG || 09-Jun-24 22:21:33 || Lock 2726295758864 released on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+DEBUG || 09-Jun-24 22:21:34 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 09-Jun-24 22:21:34 || Attempting to acquire lock 2726292916176 on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+DEBUG || 09-Jun-24 22:21:34 || Lock 2726292916176 acquired on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+DEBUG || 09-Jun-24 22:21:35 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 116
+DEBUG || 09-Jun-24 22:21:35 || Attempting to release lock 2726292916176 on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+DEBUG || 09-Jun-24 22:21:35 || Lock 2726292916176 released on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+DEBUG || 09-Jun-24 22:21:36 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 09-Jun-24 22:21:36 || Attempting to acquire lock 2726215824336 on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\8cfec92309f5626a223304af2423e332f6d31887.lock
+DEBUG || 09-Jun-24 22:21:36 || Lock 2726215824336 acquired on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\8cfec92309f5626a223304af2423e332f6d31887.lock
+DEBUG || 09-Jun-24 22:21:37 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 10659
+DEBUG || 09-Jun-24 22:21:37 || Attempting to release lock 2726215824336 on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\8cfec92309f5626a223304af2423e332f6d31887.lock
+DEBUG || 09-Jun-24 22:21:37 || Lock 2726215824336 released on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\8cfec92309f5626a223304af2423e332f6d31887.lock
+DEBUG || 09-Jun-24 22:21:38 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 09-Jun-24 22:21:40 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 09-Jun-24 22:21:40 || Attempting to acquire lock 2726215822864 on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\59d594003bf59880a884c574bf88ef7555bb0202.lock
+DEBUG || 09-Jun-24 22:21:40 || Lock 2726215822864 acquired on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\59d594003bf59880a884c574bf88ef7555bb0202.lock
+DEBUG || 09-Jun-24 22:21:42 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 53
+DEBUG || 09-Jun-24 22:21:42 || Attempting to release lock 2726215822864 on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\59d594003bf59880a884c574bf88ef7555bb0202.lock
+DEBUG || 09-Jun-24 22:21:42 || Lock 2726215822864 released on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\59d594003bf59880a884c574bf88ef7555bb0202.lock
+DEBUG || 09-Jun-24 22:21:43 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 09-Jun-24 22:21:43 || Attempting to acquire lock 2726215824016 on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\72b987fd805cfa2b58c4c8c952b274a11bfd5a00.lock
+DEBUG || 09-Jun-24 22:21:43 || Lock 2726215824016 acquired on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\72b987fd805cfa2b58c4c8c952b274a11bfd5a00.lock
+DEBUG || 09-Jun-24 22:21:45 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 612
+DEBUG || 09-Jun-24 22:21:45 || Attempting to release lock 2726215824016 on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\72b987fd805cfa2b58c4c8c952b274a11bfd5a00.lock
+DEBUG || 09-Jun-24 22:21:45 || Lock 2726215824016 released on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\72b987fd805cfa2b58c4c8c952b274a11bfd5a00.lock
+DEBUG || 09-Jun-24 22:21:48 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/model.safetensors HTTP/1.1" 302 0
+DEBUG || 09-Jun-24 22:21:48 || Attempting to acquire lock 2726322248080 on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+DEBUG || 09-Jun-24 22:21:48 || Lock 2726322248080 acquired on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+DEBUG || 09-Jun-24 22:21:48 || Starting new HTTPS connection (1): cdn-lfs.huggingface.co:443
+DEBUG || 09-Jun-24 22:21:55 || https://cdn-lfs.huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1718218854&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxODIxODg1NH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9zZW50ZW5jZS10cmFuc2Zvcm1lcnMvYWxsLU1pbmlMTS1MNi12Mi81M2FhNTExNzJkMTQyYzg5ZDkwMTJjY2UxNWFlNGQ2Y2MwY2E2ODk1ODk1MTE0Mzc5Y2FjYjRmYWIxMjhkOWRiP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=HVXTD4nMysvRkz~YWmkBqYps36muVCCcLMqtcNZx~BcmrcjnWOr~d~VBkdcEW~dCKTGOkSIJwa6e-l3-ja8Rlpn2FHyBpuhzUkU9tlWCVAbzvqK6cRpRI1jRNiBiUhMMbazdsCZAYT162AOaqldL97ujCMfAbUeLLn0o42mpAUlh~GWKYixe7WTAa4~j7Eedi0lfXuCJmCpfz7TQVqFWAqR41S1qGZ6035prvrwzyMwaGHkhHYYj7ujw4SNGGVE3IIPapQ3nlhg1ZZqbwYh8kiRZ9HiDTVvAjwcZfEL61Yt3pN3~FCJ4AD-ExZgHf8uQqdRzuJs11npmKy4kbfrxNw__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 90868376
+DEBUG || 09-Jun-24 22:22:19 || Attempting to release lock 2726322248080 on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+DEBUG || 09-Jun-24 22:22:19 || Lock 2726322248080 released on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+INFO || 09-Jun-24 22:32:37 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 09-Jun-24 22:35:16 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 09-Jun-24 22:35:56 || time recommender model has used: 43.09494495391846
+INFO || 09-Jun-24 22:36:40 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 09-Jun-24 22:37:10 || time recommender model has used: 36.818081855773926
+INFO || 09-Jun-24 22:50:31 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 09-Jun-24 22:51:07 || time recommender model has used: 35.962032318115234
+INFO || 09-Jun-24 22:51:14 || S-Bert 2024 Recommender Engine Initialized
+INFO || 09-Jun-24 22:51:14 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 09-Jun-24 22:51:14 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 09-Jun-24 22:51:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 09-Jun-24 22:51:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 09-Jun-24 22:51:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 09-Jun-24 22:51:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 09-Jun-24 22:51:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 09-Jun-24 22:51:18 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 09-Jun-24 22:51:20 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/model.safetensors HTTP/1.1" 302 0
+DEBUG || 09-Jun-24 22:51:20 || Attempting to acquire lock 3088368361680 on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+DEBUG || 09-Jun-24 22:51:20 || Lock 3088368361680 acquired on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+DEBUG || 09-Jun-24 22:51:20 || Starting new HTTPS connection (1): cdn-lfs.huggingface.co:443
+DEBUG || 09-Jun-24 22:51:22 || https://cdn-lfs.huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1718219729&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxODIxOTcyOX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9zZW50ZW5jZS10cmFuc2Zvcm1lcnMvYWxsLU1pbmlMTS1MNi12Mi81M2FhNTExNzJkMTQyYzg5ZDkwMTJjY2UxNWFlNGQ2Y2MwY2E2ODk1ODk1MTE0Mzc5Y2FjYjRmYWIxMjhkOWRiP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=pAMK0kW4xqa4VwQ7L6OyHNbl52DsPfQI92abRfYuvity8WKXqLe2fe~X4RwSSNvoWonENZOlmOh0tuln-s3~FsaedEhUYp4zE96K8pWqgRD3aFpjkBGc4f2hT-eAS9NRmnhkmrrdgUtmxnhszqqh2yBSjFjEwB1ZHvpteqXyOV95r2v88TJ9vC9hGo5A~jggGVlN9iAmhGC6ikLE-wV9kiYR2gaZ4beS3zaZaKKEPv3JLo09WEkjGVYcsbgke7u888oEPc98jYAlpQ0Ld67Tcgfp9hZzWcNXcSg2LO1FPIb2i8~jWw922GHa7ypcHekemSW9xGHrSuII9FFqkjwMOQ__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 90868376
+DEBUG || 09-Jun-24 22:51:39 || Attempting to release lock 3088368361680 on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+DEBUG || 09-Jun-24 22:51:39 || Lock 3088368361680 released on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+INFO || 09-Jun-24 22:52:54 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 09-Jun-24 22:53:23 || time recommender model has used: 29.712267637252808
+INFO || 09-Jun-24 22:53:30 || S-Bert 2024 Recommender Engine Initialized
+INFO || 09-Jun-24 22:53:30 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 09-Jun-24 22:53:30 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 09-Jun-24 22:53:31 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 09-Jun-24 22:53:32 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 09-Jun-24 22:53:32 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 09-Jun-24 22:53:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 09-Jun-24 22:53:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 09-Jun-24 22:53:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 09-Jun-24 22:53:35 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/model.safetensors HTTP/1.1" 302 0
+DEBUG || 09-Jun-24 22:53:35 || Attempting to acquire lock 2111166157776 on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+DEBUG || 09-Jun-24 22:53:35 || Lock 2111166157776 acquired on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+DEBUG || 09-Jun-24 22:53:35 || Starting new HTTPS connection (1): cdn-lfs.huggingface.co:443
+DEBUG || 09-Jun-24 22:53:36 || https://cdn-lfs.huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1718220644&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxODIyMDY0NH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9zZW50ZW5jZS10cmFuc2Zvcm1lcnMvYWxsLU1pbmlMTS1MNi12Mi81M2FhNTExNzJkMTQyYzg5ZDkwMTJjY2UxNWFlNGQ2Y2MwY2E2ODk1ODk1MTE0Mzc5Y2FjYjRmYWIxMjhkOWRiP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=i2ce6iyWzWbTRtp11ZguYxp4FvqLYBD1g30y0U6JzJ1SoErydK5hQNOidVZl360Lk73qIh-e0mQz9faYMzGcfbTGXF2wcCHhGUluuUC3iCwB7r2CAmjPzhg8ZkST5pAePihnUpZIHNbAiA~3-FTuX-kuwvTxMigiOJGoHQSvJfVKy0R5tNY2Ax-b2HJofu6ZfjsIxPV3xNq5aUjf6N1YLh85W7r0DSa-HrrcPJ4AnvGmUWHTsDgXxdfNO~zmihGQVUb8QJqa0JH3cXfo19OnQsWH3gR9Ea9TciWDwqmdZL4mXk1BoSCwfPf9h0svF5JykPEYftXgX9MoGqUSCOlV3Q__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 90868376
+DEBUG || 09-Jun-24 22:53:38 || Attempting to release lock 2111166157776 on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+DEBUG || 09-Jun-24 22:53:38 || Lock 2111166157776 released on C:\Users\Simon\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+INFO || 09-Jun-24 22:54:23 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 09-Jun-24 22:54:58 || time recommender model has used: 35.146997690200806
+WARNING || 09-Jun-24 22:55:13 || Not Found: /ws/academia_app/
+ERROR || 09-Jun-24 22:55:13 || Internal Server Error: /check_new_messages/
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: academia_app_newmessagenotification
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 215, in check_new_messages
+    has_new_messages = NewMessageNotification.objects.filter(user=request.user, is_new=True).exists()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 1241, in exists
+    return self.query.has_results(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\query.py", line 598, in has_results
+    return compiler.has_results()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1530, in has_results
+    return bool(self.execute_sql(SINGLE))
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: academia_app_newmessagenotification
+ERROR || 09-Jun-24 22:56:08 || Internal Server Error: /check_new_messages/
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: academia_app_newmessagenotification
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 215, in check_new_messages
+    has_new_messages = NewMessageNotification.objects.filter(user=request.user, is_new=True).exists()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 1241, in exists
+    return self.query.has_results(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\query.py", line 598, in has_results
+    return compiler.has_results()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1530, in has_results
+    return bool(self.execute_sql(SINGLE))
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: academia_app_newmessagenotification
+WARNING || 09-Jun-24 22:56:08 || Not Found: /ws/academia_app/
+INFO || 09-Jun-24 23:02:54 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.

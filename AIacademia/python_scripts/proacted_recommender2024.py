@@ -6,16 +6,16 @@ starttime = time.time()
 import logging
 import sys, os, django
 import joblib
-from .dependeciesforrecomm2024 import clustered_weighted_vector
-from .dependeciesforrecomm2024 import objectives_vectorizer, generalinfoandabout_vectorizer
+from dependeciesforrecomm2024 import clustered_weighted_vector
+from dependeciesforrecomm2024 import objectives_vectorizer, generalinfoandabout_vectorizer
 import numpy as np
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 
 
 
-
-logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S') 
+# C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log
+logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S') 
 
 
 def proacted2024(users_interests, activities_users_have_enjoyed_in_the_past, top_n=5, showtime=True):
@@ -39,7 +39,7 @@ def proacted2024(users_interests, activities_users_have_enjoyed_in_the_past, top
     
     print("Loading word2vec...")
     # Loading the model, download the word2Vec binary file and specify its location here
-    model = joblib.load(r'C:\Users\HP\Desktop\word2vec_model.pkl')
+    model = joblib.load(r'C:\Users\Simon\proacted_googleds\word2vec_model.pkl')
     print('Done loading word2vec')
 
 
@@ -109,3 +109,10 @@ def proacted2024(users_interests, activities_users_have_enjoyed_in_the_past, top
 
 
     return top_course_names
+
+
+user_query = "I have a deep interest in health and fitness, focusing on nutrition, exercise, and mental well-being. My goal is to understand the science behind physical fitness and to apply this knowledge in developing holistic health programs. I am keen on exploring the psychological aspects of fitness and how they intersect with physical health, aiming to promote a balanced lifestyle."
+
+Activitiesenjoyedbyuser = "I regularly engage in various physical activities like yoga, running, and weight training. I enjoy preparing nutritious meals and experimenting with healthy recipes. I often participate in local fitness challenges and marathons. Additionally, I attend workshops on nutrition and mental wellness, and enjoy reading books and articles related to health and fitness. I also volunteer as a fitness coach at my local community center, helping others achieve their health goals."
+
+print(proacted2024(user_query, Activitiesenjoyedbyuser, top_n=5, showtime=True))

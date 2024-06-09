@@ -26,7 +26,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse, JsonResponse, HttpRequest
 from python_scripts.proacted_recommender2024 import proacted2024
-from python_scripts.sbert_recommender import sbert_proactedrecomm2024
+# from python_scripts.sbert_recommender import sbert_proactedrecomm2024
 from .models import StudentUser, Attendance, Performance, Course, School, Recommender_training_data 
 from .models import BaseUser,UserProfile,Course,School,Performance,Student,Message, probabilitydatatable, NewMessageNotification
 
@@ -106,38 +106,27 @@ def recommend_courses(request):
             proacted_recommendations = proacted2024(user_description_about_interests, user_activities_enjoyed)
             print(f"here are the proacted_recommendations: {proacted_recommendations}")
             print(f"Done with proacted, proceeding to sbert recommender")
-            sbert_recommendations = sbert_proactedrecomm2024(user_description_about_interests, user_activities_enjoyed)
-            print(f"here are the sbert_recommendations: {sbert_recommendations}") 
+            # sbert_recommendations = sbert_proactedrecomm2024(user_description_about_interests, user_activities_enjoyed)
+            # print(f"here are the sbert_recommendations: {sbert_recommendations}") 
             context = {'proacted_recommendations': proacted_recommendations}
             return render(request, 'academia_app/recommended_courses.html', context)
-        except:
-            print('Something came up, please rerun the system...')
+        except Exception as exc:
+            print(f'Something came up, please rerun the system...\n{exc}\n\n')
             logging.critical('Something came up, please rerun the system...')
         # Pass proacted_recommendations to the template
         finally:
             logging.info('Recommender system has run')
     else:
-        return render(request, 'academia_app/login.html')        
+        return render(request, 'academia_app/recommended_courses.html')       
 
             
         
         
 def predict_probability(request, student_id=3): 
-    model = joblib.load(r'C:\Users\Simon\proacted\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
-    logging.info('Probability model loaded')
-    # try:
-    #     model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib'
-    #     model = joblib.load(model_path)
-    #     logging.info('Probability model loaded with joblib.')
-    # except Exception as e:
-    #     logging.error(f"Error loading model: {e}")
-    #     return HttpResponse(f"Error loading model: {e}", status=500)
-
-
     try: 
         model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         model = joblib.load(model_path)
-        logging.info('Probability model loaded with joblib.')
+        logging.info('Probability model proacted_prob_model2 loaded') 
 
         student_data = probabilitydatatable.objects.get(id=student_id) 
         lessonsattended = student_data.Lessons_Attended
@@ -151,7 +140,8 @@ def predict_probability(request, student_id=3):
 
     except probabilitydatatable.DoesNotExist:
         # the student doesnt exist
-        pass
+        print('the student doesnt exist')
+        return render(request, "academia_app/student_page.html")
 
     input_data = [[lessonsattended, aggrpoints, lessons_attended, homework_submission_rates, CAT_1_marks, CAT_2_marks, activity_on_elearning_platforms]] 
 
