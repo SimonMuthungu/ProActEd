@@ -32,8 +32,8 @@ from .models import BaseUser,UserProfile,Course,School,Performance,Student,Messa
 
 
 
-logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-
+# logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 def login_view(request):
     if request.method == 'POST':
@@ -135,7 +135,8 @@ def predict_probability(request, student_id=3):
 
 
     try: 
-        model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         model = joblib.load(model_path)
         logging.info('Probability model loaded with joblib.')
 
@@ -240,6 +241,10 @@ def send_message(request, user_id):
         recipient = get_object_or_404(BaseUser, id=user_id)
         content = request.POST.get('content', '')
         message = Message.objects.create(sender=request.user, recipient=recipient, content=content)
+        
+        # Create a new notification for the recipient
+        NewMessageNotification.objects.create(user=recipient, message=message)
+        
         data = {
             'content': message.content,
             'timestamp': message.timestamp.strftime('%Y-%m-%d %H:%M:%S')
@@ -247,6 +252,8 @@ def send_message(request, user_id):
         return JsonResponse(data)
     else:
         return redirect('inbox')
+
+
 
 @login_required
 def profile(request):
