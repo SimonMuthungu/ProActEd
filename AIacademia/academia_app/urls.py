@@ -6,7 +6,6 @@ from . import admin, views
 from .views import inbox, send_message
 
 urlpatterns = [
-
     path('', views.course_recommendation, name='course_recommendation'),
     path('login/', views.login_view, name='login'),
     path('logout/', LogoutView.as_view(next_page='course_recommendation'), name='logout'),
