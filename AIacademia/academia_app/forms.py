@@ -1,12 +1,12 @@
 from django import forms
-from .models import Student, UserProfile
+from .models import  StudentUser, UserProfile
 
 class UpdateStudentProfileForm(forms.ModelForm):
     email = forms.EmailField()
     phone_number = forms.CharField(max_length=15)
 
     class Meta:
-        model = Student
+        model = StudentUser
         fields = ['registration_number', 'course', 'school', 'profile_picture']
 
     # def __init__(self, *args, **kwargs):
@@ -16,7 +16,7 @@ class UpdateStudentProfileForm(forms.ModelForm):
 
     def save(self, commit=True):
         student = super(UpdateStudentProfileForm, self).save(commit=False)
-        user = student.user
+        user = StudentUser.user
         user.email = self.cleaned_data['email']
         user.save()
         # user.userprofile.phone_number = self.cleaned_data['phone_number']

@@ -23,7 +23,7 @@ from python_scripts.proacted_recommender2024 import proacted2024
 from python_scripts.recommender_engine import load_model
 from python_scripts.sbert_recommender import sbert_proactedrecomm2024
 from .models import StudentUser, AdminUser, SuperAdminUser, Attendance, Performance, Course, School, Recommender_training_data
-from .models import BaseUser, UserProfile, Course, School, Performance, Student, Message, probabilitydatatable, NewMessageNotification
+from .models import BaseUser, UserProfile, Course, School, Performance, Message, probabilitydatatable, NewMessageNotification
 
 from .forms import UpdateStudentProfileForm
 
@@ -254,6 +254,13 @@ def profile(request):
     }
 
     return render(request, 'academia_app/Profile.html', context)
+
+@login_required
+def dashboard(request):
+    if request.user.is_superuser or request.user.is_staff:
+        return redirect('/admin/')
+    else:
+        return redirect('student_page')
 
 
 @login_required
