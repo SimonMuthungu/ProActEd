@@ -49,9 +49,6 @@
                 {% if perms.academia_app.view_studentuserproxy %}
                 <a href="{% url 'admin:academia_app_studentuserproxy_changelist' %}">View Student User</a>
                 {% endif %}
-                {% if perms.academia_app.add_student %}
-                <a href="{% url 'admin:academia_app_student_add' %}">Add Student</a>
-                {% endif %}
             </div>
         </div>
     </div>

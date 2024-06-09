@@ -65,10 +65,36 @@ class SuperAdminUser(BaseUser):
     def __str__(self):
         return f"SuperAdmin User: {self.username}"
 
+# School Model
+class School(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=100)
+    abbreviation = models.CharField(max_length=10)
+
+    def __str__(self):
+        return self.name
+
+
+# Course Model
+class Course(models.Model):
+    name = models.CharField(max_length=100)
+    prefix = models.CharField(max_length=15)
+    school = models.ForeignKey(School, on_delete=models.CASCADE)
+    students_count = models.PositiveIntegerField(default=0)
+    graduation_probability = models.FloatField(default=0.0)
+
+    def __str__(self):
+        return self.name
 
 # Student User Model
 class StudentUser(BaseUser):
     student_field = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+    registration_number = models.CharField(max_length=20, unique=True)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    school = models.ForeignKey(School, on_delete=models.CASCADE)
+    graduation_probability = models.FloatField(default=0.0)
+    profile_picture = models.ImageField(upload_to='profile_pictures/', null=True, blank=True)
 
     def __str__(self):
         return f"Student User: {self.username}"
@@ -94,47 +120,6 @@ class SuperAdminUserProxy(SuperAdminUser):
         proxy = True
         verbose_name = 'Super Admin'
         verbose_name_plural = 'Super Admins'
-
-
-# School Model
-class School(models.Model):
-    id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=100)
-    abbreviation = models.CharField(max_length=10)
-
-    def __str__(self):
-        return self.name
-
-
-# Course Model
-class Course(models.Model):
-    name = models.CharField(max_length=100)
-    prefix = models.CharField(max_length=15)
-    school = models.ForeignKey(School, on_delete=models.CASCADE)
-    students_count = models.PositiveIntegerField(default=0)
-    graduation_probability = models.FloatField(default=0.0)
-
-    def __str__(self):
-        return self.name
-
-
-# Student Model
-class Student(models.Model):
-    user = models.OneToOneField(
-        StudentUser,
-        on_delete=models.CASCADE,
-        related_name='student_profile',
-        null=True
-    )
-    name = models.CharField(max_length=100)
-    registration_number = models.CharField(max_length=20, unique=True)
-    course = models.ForeignKey(Course, on_delete=models.CASCADE)
-    school = models.ForeignKey(School, on_delete=models.CASCADE)
-    graduation_probability = models.FloatField(default=0.0)
-    profile_picture = models.ImageField(upload_to='profile_pictures/', null=True, blank=True)
-
-    def __str__(self):
-        return self.name
 
 # Fee Information Model
 class FeeInformation(models.Model):
