@@ -10,7 +10,6 @@ from .models import (AdminUserProxy, Attendance, Course, CourseOfInterest,
                      Performance, School, Student, StudentUserProxy,
                      SuperAdminUserProxy)
 
-
 # Custom form for creating new users
 class UserCreationForm(forms.ModelForm):
     class Meta:
@@ -78,11 +77,6 @@ class StudentUserAdmin(CustomUserAdmin):
     list_display = ('first_name', 'last_name','username', 'email')
     list_filter = ()
 
-# Registering the custom admin classes
-admin.site.register(SuperAdminUserProxy, SuperAdminUserAdmin)
-admin.site.register(AdminUserProxy, AdminUserAdmin)
-admin.site.register(StudentUserProxy, StudentUserAdmin)
-
 # Custom Admin classes for other models
 class SchoolAdmin(admin.ModelAdmin):
     list_display = ('name', 'abbreviation')
@@ -127,6 +121,12 @@ admin.site.register(User, CustomUserAdmin)
 if Group in admin.site._registry:
     admin.site.unregister(Group)
 admin.site.register(Group, CustomGroupAdmin)
+
+
+# Registering the custom admin classes
+admin.site.register(SuperAdminUserProxy, SuperAdminUserAdmin)
+admin.site.register(AdminUserProxy, AdminUserAdmin)
+admin.site.register(StudentUserProxy, StudentUserAdmin)
 
 # Register other models
 admin.site.register(School, SchoolAdmin)

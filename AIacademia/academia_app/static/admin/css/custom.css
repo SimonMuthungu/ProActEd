@@ -6,6 +6,8 @@ body {
     color: #A6B0CF;
     padding:0;
     margin: 0;
+    overflow-x: hidden;
+    height: 100%
 }
 
 
@@ -77,6 +79,68 @@ body {
     transition: filter 0.3s ease;
 }
 
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden; /* Prevent horizontal scroll */
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Make sure items wrap on small screens */
+    margin-bottom: 20px;
+}
+
+.stat-box {
+    background-color: #34495E;
+    color: #ECF0F1;
+    padding: 20px;
+    border-radius: 5px;
+    width: 18%;
+    text-align: center;
+    margin-bottom: 10px; /* Add margin for wrapping items */
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+canvas {
+    background-color: #34495E;
+    border-radius: 5px;
+}
+
+.profile-box {
+    margin-top: 20px;
+    background-color: #34495E;
+    color: #ECF0F1;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-content {
+    text-align: center;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-name, .profile-role, .profile-email {
+    margin: 5px 0;
+}
+
+
+
 /* Customizing the side bar */
 
 #custom-sidebar {
@@ -120,12 +184,55 @@ body {
     margin-top: 3px;
 }
 
-.sub-content a, .sub-content form {
+.sub-content a{
     display: block;
     color: #eaeef2;
     text-decoration: none;
     margin-bottom: 3px;
 }
+
+.sub-content form{
+    display: block;
+    color: #eaeef2;
+    text-decoration: none;
+    margin-bottom: 3px;
+}
+
+.settings {
+    padding-left: 15px;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+/* Styles for the Change Password link */
+.settings-pass a {
+    display: block;
+    color: #eaeef2;
+    text-decoration: none;
+    margin-bottom: 3px;
+}
+
+.settings-pass a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for the Logout button */
+.settings-logout form {
+    display: inline;
+}
+
+.settings-logout button[type="submit"] {
+    display: inline;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #eaeef2;
+    font: inherit;
+}
+
 .sub-content.visible {
     display: block;
 }

@@ -4,18 +4,22 @@ import time
 
 starttime = time.time()
 import logging
-import sys, os, django
+import os
+import sys
+
+import django
 import joblib
-from .dependeciesforrecomm2024 import clustered_weighted_vector
-from .dependeciesforrecomm2024 import objectives_vectorizer, generalinfoandabout_vectorizer
 import numpy as np
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 
+from .dependeciesforrecomm2024 import (clustered_weighted_vector,
+                                       generalinfoandabout_vectorizer,
+                                       objectives_vectorizer)
 
+# logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S') 
 
-
-logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S') 
+logging.basicConfig(filename=r'C:\Users\user\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S') 
 
 
 def proacted2024(users_interests, activities_users_have_enjoyed_in_the_past, top_n=5, showtime=True):
@@ -25,7 +29,8 @@ def proacted2024(users_interests, activities_users_have_enjoyed_in_the_past, top
 
 
     # setting up django environment to interact with django from this script
-    sys.path.append(r'C:\Users\Hp\Desktop\ProActEd\AIacademia') 
+    # sys.path.append(r'C:\Users\Hp\Desktop\ProActEd\AIacademia') 
+    sys.path.append(r'C:\Users\user\Desktop\ProActEd\AIacademia') 
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'AIacademia.settings')
     django.setup()
 
@@ -39,7 +44,8 @@ def proacted2024(users_interests, activities_users_have_enjoyed_in_the_past, top
     
     print("Loading word2vec...")
     # Loading the model, download the word2Vec binary file and specify its location here
-    model = joblib.load(r'C:\Users\HP\Desktop\word2vec_model.pkl')
+    # model = joblib.load(r'C:\Users\HP\Desktop\word2vec_model.pkl')
+    model = joblib.load(r'C:\Users\user\Desktop\word2vec_model.pkl')
     print('Done loading word2vec')
 
 

@@ -1,119 +1,219 @@
-{% load static %}{% load admin_urls %}
-<div id="custom-sidebar">
-    <h2>Navigation Menu</h2>
-    <!-- Recommendations Section -->
-    <div class="sidebar-section">
-        <h3 class="collapsible">Recommendations</h3>
-        <div class="side_bar_content">
-            <span class="collapsible-item">Highschool Subjects</span>
-            <div class="sub-content">
-                <a href="{% url 'admin:academia_app_highschoolsubject_add' %}">Add Highschool Subjects</a>
-                <a href="{% url 'admin:academia_app_highschoolsubject_changelist' %}">Change Highschool Subjects</a>
-                <a href="{% url 'admin:academia_app_highschoolsubject_changelist' %}">View Highschool Subjects</a>
-            </div>
-            <span class="collapsible-item">Courses of Interest</span>
-            <div class="sub-content">
-                <a href="{% url 'admin:academia_app_courseofinterest_add' %}">Add Courses of Interest</a>
-                <a href="{% url 'admin:academia_app_courseofinterest_changelist' %}">Change Courses of Interest</a>
-                <a href="{% url 'admin:academia_app_courseofinterest_changelist' %}">View Courses of Interest</a>
-            </div>
-        </div>
-    </div>
+{% load static %}
+{% load admin_urls %}
 
-    <!-- Intervention Section -->
-    <div class="sidebar-section">
-        <h3 class="collapsible">Intervention</h3>
-        <div class="side_bar_content">
-            <span class="collapsible-item">Performance</span>
-            <div class="sub-content">
-                <a href="{% url 'admin:academia_app_performance_add' %}">Add Performance</a>
-                <a href="{% url 'admin:academia_app_performance_changelist' %}">Change Performance</a>
-                <a href="{% url 'admin:academia_app_performance_changelist' %}">View Performance</a>
-            </div>
-            <span class="collapsible-item">Attendance</span>
-            <div class="sub-content">
-                <a href="{% url 'admin:academia_app_attendance_add' %}">Add Attendance</a>
-                <a href="{% url 'admin:academia_app_attendance_changelist' %}">Change Attendances</a>
-                <a href="{% url 'admin:academia_app_attendance_changelist' %}">View Attendances</a>
-            </div>
-            <span class="collapsible-item">Fee Information</span>
-            <div class="sub-content">
-                <a href="{% url 'admin:academia_app_feeinformation_add' %}">Add Fee Information</a>
-                <a href="{% url 'admin:academia_app_feeinformation_changelist' %}">Change Fee Information</a>
-            </div>
-        </div>
-    </div>
+{% if user.is_authenticated %}
+<div id="custom-sidebar">
+   
+    <!-- Dashboard Logo -->
+    <h1><span>
+        <a href="{% url 'dashboard' %}">
+            <i class='bx bxs-dashboard'> Dashboard</i>
+        </a></span>
+        </h1>
 
     <!-- Users Section -->
+    {% if perms.academia_app.add_superadminuserproxy or perms.academia_app.change_superadminuserproxy or perms.academia_app.add_adminuserproxy or perms.academia_app.change_adminuserproxy or perms.academia_app.add_studentuserproxy or perms.academia_app.change_studentuserproxy %}
     <div class="sidebar-section">
-        <h3 class="collapsible">Users</h3>
+        <h3 class="collapsible">
+            <i class='bx bxs-user'></i>
+            Users
+        </h3>
         <div class="side_bar_content">
             <span class="collapsible-item">Super Admins</span>
             <div class="sub-content">
+                {% if perms.academia_app.add_superadminuserproxy %}
                 <a href="{% url 'admin:academia_app_superadminuserproxy_add' %}">Add Super Admin</a>
+                {% endif %}
+                {% if perms.academia_app.change_superadminuserproxy %}
                 <a href="{% url 'admin:academia_app_superadminuserproxy_changelist' %}">Change Super Admin</a>
+                {% endif %}
             </div>
+            
             <span class="collapsible-item">Staff Users</span>
             <div class="sub-content">
+                {% if perms.academia_app.add_adminuserproxy %}
                 <a href="{% url 'admin:academia_app_adminuserproxy_add' %}">Add Staff</a>
+                {% endif %}
+                {% if perms.academia_app.change_adminuserproxy %}
                 <a href="{% url 'admin:academia_app_adminuserproxy_changelist' %}">Change Staff</a>
+                {% endif %}
             </div>
             <span class="collapsible-item">Student Users</span>
             <div class="sub-content">
+                {% if perms.academia_app.add_studentuserproxy %}
                 <a href="{% url 'admin:academia_app_studentuserproxy_add' %}">Add Student User</a>
+                {% endif %}
+                {% if perms.academia_app.change_studentuserproxy %}
                 <a href="{% url 'admin:academia_app_studentuserproxy_changelist' %}">Change Student User</a>
+                {% endif %}
+                {% if perms.academia_app.view_studentuserproxy %}
                 <a href="{% url 'admin:academia_app_studentuserproxy_changelist' %}">View Student User</a>
+                {% endif %}
+                {% if perms.academia_app.add_student %}
                 <a href="{% url 'admin:academia_app_student_add' %}">Add Student</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+
+    <!-- Recommendations Section -->
+    {% if perms.academia_app.add_highschoolsubject or perms.academia_app.change_highschoolsubject or perms.academia_app.view_highschoolsubject or perms.academia_app.add_courseofinterest or perms.academia_app.change_courseofinterest or perms.academia_app.view_courseofinterest %}
+    <div class="sidebar-section">
+        <h3 class="collapsible">
+            <i class='bx bxs-edit-alt'></i>
+            Recommendations
+        </h3>
+        <div class="side_bar_content">
+            <span class="collapsible-item">Highschool Subjects</span>
+            <div class="sub-content">
+                {% if perms.academia_app.add_highschoolsubject %}
+                <a href="{% url 'admin:academia_app_highschoolsubject_add' %}">Add Highschool Subjects</a>
+                {% endif %}
+                {% if perms.academia_app.change_highschoolsubject %}
+                <a href="{% url 'admin:academia_app_highschoolsubject_changelist' %}">Change Highschool Subjects</a>
+                {% endif %}
+                {% if perms.academia_app.view_highschoolsubject %}
+                <a href="{% url 'admin:academia_app_highschoolsubject_changelist' %}">View Highschool Subjects</a>
+                {% endif %}
+            </div>
+            <span class="collapsible-item">Courses of Interest</span>
+            <div class="sub-content">
+                {% if perms.academia_app.add_courseofinterest %}
+                <a href="{% url 'admin:academia_app_courseofinterest_add' %}">Add Courses of Interest</a>
+                {% endif %}
+                {% if perms.academia_app.change_courseofinterest %}
+                <a href="{% url 'admin:academia_app_courseofinterest_changelist' %}">Change Courses of Interest</a>
+                {% endif %}
+                {% if perms.academia_app.view_courseofinterest %}
+                <a href="{% url 'admin:academia_app_courseofinterest_changelist' %}">View Courses of Interest</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Intervention Section -->
+    {% if perms.academia_app.add_performance or perms.academia_app.change_performance or perms.academia_app.view_performance or perms.academia_app.add_attendance or perms.academia_app.change_attendance or perms.academia_app.view_attendance or perms.academia_app.add_feeinformation or perms.academia_app.change_feeinformation %}
+    <div class="sidebar-section">
+        <h3 class="collapsible">
+            <i class='bx bxs-pointer'></i>
+            Intervention
+        </h3>
+        <div class="side_bar_content">
+            <span class="collapsible-item">Performance</span>
+            <div class="sub-content">
+                {% if perms.academia_app.add_performance %}
+                <a href="{% url 'admin:academia_app_performance_add' %}">Add Performance</a>
+                {% endif %}
+                {% if perms.academia_app.change_performance %}
+                <a href="{% url 'admin:academia_app_performance_changelist' %}">Change Performance</a>
+                {% endif %}
+                {% if perms.academia_app.view_performance %}
+                <a href="{% url 'admin:academia_app_performance_changelist' %}">View Performance</a>
+                {% endif %}
+            </div>
+            <span class="collapsible-item">Attendance</span>
+            <div class="sub-content">
+                {% if perms.academia_app.add_attendance %}
+                <a href="{% url 'admin:academia_app_attendance_add' %}">Add Attendance</a>
+                {% endif %}
+                {% if perms.academia_app.change_attendance %}
+                <a href="{% url 'admin:academia_app_attendance_changelist' %}">Change Attendances</a>
+                {% endif %}
+                {% if perms.academia_app.view_attendance %}
+                <a href="{% url 'admin:academia_app_attendance_changelist' %}">View Attendances</a>
+                {% endif %}
+            </div>
+            <span class="collapsible-item">Fee Information</span>
+            <div class="sub-content">
+                {% if perms.academia_app.add_feeinformation %}
+                <a href="{% url 'admin:academia_app_feeinformation_add' %}">Add Fee Information</a>
+                {% endif %}
+                {% if perms.academia_app.change_feeinformation %}
+                <a href="{% url 'admin:academia_app_feeinformation_changelist' %}">Change Fee Information</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Schools and Courses Section -->
+    {% if perms.academia_app.add_school or perms.academia_app.change_school or perms.academia_app.view_school or perms.academia_app.add_course or perms.academia_app.change_course or perms.academia_app.view_course %}
+    <div class="sidebar-section">
+        <h3 class="collapsible">
+            <i class='bx bxs-school'></i>
+            Schools and Courses
+        </h3>
+        <div class="side_bar_content">
+            <span class="collapsible-item">Schools</span>
+            <div class="sub-content">
+                {% if perms.academia_app.change_school %}
+                {% for school in schools %}
+                    <a href="{% url 'admin:academia_app_school_change' school.id %}">{{ school.name }}</a>
+                {% endfor %}
+                {% endif %}
+                {% if perms.academia_app.add_school %}
+                <a href="{% url 'admin:academia_app_school_add' %}">Add School</a>
+                {% endif %}
+                {% if perms.academia_app.change_school %}
+                <a href="{% url 'admin:academia_app_school_changelist' %}">Change School</a>
+                {% endif %}
+                {% if perms.academia_app.view_school %}
+                <a href="{% url 'admin:academia_app_school_changelist' %}">View Schools</a>
+                {% endif %}
+            </div>
+            <span class="collapsible-item">Courses</span>
+            <div class="sub-content">
+                {% if perms.academia_app.add_course %}
+                <a href="{% url 'admin:academia_app_course_add' %}">Add Course</a>
+                {% endif %}
+                {% if perms.academia_app.change_course %}
+                <a href="{% url 'admin:academia_app_course_changelist' %}">Change Course</a>
+                {% endif %}
+                {% if perms.academia_app.view_course %}
+                <a href="{% url 'admin:academia_app_course_changelist' %}">View Courses</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Messaging Section -->
+    <div class="sidebar-section">
+        <h3 class="collapsible">
+            <i class='bx bxs-message'></i>
+            Messaging
+        </h3>
+        <div class="side_bar_content">
+            <span class="collapsible-item">Inbox</span>
+            <div class="sub-content">
+                <a href="{% url 'inbox' %}">Inbox</a>
             </div>
         </div>
     </div>
 
-<!-- Schools and Courses Section -->
-<div class="sidebar-section">
-    <h3 class="collapsible">Schools and Courses</h3>
-    <div class="side_bar_content">
-        <span class="collapsible-item">Schools</span>
-        <div class="sub-content">
-            {% for school in schools %}
-                <a href="{% url 'admin:academia_app_school_change' school.id %}">{{ school.name }}</a>
-            {% endfor %}
-            <a href="{% url 'admin:academia_app_school_add' %}">Add School</a>
-            <a href="{% url 'admin:academia_app_school_changelist' %}">Change School</a>
-            <a href="{% url 'admin:academia_app_school_changelist' %}">View Schools</a>
-        </div>
-        <span class="collapsible-item">Courses</span>
-        <div class="sub-content">
-            <a href="{% url 'admin:academia_app_course_add' %}">Add Course</a>
-            <a href="{% url 'admin:academia_app_course_changelist' %}">Change Course</a>
-            <a href="{% url 'admin:academia_app_course_changelist' %}">View Courses</a>
-        </div>
-    </div>
-</div>
-
-    <!-- Messaging Section -->
-    <div class="sidebar-section">
-        <h3  class="collapsible">Messaging</h3>
-        <span class="collapsible-item">Inbox</span>   
-        <div>
-            <a href="{% url 'inbox' %}">Inbox</a>
-        </div>         
-    </div>
     <!-- Settings Section -->
-
-<div class="sidebar-section">
-    <h3>Settings</h3>
-    <div class="side_bar_content">
-        <div class="sub-content">
-            <a href="{% url 'admin:password_change' %}">Change Password</a>
-        </div>
-        <!-- Logout Form -->
-        <div class="sub-content">
-            <form action="{% url 'logout' %}" method="post" style="display: inline;">
-                {% csrf_token %}
-                <button type="submit" style="background: none; border: none; padding: 0; margin: 0; text-decoration: underline; cursor: pointer; color: inherit; font: inherit;">
-                    Logout
-                </button>
-            </form>
+    <div class="sidebar-section">
+        <h3 class="collapsible">
+            <i class='bx bxs-cog'></i>
+            Settings
+        </h3>
+        <div class="settings" style="display: none;">
+            <div class="settings-pass">
+                <a href="{% url 'admin:password_change' %}">Change Password</a>
+            </div>
+            <!-- Logout Form -->
+            <div class="settings-logout">
+                <form action="{% url 'logout' %}" method="post" style="display: inline;">
+                    {% csrf_token %}
+                    <button type="submit" style="background: none; border: none; padding: 0; margin: 0; text-decoration: underline; cursor: pointer; color: inherit; font: inherit;">
+                        Logout
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
+{% endif %}

@@ -1,68 +1,45 @@
-// Function to update the courses dropdown based on the selected department
-function updateCourses(selectElement) {
-    // Get the selected department ID from the data attribute
-    const departmentId = selectElement.value;
-    
-    // Find the corresponding courses select element
-    const coursesSelect = selectElement.nextElementSibling;
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("Script loaded and DOM fully loaded");
 
-    // Clear the existing options in the courses select
-    coursesSelect.innerHTML = '';
+    // Fetch chart data from the context variables
+    var totalStudents = parseInt(document.getElementById('totalStudents').innerText);
+    var totalStaff = parseInt(document.getElementById('totalStaff').innerText);
+    var totalAdmins = parseInt(document.getElementById('totalAdmins').innerText);
+    var totalSchools = parseInt(document.getElementById('totalSchools').innerText);
+    var totalCourses = parseInt(document.getElementById('totalCourses').innerText);
 
-    // If the selected option is "select" or no department is selected, hide the courses select
-    if (departmentId === 'select') {
-        coursesSelect.style.display = 'none';
-        return;
-    }
-
-    // Send an AJAX request to fetch courses for the selected department
-    fetch(`/api/get_courses/${departmentId}/`)
-        .then(response => response.json())
-        .then(data => {
-            // Populate the courses select with the fetched data
-            data.forEach(course => {
-                const option = document.createElement('option');
-                option.value = course.id;
-                option.textContent = course.name;
-                coursesSelect.appendChild(option);
-            });
-            // Display the courses select
-            coursesSelect.style.display = 'block';
-        })
-        .catch(error => {
-            console.error('Error fetching courses:', error);
-        });
-}
-
-// Add any additional JavaScript functionality as needed
-
-// const button = document.querySelectorAll('.button');
-// button.forEach(button => {
-//     button.addEventListener('click', (event)=> {
-//     event.preventDefault();
-//     button.style.backgroundColor='#5e0361';
-//     button.style.boxShadow= '0 0 40px pink ';
-//     button.style.transition = '.2s ease';
-//     });
-// });
-const buttons = document.querySelectorAll('.button');
-buttons.forEach(button => {
-    button.addEventListener('click', (event) => {
-        event.preventDefault();
-        
-        // Check if the button is already selected
-        if (button.classList.contains('selected')) {
-            // Button is selected, revert to original style
-            button.style.backgroundColor = ''; // Revert to the original background color
-            button.style.boxShadow = ''; // Revert to the original box shadow
-            button.classList.remove('selected'); // Remove the 'selected' class
-        } else {
-            // Button is not selected, apply the new style
-            button.style.backgroundColor = '#5e0361';
-            button.style.boxShadow = '0 0 40px pink';
-            button.classList.add('selected'); // Add the 'selected' class to indicate the button is selected
+    // Initialize the Chart.js chart
+    var ctx = document.getElementById('studentsChart').getContext('2d');
+    var studentsChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Total Students', 'Total Staff', 'Total Admins', 'Total Schools', 'Total Courses'],
+            datasets: [{
+                label: 'Counts',
+                data: [totalStudents, totalStaff, totalAdmins, totalSchools, totalCourses],
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
         }
-
-        button.style.transition = '.2s ease';
     });
 });
