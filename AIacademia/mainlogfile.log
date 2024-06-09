@@ -2323,3 +2323,78 @@ Traceback (most recent call last):
     raise NoReverseMatch(msg)
 django.urls.exceptions.NoReverseMatch: Reverse for 'send_message' with keyword arguments '{'user_id': 1}' not found. 2 pattern(s) tried: ['student_page/send_message/(?P<recipient_id>[0-9]+)/\\Z', 'send_message/(?P<recipient_id>[0-9]+)/\\Z']
 INFO || 08-Jun-24 22:01:29 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+WARNING || 08-Jun-24 23:22:33 || Not Found: /favicon.ico
+WARNING || 08-Jun-24 23:22:48 || Not Found: /favicon.ico
+WARNING || 08-Jun-24 23:25:59 || Not Found: /favicon.ico
+WARNING || 08-Jun-24 23:30:00 || Not Found: /favicon.ico
+WARNING || 08-Jun-24 23:30:57 || Not Found: /favicon.ico
+WARNING || 08-Jun-24 23:31:13 || Not Found: /favicon.ico
+WARNING || 08-Jun-24 23:35:24 || Not Found: /favicon.ico
+WARNING || 08-Jun-24 23:38:10 || Not Found: /favicon.ico
+WARNING || 08-Jun-24 23:43:46 || Not Found: /favicon.ico
+WARNING || 08-Jun-24 23:44:02 || Not Found: /favicon.ico
+WARNING || 08-Jun-24 23:51:59 || Not Found: /favicon.ico
+WARNING || 08-Jun-24 23:56:38 || Not Found: /favicon.ico
+WARNING || 08-Jun-24 23:57:09 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 00:08:59 || Not Found: /favicon.ico
+WARNING || 09-Jun-24 00:08:59 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 00:15:55 || Not Found: /favicon.ico
+WARNING || 09-Jun-24 00:15:55 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 00:21:12 || Not Found: /favicon.ico
+WARNING || 09-Jun-24 00:21:12 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 00:29:15 || Not Found: /favicon.ico
+WARNING || 09-Jun-24 00:29:16 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 00:29:27 || Not Found: /favicon.ico
+WARNING || 09-Jun-24 00:29:27 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 00:31:20 || Not Found: /favicon.ico
+WARNING || 09-Jun-24 00:31:21 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 00:31:44 || Not Found: /favicon.ico
+WARNING || 09-Jun-24 00:31:44 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 00:32:17 || Not Found: /favicon.ico
+WARNING || 09-Jun-24 00:32:17 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 00:36:26 || Not Found: /favicon.ico
+WARNING || 09-Jun-24 00:36:26 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 00:36:37 || Not Found: /favicon.ico
+WARNING || 09-Jun-24 00:36:37 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 00:38:13 || Not Found: /favicon.ico
+WARNING || 09-Jun-24 00:38:13 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 00:39:03 || Not Found: /favicon.ico
+WARNING || 09-Jun-24 00:39:03 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 00:44:43 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 00:53:09 || Not Found: /favicon.ico
+WARNING || 09-Jun-24 00:53:10 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 00:57:10 || Not Found: /favicon.ico
+WARNING || 09-Jun-24 00:57:10 || Not Found: /ws/academia_app/
+INFO || 09-Jun-24 01:37:44 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 09-Jun-24 01:51:03 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 09-Jun-24 01:53:30 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\models.py changed, reloading.
+ERROR || 09-Jun-24 01:58:09 || Internal Server Error: /student_page/student_page/inbox/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 204, in inbox
+    notifications = NewMessageNotification.objects.filter(user=request.user, is_new=True)
+                    ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'NewMessageNotification' is not defined
+INFO || 09-Jun-24 01:59:30 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 09-Jun-24 02:00:38 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 02:01:40 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 02:01:44 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 02:04:02 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 02:04:53 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 02:05:01 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 02:08:40 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 02:08:42 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 02:09:08 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 02:10:03 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 02:10:18 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 02:10:28 || Not Found: /favicon.ico
+WARNING || 09-Jun-24 02:10:28 || Not Found: /ws/academia_app/
+WARNING || 09-Jun-24 02:14:33 || Not Found: /ws/academia_app/

@@ -1,17 +1,19 @@
 /* chat_styles.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
+    height: 100vh; /* body takes up the full height of the viewport */
+    background: radial-gradient(circle, #e6e6fa, #f5f5f5, #d3d3d3, #a8a8a8); 
 }
+
 
 #chat-container {
     max-width: 600px;
     margin: 20px auto;
-    background-color: #fff;
+    background-color: #0405;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     padding: 20px;
 }
 
@@ -21,8 +23,8 @@ h2 {
 }
 
 .chat-box {
-    max-height: 400px;
-    overflow-y: scroll;
+    max-height: 300px;
+    overflow-y: auto;
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #ddd;
@@ -31,9 +33,9 @@ h2 {
 }
 
 .message {
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     max-width: 70%;
 }
 
@@ -41,10 +43,11 @@ h2 {
     background-color: #dcf8c6;
     text-align: right;
     margin-left: auto;
+    align-self: flex-end;
 }
 
 .received {
-    background-color: #fff;
+    background-color: #E8E8E8;
     text-align: left;
     margin-right: auto;
 }
@@ -83,4 +86,15 @@ h2 {
 
 #chat-form button:hover {
     background-color: #0056b3;
+}
+
+textarea {
+    height: 40px; 
+    resize: none; 
+}
+
+button {
+    height: 40px; 
+    width: 60px; 
+    font-size: 14px; 
 }

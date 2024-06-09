@@ -18,7 +18,7 @@
         </div>
         <form id="chat-form" method="post" action="{% url 'send_message' user_id=other_user.id %}">
             {% csrf_token %}
-            <textarea name="content" rows="4" placeholder="Type your message here"></textarea>
+            <textarea name="content" rows="2" placeholder="Type your message here"></textarea>
             <button type="submit">Send</button>
         </form>
     </div>
