@@ -3410,3 +3410,95 @@ Traceback (most recent call last):
   File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
     return super().execute(query, params)
 django.db.utils.OperationalError: no such table: academia_app_newmessagenotification
+ERROR || 09-Jun-24 22:57:27 || Internal Server Error: /check_new_messages/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: academia_app_newmessagenotification
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 238, in check_new_messages
+    has_new_messages = NewMessageNotification.objects.filter(user=request.user, is_new=True).exists()
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\models\query.py", line 1288, in exists
+    return self.query.has_results(using=self.db)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\models\sql\query.py", line 659, in has_results
+    return compiler.has_results()
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\models\sql\compiler.py", line 1530, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: academia_app_newmessagenotification
+WARNING || 09-Jun-24 22:57:27 || Not Found: /ws/academia_app/
+INFO || 09-Jun-24 22:59:48 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+WARNING || 09-Jun-24 23:00:42 || Not Found: /favicon.ico
+WARNING || 09-Jun-24 23:01:02 || Not Found: /favicon.ico
+WARNING || 09-Jun-24 23:01:14 || Not Found: /favicon.ico
+WARNING || 09-Jun-24 23:02:21 || Not Found: /favicon.ico
+WARNING || 09-Jun-24 23:02:30 || Not Found: /favicon.ico
+WARNING || 09-Jun-24 23:04:15 || Not Found: /favicon.ico
+WARNING || 09-Jun-24 23:14:05 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+WARNING || 09-Jun-24 23:15:45 || Not Found: /favicon.ico
+ERROR || 09-Jun-24 23:18:27 || Internal Server Error: /auth/dashboard/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 169, in dashboard
+    total_staff = AdminUser.objects.count()
+NameError: name 'AdminUser' is not defined
+ERROR || 09-Jun-24 23:27:21 || Internal Server Error: /auth/dashboard/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 169, in dashboard
+    total_staff = AdminUser.objects.count()
+NameError: name 'AdminUser' is not defined
+INFO || 09-Jun-24 23:30:43 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 09-Jun-24 23:31:34 || Internal Server Error: /auth/dashboard/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 170, in dashboard
+    total_admins = SuperAdminUser.objects.count()
+NameError: name 'SuperAdminUser' is not defined
+INFO || 09-Jun-24 23:32:25 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 09-Jun-24 23:35:32 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 09-Jun-24 23:38:16 || Not Found: /favicon.ico
+INFO || 09-Jun-24 23:44:41 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 09-Jun-24 23:47:08 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 09-Jun-24 23:58:41 || C:\Users\user\Desktop\ProActEd\AIacademia\AIacademia\settings.py changed, reloading.
+INFO || 10-Jun-24 00:05:57 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 10-Jun-24 00:16:09 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\models.py changed, reloading.

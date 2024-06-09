@@ -70,7 +70,12 @@ class SuperAdminUser(BaseUser):
 
 # Student User Model
 class StudentUser(BaseUser):
-    student_field = models.CharField(max_length=100)
+    student_field = models.CharField(max_length=100)name = models.CharField(max_length=100)
+    registration_number = models.CharField(max_length=20, unique=True)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    school = models.ForeignKey(School, on_delete=models.CASCADE)
+    graduation_probability = models.FloatField(default=0.0)
+    profile_picture = models.ImageField(upload_to='profile_pictures/', null=True, blank=True)
 
     def __str__(self):
         return f"Student User: {self.username}"
