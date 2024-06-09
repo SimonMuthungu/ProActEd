@@ -22,7 +22,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include('academia_app.urls')), 
-    path('student_page/', include('academia_app.urls')),
+    path('auth/', include('academia_app.urls')),
 # Include app-level URL patterns
     # Add more project-level URL patterns as needed
 ]
