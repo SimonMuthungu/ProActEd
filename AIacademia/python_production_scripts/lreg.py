@@ -5,13 +5,14 @@ from tensorflow.keras.callbacks import EarlyStopping
 
 
 
-path_totrainingdata = r'C:\Users\Simon\proacted\AIacademia\data_files\trainwith_100000.xlsx'
+path_totrainingdata = r'C:\Users\Simon\proacted\AIacademia\test_data_files\trainwith_100000.xlsx'
 
 # Load data from Excel into a DataFrame
 training_data = pd.read_excel(path_totrainingdata)
 
-X = training_data[['Lessons_Attended', 'Aggregate points']]
-y = training_data['passed']
+X = training_data[['Lessons_Attended', 'Aggregate points', '% of lessons attended', 'homework submission rates', 'CAT 1 marks', 'CAT 2 marks', 'activity on e-learning platforms']]
+
+y = training_data['passed_or_not'] 
 
 # Convert pandas DataFrames to TensorFlow Datasets
 X_dataset = tf.data.Dataset.from_tensor_slices(X.values)
@@ -42,10 +43,13 @@ print(f"Test dataset size: {len(test_dataset)}")
 
 
 # Define a model using TensorFlow (a logistic regression model)
+# Define a more complex model using TensorFlow
 model = tf.keras.Sequential([
-    tf.keras.layers.Dense(32, activation='relu', input_shape=(2,)),
-    tf.keras.layers.Dense(1, activation='sigmoid')
+    tf.keras.layers.Dense(64, activation='relu', input_shape=(7,)),  # Increase the number of neurons in the first layer
+    tf.keras.layers.Dense(32, activation='relu'),  # Add another hidden layer with 32 neurons
+    tf.keras.layers.Dense(1, activation='sigmoid')  # Output layer remains the same
 ])
+
 
 # to auto-monitor when were overfitting
 early_stopping = EarlyStopping(monitor='accuracy', 
@@ -66,4 +70,4 @@ test_loss, test_accuracy = model.evaluate(test_dataset)
 print(f'Test Accuracy: {test_accuracy}')
 
 # Save the trained model using joblib
-joblib.dump(model, r'C:\Users\Simon\proacted\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
+joblib.dump(model, r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib')

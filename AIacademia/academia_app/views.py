@@ -102,7 +102,7 @@ def recommend_courses(request):
         try: 
             # Load the model and get the output
             print("\nBeginning to run the recommender script")
-            logging.info("Beginning to run the proacted recommender script")
+            logging.info("Proacted recommender initialized...")
             proacted_recommendations = proacted2024(user_description_about_interests, user_activities_enjoyed)
             print(f"here are the proacted_recommendations: {proacted_recommendations}")
             print(f"Done with proacted, proceeding to sbert recommender")
@@ -122,8 +122,8 @@ def recommend_courses(request):
             
         
         
-def predict_probability(request):
-    model = joblib.load(r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
+def predict_probability(request, student_id=3): 
+    model = joblib.load(r'C:\Users\Simon\proacted\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
     logging.info('Probability model loaded')
     # try:
     #     model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib'
@@ -133,25 +133,35 @@ def predict_probability(request):
     #     logging.error(f"Error loading model: {e}")
     #     return HttpResponse(f"Error loading model: {e}", status=500)
 
-    student_id = 6
 
-    try:
+    try: 
+        model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        model = joblib.load(model_path)
+        logging.info('Probability model loaded with joblib.')
+
         student_data = probabilitydatatable.objects.get(id=student_id) 
         lessonsattended = student_data.Lessons_Attended
         aggrpoints = student_data.Aggregate_points
+        lessons_attended = student_data.pcnt_of_lessons_attended
+        homework_submission_rates = student_data.homework_submission_rates
+        activity_on_learning_platforms = student_data.activity_on_learning_platforms
+        CAT_1_marks = student_data.CAT_1_marks
+        CAT_2_marks = student_data.CAT_2_marks
+        activity_on_elearning_platforms = student_data.activity_on_elearning_platforms
 
     except probabilitydatatable.DoesNotExist:
         # the student doesnt exist
         pass
 
-    input_data = [[lessonsattended, aggrpoints]]
+    input_data = [[lessonsattended, aggrpoints, lessons_attended, homework_submission_rates, CAT_1_marks, CAT_2_marks, activity_on_elearning_platforms]] 
 
     # Predict probabilities
     prediction = model.predict(input_data)
 
-    context = {'prediction': prediction[0]} 
-    return HttpResponse(f'Calculated Probability: {prediction[0]} for inputs {input_data} of student {student_id}') 
+    context = {'prediction': prediction[0][0], 'refined_prediction': f"{prediction[0][0]*100:.3f}"}
+    print(f"\n\nStudent {student_id} with lessonsattended: {lessonsattended} and aggrpoints: {aggrpoints}, lessons_attended: {lessons_attended}, homework_submission_rates: {homework_submission_rates}, activity_on_learning_platforms: {activity_on_learning_platforms}, CAT_1_marks: {CAT_1_marks}, CAT_2_marks: {CAT_2_marks}, activity_on_elearning_platforms: {activity_on_elearning_platforms} ; 'prediction': {prediction[0][0]}, 'refined_prediction': {prediction[0][0]*100:.3f}\n\n")
 
+    return render(request, "academia_app/student_page.html",context = context)
 
     
 
