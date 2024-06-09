@@ -28,7 +28,7 @@ from django.http import HttpResponse, JsonResponse, HttpRequest
 from python_scripts.proacted_recommender2024 import proacted2024
 from python_scripts.sbert_recommender import sbert_proactedrecomm2024
 from .models import StudentUser, Attendance, Performance, Course, School, Recommender_training_data 
-from .models import BaseUser,UserProfile,Course,School,Performance,Student,Message, probabilitydatatable
+from .models import BaseUser,UserProfile,Course,School,Performance,Student,Message, probabilitydatatable, NewMessageNotification
 
 
 
@@ -201,7 +201,19 @@ BaseUser = get_user_model()
 @login_required
 def inbox(request):
     users = BaseUser.objects.exclude(id=request.user.id)
-    return render(request, 'academia_app/inbox.html', {'users': users})
+    notifications = NewMessageNotification.objects.filter(user=request.user, is_new=True)
+
+    # Mark all notifications as read
+    notifications.update(is_new=False)
+
+    for user in users:
+        user.has_new_messages = NewMessageNotification.objects.filter(user=user, is_new=True).exists()
+
+    return render(request, 'academia_app/inbox.html', {'users': users, 'notifications': notifications})
+
+def check_new_messages(request):
+    has_new_messages = NewMessageNotification.objects.filter(user=request.user, is_new=True).exists()
+    return JsonResponse({'has_new_messages': has_new_messages})
 
 @login_required
 def chat(request, user_id):
