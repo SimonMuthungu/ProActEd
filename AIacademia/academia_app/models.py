@@ -229,7 +229,11 @@ class Message(models.Model):
     def __str__(self):
         return f'{self.sender} to {self.recipient} at {self.timestamp}'    
 
-    
+class NewMessageNotification(models.Model):
+    user = models.ForeignKey(BaseUser, on_delete=models.CASCADE, related_name='notifications')
+    is_new = models.BooleanField(default=True)
+
+
 class UserProfile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     bio = models.TextField(max_length=500, blank=True)

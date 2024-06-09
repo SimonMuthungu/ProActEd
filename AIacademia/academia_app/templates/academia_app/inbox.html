@@ -12,10 +12,18 @@
             <h3>Chats</h3>
             <ul class="chat-list">
                 {% for user in users %}
-                    <li><a href="{% url 'chat' user.id %}">{{ user.username }}</a></li>
+                    <div class="user">
+                        <li><a href="{% url 'chat' user.id %}">{{ user.username }}</a></li>
+                        {% if user.has_new_messages %}
+                            <span class="new-message-dot"></span>
+                        {% endif %}
+                    </div>
                 {% endfor %}
             </ul>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
