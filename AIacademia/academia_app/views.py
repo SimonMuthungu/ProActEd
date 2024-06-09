@@ -23,7 +23,7 @@ from django.urls import reverse_lazy
 from python_scripts.proacted_recommender2024 import proacted2024
 # from python_scripts.sbert_recommender import sbert_proactedrecomm2024
 from python_scripts.recommender_engine import load_model
-# from python_scripts.sbert_recommender import sbert_proactedrecomm2024
+from python_scripts.sbert_recommender import sbert_proactedrecomm2024
 from .models import StudentUser, Attendance, Performance, Course, School, Recommender_training_data 
 from .models import BaseUser,UserProfile,Course,School,Performance,Student,Message, probabilitydatatable, NewMessageNotification
 

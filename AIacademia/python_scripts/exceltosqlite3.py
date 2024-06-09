@@ -16,9 +16,8 @@ def write_to_database(data, db_name):
 
     # Insert data into table
     for index, row in data.iterrows():
-        ran = 80.0
-        cursor.execute('''INSERT INTO academia_app_probabilitydatatable (Lessons_Attended, Total_lessons_in_that_period, Aggregate_points, pcnt_of_lessons_attended, homework_submission_rates, activity_on_learning_platforms, CAT_1_marks, CAT_2_marks, Deadline_Adherence, teachers_comments_so_far, activity_on_elearning_platforms, passed_or_not) 
-                          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)''', (row['Lessons_Attended'], row['Total_lessons_in_that_period'], row['Aggregate points'], row['% of lessons attended'], row['homework submission rates'], ran, row['CAT 1 marks'], row['CAT 2 marks'], row['Deadline Adherence'], row['teachers comments so far'], row['activity on e-learning platforms'], row['passed_or_not'])) 
+        cursor.execute('''INSERT INTO academia_app_school (name, abbreviation) 
+                          VALUES (?, ?)''', (row['SCHOOL'], row['PREFIX'])) 
 
     # Commit changes and close connection
     conn.commit()
@@ -26,7 +25,7 @@ def write_to_database(data, db_name):
 
 # Main function
 def main():
-    excel_file_path = r'C:\Users\Simon\proacted\AIacademia\test_data_files\trainwith_100000.xlsx'  # Replace with your Excel file path
+    excel_file_path = r'C:\Users\Simon\proacted\AIacademia\test_data_files\Schools_and_Courses.csv'  # Replace with your Excel file path
     db_name = 'db.sqlite3'  # Replace with your SQLite database name
 
     # Read data from Excel file
