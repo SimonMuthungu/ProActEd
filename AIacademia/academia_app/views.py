@@ -6,6 +6,7 @@ import numpy as np
 import tensorflow as tf
 from django import forms
 from telnetlib import LOGOUT
+from django.db.models import Q 
 from sre_constants import BRANCH
 from django.contrib import messages
 from django.urls import reverse_lazy
@@ -15,6 +16,7 @@ from .forms import UpdateStudentProfileForm
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render
 from django.shortcuts import render, redirect
+from django.contrib.auth import get_user_model
 from django.http import Http404 , JsonResponse
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import authenticate, login
@@ -26,7 +28,7 @@ from django.http import HttpResponse, JsonResponse, HttpRequest
 from python_scripts.proacted_recommender2024 import proacted2024
 from python_scripts.sbert_recommender import sbert_proactedrecomm2024
 from .models import StudentUser, Attendance, Performance, Course, School, Recommender_training_data 
-from .models import BaseUser,UserProfile,Course,School,Performance,Student,Message, probabilitydatatable
+from .models import BaseUser,UserProfile,Course,School,Performance,Student,Message, probabilitydatatable, NewMessageNotification
 
 
 
@@ -202,45 +204,49 @@ def get_courses(request, school_id):
     else:
         return JsonResponse({"error": "Not authorized"}, status=403)
 
-@login_required
-def inbox(request):
-    received_messages = Message.objects.filter(recipient=request.user)
-    sent_messages = Message.objects.filter(sender=request.user)
-    users = BaseUser.objects.exclude(id=request.user.id)
-    return render(request, 'academia_app/inbox.html', {'received_messages': received_messages, 'sent_messages': sent_messages, 'users': users})
+# this below is for the messages
 
-@login_required
-def send_message(request, recipient_id):
-    if request.method == 'POST':
-        recipient = BaseUser.objects.get(id=recipient_id)
-        content = request.POST.get('content', '')
-        message = Message.objects.create(sender=request.user, recipient=recipient, content=content)
-        return render(request, 'academia_app/send_message.html', {'message_sent': True, 'recipient_id': recipient_id})
-
-    # Added the following for debugging
-    print("Recipient ID:", recipient_id)
-
-    return render(request, 'academia_app/send_message.html', {'recipient_id': recipient_id})
+BaseUser = get_user_model()
 
 @login_required
 def inbox(request):
-    received_messages = Message.objects.filter(recipient=request.user)
-    sent_messages = Message.objects.filter(sender=request.user)
     users = BaseUser.objects.exclude(id=request.user.id)
-    return render(request, 'academia_app/inbox.html', {'received_messages': received_messages, 'sent_messages': sent_messages, 'users': users})
+    notifications = NewMessageNotification.objects.filter(user=request.user, is_new=True)
+
+    # Mark all notifications as read
+    notifications.update(is_new=False)
+
+    for user in users:
+        user.has_new_messages = NewMessageNotification.objects.filter(user=user, is_new=True).exists()
+
+    return render(request, 'academia_app/inbox.html', {'users': users, 'notifications': notifications})
+
+def check_new_messages(request):
+    has_new_messages = NewMessageNotification.objects.filter(user=request.user, is_new=True).exists()
+    return JsonResponse({'has_new_messages': has_new_messages})
 
 @login_required
-def send_message(request, recipient_id):
+def chat(request, user_id):
+    other_user = get_object_or_404(BaseUser, id=user_id)
+    messages = Message.objects.filter(
+        (Q(sender=request.user) & Q(recipient=other_user)) |
+        (Q(sender=other_user) & Q(recipient=request.user))
+    ).order_by('timestamp')
+    return render(request, 'academia_app/chat.html', {'messages': messages, 'other_user': other_user})
+
+@login_required
+def send_message(request, user_id):
     if request.method == 'POST':
-        recipient = BaseUser.objects.get(id=recipient_id)
+        recipient = get_object_or_404(BaseUser, id=user_id)
         content = request.POST.get('content', '')
         message = Message.objects.create(sender=request.user, recipient=recipient, content=content)
-        return render(request, 'academia_app/send_message.html', {'message_sent': True, 'recipient_id': recipient_id})
-
-    # Added the following for debugging
-    print("Recipient ID:", recipient_id)
-
-    return render(request, 'academia_app/send_message.html', {'recipient_id': recipient_id})
+        data = {
+            'content': message.content,
+            'timestamp': message.timestamp.strftime('%Y-%m-%d %H:%M:%S')
+        }
+        return JsonResponse(data)
+    else:
+        return redirect('inbox')
 
 @login_required
 def profile(request):

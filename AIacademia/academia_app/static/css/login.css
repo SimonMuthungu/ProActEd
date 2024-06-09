@@ -1,6 +1,4 @@
-
 /* Updated CSS */
-
 body, html {
     margin: 0;
     padding: 0;
@@ -13,27 +11,24 @@ body, html {
     color: #FFDB58;
     padding: 10px;
     text-align: center;
-    display: flex; gap: 20px;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 80px;
     width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px
 }
 
 .header h2 {
-    margin-left: 50px;
+    margin-left: 10px; /* better alignment */
     margin-right: auto;
-  }
-
+}
 
 .custom-logo {
-    height: auto;
+    height: 70px; /* Fixed height for better alignment */
     width: auto;
-    max-height: 70px;
-    transform: scale(1.2);
-    vertical-align: middle;
-    align-items: right;
-    margin-right: 20px;
+    margin-right: 10px; 
 }
 
 .footer {
@@ -42,14 +37,15 @@ body, html {
     padding: 5px 0;
     text-align: center;
     margin-bottom: 5px;
-    margin-top: 220px;
+    margin-top: 20px; 
+    border-radius: 5px
 }
 
 .login-box {
     width: 450px;
     margin: 0 auto;
     background-color: #ffffff;
-    border-radius: 5px;
+    border-radius: 15px; /* More rounded corners */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 50%;
@@ -78,12 +74,11 @@ body, html {
     color: #020225;
     font-weight: bold;
     text-align: left;
-    
 }
 
 /* Input field styles */
 .input-group input {
-    width: 50%;
+    width: 80%; /* Adjusted width to fit better with the design */
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -94,7 +89,7 @@ body, html {
 
 /* Button styles */
 .input-group button {
-    width: 20%;
+    width: 50%; /* Adjusted width for better design */
     padding: 10px;
     background-color: #007BFF;
     color: #FFDB58;
@@ -115,4 +110,3 @@ body, html {
     margin-bottom: 15px;
     text-align: center;
 }
-

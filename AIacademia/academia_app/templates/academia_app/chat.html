@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/chat_style.css' %}">
+</head>
+<body>
+    <div id="chat-container">
+        <h2>Chat with {{ other_user.username }}</h2>
+        <div id="chat-box" class="chat-box">
+            {% for message in messages %}
+                <div class="message {% if message.sender == request.user %}sent{% else %}received{% endif %}">
+                    <p>{{ message.content }}</p>
+                    <span class="timestamp">{{ message.timestamp }}</span>
+                </div>
+            {% endfor %}
+        </div>
+        <form id="chat-form" method="post" action="{% url 'send_message' user_id=other_user.id %}">
+            {% csrf_token %}
+            <textarea name="content" rows="2" placeholder="Type your message here"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const chatForm = document.getElementById('chat-form');
+            const chatBox = document.getElementById('chat-box');
+            
+            chatForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                const formData = new FormData(chatForm);
+                
+                fetch(chatForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-CSRFToken': formData.get('csrfmiddlewaretoken')
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        console.error(data.error);
+                    } else {
+                        const messageDiv = document.createElement('div');
+                        messageDiv.classList.add('message', 'sent');
+                        messageDiv.innerHTML = `<p>${data.content}</p><span>${data.timestamp}</span>`;
+                        chatBox.appendChild(messageDiv);
+                        chatBox.scrollTop = chatBox.scrollHeight;
+                        chatForm.reset();
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            });
+        });
+    </script>
+</body>
+</html>
