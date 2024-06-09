@@ -102,7 +102,9 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'academia_app', 'static')]
 AUTH_USER_MODEL = 'academia_app.BaseUser'
 
 
-LOGIN_REDIRECT_URL = 'dashboard'
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = 'student_page'
+LOGOUT_REDIRECT_URL = 'course_recommendation'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

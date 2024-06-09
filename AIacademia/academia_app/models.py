@@ -1,10 +1,9 @@
-from django.db import models
 from django.conf import settings
-from django.dispatch import receiver
-from django.contrib.auth.models import User
-from django.db.models.signals import post_save
-from django.contrib.auth.models import Permission
 from django.contrib.auth.models import AbstractUser, BaseUserManager, Group
+from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+
 
 # Custom User Manager
 class CustomUserManager(BaseUserManager):
@@ -27,15 +26,11 @@ class CustomUserManager(BaseUserManager):
 
         return self.create_user(username, password, **extra_fields)
 
-# Intermediate model for BaseUser-Group many-to-many relationship
-class BaseUserGroup(models.Model):
-    base_user = models.ForeignKey('BaseUser', on_delete=models.CASCADE)
-    group = models.ForeignKey(Group, on_delete=models.CASCADE)
 
 # Base User Model
 class BaseUser(AbstractUser):
     objects = CustomUserManager()
-    groups = models.ManyToManyField(Group, through= BaseUserGroup)
+    groups = models.ManyToManyField(Group, through='BaseUserGroup')
 
     def __str__(self):
         return f"Base User: {self.username}"
@@ -49,13 +44,21 @@ class BaseUser(AbstractUser):
         if self.groups.filter(name='Student Users').exists():
             return False
         return super().has_perm(perm, obj)
-    
+
+
+# Intermediate model for BaseUser-Group many-to-many relationship
+class BaseUserGroup(models.Model):
+    base_user = models.ForeignKey(BaseUser, on_delete=models.CASCADE)
+    group = models.ForeignKey(Group, on_delete=models.CASCADE)
+
+
 # Admin User Model
 class AdminUser(BaseUser):
     admin_field = models.CharField(max_length=100)
 
     def __str__(self):
         return f"Admin User: {self.username}"
+
 
 # Super Admin User Model
 class SuperAdminUser(BaseUser):
@@ -64,12 +67,14 @@ class SuperAdminUser(BaseUser):
     def __str__(self):
         return f"SuperAdmin User: {self.username}"
 
+
 # Student User Model
 class StudentUser(BaseUser):
     student_field = models.CharField(max_length=100)
 
     def __str__(self):
         return f"Student User: {self.username}"
+
 
 # Proxy Models for different user roles
 class AdminUserProxy(AdminUser):
@@ -78,17 +83,20 @@ class AdminUserProxy(AdminUser):
         verbose_name = 'Staff User'
         verbose_name_plural = 'Staff Users'
 
+
 class StudentUserProxy(StudentUser):
     class Meta:
         proxy = True
         verbose_name = 'Student User'
         verbose_name_plural = 'Student Users'
 
+
 class SuperAdminUserProxy(SuperAdminUser):
     class Meta:
         proxy = True
         verbose_name = 'Super Admin'
         verbose_name_plural = 'Super Admins'
+
 
 # School Model
 class School(models.Model):
@@ -98,6 +106,7 @@ class School(models.Model):
 
     def __str__(self):
         return self.name
+
 
 # Course Model
 class Course(models.Model):
@@ -110,13 +119,14 @@ class Course(models.Model):
     def __str__(self):
         return self.name
 
+
 # Student Model
 class Student(models.Model):
     user = models.OneToOneField(
         StudentUser,
         on_delete=models.CASCADE,
         related_name='student_profile',
-        null=True  # Allow null values for the user field
+        null=True
     )
     name = models.CharField(max_length=100)
     registration_number = models.CharField(max_length=20, unique=True)
@@ -238,7 +248,7 @@ class Unit(models.Model):
     title = models.CharField(max_length=100)
     semester = models.CharField(max_length=20)  # For simplicity, we're using a CharField
     def __str__(self):
-        return self.username  
+        return self.username
     
 class probabilitydatatable(models.Model):
     Lessons_Attended = models.FloatField()

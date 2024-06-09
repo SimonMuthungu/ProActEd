@@ -1,69 +1,67 @@
+#vies.py
+import logging
 import os
 import sys
+from sre_constants import BRANCH
+from telnetlib import LOGOUT
+
 import joblib
-import logging
 import numpy as np
 import tensorflow as tf
 from django import forms
-from telnetlib import LOGOUT
-from django.db.models import Q 
-from sre_constants import BRANCH
 from django.contrib import messages
-from django.urls import reverse_lazy
-from django.core.mail import send_mail
-from django.contrib.auth.models import User
-from .forms import UpdateStudentProfileForm
-from django.http import HttpResponseRedirect
-from django.shortcuts import redirect, render
-from django.shortcuts import render, redirect
-from django.contrib.auth import get_user_model
-from django.http import Http404 , JsonResponse
-from django.contrib.auth.views import LoginView
-from django.contrib.auth import authenticate, login
-from django.shortcuts import render, get_object_or_404
-from python_scripts.recommender_engine import load_model
+from django.contrib.auth import authenticate, get_user_model, login, logout
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import authenticate, login, logout
-from django.http import HttpResponse, JsonResponse, HttpRequest
+from django.contrib.auth.models import User
+from django.contrib.auth.views import LoginView
+from django.core.mail import send_mail
+from django.db.models import Q
+from django.http import (Http404, HttpRequest, HttpResponse,
+                         HttpResponseRedirect, JsonResponse)
+from django.shortcuts import get_object_or_404, redirect, render
+from django.urls import reverse_lazy
 from python_scripts.proacted_recommender2024 import proacted2024
+from python_scripts.recommender_engine import load_model
 from python_scripts.sbert_recommender import sbert_proactedrecomm2024
 from .models import StudentUser, Attendance, Performance, Course, School, Recommender_training_data 
 from .models import BaseUser,UserProfile,Course,School,Performance,Student,Message, probabilitydatatable, NewMessageNotification
 
+from .forms import UpdateStudentProfileForm
+from .models import (Attendance, BaseUser, Course, Message, Performance,
+                     Recommender_training_data, School, Student, StudentUser,
+                     UserProfile, probabilitydatatable)
 
+<<<<<<< HEAD
 
 # logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+=======
+logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+
+>>>>>>> f6d53a06eec91d7e12f81aa90ed5eb95db6cd0e4
 
 def login_view(request):
+    print("Visited Login")
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
         user = authenticate(request, username=username, password=password)
-        
 
         if user is not None:
-
             if user.is_active:
                 login(request, user)
-                # Redirect based on user type
                 if user.is_superuser or user.is_staff:
                     return redirect('/admin/')
                 else:
                     return redirect('student_page')
             else:
-                # User is not active
-                return render(request, 'academia_app/login.html', {'error': 'Account is inactive.'})
+                return render(request, 'auth/login.html', {'error': 'Account is inactive.'})
         else:
-            # Authentication failed
-            return render(request, 'academia_app/login.html', {'error': 'Invalid username or password.'})
+            return render(request, 'auth/login.html', {'error': 'Invalid username or password.'})
 
-    return render(request, 'academia_app/login.html')
-
+    return render(request, 'auth/login.html')
 
 
-def course_recommendation_page(request):
-    return render (request,"academia_app/course_recommendation_page.html")
 
 def intervention (request):
     return render (request, "academia_app/intervention.html")
@@ -117,13 +115,14 @@ def recommend_courses(request):
         finally:
             logging.info('Recommender system has run')
     else:
-        return render(request, 'academia_app/login.html')        
+        return render(request, 'auth/login.html')        
 
             
         
         
-def predict_probability(request, student_id=3): 
-    model = joblib.load(r'C:\Users\Simon\proacted\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
+def predict_probability(request, student_id=3):
+    model = joblib.load(r'C:\Users\user\proacted\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
+    # model = joblib.load(r'C:\Users\Simon\proacted\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
     logging.info('Probability model loaded')
     # try:
     #     model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib'
@@ -135,8 +134,13 @@ def predict_probability(request, student_id=3):
 
 
     try: 
+<<<<<<< HEAD
         # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+=======
+        model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+>>>>>>> f6d53a06eec91d7e12f81aa90ed5eb95db6cd0e4
         model = joblib.load(model_path)
         logging.info('Probability model loaded with joblib.')
 
@@ -168,22 +172,41 @@ def predict_probability(request, student_id=3):
 
 @login_required
 def dashboard(request):
+    print("Visited Dashboard")
+    
     # Redirect users based on their type
     if request.user.is_superuser or request.user.is_staff:
-        return redirect('/admin/')  # Superadmin and Staff to Django admin
+        total_students = StudentUser.objects.count()
+        total_staff = AdminUser.objects.count()
+        total_admins = SuperAdminUser.objects.count()
+        total_schools = School.objects.count()
+        total_courses = Course.objects.count()
+
+        context = {
+            'total_students': total_students,
+            'total_staff': total_staff,
+            'total_admins': total_admins,
+            'total_schools': total_schools,
+            'total_courses': total_courses,
+        }
+
+        return render(request, 'admin/profile.html', context)
     else:
         return redirect('student_page')  # Students to student page
 
 @login_required
 def student_page(request):
+    print("Visited Student Page")
+    print(f"User: {request.user}, Groups: {request.user.groups.all()}")
     if request.user.groups.filter(name='Student Users').exists():
-        return render(request, "academia_app/student_page.html",context ={ 'text': 'Hello world'})
+        return render(request, "academia_app/student_page.html", context={'text': 'Hello world'})
     else:
         if request.user.is_superuser or request.user.is_staff:
             return redirect('/admin/')
-        return redirect('login') 
+        return redirect('login')
 
 def course_recommendation(request):
+    print("visited course recommendation page")
     return render(request, 'academia_app/course_recommendation_page.html',)
 
 

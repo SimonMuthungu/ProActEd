@@ -4,10 +4,11 @@ body {
     font-size: 13px;
     background-color: #262b3c;
     color: #A6B0CF;
-    padding:0;
+    padding: 0;
     margin: 0;
+    overflow-x: hidden;
+    height: 100%;
 }
-
 
 #header {
     background-color: #01010600;
@@ -17,13 +18,10 @@ body {
     align-items: flex-end;
     padding: 10px;
     position: sticky;
-    height:85;
+    height: 85px;
     z-index: 1010;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
-
-
-
 
 .custom-logo {
     height: auto;
@@ -77,21 +75,82 @@ body {
     transition: filter 0.3s ease;
 }
 
-/* Customizing the side bar */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden; /* Prevent horizontal scroll */
+}
 
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Make sure items wrap on small screens */
+    margin-bottom: 20px;
+}
+
+.stat-box {
+    background-color: #34495E;
+    color: #ECF0F1;
+    padding: 20px;
+    border-radius: 5px;
+    flex: 1; /* Allow boxes to grow/shrink */
+    margin: 10px;
+    max-width: 18%; /* Set a max-width to ensure boxes don't get too wide */
+    text-align: center;
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+canvas {
+    background-color: #34495E;
+    border-radius: 5px;
+}
+
+.profile-box {
+    margin-top: 20px;
+    background-color: #34495E;
+    color: #ECF0F1;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-content {
+    text-align: center;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-name, .profile-role, .profile-email {
+    margin: 5px 0;
+}
+
+/* Customizing the sidebar */
 #custom-sidebar {
     background-color: #32325d; /* Deep blue color */
     padding: 20px;
     position: fixed;
     top: 93px;
-    bottom: 0px;
+    bottom: 0;
     left: 0;
     width: 200px;
     overflow-y: auto;
     z-index: 0;
     border-radius: 0 15px 15px 0; /* Rounded corners on the right side */
-    box-shadow: 5px 0 15px rgba(0,0,0,0.5); /* Shadow for lifted effect */
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5); /* Shadow for lifted effect */
 }
+
 .sidebar-section h3,
 .sidebar-section .collapsible-item,
 .sub-content a,
@@ -110,7 +169,7 @@ body {
     margin-top: 5px;
     margin-bottom: 3px;
     margin-left: 0;
-    color : #A6B0CF;
+    color: #A6B0CF;
 }
 
 .sub-content {
@@ -120,12 +179,55 @@ body {
     margin-top: 3px;
 }
 
-.sub-content a, .sub-content form {
+.sub-content a {
     display: block;
     color: #eaeef2;
     text-decoration: none;
     margin-bottom: 3px;
 }
+
+.sub-content form {
+    display: block;
+    color: #eaeef2;
+    text-decoration: none;
+    margin-bottom: 3px;
+}
+
+.settings {
+    padding-left: 15px;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+/* Styles for the Change Password link */
+.settings-pass a {
+    display: block;
+    color: #eaeef2;
+    text-decoration: none;
+    margin-bottom: 3px;
+}
+
+.settings-pass a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for the Logout button */
+.settings-logout form {
+    display: inline;
+}
+
+.settings-logout button[type="submit"] {
+    display: inline;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #eaeef2;
+    font: inherit;
+}
+
 .sub-content.visible {
     display: block;
 }
@@ -133,6 +235,7 @@ body {
 .sub-content a:hover {
     text-decoration: underline;
 }
+
 .collapsible-item {
     display: block;
     margin-left: 0;
@@ -149,22 +252,22 @@ body {
     width: calc(100% - 180px);
 }
 
-#content, .content{
+#content, .content {
     margin-left: 250px;
     position: relative;
     z-index: 0;
-    margin-top: 93;
+    margin-top: 93px;
 }
 
 .admin-content {
     margin-left: 200px;
 }
 
-/* profile section for the  admin-site */
+/* Profile section for the admin-site */
 .profile-box {
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     margin: 20px;
     padding: 15px;
     width: 500px;
