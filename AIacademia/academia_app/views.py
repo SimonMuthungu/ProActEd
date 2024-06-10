@@ -1,31 +1,32 @@
-import logging
 import os
 import sys
-from sre_constants import BRANCH
-from telnetlib import LOGOUT
-
 import joblib
+import logging
 import numpy as np
 import tensorflow as tf
 from django import forms
+from telnetlib import LOGOUT
+from datetime import datetime
+from django.db.models import Q
+from sre_constants import BRANCH
+from django.utils import timezone
 from django.contrib import messages
-from django.contrib.auth import authenticate, get_user_model, login, logout
-from django.contrib.auth.decorators import login_required
+from django.urls import reverse_lazy
+from django.core.mail import send_mail
+from .forms import UpdateStudentProfileForm
 from django.contrib.auth.models import User
 from django.contrib.auth.views import LoginView
-from django.core.mail import send_mail
-from django.db.models import Q
-from django.http import (Http404, HttpRequest, HttpResponse,
-                         HttpResponseRedirect, JsonResponse)
-from django.shortcuts import get_object_or_404, redirect, render
-from django.urls import reverse_lazy
-from python_scripts.proacted_recommender2024 import proacted2024
-# from python_scripts.sbert_recommender import sbert_proactedrecomm2024
+from django.utils.dateparse import parse_datetime
 from python_scripts.recommender_engine import load_model
+from django.contrib.auth.decorators import login_required
+# from python_scripts.proacted_recommender2024 import proacted2024
+from django.shortcuts import get_object_or_404, redirect, render
 # from python_scripts.sbert_recommender import sbert_proactedrecomm2024
+from django.contrib.auth import authenticate, get_user_model, login, logout
+from django.http import (Http404, HttpRequest, HttpResponse,HttpResponseRedirect, JsonResponse)
 from .models import StudentUser, Attendance, Performance, Course, School, Recommender_training_data 
-from .models import BaseUser,UserProfile,Course,School,Performance,Student,Message, probabilitydatatable, NewMessageNotification
-from .forms import UpdateStudentProfileForm
+from .models import BaseUser,UserProfile,Course,School,Performance,Message, probabilitydatatable, NewMessageNotification
+
 
 # logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
@@ -93,13 +94,13 @@ def recommend_courses(request):
             # Load the model and get the output
             print("\nBeginning to run the recommender script")
             logging.info("Proacted recommender initialized...")
-            proacted_recommendations = proacted2024(user_description_about_interests, user_activities_enjoyed)
+            # proacted_recommendations = proacted2024(user_description_about_interests, user_activities_enjoyed)
             print(f"here are the proacted_recommendations: {proacted_recommendations}")
             print(f"Done with proacted, proceeding to sbert recommender")
 
             # sbert_recommendations = sbert_proactedrecomm2024(user_description_about_interests, user_activities_enjoyed)
             # print(f"here are the sbert_recommendations: {sbert_recommendations}") 
-            context = {'proacted_recommendations': proacted_recommendations}
+            # context = {'proacted_recommendations': proacted_recommendations}
             return render(request, 'academia_app/recommended_courses.html', context)
         except Exception as exc:
             print(f'Something came up, please rerun the system...\n{exc}\n\n')
@@ -208,7 +209,42 @@ def check_new_messages(request):
     has_new_messages = NewMessageNotification.objects.filter(user=request.user, is_new=True).exists()
     return JsonResponse({'has_new_messages': has_new_messages})
 
+def custom_parse_datetime(date_string):
+    try:
+        return datetime.strptime(date_string, '%B %d, %Y, %I:%M %p')
+    except ValueError:
+        return None
 
+from dateutil.parser import parse as parse_datetime
+
+@login_required
+def get_new_messages(request, user_id):
+    last_check = request.GET.get('last_check', None)
+    print(f"Last check: {last_check}")  # Debugging statement
+
+    other_user = get_object_or_404(BaseUser, id=user_id)
+
+    if last_check:
+        try:
+            last_check_time = parse_datetime(last_check)
+            print(f"Parsed last check time: {last_check_time}")  # Debugging statement
+        except ValueError:
+            return JsonResponse({'error': 'Invalid timestamp format'}, status=400)
+
+        new_messages = Message.objects.filter(
+            recipient=request.user,
+            sender=other_user,
+            timestamp__gt=last_check_time
+        ).order_by('timestamp')
+    else:
+        new_messages = Message.objects.filter(
+            recipient=request.user,
+            sender=other_user
+        ).order_by('timestamp')
+    
+    messages_data = [{'content': msg.content, 'timestamp': msg.timestamp.strftime('%Y-%m-%d %H:%M:%S')} for msg in new_messages]
+    return JsonResponse(messages_data, safe=False)
+   
 @login_required
 def chat(request, user_id):
     other_user = get_object_or_404(BaseUser, id=user_id)
@@ -224,10 +260,12 @@ def send_message(request, user_id):
     if request.method == 'POST':
         recipient = get_object_or_404(BaseUser, id=user_id)
         content = request.POST.get('content', '')
-        message = Message.objects.create(sender=request.user, recipient=recipient, content=content)
         
-        # Create a new notification for the recipient
-        NewMessageNotification.objects.create(user=recipient, message=message)
+        # Create the message
+        message = Message.objects.create(sender=request.user, recipient=recipient, content=content, timestamp=timezone.now())
+        
+        # Create a new message notification for the recipient
+        NewMessageNotification.objects.create(user=recipient, is_new=True)
         
         data = {
             'content': message.content,
@@ -241,8 +279,17 @@ def send_message(request, user_id):
 def profile(request):
     student_user = get_object_or_404(StudentUser, username=request.user.username)
 
+    try:
+        user_profile = student_user.userprofile
+    except UserProfile.DoesNotExist:
+        user_profile = UserProfile(user=student_user)
+        user_profile.save()
+
     attendance_records = Attendance.objects.filter(student=student_user)
     performance_records = Performance.objects.filter(student=student_user)
+
+    courses = Course.objects.all()
+    schools = School.objects.all()
 
     if request.method == 'POST':
         form = UpdateStudentProfileForm(request.POST, request.FILES, instance=student_user)
@@ -257,9 +304,12 @@ def profile(request):
 
     context = {
         'student': student_user,
+        'user_profile': user_profile,
         'attendance_records': attendance_records,
         'performance_records': performance_records,
         'form': form,
+        'courses': courses,
+        'schools': schools,
     }
 
     return render(request, 'academia_app/Profile.html', context)
