@@ -29,6 +29,9 @@ urlpatterns = [
     path('predict/', views.predict, name='predict'),
     path('predict_probability/', views.predict_probability, name='predict_probability'), #the default
     path('predict_probability/<int:student_id>/', views.predict_probability, name='predict_probability'), # passes a value to the model
+    path('realtimestudentprob/', views.realtimestudentprob, name='realtimestudentprob'), 
+    path('realtimestudentprob/', views.realtimestudentprob, name='realtimestudentprob'), 
+
 
     ]
 
