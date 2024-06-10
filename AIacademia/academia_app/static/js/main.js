@@ -8,15 +8,12 @@ socket.onmessage = function (e){
     document.querySelector('#app').innerText = djangoData.value;
 }
 
-// main.js
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Code to check for new messages and show notification dot
     checkNewMessages();
 });
 
 function checkNewMessages() {
-    // Make an AJAX request to check for new messages
     fetch('/check_new_messages/')
         .then(response => response.json())
         .then(data => {
@@ -26,3 +23,4 @@ function checkNewMessages() {
         })
         .catch(error => console.error('Error checking for new messages:', error));
 }
+
