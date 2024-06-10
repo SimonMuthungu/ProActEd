@@ -19,7 +19,7 @@ from django.http import (Http404, HttpRequest, HttpResponse,
                          HttpResponseRedirect, JsonResponse)
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
-from python_scripts.proacted_recommender2024 import proacted2024
+# from python_scripts.proacted_recommender2024 import proacted2024
 from python_scripts.recommender_engine import load_model
 from python_scripts.sbert_recommender import sbert_proactedrecomm2024
 from .models import StudentUser, AdminUser, SuperAdminUser, Attendance, Performance, Course, School, Recommender_training_data
@@ -27,13 +27,9 @@ from .models import BaseUser, UserProfile, Course, School, Performance, Message,
 
 from .forms import UpdateStudentProfileForm
 
-<<<<<<< HEAD
 # logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-=======
-logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log', level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
->>>>>>> 6d69f69ed58b18846aab476fcececcd426081707
 
 
 def login_view(request):
@@ -118,16 +114,11 @@ def predict_probability(request, student_id=3):
     model = joblib.load(r'C:\Users\user\proacted\AIacademia\trained_models\no_bias_trainedw_100000_10288genii.joblib')
     logging.info('Probability model loaded')
 
-<<<<<<< HEAD
 
     try: 
         # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-
-=======
-    try:
-        model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
->>>>>>> 6d69f69ed58b18846aab476fcececcd426081707
+        # model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         model = joblib.load(model_path)
         logging.info('Probability model loaded with joblib.')
 
@@ -244,11 +235,6 @@ def send_message(request, user_id):
     else:
         return redirect('inbox')
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 6d69f69ed58b18846aab476fcececcd426081707
 @login_required
 def profile(request):
     student_user = get_object_or_404(StudentUser, username=request.user.username)

@@ -70,8 +70,13 @@ class AdminUserAdmin(CustomUserAdmin):
 # Custom Admin for StudentUser
 class StudentUserAdmin(CustomUserAdmin):
     model = StudentUserProxy
-    list_display = ('first_name', 'last_name', 'username', 'email')
-    list_filter = ()
+    list_display = (
+        'username', 'email', 'first_name', 'last_name', 'is_staff', 
+        'student_field', 'name', 'registration_number', 'course', 
+        'school', 'graduation_probability', 'profile_picture'
+    )
+    search_fields = ('username', 'email', 'registration_number', 'name')
+    list_filter = ('course', 'school', 'is_staff', 'is_active')
 
 # Custom Admin classes for other models
 class SchoolAdmin(admin.ModelAdmin):
