@@ -16,7 +16,7 @@ def sbert_proactedrecomm2024(users_interests, activities_users_have_enjoyed_in_t
     starttime = time.time()
 
 
-    logging.info('S-Bert 2024 Recommender Engine Initialized')
+    logging.info('S-Bert Recommender Engine Initialized')
     print("started proacted 2024") 
 
 

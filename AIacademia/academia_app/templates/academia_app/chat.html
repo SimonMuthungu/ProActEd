@@ -40,22 +40,67 @@
                         'X-CSRFToken': formData.get('csrfmiddlewaretoken')
                     }
                 })
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
                 .then(data => {
                     if (data.error) {
                         console.error(data.error);
                     } else {
                         const messageDiv = document.createElement('div');
                         messageDiv.classList.add('message', 'sent');
-                        messageDiv.innerHTML = `<p>${data.content}</p><span>${data.timestamp}</span>`;
+                        messageDiv.innerHTML = `<p>${data.content}</p><span class="timestamp">${data.timestamp}</span>`;
                         chatBox.appendChild(messageDiv);
                         chatBox.scrollTop = chatBox.scrollHeight;
                         chatForm.reset();
                     }
                 })
-                .catch(error => console.error('Error:', error));
+                .catch(error => {
+                    console.error('Error:', error);
+                });
             });
+
+            // Function to check for new messages
+            function checkForNewMessages() {
+                console.log("Checking for new messages..."); // Debugging statement
+                const lastMessageElement = chatBox.lastElementChild;
+                const lastTimestamp = lastMessageElement ? lastMessageElement.querySelector('.timestamp').innerText : null;
+                
+                if (!lastTimestamp) {
+                    console.warn("No last timestamp found, or the last message element is null");
+                    return;
+                }
+
+                fetch("{% url 'get_new_messages' other_user.id %}?last_check=" + encodeURIComponent(lastTimestamp))
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(newMessages => {
+                        if (newMessages.length > 0) {
+                            newMessages.forEach(msg => {
+                                const messageDiv = document.createElement('div');
+                                messageDiv.classList.add('message', 'received');
+                                messageDiv.innerHTML = `<p>${msg.content}</p><span class="timestamp">${msg.timestamp}</span>`;
+                                chatBox.appendChild(messageDiv);
+                            });
+                            chatBox.scrollTop = chatBox.scrollHeight;
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            }
+
+            // Poll for new messages every 2 seconds
+            setInterval(checkForNewMessages, 2000);
         });
     </script>
+
 </body>
 </html>

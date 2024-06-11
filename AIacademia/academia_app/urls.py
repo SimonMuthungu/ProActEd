@@ -19,15 +19,20 @@ urlpatterns = [
     path('check_new_messages/', views.check_new_messages, name='check_new_messages'),
     path('student_page/chat/<int:user_id>/', views.chat, name='chat'),
     path('student_page/send_message/<int:user_id>/', views.send_message, name='send_message'),
-    
+    path('get_new_messages/<int:user_id>/', views.get_new_messages, name='get_new_messages'),
+
 
     path("admin_page", views.admin_page, name="admin_page"),
-    path("recommend_courses", views.recommend_courses, name="recommend_courses"),
-    path('course_recommendation/', views.course_recommendation, name='course_recommendation'),
+    path("recommend_courses/", views.recommend_courses, name="recommend_courses"),
+    path('logout/', LogoutView.as_view(next_page='course_recommendation'), name='logout'),
+    path('course_recommendation/', views.course_recommendation, name='course_recommendation'), 
     path('predict/', views.predict_probability, name='predict_probability'),
     path('predict/', views.predict, name='predict'),
     path('predict_probability/', views.predict_probability, name='predict_probability'), #the default
     path('predict_probability/<int:student_id>/', views.predict_probability, name='predict_probability'), # passes a value to the model
+    path('realtimestudentprob/', views.realtimestudentprob, name='realtimestudentprob'), 
+    path('realtimestudentprob/', views.realtimestudentprob, name='realtimestudentprob'), 
+
 
     ]
 

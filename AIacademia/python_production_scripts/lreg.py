@@ -45,9 +45,9 @@ print(f"Test dataset size: {len(test_dataset)}")
 # Define a model using TensorFlow (a logistic regression model)
 # Define a more complex model using TensorFlow
 model = tf.keras.Sequential([
-    tf.keras.layers.Dense(64, activation='relu', input_shape=(7,)),  # Increase the number of neurons in the first layer
-    tf.keras.layers.Dense(32, activation='relu'),  # Add another hidden layer with 32 neurons
-    tf.keras.layers.Dense(1, activation='sigmoid')  # Output layer remains the same
+    tf.keras.layers.Dense(64, activation='relu', input_shape=(7,)), 
+    tf.keras.layers.Dense(32, activation='relu'),  
+    tf.keras.layers.Dense(1, activation='sigmoid')  
 ])
 
 
