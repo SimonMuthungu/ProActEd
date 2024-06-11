@@ -1,0 +1,1 @@
+[{"model": "academia_app.attendance", "pk": 1, "fields": {"student": 44, "semester": "1", "total_classes": 245, "attended_classes": 145}}]
