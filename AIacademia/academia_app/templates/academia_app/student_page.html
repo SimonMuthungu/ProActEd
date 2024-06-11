@@ -23,6 +23,17 @@
                     <li><a href="{% url 'login' %}">Logout</a></li>
                 </ul>
             </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    fetch('{% url "check_new_messages" %}')
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.has_new_messages) {
+                            document.getElementById('inbox-notification').style.display = 'block';
+                        }
+                    });
+                });
+            </script>
         </nav>
         <h1>Welcome, Student!</h1>
     </div>

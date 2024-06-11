@@ -19,6 +19,8 @@ from django.db.models import Q
 from django.http import (Http404, HttpRequest, HttpResponse,
                          HttpResponseRedirect, JsonResponse)
 from django.shortcuts import get_object_or_404, redirect, render
+from django.urls import reverse_lazy
+# from python_scripts.proacted_recommender2024 import proacted2024
 from python_scripts.recommender_engine import load_model
 from django.urls import reverse_lazy
 # from python_scripts.proacted_recommender2024 import proacted2024
@@ -33,6 +35,9 @@ from .models import (Attendance, BaseUser, Course, Message, Performance,
 
 logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log', level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+# logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+# logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+# logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 # C:\Users\user\proacted\AIacademia\mainlogfile.log
 
@@ -287,7 +292,6 @@ def inbox(request):
 
     # Mark all notifications as read
     notifications.update(is_new=False)
-
     for user in users:
         user.has_new_messages = NewMessageNotification.objects.filter(user=user, is_new=True).exists()
 
@@ -312,6 +316,10 @@ def send_message(request, user_id):
         recipient = get_object_or_404(BaseUser, id=user_id)
         content = request.POST.get('content', '')
         message = Message.objects.create(sender=request.user, recipient=recipient, content=content)
+        
+        # Create a new notification for the recipient
+        NewMessageNotification.objects.create(user=recipient, message=message)
+        
         data = {
             'content': message.content,
             'timestamp': message.timestamp.strftime('%Y-%m-%d %H:%M:%S')
