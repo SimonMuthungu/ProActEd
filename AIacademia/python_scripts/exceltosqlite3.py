@@ -2,23 +2,34 @@
 
 import sqlite3
 import pandas as pd
-import random
+import re
 
-# Function to read data from Excel file
-def read_excel_file(file_path):
-    df = pd.read_excel(file_path)
+# Function to read data from CSV file
+def read_csv_file(file_path):
+    df = pd.read_csv(file_path)
     return df
 
-# Function to create SQLite database and write data to it
-def write_to_database(data, db_name):
+# Function to preprocess data and extract unique schools and their abbreviations
+def preprocess_data(data):
+    unique_schools = {}
+    for index, row in data.iterrows():
+        school_name = row['SCHOOL']
+        abbreviation = re.search(r'\((.*?)\)', school_name).group(1)
+        school_name = re.sub(r'\s*\([^)]*\)', '', school_name)  # Remove abbreviations from school name
+        if school_name not in unique_schools:
+            unique_schools[school_name] = abbreviation
+    return unique_schools
+
+# Function to write data to SQLite database
+def write_to_database(unique_schools, db_name):
+    print("Database Path:", db_name)
     conn = sqlite3.connect(db_name)
     cursor = conn.cursor()
 
     # Insert data into table
-    for index, row in data.iterrows():
-        ran = 80.0
-        cursor.execute('''INSERT INTO academia_app_probabilitydatatable (Lessons_Attended, Total_lessons_in_that_period, Aggregate_points, pcnt_of_lessons_attended, homework_submission_rates, activity_on_learning_platforms, CAT_1_marks, CAT_2_marks, Deadline_Adherence, teachers_comments_so_far, activity_on_elearning_platforms, passed_or_not) 
-                          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)''', (row['Lessons_Attended'], row['Total_lessons_in_that_period'], row['Aggregate points'], row['% of lessons attended'], row['homework submission rates'], ran, row['CAT 1 marks'], row['CAT 2 marks'], row['Deadline Adherence'], row['teachers comments so far'], row['activity on e-learning platforms'], row['passed_or_not'])) 
+    for school_name, abbreviation in unique_schools.items():
+        cursor.execute('''INSERT INTO academia_app_school (name, abbreviation) 
+                          VALUES (?, ?)''', (school_name, abbreviation)) 
 
     # Commit changes and close connection
     conn.commit()
@@ -26,14 +37,20 @@ def write_to_database(data, db_name):
 
 # Main function
 def main():
-    excel_file_path = r'C:\Users\Simon\proacted\AIacademia\test_data_files\trainwith_100000.xlsx'  # Replace with your Excel file path
-    db_name = 'db.sqlite3'  # Replace with your SQLite database name
+    csv_file_path = r'C:\Users\Simon\proacted\AIacademia\test_data_files\Schools_and_Courses.csv'  # Replace with your CSV file path
+    db_name = 'db (galavu).sqlite3'  # Replace with your SQLite database name 
 
-    # Read data from Excel file
-    data = read_excel_file(excel_file_path)
+    # Read data from CSV file
+    data = read_csv_file(csv_file_path)
+
+    # Preprocess data to extract unique schools and their abbreviations
+    unique_schools = preprocess_data(data)
 
     # Write data to SQLite database
-    write_to_database(data, db_name)
+    write_to_database(unique_schools, db_name)
 
 if __name__ == "__main__":
     main()
+
+
+# write to school, course n student. calculate probs from there into the admin interface.
