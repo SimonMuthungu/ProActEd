@@ -14,7 +14,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 
-logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+# logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+logging.basicConfig(filename=r'C:\Users\user\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 # Set up logging
 # logging.basicConfig(
@@ -74,6 +75,7 @@ def load_model(users_interests, activities_users_have_enjoyed_in_the_past):
 
     # Loading Word2Vec model
     model = joblib.load(r'C:\Users\Simon\proacted_googleds\word2vec_model.pkl')
+    # model = joblib.load(r'C:\Users\Simon\proacted_googleds\word2vec_model.pkl')
 
     df['Tokenized Objectives'] = df['Course Objectives'].apply(sent_tokenize)
     df['Tokenized General Info'] = df['Course_general_info_and_about'].apply(sent_tokenize)
