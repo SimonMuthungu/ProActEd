@@ -68,3 +68,22 @@ Settings
 <box-icon name='cog' type='solid' ></box-icon>
 <i class='bx bxs-cog' ></i>
 
+-adminuser_backup.json
+-attendance_backup.json
+-baseuser_backup.json
+-course_backup.json
+-courseofinterest_backup.json
+-feeinformation_backup.json
+-fieldofinterest_backup.json
+-highschoolsubject_backup.json
+-message_backup.json
+-performance_backup.json
+-probabilitydatatable_backup.json
+-recommender_training_data_backup.json
+-recommender_training_data_byte_vectors_backup.json
+-recommender_training_data_number_vectors_backup.json
+-recommender_training_data_tokenized_sentences_backup.json
+-recommendersbertvectors_backup.json
+-school_backup.json
+-superadminuser_backup.json
+-userprofile_backup.json

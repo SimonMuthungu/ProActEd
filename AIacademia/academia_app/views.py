@@ -24,14 +24,15 @@ from django.urls import reverse_lazy
 # from python_scripts.proacted_recommender2024 import proacted2024
 # from python_scripts.sbert_recommender import sbert_proactedrecomm2024
 from .models import StudentUser, Attendance, Performance, Course, School, Recommender_training_data 
-from .models import BaseUser,UserProfile,Course,School,Performance,Message, probabilitydatatable, NewMessageNotification
+from .models import BaseUser,UserProfile,Course,School,Performance,Message, ProbabilityDataTable, NewMessageNotification
 
 from .forms import UpdateStudentProfileForm
 from .models import (Attendance, BaseUser, Course, Message, Performance,
                      Recommender_training_data, School, StudentUser,
-                     UserProfile, probabilitydatatable)
+                     UserProfile, ProbabilityDataTable)
 
 logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+# logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log', level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 # C:\Users\user\proacted\AIacademia\mainlogfile.log
 
@@ -72,7 +73,23 @@ def admin_login_view(request):
     return render(request, "admin_login.html")  # Replace "admin_login.html" with the actual template
 def predict(request):
     return render(request, 'academia_app/predict.html')
-    
+
+@login_required
+def admin_dashboard(request):
+    user_group = None
+    if request.user.groups.filter(name='SuperAdminUser').exists():
+        user_group = 'SuperAdminUser'
+    elif request.user.groups.filter(name='StaffUser').exists():
+        user_group = 'StaffUser'
+    elif request.user.groups.filter(name='StudentUser').exists():
+        user_group = 'StudentUser'
+    else:
+        user_group = 'Unauthorized'
+    context = {
+        'user_group': user_group,
+    }
+
+    return render(request, 'admin/base.html', context)
 
 # loading the script and generating output
 def recommend_courses(request):
@@ -125,7 +142,7 @@ def predict_probability(request, student_id=3):
         model = joblib.load(model_path)
         logging.info('Probability model proacted_prob_model2 loaded') 
 
-        student_data = probabilitydatatable.objects.get(id=student_id) 
+        student_data = ProbabilityDataTable.objects.get(id=student_id) 
         lessonsattended = student_data.Lessons_Attended
         aggrpoints = student_data.Aggregate_points
         pcnt_of_lessons_attended = student_data.pcnt_of_lessons_attended 
@@ -135,7 +152,7 @@ def predict_probability(request, student_id=3):
         CAT_2_marks = student_data.CAT_2_marks
         activity_on_elearning_platforms = student_data.activity_on_elearning_platforms
 
-    except probabilitydatatable.DoesNotExist:
+    except ProbabilityDataTable.DoesNotExist:
         # the student doesnt exist
         print('the student doesnt exist')
         return render(request, "academia_app/student_page.html")
@@ -155,6 +172,7 @@ def predict_probability(request, student_id=3):
 from django.http import HttpResponse
 from .models import StudentUser
 import joblib
+
 
 def realtimestudentprob(request):
     """This function will run every student's probability metrics and update the student table and other relevant tables, then the admin page will be caused to read the db again, ultimately reflecting on the admin interface as fresh and new manna. """
@@ -199,8 +217,6 @@ def realtimestudentprob(request):
         return HttpResponse("An error occurred")
 
 
-
-    
 
 @login_required
 def dashboard(request):

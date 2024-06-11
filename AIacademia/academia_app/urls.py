@@ -3,10 +3,11 @@ from django.contrib.auth.views import LogoutView
 from django.urls import include, path
 
 from . import admin, views
-from .views import inbox, send_message
+from .views import inbox, send_message, admin_dashboard
 
 urlpatterns = [
     path('', views.course_recommendation, name='course_recommendation'),
+    path('admin/', admin_dashboard, name='admin_dashboard'),
     path('login/', views.login_view, name='login'),
     path('logout/', LogoutView.as_view(next_page='course_recommendation'), name='logout'),
     path('dashboard/', views.dashboard, name='dashboard'),
@@ -31,7 +32,6 @@ urlpatterns = [
     path('predict_probability/<int:student_id>/', views.predict_probability, name='predict_probability'), # passes a value to the model
     path('realtimestudentprob/', views.realtimestudentprob, name='realtimestudentprob'), 
     path('realtimestudentprob/', views.realtimestudentprob, name='realtimestudentprob'), 
-
 
     ]
 

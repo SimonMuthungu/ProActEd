@@ -7,12 +7,24 @@ from django.dispatch import receiver
 
 # Custom User Manager
 class CustomUserManager(BaseUserManager):
-    def create_user(self, username, password=None, **extra_fields):
+    def create_user(self, username, password=None, group_name=None, **extra_fields):
         if not username:
             raise ValueError('The Username must be set')
         user = self.model(username=username, **extra_fields)
         user.set_password(password)
         user.save(using=self._db)
+
+        if group_name:
+            group, created = Group.objects.get_or_create(name=group_name)
+            user.groups.add(group)
+            role_map = {
+                'SuperAdminUser': 'Super Administrator',
+                'StaffUser': 'Administrator',
+                'StudentUser': 'Student User',
+            }
+            user.role = role_map.get(group_name, '')
+            user.save()
+
         return user
 
     def create_superuser(self, username, password=None, **extra_fields):
@@ -24,13 +36,13 @@ class CustomUserManager(BaseUserManager):
         if extra_fields.get('is_superuser') is not True:
             raise ValueError('Superuser must have is_superuser=True.')
 
-        return self.create_user(username, password, **extra_fields)
-
+        return self.create_user(username, password, 'SuperAdminUser', **extra_fields)
 
 # Base User Model
 class BaseUser(AbstractUser):
     objects = CustomUserManager()
     groups = models.ManyToManyField(Group, through='BaseUserGroup')
+    role = models.CharField(max_length=50, blank=True, null=True)
 
     def __str__(self):
         return f"Base User: {self.username}"
@@ -112,14 +124,12 @@ class StudentUser(BaseUser):
     def __str__(self):
         return f"Student User: {self.username}"
 
-
 # Proxy Models for different user roles
 class AdminUserProxy(AdminUser):
     class Meta:
         proxy = True
         verbose_name = 'Staff User'
         verbose_name_plural = 'Staff Users'
-
 
 class StudentUserProxy(StudentUser):
     class Meta:
@@ -246,7 +256,7 @@ class Unit(models.Model):
     def __str__(self):
         return self.username
     
-class probabilitydatatable(models.Model):
+class ProbabilityDataTable(models.Model):
     Lessons_Attended = models.FloatField()
     Total_lessons_in_that_period = models.FloatField()
     Aggregate_points = models.FloatField()
@@ -259,3 +269,18 @@ class probabilitydatatable(models.Model):
     teachers_comments_so_far = models.TextField()
     activity_on_elearning_platforms = models.FloatField()
     passed_or_not = models.FloatField()
+
+    def save(self, *args, **kwargs):
+        float_fields = [
+            'Lessons_Attended', 'Total_lessons_in_that_period', 'Aggregate_points',
+            'pcnt_of_lessons_attended', 'homework_submission_rates', 'activity_on_learning_platforms',
+            'CAT_1_marks', 'CAT_2_marks', 'Deadline_Adherence', 'activity_on_elearning_platforms',
+            'passed_or_not'
+        ]
+        
+        for field in float_fields:
+            value = getattr(self, field)
+            if value == 'poor':
+                setattr(self, field, 0.0)
+
+        super().save(*args, **kwargs)
