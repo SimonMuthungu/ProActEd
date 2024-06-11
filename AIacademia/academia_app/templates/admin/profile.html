@@ -1,43 +1,25 @@
 {% comment %} profile.html {% endcomment %}
 {% load static %}
 {% load admin_urls %}
-<div class="container">
-    <h1>Admin Dashboard</h1>
-    <div class="stats-container">
-        <div class="stat-box">
-            <h3>Total Students</h3>
-            <p>{{ total_students }}</p>
+<div class="profile-section">
+    <div class="profile-box">
+        <div class="profile-header">
+            <h3>Profile</h3>
         </div>
-        <div class="stat-box">
-            <h3>Total Staff</h3>
-            <p>{{ total_staff }}</p>
-        </div>
-        <div class="stat-box">
-            <h3>Total Admins</h3>
-            <p>{{ total_admins }}</p>
-        </div>
-        <div class="stat-box">
-            <h3>Total Schools</h3>
-            <p>{{ total_schools }}</p>
-        </div>
-        <div class="stat-box">
-            <h3>Total Courses</h3>
-            <p>{{ total_courses }}</p>
+        <div class="profile-content">
+            <img src="{% static 'academia_app/profile-pic.png' %}" alt="Profile Picture" class="profile-picture">
+            <p class="profile-name">Name: {{ request.user.get_full_name|default:request.user.username }}</p>
+            {% if request.user.is_superuser %}
+            <p class="role">Role: Super Adminstrator</p>
+            {% else %}
+            <p class="role">Role: Staff Adminstrator</p>
+            {% endif %}
+            <p class="profile-email">Email: {{ request.user.email }}</p>
         </div>
     </div>
+    <div class="school-box">
+        <h2>School Probability area to be occuped by a chart or graph</h2>
+        <h4>Here</h4>
+    </div>
+</div>
 
-    <div class="chart-container">
-        <canvas id="studentsChart"></canvas>
-    </div>
-</div>
-<div class="profile-box">
-    <div class="profile-header">
-        <h3>Profile</h3>
-    </div>
-    <div class="profile-content">
-        <img src="{% static 'academia_app/profile-pic.png' %}" alt="Profile Picture" class="profile-picture">
-        <p class="profile-name">Name: {{ request.user.get_full_name|default:request.user.username }}</p>
-        <p class="profile-role">Role: {{ request.user.role|default:"User" }}</p>
-        <p class="profile-email">Email: {{ request.user.email }}</p>
-    </div>
-</div>

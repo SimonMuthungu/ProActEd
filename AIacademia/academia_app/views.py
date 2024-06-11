@@ -19,15 +19,15 @@ from django.http import (Http404, HttpRequest, HttpResponse,
                          HttpResponseRedirect, JsonResponse)
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
-from python_scripts.proacted_recommender2024 import proacted2024
-from python_scripts.recommender_engine import load_model
-from python_scripts.sbert_recommender import sbert_proactedrecomm2024
-from .models import StudentUser, AdminUser, SuperAdminUser, Attendance, Performance, Course, School, Recommender_training_data
-from .models import BaseUser, UserProfile, Course, School, Performance, Message, probabilitydatatable, NewMessageNotification
+#from python_scripts.proacted_recommender2024 import proacted2024
+#from python_scripts.recommender_engine import load_model
+#from python_scripts.sbert_recommender import sbert_proactedrecomm2024
+# from .models import StudentUser, AdminUser, SuperAdminUser, Attendance, Performance, Course, School, Recommender_training_data
+#from .models import BaseUser, UserProfile, Course, School, Performance, Message, probabilitydatatable, NewMessageNotification
 
 from .forms import UpdateStudentProfileForm
 
-logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log', level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+# logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log', level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 
 def login_view(request):
@@ -71,6 +71,22 @@ def admin_login_view(request):
 def predict(request):
     return render(request, 'academia_app/predict.html')
 
+@login_required
+def admin_dashboard(request):
+    user_group = None
+    if request.user.groups.filter(name='SuperAdminUser').exists():
+        user_group = 'SuperAdminUser'
+    elif request.user.groups.filter(name='StaffUser').exists():
+        user_group = 'StaffUser'
+    elif request.user.groups.filter(name='StudentUser').exists():
+        user_group = 'StudentUser'
+    else:
+        user_group = 'Unauthorized'
+    context = {
+        'user_group': user_group,
+    }
+
+    return render(request, 'admin/base.html', context)
 
 # loading the script and generating output
 def recommend_courses(request):
