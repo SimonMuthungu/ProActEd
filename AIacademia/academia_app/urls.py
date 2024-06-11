@@ -20,7 +20,8 @@ urlpatterns = [
     path('check_new_messages/', views.check_new_messages, name='check_new_messages'),
     path('student_page/chat/<int:user_id>/', views.chat, name='chat'),
     path('student_page/send_message/<int:user_id>/', views.send_message, name='send_message'),
-    
+    path('get_new_messages/<int:user_id>/', views.get_new_messages, name='get_new_messages'),
+
 
     path("admin_page", views.admin_page, name="admin_page"),
     path("recommend_courses/", views.recommend_courses, name="recommend_courses"),
