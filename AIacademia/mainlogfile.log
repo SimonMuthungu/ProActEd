@@ -13818,3 +13818,189 @@ TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
 >>>>>>> 78c026378df01cfaba84fdd511bf42834faea9bd
 WARNING || 12-Jun-24 15:09:33 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 15:10:03 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 16:20:03 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 16:55:58 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 17:01:52 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 17:11:26 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 17:14:19 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 17:14:52 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 17:17:42 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 17:50:01 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 17:50:01 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 17:50:03 || Not Found: /ws/academia_app/
+ERROR || 12-Jun-24 17:50:07 || Internal Server Error: /course_recommendation/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 323, in course_recommendation
+    return render(request, 'academia_app/course_recommendation_page.html',{'interests': interests, 'subjects': subjects})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 565, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 6: 'static'. Did you forget to register or load this tag?
+WARNING || 12-Jun-24 17:50:39 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 17:58:17 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 17:58:32 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:06:54 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:14:56 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:16:12 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:19:45 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:20:54 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:21:02 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:21:31 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:21:40 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:24:00 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:24:16 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:24:36 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:24:51 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:25:03 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:25:12 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:25:23 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:26:15 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:26:18 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:26:59 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:27:51 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:28:08 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:28:31 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:32:29 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:33:09 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:33:27 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:34:51 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:35:41 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:38:20 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:38:27 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:39:59 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:40:14 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:41:33 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:42:40 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:43:03 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:43:38 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:44:50 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:46:34 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:47:08 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:47:47 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:47:51 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:48:05 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:49:39 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:50:10 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:51:03 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:51:05 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:51:56 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:52:15 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:53:20 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:53:23 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:53:53 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:54:17 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:54:56 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:55:18 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:55:20 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:55:34 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:55:58 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:56:29 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:56:53 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:58:39 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 18:59:32 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:02:20 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:02:23 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:03:33 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:03:54 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:03:59 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:04:19 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:04:41 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:05:08 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:05:26 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:07:39 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:07:53 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:09:01 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:09:12 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:09:25 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:09:48 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:10:35 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:12:38 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:13:58 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:14:14 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:14:36 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:14:39 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:14:48 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:16:55 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:20:24 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:22:51 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:26:15 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:26:52 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:27:13 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:27:53 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:28:11 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:28:38 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:28:50 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:29:15 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:29:35 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:30:02 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:33:07 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:34:25 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:37:31 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:37:48 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:38:07 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:38:31 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:39:49 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:41:10 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:41:55 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:42:19 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:42:51 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:43:17 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:48:03 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:48:13 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:48:33 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:49:55 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:50:29 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:50:57 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:51:53 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:54:22 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:54:35 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:54:50 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:54:58 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:55:07 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 19:55:27 || Not Found: /favicon.ico
