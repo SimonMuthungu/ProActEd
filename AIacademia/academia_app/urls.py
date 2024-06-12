@@ -25,4 +25,6 @@ urlpatterns = [
     path('predict_probability/', views.predict_probability, name='predict_probability'),
     path('predict_probability/<int:student_id>/', views.predict_probability, name='predict_probability'),
     path('realtimestudentprob/', views.realtimestudentprob, name='realtimestudentprob'),
+    path('update_students_count/', views.UpdateStudentsCountView, name='update_students_count'),
+
 ]
