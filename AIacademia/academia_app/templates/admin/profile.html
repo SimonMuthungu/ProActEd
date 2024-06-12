@@ -1,43 +1,82 @@
 {% comment %} profile.html {% endcomment %}
 {% load static %}
 {% load admin_urls %}
-<div class="container">
-    <h1>Admin Dashboard</h1>
-    <div class="stats-container">
-        <div class="stat-box">
-            <h3>Total Students</h3>
-            <p>{{ total_students }}</p>
+<div class="profile-section">
+    <div class="profile-box">
+        <div class="profile-header">
+            <h3>Profile</h3>
         </div>
-        <div class="stat-box">
-            <h3>Total Staff</h3>
-            <p>{{ total_staff }}</p>
-        </div>
-        <div class="stat-box">
-            <h3>Total Admins</h3>
-            <p>{{ total_admins }}</p>
-        </div>
-        <div class="stat-box">
-            <h3>Total Schools</h3>
-            <p>{{ total_schools }}</p>
-        </div>
-        <div class="stat-box">
-            <h3>Total Courses</h3>
-            <p>{{ total_courses }}</p>
+        <div class="profile-content">
+            <img src="{% static 'academia_app/profile-pic.png' %}" alt="Profile Picture" class="profile-picture">
+            <p class="profile-name">Name: {{ request.user.get_full_name|default:request.user.username }}</p>
+            {% if request.user.is_superuser %}
+            <p class="role">Role: Super Adminstrator</p>
+            {% else %}
+            <p class="role">Role: Staff Adminstrator</p>
+            {% endif %}
+            <p class="profile-email">Email: {{ request.user.email }}</p>
         </div>
     </div>
+    <div class="school-box">
+        <select id="school-dropdown">
+            <option value="">Select a School</option>
+            {% for school in schools %}
+            <option value="{{ school.id }}">{{ school.name }}</option>
+            {% endfor %}
+        </select>
+        <canvas id="school-chart" width="700" height="250"></canvas>
+    </div>
+</div>
 
-    <div class="chart-container">
-        <canvas id="studentsChart"></canvas>
-    </div>
-</div>
-<div class="profile-box">
-    <div class="profile-header">
-        <h3>Profile</h3>
-    </div>
-    <div class="profile-content">
-        <img src="{% static 'academia_app/profile-pic.png' %}" alt="Profile Picture" class="profile-picture">
-        <p class="profile-name">Name: {{ request.user.get_full_name|default:request.user.username }}</p>
-        <p class="profile-role">Role: {{ request.user.role|default:"User" }}</p>
-        <p class="profile-email">Email: {{ request.user.email }}</p>
-    </div>
-</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const dropdown = document.getElementById("school-dropdown");
+        const ctx = document.getElementById('school-chart').getContext('2d');
+
+        const chart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: [],
+                datasets: [{
+                    label: 'Students Count',
+                    data: [],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+            }
+        });
+
+        dropdown.addEventListener('change', function() {
+            const schoolId = this.value;
+            if (schoolId) {
+                fetch(`/api/school_data/${schoolId}/`)
+                    .then(response => response.json())
+                    .then(data => {
+                        chart.data.labels = [data.school_name];
+                        chart.data.datasets[0].data = [data.students_count];
+                        chart.update();
+                    });
+            }
+        });
+    });
+</script>

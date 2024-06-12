@@ -4,28 +4,33 @@ body {
     font-size: 13px;
     background-color: #262b3c;
     color: #A6B0CF;
-    padding:0;
+    padding: 0;
     margin: 0;
     overflow-x: hidden;
-    height: 100%
+    height: 100%;
 }
-
-
-#header {
-    background-color: #01010600;
+header#header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #1e1e2d; /* Adjust the background color to match your header */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     color: #FFDB58;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
     height:85;
     z-index: 1010;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-
+/* .sidebar {
+    width: 20%; /* Adjust this width as necessary */
+    /*background-color: #2C3E50; /* Example color */
+    /* padding: 20px; */
+    /* color: #fff; */
+/* } */
 
 
 .custom-logo {
@@ -81,19 +86,17 @@ body {
 }
 
 /* Customizing the side bar */
-
 #custom-sidebar {
-    background-color: #32325d; /* Deep blue color */
+    background-color: #32325d;
     padding: 20px;
     position: fixed;
     top: 93px;
-    bottom: 0px;
+    bottom: 0;
     left: 0;
     width: 200px;
     overflow-y: auto;
-    z-index: 0;
-    border-radius: 0 15px 15px 0; /* Rounded corners on the right side */
-    box-shadow: 5px 0 15px rgba(0,0,0,0.5); /* Shadow for lifted effect */
+    border-radius: 0 15px 15px 0;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);/* Shadow for lifted effect */
 }
 .sidebar-section h3,
 .sidebar-section .collapsible-item,
@@ -152,7 +155,7 @@ body {
 }
 
 .settings-pass a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* Styles for the Logout button */
@@ -206,41 +209,155 @@ body {
     margin-left: 200px;
 }
 
-/* profile section for the  admin-site */
-.profile-box {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    margin: 20px;
+
+/* Common container styles */
+/* Ensure the container takes the full width */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Full height */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 20%;
+    background-color: #2C3E50;
+    padding: 20px;
+    color: #fff;
+    box-sizing: border-box;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* Main content styling */
+.main-content {
+    margin-left: 20%;
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #34495E;
+    color: #ECF0F1;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.dashboard-content {
+    margin-top: 10px;
+    display:flex;
+    flex-direction: column;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3px;
+}
+
+.stat-box {
+    background-color: #f8f9fa; /* Change this to your desired background color */
+    border-radius: 5px;
     padding: 15px;
-    width: 500px;
-    z-index: 100;
+    width: 15%; /* Adjust the width to fit all boxes in one line */
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.stat-box h3 {
+    margin-bottom: 10px;
+}
+
+.stat-box p {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+ .chart-container {
+    margin: 10px;
+    padding: 20px;
+    background-color: #2C3E50;
+    border-radius: 10px;
+}
+.right-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+
+.profile-box {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #262b3c;
+    width: calc(100% - 740px); /* Adjust width dynamically based on the course box width */
+    height: 250px; /* Set height to match course box */
+}
+
+.profile-section {
+
+    display: flex;
+    margin-top:20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.profile-box .profile-picture {
+    width: 40%;
+    height: auto;
+    border-radius: 50%; 
+}
+
+.profile-box{
+    font-size: 1.2em;
+}
 .profile-header {
-    background-color: #f4f4f4;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    padding: 10px;
+    font-size: 1.2em;
+    margin-bottom: 5px;
     text-align: center;
 }
 
-.profile-content {
-    padding: 5px;
-}
-
-.profile-picture {
-    display: block;
-    margin: 10px auto;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
-
-.profile-name, .profile-role, .profile-email {
-    font-size: 14px;
+.profile-box .profile-content p {
     margin: 5px 0;
-    text-align: center;
+    font-size: 0.9em; 
+}
+
+
+.full-width-content {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+    background-color: #34495E; 
+    color: #ECF0F1; 
+    box-sizing: border-box;
+}
+
+.alert-box {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 15px;
+    width: 250px;
+    height: 240px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-box, .school-box {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #262b3c;
+    width: 700px;
+    height: 280px;
 }
 
 @media (max-width: 768px) {

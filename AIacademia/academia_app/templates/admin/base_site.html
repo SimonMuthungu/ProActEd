@@ -16,9 +16,9 @@
             <img src="{% static 'academia_app/logo.png' %}" alt="proacted_Logo" class="custom-logo">
             <div class="header-texts">
                 {% if request.user.is_superuser %}
-                <a href="{% url 'admin:index' %}">Super Admin</a>
+                <a href="{% url 'admin:index' %}">Super Admin Dashboard</a>
                 {% else %}
-                <a href="{% url 'admin:index' %}">Staff</a>
+                <a href="{% url 'admin:index' %}">Staff Dashboard</a>
                 {% endif %}
             </div>
         </div>
@@ -35,10 +35,9 @@
         </div>
     </div>
     <!-- Custom Sidebar Here -->
-    {% include "admin/custom_sidebar.html" %}
 </header>
 <div id="footer">
-    <p>© 2023 AIacademia Management System. All rights reserved.</p>
+    <p>© 2024 AIacademia Management System. All rights reserved.</p>
 </div>
 {% endblock %}
 {% block user-tools %}{% endblock %}
