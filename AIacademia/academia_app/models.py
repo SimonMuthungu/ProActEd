@@ -108,6 +108,17 @@ class StudentUser(BaseUser):
     school = models.ForeignKey(School, on_delete=models.CASCADE)
     graduation_probability = models.FloatField(default=0.0)
     profile_picture = models.ImageField(upload_to='profile_pictures/', null=True, blank=True)
+    Lessons_Attended = models.FloatField(default=100)
+    Total_lessons_in_that_period = models.FloatField(default=234)
+    Aggregate_points = models.FloatField(default=50)
+    pcnt_of_lessons_attended = models.FloatField(default=47)
+    homework_submission_rates = models.FloatField(default=74)
+    activity_on_learning_platforms = models.FloatField(default=75)
+    CAT_1_marks = models.FloatField(default=20)
+    CAT_2_marks = models.FloatField(default=18)
+    Deadline_Adherence = models.TextField()
+    teachers_comments_so_far = models.TextField()
+    activity_on_elearning_platforms = models.FloatField(default=74)
 
     def __str__(self):
         return f"Student User: {self.username}"

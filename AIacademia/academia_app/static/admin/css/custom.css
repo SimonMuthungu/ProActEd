@@ -20,7 +20,6 @@ header#header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-
     height:85;
     z-index: 1010;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -352,13 +351,13 @@ header#header {
 
 .course-box, .school-box {
     background-color: #f8f9fa;
-    border-radius: 5px;
-    padding: 15px;
+    border-radius: 10px;
+    padding: 5px;
     text-align: left;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: #262b3c;
     width: 700px;
-    height: 250px;
+    height: 280px;
 }
 
 @media (max-width: 768px) {
