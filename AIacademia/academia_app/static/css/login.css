@@ -1,8 +1,8 @@
-/* Updated CSS */
+/* login.css */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f2f2f2;
 }
 
@@ -17,7 +17,7 @@ body, html {
     height: 80px;
     width: 100%;
     box-sizing: border-box;
-    border-radius: 5px
+    border-radius: 5px;
 }
 
 .header h2 {
@@ -38,7 +38,7 @@ body, html {
     text-align: center;
     margin-bottom: 5px;
     margin-top: 20px; 
-    border-radius: 5px
+    border-radius: 5px;
 }
 
 .login-box {

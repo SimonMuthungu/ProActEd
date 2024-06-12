@@ -13438,3 +13438,177 @@ WARNING || 12-Jun-24 03:15:40 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 03:18:32 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 03:19:01 || Not Found: /favicon.ico
 INFO || 12-Jun-24 03:59:33 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\migrations\0001_initial.py changed, reloading.
+ERROR || 12-Jun-24 04:08:55 || Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: academia_app_baseuser.role
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 60, in login_view
+    user = authenticate(request, username=username, password=password)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\views\decorators\debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\contrib\auth\__init__.py", line 79, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\contrib\auth\backends.py", line 42, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\contrib\auth\base_user.py", line 56, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: academia_app_baseuser.role
+ERROR || 12-Jun-24 04:33:51 || Internal Server Error: /api/course_data/71/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 292, in course_data
+    students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
+INFO || 12-Jun-24 04:39:19 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+WARNING || 12-Jun-24 04:53:55 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+WARNING || 12-Jun-24 04:55:09 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+WARNING || 12-Jun-24 04:55:20 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+WARNING || 12-Jun-24 05:12:04 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+INFO || 12-Jun-24 05:19:23 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+INFO || 12-Jun-24 05:25:29 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+WARNING || 12-Jun-24 05:35:04 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+INFO || 12-Jun-24 06:13:00 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+WARNING || 12-Jun-24 06:17:17 || Not Found: /favicon.ico
+INFO || 12-Jun-24 06:20:38 || C:\Users\user\Desktop\ProActEd\AIacademia\AIacademia\settings.py changed, reloading.
+INFO || 12-Jun-24 06:31:14 || C:\Users\user\Desktop\ProActEd\AIacademia\AIacademia\urls.py changed, reloading.
+INFO || 12-Jun-24 06:32:47 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+INFO || 12-Jun-24 06:33:24 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\auth_urls.py changed, reloading.
+INFO || 12-Jun-24 06:34:29 || C:\Users\user\Desktop\ProActEd\AIacademia\AIacademia\settings.py changed, reloading.
+INFO || 12-Jun-24 06:43:15 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 06:55:38 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 06:58:41 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 12-Jun-24 07:04:30 || Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 78, in login_view
+    return render(request, 'login.html')
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: login.html
+INFO || 12-Jun-24 07:06:47 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 07:11:40 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 12-Jun-24 07:13:09 || Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 77, in login_view
+    return render(request, 'academia_app/login.html')
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: academia_app/login.html
+ERROR || 12-Jun-24 07:13:21 || Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 77, in login_view
+    return render(request, 'academia_app/login.html')
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: academia_app/login.html
+ERROR || 12-Jun-24 07:20:52 || Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 77, in login_view
+    return render(request, 'academia_app/login.html')
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: academia_app/login.html
+INFO || 12-Jun-24 07:24:51 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 12-Jun-24 07:25:38 || Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 77, in login_view
+    return render(request, 'academia_app/admin/login.html')
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: academia_app/admin/login.html
+ERROR || 12-Jun-24 07:28:45 || Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 77, in login_view
+    return render(request, 'academia_app/admin/login.html')
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: academia_app/admin/login.html
+INFO || 12-Jun-24 07:29:47 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 12-Jun-24 07:33:23 || Not Found: /ws/academia_app/
