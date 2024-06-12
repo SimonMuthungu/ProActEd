@@ -5,60 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/course_recommendation_styles.css' %}">
-    <title>Course Recommendation</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/course.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Course Recommendation</title>
 </head>
 <body>
     <div class="header">
         <img src="{% static 'academia_app/logo.png' %}" alt="proacted_Logo" class="custom-logo">
         <h1> HELLO&#128075;, WELCOME!! </h1>
-       <nav>
-        <a href="{% url 'login' %}" class="login-button">Login</a>
-       </nav>
+        <nav>
+            <a href="{% url 'login' %}" class="login-button">Login</a>
+        </nav>
     </div>
     <form action="{% url 'recommend_courses' %}" method="post">
         {% csrf_token %}
         <section>
-            <h3>Please Tell Us Your Interests, we're eager to hear from you</h3>
+            <h3>Please Select Us Your Interests:</h3>
 
-            {% for interest in interests %}
-                <label for="interest_{{ interest.id }}">
-                    <input type="checkbox" id="interest_{{ interest.id }}" name="interests[]" value="{{ interest.id }}"> {{ interest.name }}
-                </label>
-            {% endfor %}
+            <div class="custom-checkbox-grid">
+                {% for interest in interests %}
+                    <div class="custom-checkbox">
+                        <input type="checkbox" id="interest_{{ interest.id }}" name="interests[]" value="{{ interest.id }}">
+                        <label for="interest_{{ interest.id }}">{{ interest.name }}</label>
+                    </div>
+                {% endfor %}
+            </div>
 
             <div class="text-area">
-                <h2 for="additionalInfo">Please describe yourself and your interests:</h2><br>
+                <h2 for="additionalInfo">Please tell us more about yourself and your interests:</h2><br>
                 <textarea id="additionalInfo" name="additionalInfo" placeholder="E.g. I love music and art. Music is my passion. Since I was a child, I've always produced music and video entertainment. It makes me feel alive, that life is worth living. I also love media and video production"></textarea>
             </div>
+
             <section>
-                <h2>Tell us of subjects you excelled at in high school</h2>
+                <h2>Select The Subjects You Excelled At In High School</h2>
                 
-                {% for subject in subjects %}
-                    <label for="subject_{{ subject.id }}">
-                        <input type="checkbox" id="subject_{{ subject.id }}" name="subjects[]" value="{{ subject.id }}"> {{ subject.name }}
-                    </label>
-                {% endfor %}
-                
+                <div class="custom-checkbox-grid">
+                    {% for subject in subjects %}
+                        <div class="custom-checkbox">
+                            <input type="checkbox" id="subject_{{ subject.id }}" name="subjects[]" value="{{ subject.id }}">
+                            <label for="subject_{{ subject.id }}">{{ subject.name }}</label>
+                        </div>
+                    {% endfor %}
+                </div>
             </section>
         </section>
         <input type="submit" value="Submit">
-
     </form>
-<script src="{% static 'js/script.js' %}"></script>
-</body>
-<footer class="footer">
-    <div class="footer-content">
-        <div class="contact-info">
-            <h2>Contact Us</h2>
-            <p>Email: info@proacted.com</p>
-            <p>Phone: +254 (7) 437-20033</p>
+    <script src="{% static 'js/script.js' %}"></script>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>Email: info@proacted.com</p>
+                <p>Phone: +254 (7) 437-20033</p>
+            </div>
         </div>
-    </div>
-    <div class="copyright">
-        <p>&copy; 2024 ProActEd; Maseno University. All Rights Reserved.</p>
-    </div>
-</footer>
-
+        <div class="copyright">
+            <p>&copy; 2024 ProActEd; Maseno University. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
 </html>
