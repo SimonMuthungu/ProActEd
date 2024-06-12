@@ -1,0 +1,1 @@
+[{"model": "academia_app.school", "pk": 2, "fields": {"name": "School of Computing And Informatics", "abbreviation": "SCI"}}, {"model": "academia_app.school", "pk": 3, "fields": {"name": "School of Mathematics Statistics And Actuarial Sciences", "abbreviation": "SMSAS"}}]
