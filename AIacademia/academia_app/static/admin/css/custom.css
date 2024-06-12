@@ -22,12 +22,15 @@ header#header {
     justify-content: space-between;
     align-items: flex-end;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     padding: 10px;
     position: fixed;
     width: 100%;
 >>>>>>> b26e4df602e02185494f791e673a9d9041f63c4e
+=======
+>>>>>>> 0270e327f8d255da739368f57e05331895135a08
     height:85;
     z-index: 1010;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -359,13 +362,13 @@ header#header {
 
 .course-box, .school-box {
     background-color: #f8f9fa;
-    border-radius: 5px;
-    padding: 15px;
+    border-radius: 10px;
+    padding: 5px;
     text-align: left;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: #262b3c;
     width: 700px;
-    height: 250px;
+    height: 280px;
 }
 
 @media (max-width: 768px) {

@@ -13341,6 +13341,7 @@ WARNING || 10-Jun-24 17:51:43 || From C:\Users\Simon\AppData\Roaming\Python\Pyth
 
 INFO || 10-Jun-24 19:30:58 || C:\Users\Simon\proacted\AIacademia\academia_app\urls.py changed, reloading.
 >>>>>>> 9d1870b2956edd879aab9ed006291c63dc9d4857
+<<<<<<< HEAD
 >>>>>>> b26e4df602e02185494f791e673a9d9041f63c4e
 INFO || 11-Jun-24 23:04:27 || C:\Users\Simon\proacted\AIacademia\academia_app\migrations\0001_initial.py changed, reloading.
 ERROR || 11-Jun-24 23:06:20 || Internal Server Error: /admin/academia_app/studentuserproxy/add/
@@ -13352,10 +13353,22 @@ Traceback (most recent call last):
     return super().execute(query, params)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 sqlite3.IntegrityError: NOT NULL constraint failed: academia_app_studentuser.Aggregate_points
+=======
+ERROR || 11-Jun-24 22:53:58 || Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: academia_app_baseuser.role
+>>>>>>> 0270e327f8d255da739368f57e05331895135a08
 
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
                ^^^^^^^^^^^^^^^^^^^^^
@@ -13462,10 +13475,132 @@ Traceback (most recent call last):
     return super().execute(query, params)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 sqlite3.IntegrityError: NOT NULL constraint failed: academia_app_studentuser.Aggregate_points
+=======
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\admin\sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\views\decorators\debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\views\generic\edit.py", line 150, in post
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\forms\forms.py", line 197, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\forms\forms.py", line 192, in errors
+    self.full_clean()
+  File "C:\Program Files\Python312\Lib\site-packages\django\forms\forms.py", line 328, in full_clean
+    self._clean_form()
+  File "C:\Program Files\Python312\Lib\site-packages\django\forms\forms.py", line 349, in _clean_form
+    cleaned_data = self.clean()
+                   ^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\forms.py", line 250, in clean
+    self.user_cache = authenticate(
+                      ^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\views\decorators\debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\__init__.py", line 79, in authenticate
+    user = backend.authenticate(request, **credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\backends.py", line 42, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\base_user.py", line 56, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: academia_app_baseuser.role
+WARNING || 11-Jun-24 23:00:42 || Not Found: /favicon.ico
+ERROR || 11-Jun-24 23:00:53 || Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: academia_app_baseuser.role
+>>>>>>> 0270e327f8d255da739368f57e05331895135a08
 
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
                ^^^^^^^^^^^^^^^^^^^^^
@@ -13573,10 +13708,371 @@ Traceback (most recent call last):
     return super().execute(query, params)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 sqlite3.IntegrityError: NOT NULL constraint failed: academia_app_studentuser.Aggregate_points
+=======
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\admin\sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\views\decorators\debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\views\generic\edit.py", line 150, in post
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\forms\forms.py", line 197, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\forms\forms.py", line 192, in errors
+    self.full_clean()
+  File "C:\Program Files\Python312\Lib\site-packages\django\forms\forms.py", line 328, in full_clean
+    self._clean_form()
+  File "C:\Program Files\Python312\Lib\site-packages\django\forms\forms.py", line 349, in _clean_form
+    cleaned_data = self.clean()
+                   ^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\forms.py", line 250, in clean
+    self.user_cache = authenticate(
+                      ^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\views\decorators\debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\__init__.py", line 79, in authenticate
+    user = backend.authenticate(request, **credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\backends.py", line 42, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\base_user.py", line 56, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: academia_app_baseuser.role
+INFO || 12-Jun-24 00:13:15 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\models.py changed, reloading.
+DEBUG || 12-Jun-24 00:21:06 || Importing BlpImagePlugin
+DEBUG || 12-Jun-24 00:21:06 || Importing BmpImagePlugin
+DEBUG || 12-Jun-24 00:21:06 || Importing BufrStubImagePlugin
+DEBUG || 12-Jun-24 00:21:06 || Importing CurImagePlugin
+DEBUG || 12-Jun-24 00:21:06 || Importing DcxImagePlugin
+DEBUG || 12-Jun-24 00:21:06 || Importing DdsImagePlugin
+DEBUG || 12-Jun-24 00:21:06 || Importing EpsImagePlugin
+DEBUG || 12-Jun-24 00:21:06 || Importing FitsImagePlugin
+DEBUG || 12-Jun-24 00:21:06 || Importing FliImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing FpxImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG || 12-Jun-24 00:21:07 || Importing FtexImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing GbrImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing GifImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing GribStubImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing Hdf5StubImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing IcnsImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing IcoImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing ImImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing ImtImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing IptcImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing JpegImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing Jpeg2KImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing McIdasImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing MicImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG || 12-Jun-24 00:21:07 || Importing MpegImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing MpoImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing MspImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing PalmImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing PcdImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing PcxImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing PdfImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing PixarImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing PngImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing PpmImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing PsdImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing QoiImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing SgiImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing SpiderImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing SunImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing TgaImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing TiffImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing WebPImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing WmfImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing XbmImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing XpmImagePlugin
+DEBUG || 12-Jun-24 00:21:07 || Importing XVThumbImagePlugin
+ERROR || 12-Jun-24 00:24:27 || Internal Server Error: /auth/dashboard/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 247, in dashboard
+    total_staff = AdminUser.objects.count()
+                  ^^^^^^^^^
+NameError: name 'AdminUser' is not defined
+INFO || 12-Jun-24 00:25:28 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 12-Jun-24 00:25:56 || Internal Server Error: /auth/dashboard/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 248, in dashboard
+    total_admins = SuperAdminUser.objects.count()
+                   ^^^^^^^^^^^^^^
+NameError: name 'SuperAdminUser' is not defined
+INFO || 12-Jun-24 00:26:35 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 12-Jun-24 00:34:44 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 00:35:58 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 00:36:04 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 00:36:36 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 00:36:37 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 00:40:52 || Not Found: /favicon.ico
+INFO || 12-Jun-24 01:15:37 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 01:21:09 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+INFO || 12-Jun-24 01:21:56 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+WARNING || 12-Jun-24 01:22:20 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 01:23:22 || Not Found: /favicon.ico
+INFO || 12-Jun-24 01:34:56 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 01:59:00 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+WARNING || 12-Jun-24 02:06:11 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 02:06:39 || Not Found: /favicon.ico
+INFO || 12-Jun-24 02:13:47 || C:\Users\Hp\Desktop\ProActEd\AIacademia\AIacademia\urls.py changed, reloading.
+INFO || 12-Jun-24 02:25:26 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\templates\academia_app\context_processors.py changed, reloading.
+WARNING || 12-Jun-24 02:26:29 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 02:26:43 || Not Found: /favicon.ico
+INFO || 12-Jun-24 02:27:03 || C:\Users\Hp\Desktop\ProActEd\AIacademia\AIacademia\settings.py changed, reloading.
+INFO || 12-Jun-24 02:28:01 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\templates\academia_app\context_processors.py changed, reloading.
+INFO || 12-Jun-24 02:28:32 || C:\Users\Hp\Desktop\ProActEd\AIacademia\AIacademia\settings.py changed, reloading.
+INFO || 12-Jun-24 02:29:02 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\templates\academia_app\context_processors.py changed, reloading.
+WARNING || 12-Jun-24 02:29:22 || Not Found: /favicon.ico
+INFO || 12-Jun-24 02:31:04 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\templates\academia_app\context_processors.py changed, reloading.
+WARNING || 12-Jun-24 02:33:36 || Not Found: /favicon.ico
+ERROR || 12-Jun-24 02:37:07 || Internal Server Error: /api/school_data/91/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 277, in school_data
+    school.graduation_probability,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'School' object has no attribute 'graduation_probability'
+ERROR || 12-Jun-24 02:38:03 || Internal Server Error: /api/school_data/91/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 277, in school_data
+    school.graduation_probability,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'School' object has no attribute 'graduation_probability'
+INFO || 12-Jun-24 02:43:04 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 12-Jun-24 02:48:14 || Not Found: /favicon.ico
+ERROR || 12-Jun-24 02:48:31 || Internal Server Error: /api/course_data/15/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 294, in course_data
+    students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
+                       ^^^
+NameError: name 'Sum' is not defined. Did you mean: 'sum'?
+ERROR || 12-Jun-24 02:48:48 || Internal Server Error: /api/course_data/15/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 294, in course_data
+    students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
+                       ^^^
+NameError: name 'Sum' is not defined. Did you mean: 'sum'?
+INFO || 12-Jun-24 02:49:47 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 12-Jun-24 02:51:08 || Not Found: /favicon.ico
+DEBUG || 12-Jun-24 02:53:47 || Importing BlpImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing BmpImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing BufrStubImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing CurImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing DcxImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing DdsImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing EpsImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing FitsImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing FliImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing FpxImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG || 12-Jun-24 02:53:47 || Importing FtexImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing GbrImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing GifImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing GribStubImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing Hdf5StubImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing IcnsImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing IcoImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing ImImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing ImtImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing IptcImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing JpegImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing Jpeg2KImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing McIdasImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing MicImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG || 12-Jun-24 02:53:47 || Importing MpegImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing MpoImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing MspImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing PalmImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing PcdImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing PcxImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing PdfImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing PixarImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing PngImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing PpmImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing PsdImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing QoiImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing SgiImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing SpiderImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing SunImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing TgaImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing TiffImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing WebPImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing WmfImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing XbmImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing XpmImagePlugin
+DEBUG || 12-Jun-24 02:53:47 || Importing XVThumbImagePlugin
+WARNING || 12-Jun-24 03:01:02 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 03:07:28 || Not Found: /favicon.ico
+ERROR || 12-Jun-24 03:08:00 || Internal Server Error: /api/course_data/16/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 294, in course_data
+    students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
+WARNING || 12-Jun-24 03:08:46 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 03:08:56 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 03:13:11 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 03:14:11 || Not Found: /favicon.ico
+ERROR || 12-Jun-24 03:14:21 || Internal Server Error: /api/course_data/20/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 294, in course_data
+    students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
+WARNING || 12-Jun-24 03:15:17 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 03:15:40 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 03:18:32 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 03:19:01 || Not Found: /favicon.ico
+INFO || 12-Jun-24 03:59:33 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\migrations\0001_initial.py changed, reloading.
+ERROR || 12-Jun-24 04:08:55 || Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: academia_app_baseuser.role
+>>>>>>> 0270e327f8d255da739368f57e05331895135a08
 
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
                ^^^^^^^^^^^^^^^^^^^^^
@@ -14268,3 +14764,248 @@ Traceback (most recent call last):
 FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Hp\\Desktop\\ProActEd\\AIacademia\\trained_models\\proacted_model_2.2_with5morefeatures.joblib'
 INFO || 11-Jun-24 23:40:22 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
 WARNING || 12-Jun-24 10:43:24 || Not Found: /ws/academia_app/
+=======
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 60, in login_view
+    user = authenticate(request, username=username, password=password)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\views\decorators\debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\contrib\auth\__init__.py", line 79, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\contrib\auth\backends.py", line 42, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\contrib\auth\base_user.py", line 56, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: academia_app_baseuser.role
+ERROR || 12-Jun-24 04:33:51 || Internal Server Error: /api/course_data/71/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 292, in course_data
+    students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
+INFO || 12-Jun-24 04:39:19 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+WARNING || 12-Jun-24 04:53:55 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+WARNING || 12-Jun-24 04:55:09 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+WARNING || 12-Jun-24 04:55:20 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+WARNING || 12-Jun-24 05:12:04 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+INFO || 12-Jun-24 05:19:23 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+INFO || 12-Jun-24 05:25:29 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+WARNING || 12-Jun-24 05:35:04 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+INFO || 12-Jun-24 06:13:00 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+WARNING || 12-Jun-24 06:17:17 || Not Found: /favicon.ico
+INFO || 12-Jun-24 06:20:38 || C:\Users\user\Desktop\ProActEd\AIacademia\AIacademia\settings.py changed, reloading.
+INFO || 12-Jun-24 06:31:14 || C:\Users\user\Desktop\ProActEd\AIacademia\AIacademia\urls.py changed, reloading.
+INFO || 12-Jun-24 06:32:47 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+INFO || 12-Jun-24 06:33:24 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\auth_urls.py changed, reloading.
+INFO || 12-Jun-24 06:34:29 || C:\Users\user\Desktop\ProActEd\AIacademia\AIacademia\settings.py changed, reloading.
+INFO || 12-Jun-24 06:43:15 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 06:55:38 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 06:58:41 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 12-Jun-24 07:04:30 || Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 78, in login_view
+    return render(request, 'login.html')
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: login.html
+INFO || 12-Jun-24 07:06:47 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 07:11:40 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 12-Jun-24 07:13:09 || Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 77, in login_view
+    return render(request, 'academia_app/login.html')
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: academia_app/login.html
+ERROR || 12-Jun-24 07:13:21 || Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 77, in login_view
+    return render(request, 'academia_app/login.html')
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: academia_app/login.html
+ERROR || 12-Jun-24 07:20:52 || Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 77, in login_view
+    return render(request, 'academia_app/login.html')
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: academia_app/login.html
+INFO || 12-Jun-24 07:24:51 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 12-Jun-24 07:25:38 || Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 77, in login_view
+    return render(request, 'academia_app/admin/login.html')
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: academia_app/admin/login.html
+ERROR || 12-Jun-24 07:28:45 || Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 77, in login_view
+    return render(request, 'academia_app/admin/login.html')
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: academia_app/admin/login.html
+INFO || 12-Jun-24 07:29:47 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 12-Jun-24 07:33:23 || Not Found: /ws/academia_app/
+>>>>>>> 0270e327f8d255da739368f57e05331895135a08
+INFO || 12-Jun-24 11:29:41 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 11:30:09 || C:\Users\Simon\proacted\AIacademia\academia_app\migrations\0001_initial.py changed, reloading.
+ERROR || 12-Jun-24 11:32:17 || Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: academia_app_baseuser.role
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 67, in login_view
+    user = authenticate(request, username=username, password=password)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\views\decorators\debug.py", line 42, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\__init__.py", line 77, in authenticate
+    user = backend.authenticate(request, **credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\backends.py", line 46, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\base_user.py", line 54, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: academia_app_baseuser.role
+INFO || 12-Jun-24 12:02:38 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 12:04:21 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 12:05:31 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 12:05:52 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 12:06:59 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 12:10:10 || C:\Users\Simon\proacted\AIacademia\AIacademia\settings.py changed, reloading.
+INFO || 12-Jun-24 12:11:51 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 12:12:28 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.

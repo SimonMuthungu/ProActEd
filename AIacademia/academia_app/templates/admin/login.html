@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    <style>
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #f44336;
+            color: white;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+        .popup.show {
+            display: block;
+        }
+        .popup-close {
+            margin-left: 10px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <div class="header">
+            <img src="{% static 'academia_app/logo.png' %}" alt="proacted_Logo" class="custom-logo">
+            <h2 id="thetitle">AIacademia</h2>
+        </div>
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            {% if messages %}
+                <div id="popup" class="popup show">
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                    <span class="popup-close" onclick="closePopup()">x</span>
+                </div>
+            {% endif %}
+            <div class="input-group">
+                <label for="username">Username :</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password :</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="input-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+        <div class="footer">
+            <p>© 2023 AIacademia Management System. All rights reserved.</p>
+        </div>
+    </div>
+    <script>
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

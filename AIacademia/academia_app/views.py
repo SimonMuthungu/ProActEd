@@ -25,8 +25,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, redirect, render
 from django.core.mail import send_mail
 from django.db.models import Q
-from django.http import (Http404, HttpRequest, HttpResponse,
-                         HttpResponseRedirect, JsonResponse)
+from django.http import (Http404, HttpRequest, HttpResponse, HttpResponseRedirect, JsonResponse)
 from django.shortcuts import get_object_or_404, redirect, render
 from python_scripts.recommender_engine import load_model
 from django.urls import reverse_lazy
@@ -55,6 +54,10 @@ logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.lo
 # logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 # C:\Users\user\proacted\AIacademia\mainlogfile.log
+# @requires_csrf_token
+def custom_csrf_failure(request, reason=""):
+    messages.error(request, "Session expired or invalid request. Please log in again.")
+    return redirect('course_recommendation')
 
 def login_view(request):
     print("Visited Login")
@@ -71,13 +74,11 @@ def login_view(request):
                 else:
                     return redirect('student_page')
             else:
-                return render(request, 'auth/login.html', {'error': 'Account is inactive.'})
+                messages.error(request, 'Account is inactive.')
         else:
-            return render(request, 'auth/login.html', {'error': 'Invalid username or password.'})
+            messages.error(request, 'Invalid username or password.')
 
-    return render(request, 'auth/login.html')
-
-
+    return render(request, 'admin/login.html')
 
 def intervention (request):
     return render (request, "academia_app/intervention.html")
@@ -142,6 +143,7 @@ def recommend_courses(request):
             # sbert_recommendations = sbert_proactedrecomm2024(user_description_about_interests, user_activities_enjoyed)
             # print(f"here are the sbert_recommendations: {sbert_recommendations}") 
             # context = {'proacted_recommendations': proacted_recommendations}
+
             return render(request, 'academia_app/recommended_courses.html', context)
         except Exception as exc:
             print(f'Something came up, please rerun the system...\n{exc}\n\n')
@@ -196,49 +198,87 @@ from .models import StudentUser
 import joblib
 
 
-def realtimestudentprob(request):
-    """This function will run every student's probability metrics and update the student table and other relevant tables, then the admin page will be caused to read the db again, ultimately reflecting on the admin interface as fresh and new manna. """
+def realtimestudentprob(request, course_id=58, school_id=91):
+    """This function will run every student's probability metrics and update the student table and other relevant tables, then the admin page will be caused to read the db again, ultimately reflecting on the admin interface as fresh and new manna."""
 
-    try:
-        # Getting the list of student IDs from the query parameters
-        student_ids = request.GET.getlist('baseuser_ptr_id')
+    if course_id and not school_id:
+        try:
+            # Getting all students associated with the given course ID
+            students = StudentUser.objects.filter(course_id=course_id)
 
-        for baseuser_ptr_id in student_ids:
-            # Get their student data
-            student_data = StudentUser.objects.get(id=baseuser_ptr_id) 
-
-            lessonsattended = student_data.Lessons_Attended
-            aggrpoints = student_data.Aggregate_points
-            pcnt_of_lessons_attended = student_data.pcnt_of_lessons_attended 
-            homework_submission_rates = student_data.homework_submission_rates
-            activity_on_learning_platforms = student_data.activity_on_learning_platforms
-            CAT_1_marks = student_data.CAT_1_marks
-            CAT_2_marks = student_data.CAT_2_marks
-            activity_on_elearning_platforms = student_data.activity_on_elearning_platforms
-
-            # Load the machine learning model
+            # Loading the machine learning model
             model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
             model = joblib.load(model_path)
 
-            # Prepare input data for prediction
-            input_data = [[lessonsattended, aggrpoints, pcnt_of_lessons_attended, homework_submission_rates, CAT_1_marks, CAT_2_marks, activity_on_elearning_platforms]] 
+            total_probability = 0.0
 
-            # Predict student real-time probabilities
-            prediction = model.predict(input_data)
+            for student in students:
+                # Prepare input data for prediction
+                input_data = [[
+                    student.Lessons_Attended,
+                    student.Aggregate_points,
+                    student.pcnt_of_lessons_attended,
+                    student.homework_submission_rates,
+                    student.CAT_1_marks,
+                    student.CAT_2_marks,
+                    student.activity_on_elearning_platforms
+                ]] 
 
-            # Write the probability to the table
-            student_data.graduation_probability = prediction[0][0] * 100
-            student_data.save()
+                # Predict student real-time probabilities
+                prediction = model.predict(input_data)
 
+                # Write the probability to the table
+                student.graduation_probability = prediction[0][0]
+                student.save()
 
-        return HttpResponse("Success")
-    except StudentUser.DoesNotExist:
-        return HttpResponse("Student not found")
+                # Update total probability
+                total_probability += prediction[0][0]
+
+            course = Course.objects.get(id=course_id)
+            course.graduation_probability = total_probability
+            course.save()
+
+        # after calculating probabilities in real time, the admin panel goes ahead to display then new values, student.graduation_probability
+            return HttpResponse("Success") # here, return the admin page with these new values.
+        except Exception as e:
+            print(f"Error: {e}")
+
+    elif school_id and not course_id:
+        # logic for school id
+        schools = Course.objects.filter(school_id=school_id) 
+        for courses in schools:
+            coursenames =  courses.name
+            course_probabilities = courses.graduation_probability
+            course_studentcount = courses.students_count
+            average_prob_to_display = course_probabilities/course_studentcount
+
+            print(f"To be displayed asa bar: {coursenames} against {average_prob_to_display}")
+        return HttpResponse("Some error occurred, plese try again") # here also, render the admin page with these two fields for the bar graph to be drawn
+    return HttpResponse("nothing")
+        
+
+def UpdateStudentsCountView(request): 
+    """This function counts the number of students taking a certain course and updates the db in real time"""
+    try:
+        # Get distinct course IDs from StudentUser table
+        course_ids = StudentUser.objects.values_list('course_id', flat=True).distinct()
+
+        # Iterate over course IDs
+        for course_id in course_ids:
+            
+            # Count number of students for each course ID
+            student_count = StudentUser.objects.filter(course_id=course_id).count()
+            
+
+            # Update Course table with student count
+            course = Course.objects.get(id=course_id)
+            print(course)
+            course.students_count = student_count
+            course.save()
+
+        return HttpResponse("Students count updated successfully.")
     except Exception as e:
-        print(f"Error: {e}")
-        return HttpResponse("An error occurred")
-
-
+            return HttpResponse(f"An error occurred: {str(e)}")
 
 @login_required
 def dashboard(request):
@@ -251,8 +291,12 @@ def dashboard(request):
         total_admins = SuperAdminUser.objects.count()
         total_schools = School.objects.count()
         total_courses = Course.objects.count()
+        schools = School.objects.all()
+        courses = Course.objects.all()
 
         context = {
+            'schools' : schools,
+            'courses' : courses,
             'total_students': total_students,
             'total_staff': total_staff,
             'total_admins': total_admins,
@@ -263,6 +307,43 @@ def dashboard(request):
         return render(request, 'admin/profile.html', context)
     else:
         return redirect('student_page')  # Students to student page
+
+#this for the pie charts in admin interface
+def school_data(request, school_id):
+    try:
+        school = School.objects.get(id=school_id)
+        students_count = StudentUser.objects.filter(school=school).count()
+
+        data = {
+            "school_name": school.name,
+            "students_count": students_count
+        }
+        return JsonResponse(data)
+    except School.DoesNotExist:
+        return JsonResponse({"error": "School not found"}, status=404)
+
+        
+#this too for the pie charts in admin interface
+def course_data(request, course_id):
+    try:
+        course = Course.objects.get(id=course_id)
+        students = StudentUser.objects.filter(course=course)
+        
+        # Example data, adjust as needed
+        labels = ["Graduation Probability", "Attendance", "Homework Submission"]
+        values = [
+            course.graduation_probability,
+            students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
+            students.aggregate(Sum('homework_submission_rates'))['homework_submission_rates__sum'] / students.count()
+        ]
+        
+        data = {
+            "labels": labels,
+            "values": values
+        }
+        return JsonResponse(data)
+    except Course.DoesNotExist:
+        return JsonResponse({"error": "Course not found"}, status=404)
 
 @login_required
 def student_page(request):
@@ -367,7 +448,6 @@ def send_message(request, user_id):
     if request.method == 'POST':
         recipient = get_object_or_404(BaseUser, id=user_id)
         content = request.POST.get('content', '')
-        
         # Create the message
         message = Message.objects.create(sender=request.user, recipient=recipient, content=content, timestamp=timezone.now())
         

@@ -88,10 +88,6 @@
             <!-- Content -->
             <div id="content" class="{% block coltype %}colM{% endblock %}">
                 {% if request.path == '/' or request.path == '/admin/' %}
-                {% comment %} <div id="dashboard-content">
-                  {% include "admin/totals.html" %}
-                  {% include "admin/profile.html" %}
-                </div> {% endcomment %}
                 {% endif %}
                 {% block pretitle %}{% endblock %}
                 {% block content_subtitle %}{% if subtitle %}<h2>{{ subtitle }}</h2>{% endif %}{% endblock %}
@@ -137,11 +133,7 @@
                 mainContent.classList.remove('full-width-content'); // Remove class to reset width
             }
         }
-
-        // Run the function on page load
         toggleDashboardContent();
-
-        // Optional: Add event listener for navigation (if using client-side routing)
         window.addEventListener('popstate', toggleDashboardContent);
     });
 </script>
