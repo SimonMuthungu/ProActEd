@@ -308,7 +308,11 @@ def student_page(request):
     print("Visited Student Page")
     print(f"User: {request.user}, Groups: {request.user.groups.all()}")
     if request.user.groups.filter(name='Student Users').exists():
-        return render(request, "academia_app/student_page.html", context={'text': 'Hello world'})
+        student_first_name = request.user.first_name
+        if not student_first_name:
+            student_first_name = request.user.username
+        
+        return render(request, "academia_app/student_page.html", context={'student_name': student_first_name})
     else:
         if request.user.is_superuser or request.user.is_staff:
             return redirect('/admin/')
@@ -316,7 +320,9 @@ def student_page(request):
 
 def course_recommendation(request):
     print("visited course recommendation page")
-    return render(request, 'academia_app/course_recommendation_page.html',)
+    interests = FieldOfInterest.objects.all()
+    subjects = HighSchoolSubject.objects.all()
+    return render(request, 'academia_app/course_recommendation_page.html',{'interests': interests, 'subjects': subjects})
 
 
 @login_required

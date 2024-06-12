@@ -13468,3 +13468,109 @@ WARNING || 12-Jun-24 05:22:00 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 05:25:09 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 05:26:27 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 05:27:15 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 10:29:14 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 10:30:26 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 10:30:46 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 10:31:32 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 10:33:28 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 10:33:28 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 10:34:13 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 10:36:19 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 10:37:28 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 10:39:44 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 10:39:55 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 10:39:55 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 10:41:45 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 10:41:52 || Not Found: /ws/academia_app/
+ERROR || 12-Jun-24 10:52:57 || Internal Server Error: /api/course_data/21/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 294, in course_data
+    students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
+ERROR || 12-Jun-24 10:53:02 || Internal Server Error: /api/course_data/20/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 294, in course_data
+    students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
+ERROR || 12-Jun-24 10:53:38 || Internal Server Error: /api/course_data/20/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 294, in course_data
+    students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
+WARNING || 12-Jun-24 11:36:48 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 12:46:42 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 13:01:55 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 13:01:55 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 13:14:10 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 13:14:10 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 13:14:54 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 13:14:54 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 13:16:03 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 13:16:03 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 13:16:38 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 13:16:39 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 13:17:26 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 13:17:58 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 13:17:58 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 13:18:55 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 13:18:55 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 13:22:01 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 13:22:01 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 13:25:53 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 13:25:53 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 13:31:16 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 13:31:16 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 13:36:25 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 13:36:25 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 13:37:13 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 13:37:13 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 13:37:26 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 13:37:41 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 13:41:24 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 13:41:24 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 13:42:01 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 13:42:01 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 13:42:20 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 13:42:21 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 13:43:21 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 13:43:21 || Not Found: /favicon.ico
+INFO || 12-Jun-24 13:53:58 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 12-Jun-24 13:57:39 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 13:57:40 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 13:57:57 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 13:57:57 || Not Found: /favicon.ico
+INFO || 12-Jun-24 14:14:41 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\models.py changed, reloading.
+WARNING || 12-Jun-24 14:17:33 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 14:17:38 || Not Found: /favicon.ico
+INFO || 12-Jun-24 14:19:44 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 14:20:06 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 12-Jun-24 14:34:54 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 14:37:38 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 14:49:14 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 14:49:27 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 14:50:01 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 14:50:08 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 14:51:22 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 14:51:43 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 14:52:22 || Not Found: /favicon.ico
