@@ -13816,3 +13816,5 @@ Traceback (most recent call last):
     students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
 TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
 >>>>>>> 78c026378df01cfaba84fdd511bf42834faea9bd
+WARNING || 12-Jun-24 15:09:33 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 15:10:03 || Not Found: /favicon.ico
