@@ -2,12 +2,48 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.login-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.image-side {
+    flex: 1;
+    position: relative;
     background-color: #f2f2f2;
 }
 
+.help-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.help-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #ffdb58bc;
+    color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 .header {
-    background-color: #020225;
+    background-color: #02022555;
     color: #FFDB58;
     padding: 10px;
     text-align: center;
@@ -17,40 +53,33 @@ body, html {
     height: 80px;
     width: 100%;
     box-sizing: border-box;
-    border-radius: 5px
 }
 
 .header h2 {
-    margin-left: 10px; /* better alignment */
     margin-right: auto;
 }
 
 .custom-logo {
     height: 70px; /* Fixed height for better alignment */
     width: auto;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .footer {
-    background-color: #020225;
+    background-color: #02022555;
     color: #FFDB58;
     padding: 5px 0;
     text-align: center;
     margin-bottom: 5px;
-    margin-top: 20px; 
-    border-radius: 5px
+    margin-top: 20px;
+    width:100%;
 }
 
 .login-box {
     width: 450px;
-    margin: 0 auto;
     background-color: #ffffff;
     border-radius: 15px; /* More rounded corners */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding: 20px;
 }
 
 .login-box h2 {
@@ -60,6 +89,9 @@ body, html {
 }
 
 .input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
     text-align: center;
     margin-top: 20px;
@@ -69,8 +101,7 @@ body, html {
 
 /* Label styles */
 .input-group label {
-    display: block;
-    margin-bottom: 5px;
+    width: 30%;
     color: #020225;
     font-weight: bold;
     text-align: left;
@@ -78,20 +109,54 @@ body, html {
 
 /* Input field styles */
 .input-group input {
-    width: 80%; /* Adjusted width to fit better with the design */
+    width: 65%; /* Adjusted width to fit better with the design */
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
     outline: none;
+}
+
+.error-message {
+    color: #ff0000;
+    margin-bottom: 0px;
     text-align: center;
 }
 
-/* Button styles */
-.input-group button {
+.popup {
+    display: none;
+    position: fixed;
+    bottom: 90%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    background-color: #FFDB58;
+    color: #020225;
+    border-radius: 5px;
+    z-index: 1000;
+    font-size: 14px;
+}
+
+.popup.show {
+    display: block;
+}
+
+.popup-close {
+    margin-left: 10px;
+    color: #020225; /* Primary color */
+    font-weight: bold;
+    cursor: pointer;
+}
+.login-bt {
+    display: flex;
+    justify-content: center; /* Centering the button */
+    margin-top: 20px; /* Adding some margin to the top */
+}
+
+.login-bt button {
     width: 50%; /* Adjusted width for better design */
     padding: 10px;
-    background-color: #007BFF;
+    background-color: #020225;
     color: #FFDB58;
     border: none;
     text-align: center;
@@ -101,12 +166,43 @@ body, html {
     transition: background-color 0.3s ease;
 }
 
-.input-group button:hover {
-    background-color: #0056b3;
+.login-bt button:hover {
+    background-color: #02022555;
+}
+.recommendation-text {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ffdb58bc;
+    color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
 }
 
-.error-message {
-    color: #ff0000;
-    margin-bottom: 15px;
-    text-align: center;
+.recommendation-text h3 {
+    margin: 0;
+    margin-right: 10px;
+    font-size: 16px;
 }
+
+.recommendation-text button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #020225; /* Change color as needed */
+    display: flex;
+    align-items: center;
+}
+
+.recommendation-text button:hover {
+    color: #0056b3; /* Change hover color as needed */
+}
+
+.recommendation-text box-icon {
+    margin-left: 5px; /* Adjust if needed for better alignment */
+}
+
+

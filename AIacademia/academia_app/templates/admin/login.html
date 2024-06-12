@@ -25,11 +25,11 @@
             </div>
         </div>
         <div class="login-side">
-            <div class="header">
-                <img src="{% static 'academia_app/logo.png' %}" alt="AIacademia Logo" class="custom-logo">
-                <h2 id="thetitle">AIacademia</h2>
-            </div>
             <div class="login-box">
+                <div class="header">
+                    <img src="{% static 'academia_app/logo.png' %}" alt="AIacademia Logo" class="custom-logo">
+                    <h2 id="thetitle">AIacademia</h2>
+                </div>
                 <form method="post" action="{% url 'login' %}">
                     {% csrf_token %}
                     {% if messages %}
@@ -52,9 +52,9 @@
                         <button type="submit">Login</button>
                     </div>
                 </form>
-            </div>
-            <div class="footer">
-                <p>© 2023 AIacademia Management System. All rights reserved.</p>
+                <div class="footer">
+                    <p>© 2023 AIacademia Management System. All rights reserved.</p>
+                </div>
             </div>
         </div>
     </div>

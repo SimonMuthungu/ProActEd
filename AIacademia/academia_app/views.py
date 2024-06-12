@@ -28,29 +28,32 @@ from django.shortcuts import get_object_or_404, redirect, render
 from python_scripts.recommender_engine import load_model
 from django.urls import reverse_lazy
 # from python_scripts.proacted_recommender2024 import proacted2024
-# from python_scripts.sbert_recommender import sbert_proactedrecomm2024
 from django.contrib.auth import authenticate, get_user_model, login, logout
 from django.http import (Http404, HttpRequest, HttpResponse,HttpResponseRedirect, JsonResponse)
 from .models import *
 from .models import BaseUser,UserProfile,Course,School,Performance,Message, ProbabilityDataTable, NewMessageNotification
 from django.urls import reverse_lazy
-#from python_scripts.proacted_recommender2024 import proacted2024
 #from python_scripts.recommender_engine import load_model
 #from python_scripts.sbert_recommender import sbert_proactedrecomm2024
-# from .models import StudentUser, AdminUser, SuperAdminUser, Attendance, Performance, Course, School, Recommender_training_data
-#from .models import BaseUser, UserProfile, Course, School, Performance, Message, probabilitydatatable, NewMessageNotification
+#from .models import StudentUser, AdminUser, SuperAdminUser, Attendance, Performance, Course, School, Recommender_training_data
 from .forms import UpdateStudentProfileForm
 from .models import (Attendance, BaseUser, Course, Message, Performance, Recommender_training_data, School, StudentUser, AdminUser, UserProfile, ProbabilityDataTable)
 from django.db.models import Count, Sum
-
+from django.shortcuts import render
+from django.views.decorators.csrf import requires_csrf_token
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
+from django.shortcuts import redirect, render
 # logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 
-
-
 # C:\Users\user\proacted\AIacademia\mainlogfile.log
+@requires_csrf_token
+def custom_csrf_failure(request, reason=""):
+    messages.error(request, "Session expired or invalid request. Please log in again.")
+    return redirect('course_recommendation')
 
 def login_view(request):
     print("Visited Login")
@@ -67,13 +70,11 @@ def login_view(request):
                 else:
                     return redirect('student_page')
             else:
-                return render(request, 'auth/login.html', {'error': 'Account is inactive.'})
+                messages.error(request, 'Account is inactive.')
         else:
-            return render(request, 'auth/login.html', {'error': 'Invalid username or password.'})
+            messages.error(request, 'Invalid username or password.')
 
-    return render(request, 'auth/login.html')
-
-
+    return render(request, 'admin/login.html')
 
 def intervention (request):
     return render (request, "academia_app/intervention.html")
@@ -412,7 +413,6 @@ def send_message(request, user_id):
     if request.method == 'POST':
         recipient = get_object_or_404(BaseUser, id=user_id)
         content = request.POST.get('content', '')
-        
         # Create the message
         message = Message.objects.create(sender=request.user, recipient=recipient, content=content, timestamp=timezone.now())
         
