@@ -14267,3 +14267,4 @@ Traceback (most recent call last):
          ^^^^^^^^^^^^^^^^^^^^
 FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Hp\\Desktop\\ProActEd\\AIacademia\\trained_models\\proacted_model_2.2_with5morefeatures.joblib'
 INFO || 11-Jun-24 23:40:22 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 12-Jun-24 10:43:24 || Not Found: /ws/academia_app/
