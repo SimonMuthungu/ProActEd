@@ -13612,3 +13612,67 @@ Traceback (most recent call last):
 django.template.exceptions.TemplateDoesNotExist: academia_app/admin/login.html
 INFO || 12-Jun-24 07:29:47 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
 WARNING || 12-Jun-24 07:33:23 || Not Found: /ws/academia_app/
+WARNING || 12-Jun-24 11:49:15 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 11:49:32 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 11:50:08 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 11:52:26 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 11:53:01 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 11:54:26 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 11:55:50 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 12:37:16 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 12:38:18 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 12:47:57 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 12:48:11 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 12:50:40 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 13:01:11 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 13:05:32 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 13:33:55 || Not Found: /ws/academia_app/
+ERROR || 12-Jun-24 13:46:46 || Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 77, in login_view
+    return render(request, 'admin/login.html')
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'recommendation_page' not found. 'recommendation_page' is not a valid view function or pattern name.
+ERROR || 12-Jun-24 14:25:42 || Internal Server Error: /api/course_data/8/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 295, in course_data
+    students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
+ERROR || 12-Jun-24 14:25:45 || Internal Server Error: /api/course_data/14/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 295, in course_data
+    students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
