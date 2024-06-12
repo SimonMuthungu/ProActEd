@@ -106,7 +106,7 @@ def admin_dashboard(request):
         'user_group': user_group,
     }
 
-    return render(request, 'admin/base.html', context)
+    return render(request, '/admin/', context)
 
 # loading the script and generating output
 def recommend_courses(request):
@@ -235,14 +235,9 @@ def realtimestudentprob(request):
         print(f"Error: {e}")
         return HttpResponse("An error occurred")
 
-
-
-
-
 @login_required
 def dashboard(request):
     print("Visited Dashboard")
-    
     # Redirect users based on their type
     if request.user.is_superuser or request.user.is_staff:
         total_students = StudentUser.objects.count()
@@ -267,7 +262,7 @@ def dashboard(request):
     else:
         return redirect('student_page')  # Students to student page
 
-#this for the pie charts in admin interface
+# View to fetch data for schools for pie charts
 def school_data(request, school_id):
     try:
         school = School.objects.get(id=school_id)
@@ -281,21 +276,19 @@ def school_data(request, school_id):
     except School.DoesNotExist:
         return JsonResponse({"error": "School not found"}, status=404)
 
-        
-#this too for the pie charts in admin interface
+# View to fetch data for courses for pie charts
 def course_data(request, course_id):
     try:
         course = Course.objects.get(id=course_id)
         students = StudentUser.objects.filter(course=course)
-        
-        # Example data, adjust as needed
+
         labels = ["Graduation Probability", "Attendance", "Homework Submission"]
         values = [
             course.graduation_probability,
             students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
             students.aggregate(Sum('homework_submission_rates'))['homework_submission_rates__sum'] / students.count()
         ]
-        
+
         data = {
             "labels": labels,
             "values": values
@@ -303,6 +296,37 @@ def course_data(request, course_id):
         return JsonResponse(data)
     except Course.DoesNotExist:
         return JsonResponse({"error": "Course not found"}, status=404)
+
+# View to fetch list of schools
+def get_schools(request):
+    schools = School.objects.all().values('id', 'name')
+    return JsonResponse(list(schools), safe=False)
+
+# View to fetch list of courses
+def get_courses(request):
+    courses = Course.objects.all().values('id', 'name')
+    return JsonResponse(list(courses), safe=False)
+
+# View to fetch list of courses for a specific school
+@login_required
+def get_courses_by_school(request, school_id):
+    if request.user.is_authenticated:
+        courses = Course.objects.filter(school_id=school_id).values('id', 'name')
+        course_list = list(courses)
+        return JsonResponse(course_list, safe=False)
+    else:
+        return JsonResponse({"error": "Not authorized"}, status=403)
+    
+@login_required
+def school_detail(request, school_id):
+    school = get_object_or_404(School, id=school_id)
+    return render(request, 'admin/school_detail.html', {'school': school})
+
+@login_required
+def course_detail(request, course_id):
+    course = get_object_or_404(Course, id=course_id)
+    return render(request, 'admin/course_detail.html', {'course': course})
+
 
 @login_required
 def student_page(request):
@@ -317,8 +341,7 @@ def student_page(request):
 
 def course_recommendation(request):
     print("visited course recommendation page")
-    return render(request, 'academia_app/course_recommendation_page.html',)
-
+    return render(request, 'academia_app/course_recommendation_page.html')
 
 @login_required
 def school_list(request):
@@ -329,17 +352,7 @@ def school_list(request):
     else:
         return redirect('login')
 
-@login_required
-def get_courses(request, school_id):
-    if request.user.is_authenticated:
-        courses = Course.objects.filter(school_id=school_id).values('id', 'name')
-        course_list = list(courses)
-        return JsonResponse(course_list, safe=False)
-    else:
-        return JsonResponse({"error": "Not authorized"}, status=403)
-
 # this below is for the messages
-
 BaseUser = get_user_model()
 
 @login_required

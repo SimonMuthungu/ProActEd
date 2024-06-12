@@ -13676,3 +13676,545 @@ Traceback (most recent call last):
   File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 295, in course_data
     students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
 TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
+INFO || 12-Jun-24 15:12:54 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+ERROR || 12-Jun-24 15:18:00 || Internal Server Error: /api/course_data/17/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 295, in course_data
+    students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
+INFO || 12-Jun-24 15:37:49 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 12-Jun-24 15:45:19 || Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\defaulttags.py", line 326, in render
+    return nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\defaulttags.py", line 242, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'school_detail' not found. 'school_detail' is not a valid view function or pattern name.
+INFO || 12-Jun-24 16:13:23 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 16:14:29 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+ERROR || 12-Jun-24 16:19:17 || Internal Server Error: /api/course_data/24/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 295, in course_data
+    students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
+INFO || 12-Jun-24 16:22:11 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+INFO || 12-Jun-24 16:25:28 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 12-Jun-24 17:20:32 || Internal Server Error: /api/course_data/2/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 293, in course_data
+    "labels": labels,
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
+WARNING || 12-Jun-24 19:40:19 || Not Found: /favicon.ico
+INFO || 12-Jun-24 19:55:37 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+INFO || 12-Jun-24 19:57:34 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 12-Jun-24 20:18:31 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 20:19:13 || Not Found: /api/get_courses/
+WARNING || 12-Jun-24 20:19:18 || Not Found: /api/get_courses/
+WARNING || 12-Jun-24 20:19:24 || Not Found: /api/get_courses/
+WARNING || 12-Jun-24 20:20:02 || Not Found: /api/get_courses/
+WARNING || 12-Jun-24 20:28:16 || Not Found: /admin/school_id
+WARNING || 12-Jun-24 20:33:04 || Not Found: /api/get_courses/${school_id}/
+INFO || 12-Jun-24 20:42:20 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+WARNING || 12-Jun-24 20:43:47 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 20:54:17 || Not Found: /favicon.ico
+INFO || 12-Jun-24 20:57:19 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+INFO || 12-Jun-24 20:58:04 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 12-Jun-24 21:01:35 || Internal Server Error: /school_detail/103/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 322, in school_detail
+    school = get_object_or_404(School, id=school_id)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: school_detail.html
+ERROR || 12-Jun-24 21:02:21 || Internal Server Error: /course_detail/28/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 326, in course_detail
+    def course_detail(request, course_id):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: course_detail.html
+INFO || 12-Jun-24 21:03:32 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 12-Jun-24 21:18:07 || Not Found: /favicon.ico
+INFO || 12-Jun-24 21:24:12 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 12-Jun-24 21:25:52 || Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 261, in dashboard
+    return render(request, 'admin/profile.html', context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: /admin/
+INFO || 12-Jun-24 21:26:08 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 12-Jun-24 21:31:19 || Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\defaulttags.py", line 326, in render
+    return nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '/admin/' not found. '/admin/' is not a valid view function or pattern name.
+INFO || 12-Jun-24 21:34:23 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 12-Jun-24 21:36:52 || Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\defaulttags.py", line 326, in render
+    return nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '#' not found. '#' is not a valid view function or pattern name.
+ERROR || 12-Jun-24 22:12:35 || Internal Server Error: /admin/password_change/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\engine.py", line 214, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: admin/school_details
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: admin/school_details
+WARNING || 12-Jun-24 22:12:36 || Not Found: /favicon.ico
+ERROR || 12-Jun-24 22:13:28 || Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\engine.py", line 214, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: admin/school_details
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: admin/school_details
+ERROR || 12-Jun-24 22:13:44 || Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\engine.py", line 214, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: admin/school_details
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: admin/school_details
+ERROR || 12-Jun-24 22:24:46 || Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\engine.py", line 214, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: admin/school_details.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: admin/school_details.html
+WARNING || 12-Jun-24 22:25:34 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 22:32:24 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 22:34:44 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 22:35:39 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 22:57:38 || Not Found: /favicon.ico
+WARNING || 12-Jun-24 22:59:06 || Not Found: /favicon.ico
