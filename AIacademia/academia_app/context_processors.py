@@ -3,6 +3,8 @@ from .models import AdminUser, SuperAdminUser, StudentUser, School, Course
 def admin_dashboard_context(request):
     if request.user.is_authenticated and (request.user.is_superuser or request.user.is_staff):
         return {
+            'schools': School.objects.all(),
+            'courses': Course.objects.all(),
             'total_students': StudentUser.objects.count(),
             'total_staff': AdminUser.objects.count(),
             'total_admins': SuperAdminUser.objects.count(),

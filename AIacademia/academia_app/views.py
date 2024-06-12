@@ -31,23 +31,23 @@ from django.urls import reverse_lazy
 # from python_scripts.sbert_recommender import sbert_proactedrecomm2024
 from django.contrib.auth import authenticate, get_user_model, login, logout
 from django.http import (Http404, HttpRequest, HttpResponse,HttpResponseRedirect, JsonResponse)
-from .models import StudentUser, Attendance, Performance, Course, School, Recommender_training_data 
-from .models import BaseUser,UserProfile,Course,School,Performance,Message, probabilitydatatable, NewMessageNotification
+from .models import *
+from .models import BaseUser,UserProfile,Course,School,Performance,Message, ProbabilityDataTable, NewMessageNotification
 from django.urls import reverse_lazy
 #from python_scripts.proacted_recommender2024 import proacted2024
 #from python_scripts.recommender_engine import load_model
 #from python_scripts.sbert_recommender import sbert_proactedrecomm2024
 # from .models import StudentUser, AdminUser, SuperAdminUser, Attendance, Performance, Course, School, Recommender_training_data
 #from .models import BaseUser, UserProfile, Course, School, Performance, Message, probabilitydatatable, NewMessageNotification
+from .forms import UpdateStudentProfileForm
+from .models import (Attendance, BaseUser, Course, Message, Performance, Recommender_training_data, School, StudentUser, AdminUser, UserProfile, ProbabilityDataTable)
+from django.db.models import Count, Sum
 
 # logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
-from .forms import UpdateStudentProfileForm
-from .models import (Attendance, BaseUser, Course, Message, Performance,
-                     Recommender_training_data, School, StudentUser,
-                     UserProfile, probabilitydatatable)
+
 
 
 # C:\Users\user\proacted\AIacademia\mainlogfile.log
@@ -236,7 +236,7 @@ def realtimestudentprob(request):
 
 
 
-    
+
 
 @login_required
 def dashboard(request):
@@ -249,8 +249,12 @@ def dashboard(request):
         total_admins = SuperAdminUser.objects.count()
         total_schools = School.objects.count()
         total_courses = Course.objects.count()
+        schools = School.objects.all()
+        courses = Course.objects.all()
 
         context = {
+            'schools' : schools,
+            'courses' : courses,
             'total_students': total_students,
             'total_staff': total_staff,
             'total_admins': total_admins,
@@ -261,6 +265,43 @@ def dashboard(request):
         return render(request, 'admin/profile.html', context)
     else:
         return redirect('student_page')  # Students to student page
+
+#this for the pie charts in admin interface
+def school_data(request, school_id):
+    try:
+        school = School.objects.get(id=school_id)
+        students_count = StudentUser.objects.filter(school=school).count()
+
+        data = {
+            "school_name": school.name,
+            "students_count": students_count
+        }
+        return JsonResponse(data)
+    except School.DoesNotExist:
+        return JsonResponse({"error": "School not found"}, status=404)
+
+        
+#this too for the pie charts in admin interface
+def course_data(request, course_id):
+    try:
+        course = Course.objects.get(id=course_id)
+        students = StudentUser.objects.filter(course=course)
+        
+        # Example data, adjust as needed
+        labels = ["Graduation Probability", "Attendance", "Homework Submission"]
+        values = [
+            course.graduation_probability,
+            students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
+            students.aggregate(Sum('homework_submission_rates'))['homework_submission_rates__sum'] / students.count()
+        ]
+        
+        data = {
+            "labels": labels,
+            "values": values
+        }
+        return JsonResponse(data)
+    except Course.DoesNotExist:
+        return JsonResponse({"error": "Course not found"}, status=404)
 
 @login_required
 def student_page(request):

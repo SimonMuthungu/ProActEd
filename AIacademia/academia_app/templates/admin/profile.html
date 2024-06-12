@@ -18,8 +18,65 @@
         </div>
     </div>
     <div class="school-box">
-        <h2>School Probability area to be occuped by a chart or graph</h2>
-        <h4>Here</h4>
+        <select id="school-dropdown">
+            <option value="">Select a School</option>
+            {% for school in schools %}
+            <option value="{{ school.id }}">{{ school.name }}</option>
+            {% endfor %}
+        </select>
+        <canvas id="school-chart" width="700" height="250"></canvas>
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const dropdown = document.getElementById("school-dropdown");
+        const ctx = document.getElementById('school-chart').getContext('2d');
+
+        const chart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: [],
+                datasets: [{
+                    label: 'Students Count',
+                    data: [],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+            }
+        });
+
+        dropdown.addEventListener('change', function() {
+            const schoolId = this.value;
+            if (schoolId) {
+                fetch(`/api/school_data/${schoolId}/`)
+                    .then(response => response.json())
+                    .then(data => {
+                        chart.data.labels = [data.school_name];
+                        chart.data.datasets[0].data = [data.students_count];
+                        chart.update();
+                    });
+            }
+        });
+    });
+</script>

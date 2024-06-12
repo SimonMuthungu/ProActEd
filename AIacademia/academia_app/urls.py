@@ -11,9 +11,11 @@ urlpatterns = [
     path('login/', views.login_view, name='login'),
     path('logout/', LogoutView.as_view(next_page='course_recommendation'), name='logout'),
     path('dashboard/', views.dashboard, name='dashboard'),
+    path('api/school_data/<int:school_id>/', views.school_data, name='school_data'),
     path("profile/", views.profile, name='profile'),
     path("student_page/", views.student_page, name="student_page"),
     path('api/get_courses/<int:school_id>/', views.get_courses, name='get_courses'),
+    path('api/course_data/<int:course_id>/', views.course_data, name='course_data'),
     path('course_recommendation/', views.course_recommendation, name='course_recommendation'),
     
     path('student_page/inbox/', views.inbox, name='inbox'),
