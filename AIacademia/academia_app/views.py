@@ -17,7 +17,6 @@ from .forms import UpdateStudentProfileForm
 from django.contrib.auth.models import User
 from django.contrib.auth.views import LoginView
 from django.utils.dateparse import parse_datetime
-from python_scripts.recommender_engine import load_model
 from django.contrib.auth.decorators import login_required
 # from python_scripts.proacted_recommender2024 import proacted2024
 from django.shortcuts import get_object_or_404, redirect, render
@@ -25,7 +24,6 @@ from django.core.mail import send_mail
 from django.db.models import Q
 from django.http import (Http404, HttpRequest, HttpResponse, HttpResponseRedirect, JsonResponse)
 from django.shortcuts import get_object_or_404, redirect, render
-from python_scripts.recommender_engine import load_model
 from django.urls import reverse_lazy
 # from python_scripts.proacted_recommender2024 import proacted2024
 from django.contrib.auth import authenticate, get_user_model, login, logout
@@ -34,7 +32,6 @@ from .models import *
 from .models import BaseUser,UserProfile,Course,School,Performance,Message, ProbabilityDataTable, NewMessageNotification
 from django.urls import reverse_lazy
 #from python_scripts.recommender_engine import load_model
-#from python_scripts.sbert_recommender import sbert_proactedrecomm2024
 #from .models import StudentUser, AdminUser, SuperAdminUser, Attendance, Performance, Course, School, Recommender_training_data
 from .forms import UpdateStudentProfileForm
 from .models import (Attendance, BaseUser, Course, Message, Performance, Recommender_training_data, School, StudentUser, AdminUser, UserProfile, ProbabilityDataTable)
@@ -309,7 +306,11 @@ def student_page(request):
     print("Visited Student Page")
     print(f"User: {request.user}, Groups: {request.user.groups.all()}")
     if request.user.groups.filter(name='Student Users').exists():
-        return render(request, "academia_app/student_page.html", context={'text': 'Hello world'})
+        student_first_name = request.user.first_name
+        if not student_first_name:
+            student_first_name = request.user.username
+        
+        return render(request, "academia_app/student_page.html", context={'student_name': student_first_name})
     else:
         if request.user.is_superuser or request.user.is_staff:
             return redirect('/admin/')
@@ -317,7 +318,9 @@ def student_page(request):
 
 def course_recommendation(request):
     print("visited course recommendation page")
-    return render(request, 'academia_app/course_recommendation_page.html',)
+    interests = FieldOfInterest.objects.all()
+    subjects = HighSchoolSubject.objects.all()
+    return render(request, 'academia_app/course_recommendation_page.html',{'interests': interests, 'subjects': subjects})
 
 
 @login_required

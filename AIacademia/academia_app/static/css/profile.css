@@ -178,3 +178,32 @@ form button {
 form button:hover {
     background-color: #0056b3;
 }
+
+.bar-chart-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#barChart {
+    display: block;
+    margin: auto; /* Center the canvas horizontally */
+    width: 80%; /* Adjust canvas width as needed */
+    height: 500px; /* Adjust canvas height as needed */
+}
+
+.info-div {
+    position: relative;
+    top: 20px; /* Adjust top positioning as desired */
+    left: 20px; /* Adjust left positioning as desired */
+    padding: 10px;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    pointer-events: none; /* Ensure the info div doesn't interfere with clicks on the canvas */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #262b3c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Ensure infoDiv is on top */
+}
