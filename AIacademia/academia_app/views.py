@@ -31,7 +31,7 @@ from django.urls import reverse_lazy
 # from python_scripts.sbert_recommender import sbert_proactedrecomm2024
 from django.contrib.auth import authenticate, get_user_model, login, logout
 from django.http import (Http404, HttpRequest, HttpResponse,HttpResponseRedirect, JsonResponse)
-from .models import StudentUser, Attendance, Performance, Course, School, Recommender_training_data 
+from .models import *
 from .models import BaseUser,UserProfile,Course,School,Performance,Message, ProbabilityDataTable, NewMessageNotification
 from django.urls import reverse_lazy
 #from python_scripts.recommender_engine import load_model
@@ -45,8 +45,16 @@ from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.shortcuts import redirect, render
 
+
 logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+
+
+from .forms import UpdateStudentProfileForm
+from .models import (Attendance, BaseUser, Course, Message, Performance,
+                     Recommender_training_data, School, StudentUser,
+                     UserProfile, ProbabilityDataTable)
+
 # logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 # @requires_csrf_token
@@ -154,6 +162,7 @@ def recommend_courses(request):
         
 def predict_probability(request, student_id=3): 
     try: 
+
         model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         #model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
@@ -193,7 +202,7 @@ from .models import StudentUser
 import joblib
 
 
-def realtimestudentprob(request, course_id=58, school_id=91):
+def realtimestudentprob(request, course_id=None, school_id=99):
     """This function will run every student's probability metrics and update the student table and other relevant tables, then the admin page will be caused to read the db again, ultimately reflecting on the admin interface as fresh and new manna."""
 
     if course_id and not school_id:
@@ -206,6 +215,7 @@ def realtimestudentprob(request, course_id=58, school_id=91):
             model = joblib.load(model_path)
 
             total_probability = 0.0
+            all_student_probabilities = []
 
             for student in students:
                 # Prepare input data for prediction
@@ -221,6 +231,7 @@ def realtimestudentprob(request, course_id=58, school_id=91):
 
                 # Predict student real-time probabilities
                 prediction = model.predict(input_data)
+                print(f'prediction for {student} {prediction[0][0]}')
 
                 # Write the probability to the table
                 student.graduation_probability = prediction[0][0]
@@ -229,27 +240,43 @@ def realtimestudentprob(request, course_id=58, school_id=91):
                 # Update total probability
                 total_probability += prediction[0][0]
 
+                all_student_probabilities.append(prediction[0][0]) 
+
             course = Course.objects.get(id=course_id)
             course.graduation_probability = total_probability
             course.save()
+            print(f'saved data for {student}: in course table as {total_probability}')
 
-        # after calculating probabilities in real time, the admin panel goes ahead to display then new values, student.graduation_probability
-            return HttpResponse("Success") # here, return the admin page with these new values.
+            context = {'all_student_probabilities':all_student_probabilities}
+            print('all_student_probabilities: ', all_student_probabilities)
+
+            return render(request, 'admin/base.html', context) # here, return the admin page with these new values.
         except Exception as e:
-            print(f"Error: {e}")
+            print(f"\n\nError: {e}\n\n")
 
-    elif school_id and not course_id:
+    elif school_id:
         # logic for school id
         schools = Course.objects.filter(school_id=school_id) 
         for courses in schools:
             coursenames =  courses.name
             course_probabilities = courses.graduation_probability
             course_studentcount = courses.students_count
-            average_prob_to_display = course_probabilities/course_studentcount
+ 
+            try:
+                average_prob_to_display = course_probabilities/course_studentcount
+            except:
+                average_prob_to_display = 0
+                print('Null encountered, this will show on the graph as zero')
 
-            print(f"To be displayed asa bar: {coursenames} against {average_prob_to_display}")
-        return HttpResponse("Some error occurred, plese try again") # here also, render the admin page with these two fields for the bar graph to be drawn
-    return HttpResponse("nothing")
+            # average_prob_to_display to be sent to admin, to draw the graph
+            # print(f'\ncoursenames: {coursenames} :: course_probabilities: {course_probabilities} :: course_studentcount: {course_studentcount} :: average_prob_for_the_course {average_prob_to_display}')
+
+            print(f"\nTo be displayed as a bar graph: {coursenames} with value {average_prob_to_display}") 
+
+            context = {'average_prob_to_display':average_prob_to_display, 'coursenames': coursenames} 
+
+        return render(request, 'admin/base.html', context) #this needs to be changed to sth local, ie, shouldnt refresh whole page but the part where the schools are.
+    return HttpResponse("Returns to admin") 
         
 
 def UpdateStudentsCountView(request): 
@@ -353,11 +380,16 @@ def student_page(request):
     print("Visited Student Page")
     print(f"User: {request.user}, Groups: {request.user.groups.all()}")
     if request.user.groups.filter(name='Student Users').exists():
-        student_first_name = request.user.first_name
-        if not student_first_name:
-            student_first_name = request.user.username
-        
-        return render(request, "academia_app/student_page.html", context={'student_name': student_first_name})
+
+        # Get the associated StudentUser object of the logged-in user
+        try:
+            student_user = StudentUser.objects.get(username=request.user.username)
+            student_id = student_user.id
+            print(f"Student ID: {student_id}")
+            return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+        except StudentUser.DoesNotExist:
+            print("StudentUser object does not exist for the current user")
+            return redirect('login') # student doesnt exist, so they login first
     else:
         if request.user.is_superuser or request.user.is_staff:
             return redirect('/admin/')

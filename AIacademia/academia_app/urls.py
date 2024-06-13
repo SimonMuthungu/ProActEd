@@ -23,7 +23,7 @@ urlpatterns = [
     path('recommend_courses/', views.recommend_courses, name='recommend_courses'),
     path('predict/', views.predict, name='predict'),
     path('predict_probability/', views.predict_probability, name='predict_probability'),
-    path('predict_probability/<int:student_id>/', views.predict_probability, name='predict_probability'),
+    path('realtimestudentprobpredict_probability/<int:course_id>/', views.realtimestudentprob, name='predict_probability'),
     path('realtimestudentprob/', views.realtimestudentprob, name='realtimestudentprob'),
     path('update_students_count/', views.UpdateStudentsCountView, name='update_students_count'),
 
