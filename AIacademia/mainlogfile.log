@@ -15404,3 +15404,41 @@ INFO || 12-Jun-24 12:10:10 || C:\Users\Simon\proacted\AIacademia\AIacademia\sett
 INFO || 12-Jun-24 12:11:51 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
 INFO || 12-Jun-24 12:12:28 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
 >>>>>>> 76da1e6c24bb634ec8c1d90f90672ffd9baf02a1
+WARNING || 13-Jun-24 15:01:40 || Not Found: /favicon.ico
+WARNING || 13-Jun-24 15:04:15 || Not Found: /ws/academia_app/
+WARNING || 13-Jun-24 15:06:55 || Not Found: /favicon.ico
+ERROR || 13-Jun-24 15:06:57 || Internal Server Error: /api/course_data/20/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 331, in course_data
+    students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
+ERROR || 13-Jun-24 15:21:26 || Internal Server Error: /course_recommendation/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 360, in course_recommendation
+    interests = FieldOfInterest.objects.all()
+                ^^^^^^^^^^^^^^^
+NameError: name 'FieldOfInterest' is not defined
+INFO || 13-Jun-24 15:22:01 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 13-Jun-24 15:23:50 || Not Found: /favicon.ico
+WARNING || 13-Jun-24 15:25:01 || Not Found: /ws/academia_app/
+INFO || 13-Jun-24 15:39:58 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 15:41:46 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 15:43:27 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 13-Jun-24 15:43:40 || Not Found: /favicon.ico
+WARNING || 13-Jun-24 15:48:13 || Not Found: /favicon.ico
+WARNING || 13-Jun-24 15:49:02 || Not Found: /favicon.ico
+WARNING || 13-Jun-24 15:49:44 || Not Found: /favicon.ico
+WARNING || 13-Jun-24 15:49:57 || Not Found: /favicon.ico
