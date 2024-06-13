@@ -94,22 +94,14 @@ def create_student_user(i):
             if start <= course_id <= end:
                 break
         
-        # Create BaseUser
-        user = BaseUser.objects.create_user(
-            username=username, 
-            password='changeme', 
+        # Create StudentUser
+        student_user = StudentUser.objects.create(
+            username=username,
+            password='changeme',
             first_name=first_name,
             last_name=last_name,
-            email=f'{username}@gmail.com'
-        )
-        
-        # Assign user to Student User group
-        student_user_group, _ = Group.objects.get_or_create(name='Student User')
-        user.groups.add(student_user_group)
-        
-        # Create StudentUser with the default value for student_field
-        student_user = StudentUser.objects.create(
-            baseuser_ptr=user,
+            email=f'{username}@gmail.com',
+            student_field=student_field,
             name=name,
             registration_number=registration_number,
             course_id=course_id,
@@ -125,9 +117,12 @@ def create_student_user(i):
             CAT_2_marks=cat_2_marks,
             Deadline_Adherence=deadline_adherence,
             teachers_comments_so_far=teachers_comments,
-            activity_on_elearning_platforms=activity_on_elearning_platforms,
-            student_field=student_field  # Provide a default value
+            activity_on_elearning_platforms=activity_on_elearning_platforms
         )
+        
+        # Assign user to Student User group
+        student_user_group, _ = Group.objects.get_or_create(name='Student Users')
+        student_user.groups.add(student_user_group)
         
         return student_user
     except Exception as e:
