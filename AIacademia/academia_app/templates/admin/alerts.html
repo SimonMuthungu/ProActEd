@@ -44,6 +44,81 @@
                         // Configuration for x-axis
                         title: {
                             display: true,
+                            text: 'Student IDs'
+                        }
+                    },
+                    y: {
+                        // Configuration for y-axis
+                        title: {
+                            display: true,
+                            text: 'Graduation Probability'
+                        }
+                    }
+                }
+            }
+        });
+
+        dropdown.addEventListener('change', function() {
+            const courseId = this.value;
+            if (courseId) {
+                fetch(`/api/course_data/${courseId}/`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        if (data.graduation_probabilities && Array.isArray(data.graduation_probabilities) &&
+                            data.student_ids && Array.isArray(data.student_ids) &&
+                            data.graduation_probabilities.length === data.student_ids.length) {
+                            
+                            // Map the data correctly
+                            chart.data.datasets[0].data = data.graduation_probabilities.map((prob, index) => ({
+                                x: data.student_ids[index],
+                                y: prob
+                            }));
+                        } else {
+                            console.error('Invalid data format:', data);
+                            chart.data.datasets[0].data = [];
+                        }
+                        chart.update();
+                    })
+                    .catch(error => {
+                        console.error('Error fetching or processing data:', error);
+                        chart.data.datasets[0].data = [];
+                        chart.update();
+                    });
+            }
+        });
+    });
+</script>
+
+
+<!-- <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const dropdown = document.getElementById("course-dropdown");
+        const ctx = document.getElementById('course-chart').getContext('2d');
+
+        const chart = new Chart(ctx, {
+            type: 'scatter', // Change chart type to scatter
+            data: {
+                datasets: [{
+                    label: 'Course Distribution',
+                    data: [], // Will be populated dynamically
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        // Configuration for x-axis
+                        title: {
+                            display: true,
                             text: 'Students'
                         }
                     },
@@ -71,3 +146,4 @@
         });
     });
 </script>
+ -->
