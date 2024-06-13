@@ -15068,6 +15068,7 @@ django.template.exceptions.TemplateDoesNotExist: academia_app/admin/login.html
 INFO || 12-Jun-24 07:29:47 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
 WARNING || 12-Jun-24 07:33:23 || Not Found: /ws/academia_app/
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0270e327f8d255da739368f57e05331895135a08
 INFO || 12-Jun-24 11:29:41 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
 INFO || 12-Jun-24 11:30:09 || C:\Users\Simon\proacted\AIacademia\academia_app\migrations\0001_initial.py changed, reloading.
@@ -15503,6 +15504,8 @@ INFO || 12-Jun-24 22:21:15 || Probability model proacted_prob_model2 loaded
 WARNING || 12-Jun-24 22:21:15 || 5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000001399BAF76A0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
 WARNING || 12-Jun-24 22:21:16 || Not Found: /ws/academia_app/
 =======
+=======
+>>>>>>> bc8d88ec2a1660b5dd3c4218ff5c99b7bb3bfe77
 WARNING || 12-Jun-24 11:49:15 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 11:49:32 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 11:50:08 || Not Found: /favicon.ico
@@ -15756,8 +15759,27 @@ WARNING || 12-Jun-24 19:54:50 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 19:54:58 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 19:55:07 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 19:55:27 || Not Found: /favicon.ico
+<<<<<<< HEAD
 >>>>>>> bd072ec40685e95427346e71dcbd112c7a3a8439
 ERROR || 13-Jun-24 11:58:14 || Internal Server Error: /api/course_data/18/
+=======
+=======
+>>>>>>> 0270e327f8d255da739368f57e05331895135a08
+INFO || 12-Jun-24 11:29:41 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 11:30:09 || C:\Users\Simon\proacted\AIacademia\academia_app\migrations\0001_initial.py changed, reloading.
+ERROR || 12-Jun-24 11:32:17 || Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: academia_app_baseuser.role
+
+The above exception was the direct cause of the following exception:
+
+>>>>>>> bc8d88ec2a1660b5dd3c4218ff5c99b7bb3bfe77
 Traceback (most recent call last):
   File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
@@ -15765,6 +15787,7 @@ Traceback (most recent call last):
   File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<<<<<<< HEAD
   File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 363, in course_data
     students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
@@ -15804,3 +15827,104 @@ INFO || 13-Jun-24 17:18:18 || C:\Users\Simon\proacted\AIacademia\academia_app\vi
 INFO || 13-Jun-24 17:18:48 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
 INFO || 13-Jun-24 17:19:43 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
 INFO || 13-Jun-24 17:20:03 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+=======
+  File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 67, in login_view
+    user = authenticate(request, username=username, password=password)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\views\decorators\debug.py", line 42, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\__init__.py", line 77, in authenticate
+    user = backend.authenticate(request, **credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\backends.py", line 46, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\base_user.py", line 54, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: academia_app_baseuser.role
+INFO || 12-Jun-24 12:02:38 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 12:04:21 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 12:05:31 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 12:05:52 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 12:06:59 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 12:10:10 || C:\Users\Simon\proacted\AIacademia\AIacademia\settings.py changed, reloading.
+INFO || 12-Jun-24 12:11:51 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Jun-24 12:12:28 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+>>>>>>> 76da1e6c24bb634ec8c1d90f90672ffd9baf02a1
+WARNING || 13-Jun-24 15:01:40 || Not Found: /favicon.ico
+WARNING || 13-Jun-24 15:04:15 || Not Found: /ws/academia_app/
+WARNING || 13-Jun-24 15:06:55 || Not Found: /favicon.ico
+ERROR || 13-Jun-24 15:06:57 || Internal Server Error: /api/course_data/20/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 331, in course_data
+    students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
+ERROR || 13-Jun-24 15:21:26 || Internal Server Error: /course_recommendation/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 360, in course_recommendation
+    interests = FieldOfInterest.objects.all()
+                ^^^^^^^^^^^^^^^
+NameError: name 'FieldOfInterest' is not defined
+INFO || 13-Jun-24 15:22:01 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 13-Jun-24 15:23:50 || Not Found: /favicon.ico
+WARNING || 13-Jun-24 15:25:01 || Not Found: /ws/academia_app/
+INFO || 13-Jun-24 15:39:58 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 15:41:46 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 15:43:27 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 13-Jun-24 15:43:40 || Not Found: /favicon.ico
+WARNING || 13-Jun-24 15:48:13 || Not Found: /favicon.ico
+WARNING || 13-Jun-24 15:49:02 || Not Found: /favicon.ico
+WARNING || 13-Jun-24 15:49:44 || Not Found: /favicon.ico
+WARNING || 13-Jun-24 15:49:57 || Not Found: /favicon.ico
+>>>>>>> bc8d88ec2a1660b5dd3c4218ff5c99b7bb3bfe77
+WARNING || 13-Jun-24 22:51:20 || Not Found: /favicon.ico

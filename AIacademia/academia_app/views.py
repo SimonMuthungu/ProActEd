@@ -37,7 +37,7 @@ from django.urls import reverse_lazy
 #from python_scripts.recommender_engine import load_model
 #from .models import StudentUser, AdminUser, SuperAdminUser, Attendance, Performance, Course, School, Recommender_training_data
 from .forms import UpdateStudentProfileForm
-from .models import (Attendance, BaseUser, Course, Message, Performance, Recommender_training_data, School, StudentUser, AdminUser, UserProfile, ProbabilityDataTable)
+from .models import *
 from django.db.models import Count, Sum
 from django.shortcuts import render
 from django.views.decorators.csrf import requires_csrf_token
@@ -58,9 +58,8 @@ logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.lo
 # logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log', level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-# logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+logging.basicConfig(filename=r'C:\Users\user\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
-# C:\Users\user\proacted\AIacademia\mainlogfile.log
 # @requires_csrf_token
 def custom_csrf_failure(request, reason=""):
     messages.error(request, "Session expired or invalid request. Please log in again.")
@@ -167,8 +166,8 @@ def recommend_courses(request):
 def predict_probability(request, student_id=3): 
     try: 
         # model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        # model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_prob_model2.joblib'
         model = joblib.load(model_path)
         logging.info('Probability model proacted_prob_model2 loaded') 
@@ -333,17 +332,29 @@ def dashboard(request):
     else:
         return redirect('student_page')  # Students to student page
 
-#this for the pie charts in admin interface
 def school_data(request, school_id):
     try:
         school = School.objects.get(id=school_id)
         students_count = StudentUser.objects.filter(school=school).count()
 
-        data = {
-            "school_name": school.name,
-            "students_count": students_count
+        # Retrieve courses with their graduation probabilities
+        courses = Course.objects.filter(school=school)
+        course_data = []
+        for course in courses:
+            course_data.append({
+                'name': course.prefix,
+                'graduation_probability': course.graduation_probability,
+            })
+
+        # Prepare data for the pie chart
+        pie_chart_data = {
+            'school_name': school.name,
+            'students_count': students_count,
+            'courses': course_data,
         }
-        return JsonResponse(data)
+
+        return JsonResponse(pie_chart_data)
+    
     except School.DoesNotExist:
         return JsonResponse({"error": "School not found"}, status=404)
 
@@ -355,16 +366,12 @@ def course_data(request, course_id):
         students = StudentUser.objects.filter(course=course)
         
         # Example data, adjust as needed
-        labels = ["Graduation Probability", "Attendance", "Homework Submission"]
-        values = [
-            course.graduation_probability,
-            students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
-            students.aggregate(Sum('homework_submission_rates'))['homework_submission_rates__sum'] / students.count()
-        ]
+        graduation_probabilities = [student.graduation_probability for student in students]
+        student_ids = [student.id for student in students]
         
         data = {
-            "labels": labels,
-            "values": values
+            "graduation_probabilities": graduation_probabilities,
+            "student_ids": student_ids
         }
         return JsonResponse(data)
     except Course.DoesNotExist:

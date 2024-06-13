@@ -38,7 +38,7 @@ We will communicate in due course on how the system can be set up locally.
 - AI Probability Determiner
 
 ### Installation
-
+Use these version of python : python3.10
 Provide step-by-step installation instructions.
 
 ## Usage
