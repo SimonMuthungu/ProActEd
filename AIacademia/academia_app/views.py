@@ -300,6 +300,16 @@ def course_data(request, course_id):
         return JsonResponse(data)
     except Course.DoesNotExist:
         return JsonResponse({"error": "Course not found"}, status=404)
+    
+    
+def school_detail(request, school_id):
+    school = get_object_or_404(School, id=school_id)
+    return render(request, 'admin/school_detail.html', {'school': school})
+
+def course_detail(request, course_id):
+    course = get_object_or_404(Course, id=course_id)
+    return render(request, 'admin/course_detail.html', {'course': course})
+
 
 @login_required
 def student_page(request):

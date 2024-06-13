@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}">
 
     {% block dark-mode-vars %}
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
     <link rel="stylesheet" href="{% static "admin/css/dark_mode.css" %}">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="{% static "admin/js/theme.js" %}" defer></script>
     {% endblock %}
 
@@ -20,8 +22,6 @@
 
     {% block extrahead %}
     <script src="{% static 'js/custom_sidebar.js' %}"></script>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
     <link rel="stylesheet" type="text/css" href="{% static 'admin/css/custom.css' %}">
     {% endblock %}
 
@@ -73,6 +73,12 @@
             {% include "admin/totals.html" %}
             {% include "admin/profile.html" %}
             {% include "admin/alerts.html" %}
+        </div>
+        <div id="school_content" style="display: none;">
+            {% include "admin/school_detail.html" %}
+        </div>
+        <div id="course_detail" style="display: none;">
+            {% include "admin/course_detail.html" %}
         </div>
         <main id="content-start" class="content" tabindex="-1">
             {% block messages %}
