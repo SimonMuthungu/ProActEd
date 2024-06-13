@@ -59,7 +59,7 @@
                 datasets: [{
                     label: 'Student Progress by Key Metrics', // showing a line graph of the students progress 
                     // Hard-coded data values for each label on the x-axis (e.g., representing grades or scores)
-                    data: [0, 10],
+                    data: [10, 60, 50, 40, 30],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
                     tension: 0.1
@@ -76,7 +76,7 @@
     });
     </script> 
 
-    <h4>You're probability of finishing and graduating: {{ refined_prediction }}</h4>
+    <h4>Your probability of finishing school and graduating is: {{ refined_prediction }}%</h4>
 
     <div id="progressBarContainer">
         <div id="progressBar">

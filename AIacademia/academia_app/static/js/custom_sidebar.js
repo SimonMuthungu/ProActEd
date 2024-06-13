@@ -45,4 +45,64 @@ document.addEventListener("DOMContentLoaded", function() {
             content.style.display = "none";
         }
     });
+
+    // Fetch schools for dropdowns
+    document.getElementById('schoolDropdown').addEventListener('mouseenter', function() {
+        fetch('/api/get_schools/')
+            .then(response => response.json())
+            .then(data => {
+                let dropdownContent = document.getElementById('schoolDropdownContent');
+                dropdownContent.innerHTML = '';
+                data.forEach(school => {
+                    let link = document.createElement('a');
+                    link.href = '#';
+                    link.textContent = school.name;
+                    link.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        loadDetails(`/school_detail/${school.id}/`, 'school_content');
+                    });
+                    dropdownContent.appendChild(link);
+                });
+                dropdownContent.style.display = 'block';
+            });
+    });
+
+    // Fetch courses for dropdowns
+    document.getElementById('courseDropdown').addEventListener('mouseenter', function() {
+        fetch('/api/get_courses/')
+            .then(response => response.json())
+            .then(data => {
+                let dropdownContent = document.getElementById('courseDropdownContent');
+                dropdownContent.innerHTML = '';
+                data.forEach(course => {
+                    let link = document.createElement('a');
+                    link.href = '#';
+                    link.textContent = course.name;
+                    link.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        loadDetails(`/course_detail/${course.id}/`, 'course_detail');
+                    });
+                    dropdownContent.appendChild(link);
+                });
+                dropdownContent.style.display = 'block';
+            });
+    });
+
+    function loadDetails(url, contentId) {
+        fetch(url)
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('main-content').innerHTML = html;
+                document.getElementById('school_content').style.display = 'none';
+                document.getElementById('course_detail').style.display = 'none';
+                document.getElementById(contentId).style.display = 'block';
+            })
+            .catch(error => console.error('Error loading details:', error));
+    }
+
+    // Event listener for Dashboard link
+    document.getElementById('dashboard-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = '/admin/';
+    });
 });

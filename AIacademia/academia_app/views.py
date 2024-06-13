@@ -1,3 +1,5 @@
+#vies.py
+import logging
 import os
 import sys
 import joblib
@@ -26,6 +28,7 @@ from django.http import (Http404, HttpRequest, HttpResponse, HttpResponseRedirec
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
 # from python_scripts.proacted_recommender2024 import proacted2024
+# from python_scripts.sbert_recommender import sbert_proactedrecomm2024
 from django.contrib.auth import authenticate, get_user_model, login, logout
 from django.http import (Http404, HttpRequest, HttpResponse,HttpResponseRedirect, JsonResponse)
 from .models import *
@@ -34,20 +37,27 @@ from django.urls import reverse_lazy
 #from python_scripts.recommender_engine import load_model
 #from .models import StudentUser, AdminUser, SuperAdminUser, Attendance, Performance, Course, School, Recommender_training_data
 from .forms import UpdateStudentProfileForm
-from .models import (Attendance, BaseUser, Course, Message, Performance, Recommender_training_data, School, StudentUser, AdminUser, UserProfile, ProbabilityDataTable)
+from .models import *
 from django.db.models import Count, Sum
 from django.shortcuts import render
 from django.views.decorators.csrf import requires_csrf_token
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.shortcuts import redirect, render
+
+
+logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-# logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-logging.basicConfig(filename=r'C:\Users\user\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 
-# C:\Users\user\proacted\AIacademia\mainlogfile.log
-@requires_csrf_token
+from .forms import UpdateStudentProfileForm
+from .models import (Attendance, BaseUser, Course, Message, Performance,
+                     Recommender_training_data, School, StudentUser,
+                     UserProfile, ProbabilityDataTable)
+
+# logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+
+# @requires_csrf_token
 def custom_csrf_failure(request, reason=""):
     messages.error(request, "Session expired or invalid request. Please log in again.")
     return redirect('course_recommendation')
@@ -103,7 +113,7 @@ def admin_dashboard(request):
         'user_group': user_group,
     }
 
-    return render(request, 'admin/base.html', context)
+    return render(request, '/admin/', context)
 
 # loading the script and generating output
 def recommend_courses(request):
@@ -124,7 +134,7 @@ def recommend_courses(request):
         #user_description_about_interests = ''.join(user_activities_enjoyed).lower() 
         print(user_description_about_interests)
         try: 
-            from python_scripts.proacted_recommender2024 import proacted2024
+            # from python_scripts.proacted_recommender2024 import proacted2024
             from python_scripts.sbert_recommender import sbert_proactedrecomm2024 # importing form here to avoid running anytime the view file is touched.
             # Load the model and get the output
             print("\nBeginning to run the recommender script")
@@ -133,9 +143,9 @@ def recommend_courses(request):
             print(f"here are the proacted_recommendations: {proacted_recommendations}")
             print(f"Done with proacted, proceeding to sbert recommender")
 
-            # sbert_recommendations = sbert_proactedrecomm2024(user_description_about_interests, user_activities_enjoyed)
+            sbert_recommendations = sbert_proactedrecomm2024(user_description_about_interests, user_activities_enjoyed)
             # print(f"here are the sbert_recommendations: {sbert_recommendations}") 
-            # context = {'proacted_recommendations': proacted_recommendations}
+            context = {'sbert_proactedrecomm2024': sbert_proactedrecomm2024}
 
             return render(request, 'academia_app/recommended_courses.html', context)
         except Exception as exc:
@@ -152,14 +162,15 @@ def recommend_courses(request):
         
 def predict_probability(request, student_id=3): 
     try: 
-        model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        #model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+
+        # model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_prob_model2.joblib'
+        
         model = joblib.load(model_path)
         logging.info('Probability model proacted_prob_model2 loaded') 
 
-        student_data = probabilitydatatable.objects.get(id=student_id) 
+        student_data = ProbabilityDataTable.objects.get(id=student_id) 
         lessonsattended = student_data.Lessons_Attended
         aggrpoints = student_data.Aggregate_points
         pcnt_of_lessons_attended = student_data.pcnt_of_lessons_attended 
@@ -169,7 +180,7 @@ def predict_probability(request, student_id=3):
         CAT_2_marks = student_data.CAT_2_marks
         activity_on_elearning_platforms = student_data.activity_on_elearning_platforms
 
-    except probabilitydatatable.DoesNotExist:
+    except ProbabilityDataTable.DoesNotExist:
         # the student doesnt exist
         print('the student doesnt exist')
         return render(request, "academia_app/student_page.html")
@@ -186,60 +197,119 @@ def predict_probability(request, student_id=3):
     return render(request, "academia_app/student_page.html",context = context)
 
 
-from django.http import HttpResponse
-from .models import StudentUser
+    
 import joblib
+from .models import StudentUser, Course
 
-def realtimestudentprob(request):
-    """This function will run every student's probability metrics and update the student table and other relevant tables, then the admin page will be caused to read the db again, ultimately reflecting on the admin interface as fresh and new manna. """
+def update_probabilities(course_id=None, school_id=None):
+    if course_id and not school_id:
+        try:
+            # Getting all students associated with the given course ID
+            students = StudentUser.objects.filter(course_id=course_id)
 
-    try:
-        # Getting the list of student IDs from the query parameters
-        student_ids = request.GET.getlist('baseuser_ptr_id')
-
-        for baseuser_ptr_id in student_ids:
-            # Get their student data
-            student_data = StudentUser.objects.get(id=baseuser_ptr_id) 
-
-            lessonsattended = student_data.Lessons_Attended
-            aggrpoints = student_data.Aggregate_points
-            pcnt_of_lessons_attended = student_data.pcnt_of_lessons_attended 
-            homework_submission_rates = student_data.homework_submission_rates
-            activity_on_learning_platforms = student_data.activity_on_learning_platforms
-            CAT_1_marks = student_data.CAT_1_marks
-            CAT_2_marks = student_data.CAT_2_marks
-            activity_on_elearning_platforms = student_data.activity_on_elearning_platforms
-
-            # Load the machine learning model
+            # Loading the machine learning model
             model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
             model = joblib.load(model_path)
 
-            # Prepare input data for prediction
-            input_data = [[lessonsattended, aggrpoints, pcnt_of_lessons_attended, homework_submission_rates, CAT_1_marks, CAT_2_marks, activity_on_elearning_platforms]] 
+            total_probability = 0.0
 
-            # Predict student real-time probabilities
-            prediction = model.predict(input_data)
+            for student in students:
+                # Prepare input data for prediction
+                input_data = [[
+                    student.Lessons_Attended,
+                    student.Aggregate_points,
+                    student.pcnt_of_lessons_attended,
+                    student.homework_submission_rates,
+                    student.CAT_1_marks,
+                    student.CAT_2_marks,
+                    student.activity_on_elearning_platforms
+                ]]
 
-            # Write the probability to the table
-            student_data.graduation_probability = prediction[0][0] * 100
-            student_data.save()
+                # Predict student real-time probabilities
+                prediction = model.predict(input_data)
+                print(f'prediction for {student}: {prediction[0][0]}')
 
+                # Write the probability to the table
+                student.graduation_probability = prediction[0][0]
+                student.save()
 
-        return HttpResponse("Success")
-    except StudentUser.DoesNotExist:
-        return HttpResponse("Student not found")
+                # Update total probability
+                total_probability += prediction[0][0]
+
+            course = Course.objects.get(id=course_id)
+            course.graduation_probability = total_probability
+            course.save()
+            print(f'saved data for course {course_id}: in course table as {total_probability}')
+
+        except Exception as e:
+            print(f"\n\nError: {e}\n\n")
+
+    elif school_id:
+        try:
+            # logic for school id
+            courses = Course.objects.filter(school_id=school_id)
+            for course in courses:
+                students = StudentUser.objects.filter(course=course)
+
+                total_probability = 0.0
+
+                for student in students:
+                    # Prepare input data for prediction
+                    input_data = [[
+                        student.Lessons_Attended,
+                        student.Aggregate_points,
+                        student.pcnt_of_lessons_attended,
+                        student.homework_submission_rates,
+                        student.CAT_1_marks,
+                        student.CAT_2_marks,
+                        student.activity_on_elearning_platforms
+                    ]]
+
+                    # Predict student real-time probabilities
+                    prediction = model.predict(input_data)
+                    print(f'prediction for {student}: {prediction[0][0]}')
+
+                    # Write the probability to the table
+                    student.graduation_probability = prediction[0][0]
+                    student.save()
+
+                    # Update total probability
+                    total_probability += prediction[0][0]
+
+                course.graduation_probability = total_probability
+                course.save()
+                print(f'saved data for course {course.id}: in course table as {total_probability}')
+
+        except Exception as e:
+            print(f"\n\nError: {e}\n\n")
+
+def UpdateStudentsCountView(request): 
+    """This function counts the number of students taking a certain course and updates the db in real time"""
+    try:
+        # Get distinct course IDs from StudentUser table
+        course_ids = StudentUser.objects.values_list('course_id', flat=True).distinct()
+
+        # Iterate over course IDs
+        for course_id in course_ids:
+            
+            # Count number of students for each course ID
+            student_count = StudentUser.objects.filter(course_id=course_id).count()
+            
+
+            # Update Course table with student count
+            course = Course.objects.get(id=course_id)
+            print(course)
+            course.students_count = student_count
+            course.save()
+
+        return HttpResponse("Students count updated successfully.")
     except Exception as e:
         print(f"Error: {e}")
         return HttpResponse("An error occurred")
 
-
-
-
-
 @login_required
 def dashboard(request):
     print("Visited Dashboard")
-    
     # Redirect users based on their type
     if request.user.is_superuser or request.user.is_staff:
         total_students = StudentUser.objects.count()
@@ -264,53 +334,104 @@ def dashboard(request):
     else:
         return redirect('student_page')  # Students to student page
 
-#this for the pie charts in admin interface
 def school_data(request, school_id):
     try:
+        # Update probabilities before fetching data
+        update_probabilities(school_id=school_id)
+
         school = School.objects.get(id=school_id)
         students_count = StudentUser.objects.filter(school=school).count()
 
-        data = {
-            "school_name": school.name,
-            "students_count": students_count
+        # Retrieve courses with their graduation probabilities
+        courses = Course.objects.filter(school=school)
+        course_data = []
+        for course in courses:
+            course_data.append({
+                'name': course.prefix,
+                'graduation_probability': course.graduation_probability,
+            })
+
+        # Prepare data for the pie chart
+        pie_chart_data = {
+            'school_name': school.name,
+            'students_count': students_count,
+            'courses': course_data,
         }
-        return JsonResponse(data)
+
+        return JsonResponse(pie_chart_data)
+    
     except School.DoesNotExist:
         return JsonResponse({"error": "School not found"}, status=404)
 
-        
-#this too for the pie charts in admin interface
+
+# View to fetch data for courses for pie charts
 def course_data(request, course_id):
     try:
+        # Update probabilities before fetching data
+        update_probabilities(course_id=course_id)
+
         course = Course.objects.get(id=course_id)
         students = StudentUser.objects.filter(course=course)
         
         # Example data, adjust as needed
-        labels = ["Graduation Probability", "Attendance", "Homework Submission"]
-        values = [
-            course.graduation_probability,
-            students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
-            students.aggregate(Sum('homework_submission_rates'))['homework_submission_rates__sum'] / students.count()
-        ]
-        
+        graduation_probabilities = [student.graduation_probability for student in students]
+        student_ids = [student.id for student in students]
+
         data = {
-            "labels": labels,
-            "values": values
+            "graduation_probabilities": graduation_probabilities,
+            "student_ids": student_ids
         }
         return JsonResponse(data)
     except Course.DoesNotExist:
         return JsonResponse({"error": "Course not found"}, status=404)
 
+# View to fetch list of schools
+def get_schools(request):
+    schools = School.objects.all().values('id', 'name')
+    return JsonResponse(list(schools), safe=False)
+
+# View to fetch list of courses
+def get_courses(request):
+    courses = Course.objects.all().values('id', 'name')
+    return JsonResponse(list(courses), safe=False)
+
+# View to fetch list of courses for a specific school
+@login_required
+def get_courses_by_school(request, school_id):
+    if request.user.is_authenticated:
+        courses = Course.objects.filter(school_id=school_id).values('id', 'name')
+        course_list = list(courses)
+        return JsonResponse(course_list, safe=False)
+    else:
+        return JsonResponse({"error": "Not authorized"}, status=403)
+    
+@login_required
+def school_detail(request, school_id):
+    school = get_object_or_404(School, id=school_id)
+    return render(request, 'admin/school_detail.html', {'school': school})
+
+@login_required
+def course_detail(request, course_id):
+    course = get_object_or_404(Course, id=course_id)
+    return render(request, 'admin/course_detail.html', {'course': course})
+
+
 @login_required
 def student_page(request):
     print("Visited Student Page")
     print(f"User: {request.user}, Groups: {request.user.groups.all()}")
+
     if request.user.groups.filter(name='Student Users').exists():
-        student_first_name = request.user.first_name
-        if not student_first_name:
-            student_first_name = request.user.username
-        
-        return render(request, "academia_app/student_page.html", context={'student_name': student_first_name})
+
+        # Get the associated StudentUser object of the logged-in user
+        try:
+            student_user = StudentUser.objects.get(username=request.user.username)
+            student_id = student_user.id
+            print(f"Student ID: {student_id}")
+            return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+        except StudentUser.DoesNotExist:
+            print("StudentUser object does not exist for the current user")
+            return redirect('login') # student doesnt exist, so they login first
     else:
         if request.user.is_superuser or request.user.is_staff:
             return redirect('/admin/')
@@ -318,10 +439,10 @@ def student_page(request):
 
 def course_recommendation(request):
     print("visited course recommendation page")
+
     interests = FieldOfInterest.objects.all()
     subjects = HighSchoolSubject.objects.all()
     return render(request, 'academia_app/course_recommendation_page.html',{'interests': interests, 'subjects': subjects})
-
 
 @login_required
 def school_list(request):
@@ -332,17 +453,7 @@ def school_list(request):
     else:
         return redirect('login')
 
-@login_required
-def get_courses(request, school_id):
-    if request.user.is_authenticated:
-        courses = Course.objects.filter(school_id=school_id).values('id', 'name')
-        course_list = list(courses)
-        return JsonResponse(course_list, safe=False)
-    else:
-        return JsonResponse({"error": "Not authorized"}, status=403)
-
 # this below is for the messages
-
 BaseUser = get_user_model()
 
 @login_required
