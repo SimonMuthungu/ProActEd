@@ -19,7 +19,6 @@ from .forms import UpdateStudentProfileForm
 from django.contrib.auth.models import User
 from django.contrib.auth.views import LoginView
 from django.utils.dateparse import parse_datetime
-from python_scripts.recommender_engine import load_model
 from django.contrib.auth.decorators import login_required
 # from python_scripts.proacted_recommender2024 import proacted2024
 from django.shortcuts import get_object_or_404, redirect, render
@@ -27,19 +26,27 @@ from django.core.mail import send_mail
 from django.db.models import Q
 from django.http import (Http404, HttpRequest, HttpResponse, HttpResponseRedirect, JsonResponse)
 from django.shortcuts import get_object_or_404, redirect, render
-from python_scripts.recommender_engine import load_model
 from django.urls import reverse_lazy
 # from python_scripts.proacted_recommender2024 import proacted2024
 # from python_scripts.sbert_recommender import sbert_proactedrecomm2024
 from django.contrib.auth import authenticate, get_user_model, login, logout
 from django.http import (Http404, HttpRequest, HttpResponse,HttpResponseRedirect, JsonResponse)
-from .models import StudentUser, Attendance, Performance, Course, School, Recommender_training_data 
-from .models import BaseUser,UserProfile,Course,School,Performance,Message, ProbabilityDataTable, NewMessageNotification, BaseUserGroup
-
-
-# logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+from .models import *
+from .models import BaseUser,UserProfile,Course,School,Performance,Message, ProbabilityDataTable, NewMessageNotification
+from django.urls import reverse_lazy
+#from python_scripts.recommender_engine import load_model
+#from .models import StudentUser, AdminUser, SuperAdminUser, Attendance, Performance, Course, School, Recommender_training_data
+from .forms import UpdateStudentProfileForm
+from .models import (Attendance, BaseUser, Course, Message, Performance, Recommender_training_data, School, StudentUser, AdminUser, UserProfile, ProbabilityDataTable)
+from django.db.models import Count, Sum
+from django.shortcuts import render
+from django.views.decorators.csrf import requires_csrf_token
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
+from django.shortcuts import redirect, render
+logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+# logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 
 from .forms import UpdateStudentProfileForm
@@ -387,7 +394,9 @@ def student_page(request):
 
 def course_recommendation(request):
     print("visited course recommendation page")
-    return render(request, 'academia_app/course_recommendation_page.html',)
+    interests = FieldOfInterest.objects.all()
+    subjects = HighSchoolSubject.objects.all()
+    return render(request, 'academia_app/course_recommendation_page.html',{'interests': interests, 'subjects': subjects})
 
 
 @login_required
