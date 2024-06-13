@@ -27,14 +27,12 @@ from django.db.models import Q
 from django.http import (Http404, HttpRequest, HttpResponse, HttpResponseRedirect, JsonResponse)
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
-# from python_scripts.proacted_recommender2024 import proacted2024
-# from python_scripts.sbert_recommender import sbert_proactedrecomm2024
 from django.contrib.auth import authenticate, get_user_model, login, logout
 from django.http import (Http404, HttpRequest, HttpResponse,HttpResponseRedirect, JsonResponse)
 from .models import *
 from .models import BaseUser,UserProfile,Course,School,Performance,Message, ProbabilityDataTable, NewMessageNotification
-from django.urls import reverse_lazy
-#from python_scripts.recommender_engine import load_model
+from django.urls import reverse_lazy 
+from python_scripts.recommender_engine import load_model
 #from .models import StudentUser, AdminUser, SuperAdminUser, Attendance, Performance, Course, School, Recommender_training_data
 from .forms import UpdateStudentProfileForm
 from .models import *
@@ -44,7 +42,8 @@ from django.views.decorators.csrf import requires_csrf_token
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.shortcuts import redirect, render
-<<<<<<< HEAD
+
+
 logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
@@ -138,23 +137,27 @@ def recommend_courses(request):
         #user_description_about_interests = ''.join(user_activities_enjoyed).lower() 
         print(user_description_about_interests)
         try: 
-            from python_scripts.proacted_recommender2024 import proacted2024
+            # from python_scripts.proacted_recommender2024 import proacted2024
             from python_scripts.sbert_recommender import sbert_proactedrecomm2024 # importing form here to avoid running anytime the view file is touched.
-            # Load the model and get the output
-            print("\nBeginning to run the recommender script")
-            logging.info("Proacted recommender initialized...")
+            # # Load the model and get the output
+            # print("\nBeginning to run the recommender script")
+            # logging.info("Proacted recommender initialized...")
             # proacted_recommendations = proacted2024(user_description_about_interests, user_activities_enjoyed)
-            print(f"here are the proacted_recommendations: {proacted_recommendations}")
-            print(f"Done with proacted, proceeding to sbert recommender")
+            # print(f"here are the proacted_recommendations: {proacted_recommendations}")
+            # print(f"Done with proacted, proceeding to sbert recommender")
 
-            # sbert_recommendations = sbert_proactedrecomm2024(user_description_about_interests, user_activities_enjoyed)
-            # print(f"here are the sbert_recommendations: {sbert_recommendations}") 
-            # context = {'proacted_recommendations': proacted_recommendations}
+            sbert_recommendations = sbert_proactedrecomm2024(user_description_about_interests, user_activities_enjoyed)
+            print(f"here are the sbert_recommendations: {sbert_recommendations}") 
+            context = {'proacted_recommendations': sbert_recommendations}
 
             return render(request, 'academia_app/recommended_courses.html', context)
         except Exception as exc:
             print(f'Something came up, please rerun the system...\n{exc}\n\n')
             logging.critical('Something came up, please rerun the system...')
+            interests = FieldOfInterest.objects.all()
+            subjects = HighSchoolSubject.objects.all()
+            print(interests, subjects)
+            return render(request, 'academia_app/course_recommendation_page.html',{'interests': interests, 'subjects': subjects}) 
         # Pass proacted_recommendations to the template
         finally:
             logging.info('Recommender system has run')
@@ -167,8 +170,8 @@ def recommend_courses(request):
 def predict_probability(request, student_id=3): 
     try: 
         # model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        # model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_prob_model2.joblib'
         model = joblib.load(model_path)
         logging.info('Probability model proacted_prob_model2 loaded') 
@@ -402,6 +405,7 @@ def course_recommendation(request):
     print("visited course recommendation page")
     interests = FieldOfInterest.objects.all()
     subjects = HighSchoolSubject.objects.all()
+    print(interests, subjects)
     return render(request, 'academia_app/course_recommendation_page.html',{'interests': interests, 'subjects': subjects})
 
 
