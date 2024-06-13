@@ -5,11 +5,14 @@
 <div id="custom-sidebar">
    
     <!-- Dashboard Logo -->
-    <h1><span>
-        <a href="{% url 'dashboard' %}">
-            <i class='bx bxs-dashboard'> Dashboard</i>
-        </a></span>
-        </h1>
+    <h1>
+        <span>
+            <a href="#" id="dashboard-link">
+                <box-icon type='solid' name='dashboard'></box-icon>
+                Dashboard
+            </a>
+        </span>
+    </h1>
 
     <!-- Users Section -->
     {% if perms.academia_app.add_superadminuserproxy or perms.academia_app.change_superadminuserproxy or perms.academia_app.add_adminuserproxy or perms.academia_app.change_adminuserproxy or perms.academia_app.add_studentuserproxy or perms.academia_app.change_studentuserproxy %}
@@ -192,23 +195,29 @@
     </div>
 
     <!-- Progress Section -->
-    <div class="sidebar-section">
-        <h3 class="collapsible">
-            <i class='bx bx-line-chart'></i> 
-            Progress
-        </h3>
-        <div class="side_bar_content">
-            <span class="collapsible-item">School Progress</span>
-            <div class="sub-content">
-                <a href="{% url 'inbox' %}">Inbox</a>
+<div class="sidebar-section">
+    <h3 class="collapsible">
+        <i class='bx bxs-message'></i>
+        Progress
+    </h3>
+    <div class="side_bar_content">
+        <span class="collapsible-item">School Progress</span>
+        <div class="sub-content">
+            <div class="dropdown">
+                <a href="#" id="schoolDropdown" class="dropdown-toggle">Select School</a>
+                <div id="schoolDropdownContent" class="dropdown-content" style="max-height: 200px; overflow-y: auto;"></div>
             </div>
-            <span class="collapsible-item">Course Progress</span>
-            <div class="sub-content">
-                <a href="{% url 'inbox' %}">Inbox</a>
+        </div>
+        <span class="collapsible-item">Course Progress</span>
+        <div class="sub-content">
+            <div class="dropdown">
+                <a href="#" id="courseDropdown" class="dropdown-toggle">Select Course</a>
+                <div id="courseDropdownContent" class="dropdown-content" style="max-height: 200px; overflow-y: auto;"></div>
             </div>
         </div>
     </div>
-
+</div>
+    
     <!-- Settings Section -->
     <div class="sidebar-section">
         <h3 class="collapsible">
