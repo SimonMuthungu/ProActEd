@@ -15769,3 +15769,38 @@ Traceback (most recent call last):
     students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
 TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
+WARNING || 13-Jun-24 12:04:15 || Not Found: /ws/academia_app/
+INFO || 13-Jun-24 12:07:01 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 12:08:10 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 13-Jun-24 12:08:27 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 13-Jun-24 12:08:27 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 13-Jun-24 12:10:01 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 13-Jun-24 16:19:56 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 13-Jun-24 16:19:56 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING || 13-Jun-24 16:21:24 || 5 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000001FCDED53D80> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING || 13-Jun-24 16:21:30 || 6 out of the last 7 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000001FCE0466F20> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+INFO || 13-Jun-24 17:06:05 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 13-Jun-24 17:06:20 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 13-Jun-24 17:06:20 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 13-Jun-24 17:07:26 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 13-Jun-24 17:07:36 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 13-Jun-24 17:07:36 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 13-Jun-24 17:08:23 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 13-Jun-24 17:08:34 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 13-Jun-24 17:08:34 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 13-Jun-24 17:11:59 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 17:15:47 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 17:18:18 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 17:18:48 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 17:19:43 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 17:20:03 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.

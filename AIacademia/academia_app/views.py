@@ -205,7 +205,7 @@ from .models import StudentUser
 import joblib
 
 
-def realtimestudentprob(request, course_id=None, school_id=94):
+def realtimestudentprob(request, course_id=None, school_id=99):
     """This function will run every student's probability metrics and update the student table and other relevant tables, then the admin page will be caused to read the db again, ultimately reflecting on the admin interface as fresh and new manna."""
 
     if course_id and not school_id:
@@ -243,7 +243,7 @@ def realtimestudentprob(request, course_id=None, school_id=94):
                 # Update total probability
                 total_probability += prediction[0][0]
 
-                all_student_probabilities.append(prediction[0][0])
+                all_student_probabilities.append(prediction[0][0]) 
 
             course = Course.objects.get(id=course_id)
             course.graduation_probability = total_probability
@@ -251,6 +251,7 @@ def realtimestudentprob(request, course_id=None, school_id=94):
             print(f'saved data for {student}: in course table as {total_probability}')
 
             context = {'all_student_probabilities':all_student_probabilities}
+            print('all_student_probabilities: ', all_student_probabilities)
 
             return render(request, 'admin/base.html', context) # here, return the admin page with these new values.
         except Exception as e:
@@ -259,13 +260,10 @@ def realtimestudentprob(request, course_id=None, school_id=94):
     elif school_id:
         # logic for school id
         schools = Course.objects.filter(school_id=school_id) 
-        print(schools) 
         for courses in schools:
-            print(courses) 
             coursenames =  courses.name
             course_probabilities = courses.graduation_probability
             course_studentcount = courses.students_count
-            print(f'\n\n{coursenames} :: {course_probabilities} :: {course_studentcount}\n\n')
  
             try:
                 average_prob_to_display = course_probabilities/course_studentcount
@@ -274,11 +272,11 @@ def realtimestudentprob(request, course_id=None, school_id=94):
                 print('Null encountered, this will show on the graph as zero')
 
             # average_prob_to_display to be sent to admin, to draw the graph
-            print(f'\n\n{coursenames} :: {course_probabilities} :: {course_studentcount} :: {average_prob_to_display}')
+            # print(f'\ncoursenames: {coursenames} :: course_probabilities: {course_probabilities} :: course_studentcount: {course_studentcount} :: average_prob_for_the_course {average_prob_to_display}')
 
-            print(f"To be displayed asa bar: {coursenames} against {average_prob_to_display}") 
+            print(f"\nTo be displayed as a bar graph: {coursenames} with value {average_prob_to_display}") 
 
-            context = {'average_prob_to_display':average_prob_to_display} 
+            context = {'average_prob_to_display':average_prob_to_display, 'coursenames': coursenames} 
 
         return render(request, 'admin/base.html', context) #this needs to be changed to sth local, ie, shouldnt refresh whole page but the part where the schools are.
     return HttpResponse("Returns to admin") 
