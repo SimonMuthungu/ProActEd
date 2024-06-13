@@ -16677,3 +16677,10 @@ WARNING || 12-Jun-24 22:57:38 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 22:59:06 || Not Found: /favicon.ico
 WARNING || 13-Jun-24 08:27:00 || Not Found: /favicon.ico
 >>>>>>> 41aa4a95d70f417edb69cd44c029ac6dfe2c95e6
+WARNING || 14-Jun-24 00:00:25 || Not Found: /favicon.ico
+INFO || 14-Jun-24 01:42:56 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 14-Jun-24 01:48:33 || C:\Users\Simon\proacted\AIacademia\academia_app\urls.py changed, reloading.
+WARNING || 14-Jun-24 01:49:29 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 14-Jun-24 01:49:29 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+

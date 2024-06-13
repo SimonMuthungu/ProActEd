@@ -25,13 +25,10 @@ urlpatterns = [
     path('recommend_courses/', views.recommend_courses, name='recommend_courses'),
     path('predict/', views.predict, name='predict'),
     path('predict_probability/', views.predict_probability, name='predict_probability'),
-    path('realtimestudentprobpredict_probability/<int:course_id>/', views.realtimestudentprob, name='predict_probability'),
-    path('realtimestudentprob/', views.realtimestudentprob, name='realtimestudentprob'),
-<<<<<<< HEAD
+    # path('realtimestudentprobpredict_probability/<int:course_id>/', views.realtimestudentprob, name='predict_probability'),
+    # path('realtimestudentprob/', views.realtimestudentprob, name='realtimestudentprob'),
     path('update_students_count/', views.UpdateStudentsCountView, name='update_students_count'),
 
-=======
     path('school_detail/<int:school_id>/', views.school_detail, name='school_detail'),
     path('course_detail/<int:course_id>/', views.course_detail, name='course_detail'),
->>>>>>> 41aa4a95d70f417edb69cd44c029ac6dfe2c95e6
 ]
