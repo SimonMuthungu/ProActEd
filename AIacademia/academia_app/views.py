@@ -113,7 +113,7 @@ def admin_dashboard(request):
         'user_group': user_group,
     }
 
-    return render(request, 'admin/base.html', context)
+    return render(request, '/admin/', context)
 
 # loading the script and generating output
 def recommend_courses(request):
@@ -134,7 +134,7 @@ def recommend_courses(request):
         #user_description_about_interests = ''.join(user_activities_enjoyed).lower() 
         print(user_description_about_interests)
         try: 
-            from python_scripts.proacted_recommender2024 import proacted2024
+            # from python_scripts.proacted_recommender2024 import proacted2024
             from python_scripts.sbert_recommender import sbert_proactedrecomm2024 # importing form here to avoid running anytime the view file is touched.
             # Load the model and get the output
             print("\nBeginning to run the recommender script")
@@ -143,9 +143,9 @@ def recommend_courses(request):
             print(f"here are the proacted_recommendations: {proacted_recommendations}")
             print(f"Done with proacted, proceeding to sbert recommender")
 
-            # sbert_recommendations = sbert_proactedrecomm2024(user_description_about_interests, user_activities_enjoyed)
+            sbert_recommendations = sbert_proactedrecomm2024(user_description_about_interests, user_activities_enjoyed)
             # print(f"here are the sbert_recommendations: {sbert_recommendations}") 
-            # context = {'proacted_recommendations': proacted_recommendations}
+            context = {'sbert_proactedrecomm2024': sbert_proactedrecomm2024}
 
             return render(request, 'academia_app/recommended_courses.html', context)
         except Exception as exc:
@@ -300,12 +300,12 @@ def UpdateStudentsCountView(request):
 
         return HttpResponse("Students count updated successfully.")
     except Exception as e:
-            return HttpResponse(f"An error occurred: {str(e)}")
+        print(f"Error: {e}")
+        return HttpResponse("An error occurred")
 
 @login_required
 def dashboard(request):
     print("Visited Dashboard")
-    
     # Redirect users based on their type
     if request.user.is_superuser or request.user.is_staff:
         total_students = StudentUser.objects.count()
@@ -356,8 +356,7 @@ def school_data(request, school_id):
     except School.DoesNotExist:
         return JsonResponse({"error": "School not found"}, status=404)
 
-        
-#this too for the pie charts in admin interface
+# View to fetch data for courses for pie charts
 def course_data(request, course_id):
     try:
         course = Course.objects.get(id=course_id)
@@ -366,7 +365,7 @@ def course_data(request, course_id):
         # Example data, adjust as needed
         graduation_probabilities = [student.graduation_probability for student in students]
         student_ids = [student.id for student in students]
-        
+
         data = {
             "graduation_probabilities": graduation_probabilities,
             "student_ids": student_ids
@@ -374,6 +373,37 @@ def course_data(request, course_id):
         return JsonResponse(data)
     except Course.DoesNotExist:
         return JsonResponse({"error": "Course not found"}, status=404)
+
+# View to fetch list of schools
+def get_schools(request):
+    schools = School.objects.all().values('id', 'name')
+    return JsonResponse(list(schools), safe=False)
+
+# View to fetch list of courses
+def get_courses(request):
+    courses = Course.objects.all().values('id', 'name')
+    return JsonResponse(list(courses), safe=False)
+
+# View to fetch list of courses for a specific school
+@login_required
+def get_courses_by_school(request, school_id):
+    if request.user.is_authenticated:
+        courses = Course.objects.filter(school_id=school_id).values('id', 'name')
+        course_list = list(courses)
+        return JsonResponse(course_list, safe=False)
+    else:
+        return JsonResponse({"error": "Not authorized"}, status=403)
+    
+@login_required
+def school_detail(request, school_id):
+    school = get_object_or_404(School, id=school_id)
+    return render(request, 'admin/school_detail.html', {'school': school})
+
+@login_required
+def course_detail(request, course_id):
+    course = get_object_or_404(Course, id=course_id)
+    return render(request, 'admin/course_detail.html', {'course': course})
+
 
 @login_required
 def student_page(request):
@@ -397,10 +427,10 @@ def student_page(request):
 
 def course_recommendation(request):
     print("visited course recommendation page")
+
     interests = FieldOfInterest.objects.all()
     subjects = HighSchoolSubject.objects.all()
     return render(request, 'academia_app/course_recommendation_page.html',{'interests': interests, 'subjects': subjects})
-
 
 @login_required
 def school_list(request):
@@ -411,17 +441,7 @@ def school_list(request):
     else:
         return redirect('login')
 
-@login_required
-def get_courses(request, school_id):
-    if request.user.is_authenticated:
-        courses = Course.objects.filter(school_id=school_id).values('id', 'name')
-        course_list = list(courses)
-        return JsonResponse(course_list, safe=False)
-    else:
-        return JsonResponse({"error": "Not authorized"}, status=403)
-
 # this below is for the messages
-
 BaseUser = get_user_model()
 
 @login_required
