@@ -163,10 +163,10 @@ def recommend_courses(request):
 def predict_probability(request, student_id=3): 
     try: 
 
-        model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        #model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        # model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_prob_model2.joblib'
+        
         model = joblib.load(model_path)
         logging.info('Probability model proacted_prob_model2 loaded') 
 
@@ -197,14 +197,11 @@ def predict_probability(request, student_id=3):
     return render(request, "academia_app/student_page.html",context = context)
 
 
-from django.http import HttpResponse
-from .models import StudentUser
+    
 import joblib
+from .models import StudentUser, Course
 
-
-def realtimestudentprob(request, course_id=None, school_id=99):
-    """This function will run every student's probability metrics and update the student table and other relevant tables, then the admin page will be caused to read the db again, ultimately reflecting on the admin interface as fresh and new manna."""
-
+def update_probabilities(course_id=None, school_id=None):
     if course_id and not school_id:
         try:
             # Getting all students associated with the given course ID
@@ -215,7 +212,6 @@ def realtimestudentprob(request, course_id=None, school_id=99):
             model = joblib.load(model_path)
 
             total_probability = 0.0
-            all_student_probabilities = []
 
             for student in students:
                 # Prepare input data for prediction
@@ -227,11 +223,11 @@ def realtimestudentprob(request, course_id=None, school_id=99):
                     student.CAT_1_marks,
                     student.CAT_2_marks,
                     student.activity_on_elearning_platforms
-                ]] 
+                ]]
 
                 # Predict student real-time probabilities
                 prediction = model.predict(input_data)
-                print(f'prediction for {student} {prediction[0][0]}')
+                print(f'prediction for {student}: {prediction[0][0]}')
 
                 # Write the probability to the table
                 student.graduation_probability = prediction[0][0]
@@ -240,44 +236,52 @@ def realtimestudentprob(request, course_id=None, school_id=99):
                 # Update total probability
                 total_probability += prediction[0][0]
 
-                all_student_probabilities.append(prediction[0][0]) 
-
             course = Course.objects.get(id=course_id)
             course.graduation_probability = total_probability
             course.save()
-            print(f'saved data for {student}: in course table as {total_probability}')
+            print(f'saved data for course {course_id}: in course table as {total_probability}')
 
-            context = {'all_student_probabilities':all_student_probabilities}
-            print('all_student_probabilities: ', all_student_probabilities)
-
-            return render(request, 'admin/base.html', context) # here, return the admin page with these new values.
         except Exception as e:
             print(f"\n\nError: {e}\n\n")
 
     elif school_id:
-        # logic for school id
-        schools = Course.objects.filter(school_id=school_id) 
-        for courses in schools:
-            coursenames =  courses.name
-            course_probabilities = courses.graduation_probability
-            course_studentcount = courses.students_count
- 
-            try:
-                average_prob_to_display = course_probabilities/course_studentcount
-            except:
-                average_prob_to_display = 0
-                print('Null encountered, this will show on the graph as zero')
+        try:
+            # logic for school id
+            courses = Course.objects.filter(school_id=school_id)
+            for course in courses:
+                students = StudentUser.objects.filter(course=course)
 
-            # average_prob_to_display to be sent to admin, to draw the graph
-            # print(f'\ncoursenames: {coursenames} :: course_probabilities: {course_probabilities} :: course_studentcount: {course_studentcount} :: average_prob_for_the_course {average_prob_to_display}')
+                total_probability = 0.0
 
-            print(f"\nTo be displayed as a bar graph: {coursenames} with value {average_prob_to_display}") 
+                for student in students:
+                    # Prepare input data for prediction
+                    input_data = [[
+                        student.Lessons_Attended,
+                        student.Aggregate_points,
+                        student.pcnt_of_lessons_attended,
+                        student.homework_submission_rates,
+                        student.CAT_1_marks,
+                        student.CAT_2_marks,
+                        student.activity_on_elearning_platforms
+                    ]]
 
-            context = {'average_prob_to_display':average_prob_to_display, 'coursenames': coursenames} 
+                    # Predict student real-time probabilities
+                    prediction = model.predict(input_data)
+                    print(f'prediction for {student}: {prediction[0][0]}')
 
-        return render(request, 'admin/base.html', context) #this needs to be changed to sth local, ie, shouldnt refresh whole page but the part where the schools are.
-    return HttpResponse("Returns to admin") 
-        
+                    # Write the probability to the table
+                    student.graduation_probability = prediction[0][0]
+                    student.save()
+
+                    # Update total probability
+                    total_probability += prediction[0][0]
+
+                course.graduation_probability = total_probability
+                course.save()
+                print(f'saved data for course {course.id}: in course table as {total_probability}')
+
+        except Exception as e:
+            print(f"\n\nError: {e}\n\n")
 
 def UpdateStudentsCountView(request): 
     """This function counts the number of students taking a certain course and updates the db in real time"""
@@ -332,6 +336,9 @@ def dashboard(request):
 
 def school_data(request, school_id):
     try:
+        # Update probabilities before fetching data
+        update_probabilities(school_id=school_id)
+
         school = School.objects.get(id=school_id)
         students_count = StudentUser.objects.filter(school=school).count()
 
@@ -356,9 +363,13 @@ def school_data(request, school_id):
     except School.DoesNotExist:
         return JsonResponse({"error": "School not found"}, status=404)
 
+
 # View to fetch data for courses for pie charts
 def course_data(request, course_id):
     try:
+        # Update probabilities before fetching data
+        update_probabilities(course_id=course_id)
+
         course = Course.objects.get(id=course_id)
         students = StudentUser.objects.filter(course=course)
         
@@ -409,6 +420,7 @@ def course_detail(request, course_id):
 def student_page(request):
     print("Visited Student Page")
     print(f"User: {request.user}, Groups: {request.user.groups.all()}")
+
     if request.user.groups.filter(name='Student Users').exists():
 
         # Get the associated StudentUser object of the logged-in user

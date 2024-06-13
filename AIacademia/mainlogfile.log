@@ -16514,3 +16514,100 @@ WARNING || 12-Jun-24 22:57:38 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 22:59:06 || Not Found: /favicon.ico
 WARNING || 13-Jun-24 08:27:00 || Not Found: /favicon.ico
 >>>>>>> 41aa4a95d70f417edb69cd44c029ac6dfe2c95e6
+INFO || 13-Jun-24 23:50:33 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 13-Jun-24 23:51:35 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 420, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 170, in predict_probability
+    model = joblib.load(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1205, in load
+    dispatch[key[0]](self)
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1530, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1572, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src.saving.pickle_utils'
+ERROR || 14-Jun-24 01:12:25 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 420, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 170, in predict_probability
+    model = joblib.load(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1205, in load
+    dispatch[key[0]](self)
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1530, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1572, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src.saving.pickle_utils'
+INFO || 14-Jun-24 01:25:22 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 14-Jun-24 01:30:35 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 14-Jun-24 01:44:51 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 511, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 170, in predict_probability
+    model = joblib.load(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1205, in load
+    dispatch[key[0]](self)
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1530, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1572, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src.saving.pickle_utils'
+WARNING || 14-Jun-24 01:44:52 || Not Found: /favicon.ico
