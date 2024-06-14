@@ -16684,3 +16684,257 @@ WARNING || 14-Jun-24 01:49:29 || From C:\Users\Simon\AppData\Roaming\Python\Pyth
 
 WARNING || 14-Jun-24 01:49:29 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
 
+INFO || 14-Jun-24 09:38:17 || S-Bert 2024 Recommender Engine Initialized
+INFO || 14-Jun-24 09:38:17 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Jun-24 09:38:17 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Jun-24 09:38:17 || Starting new HTTPS connection (2): huggingface.co:443
+DEBUG || 14-Jun-24 09:38:17 || Starting new HTTPS connection (3): huggingface.co:443
+DEBUG || 14-Jun-24 09:38:17 || Starting new HTTPS connection (4): huggingface.co:443
+DEBUG || 14-Jun-24 09:38:17 || Starting new HTTPS connection (5): huggingface.co:443
+DEBUG || 14-Jun-24 09:38:17 || Starting new HTTPS connection (6): huggingface.co:443
+DEBUG || 14-Jun-24 09:38:19 || Starting new HTTPS connection (7): huggingface.co:443
+DEBUG || 14-Jun-24 09:38:19 || Starting new HTTPS connection (8): huggingface.co:443
+INFO || 14-Jun-24 09:38:19 || Use pytorch device_name: cpu
+INFO || 14-Jun-24 09:38:33 || Time taken by sbert model: 15.55216670036316
+INFO || 14-Jun-24 09:38:33 || Recommender system has run
+WARNING || 14-Jun-24 09:39:50 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 14-Jun-24 09:39:51 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 14-Jun-24 09:40:22 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 09:40:22 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 09:40:26 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 09:40:27 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 09:42:45 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+WARNING || 14-Jun-24 09:53:28 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 09:56:13 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+INFO || 14-Jun-24 09:56:58 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+INFO || 14-Jun-24 09:57:09 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 09:57:10 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 10:04:31 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 10:04:31 || 5 out of the last 9 calls to <function Model.make_predict_function.<locals>.predict_function at 0x0000021FFBC38720> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING || 14-Jun-24 10:04:32 || Not Found: /ws/academia_app/
+WARNING || 14-Jun-24 10:06:42 || 6 out of the last 10 calls to <function Model.make_predict_function.<locals>.predict_function at 0x0000021FFBCB5440> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING || 14-Jun-24 10:07:58 || Not Found: /ws/academia_app/
+WARNING || 14-Jun-24 12:07:33 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 12:09:43 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+WARNING || 14-Jun-24 12:10:30 || Not Found: /favicon.ico
+WARNING || 14-Jun-24 12:10:33 || Not Found: /favicon.ico
+WARNING || 14-Jun-24 12:13:53 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 14-Jun-24 12:13:53 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 14-Jun-24 12:13:54 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 12:13:54 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 12:19:56 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+INFO || 14-Jun-24 12:24:43 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 12:24:43 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 12:39:11 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+INFO || 14-Jun-24 12:39:32 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 12:39:33 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 12:42:34 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 12:42:34 || 5 out of the last 9 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000002044677AD40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING || 14-Jun-24 12:42:34 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 12:42:38 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 12:42:38 || 6 out of the last 10 calls to <function Model.make_predict_function.<locals>.predict_function at 0x0000020446E8E160> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING || 14-Jun-24 12:42:39 || Not Found: /ws/academia_app/
+WARNING || 14-Jun-24 12:42:39 || Not Found: /favicon.ico
+ERROR || 14-Jun-24 12:43:45 || Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 77, in login_view
+    login(request, user)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\__init__.py", line 144, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+           ^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\models.py", line 23, in update_last_login
+    user.save(update_fields=["last_login"])
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\base_user.py", line 76, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\base.py", line 990, in _save_table
+    updated = self._do_update(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\base.py", line 1054, in _do_update
+    return filtered._update(values) > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 1231, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1984, in execute_sql
+    cursor = super().execute_sql(result_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: database is locked
+ERROR || 14-Jun-24 12:43:46 || Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 77, in login_view
+    login(request, user)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\__init__.py", line 144, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+           ^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\models.py", line 23, in update_last_login
+    user.save(update_fields=["last_login"])
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\base_user.py", line 76, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\base.py", line 990, in _save_table
+    updated = self._do_update(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\base.py", line 1054, in _do_update
+    return filtered._update(values) > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 1231, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1984, in execute_sql
+    cursor = super().execute_sql(result_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: database is locked
+INFO || 14-Jun-24 12:44:06 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+WARNING || 14-Jun-24 12:44:15 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 14-Jun-24 12:44:15 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 14-Jun-24 12:44:15 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 12:44:16 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 12:53:31 || S-Bert 2024 Recommender Engine Initialized
+INFO || 14-Jun-24 12:53:31 || S-Bert 2024 Recommender Engine Initialized
+INFO || 14-Jun-24 12:53:31 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+INFO || 14-Jun-24 12:53:31 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Jun-24 12:53:31 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Jun-24 12:53:31 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Jun-24 12:53:32 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:32 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:34 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:34 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:34 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:34 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:35 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:35 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:36 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 14-Jun-24 12:53:36 || Use pytorch device_name: cpu
+DEBUG || 14-Jun-24 12:53:36 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 14-Jun-24 12:53:36 || Use pytorch device_name: cpu
+INFO || 14-Jun-24 12:53:49 || Time taken by sbert model: 17.83562135696411
+INFO || 14-Jun-24 12:53:49 || Recommender system has run
+INFO || 14-Jun-24 12:53:49 || Time taken by sbert model: 17.898241758346558
+INFO || 14-Jun-24 12:53:49 || Recommender system has run
+INFO || 14-Jun-24 12:54:35 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+INFO || 14-Jun-24 12:57:05 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 12:57:05 || Not Found: /ws/academia_app/
+WARNING || 14-Jun-24 12:57:56 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 13:02:17 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+WARNING || 14-Jun-24 13:12:04 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 14-Jun-24 13:12:04 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 14-Jun-24 13:12:04 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 13:12:05 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 13:15:13 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 13:15:14 || Not Found: /ws/academia_app/
+WARNING || 14-Jun-24 13:15:15 || Not Found: /favicon.ico
+INFO || 14-Jun-24 13:15:40 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 13:15:40 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 13:19:05 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+INFO || 14-Jun-24 13:21:36 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+INFO || 14-Jun-24 13:21:43 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 13:21:46 || Not Found: /ws/academia_app/
