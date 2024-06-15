@@ -37,6 +37,7 @@ from django.urls import reverse_lazy
 #from python_scripts.recommender_engine import load_model
 #from .models import StudentUser, AdminUser, SuperAdminUser, Attendance, Performance, Course, School, Recommender_training_data
 from .forms import UpdateStudentProfileForm
+from tensorflow.keras.models import load_model
 from .models import *
 from django.db.models import Count, Sum
 from django.shortcuts import render
@@ -158,7 +159,7 @@ def recommend_courses(request):
         return render(request, 'academia_app/recommended_courses.html')       
 
             
-        
+logger = logging.getLogger(__name__)        
         
 def predict_probability(request, student_id=3): 
     try: 
@@ -167,10 +168,15 @@ def predict_probability(request, student_id=3):
         model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         
-        model = joblib.load(model_path)
+        # model = joblib.load(model_path)
+        try:
+            model = joblib.load(model_path)
+        except ModuleNotFoundError as e:
+            logger.error(f"Error loading model: {e}")
+            return HttpResponse("Error loading model", status=500)
         logging.info('Probability model proacted_prob_model2 loaded') 
 
-        student_data = ProbabilityDataTable.objects.get(id=student_id) 
+        student_data = StudentUser.objects.get(id=student_id) 
         lessonsattended = student_data.Lessons_Attended
         aggrpoints = student_data.Aggregate_points
         pcnt_of_lessons_attended = student_data.pcnt_of_lessons_attended 
@@ -180,23 +186,33 @@ def predict_probability(request, student_id=3):
         CAT_2_marks = student_data.CAT_2_marks
         activity_on_elearning_platforms = student_data.activity_on_elearning_platforms
 
-    except ProbabilityDataTable.DoesNotExist:
+    except StudentUser.DoesNotExist:
         # the student doesnt exist
         print('the student doesnt exist')
         return render(request, "academia_app/student_page.html")
 
-    input_data = [[lessonsattended, aggrpoints, pcnt_of_lessons_attended, homework_submission_rates, CAT_1_marks, CAT_2_marks, activity_on_elearning_platforms]] 
-    # input_data = [[lessonsattended, aggrpoints]] 
-
+    # input_data = [[lessonsattended, aggrpoints, pcnt_of_lessons_attended, homework_submission_rates, CAT_1_marks, CAT_2_marks, activity_on_elearning_platforms]] 
+    if request.user.groups.filter(name='Student Users').exists():
+        student_first_name = request.user.first_name
+        if not student_first_name:
+            student_first_name = request.user.username
+        print(student_first_name)
+    # Convert input data to numpy array and reshape it
+    input_data = np.array([[lessonsattended, aggrpoints, pcnt_of_lessons_attended, 
+                            homework_submission_rates, CAT_1_marks, CAT_2_marks, 
+                            activity_on_elearning_platforms]])
+    input_data = np.array(input_data).astype(np.float32)
+    print(input_data)
+    # Ensure the input data has the correct shape
+    input_data = tf.reshape(input_data, [1, 7])
+    
     # Predict probabilities
     prediction = model.predict(input_data)
 
-    context = {'prediction': prediction[0][0], 'refined_prediction': f"{prediction[0][0]*100:.3f}"}
+    context = {'student_first_name':student_first_name,'prediction': prediction[0][0], 'refined_prediction': f"{prediction[0][0]*100:.3f}"}
     print(f"\n\nStudent {student_id} with lessonsattended: {lessonsattended} and aggrpoints: {aggrpoints}, lessons_attended: {pcnt_of_lessons_attended}, homework_submission_rates: {homework_submission_rates}, activity_on_learning_platforms: {activity_on_learning_platforms}, CAT_1_marks: {CAT_1_marks}, CAT_2_marks: {CAT_2_marks}, activity_on_elearning_platforms: {activity_on_elearning_platforms} ; 'prediction': {prediction[0][0]}, 'refined_prediction': {prediction[0][0]*100:.3f}\n\n")
 
     return render(request, "academia_app/student_page.html",context = context)
-
-
     
 import joblib
 from .models import StudentUser, Course
@@ -208,7 +224,7 @@ def update_probabilities(course_id=None, school_id=None):
             students = StudentUser.objects.filter(course_id=course_id)
 
             # Loading the machine learning model
-            model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+            model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
             model = joblib.load(model_path)
 
             total_probability = 0.0
@@ -422,6 +438,9 @@ def student_page(request):
     print(f"User: {request.user}, Groups: {request.user.groups.all()}")
 
     if request.user.groups.filter(name='Student Users').exists():
+        student_first_name = request.user.first_name
+        if not student_first_name:
+            student_first_name = request.user.username
 
         # Get the associated StudentUser object of the logged-in user
         try:
@@ -429,6 +448,7 @@ def student_page(request):
             student_id = student_user.id
             print(f"Student ID: {student_id}")
             return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+            # return render(request, "academia_app/student_page.html", context={'student_name': student_first_name})
         except StudentUser.DoesNotExist:
             print("StudentUser object does not exist for the current user")
             return redirect('login') # student doesnt exist, so they login first
@@ -462,7 +482,7 @@ def inbox(request):
     notifications = NewMessageNotification.objects.filter(user=request.user, is_new=True)
 
     # Mark all notifications as read
-    notifications.update(is_new=False)
+    # notifications.update(is_new=False)
     for user in users:
         user.has_new_messages = NewMessageNotification.objects.filter(user=user, is_new=True).exists()
 
