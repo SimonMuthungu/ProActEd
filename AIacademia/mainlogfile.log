@@ -16875,3 +16875,20 @@ INFO || 15-Jun-24 08:45:01 || Probability model proacted_prob_model2 loaded
 WARNING || 15-Jun-24 08:45:02 || Not Found: /ws/academia_app/
 INFO || 15-Jun-24 08:45:37 || Probability model proacted_prob_model2 loaded
 WARNING || 15-Jun-24 08:45:38 || Not Found: /ws/academia_app/
+WARNING || 15-Jun-24 21:29:19 || Not Found: /favicon.ico
+WARNING || 15-Jun-24 22:03:57 || Not Found: /favicon.ico
+CRITICAL || 15-Jun-24 22:06:07 || Something came up, please rerun the system...
+INFO || 15-Jun-24 22:06:07 || Recommender system has run
+ERROR || 15-Jun-24 22:06:07 || Internal Server Error: /recommend_courses/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view academia_app.views.recommend_courses didn't return an HttpResponse object. It returned None instead.
+WARNING || 15-Jun-24 22:21:25 || Not Found: /favicon.ico
+WARNING || 15-Jun-24 22:38:47 || Not Found: /favicon.ico
+WARNING || 16-Jun-24 03:30:06 || Not Found: /favicon.ico
