@@ -2,6 +2,7 @@
 import logging
 import os
 import sys
+import time
 import joblib
 import logging
 import numpy as np
@@ -45,14 +46,21 @@ from django.contrib import messages
 from django.shortcuts import redirect, render
 
 
-<<<<<<< HEAD
+starttime = time.time()
+from python_scripts.lazyloader import lazy_load_model_with_cache
+timetoimport = time.time()
+
+print(f"imported the lazy loader in {timetoimport - starttime} secs")
+
+sbert_model = lazy_load_model_with_cache()
+timetoload= time.time()
+
+print(f"loader the model and cached it in {timetoload - timetoimport} secs") 
+
+
 logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-=======
-logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-# logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
->>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 
 
 from .forms import UpdateStudentProfileForm
@@ -60,15 +68,11 @@ from .models import (Attendance, BaseUser, Course, Message, Performance,
                      Recommender_training_data, School, StudentUser,
                      UserProfile, ProbabilityDataTable)
 
-<<<<<<< HEAD
 logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log', level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 logging.basicConfig(filename=r'C:\Users\user\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-=======
-# logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
->>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 
 # @requires_csrf_token
 def custom_csrf_failure(request, reason=""):
@@ -145,25 +149,21 @@ def recommend_courses(request):
         user_description_about_interests = request.POST.getlist('additionalInfo')
         user_description_about_interests = ''.join(user_description_about_interests).lower() 
         #user_description_about_interests = ''.join(user_activities_enjoyed).lower() 
-        print(user_description_about_interests)
+        print(f'\nnuser_description_about_interests:\n{user_description_about_interests}\n') 
         try: 
             # from python_scripts.proacted_recommender2024 import proacted2024
-            from python_scripts.sbert_recommender import sbert_proactedrecomm2024 # importing form here to avoid running anytime the view file is touched.
             # # Load the model and get the output
             # print("\nBeginning to run the recommender script")
             # logging.info("Proacted recommender initialized...")
             # proacted_recommendations = proacted2024(user_description_about_interests, user_activities_enjoyed)
             # print(f"here are the proacted_recommendations: {proacted_recommendations}")
-            # print(f"Done with proacted, proceeding to sbert recommender")
 
-            sbert_recommendations = sbert_proactedrecomm2024(user_description_about_interests, user_activities_enjoyed)
-<<<<<<< HEAD
+            from python_scripts.sbert_recommender import sbert_proactedrecomm2024 # importing form here to avoid running anytime the view file is touched.
+
+            print(f"Initializing Sbert recommender")
+            sbert_recommendations = sbert_proactedrecomm2024(sbert_model, user_description_about_interests, user_activities_enjoyed)
             print(f"here are the sbert_recommendations: {sbert_recommendations}") 
-            context = {'proacted_recommendations': sbert_recommendations}
-=======
-            # print(f"here are the sbert_recommendations: {sbert_recommendations}") 
-            context = {'sbert_proactedrecomm2024': sbert_proactedrecomm2024}
->>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
+            context = {'sbert_recommendations': sbert_recommendations}
 
             return render(request, 'academia_app/recommended_courses.html', context)
         except Exception as exc:
@@ -184,25 +184,11 @@ logger = logging.getLogger(__name__)
         
 def predict_probability(request, student_id=3): 
     try: 
-<<<<<<< HEAD
         # model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         # model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_prob_model2.joblib'
         model = joblib.load(model_path)
-=======
-
-        # model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        
-        # model = joblib.load(model_path)
-        try:
-            model = joblib.load(model_path)
-        except ModuleNotFoundError as e:
-            logger.error(f"Error loading model: {e}")
-            return HttpResponse("Error loading model", status=500)
->>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
         logging.info('Probability model proacted_prob_model2 loaded') 
 
         student_data = StudentUser.objects.get(id=student_id) 
@@ -246,87 +232,6 @@ def predict_probability(request, student_id=3):
 import joblib
 from .models import StudentUser, Course
 
-<<<<<<< HEAD
-
-# def realtimestudentprob(request, course_id=None, school_id=99):
-#     """This function will run every student's probability metrics and update the student table and other relevant tables, then the admin page will be caused to read the db again, ultimately reflecting on the admin interface as fresh and new manna."""
-
-#     if course_id and not school_id:
-#         try:
-#             # Getting all students associated with the given course ID
-#             students = StudentUser.objects.filter(course_id=course_id)
-
-#             # Loading the machine learning model
-#             model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-#             model = joblib.load(model_path)
-
-#             total_probability = 0.0
-#             all_student_probabilities = []
-
-#             for student in students:
-#                 # Prepare input data for prediction
-#                 input_data = [[
-#                     student.Lessons_Attended,
-#                     student.Aggregate_points,
-#                     student.pcnt_of_lessons_attended,
-#                     student.homework_submission_rates,
-#                     student.CAT_1_marks,
-#                     student.CAT_2_marks,
-#                     student.activity_on_elearning_platforms
-#                 ]] 
-
-#                 # Predict student real-time probabilities
-#                 prediction = model.predict(input_data)
-#                 print(f'prediction for {student} {prediction[0][0]}')
-
-#                 # Write the probability to the table
-#                 student.graduation_probability = prediction[0][0]
-#                 student.save()
-
-#                 # Update total probability
-#                 total_probability += prediction[0][0]
-
-#                 all_student_probabilities.append(prediction[0][0]) 
-
-#             course = Course.objects.get(id=course_id)
-#             course.graduation_probability = total_probability
-#             course.save()
-#             print(f'saved data for {student}: in course table as {total_probability}')
-
-#             context = {'all_student_probabilities':all_student_probabilities}
-#             print('all_student_probabilities: ', all_student_probabilities)
-
-#             return render(request, 'admin/base.html', context) # here, return the admin page with these new values.
-#         except Exception as e:
-#             print(f"\n\nError: {e}\n\n")
-
-#     elif school_id:
-#         # logic for school id
-#         schools = Course.objects.filter(school_id=school_id) 
-#         for courses in schools:
-#             coursenames =  courses.name
-#             course_probabilities = courses.graduation_probability
-#             course_studentcount = courses.students_count
- 
-#             try:
-#                 average_prob_to_display = course_probabilities/course_studentcount
-#             except:
-#                 average_prob_to_display = 0
-#                 print('Null encountered, this will show on the graph as zero')
-
-#             # average_prob_to_display to be sent to admin, to draw the graph
-#             # print(f'\ncoursenames: {coursenames} :: course_probabilities: {course_probabilities} :: course_studentcount: {course_studentcount} :: average_prob_for_the_course {average_prob_to_display}')
-
-#             print(f"\nTo be displayed as a bar graph: {coursenames} with value {average_prob_to_display}") 
-
-#             context = {'average_prob_to_display':average_prob_to_display, 'coursenames': coursenames} 
-
-#         return render(request, 'admin/base.html', context) #this needs to be changed to sth local, ie, shouldnt refresh whole page but the part where the schools are.
-#     return HttpResponse("Returns to admin") 
-
-
-=======
->>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 def update_probabilities(course_id=None, school_id=None):
     if course_id and not school_id:
         try:
@@ -335,6 +240,7 @@ def update_probabilities(course_id=None, school_id=None):
 
             # Loading the machine learning model
             model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+            # 'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
             model = joblib.load(model_path)
 
             total_probability = 0.0
@@ -390,7 +296,6 @@ def update_probabilities(course_id=None, school_id=None):
                         student.CAT_2_marks,
                         student.activity_on_elearning_platforms
                     ]]
-<<<<<<< HEAD
 
                     # Predict student real-time probabilities
                     prediction = model.predict(input_data)
@@ -409,32 +314,6 @@ def update_probabilities(course_id=None, school_id=None):
 
         except Exception as e:
             print(f"\n\nError: {e}\n\n")
-# Views that Call the Update Function
-# School Data View
-# This view updates the database and then fetches the required data for the school.
-
-
-        
-=======
-
-                    # Predict student real-time probabilities
-                    prediction = model.predict(input_data)
-                    print(f'prediction for {student}: {prediction[0][0]}')
-
-                    # Write the probability to the table
-                    student.graduation_probability = prediction[0][0]
-                    student.save()
-
-                    # Update total probability
-                    total_probability += prediction[0][0]
-
-                course.graduation_probability = total_probability
-                course.save()
-                print(f'saved data for course {course.id}: in course table as {total_probability}')
-
-        except Exception as e:
-            print(f"\n\nError: {e}\n\n")
->>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 
 def UpdateStudentsCountView(request): 
     """This function counts the number of students taking a certain course and updates the db in real time"""
@@ -487,10 +366,7 @@ def dashboard(request):
     else:
         return redirect('student_page')  # Students to student page
 
-<<<<<<< HEAD
 # View to fetch data for schools for pie charts
-=======
->>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 def school_data(request, school_id):
     try:
         # Update probabilities before fetching data
@@ -601,19 +477,11 @@ def student_page(request):
 
 def course_recommendation(request):
     print("visited course recommendation page")
-<<<<<<< HEAD
-=======
-
->>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
     interests = FieldOfInterest.objects.all()
     subjects = HighSchoolSubject.objects.all()
     print(interests, subjects)
     return render(request, 'academia_app/course_recommendation_page.html',{'interests': interests, 'subjects': subjects})
 
-<<<<<<< HEAD
-
-=======
->>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 @login_required
 def school_list(request):
     if request.user.is_staff:
