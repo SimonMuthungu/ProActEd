@@ -28,7 +28,10 @@ urlpatterns = [
     # path('realtimestudentprobpredict_probability/<int:course_id>/', views.realtimestudentprob, name='predict_probability'),
     # path('realtimestudentprob/', views.realtimestudentprob, name='realtimestudentprob'),
     path('update_students_count/', views.UpdateStudentsCountView, name='update_students_count'),
+<<<<<<< HEAD
 
+=======
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
     path('school_detail/<int:school_id>/', views.school_detail, name='school_detail'),
     path('course_detail/<int:course_id>/', views.course_detail, name='course_detail'),
 ]

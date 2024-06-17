@@ -35,6 +35,7 @@ from django.urls import reverse_lazy
 from python_scripts.recommender_engine import load_model
 #from .models import StudentUser, AdminUser, SuperAdminUser, Attendance, Performance, Course, School, Recommender_training_data
 from .forms import UpdateStudentProfileForm
+from tensorflow.keras.models import load_model
 from .models import *
 from django.db.models import Count, Sum
 from django.shortcuts import render
@@ -44,9 +45,14 @@ from django.contrib import messages
 from django.shortcuts import redirect, render
 
 
+<<<<<<< HEAD
 logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+=======
+logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+# logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 
 
 from .forms import UpdateStudentProfileForm
@@ -54,11 +60,15 @@ from .models import (Attendance, BaseUser, Course, Message, Performance,
                      Recommender_training_data, School, StudentUser,
                      UserProfile, ProbabilityDataTable)
 
+<<<<<<< HEAD
 logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log', level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 logging.basicConfig(filename=r'C:\Users\user\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+=======
+# logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 
 # @requires_csrf_token
 def custom_csrf_failure(request, reason=""):
@@ -147,8 +157,13 @@ def recommend_courses(request):
             # print(f"Done with proacted, proceeding to sbert recommender")
 
             sbert_recommendations = sbert_proactedrecomm2024(user_description_about_interests, user_activities_enjoyed)
+<<<<<<< HEAD
             print(f"here are the sbert_recommendations: {sbert_recommendations}") 
             context = {'proacted_recommendations': sbert_recommendations}
+=======
+            # print(f"here are the sbert_recommendations: {sbert_recommendations}") 
+            context = {'sbert_proactedrecomm2024': sbert_proactedrecomm2024}
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 
             return render(request, 'academia_app/recommended_courses.html', context)
         except Exception as exc:
@@ -165,15 +180,29 @@ def recommend_courses(request):
         return render(request, 'academia_app/recommended_courses.html')       
 
             
-        
+logger = logging.getLogger(__name__)        
         
 def predict_probability(request, student_id=3): 
     try: 
+<<<<<<< HEAD
         # model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         # model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_prob_model2.joblib'
         model = joblib.load(model_path)
+=======
+
+        # model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        
+        # model = joblib.load(model_path)
+        try:
+            model = joblib.load(model_path)
+        except ModuleNotFoundError as e:
+            logger.error(f"Error loading model: {e}")
+            return HttpResponse("Error loading model", status=500)
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
         logging.info('Probability model proacted_prob_model2 loaded') 
 
         student_data = StudentUser.objects.get(id=student_id) 
@@ -191,22 +220,33 @@ def predict_probability(request, student_id=3):
         print('the student doesnt exist')
         return render(request, "academia_app/student_page.html")
 
-    input_data = [[lessonsattended, aggrpoints, pcnt_of_lessons_attended, homework_submission_rates, CAT_1_marks, CAT_2_marks, activity_on_elearning_platforms]] 
-    # input_data = [[lessonsattended, aggrpoints]] 
-
+    # input_data = [[lessonsattended, aggrpoints, pcnt_of_lessons_attended, homework_submission_rates, CAT_1_marks, CAT_2_marks, activity_on_elearning_platforms]] 
+    if request.user.groups.filter(name='Student Users').exists():
+        student_first_name = request.user.first_name
+        if not student_first_name:
+            student_first_name = request.user.username
+        print(student_first_name)
+    # Convert input data to numpy array and reshape it
+    input_data = np.array([[lessonsattended, aggrpoints, pcnt_of_lessons_attended, 
+                            homework_submission_rates, CAT_1_marks, CAT_2_marks, 
+                            activity_on_elearning_platforms]])
+    input_data = np.array(input_data).astype(np.float32)
+    print(input_data)
+    # Ensure the input data has the correct shape
+    input_data = tf.reshape(input_data, [1, 7])
+    
     # Predict probabilities
     prediction = model.predict(input_data)
 
-    context = {'prediction': prediction[0][0], 'refined_prediction': f"{prediction[0][0]*100:.3f}"}
+    context = {'student_first_name':student_first_name,'prediction': prediction[0][0], 'refined_prediction': f"{prediction[0][0]*100:.3f}"}
     print(f"\n\nStudent {student_id} with lessonsattended: {lessonsattended} and aggrpoints: {aggrpoints}, lessons_attended: {pcnt_of_lessons_attended}, homework_submission_rates: {homework_submission_rates}, activity_on_learning_platforms: {activity_on_learning_platforms}, CAT_1_marks: {CAT_1_marks}, CAT_2_marks: {CAT_2_marks}, activity_on_elearning_platforms: {activity_on_elearning_platforms} ; 'prediction': {prediction[0][0]}, 'refined_prediction': {prediction[0][0]*100:.3f}\n\n")
 
     return render(request, "academia_app/student_page.html",context = context)
-
-
-from django.http import HttpResponse
-from .models import StudentUser
+    
 import joblib
+from .models import StudentUser, Course
 
+<<<<<<< HEAD
 
 # def realtimestudentprob(request, course_id=None, school_id=99):
 #     """This function will run every student's probability metrics and update the student table and other relevant tables, then the admin page will be caused to read the db again, ultimately reflecting on the admin interface as fresh and new manna."""
@@ -285,6 +325,8 @@ import joblib
 #     return HttpResponse("Returns to admin") 
 
 
+=======
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 def update_probabilities(course_id=None, school_id=None):
     if course_id and not school_id:
         try:
@@ -292,7 +334,7 @@ def update_probabilities(course_id=None, school_id=None):
             students = StudentUser.objects.filter(course_id=course_id)
 
             # Loading the machine learning model
-            model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+            model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
             model = joblib.load(model_path)
 
             total_probability = 0.0
@@ -348,6 +390,7 @@ def update_probabilities(course_id=None, school_id=None):
                         student.CAT_2_marks,
                         student.activity_on_elearning_platforms
                     ]]
+<<<<<<< HEAD
 
                     # Predict student real-time probabilities
                     prediction = model.predict(input_data)
@@ -372,6 +415,26 @@ def update_probabilities(course_id=None, school_id=None):
 
 
         
+=======
+
+                    # Predict student real-time probabilities
+                    prediction = model.predict(input_data)
+                    print(f'prediction for {student}: {prediction[0][0]}')
+
+                    # Write the probability to the table
+                    student.graduation_probability = prediction[0][0]
+                    student.save()
+
+                    # Update total probability
+                    total_probability += prediction[0][0]
+
+                course.graduation_probability = total_probability
+                course.save()
+                print(f'saved data for course {course.id}: in course table as {total_probability}')
+
+        except Exception as e:
+            print(f"\n\nError: {e}\n\n")
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 
 def UpdateStudentsCountView(request): 
     """This function counts the number of students taking a certain course and updates the db in real time"""
@@ -424,7 +487,10 @@ def dashboard(request):
     else:
         return redirect('student_page')  # Students to student page
 
+<<<<<<< HEAD
 # View to fetch data for schools for pie charts
+=======
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 def school_data(request, school_id):
     try:
         # Update probabilities before fetching data
@@ -454,6 +520,7 @@ def school_data(request, school_id):
     except School.DoesNotExist:
         return JsonResponse({"error": "School not found"}, status=404)
     
+
 
 # View to fetch data for courses for pie charts
 def course_data(request, course_id):
@@ -511,7 +578,11 @@ def course_detail(request, course_id):
 def student_page(request):
     print("Visited Student Page")
     print(f"User: {request.user}, Groups: {request.user.groups.all()}")
+
     if request.user.groups.filter(name='Student Users').exists():
+        student_first_name = request.user.first_name
+        if not student_first_name:
+            student_first_name = request.user.username
 
         # Get the associated StudentUser object of the logged-in user
         try:
@@ -519,6 +590,7 @@ def student_page(request):
             student_id = student_user.id
             print(f"Student ID: {student_id}")
             return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+            # return render(request, "academia_app/student_page.html", context={'student_name': student_first_name})
         except StudentUser.DoesNotExist:
             print("StudentUser object does not exist for the current user")
             return redirect('login') # student doesnt exist, so they login first
@@ -529,12 +601,19 @@ def student_page(request):
 
 def course_recommendation(request):
     print("visited course recommendation page")
+<<<<<<< HEAD
+=======
+
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
     interests = FieldOfInterest.objects.all()
     subjects = HighSchoolSubject.objects.all()
     print(interests, subjects)
     return render(request, 'academia_app/course_recommendation_page.html',{'interests': interests, 'subjects': subjects})
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 @login_required
 def school_list(request):
     if request.user.is_staff:
@@ -553,7 +632,7 @@ def inbox(request):
     notifications = NewMessageNotification.objects.filter(user=request.user, is_new=True)
 
     # Mark all notifications as read
-    notifications.update(is_new=False)
+    # notifications.update(is_new=False)
     for user in users:
         user.has_new_messages = NewMessageNotification.objects.filter(user=user, is_new=True).exists()
 

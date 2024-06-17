@@ -15069,6 +15069,10 @@ INFO || 12-Jun-24 07:29:47 || C:\Users\user\Desktop\ProActEd\AIacademia\academia
 WARNING || 12-Jun-24 07:33:23 || Not Found: /ws/academia_app/
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 >>>>>>> 0270e327f8d255da739368f57e05331895135a08
 INFO || 12-Jun-24 11:29:41 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
 INFO || 12-Jun-24 11:30:09 || C:\Users\Simon\proacted\AIacademia\academia_app\migrations\0001_initial.py changed, reloading.
@@ -15504,8 +15508,12 @@ INFO || 12-Jun-24 22:21:15 || Probability model proacted_prob_model2 loaded
 WARNING || 12-Jun-24 22:21:15 || 5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000001399BAF76A0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
 WARNING || 12-Jun-24 22:21:16 || Not Found: /ws/academia_app/
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> bc8d88ec2a1660b5dd3c4218ff5c99b7bb3bfe77
+=======
+>>>>>>> 3911a9e3c75809175470f08122f4699a8abf2b4e
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 WARNING || 12-Jun-24 11:49:15 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 11:49:32 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 11:50:08 || Not Found: /favicon.ico
@@ -15761,9 +15769,12 @@ WARNING || 12-Jun-24 19:54:58 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 19:55:07 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 19:55:27 || Not Found: /favicon.ico
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bd072ec40685e95427346e71dcbd112c7a3a8439
 ERROR || 13-Jun-24 11:58:14 || Internal Server Error: /api/course_data/18/
 =======
+=======
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 =======
 >>>>>>> 0270e327f8d255da739368f57e05331895135a08
 INFO || 12-Jun-24 11:29:41 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
@@ -15780,7 +15791,14 @@ sqlite3.OperationalError: no such column: academia_app_baseuser.role
 
 The above exception was the direct cause of the following exception:
 
+<<<<<<< HEAD
 >>>>>>> bc8d88ec2a1660b5dd3c4218ff5c99b7bb3bfe77
+=======
+=======
+>>>>>>> bd072ec40685e95427346e71dcbd112c7a3a8439
+ERROR || 13-Jun-24 11:58:14 || Internal Server Error: /api/course_data/18/
+>>>>>>> 3911a9e3c75809175470f08122f4699a8abf2b4e
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 Traceback (most recent call last):
   File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
@@ -15788,6 +15806,7 @@ Traceback (most recent call last):
   File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<<<<<<< HEAD
 <<<<<<< HEAD
   File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 363, in course_data
     students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
@@ -15829,6 +15848,8 @@ INFO || 13-Jun-24 17:18:48 || C:\Users\Simon\proacted\AIacademia\academia_app\vi
 INFO || 13-Jun-24 17:19:43 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
 INFO || 13-Jun-24 17:20:03 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
 =======
+=======
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
   File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 67, in login_view
     user = authenticate(request, username=username, password=password)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -15928,9 +15949,12 @@ WARNING || 13-Jun-24 15:49:02 || Not Found: /favicon.ico
 WARNING || 13-Jun-24 15:49:44 || Not Found: /favicon.ico
 WARNING || 13-Jun-24 15:49:57 || Not Found: /favicon.ico
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bc8d88ec2a1660b5dd3c4218ff5c99b7bb3bfe77
 WARNING || 13-Jun-24 22:51:20 || Not Found: /favicon.ico
 =======
+=======
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 WARNING || 13-Jun-24 15:59:43 || Not Found: /favicon.ico
 WARNING || 13-Jun-24 18:02:32 || Not Found: /favicon.ico
 WARNING || 13-Jun-24 19:03:38 || Not Found: /favicon.ico
@@ -15941,6 +15965,7 @@ WARNING || 13-Jun-24 19:34:24 || Not Found: /favicon.ico
 WARNING || 13-Jun-24 19:37:00 || Not Found: /favicon.ico
 WARNING || 13-Jun-24 19:38:30 || Not Found: /favicon.ico
 WARNING || 13-Jun-24 19:44:52 || Not Found: /favicon.ico
+<<<<<<< HEAD
 >>>>>>> 548a0e8c62796f7e0259daa9190b7739f6d75ce4
 WARNING || 13-Jun-24 23:00:16 || Not Found: /favicon.ico
 WARNING || 13-Jun-24 23:00:19 || Not Found: /favicon.ico
@@ -16132,6 +16157,80 @@ WARNING || 13-Jun-24 23:36:00 || Not Found: /ws/academia_app/
 WARNING || 13-Jun-24 23:36:55 || Not Found: /ws/academia_app/
 WARNING || 13-Jun-24 23:37:04 || Not Found: /ws/academia_app/
 WARNING || 13-Jun-24 23:38:56 || Not Found: /ws/academia_app/
+=======
+WARNING || 13-Jun-24 20:23:24 || Not Found: /favicon.ico
+WARNING || 13-Jun-24 20:37:14 || Not Found: /ws/academia_app/
+WARNING || 13-Jun-24 20:38:35 || Not Found: /ws/academia_app/
+WARNING || 13-Jun-24 20:39:30 || Not Found: /ws/academia_app/
+WARNING || 13-Jun-24 20:40:17 || Not Found: /ws/academia_app/
+WARNING || 13-Jun-24 22:08:48 || Not Found: /ws/academia_app/
+WARNING || 13-Jun-24 22:10:12 || Not Found: /ws/academia_app/
+WARNING || 13-Jun-24 22:10:16 || Not Found: /ws/academia_app/
+WARNING || 13-Jun-24 22:12:12 || Not Found: /ws/academia_app/
+=======
+  File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 363, in course_data
+    students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
+WARNING || 13-Jun-24 12:04:15 || Not Found: /ws/academia_app/
+INFO || 13-Jun-24 12:07:01 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 12:08:10 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 13-Jun-24 12:08:27 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 13-Jun-24 12:08:27 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 13-Jun-24 12:10:01 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 13-Jun-24 16:19:56 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 13-Jun-24 16:19:56 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING || 13-Jun-24 16:21:24 || 5 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000001FCDED53D80> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING || 13-Jun-24 16:21:30 || 6 out of the last 7 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000001FCE0466F20> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+INFO || 13-Jun-24 17:06:05 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 13-Jun-24 17:06:20 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 13-Jun-24 17:06:20 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 13-Jun-24 17:07:26 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 13-Jun-24 17:07:36 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 13-Jun-24 17:07:36 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 13-Jun-24 17:08:23 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 13-Jun-24 17:08:34 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 13-Jun-24 17:08:34 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 13-Jun-24 17:11:59 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 17:15:47 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 17:18:18 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 17:18:48 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 17:19:43 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 17:20:03 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+>>>>>>> 3911a9e3c75809175470f08122f4699a8abf2b4e
+WARNING || 13-Jun-24 23:16:53 || Not Found: /favicon.ico
+ERROR || 13-Jun-24 23:17:31 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 389, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 170, in predict_probability
+    model = joblib.load(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\user\\ProActEd\\AIacademia\\trained_models\\proacted_model_2.2_with5morefeatures.joblib'
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 =======
 INFO || 12-Jun-24 15:12:54 || Forbidden (CSRF token from POST incorrect.): /auth/login/
 ERROR || 12-Jun-24 15:18:00 || Internal Server Error: /api/course_data/17/
@@ -16677,6 +16776,7 @@ WARNING || 12-Jun-24 22:57:38 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 22:59:06 || Not Found: /favicon.ico
 WARNING || 13-Jun-24 08:27:00 || Not Found: /favicon.ico
 >>>>>>> 41aa4a95d70f417edb69cd44c029ac6dfe2c95e6
+<<<<<<< HEAD
 WARNING || 14-Jun-24 00:00:25 || Not Found: /favicon.ico
 INFO || 14-Jun-24 01:42:56 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
 INFO || 14-Jun-24 01:48:33 || C:\Users\Simon\proacted\AIacademia\academia_app\urls.py changed, reloading.
@@ -16812,6 +16912,41 @@ Traceback (most recent call last):
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 django.db.utils.OperationalError: database is locked
 ERROR || 14-Jun-24 12:43:46 || Internal Server Error: /auth/login/
+=======
+INFO || 13-Jun-24 23:50:33 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 13-Jun-24 23:51:35 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 420, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 170, in predict_probability
+    model = joblib.load(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1205, in load
+    dispatch[key[0]](self)
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1530, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1572, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src.saving.pickle_utils'
+ERROR || 14-Jun-24 01:12:25 || Internal Server Error: /student_page/
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 Traceback (most recent call last):
   File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 89, in _execute
     return self.cursor.execute(sql, params)
@@ -16830,6 +16965,7 @@ Traceback (most recent call last):
   File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<<<<<<< HEAD
   File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 77, in login_view
     login(request, user)
   File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\__init__.py", line 144, in login
@@ -16984,3 +17120,343 @@ DEBUG || 14-Jun-24 15:09:17 || https://huggingface.co:443 "GET /api/models/sente
 INFO || 14-Jun-24 15:09:17 || Use pytorch device_name: cpu
 INFO || 14-Jun-24 15:09:27 || Time taken by sbert model: 16.189128398895264
 INFO || 14-Jun-24 15:09:28 || Recommender system has run
+=======
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 420, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 170, in predict_probability
+    model = joblib.load(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1205, in load
+    dispatch[key[0]](self)
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1530, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1572, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src.saving.pickle_utils'
+INFO || 14-Jun-24 01:25:22 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 14-Jun-24 01:30:35 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 14-Jun-24 01:44:51 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 511, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 170, in predict_probability
+    model = joblib.load(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1205, in load
+    dispatch[key[0]](self)
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1530, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1572, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src.saving.pickle_utils'
+WARNING || 14-Jun-24 01:44:52 || Not Found: /favicon.ico
+INFO || 14-Jun-24 02:09:58 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 14-Jun-24 02:11:26 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+ERROR || 14-Jun-24 02:12:22 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 429, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 170, in predict_probability
+    model = joblib.load(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1205, in load
+    dispatch[key[0]](self)
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1530, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1572, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src.saving.pickle_utils'
+WARNING || 14-Jun-24 02:18:13 || Not Found: /favicon.ico
+WARNING || 14-Jun-24 02:40:40 || Not Found: /favicon.ico
+WARNING || 14-Jun-24 02:43:40 || Not Found: /favicon.ico
+WARNING || 14-Jun-24 02:51:15 || Not Found: /favicon.ico
+WARNING || 14-Jun-24 02:55:07 || Not Found: /favicon.ico
+WARNING || 14-Jun-24 03:03:11 || Not Found: /favicon.ico
+WARNING || 14-Jun-24 03:03:52 || Not Found: /favicon.ico
+WARNING || 14-Jun-24 03:09:21 || Not Found: /favicon.ico
+WARNING || 14-Jun-24 03:11:08 || Not Found: /favicon.ico
+WARNING || 14-Jun-24 03:11:33 || Not Found: /favicon.ico
+WARNING || 14-Jun-24 03:17:59 || Not Found: /favicon.ico
+WARNING || 14-Jun-24 03:20:25 || Not Found: /favicon.ico
+WARNING || 14-Jun-24 03:37:55 || Not Found: /favicon.ico
+INFO || 14-Jun-24 10:03:08 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 14-Jun-24 10:19:27 || Not Found: /favicon.ico
+WARNING || 14-Jun-24 10:38:04 || Not Found: /favicon.ico
+WARNING || 14-Jun-24 10:44:15 || Not Found: /favicon.ico
+WARNING || 14-Jun-24 10:49:04 || Not Found: /favicon.ico
+ERROR || 14-Jun-24 12:32:36 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 429, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 170, in predict_probability
+    model = joblib.load(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1205, in load
+    dispatch[key[0]](self)
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1530, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1572, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src.saving.pickle_utils'
+INFO || 14-Jun-24 12:49:30 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 14-Jun-24 12:51:13 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 429, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 170, in predict_probability
+    model = joblib.load(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1205, in load
+    dispatch[key[0]](self)
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1530, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1572, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src.saving.pickle_utils'
+INFO || 14-Jun-24 12:53:46 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 14-Jun-24 12:56:51 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 430, in student_page
+    return render(request, "academia_app/student_page.html", context={'student_name': student_first_name})
+                                                                                      ^^^^^^^^^^^^^^^^^^
+NameError: name 'student_first_name' is not defined
+INFO || 14-Jun-24 12:58:53 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 14-Jun-24 13:00:13 || Not Found: /ws/academia_app/
+WARNING || 14-Jun-24 13:17:30 || Not Found: /ws/academia_app/
+WARNING || 14-Jun-24 13:19:28 || Not Found: /favicon.ico
+WARNING || 14-Jun-24 13:19:28 || Not Found: /ws/academia_app/
+WARNING || 14-Jun-24 13:19:41 || Not Found: /favicon.ico
+WARNING || 14-Jun-24 13:19:41 || Not Found: /ws/academia_app/
+WARNING || 14-Jun-24 13:19:43 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 13:43:02 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 14-Jun-24 13:44:01 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 14-Jun-24 13:45:03 || Not Found: /ws/academia_app/
+WARNING || 14-Jun-24 17:35:24 || Not Found: /ws/academia_app/
+ERROR || 14-Jun-24 17:37:30 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 431, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 170, in predict_probability
+    model = joblib.load(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1205, in load
+    dispatch[key[0]](self)
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1530, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1572, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src.saving.pickle_utils'
+INFO || 14-Jun-24 18:15:02 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 14-Jun-24 18:16:37 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 432, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 171, in predict_probability
+    model = joblib.load(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1205, in load
+    dispatch[key[0]](self)
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1530, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pickle.py", line 1572, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src.saving.pickle_utils'
+INFO || 14-Jun-24 18:34:29 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 14-Jun-24 18:35:56 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 14-Jun-24 18:40:31 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+ERROR || 14-Jun-24 18:49:04 || Error loading model: No module named 'keras.src.saving.pickle_utils'
+ERROR || 14-Jun-24 18:49:04 || Internal Server Error: /student_page/
+INFO || 14-Jun-24 21:37:39 || Probability model proacted_prob_model2 loaded
+ERROR || 14-Jun-24 21:37:40 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 437, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 197, in predict_probability
+    prediction = model.predict(input_data)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Program Files\Python312\Lib\site-packages\keras\src\trainers\data_adapters\__init__.py", line 120, in get_data_adapter
+    raise ValueError(f"Unrecognized data type: x={x} (of type {type(x)})")
+ValueError: Unrecognized data type: x=[[100.0, 50.0, 47.0, 74.0, 20.0, 18.0, 74.0]] (of type <class 'list'>)
+INFO || 14-Jun-24 22:12:33 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 14-Jun-24 22:13:46 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 22:13:53 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 22:16:57 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 14-Jun-24 22:19:30 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 22:19:31 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 22:19:34 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 22:19:36 || Not Found: /ws/academia_app/
+WARNING || 14-Jun-24 22:19:37 || Not Found: /favicon.ico
+INFO || 14-Jun-24 22:21:37 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 14-Jun-24 22:21:56 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 22:21:57 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 22:23:05 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 22:23:05 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 22:23:29 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 22:23:30 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 22:28:25 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 22:28:25 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 22:35:37 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 22:35:37 || 5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x00000184C36A8FE0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING || 14-Jun-24 22:35:38 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 22:46:10 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 22:46:10 || 6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x00000184C36F0900> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING || 14-Jun-24 22:46:10 || Not Found: /ws/academia_app/
+INFO || 15-Jun-24 08:26:50 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 15-Jun-24 08:32:09 || Probability model proacted_prob_model2 loaded
+WARNING || 15-Jun-24 08:32:11 || Not Found: /ws/academia_app/
+INFO || 15-Jun-24 08:45:01 || Probability model proacted_prob_model2 loaded
+WARNING || 15-Jun-24 08:45:02 || Not Found: /ws/academia_app/
+INFO || 15-Jun-24 08:45:37 || Probability model proacted_prob_model2 loaded
+WARNING || 15-Jun-24 08:45:38 || Not Found: /ws/academia_app/
+WARNING || 15-Jun-24 21:29:19 || Not Found: /favicon.ico
+WARNING || 15-Jun-24 22:03:57 || Not Found: /favicon.ico
+CRITICAL || 15-Jun-24 22:06:07 || Something came up, please rerun the system...
+INFO || 15-Jun-24 22:06:07 || Recommender system has run
+ERROR || 15-Jun-24 22:06:07 || Internal Server Error: /recommend_courses/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view academia_app.views.recommend_courses didn't return an HttpResponse object. It returned None instead.
+WARNING || 15-Jun-24 22:21:25 || Not Found: /favicon.ico
+WARNING || 15-Jun-24 22:38:47 || Not Found: /favicon.ico
+WARNING || 16-Jun-24 03:30:06 || Not Found: /favicon.ico
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
