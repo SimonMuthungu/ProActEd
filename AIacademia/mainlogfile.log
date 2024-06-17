@@ -16938,3 +16938,49 @@ INFO || 14-Jun-24 13:19:05 || Forbidden (CSRF token from POST incorrect.): /auth
 INFO || 14-Jun-24 13:21:36 || Forbidden (CSRF token from POST incorrect.): /auth/login/
 INFO || 14-Jun-24 13:21:43 || Probability model proacted_prob_model2 loaded
 WARNING || 14-Jun-24 13:21:46 || Not Found: /ws/academia_app/
+WARNING || 14-Jun-24 13:27:53 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 14-Jun-24 13:27:53 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 14-Jun-24 13:27:54 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 13:27:54 || Not Found: /ws/academia_app/
+WARNING || 14-Jun-24 13:32:55 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 13:40:26 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 14-Jun-24 13:40:46 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 14-Jun-24 13:40:46 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 14-Jun-24 13:40:46 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 13:40:58 || Not Found: /ws/academia_app/
+WARNING || 14-Jun-24 13:45:31 || Not Found: /favicon.ico
+INFO || 14-Jun-24 14:25:13 || S-Bert 2024 Recommender Engine Initialized
+INFO || 14-Jun-24 14:25:13 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Jun-24 14:25:13 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Jun-24 14:25:14 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 14:25:14 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 14:25:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 14:25:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 14:25:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 14:25:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 14:25:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 14:25:18 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 14-Jun-24 14:25:18 || Use pytorch device_name: cpu
+INFO || 14-Jun-24 14:25:27 || Time taken by sbert model: 13.997817039489746
+INFO || 14-Jun-24 14:25:27 || Recommender system has run
+INFO || 14-Jun-24 15:06:30 || Probability model proacted_prob_model2 loaded
+INFO || 14-Jun-24 15:06:30 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+INFO || 14-Jun-24 15:06:53 || Forbidden (CSRF token from POST incorrect.): /recommend_courses/
+INFO || 14-Jun-24 15:09:11 || S-Bert 2024 Recommender Engine Initialized
+INFO || 14-Jun-24 15:09:11 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Jun-24 15:09:11 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Jun-24 15:09:13 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 15:09:14 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 15:09:14 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 15:09:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 15:09:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 15:09:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 15:09:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 15:09:17 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 14-Jun-24 15:09:17 || Use pytorch device_name: cpu
+INFO || 14-Jun-24 15:09:27 || Time taken by sbert model: 16.189128398895264
+INFO || 14-Jun-24 15:09:28 || Recommender system has run

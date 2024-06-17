@@ -176,7 +176,7 @@ def predict_probability(request, student_id=3):
         model = joblib.load(model_path)
         logging.info('Probability model proacted_prob_model2 loaded') 
 
-        student_data = ProbabilityDataTable.objects.get(id=student_id) 
+        student_data = StudentUser.objects.get(id=student_id) 
         lessonsattended = student_data.Lessons_Attended
         aggrpoints = student_data.Aggregate_points
         pcnt_of_lessons_attended = student_data.pcnt_of_lessons_attended 
@@ -186,7 +186,7 @@ def predict_probability(request, student_id=3):
         CAT_2_marks = student_data.CAT_2_marks
         activity_on_elearning_platforms = student_data.activity_on_elearning_platforms
 
-    except ProbabilityDataTable.DoesNotExist:
+    except StudentUser.DoesNotExist:
         # the student doesnt exist
         print('the student doesnt exist')
         return render(request, "academia_app/student_page.html")
