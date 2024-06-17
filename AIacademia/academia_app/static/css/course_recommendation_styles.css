@@ -123,6 +123,12 @@ textarea {
     justify-content: space-around;
 }
 
+.custom-checkbox-grid tutorial-step {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .footer {
     width: 100%;
     background-color: #020225;
@@ -172,4 +178,96 @@ textarea {
     border-width: 10px;
     border-style: solid;
     border-color: #f0f0f0 transparent transparent transparent;
+}
+
+/* Style for the guide avatar */
+#guide-avatar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Style for the text bubble */
+#text-bubble {
+    position: fixed;
+    bottom: 180px;
+    right: 20px;
+    width: 200px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1001;
+}
+
+#text-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #f0f0f0 transparent transparent transparent;
+}
+
+/* Style for the tutorial overlay */
+#tutorial-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: none;
+}
+
+/* Style for highlighting the tutorial step */
+.highlight {
+    position: relative;
+    z-index: 1002;
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #FFDB58;
+    padding: 5px;
+    border-radius: 10px;
+    display: flex;
+}
+
+/* Style for the next button */
+#next-tutorial {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 1003;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style for the cancel button */
+#cancel-tutorial {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1003;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Initially hide the next and cancel buttons */
+#next-tutorial, #cancel-tutorial {
+    display: none;
 }

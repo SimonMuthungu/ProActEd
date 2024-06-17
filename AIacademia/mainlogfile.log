@@ -16905,3 +16905,32 @@ Traceback (most recent call last):
   File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
     raise ValueError(
 ValueError: The view academia_app.views.recommend_courses didn't return an HttpResponse object. It returned None instead.
+WARNING || 17-Jun-24 10:02:37 || Not Found: /favicon.ico
+WARNING || 17-Jun-24 10:04:34 || Not Found: /favicon.ico
+WARNING || 17-Jun-24 10:04:40 || Not Found: /favicon.ico
+CRITICAL || 17-Jun-24 10:05:34 || Something came up, please rerun the system...
+INFO || 17-Jun-24 10:05:34 || Recommender system has run
+ERROR || 17-Jun-24 10:05:35 || Internal Server Error: /recommend_courses/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view academia_app.views.recommend_courses didn't return an HttpResponse object. It returned None instead.
+WARNING || 17-Jun-24 10:15:11 || Not Found: /favicon.ico
+WARNING || 17-Jun-24 11:32:18 || Not Found: /favicon.ico
+WARNING || 17-Jun-24 11:40:56 || Not Found: /favicon.ico
+WARNING || 17-Jun-24 11:49:11 || Not Found: /favicon.ico
+WARNING || 17-Jun-24 11:57:20 || Not Found: /favicon.ico
+WARNING || 17-Jun-24 12:05:27 || Not Found: /favicon.ico
+WARNING || 17-Jun-24 12:12:04 || Not Found: /favicon.ico
+WARNING || 17-Jun-24 12:14:53 || Not Found: /favicon.ico
+WARNING || 17-Jun-24 12:16:56 || Not Found: /favicon.ico
+WARNING || 17-Jun-24 12:17:29 || Not Found: /favicon.ico
+WARNING || 17-Jun-24 12:19:25 || Not Found: /favicon.ico
+WARNING || 17-Jun-24 12:49:57 || Not Found: /favicon.ico
+WARNING || 17-Jun-24 12:50:46 || Not Found: /favicon.ico
+WARNING || 17-Jun-24 12:58:32 || Not Found: /favicon.ico

@@ -21,22 +21,23 @@
         <section>
             <h3>Please Select Us Your Interests:</h3>
 
-            <div class="custom-checkbox-grid">
-                {% for interest in interests %}
-                    <div class="custom-checkbox">
-                        <input type="checkbox" id="interest_{{ interest.id }}" name="interests[]" value="{{ interest.id }}">
-                        <label for="interest_{{ interest.id }}">{{ interest.name }}</label>
-                    </div>
+            <div class="custom-checkbox-grid tutorial-step" data-step="1">
+                {% for interest in interests %}   
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="interest_{{ interest.id }}" name="interests[]" value="{{ interest.id }}">
+                    <label for="interest_{{ interest.id }}">{{ interest.name }}</label>
+                </div>
                 {% endfor %}
             </div>
-
-            <div class="text-area">
                 <h2 for="additionalInfo">Please tell us more about yourself and your interests:</h2><br>
+            <div class="text-area tutorial-step" data-step="2">
+                
                 <textarea id="additionalInfo" name="additionalInfo" placeholder="E.g. I love music and art. Music is my passion. Since I was a child, I've always produced music and video entertainment. It makes me feel alive, that life is worth living. I also love media and video production"></textarea>
             </div>
 
-            <section>
                 <h2>Select The Subjects You Excelled At In High School</h2>
+            <section class="tutorial-step" data-step="3">
+                
                 
                 <div class="custom-checkbox-grid">
                     {% for subject in subjects %}
@@ -54,22 +55,93 @@
     <!-- Guide Avatar and Text Bubble -->
     <img id="guide-avatar" src="{% static 'avatars/happy.png' %}" alt="Guide Avatar">
     <div id="text-bubble">Hello! I am here to guide you through the course recommendation process.</div>
+    
+    <!-- Tutorial Overlay -->
+    <div id="tutorial-overlay"></div>
+    <button id="next-tutorial">Next</button>
+    <button id="cancel-tutorial">Cancel Tutorial</button>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const guideAvatar = document.getElementById('guide-avatar');
             const textBubble = document.getElementById('text-bubble');
-            showTextBubble('Hello! I am here to guide you through the course recommendation process.');
+            const tutorialOverlay = document.getElementById('tutorial-overlay');
+            const nextTutorialBtn = document.getElementById('next-tutorial');
+            const cancelTutorialBtn = document.getElementById('cancel-tutorial');
 
-            
+            // Elements to highlight in the tutorial
+            const tutorialSteps = document.querySelectorAll('.tutorial-step');
+            let currentStep = 0;
+
+            // Messages for each tutorial step
+            const tutorialMessages = [
+                "Please select your interests here.",
+                "Tell us more about yourself in this text area.",
+                "Here you select the subjects you excelled at in high school."
+            ];
+
+            // Function to show the text bubble with a message
             function showTextBubble(message) {
                 textBubble.textContent = message;
                 textBubble.style.display = 'block';
                 setTimeout(() => {
                     textBubble.style.display = 'none';
-                }, 5000); // Hide after 5 seconds
+                }, 4000); // Hide after 4 seconds
             }
 
+            // Function to show the current tutorial step
+            function showTutorialStep() {
+                tutorialSteps.forEach((step, index) => {
+                    if (index === currentStep) {
+                        step.classList.add('highlight');
+                        step.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        showTextBubble(tutorialMessages[index]);
+                    } else {
+                        step.classList.remove('highlight');
+                    }
+                });
+            }
+
+            // Function to start the tutorial
+            function startTutorial() {
+                tutorialOverlay.style.display = 'block';
+                nextTutorialBtn.style.display = 'block';
+                cancelTutorialBtn.style.display = 'block';
+                showTutorialStep();
+            }
+
+            // Function to go to the next tutorial step
+            function nextTutorialStep() {
+                if (currentStep < tutorialSteps.length - 1) {
+                    currentStep++;
+                    showTutorialStep();
+                } else {
+                    endTutorial();
+                }
+            }
+
+            // Function to end the tutorial
+            function endTutorial() {
+                tutorialOverlay.style.display = 'none';
+                nextTutorialBtn.style.display = 'none';
+                cancelTutorialBtn.style.display = 'none';
+                tutorialSteps.forEach(step => {
+                    step.classList.remove('highlight');
+                });
+                currentStep = 0;
+            }
+
+            // Event listener for the cancel button
+            cancelTutorialBtn.addEventListener('click', endTutorial);
+
+            // Event listener for the next button
+            nextTutorialBtn.addEventListener('click', nextTutorialStep);
+
+            // Start tutorial on page load
+            showTextBubble('Welcome! Let me guide you through this page.');
+            setTimeout(startTutorial, 5000); // Start tutorial after 5 seconds
+
+            // Event listener for the guide avatar
             guideAvatar.addEventListener('click', function() {
                 showTextBubble('Hello! I am here to guide you through the course recommendation process.');
                 guideAvatar.src = "{% static 'avatars/excited.png' %}";
@@ -78,7 +150,7 @@
             // Change avatar expression based on form interactions
             const form = document.querySelector('form');
             form.addEventListener('submit', function() {
-                guideAvatar.src = "{% static 'avatars/surprised.png' %}";
+                guideAvatar.src = "{% static 'avatars/excited.png' %}";
                 showTextBubble('Thank you for submitting your information!');
             });
 
