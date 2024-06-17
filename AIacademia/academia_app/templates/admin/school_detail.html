@@ -1,5 +1,78 @@
 {% load static %}
 {% load admin_urls %}
-<div>
-    <h1>Roger this</h1>
+<div class="chart-container">
+    <canvas id="school-chart-2" width="900" height="350"></canvas>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const ctx = document.getElementById('school-chart-2').getContext('2d');
+
+        const chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: [], // Will be populated dynamically
+                datasets: [{
+                    label: 'Graduation Probabilities',
+                    data: [], // Will be populated dynamically
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Graduation Probability'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Courses'
+                        }
+                    }
+                }
+            }
+        });
+
+        document.getElementById('schoolDropdown').addEventListener('change', function() {
+            const schoolId = this.value;
+            if (schoolId) {
+                fetch(`/api/school_data/${schoolId}/`)
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Received data:', data); // Log the received data
+                        const courseNames = data.courses.map(course => course.name);
+                        const graduationProbabilities = data.courses.map(course => course.graduation_probability);
+
+                        console.log('Course Names:', courseNames);
+                        console.log('Graduation Probabilities:', graduationProbabilities);
+
+                        chart.data.labels = courseNames;
+                        chart.data.datasets[0].data = graduationProbabilities;
+                        chart.update();
+                    })
+                    .catch(error => {
+                        console.error('Error fetching school data:', error);
+                        chart.data.labels = [];
+                        chart.data.datasets[0].data = [];
+                        chart.update();
+                    });
+            } else {
+                chart.data.labels = [];
+                chart.data.datasets[0].data = [];
+                chart.update();
+            }
+        });
+
+        // Initial chart update with empty data
+        chart.update();
+    });
+</script>

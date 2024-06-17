@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}">
 
     {% block dark-mode-vars %}
-    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
+
     <link rel="stylesheet" href="{% static "admin/css/dark_mode.css" %}">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="{% static "admin/js/theme.js" %}" defer></script>
     {% endblock %}

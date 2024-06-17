@@ -5,33 +5,28 @@ body {
     background-color: #262b3c;
     color: #A6B0CF;
     padding: 0;
-    margin: 0;
+    margin-top: 65px;
     overflow-x: hidden;
     height: 100%;
 }
+
 header#header {
-    position: sticky;
     top: 0;
     z-index: 1000;
     background-color: #1e1e2d; /* Adjust the background color to match your header */
-    padding: 10px 20px;
+/*    padding: 10px 20px;*/
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     color: #FFDB58;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
     height:85;
     z-index: 1010;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
-
-/* .sidebar {
-    width: 20%; /* Adjust this width as necessary */
-    /*background-color: #2C3E50; /* Example color */
-    /* padding: 20px; */
-    /* color: #fff; */
-/* } */
-
 
 .custom-logo {
     height: auto;
@@ -292,7 +287,7 @@ header#header {
 .profile-box {
     background-color: #f8f9fa;
     border-radius: 5px;
-    padding: 15px;
+    padding: 5px;
     text-align: left;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: #262b3c;
@@ -360,7 +355,7 @@ header#header {
     height: 280px;
 }
 
-/* Dropdown */
+/* The drop down section */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -385,8 +380,7 @@ header#header {
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
-    bottom: 100%; /* Position the dropdown above */
+    display: block; /* Position the dropdown above */
 }
 
 .dropdown-content::-webkit-scrollbar {
@@ -400,6 +394,10 @@ header#header {
 
 .dropdown-content::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+.side_bar_content{
+    
 }
 
 @media (max-width: 768px) {
@@ -416,4 +414,37 @@ header#header {
     #footer {
         left: 0;
     }
+}
+
+#canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: rgba(128, 128, 128, 0.5); /* Semi-grey background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#school-chart-2 {
+    background-color: #ffffff; /* White background for the canvas */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+    background-color: rgba(50, 50, 50, 0.1); /* Semi-grey background */
+    padding: 20px;
+}
+
+.chart-container canvas {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    max-height: 100%;
 }
