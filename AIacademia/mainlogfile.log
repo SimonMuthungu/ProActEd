@@ -16892,3 +16892,16 @@ ValueError: The view academia_app.views.recommend_courses didn't return an HttpR
 WARNING || 15-Jun-24 22:21:25 || Not Found: /favicon.ico
 WARNING || 15-Jun-24 22:38:47 || Not Found: /favicon.ico
 WARNING || 16-Jun-24 03:30:06 || Not Found: /favicon.ico
+WARNING || 16-Jun-24 16:20:46 || Not Found: /favicon.ico
+CRITICAL || 16-Jun-24 16:21:36 || Something came up, please rerun the system...
+INFO || 16-Jun-24 16:21:36 || Recommender system has run
+ERROR || 16-Jun-24 16:21:36 || Internal Server Error: /recommend_courses/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view academia_app.views.recommend_courses didn't return an HttpResponse object. It returned None instead.
