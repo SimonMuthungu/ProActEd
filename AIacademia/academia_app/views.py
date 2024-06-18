@@ -5,6 +5,8 @@ import sys
 import joblib
 import logging
 import numpy as np
+import requests
+import uuid
 import tensorflow as tf
 from django import forms
 from telnetlib import LOGOUT
@@ -24,6 +26,9 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, redirect, render
 from django.core.mail import send_mail
 from django.db.models import Q
+import requests
+from django.http import JsonResponse
+import json
 from django.http import (Http404, HttpRequest, HttpResponse, HttpResponseRedirect, JsonResponse)
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
@@ -41,14 +46,17 @@ from tensorflow.keras.models import load_model
 from .models import *
 from django.db.models import Count, Sum
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.csrf import requires_csrf_token
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.shortcuts import redirect, render
 
 
-logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+# logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+logging.basicConfig(filename=r'C:\Users\user\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+
 
 
 from .forms import UpdateStudentProfileForm
@@ -164,8 +172,8 @@ logger = logging.getLogger(__name__)
 def predict_probability(request, student_id=3): 
     try: 
 
-        # model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        # model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         
         # model = joblib.load(model_path)
@@ -603,3 +611,40 @@ def profile(request):
     }
 
     return render(request, 'academia_app/Profile.html', context)
+
+@csrf_exempt
+def rasa_chat(request):
+    if request.method == 'POST':
+        if 'sender_id' not in request.session:
+            request.session['sender_id'] = str(uuid.uuid4())
+
+        message = request.POST.get('message', '')
+        sender_id = request.session['sender_id']
+        rasa_url = 'http://localhost:5005/webhooks/rest/webhook'
+        payload = {
+            "sender": sender_id,
+            "message": message
+        }
+        headers = {'Content-Type': 'application/json'}
+
+        logger.debug(f"Sending to Rasa: {payload}")
+
+        try:
+            rasa_response = requests.post(rasa_url, json=payload, headers=headers)
+            if rasa_response.status_code == 200:
+                response_data = rasa_response.json()
+                logger.debug(f"Response from Rasa: {response_data}")
+                messages = [resp.get("text", "") for resp in response_data]
+                return JsonResponse({'messages': messages})
+            else:
+                logger.error(f"Failed to process message with status {rasa_response.status_code}")
+                return JsonResponse({'error': 'Failed to process the message'}, status=500)
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Request to Rasa failed: {e}")
+            return JsonResponse({'error': str(e)}, status=500)
+    else:
+        return JsonResponse({'error': 'Invalid request'}, status=400)
+    
+# Chat page rendering
+def chat_page(request):
+    return render(request, 'academia_app/chat_page.html')
