@@ -15069,7 +15069,10 @@ INFO || 12-Jun-24 07:29:47 || C:\Users\user\Desktop\ProActEd\AIacademia\academia
 WARNING || 12-Jun-24 07:33:23 || Not Found: /ws/academia_app/
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 >>>>>>> 0270e327f8d255da739368f57e05331895135a08
 INFO || 12-Jun-24 11:29:41 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
 INFO || 12-Jun-24 11:30:09 || C:\Users\Simon\proacted\AIacademia\academia_app\migrations\0001_initial.py changed, reloading.
@@ -15505,7 +15508,12 @@ INFO || 12-Jun-24 22:21:15 || Probability model proacted_prob_model2 loaded
 WARNING || 12-Jun-24 22:21:15 || 5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000001399BAF76A0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
 WARNING || 12-Jun-24 22:21:16 || Not Found: /ws/academia_app/
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> bc8d88ec2a1660b5dd3c4218ff5c99b7bb3bfe77
+=======
 >>>>>>> 3911a9e3c75809175470f08122f4699a8abf2b4e
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 WARNING || 12-Jun-24 11:49:15 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 11:49:32 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 11:50:08 || Not Found: /favicon.ico
@@ -15761,6 +15769,12 @@ WARNING || 12-Jun-24 19:54:58 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 19:55:07 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 19:55:27 || Not Found: /favicon.ico
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> bd072ec40685e95427346e71dcbd112c7a3a8439
+ERROR || 13-Jun-24 11:58:14 || Internal Server Error: /api/course_data/18/
+=======
+=======
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 =======
 >>>>>>> 0270e327f8d255da739368f57e05331895135a08
 INFO || 12-Jun-24 11:29:41 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
@@ -15777,10 +15791,14 @@ sqlite3.OperationalError: no such column: academia_app_baseuser.role
 
 The above exception was the direct cause of the following exception:
 
+<<<<<<< HEAD
+>>>>>>> bc8d88ec2a1660b5dd3c4218ff5c99b7bb3bfe77
+=======
 =======
 >>>>>>> bd072ec40685e95427346e71dcbd112c7a3a8439
 ERROR || 13-Jun-24 11:58:14 || Internal Server Error: /api/course_data/18/
 >>>>>>> 3911a9e3c75809175470f08122f4699a8abf2b4e
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 Traceback (most recent call last):
   File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
@@ -15789,6 +15807,49 @@ Traceback (most recent call last):
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 <<<<<<< HEAD
+<<<<<<< HEAD
+  File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 363, in course_data
+    students.aggregate(Sum('Lessons_Attended'))['Lessons_Attended__sum'] / students.count(),
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
+WARNING || 13-Jun-24 12:04:15 || Not Found: /ws/academia_app/
+INFO || 13-Jun-24 12:07:01 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 12:08:10 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 13-Jun-24 12:08:27 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 13-Jun-24 12:08:27 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 13-Jun-24 12:10:01 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 13-Jun-24 16:19:56 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 13-Jun-24 16:19:56 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING || 13-Jun-24 16:21:24 || 5 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000001FCDED53D80> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING || 13-Jun-24 16:21:30 || 6 out of the last 7 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000001FCE0466F20> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+INFO || 13-Jun-24 17:06:05 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 13-Jun-24 17:06:20 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 13-Jun-24 17:06:20 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 13-Jun-24 17:07:26 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 13-Jun-24 17:07:36 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 13-Jun-24 17:07:36 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 13-Jun-24 17:08:23 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 13-Jun-24 17:08:34 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 13-Jun-24 17:08:34 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 13-Jun-24 17:11:59 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 17:15:47 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 17:18:18 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 17:18:48 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 17:19:43 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 17:20:03 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+=======
+=======
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
   File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 67, in login_view
     user = authenticate(request, username=username, password=password)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -15887,6 +15948,13 @@ WARNING || 13-Jun-24 15:48:13 || Not Found: /favicon.ico
 WARNING || 13-Jun-24 15:49:02 || Not Found: /favicon.ico
 WARNING || 13-Jun-24 15:49:44 || Not Found: /favicon.ico
 WARNING || 13-Jun-24 15:49:57 || Not Found: /favicon.ico
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> bc8d88ec2a1660b5dd3c4218ff5c99b7bb3bfe77
+WARNING || 13-Jun-24 22:51:20 || Not Found: /favicon.ico
+=======
+=======
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 WARNING || 13-Jun-24 15:59:43 || Not Found: /favicon.ico
 WARNING || 13-Jun-24 18:02:32 || Not Found: /favicon.ico
 WARNING || 13-Jun-24 19:03:38 || Not Found: /favicon.ico
@@ -15897,6 +15965,199 @@ WARNING || 13-Jun-24 19:34:24 || Not Found: /favicon.ico
 WARNING || 13-Jun-24 19:37:00 || Not Found: /favicon.ico
 WARNING || 13-Jun-24 19:38:30 || Not Found: /favicon.ico
 WARNING || 13-Jun-24 19:44:52 || Not Found: /favicon.ico
+<<<<<<< HEAD
+>>>>>>> 548a0e8c62796f7e0259daa9190b7739f6d75ce4
+WARNING || 13-Jun-24 23:00:16 || Not Found: /favicon.ico
+WARNING || 13-Jun-24 23:00:19 || Not Found: /favicon.ico
+WARNING || 13-Jun-24 23:00:21 || Not Found: /favicon.ico
+WARNING || 13-Jun-24 23:05:08 || Not Found: /favicon.ico
+WARNING || 13-Jun-24 23:06:01 || Not Found: /favicon.ico
+WARNING || 13-Jun-24 23:06:01 || Not Found: /favicon.ico
+WARNING || 13-Jun-24 23:06:02 || Not Found: /favicon.ico
+INFO || 13-Jun-24 23:08:03 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 23:09:00 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 13-Jun-24 23:09:11 || Not Found: /favicon.ico
+INFO || 13-Jun-24 23:10:10 || C:\Users\Simon\proacted\AIacademia\AIacademia\settings.py changed, reloading.
+WARNING || 13-Jun-24 23:10:21 || Not Found: /favicon.ico
+INFO || 13-Jun-24 23:10:53 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 23:12:11 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 13-Jun-24 23:12:11 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 13-Jun-24 23:12:42 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 13-Jun-24 23:13:07 || time recommender model has used: 25.6235089302063
+INFO || 13-Jun-24 23:13:13 || S-Bert 2024 Recommender Engine Initialized
+INFO || 13-Jun-24 23:13:13 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 13-Jun-24 23:13:13 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 13-Jun-24 23:13:14 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:13:14 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:13:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:13:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:13:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:13:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:13:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:13:18 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 13-Jun-24 23:13:18 || Use pytorch device_name: cpu
+INFO || 13-Jun-24 23:13:47 || C:\Users\Simon\proacted\AIacademia\python_scripts\recommender_engine.py changed, reloading.
+INFO || 13-Jun-24 23:14:00 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 13-Jun-24 23:14:23 || time recommender model has used: 24.702427625656128
+INFO || 13-Jun-24 23:14:28 || S-Bert 2024 Recommender Engine Initialized
+INFO || 13-Jun-24 23:14:28 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 13-Jun-24 23:14:28 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 13-Jun-24 23:14:29 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:14:30 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:14:30 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:14:30 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:14:31 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:14:31 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:14:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:14:33 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 13-Jun-24 23:14:33 || Use pytorch device_name: cpu
+INFO || 13-Jun-24 23:18:26 || Proacted recommender initialized...
+INFO || 13-Jun-24 23:18:26 || Pro-Act-Ed 2024 Recommender Engine Initialized
+CRITICAL || 13-Jun-24 23:18:47 || Something came up, please rerun the system...
+INFO || 13-Jun-24 23:18:47 || Recommender system has run
+ERROR || 13-Jun-24 23:18:48 || Internal Server Error: /recommend_courses/
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view academia_app.views.recommend_courses didn't return an HttpResponse object. It returned None instead.
+INFO || 13-Jun-24 23:20:55 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 23:21:06 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 13-Jun-24 23:21:26 || time recommender model has used: 20.880295038223267
+INFO || 13-Jun-24 23:21:30 || S-Bert 2024 Recommender Engine Initialized
+INFO || 13-Jun-24 23:21:30 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 13-Jun-24 23:21:30 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 13-Jun-24 23:21:32 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:21:32 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:21:32 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:21:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:21:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:21:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:21:35 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:21:35 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 13-Jun-24 23:21:35 || Use pytorch device_name: cpu
+INFO || 13-Jun-24 23:23:49 || Proacted recommender initialized...
+INFO || 13-Jun-24 23:23:49 || Pro-Act-Ed 2024 Recommender Engine Initialized
+INFO || 13-Jun-24 23:24:10 || time recommender model has used: 184.87393832206726
+INFO || 13-Jun-24 23:24:10 || S-Bert 2024 Recommender Engine Initialized
+INFO || 13-Jun-24 23:24:10 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 13-Jun-24 23:24:10 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 13-Jun-24 23:24:11 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:24:12 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:24:12 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:24:12 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:24:13 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:24:13 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:24:14 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:24:14 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 13-Jun-24 23:24:14 || Use pytorch device_name: cpu
+INFO || 13-Jun-24 23:24:19 || Time taken by sbert model: 8.413393020629883
+INFO || 13-Jun-24 23:24:19 || Recommender system has run
+INFO || 13-Jun-24 23:26:51 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 13-Jun-24 23:28:11 || S-Bert 2024 Recommender Engine Initialized
+INFO || 13-Jun-24 23:28:11 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 13-Jun-24 23:28:11 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 13-Jun-24 23:28:12 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:28:13 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:28:13 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:28:13 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:28:14 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:28:14 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:28:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:28:16 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 13-Jun-24 23:28:16 || Use pytorch device_name: cpu
+INFO || 13-Jun-24 23:28:23 || S-Bert 2024 Recommender Engine Initialized
+INFO || 13-Jun-24 23:28:23 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 13-Jun-24 23:28:23 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:28:24 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:28:24 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:28:24 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:28:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:28:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:28:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:28:26 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 13-Jun-24 23:28:26 || Use pytorch device_name: cpu
+INFO || 13-Jun-24 23:28:31 || Time taken by sbert model: 8.579636573791504
+INFO || 13-Jun-24 23:28:31 || Recommender system has run
+INFO || 13-Jun-24 23:29:20 || C:\Users\Simon\proacted\AIacademia\python_scripts\sbert_recommender.py changed, reloading.
+INFO || 13-Jun-24 23:29:35 || S-Bert 2024 Recommender Engine Initialized
+INFO || 13-Jun-24 23:29:35 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 13-Jun-24 23:29:35 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 13-Jun-24 23:29:36 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:29:36 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:29:37 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:29:37 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:29:37 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:29:38 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:29:39 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:29:39 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 13-Jun-24 23:29:39 || Use pytorch device_name: cpu
+INFO || 13-Jun-24 23:29:46 || Time taken by sbert model: 10.584102153778076
+INFO || 13-Jun-24 23:29:46 || Recommender system has run
+INFO || 13-Jun-24 23:31:03 || S-Bert 2024 Recommender Engine Initialized
+INFO || 13-Jun-24 23:31:03 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 13-Jun-24 23:31:03 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:31:04 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:31:04 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:31:05 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:31:05 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:31:05 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:31:06 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:31:06 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 13-Jun-24 23:31:06 || Use pytorch device_name: cpu
+INFO || 13-Jun-24 23:31:11 || Time taken by sbert model: 7.499429225921631
+INFO || 13-Jun-24 23:31:11 || Recommender system has run
+WARNING || 13-Jun-24 23:31:11 || Not Found: /favicon.ico
+INFO || 13-Jun-24 23:32:03 || S-Bert 2024 Recommender Engine Initialized
+INFO || 13-Jun-24 23:32:03 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 13-Jun-24 23:32:04 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:32:04 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:32:04 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:32:05 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:32:05 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:32:05 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:32:06 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 13-Jun-24 23:32:06 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 13-Jun-24 23:32:06 || Use pytorch device_name: cpu
+INFO || 13-Jun-24 23:32:11 || Time taken by sbert model: 7.315375804901123
+INFO || 13-Jun-24 23:32:11 || Recommender system has run
+WARNING || 13-Jun-24 23:32:11 || Not Found: /favicon.ico
+ERROR || 13-Jun-24 23:35:24 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 395, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 176, in predict_probability
+    model = joblib.load(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\joblib\numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Hp\\Desktop\\ProActEd\\AIacademia\\trained_models\\proacted_model_2.2_with5morefeatures.joblib'
+INFO || 13-Jun-24 23:35:43 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 13-Jun-24 23:35:59 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 13-Jun-24 23:35:59 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 13-Jun-24 23:35:59 || Probability model proacted_prob_model2 loaded
+WARNING || 13-Jun-24 23:36:00 || Not Found: /ws/academia_app/
+WARNING || 13-Jun-24 23:36:55 || Not Found: /ws/academia_app/
+WARNING || 13-Jun-24 23:37:04 || Not Found: /ws/academia_app/
+WARNING || 13-Jun-24 23:38:56 || Not Found: /ws/academia_app/
+=======
 WARNING || 13-Jun-24 20:23:24 || Not Found: /favicon.ico
 WARNING || 13-Jun-24 20:37:14 || Not Found: /ws/academia_app/
 WARNING || 13-Jun-24 20:38:35 || Not Found: /ws/academia_app/
@@ -15969,6 +16230,7 @@ Traceback (most recent call last):
     with open(filename, 'rb') as f:
          ^^^^^^^^^^^^^^^^^^^^
 FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\user\\ProActEd\\AIacademia\\trained_models\\proacted_model_2.2_with5morefeatures.joblib'
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 =======
 INFO || 12-Jun-24 15:12:54 || Forbidden (CSRF token from POST incorrect.): /auth/login/
 ERROR || 12-Jun-24 15:18:00 || Internal Server Error: /api/course_data/17/
@@ -16514,6 +16776,143 @@ WARNING || 12-Jun-24 22:57:38 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 22:59:06 || Not Found: /favicon.ico
 WARNING || 13-Jun-24 08:27:00 || Not Found: /favicon.ico
 >>>>>>> 41aa4a95d70f417edb69cd44c029ac6dfe2c95e6
+<<<<<<< HEAD
+WARNING || 14-Jun-24 00:00:25 || Not Found: /favicon.ico
+INFO || 14-Jun-24 01:42:56 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 14-Jun-24 01:48:33 || C:\Users\Simon\proacted\AIacademia\academia_app\urls.py changed, reloading.
+WARNING || 14-Jun-24 01:49:29 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 14-Jun-24 01:49:29 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 14-Jun-24 09:38:17 || S-Bert 2024 Recommender Engine Initialized
+INFO || 14-Jun-24 09:38:17 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Jun-24 09:38:17 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Jun-24 09:38:17 || Starting new HTTPS connection (2): huggingface.co:443
+DEBUG || 14-Jun-24 09:38:17 || Starting new HTTPS connection (3): huggingface.co:443
+DEBUG || 14-Jun-24 09:38:17 || Starting new HTTPS connection (4): huggingface.co:443
+DEBUG || 14-Jun-24 09:38:17 || Starting new HTTPS connection (5): huggingface.co:443
+DEBUG || 14-Jun-24 09:38:17 || Starting new HTTPS connection (6): huggingface.co:443
+DEBUG || 14-Jun-24 09:38:19 || Starting new HTTPS connection (7): huggingface.co:443
+DEBUG || 14-Jun-24 09:38:19 || Starting new HTTPS connection (8): huggingface.co:443
+INFO || 14-Jun-24 09:38:19 || Use pytorch device_name: cpu
+INFO || 14-Jun-24 09:38:33 || Time taken by sbert model: 15.55216670036316
+INFO || 14-Jun-24 09:38:33 || Recommender system has run
+WARNING || 14-Jun-24 09:39:50 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 14-Jun-24 09:39:51 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 14-Jun-24 09:40:22 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 09:40:22 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 09:40:26 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 09:40:27 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 09:42:45 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+WARNING || 14-Jun-24 09:53:28 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 09:56:13 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+INFO || 14-Jun-24 09:56:58 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+INFO || 14-Jun-24 09:57:09 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 09:57:10 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 10:04:31 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 10:04:31 || 5 out of the last 9 calls to <function Model.make_predict_function.<locals>.predict_function at 0x0000021FFBC38720> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING || 14-Jun-24 10:04:32 || Not Found: /ws/academia_app/
+WARNING || 14-Jun-24 10:06:42 || 6 out of the last 10 calls to <function Model.make_predict_function.<locals>.predict_function at 0x0000021FFBCB5440> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING || 14-Jun-24 10:07:58 || Not Found: /ws/academia_app/
+WARNING || 14-Jun-24 12:07:33 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 12:09:43 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+WARNING || 14-Jun-24 12:10:30 || Not Found: /favicon.ico
+WARNING || 14-Jun-24 12:10:33 || Not Found: /favicon.ico
+WARNING || 14-Jun-24 12:13:53 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 14-Jun-24 12:13:53 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 14-Jun-24 12:13:54 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 12:13:54 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 12:19:56 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+INFO || 14-Jun-24 12:24:43 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 12:24:43 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 12:39:11 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+INFO || 14-Jun-24 12:39:32 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 12:39:33 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 12:42:34 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 12:42:34 || 5 out of the last 9 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000002044677AD40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING || 14-Jun-24 12:42:34 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 12:42:38 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 12:42:38 || 6 out of the last 10 calls to <function Model.make_predict_function.<locals>.predict_function at 0x0000020446E8E160> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING || 14-Jun-24 12:42:39 || Not Found: /ws/academia_app/
+WARNING || 14-Jun-24 12:42:39 || Not Found: /favicon.ico
+ERROR || 14-Jun-24 12:43:45 || Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 77, in login_view
+    login(request, user)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\__init__.py", line 144, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+           ^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\models.py", line 23, in update_last_login
+    user.save(update_fields=["last_login"])
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\base_user.py", line 76, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\base.py", line 990, in _save_table
+    updated = self._do_update(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\base.py", line 1054, in _do_update
+    return filtered._update(values) > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 1231, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1984, in execute_sql
+    cursor = super().execute_sql(result_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: database is locked
+ERROR || 14-Jun-24 12:43:46 || Internal Server Error: /auth/login/
+=======
 INFO || 13-Jun-24 23:50:33 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
 ERROR || 13-Jun-24 23:51:35 || Internal Server Error: /student_page/
 Traceback (most recent call last):
@@ -16547,13 +16946,181 @@ Traceback (most recent call last):
     __import__(module, level=0)
 ModuleNotFoundError: No module named 'keras.src.saving.pickle_utils'
 ERROR || 14-Jun-24 01:12:25 || Internal Server Error: /student_page/
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 Traceback (most recent call last):
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
                ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<<<<<<< HEAD
+  File "C:\Users\Simon\proacted\AIacademia\academia_app\views.py", line 77, in login_view
+    login(request, user)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\__init__.py", line 144, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+           ^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\models.py", line 23, in update_last_login
+    user.save(update_fields=["last_login"])
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\base_user.py", line 76, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\base.py", line 990, in _save_table
+    updated = self._do_update(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\base.py", line 1054, in _do_update
+    return filtered._update(values) > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 1231, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1984, in execute_sql
+    cursor = super().execute_sql(result_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: database is locked
+INFO || 14-Jun-24 12:44:06 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+WARNING || 14-Jun-24 12:44:15 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 14-Jun-24 12:44:15 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 14-Jun-24 12:44:15 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 12:44:16 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 12:53:31 || S-Bert 2024 Recommender Engine Initialized
+INFO || 14-Jun-24 12:53:31 || S-Bert 2024 Recommender Engine Initialized
+INFO || 14-Jun-24 12:53:31 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+INFO || 14-Jun-24 12:53:31 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Jun-24 12:53:31 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Jun-24 12:53:31 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Jun-24 12:53:32 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:32 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:34 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:34 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:34 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:34 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:35 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:35 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 12:53:36 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 14-Jun-24 12:53:36 || Use pytorch device_name: cpu
+DEBUG || 14-Jun-24 12:53:36 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 14-Jun-24 12:53:36 || Use pytorch device_name: cpu
+INFO || 14-Jun-24 12:53:49 || Time taken by sbert model: 17.83562135696411
+INFO || 14-Jun-24 12:53:49 || Recommender system has run
+INFO || 14-Jun-24 12:53:49 || Time taken by sbert model: 17.898241758346558
+INFO || 14-Jun-24 12:53:49 || Recommender system has run
+INFO || 14-Jun-24 12:54:35 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+INFO || 14-Jun-24 12:57:05 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 12:57:05 || Not Found: /ws/academia_app/
+WARNING || 14-Jun-24 12:57:56 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 13:02:17 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+WARNING || 14-Jun-24 13:12:04 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 14-Jun-24 13:12:04 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 14-Jun-24 13:12:04 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 13:12:05 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 13:15:13 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 13:15:14 || Not Found: /ws/academia_app/
+WARNING || 14-Jun-24 13:15:15 || Not Found: /favicon.ico
+INFO || 14-Jun-24 13:15:40 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 13:15:40 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 13:19:05 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+INFO || 14-Jun-24 13:21:36 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+INFO || 14-Jun-24 13:21:43 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 13:21:46 || Not Found: /ws/academia_app/
+WARNING || 14-Jun-24 13:27:53 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 14-Jun-24 13:27:53 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 14-Jun-24 13:27:54 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 13:27:54 || Not Found: /ws/academia_app/
+WARNING || 14-Jun-24 13:32:55 || Not Found: /ws/academia_app/
+INFO || 14-Jun-24 13:40:26 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 14-Jun-24 13:40:46 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING || 14-Jun-24 13:40:46 || From C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+INFO || 14-Jun-24 13:40:46 || Probability model proacted_prob_model2 loaded
+WARNING || 14-Jun-24 13:40:58 || Not Found: /ws/academia_app/
+WARNING || 14-Jun-24 13:45:31 || Not Found: /favicon.ico
+INFO || 14-Jun-24 14:25:13 || S-Bert 2024 Recommender Engine Initialized
+INFO || 14-Jun-24 14:25:13 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Jun-24 14:25:13 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Jun-24 14:25:14 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 14:25:14 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 14:25:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 14:25:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 14:25:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 14:25:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 14:25:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 14:25:18 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 14-Jun-24 14:25:18 || Use pytorch device_name: cpu
+INFO || 14-Jun-24 14:25:27 || Time taken by sbert model: 13.997817039489746
+INFO || 14-Jun-24 14:25:27 || Recommender system has run
+INFO || 14-Jun-24 15:06:30 || Probability model proacted_prob_model2 loaded
+INFO || 14-Jun-24 15:06:30 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+INFO || 14-Jun-24 15:06:53 || Forbidden (CSRF token from POST incorrect.): /recommend_courses/
+INFO || 14-Jun-24 15:09:11 || S-Bert 2024 Recommender Engine Initialized
+INFO || 14-Jun-24 15:09:11 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Jun-24 15:09:11 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Jun-24 15:09:13 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 15:09:14 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 15:09:14 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 15:09:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 15:09:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 15:09:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 15:09:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 14-Jun-24 15:09:17 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 14-Jun-24 15:09:17 || Use pytorch device_name: cpu
+INFO || 14-Jun-24 15:09:27 || Time taken by sbert model: 16.189128398895264
+INFO || 14-Jun-24 15:09:28 || Recommender system has run
+=======
   File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
     return view_func(request, *args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -16892,6 +17459,7 @@ ValueError: The view academia_app.views.recommend_courses didn't return an HttpR
 WARNING || 15-Jun-24 22:21:25 || Not Found: /favicon.ico
 WARNING || 15-Jun-24 22:38:47 || Not Found: /favicon.ico
 WARNING || 16-Jun-24 03:30:06 || Not Found: /favicon.ico
+<<<<<<< HEAD
 WARNING || 16-Jun-24 16:20:46 || Not Found: /favicon.ico
 CRITICAL || 16-Jun-24 16:21:36 || Something came up, please rerun the system...
 INFO || 16-Jun-24 16:21:36 || Recommender system has run
@@ -16934,3 +17502,153 @@ WARNING || 17-Jun-24 12:19:25 || Not Found: /favicon.ico
 WARNING || 17-Jun-24 12:49:57 || Not Found: /favicon.ico
 WARNING || 17-Jun-24 12:50:46 || Not Found: /favicon.ico
 WARNING || 17-Jun-24 12:58:32 || Not Found: /favicon.ico
+=======
+>>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
+INFO || 17-Jun-24 10:56:35 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
+INFO || 17-Jun-24 10:57:51 || S-Bert 2024 Recommender Engine Initialized
+INFO || 17-Jun-24 10:57:51 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 17-Jun-24 10:57:51 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 17-Jun-24 10:57:53 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 10:57:54 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 10:57:54 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 10:57:55 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 10:57:55 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 10:57:55 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 10:57:58 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 10:57:59 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 17-Jun-24 10:57:59 || Use pytorch device_name: cpu
+INFO || 17-Jun-24 10:58:10 || Time taken by sbert model: 19.566890478134155
+INFO || 17-Jun-24 10:58:10 || Recommender system has run
+INFO || 17-Jun-24 11:03:34 || S-Bert 2024 Recommender Engine Initialized
+INFO || 17-Jun-24 11:03:34 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 17-Jun-24 11:03:34 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 17-Jun-24 11:03:36 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:03:36 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:03:36 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:03:37 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:03:37 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:03:38 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:03:39 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:03:39 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 17-Jun-24 11:03:39 || Use pytorch device_name: cpu
+INFO || 17-Jun-24 11:03:46 || Time taken by sbert model: 12.468793630599976
+INFO || 17-Jun-24 11:03:46 || Recommender system has run
+INFO || 17-Jun-24 11:06:52 || C:\Users\Simon\proacted\AIacademia\python_scripts\sbert_recommender.py changed, reloading.
+INFO || 17-Jun-24 11:07:21 || S-Bert 2024 Recommender Engine Initialized
+INFO || 17-Jun-24 11:07:21 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 17-Jun-24 11:07:21 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 17-Jun-24 11:07:22 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:07:22 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:07:22 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:07:23 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:07:23 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:07:23 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:07:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:07:26 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 17-Jun-24 11:07:26 || Use pytorch device_name: cpu
+INFO || 17-Jun-24 11:07:35 || Time taken by sbert model: 14.288677215576172
+INFO || 17-Jun-24 11:07:35 || Recommender system has run
+INFO || 17-Jun-24 11:10:55 || C:\Users\Simon\proacted\AIacademia\python_scripts\sbert_recommender.py changed, reloading.
+INFO || 17-Jun-24 11:11:23 || S-Bert 2024 Recommender Engine Initialized
+INFO || 17-Jun-24 11:11:23 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 17-Jun-24 11:11:23 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 17-Jun-24 11:11:24 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:11:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:11:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:11:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:11:26 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:11:26 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:11:28 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:11:29 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 17-Jun-24 11:11:29 || Use pytorch device_name: cpu
+INFO || 17-Jun-24 11:11:38 || Time taken by sbert model: 15.080745935440063
+INFO || 17-Jun-24 11:11:38 || Recommender system has run
+INFO || 17-Jun-24 11:37:18 || C:\Users\Simon\proacted\AIacademia\python_scripts\sbert_recommender.py changed, reloading.
+INFO || 17-Jun-24 11:39:54 || S-Bert 2024 Recommender Engine Initialized
+INFO || 17-Jun-24 11:39:54 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 17-Jun-24 11:39:54 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 17-Jun-24 11:39:55 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:39:55 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:39:56 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:39:56 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:39:56 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:39:57 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:40:00 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 11:40:00 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 17-Jun-24 11:40:00 || Use pytorch device_name: cpu
+INFO || 17-Jun-24 11:40:10 || Time taken by sbert model: 16.96590304374695
+INFO || 17-Jun-24 11:40:11 || Recommender system has run
+INFO || 17-Jun-24 21:39:02 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 17-Jun-24 21:39:02 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 17-Jun-24 21:39:03 || Starting new HTTPS connection (2): huggingface.co:443
+DEBUG || 17-Jun-24 21:39:03 || Starting new HTTPS connection (3): huggingface.co:443
+DEBUG || 17-Jun-24 21:39:04 || Starting new HTTPS connection (4): huggingface.co:443
+DEBUG || 17-Jun-24 21:39:05 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 21:39:05 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 21:39:06 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 21:39:08 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 21:39:08 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 17-Jun-24 21:39:08 || Use pytorch device_name: cpu
+INFO || 17-Jun-24 21:41:21 || S-Bert 2024 Recommender Engine Initialized
+INFO || 17-Jun-24 21:41:37 || Time taken by sbert model: 15.22520923614502
+INFO || 17-Jun-24 21:41:37 || Recommender system has run
+INFO || 17-Jun-24 21:43:06 || C:\Users\Simon\proacted\AIacademia\python_scripts\sbert_recommender.py changed, reloading.
+INFO || 17-Jun-24 21:43:29 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 17-Jun-24 21:43:29 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 17-Jun-24 21:43:30 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 21:43:30 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 21:43:31 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 21:43:31 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 21:43:31 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 21:43:32 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 21:43:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 21:43:34 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 17-Jun-24 21:43:34 || Use pytorch device_name: cpu
+INFO || 17-Jun-24 21:43:41 || S-Bert 2024 Recommender Engine Initialized
+INFO || 17-Jun-24 21:43:57 || Time taken by sbert model: 15.775307178497314
+INFO || 17-Jun-24 21:43:57 || Recommender system has run
+INFO || 17-Jun-24 21:53:42 || C:\Users\Simon\proacted\AIacademia\python_scripts\sbert_recommender.py changed, reloading.
+INFO || 17-Jun-24 21:58:51 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 17-Jun-24 21:58:51 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 17-Jun-24 21:58:53 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 21:58:54 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 21:58:54 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 21:58:55 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 21:58:55 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 21:58:56 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 21:58:57 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 21:58:57 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 17-Jun-24 21:58:57 || Use pytorch device_name: cpu
+INFO || 17-Jun-24 21:59:28 || S-Bert 2024 Recommender Engine Initialized
+INFO || 17-Jun-24 21:59:43 || Time taken by sbert model: 15.326819658279419
+INFO || 17-Jun-24 21:59:43 || Recommender system has run
+INFO || 17-Jun-24 22:01:07 || C:\Users\Simon\proacted\AIacademia\python_scripts\sbert_recommender.py changed, reloading.
+INFO || 17-Jun-24 22:01:32 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 17-Jun-24 22:01:32 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 17-Jun-24 22:01:34 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:01:34 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:01:35 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:01:35 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:01:35 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:01:36 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:01:37 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:01:38 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 17-Jun-24 22:01:38 || Use pytorch device_name: cpu
+INFO || 17-Jun-24 22:02:50 || S-Bert 2024 Recommender Engine Initialized
+INFO || 17-Jun-24 22:02:54 || Time taken by sbert model: 3.65910005569458
+INFO || 17-Jun-24 22:02:54 || Recommender system has run
+INFO || 17-Jun-24 22:06:01 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 17-Jun-24 22:06:01 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 17-Jun-24 22:06:02 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:06:03 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:06:04 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:06:05 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:06:06 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:06:07 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:06:08 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:06:08 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 17-Jun-24 22:06:08 || Use pytorch device_name: cpu
+INFO || 17-Jun-24 22:06:46 || S-Bert 2024 Recommender Engine Initialized
+INFO || 17-Jun-24 22:06:50 || Time taken by sbert model: 3.929664373397827
+INFO || 17-Jun-24 22:06:50 || Recommender system has run
+>>>>>>> e7ab4a74807c6dbaffd11252c77d706f96eb2e57
