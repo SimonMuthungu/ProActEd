@@ -17652,3 +17652,82 @@ INFO || 17-Jun-24 22:06:46 || S-Bert 2024 Recommender Engine Initialized
 INFO || 17-Jun-24 22:06:50 || Time taken by sbert model: 3.929664373397827
 INFO || 17-Jun-24 22:06:50 || Recommender system has run
 >>>>>>> e7ab4a74807c6dbaffd11252c77d706f96eb2e57
+INFO || 19-Jun-24 00:26:27 || Use pytorch device_name: cpu
+INFO || 19-Jun-24 00:26:27 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 19-Jun-24 00:26:27 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 19-Jun-24 00:26:28 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 19-Jun-24 00:26:28 || Attempting to acquire lock 2452685910048 on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+DEBUG || 19-Jun-24 00:26:28 || Lock 2452685910048 acquired on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+DEBUG || 19-Jun-24 00:26:29 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 349
+DEBUG || 19-Jun-24 00:26:29 || Attempting to release lock 2452685910048 on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+DEBUG || 19-Jun-24 00:26:29 || Lock 2452685910048 released on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+DEBUG || 19-Jun-24 00:26:29 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 19-Jun-24 00:26:29 || Attempting to acquire lock 2452652180592 on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+DEBUG || 19-Jun-24 00:26:29 || Lock 2452652180592 acquired on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+DEBUG || 19-Jun-24 00:26:30 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 116
+DEBUG || 19-Jun-24 00:26:30 || Attempting to release lock 2452652180592 on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+DEBUG || 19-Jun-24 00:26:30 || Lock 2452652180592 released on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+DEBUG || 19-Jun-24 00:26:30 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 19-Jun-24 00:26:30 || Attempting to acquire lock 2452677476864 on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\8cfec92309f5626a223304af2423e332f6d31887.lock
+DEBUG || 19-Jun-24 00:26:30 || Lock 2452677476864 acquired on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\8cfec92309f5626a223304af2423e332f6d31887.lock
+DEBUG || 19-Jun-24 00:26:30 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 10659
+DEBUG || 19-Jun-24 00:26:30 || Attempting to release lock 2452677476864 on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\8cfec92309f5626a223304af2423e332f6d31887.lock
+DEBUG || 19-Jun-24 00:26:30 || Lock 2452677476864 released on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\8cfec92309f5626a223304af2423e332f6d31887.lock
+DEBUG || 19-Jun-24 00:26:31 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 19-Jun-24 00:26:31 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 19-Jun-24 00:26:31 || Attempting to acquire lock 2452680695568 on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\59d594003bf59880a884c574bf88ef7555bb0202.lock
+DEBUG || 19-Jun-24 00:26:31 || Lock 2452680695568 acquired on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\59d594003bf59880a884c574bf88ef7555bb0202.lock
+DEBUG || 19-Jun-24 00:26:32 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 53
+DEBUG || 19-Jun-24 00:26:32 || Attempting to release lock 2452680695568 on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\59d594003bf59880a884c574bf88ef7555bb0202.lock
+DEBUG || 19-Jun-24 00:26:32 || Lock 2452680695568 released on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\59d594003bf59880a884c574bf88ef7555bb0202.lock
+DEBUG || 19-Jun-24 00:26:32 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 19-Jun-24 00:26:32 || Attempting to acquire lock 2452685907456 on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\72b987fd805cfa2b58c4c8c952b274a11bfd5a00.lock
+DEBUG || 19-Jun-24 00:26:32 || Lock 2452685907456 acquired on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\72b987fd805cfa2b58c4c8c952b274a11bfd5a00.lock
+DEBUG || 19-Jun-24 00:26:32 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 612
+DEBUG || 19-Jun-24 00:26:32 || Attempting to release lock 2452685907456 on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\72b987fd805cfa2b58c4c8c952b274a11bfd5a00.lock
+DEBUG || 19-Jun-24 00:26:32 || Lock 2452685907456 released on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\72b987fd805cfa2b58c4c8c952b274a11bfd5a00.lock
+DEBUG || 19-Jun-24 00:26:36 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/model.safetensors HTTP/1.1" 302 0
+DEBUG || 19-Jun-24 00:26:36 || Attempting to acquire lock 2452686877760 on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+DEBUG || 19-Jun-24 00:26:36 || Lock 2452686877760 acquired on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+DEBUG || 19-Jun-24 00:26:36 || Starting new HTTPS connection (1): cdn-lfs.huggingface.co:443
+DEBUG || 19-Jun-24 00:26:37 || https://cdn-lfs.huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1719004000&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxOTAwNDAwMH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9zZW50ZW5jZS10cmFuc2Zvcm1lcnMvYWxsLU1pbmlMTS1MNi12Mi81M2FhNTExNzJkMTQyYzg5ZDkwMTJjY2UxNWFlNGQ2Y2MwY2E2ODk1ODk1MTE0Mzc5Y2FjYjRmYWIxMjhkOWRiP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=I9kJ-XZIGxpSD2rnIxsN2mJ9ZGzzn8Gwzx5MZzqzcVY882KAU~fvoSFAAx~UOHWiHDDEIbaTSy6-b0w9nbMhy6G0eyHLy24QESJ-Wy7auFmwLgcOEj-LN7jKTyj-Fxf3z5lxoAZqMA9doWGAmDaLLmRdbnTUC3c9Z4eIE8OMx4Gk27NCEyiq1adWGKPIQ3iQJwFcHMqVW93cLvMmp8ghk8DW3TTu8TeK6UGDc76zhbPW8OLq9uTVZXIjuM5IvMzy9NHiFfXxgJFOFHZrS4FprWvsExLK4SSTyWzFTX~Sp1Aa7qYi88Pa149mHhBvczm9SWHeVF~Xd50mXpZbrt~hPg__&Key-Pair-Id=K3ESJI6DHPFC7 HTTP/1.1" 200 90868376
+DEBUG || 19-Jun-24 00:27:16 || Attempting to release lock 2452686877760 on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+DEBUG || 19-Jun-24 00:27:16 || Lock 2452686877760 released on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+DEBUG || 19-Jun-24 00:27:18 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 19-Jun-24 00:27:18 || Attempting to acquire lock 2452688556096 on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\c79f2b6a0cea6f4b564fed1938984bace9d30ff0.lock
+DEBUG || 19-Jun-24 00:27:18 || Lock 2452688556096 acquired on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\c79f2b6a0cea6f4b564fed1938984bace9d30ff0.lock
+DEBUG || 19-Jun-24 00:27:18 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 350
+DEBUG || 19-Jun-24 00:27:18 || Attempting to release lock 2452688556096 on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\c79f2b6a0cea6f4b564fed1938984bace9d30ff0.lock
+DEBUG || 19-Jun-24 00:27:18 || Lock 2452688556096 released on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\c79f2b6a0cea6f4b564fed1938984bace9d30ff0.lock
+DEBUG || 19-Jun-24 00:27:19 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/vocab.txt HTTP/1.1" 200 0
+DEBUG || 19-Jun-24 00:27:19 || Attempting to acquire lock 2452688812320 on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fb140275c155a9c7c5a3b3e0e77a9e839594a938.lock
+DEBUG || 19-Jun-24 00:27:19 || Lock 2452688812320 acquired on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fb140275c155a9c7c5a3b3e0e77a9e839594a938.lock
+DEBUG || 19-Jun-24 00:27:19 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/vocab.txt HTTP/1.1" 200 231508
+DEBUG || 19-Jun-24 00:27:20 || Attempting to release lock 2452688812320 on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fb140275c155a9c7c5a3b3e0e77a9e839594a938.lock
+DEBUG || 19-Jun-24 00:27:20 || Lock 2452688812320 released on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fb140275c155a9c7c5a3b3e0e77a9e839594a938.lock
+DEBUG || 19-Jun-24 00:27:20 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer.json HTTP/1.1" 200 0
+DEBUG || 19-Jun-24 00:27:20 || Attempting to acquire lock 2452688812128 on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\cb202bfe2e3c98645018a6d12f182a434c9d3e02.lock
+DEBUG || 19-Jun-24 00:27:20 || Lock 2452688812128 acquired on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\cb202bfe2e3c98645018a6d12f182a434c9d3e02.lock
+DEBUG || 19-Jun-24 00:27:20 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer.json HTTP/1.1" 200 466247
+DEBUG || 19-Jun-24 00:27:21 || Attempting to release lock 2452688812128 on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\cb202bfe2e3c98645018a6d12f182a434c9d3e02.lock
+DEBUG || 19-Jun-24 00:27:21 || Lock 2452688812128 released on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\cb202bfe2e3c98645018a6d12f182a434c9d3e02.lock
+DEBUG || 19-Jun-24 00:27:21 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/added_tokens.json HTTP/1.1" 404 0
+DEBUG || 19-Jun-24 00:27:22 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/special_tokens_map.json HTTP/1.1" 200 0
+DEBUG || 19-Jun-24 00:27:22 || Attempting to acquire lock 2452688811408 on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\e7b0375001f109a6b8873d756ad4f7bbb15fbaa5.lock
+DEBUG || 19-Jun-24 00:27:22 || Lock 2452688811408 acquired on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\e7b0375001f109a6b8873d756ad4f7bbb15fbaa5.lock
+DEBUG || 19-Jun-24 00:27:22 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/special_tokens_map.json HTTP/1.1" 200 112
+DEBUG || 19-Jun-24 00:27:22 || Attempting to release lock 2452688811408 on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\e7b0375001f109a6b8873d756ad4f7bbb15fbaa5.lock
+DEBUG || 19-Jun-24 00:27:22 || Lock 2452688811408 released on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\e7b0375001f109a6b8873d756ad4f7bbb15fbaa5.lock
+DEBUG || 19-Jun-24 00:27:23 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6160
+DEBUG || 19-Jun-24 00:27:23 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 19-Jun-24 00:27:24 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/8b3219a92973c328a8e22fadcfa821b5dc75636a/1_Pooling/config.json HTTP/1.1" 200 0
+DEBUG || 19-Jun-24 00:27:24 || Attempting to acquire lock 2452689088736 on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\d1514c3162bbe87b343f565fadc62e6c06f04f03.lock
+DEBUG || 19-Jun-24 00:27:24 || Lock 2452689088736 acquired on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\d1514c3162bbe87b343f565fadc62e6c06f04f03.lock
+DEBUG || 19-Jun-24 00:27:24 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/8b3219a92973c328a8e22fadcfa821b5dc75636a/1_Pooling/config.json HTTP/1.1" 200 190
+DEBUG || 19-Jun-24 00:27:24 || Attempting to release lock 2452689088736 on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\d1514c3162bbe87b343f565fadc62e6c06f04f03.lock
+DEBUG || 19-Jun-24 00:27:24 || Lock 2452689088736 released on C:\Users\Hp\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\d1514c3162bbe87b343f565fadc62e6c06f04f03.lock
+DEBUG || 19-Jun-24 00:27:25 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6160
+WARNING || 19-Jun-24 00:52:25 || Not Found: /favicon.ico
+INFO || 19-Jun-24 00:53:45 || S-Bert 2024 Recommender Engine Initialized
+INFO || 19-Jun-24 00:54:04 || Time taken by sbert model: 19.175036430358887
+INFO || 19-Jun-24 00:54:04 || Recommender system has run
