@@ -1,4 +1,4 @@
-def sbert_proactedrecomm2024(users_interests, activities_users_have_enjoyed_in_the_past, top_n=5, showtime=True):
+def sbert_proactedrecomm2024(model, users_interests, activities_users_have_enjoyed_in_the_past, top_n=5, showtime=True):
 
     import logging
     import time
@@ -7,11 +7,9 @@ def sbert_proactedrecomm2024(users_interests, activities_users_have_enjoyed_in_t
     import django
     import numpy as np
     from sklearn.metrics.pairwise import cosine_similarity
-    from sentence_transformers import SentenceTransformer
+    import time
 
     logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S') 
-
-
 
     starttime = time.time()
 
@@ -20,16 +18,11 @@ def sbert_proactedrecomm2024(users_interests, activities_users_have_enjoyed_in_t
     print("started proacted 2024") 
 
 
-
     print("Loading s-model")
     local_model_path = os.path.abspath('../../proacted_googleds/sbert_files') 
 
     os.environ["TRANSFORMERS_OFFLINE"] = "1"
-    os.environ["TRANSFORMERS_CACHE"] = local_model_path
-
-
-    model = SentenceTransformer('all-MiniLM-L6-v2')
-    print("Done loading s-model")
+    # os.environ["TRANSFORMERS_CACHE"] = local_model_path
 
     # Setting up Django environment
     sys.path.append(r'C:\Users\Simon\proacted\AIacademia')
@@ -44,6 +37,12 @@ def sbert_proactedrecomm2024(users_interests, activities_users_have_enjoyed_in_t
         combined_scores = []
         coursescalculatedsimilarityfor = 0
 
+        timetoencode = time.time()
+        userinterest_embedding = model.encode([users_interests])[0].reshape(1, -1)
+        usersenjoyedactivity_embedding = model.encode([activities_users_have_enjoyed_in_the_past])[0].reshape(1, -1) 
+        encodeendtime = time.time()
+        print(f"Time taken for the model to encode the user inputs: {encodeendtime - timetoencode}") 
+
         for sbert_vector in all_sbert_vectors:
             course_name = sbert_vector.course_name
             description_embedding_bytes = bytes.fromhex(sbert_vector.description_embedding)
@@ -52,11 +51,6 @@ def sbert_proactedrecomm2024(users_interests, activities_users_have_enjoyed_in_t
             # Convert bytes back to NumPy arrays
             description_embedding_array = np.frombuffer(description_embedding_bytes, dtype=np.float32).reshape(1, -1)
             objectives_embedding_array = np.frombuffer(objectives_embedding_bytes, dtype=np.float32).reshape(1, -1)
-
-            
-
-            userinterest_embedding = model.encode([users_interests])[0].reshape(1, -1)
-            usersenjoyedactivity_embedding = model.encode([activities_users_have_enjoyed_in_the_past])[0].reshape(1, -1) 
 
             # Calculate cosine similarity
             objective_similarity = cosine_similarity(userinterest_embedding, objectives_embedding_array)[0][0]
@@ -89,9 +83,9 @@ def sbert_proactedrecomm2024(users_interests, activities_users_have_enjoyed_in_t
 
 # # This part is for testing purposes only
 # # user input embedding
-user_query = "I have a deep interest in health and fitness, focusing on nutrition, exercise, and mental well-being. My goal is to understand the science behind physical fitness and to apply this knowledge in developing holistic health programs. I am keen on exploring the psychological aspects of fitness and how they intersect with physical health, aiming to promote a balanced lifestyle."
+# user_query = "I have a deep interest in health and fitness, focusing on nutrition, exercise, and mental well-being. My goal is to understand the science behind physical fitness and to apply this knowledge in developing holistic health programs. I am keen on exploring the psychological aspects of fitness and how they intersect with physical health, aiming to promote a balanced lifestyle."
 
-Activitiesenjoyedbyuser = "I regularly engage in various physical activities like yoga, running, and weight training. I enjoy preparing nutritious meals and experimenting with healthy recipes. I often participate in local fitness challenges and marathons. Additionally, I attend workshops on nutrition and mental wellness, and enjoy reading books and articles related to health and fitness. I also volunteer as a fitness coach at my local community center, helping others achieve their health goals."
+# Activitiesenjoyedbyuser = "I regularly engage in various physical activities like yoga, running, and weight training. I enjoy preparing nutritious meals and experimenting with healthy recipes. I often participate in local fitness challenges and marathons. Additionally, I attend workshops on nutrition and mental wellness, and enjoy reading books and articles related to health and fitness. I also volunteer as a fitness coach at my local community center, helping others achieve their health goals."
 
 
-print(sbert_proactedrecomm2024(user_query, Activitiesenjoyedbyuser, top_n=7, showtime=False))
+# print(sbert_proactedrecomm2024(user_query, Activitiesenjoyedbyuser, top_n=7, showtime=False))

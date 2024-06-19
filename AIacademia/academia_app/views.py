@@ -2,6 +2,7 @@
 import logging
 import os
 import sys
+import time
 import joblib
 import logging
 import numpy as np
@@ -27,14 +28,12 @@ from django.db.models import Q
 from django.http import (Http404, HttpRequest, HttpResponse, HttpResponseRedirect, JsonResponse)
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
-# from python_scripts.proacted_recommender2024 import proacted2024
-# from python_scripts.sbert_recommender import sbert_proactedrecomm2024
 from django.contrib.auth import authenticate, get_user_model, login, logout
 from django.http import (Http404, HttpRequest, HttpResponse,HttpResponseRedirect, JsonResponse)
 from .models import *
 from .models import BaseUser,UserProfile,Course,School,Performance,Message, ProbabilityDataTable, NewMessageNotification
-from django.urls import reverse_lazy
-#from python_scripts.recommender_engine import load_model
+from django.urls import reverse_lazy 
+from python_scripts.recommender_engine import load_model
 #from .models import StudentUser, AdminUser, SuperAdminUser, Attendance, Performance, Course, School, Recommender_training_data
 from .forms import UpdateStudentProfileForm
 from tensorflow.keras.models import load_model
@@ -47,8 +46,21 @@ from django.contrib import messages
 from django.shortcuts import redirect, render
 
 
-logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-# logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+starttime = time.time()
+from python_scripts.lazyloader import lazy_load_model_with_cache
+timetoimport = time.time()
+
+print(f"imported the lazy loader in {timetoimport - starttime} secs")
+
+sbert_model = lazy_load_model_with_cache()
+timetoload= time.time()
+
+print(f"loader the model and cached it in {timetoload - timetoimport} secs") 
+
+
+logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+# logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+# logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 
 from .forms import UpdateStudentProfileForm
@@ -56,7 +68,11 @@ from .models import (Attendance, BaseUser, Course, Message, Performance,
                      Recommender_training_data, School, StudentUser,
                      UserProfile, ProbabilityDataTable)
 
-# logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+# logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log', level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+# logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+# logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+logging.basicConfig(filename=r'C:\Users\user\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 # @requires_csrf_token
 def custom_csrf_failure(request, reason=""):
@@ -133,25 +149,30 @@ def recommend_courses(request):
         user_description_about_interests = request.POST.getlist('additionalInfo')
         user_description_about_interests = ''.join(user_description_about_interests).lower() 
         #user_description_about_interests = ''.join(user_activities_enjoyed).lower() 
-        print(user_description_about_interests)
+        print(f'\nnuser_description_about_interests:\n{user_description_about_interests}\n') 
         try: 
             # from python_scripts.proacted_recommender2024 import proacted2024
-            from python_scripts.sbert_recommender import sbert_proactedrecomm2024 # importing form here to avoid running anytime the view file is touched.
-            # Load the model and get the output
-            print("\nBeginning to run the recommender script")
-            logging.info("Proacted recommender initialized...")
+            # # Load the model and get the output
+            # print("\nBeginning to run the recommender script")
+            # logging.info("Proacted recommender initialized...")
             # proacted_recommendations = proacted2024(user_description_about_interests, user_activities_enjoyed)
-            print(f"here are the proacted_recommendations: {proacted_recommendations}")
-            print(f"Done with proacted, proceeding to sbert recommender")
+            # print(f"here are the proacted_recommendations: {proacted_recommendations}")
 
-            sbert_recommendations = sbert_proactedrecomm2024(user_description_about_interests, user_activities_enjoyed)
-            # print(f"here are the sbert_recommendations: {sbert_recommendations}") 
-            context = {'sbert_proactedrecomm2024': sbert_proactedrecomm2024}
+            from python_scripts.sbert_recommender import sbert_proactedrecomm2024 # importing form here to avoid running anytime the view file is touched.
+
+            print(f"Initializing Sbert recommender")
+            sbert_recommendations = sbert_proactedrecomm2024(sbert_model, user_description_about_interests, user_activities_enjoyed)
+            print(f"here are the sbert_recommendations: {sbert_recommendations}") 
+            context = {'sbert_recommendations': sbert_recommendations}
 
             return render(request, 'academia_app/recommended_courses.html', context)
         except Exception as exc:
             print(f'Something came up, please rerun the system...\n{exc}\n\n')
             logging.critical('Something came up, please rerun the system...')
+            interests = FieldOfInterest.objects.all()
+            subjects = HighSchoolSubject.objects.all()
+            print(interests, subjects)
+            return render(request, 'academia_app/course_recommendation_page.html',{'interests': interests, 'subjects': subjects}) 
         # Pass proacted_recommendations to the template
         finally:
             logging.info('Recommender system has run')
@@ -163,17 +184,11 @@ logger = logging.getLogger(__name__)
         
 def predict_probability(request, student_id=3): 
     try: 
-
         # model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        
-        # model = joblib.load(model_path)
-        try:
-            model = joblib.load(model_path)
-        except ModuleNotFoundError as e:
-            logger.error(f"Error loading model: {e}")
-            return HttpResponse("Error loading model", status=500)
+        # model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_prob_model2.joblib'
+        model = joblib.load(model_path)
         logging.info('Probability model proacted_prob_model2 loaded') 
 
         student_data = StudentUser.objects.get(id=student_id) 
@@ -225,6 +240,7 @@ def update_probabilities(course_id=None, school_id=None):
 
             # Loading the machine learning model
             model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+            # 'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
             model = joblib.load(model_path)
 
             total_probability = 0.0
@@ -350,6 +366,7 @@ def dashboard(request):
     else:
         return redirect('student_page')  # Students to student page
 
+# View to fetch data for schools for pie charts
 def school_data(request, school_id):
     try:
         # Update probabilities before fetching data
@@ -378,6 +395,7 @@ def school_data(request, school_id):
     
     except School.DoesNotExist:
         return JsonResponse({"error": "School not found"}, status=404)
+    
 
 
 # View to fetch data for courses for pie charts
@@ -459,9 +477,9 @@ def student_page(request):
 
 def course_recommendation(request):
     print("visited course recommendation page")
-
     interests = FieldOfInterest.objects.all()
     subjects = HighSchoolSubject.objects.all()
+    print(interests, subjects)
     return render(request, 'academia_app/course_recommendation_page.html',{'interests': interests, 'subjects': subjects})
 
 @login_required
