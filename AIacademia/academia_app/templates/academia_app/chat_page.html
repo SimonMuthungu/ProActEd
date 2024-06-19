@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Bot</title>
+</head>
+<body>
+    <form id="chat-form">
+        <div id="chatbox">
+            <ul id="conversation"></ul>
+        </div>
+        <input type="text" id="user_input" />
+        <button type="submit">Send</button>
+    </form>
+
+    <script>
+        document.getElementById('chat-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const userInput = document.getElementById('user_input');
+            var message = userInput.value;
+            console.log("Sending message:", message);  // Log the message being sent
+
+            fetch('/rasa_chat/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ message: message })
+            }).then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Failed to fetch: ' + response.statusText);
+                }
+            }).then(data => {
+                console.log("Received data:", data);  // Log the data received
+                var conversation = document.getElementById('conversation');
+                data.messages.forEach(msg => {
+                    var li = document.createElement('li');
+                    li.textContent = msg;
+                    conversation.appendChild(li);
+                });
+                userInput.value = ''; // Clear input after sending
+            }).catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>

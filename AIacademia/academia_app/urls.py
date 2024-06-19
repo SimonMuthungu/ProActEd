@@ -30,4 +30,6 @@ urlpatterns = [
     path('update_students_count/', views.UpdateStudentsCountView, name='update_students_count'),
     path('school_detail/<int:school_id>/', views.school_detail, name='school_detail'),
     path('course_detail/<int:course_id>/', views.course_detail, name='course_detail'),
+    path('rasa_chat/', views.rasa_chat, name='rasa_chat'),
+    path('chat/', views.chat_page, name='chat_page'),
 ]

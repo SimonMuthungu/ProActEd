@@ -55,6 +55,11 @@
     <!-- Guide Avatar and Text Bubble -->
     <img id="guide-avatar" src="{% static 'avatars/happy.png' %}" alt="Guide Avatar">
     <div id="text-bubble">Hello! I am here to guide you through the course recommendation process.</div>
+   
+    {% comment %} Thi is chat prompt  {% endcomment %}
+    <div class="chat-prompt" style="cursor: pointer; color: blue; text-decoration: underline;">
+        <p>Do you have any queries about our institution or need guidance? <span onclick="window.location.href='/chat/'">Let's chat!</span></p>
+    </div>
     
     <!-- Tutorial Overlay -->
     <div id="tutorial-overlay"></div>
@@ -144,8 +149,14 @@
 
             // Event listener for the guide avatar
             guideAvatar.addEventListener('click', function() {
-                showTextBubble('Hello! I am here to guide you through the course recommendation process.');
-                guideAvatar.src = "{% static 'avatars/excited.png' %}";
+                guideAvatar.src = "{% static 'avatars/curious.png' %}";
+                showTextBubble('Do you have any queries about our institution or need guidance? Let\'s chat!');
+            });
+        
+            guideAvatar.addEventListener('mouseleave', function() {
+                guideAvatar.src = "{% static 'avatars/happy.png' %}";
+                // Optionally clear the text bubble when the mouse leaves the avatar
+                textBubble.style.display = 'none';
             });
 
             // Change avatar expression based on form interactions
