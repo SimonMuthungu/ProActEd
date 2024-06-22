@@ -149,7 +149,7 @@ def recommend_courses(request):
         user_description_about_interests = request.POST.getlist('additionalInfo')
         user_description_about_interests = ''.join(user_description_about_interests).lower() 
         #user_description_about_interests = ''.join(user_activities_enjoyed).lower() 
-        print(f'\nnuser_description_about_interests:\n{user_description_about_interests}\n') 
+        print(f'\nuser_description_about_interests:\n{user_description_about_interests}\nuser_activities_enjoyed:\n{user_activities_enjoyed}\n') 
         try: 
             # from python_scripts.proacted_recommender2024 import proacted2024
             # # Load the model and get the output
@@ -165,14 +165,14 @@ def recommend_courses(request):
             print(f"here are the sbert_recommendations: {sbert_recommendations}") 
             context = {'sbert_recommendations': sbert_recommendations}
 
-            return render(request, 'academia_app/recommended_courses.html', context)
+            return JsonResponse({'recommendations': sbert_recommendations}) 
         except Exception as exc:
-            print(f'Something came up, please rerun the system...\n{exc}\n\n')
+            print(f'Something came up, please rerun the system:\n{exc}\n')
             logging.critical('Something came up, please rerun the system...')
             interests = FieldOfInterest.objects.all()
             subjects = HighSchoolSubject.objects.all()
             print(interests, subjects)
-            return render(request, 'academia_app/course_recommendation_page.html',{'interests': interests, 'subjects': subjects}) 
+            return JsonResponse('an error occured') 
         # Pass proacted_recommendations to the template
         finally:
             logging.info('Recommender system has run')
@@ -479,8 +479,7 @@ def course_recommendation(request):
     print("visited course recommendation page")
     interests = FieldOfInterest.objects.all()
     subjects = HighSchoolSubject.objects.all()
-    print(interests, subjects)
-    return render(request, 'academia_app/course_recommendation_page.html',{'interests': interests, 'subjects': subjects})
+    return render(request, 'academia_app/course_recomm_page.html',{'interests': interests, 'subjects': subjects})
 
 @login_required
 def school_list(request):

@@ -1,0 +1,146 @@
+/* styles.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-panel {
+    flex: 1;
+    background-color: #32325d; /* Deep blue */
+    color: white;
+    padding: 20px;
+}
+
+.right-panel {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+}
+
+form h2, form label {
+    display: block;
+    margin: 10px 0;
+}
+
+textarea {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.button-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between buttons */
+    justify-content: start; /* Align buttons to the start of the div */
+}
+
+.interest-button {
+    background-color: #FFFFFF; /* Light background */
+    border: 2px solid #007BFF; /* Blue border */
+    color: #007BFF; /* Text color */
+    padding: 8px 16px; /* Smaller padding */
+    font-size: 14px; /* Smaller font size */
+    cursor: pointer;
+    border-radius: 20px; /* Rounded edges */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+    display: inline-block;
+    width: auto; /* or specify a fixed width like 150px */
+    padding: 8px 16px; /* Smaller padding */
+    margin: 5px; /* Ensure buttons have space around them */
+}
+
+.interest-button:hover, .interest-button[aria-pressed="true"] {
+    background-color: #007BFF; /* Blue background on hover/active */
+    color: #FFFFFF; /* White text on hover/active */
+    border-color: #0056b3; /* Darker border on hover/active */
+}
+
+.interest-button:focus {
+    outline: none; /* Removes the outline to keep the design clean */
+}
+
+.next-btn, .back-btn {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px; /* Space from the last input */
+    font-size: 16px;
+    border-radius: 5px; /* Rounded corners */
+}
+
+.back-btn {
+    background-color: #f44336; /* Red background for contrast */
+    margin-right: 10px; /* Space between back and next buttons */
+}
+
+.next-btn:hover, .back-btn:hover {
+    opacity: 0.8; /* Slight fade effect on hover */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-panel, .right-panel {
+        flex: none;
+        width: 100%;
+        padding: 10px;
+    }
+
+    button, .interest-button {
+        width: auto; /* Allow buttons to shrink in smaller screens */
+    }
+}
+
+
+.subject-button {
+    background-color: #FFFFFF; /* Light background */
+    border: 2px solid #007BFF; /* Blue border */
+    color: #007BFF; /* Text color */
+    padding: 8px 16px; /* Smaller padding */
+    font-size: 14px; /* Smaller font size */
+    cursor: pointer;
+    border-radius: 20px; /* Rounded edges */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+    display: inline-block;
+    width: auto; /* or specify a fixed width like 150px */
+    padding: 8px 16px; /* Smaller padding */
+    margin: 5px; /* Ensure buttons have space around them */
+}
+
+.subject-button:hover, .subject-button[aria-pressed="true"] {
+    background-color: #007BFF; /* Blue background on hover/active */
+    color: #FFFFFF; /* White text on hover/active */
+    border-color: #0056b3; /* Darker border on hover/active */
+}
+
+.subject-button:focus {
+    outline: none; /* Removes the outline to keep the design clean */
+}
+
+.interest-button.active, .interest-button[aria-pressed="true"] {
+    background-color: #007BFF; /* Blue background */
+    color: #FFFFFF; /* White text */
+}
