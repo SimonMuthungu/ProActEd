@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INFO || 10-Jun-24 01:41:09 || Pro-Act-Ed 2024 Recommender Engine Initialized
 INFO || 10-Jun-24 01:41:34 || time recommender model has used: 25.71858024597168
 INFO || 10-Jun-24 01:41:37 || S-Bert 2024 Recommender Engine Initialized
@@ -18007,3 +18008,38 @@ DEBUG || 18-Jun-24 15:49:46 || Starting new HTTP connection (1): localhost:5005
 DEBUG || 18-Jun-24 15:49:50 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 70
 INFO || 18-Jun-24 15:55:11 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
 >>>>>>> 66703045e7bb35bb253ba50215afd31d3140d503
+=======
+INFO || 17-Jun-24 22:17:32 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 17-Jun-24 22:17:32 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 17-Jun-24 22:17:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:17:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:17:34 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:17:34 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:17:34 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:17:35 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:17:36 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:17:36 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 17-Jun-24 22:17:36 || Use pytorch device_name: cpu
+INFO || 18-Jun-24 21:16:16 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 18-Jun-24 21:16:16 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 18-Jun-24 21:16:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:16:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:16:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:16:18 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:16:18 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:16:19 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:16:20 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:16:20 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6160
+INFO || 18-Jun-24 21:16:21 || Use pytorch device_name: cpu
+INFO || 18-Jun-24 21:44:48 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 18-Jun-24 21:44:48 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 18-Jun-24 21:44:49 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:44:49 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:44:50 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:44:50 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:44:51 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:44:51 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:44:53 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:44:54 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6160
+INFO || 18-Jun-24 21:44:54 || Use pytorch device_name: cpu
+>>>>>>> 3523931bd08954fe2202603cef2553bc639a3af3
