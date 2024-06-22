@@ -17204,3 +17204,82 @@ WARNING || 18-Jun-24 15:49:41 || Not Found: /favicon.ico
 DEBUG || 18-Jun-24 15:49:46 || Starting new HTTP connection (1): localhost:5005
 DEBUG || 18-Jun-24 15:49:50 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 70
 INFO || 18-Jun-24 15:55:11 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 18-Jun-24 22:12:42 || Not Found: /favicon.ico
+WARNING || 18-Jun-24 22:26:18 || Not Found: /favicon.ico
+DEBUG || 18-Jun-24 22:48:38 || Sending to Rasa: {'sender': '702e1752-f358-4fa8-bbc9-b1adc109889b', 'message': ''}
+DEBUG || 18-Jun-24 22:48:42 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 22:48:49 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 70
+DEBUG || 18-Jun-24 22:48:50 || Response from Rasa: [{'recipient_id': '702e1752-f358-4fa8-bbc9-b1adc109889b', 'text': 'Bye'}]
+DEBUG || 18-Jun-24 22:49:09 || Sending to Rasa: {'sender': '702e1752-f358-4fa8-bbc9-b1adc109889b', 'message': ''}
+DEBUG || 18-Jun-24 22:49:09 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 22:49:12 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 70
+DEBUG || 18-Jun-24 22:49:12 || Response from Rasa: [{'recipient_id': '702e1752-f358-4fa8-bbc9-b1adc109889b', 'text': 'Bye'}]
+WARNING || 18-Jun-24 22:50:56 || Bad Request: /rasa_chat/
+WARNING || 19-Jun-24 10:03:05 || Not Found: /favicon.ico
+DEBUG || 19-Jun-24 10:04:15 || Sending to Rasa: {'sender': '702e1752-f358-4fa8-bbc9-b1adc109889b', 'message': ''}
+DEBUG || 19-Jun-24 10:04:15 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 19-Jun-24 10:04:23 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 2
+DEBUG || 19-Jun-24 10:04:23 || Response from Rasa: []
+DEBUG || 19-Jun-24 10:04:57 || Sending to Rasa: {'sender': '702e1752-f358-4fa8-bbc9-b1adc109889b', 'message': ''}
+DEBUG || 19-Jun-24 10:04:57 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 19-Jun-24 10:04:59 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 2
+DEBUG || 19-Jun-24 10:04:59 || Response from Rasa: []
+WARNING || 19-Jun-24 10:16:30 || Not Found: /favicon.ico
+DEBUG || 19-Jun-24 10:16:35 || Sending to Rasa: {'sender': '702e1752-f358-4fa8-bbc9-b1adc109889b', 'message': ''}
+DEBUG || 19-Jun-24 10:16:35 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 19-Jun-24 10:16:37 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 2
+DEBUG || 19-Jun-24 10:16:37 || Response from Rasa: []
+DEBUG || 19-Jun-24 16:23:44 || Sending to Rasa: {'sender': '702e1752-f358-4fa8-bbc9-b1adc109889b', 'message': ''}
+DEBUG || 19-Jun-24 16:23:44 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 19-Jun-24 16:23:49 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 2
+DEBUG || 19-Jun-24 16:23:49 || Response from Rasa: []
+WARNING || 19-Jun-24 17:03:33 || Not Found: /favicon.ico
+DEBUG || 19-Jun-24 17:03:37 || Sending to Rasa: {'sender': '702e1752-f358-4fa8-bbc9-b1adc109889b', 'message': ''}
+DEBUG || 19-Jun-24 17:03:37 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 19-Jun-24 17:03:39 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 2
+DEBUG || 19-Jun-24 17:03:39 || Response from Rasa: []
+WARNING || 19-Jun-24 17:19:15 || Not Found: /favicon.ico
+WARNING || 19-Jun-24 17:19:27 || Not Found: /favicon.ico
+WARNING || 19-Jun-24 21:18:08 || Not Found: /favicon.ico
+WARNING || 19-Jun-24 21:19:49 || Not Found: /favicon.ico
+WARNING || 19-Jun-24 21:24:05 || Not Found: /favicon.ico
+WARNING || 19-Jun-24 21:27:38 || Not Found: /favicon.ico
+WARNING || 20-Jun-24 06:29:21 || Not Found: /favicon.ico
+WARNING || 20-Jun-24 07:31:29 || Not Found: /favicon.ico
+WARNING || 20-Jun-24 07:35:22 || Not Found: /favicon.ico
+WARNING || 20-Jun-24 17:00:20 || Not Found: /favicon.ico
+WARNING || 20-Jun-24 17:08:41 || Not Found: /favicon.ico
+WARNING || 20-Jun-24 17:53:17 || Not Found: /favicon.ico
+WARNING || 20-Jun-24 17:53:20 || Not Found: /chat/path_to_bot_avatar.png
+WARNING || 20-Jun-24 17:53:37 || Not Found: /chat/path_to_user_avatar.png
+WARNING || 20-Jun-24 17:53:38 || Not Found: /chat/path_to_bot_avatar.png
+WARNING || 20-Jun-24 17:53:45 || Not Found: /chat/path_to_user_avatar.png
+WARNING || 20-Jun-24 17:53:46 || Not Found: /chat/path_to_bot_avatar.png
+WARNING || 20-Jun-24 17:53:58 || Not Found: /chat/path_to_user_avatar.png
+WARNING || 20-Jun-24 17:53:59 || Not Found: /chat/path_to_bot_avatar.png
+WARNING || 20-Jun-24 17:54:11 || Not Found: /chat/path_to_user_avatar.png
+WARNING || 20-Jun-24 17:54:11 || Not Found: /chat/path_to_bot_avatar.png
+WARNING || 20-Jun-24 18:09:07 || Not Found: /chat/path_to_user_avatar.png
+WARNING || 20-Jun-24 18:09:07 || Not Found: /chat/path_to_bot_avatar.png
+WARNING || 20-Jun-24 18:09:23 || Not Found: /chat/path_to_user_avatar.png
+WARNING || 20-Jun-24 18:09:24 || Not Found: /chat/path_to_bot_avatar.png
+WARNING || 20-Jun-24 18:09:34 || Not Found: /chat/path_to_user_avatar.png
+WARNING || 20-Jun-24 18:09:34 || Not Found: /chat/path_to_bot_avatar.png
+WARNING || 20-Jun-24 18:10:31 || Not Found: /chat/path_to_user_avatar.png
+WARNING || 20-Jun-24 18:10:31 || Not Found: /chat/path_to_bot_avatar.png
+WARNING || 20-Jun-24 18:10:49 || Not Found: /chat/path_to_user_avatar.png
+WARNING || 20-Jun-24 18:10:53 || Not Found: /chat/path_to_bot_avatar.png
+WARNING || 20-Jun-24 18:11:31 || Not Found: /chat/path_to_user_avatar.png
+WARNING || 20-Jun-24 18:11:35 || Not Found: /chat/path_to_bot_avatar.png
+WARNING || 20-Jun-24 18:12:11 || Not Found: /chat/path_to_user_avatar.png
+WARNING || 20-Jun-24 18:12:15 || Not Found: /chat/path_to_bot_avatar.png
+WARNING || 20-Jun-24 18:12:34 || Not Found: /chat/path_to_user_avatar.png
+WARNING || 20-Jun-24 18:12:35 || Not Found: /chat/path_to_bot_avatar.png
+WARNING || 20-Jun-24 18:13:19 || Not Found: /chat/path_to_user_avatar.png
+WARNING || 20-Jun-24 18:14:00 || Not Found: /chat/path_to_user_avatar.png
+WARNING || 20-Jun-24 18:14:01 || Not Found: /chat/path_to_bot_avatar.png
+WARNING || 20-Jun-24 18:14:12 || Not Found: /chat/path_to_user_avatar.png
+WARNING || 20-Jun-24 18:14:13 || Not Found: /chat/path_to_bot_avatar.png
+WARNING || 20-Jun-24 18:14:24 || Not Found: /chat/path_to_user_avatar.png
+WARNING || 20-Jun-24 18:14:25 || Not Found: /chat/path_to_bot_avatar.png
+WARNING || 20-Jun-24 21:14:19 || Not Found: /chat/path_to_bot_avatar.png

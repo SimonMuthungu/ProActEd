@@ -4,29 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat with Bot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #chat-container {
+            width: 60%;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        #chatbox {
+            height: 400px;
+            overflow-y: scroll;
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        .user, .bot {
+            display: flex;
+            align-items: center;
+        }
+        .user img, .bot img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .user {
+            justify-content: flex-end;
+            text-align: right;
+        }
+        .user img {
+            margin-left: 10px;
+            margin-right: 0;
+        }
+        .message {
+            max-width: 70%;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #e6e6e6;
+        }
+        .user .message {
+            background-color: #0084ff;
+            color: #fff;
+        }
+        form {
+            display: flex;
+            border-top: 1px solid #ccc;
+        }
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 0;
+        }
+        button[type="submit"] {
+            padding: 10px;
+            border: none;
+            background-color: #0084ff;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <form id="chat-form">
+    <div id="chat-container">
         <div id="chatbox">
             <ul id="conversation"></ul>
         </div>
-        <input type="text" id="user_input" />
-        <button type="submit">Send</button>
-    </form>
+        <form id="chat-form">
+            <input type="text" id="user_input" placeholder="Type your message here..." />
+            <button type="submit">Send</button>
+        </form>
+    </div>
 
     <script>
-        document.getElementById('chat-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const userInput = document.getElementById('user_input');
-            var message = userInput.value;
-            console.log("Sending message:", message);  // Log the message being sent
+        // Generate a unique conversation ID and store it in sessionStorage
+        if (!sessionStorage.getItem('conversation_id')) {
+            sessionStorage.setItem('conversation_id', 'user-' + new Date().getTime());
+        }
+        const conversationId = sessionStorage.getItem('conversation_id');
 
-            fetch('/rasa_chat/', {
+        // Function to send a message to the Rasa server
+        function sendMessage(message) {
+            fetch('http://localhost:5005/webhooks/rest/webhook', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ message: message })
+                body: JSON.stringify({ sender: conversationId, message: message })
             }).then(response => {
                 if (response.ok) {
                     return response.json();
@@ -36,16 +118,78 @@
             }).then(data => {
                 console.log("Received data:", data);  // Log the data received
                 var conversation = document.getElementById('conversation');
-                data.messages.forEach(msg => {
+                data.forEach(msg => {
                     var li = document.createElement('li');
-                    li.textContent = msg;
+                    var messageDiv = document.createElement('div');
+                    messageDiv.classList.add('message');
+                    messageDiv.textContent = msg.text;
+
+                    if (msg.sender_id === conversationId) {
+                        li.classList.add('user');
+                        var userAvatar = document.createElement('img');
+                        userAvatar.src = 'path_to_user_avatar.png';  // Replace with path to user avatar
+                        li.appendChild(userAvatar);
+                    } else {
+                        li.classList.add('bot');
+                        var botAvatar = document.createElement('img');
+                        botAvatar.src = 'path_to_bot_avatar.png';  // Replace with path to bot avatar
+                        li.appendChild(botAvatar);
+                    }
+
+                    li.appendChild(messageDiv);
                     conversation.appendChild(li);
+                    conversation.scrollTop = conversation.scrollHeight;  // Scroll to bottom
                 });
-                userInput.value = ''; // Clear input after sending
             }).catch(error => {
                 console.error('Error:', error);
             });
+        }
+
+        // Send an initial message to start the session
+        sendMessage('/start_session');
+
+        document.getElementById('chat-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const userInput = document.getElementById('user_input');
+            var message = userInput.value;
+            console.log("Sending message:", message);  // Log the message being sent
+
+            sendMessage(message);
+
+            var conversation = document.getElementById('conversation');
+            var li = document.createElement('li');
+            li.classList.add('user');
+            var messageDiv = document.createElement('div');
+            messageDiv.classList.add('message');
+            messageDiv.textContent = message;
+            var userAvatar = document.createElement('img');
+            userAvatar.src = 'path_to_user_avatar.png';  // Replace with path to user avatar
+            li.appendChild(userAvatar);
+            li.appendChild(messageDiv);
+            conversation.appendChild(li);
+            conversation.scrollTop = conversation.scrollHeight;  // Scroll to bottom
+
+            userInput.value = ''; // Clear input after sending
         });
+
+        // Reset session expiration on user activity
+        document.addEventListener('mousemove', () => {
+            sessionStorage.setItem('last_interaction', new Date().getTime());
+        });
+        document.addEventListener('keypress', () => {
+            sessionStorage.setItem('last_interaction', new Date().getTime());
+        });
+
+        // Check if the session should be renewed
+        setInterval(() => {
+            const lastInteraction = sessionStorage.getItem('last_interaction');
+            const now = new Date().getTime();
+            const tenMinutes = 10 * 60 * 1000;
+
+            if (now - lastInteraction > tenMinutes) {
+                sendMessage('/keep_alive');
+            }
+        }, 60000); // Check every minute
     </script>
 </body>
 </html>

@@ -1,13 +1,98 @@
 version: "3.1"
 
 rules:
+- rule: Start session
+  steps:
+    - intent: start_session
+    - action: action_session_start
+    - action: utter_welcome_message
+
+- rule: Keep session alive
+  steps:
+    - intent: keep_alive
+    - action: action_keep_alive
 
 - rule: Say goodbye anytime the user says goodbye
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+    - intent: goodbye
+    - action: utter_goodbye
 
 - rule: Say 'I am a bot' anytime the user challenges
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+    - intent: bot_challenge
+    - action: utter_bot_challenge
+
+- rule: Handle mood great
+  steps:
+    - intent: mood_great
+    - action: utter_mood_great
+
+- rule: Handle mood happy
+  steps:
+    - intent: mood_happy
+    - action: utter_mood_happy
+
+- rule: Handle mood angry
+  steps:
+    - intent: mood_angry
+    - action: utter_mood_angry
+
+- rule: Handle mood nervous
+  steps:
+    - intent: mood_nervous
+    - action: utter_mood_nervous
+
+- rule: Handle mood bored
+  steps:
+    - intent: mood_bored
+    - action: utter_mood_bored
+
+- rule: Handle mood excited
+  steps:
+    - intent: mood_excited
+    - action: utter_mood_excited
+
+- rule: Handle mood lonely
+  steps:
+    - intent: mood_lonely
+    - action: utter_mood_lonely
+
+- rule: Handle mood tired
+  steps:
+    - intent: mood_tired
+    - action: utter_mood_tired
+
+- rule: Handle mood scared
+  steps:
+    - intent: mood_scared
+    - action: utter_mood_scared
+
+- rule: Handle type weather
+  steps:
+    - intent: type_weather
+    - action: utter_type_weather
+
+- rule: Handle temperature weather
+  steps:
+    - intent: temperature_weather
+    - action: utter_temperature_weather
+
+- rule: Handle ask forecast weather
+  steps:
+    - intent: ask_forecast_weather
+    - action: utter_ask_forecast_weather
+
+- rule: Inquire courses
+  steps:
+    - intent: inquire_courses
+    - action: utter_ask_school_name
+
+- rule: Inform school
+  steps:
+    - intent: inform
+    - action: action_fetch_courses
+
+- rule: Perform web search
+  steps:
+    - intent: search_online
+    - action: action_web_search
