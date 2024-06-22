@@ -22,10 +22,10 @@
                     <h2>Select Your Interests</h2>
                     <div class="button-grid">
                         {% for interest in interests %}
-                        <button type="button" class="interest-button" data-value="{{ interest.id }}" aria-pressed="false" onclick="toggleInterest('{{ interest.id }}')">
+                        <button type="button" class="interest-button" data-value="{{ interest }}" aria-pressed="false" onclick="toggleInterest('{{ interest.id }}')">
                             {{ interest.name }}
                         </button>
-                        <input type="hidden" name="interests[]" id="interest_{{ interest.id }}" value="">
+                        <input type="hidden" name="interests[]" id="interest_{{ interest }}" value="">
                         {% endfor %}
                     </div>
                     <button type="button" class="next-btn">Next</button>
@@ -33,7 +33,7 @@
                 <!-- Step 2: Additional Info -->
                 <div id="step2" class="form-step">
                     <h2>Tell Us More About Yourself</h2>
-                    <textarea name="details" rows="4" placeholder="Your details..."></textarea>
+                    <textarea id="additionalInfo" name="additionalInfo" placeholder="E.g. I love music and art. Music is my passion. Since I was a child, I've always produced music and video entertainment. It makes me feel alive, that life is worth living. I also love media and video production"></textarea>
                     <button type="button" class="next-btn">Next</button>
                     <button type="button" class="back-btn">Back</button>
                 </div>
@@ -42,15 +42,14 @@
                     <h2>Select Subjects You Excelled At</h2>
                     <div class="button-grid">
                         {% for subject in subjects %}
-                        <button type="button" class="subject-button" data-value="{{ subject.id }}" aria-pressed="false">
+                        <button type="button" class="subject-button" data-value="{{ subject }}" aria-pressed="false">
                             {{ subject.name }}
                         </button>
+                        <input type="hidden" id="input_subject_{{ subject }}" name="subjects[]" value="">
                         {% endfor %}
-                        {% for subject in subjects %}
-                        <input type="hidden" id="input_subject_{{ subject.id }}" name="subjects[]" value="">
-                        {% endfor %}
+
                     </div>
-                    <button type="submit">Recommend Me Courses Now!</button>
+                    <button type="submit" class="submit">Recommend Courses For Me Now!</button>
                     <button type="button" class="back-btn">Back</button>
                 </div>
             </form>
@@ -60,10 +59,12 @@
                 <ul class="courses-list">
                     <!-- Recommendations will be inserted here -->
                 </ul>
-                <button id="loginButton" class="login-btn">Login</button>
+                <button id="loginButton" class="login-btn" data-url="{% url 'login' %}">Login</button>
+                <br>
             </div>
         </div>
     </div>
     <script src="{% static 'js/course_recomm.js' %}"></script>
 </body>
 </html>
+

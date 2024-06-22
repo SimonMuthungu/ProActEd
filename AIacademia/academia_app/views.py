@@ -135,6 +135,7 @@ def admin_dashboard(request):
 # loading the script and generating output
 def recommend_courses(request):
     if request.method == 'POST':
+        print(f'form data: {request}')
         # Getting selected subjects with name
         user_subjects_done = request.POST.getlist('subjects[]')
         user_subjects_done = ' '.join(user_subjects_done).lower() 
@@ -149,7 +150,7 @@ def recommend_courses(request):
         user_description_about_interests = request.POST.getlist('additionalInfo')
         user_description_about_interests = ''.join(user_description_about_interests).lower() 
         #user_description_about_interests = ''.join(user_activities_enjoyed).lower() 
-        print(f'\nuser_description_about_interests:\n{user_description_about_interests}\nuser_activities_enjoyed:\n{user_activities_enjoyed}\n') 
+        print(f'\nuser_description_about_interests:\n{user_description_about_interests}\nuser_activities_enjoyed:\n{user_activities_enjoyed}\nuser_subjects_done:\n{user_subjects_done}\n') 
         try: 
             # from python_scripts.proacted_recommender2024 import proacted2024
             # # Load the model and get the output
