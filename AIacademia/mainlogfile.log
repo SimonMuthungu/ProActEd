@@ -18065,3 +18065,16 @@ DEBUG || 22-Jun-24 16:57:57 || Sending to Rasa: {'sender': '949f5749-53fd-4f51-a
 DEBUG || 22-Jun-24 16:57:58 || Starting new HTTP connection (1): localhost:5005
 ERROR || 22-Jun-24 16:58:02 || Request to Rasa failed: HTTPConnectionPool(host='localhost', port=5005): Max retries exceeded with url: /webhooks/rest/webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE50B65D30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
 ERROR || 22-Jun-24 16:58:02 || Internal Server Error: /rasa_chat/
+INFO || 23-Jun-24 06:36:35 || Use pytorch device_name: cpu
+INFO || 23-Jun-24 06:36:35 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 23-Jun-24 06:36:35 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 23-Jun-24 06:36:36 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 23-Jun-24 06:36:37 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 23-Jun-24 06:36:38 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 23-Jun-24 06:36:39 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 23-Jun-24 06:36:40 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 23-Jun-24 06:36:40 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 23-Jun-24 06:36:50 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 23-Jun-24 06:36:51 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6141
+DEBUG || 23-Jun-24 06:36:52 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6141
+WARNING || 23-Jun-24 06:37:35 || Not Found: /favicon.ico
