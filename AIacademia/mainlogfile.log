@@ -18043,3 +18043,25 @@ DEBUG || 18-Jun-24 21:44:53 || https://huggingface.co:443 "HEAD /sentence-transf
 DEBUG || 18-Jun-24 21:44:54 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6160
 INFO || 18-Jun-24 21:44:54 || Use pytorch device_name: cpu
 >>>>>>> 3523931bd08954fe2202603cef2553bc639a3af3
+INFO || 22-Jun-24 16:01:47 || Use pytorch device_name: cpu
+INFO || 22-Jun-24 16:01:47 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 22-Jun-24 16:01:47 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 22-Jun-24 16:01:48 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 22-Jun-24 16:01:49 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 22-Jun-24 16:01:50 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 22-Jun-24 16:01:50 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 22-Jun-24 16:01:50 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 22-Jun-24 16:01:51 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 22-Jun-24 16:01:56 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 22-Jun-24 16:01:56 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6141
+DEBUG || 22-Jun-24 16:01:57 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6141
+WARNING || 22-Jun-24 16:04:18 || Not Found: /favicon.ico
+WARNING || 22-Jun-24 16:08:06 || Not Found: /favicon.ico
+WARNING || 22-Jun-24 16:24:43 || Not Found: /favicon.ico
+WARNING || 22-Jun-24 16:25:08 || Not Found: /favicon.ico
+WARNING || 22-Jun-24 16:26:18 || Not Found: /favicon.ico
+WARNING || 22-Jun-24 16:28:16 || Not Found: /favicon.ico
+DEBUG || 22-Jun-24 16:57:57 || Sending to Rasa: {'sender': '949f5749-53fd-4f51-a934-768f90678e0f', 'message': ''}
+DEBUG || 22-Jun-24 16:57:58 || Starting new HTTP connection (1): localhost:5005
+ERROR || 22-Jun-24 16:58:02 || Request to Rasa failed: HTTPConnectionPool(host='localhost', port=5005): Max retries exceeded with url: /webhooks/rest/webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE50B65D30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+ERROR || 22-Jun-24 16:58:02 || Internal Server Error: /rasa_chat/
