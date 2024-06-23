@@ -36,7 +36,7 @@ from django.urls import reverse_lazy
 from python_scripts.recommender_engine import load_model
 #from .models import StudentUser, AdminUser, SuperAdminUser, Attendance, Performance, Course, School, Recommender_training_data
 from .forms import UpdateStudentProfileForm
-from tensorflow.keras.models import load_model
+# from tensorflow.keras.models import load_model
 from .models import *
 from django.db.models import Count, Sum
 from django.shortcuts import render
@@ -44,6 +44,8 @@ from django.views.decorators.csrf import requires_csrf_token
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.shortcuts import redirect, render
+from keras.models import Sequential
+
 
 
 starttime = time.time()
@@ -183,15 +185,10 @@ def recommend_courses(request):
             
 logger = logging.getLogger(__name__)        
         
-def predict_probability(request, student_id=3): 
-    try: 
-        # model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        # model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+def predict_probability(request, student_id=3):
+    try:
         model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_prob_model2.joblib'
         model = joblib.load(model_path)
-        logging.info('Probability model proacted_prob_model2 loaded') 
-
         student_data = StudentUser.objects.get(id=student_id) 
         lessonsattended = student_data.Lessons_Attended
         aggrpoints = student_data.Aggregate_points
