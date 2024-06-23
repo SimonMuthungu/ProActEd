@@ -18694,3 +18694,16 @@ INFO || 22-Jun-24 22:38:12 || Time taken by sbert model: 0.23549985885620117
 INFO || 22-Jun-24 22:38:12 || Recommender system has run
 WARNING || 22-Jun-24 22:38:40 || Not Found: /favicon.ico
 >>>>>>> 7f261d9192f57a13afb4aeb94f61d4f46859a3f1
+INFO || 23-Jun-24 04:27:57 || Use pytorch device_name: cpu
+INFO || 23-Jun-24 04:27:57 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 23-Jun-24 04:27:57 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 23-Jun-24 04:27:58 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 23-Jun-24 04:27:59 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 23-Jun-24 04:28:00 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 23-Jun-24 04:28:01 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 23-Jun-24 04:28:01 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 23-Jun-24 04:28:02 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 23-Jun-24 04:28:09 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 23-Jun-24 04:28:11 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6141
+DEBUG || 23-Jun-24 04:28:11 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6141
+WARNING || 23-Jun-24 04:30:11 || Not Found: /favicon.ico
