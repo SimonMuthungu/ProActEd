@@ -1,6 +1,23 @@
 version: "3.1"
-
 nlu:
+- intent: start_session
+  examples: |
+    - /start_session
+    - Let's start the session
+    - Begin session
+
+- intent: keep_alive
+  examples: |
+    - /keep_alive
+    - Keep the session alive
+    - Don't let the session expire
+
+- intent: did_that_help
+  examples: |
+    - Did that help?
+    - Was that helpful?
+    - Did you find that useful?
+
 - intent: greet
   examples: |
     - hey
@@ -16,6 +33,11 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - howdy
+    - heya
+    - hihi
+    - sup
+    - what's up
 
 - intent: goodbye
   examples: |
@@ -29,6 +51,9 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - talk to you later
+    - cya
+    - ciao
 
 - intent: affirm
   examples: |
@@ -38,6 +63,10 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - great
+    - perfect
+    - sounds good
+    - sounds great
 
 - intent: deny
   examples: |
@@ -48,15 +77,16 @@ nlu:
     - don't like that
     - no way
     - not really
+    - nope
+    - not true
+    - no thanks
+    - nah
 
 - intent: mood_great
   examples: |
-    - perfect
-    - great
     - amazing
     - feeling like a king
     - wonderful
-    - I am feeling very good
     - I am great
     - I am amazing
     - I am going to save the world
@@ -79,7 +109,7 @@ nlu:
     - unhappy
     - not good
     - not very good
-    - extremly sad
+    - extremely sad
     - so saad
     - so sad
 
@@ -89,3 +119,516 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    - are you a robot?
+    - am I talking to an actual person?
+    - you're a bot aren't you?
+    - are you even a real person?
+
+- intent: Computer_Science_Courses
+  examples: |
+    - C++ Programming
+    - Python Programming
+    - Java Programming
+    - HTML / CSS
+    - Java Script
+    - Web Development
+    - Android Development
+    - Artificial Intelligence
+    - Deep Learning
+    - Machine Learning
+    - Data Science
+    - Operating System
+    - Networking
+    - Cyber Security
+    - Blockchain
+
+- intent: Management_Courses
+  examples: |
+    - Banking and Finance
+    - Finance
+    - Human Resource
+    - Marketing
+    - Consulting
+    - Digital Marketing
+    - Business Analytics
+    - Operations
+    - Product Management
+    - Project Management
+    - Policy Making
+
+- intent: Literature_Courses
+  examples: |
+    - English Literature
+    - French Literature
+    - Latin Literature
+    - Hindi Literature
+    - Sanskrit Literature
+    - German Literature
+
+- intent: mood_happy
+  examples: |
+    - I am happy
+    - I feel great
+    - I'm fine
+    - I had a great day
+    - Me, wonderful!
+    - I am amazed
+    - You are too cool
+    - I am loving it
+    - I am starting to like this
+    - I am feeling great
+    - Doing fine
+    - Never better
+    - Feeling lucky
+    - All great here
+    - Fantastic day
+    - What a great day
+    - I'm inspired
+    - It's perfect
+    - I feel wonderful
+    - I am feeling very good
+    - I'm good
+    - I'm feeling awesome
+    - I'm feeling happy
+    - Today is an awesome day!
+    - I'm so glad
+    - I'm just really happy right now
+
+- intent: mood_angry
+  examples: |
+    - I am angry
+    - I am feeling so angry
+    - I am so annoyed
+    - It's annoying
+    - That's aggravating
+    - I'm furious
+    - That is infuriating
+    - I'm very mad
+    - Everything vexes me
+    - I am outraged
+    - That is outrageous!
+    - I feel hostile
+    - I am very frustrated
+    - It is irritating me
+    - I feel so offended
+    - I am full of fury
+    - I feel very belligerent
+    - I hate doing this
+    - I have no patience today
+    - I could not control my anger
+    - I’m annoyed
+    - I’m super annoyed
+    - I’m so mad.
+    - I'm enraged
+    - I’m straight up angry.
+    - This is maddening!
+    - I'm pissed off
+    - I'm pissed
+    - You bet I'm angry
+    - That made me angry
+    - U made me angry
+    - I'm still angry about that
+
+- intent: mood_scared
+  examples: |
+    - I am scared
+    - I feel scared
+    - I'm worried
+    - I am terrified
+    - That is frightening
+    - I feel intimidated
+    - That is intimidating
+    - I am petrified
+    - I am afraid
+    - I feel anxious
+    - I'm having a bad feeling
+    - I'm fearful
+    - I panicked
+    - I shrank back in fear
+    - I am scared to death
+    - I broke out in a cold sweat
+    - That startled me!
+    - I'm spooked easily
+    - I'm trembling from fear
+    - I'm horrified
+
+- intent: mood_nervous
+  examples: |
+    - I am nervous
+    - I am stressed out
+    - I feel nervous
+    - I am anxious
+    - This is nerve-racking
+    - I feel like I am going to throw up
+    - I have a lump in my throat
+    - I have butterflies in my stomach
+    - I am a bundle of nerves
+    - I am breaking out in a cold sweat
+    - I am afraid of my own shadow
+    - I am like a cat on hot bricks
+    - I am jumping out of my skin
+    - I am at my wits' end
+    - I am tongue-tied
+    - I am on edge
+    - I am very tense
+    - I feel uneasy
+    - I am alarmed
+    - I am troubled
+    - I'm tensed
+    - I'm stressed
+    - I'm under a lot of stress
+    - I'm constantly worried
+    - I feel constant tension
+    - I’m suffering from anxiety.
+    - I’ve been feeling rather anxious lately.
+    - My anxiety is rather through the roof these days.
+    - I’m feeling rather restless
+    - I cannot concentrate as I'm worried constantly
+    - I'm under immense stress
+    - It's been a rough couple of days. VERY stressful
+    - I'm quite tensed.
+    - There's been quite a few changes in my life. I don't think I am handling them well. It's quite stressful.
+    - I find myself worrying about every little detail
+    - I am a chronic worrier.
+    - I’m feeling rather restless and a horde of worries is bothering me
+    - I cannot concentrate due to the whole number of worries that are bothering me
+
+- intent: mood_bored
+  examples: |
+    - soo bored
+    - that was boring
+    - I'm bored
+    - bored
+    - boring
+    - I am getting bored
+    - Staying at home is boring
+    - very boring
+    - it bores me
+    - i had a slow day
+    - i am very bored
+    - Im kinda bored today
+    - I've never been more bored
+    - I was bored
+    - It's boring
+    - This is boring
+    - We're all bored
+    - It's very boring
+    - I'm already bored
+    - I'm bored out of my mind
+
+- intent: mood_excited
+  examples: |
+    - I am excited
+    - I'm really excited
+    - I can't begin to say how excited I am
+    - I'm thrilled
+    - I'm damn excited
+    - I'm hyped
+    - I'm very excited
+    - I felt excited
+    - It was exciting
+    - That was exciting
+    - How exciting!
+    - This is so fun
+
+- intent: mood_lonely
+  examples: |
+    - I am lonely
+    - I'm very lonely
+    - I'm so lonely
+    - I'm really lonely
+    - I am feeling lonely
+    - I feel lonely
+    - I am a loner
+    - I don't have any company
+    - I don't have anyone else
+    - I'm always alone
+    - I'm alone
+    - am all alone
+    - I live alone
+    - I'm all alone
+    - I've gotten used to living alone
+    - I think I've been living alone too long
+    - I have no one to talk to
+    - I am still alone
+    - I am used to living alone
+
+- intent: mood_tired
+  examples: |
+    - I'm drained
+    - I've overworked
+    - I am tired
+    - I'm exhausted
+    - I grow weary
+    - I'm worn out
+    - I'm getting tired
+    - I feel tired
+    - I'm so tired
+    - I'm completely drained out
+    - I'm very tired
+    - i was tired
+    - i feel tired
+    - i'm dead tired
+    - I'm a bit tired
+    - I was very tired
+    - I am really tired
+    - i am awfully tired
+    - i am kind of so tired
+    - I am a little tired
+
+- intent: type_weather
+  examples: |
+    - air
+    - black clouds
+    - blinding snowstorm
+    - blizzard
+    - breath of air
+    - breeze
+    - breezy
+    - bright
+    - chilly
+    - clear
+    - clear skies
+    - clear sky
+    - cloud
+    - cloudy
+    - cold
+    - cold biting wind
+    - cold wind
+    - cool
+    - cyclone
+    - damp
+    - dark
+    - dark clouds
+    - dense clouds
+    - dew
+    - downpour
+    - drizzle
+    - dry
+    - dull
+    - dust storm
+    - flooded
+    - flooded roads
+    - fog
+    - foggy
+    - forecast
+    - freeze
+    - freezing
+    - freezing rain
+    - fresh
+    - frost
+    - frosty
+    - gale
+    - gust of wind
+    - gusty
+    - hail
+    - hailing
+    - hailstone
+    - hailstorm
+    - hazy
+    - heat
+    - heat wave
+    - heavy grey clouds
+    - heavy winds
+    - hot
+    - humid
+    - humidity
+    - hurricane
+    - icy
+    - it lightens
+    - it rains cats and dogs
+    - it thunders
+    - lightning
+    - mist
+    - misty
+    - moderate wind
+    - monsoon
+    - moon
+    - muggy
+    - overcast
+    - partly cloudy
+    - partly sunny
+    - precipitation
+    - puff of wind
+    - rain
+    - rain and snow
+    - rain showers
+    - raindrop
+    - rainfall
+    - raining
+    - rainy
+    - sandstorms
+    - scattered showers
+    - shine
+    - shower
+    - showers
+    - sky
+    - sleet
+    - slight wind
+    - smoggy
+    - snow
+    - snowdrift
+    - snowfall
+    - snowflake
+    - snowing
+    - snowstorm
+    - snowy
+    - squall
+    - star
+    - sticky
+    - storm
+    - stormy
+    - strong wind
+    - sultry
+    - sun
+    - sunny
+    - sunny intervals
+    - sunshine
+    - thunder
+    - thunder-cloud
+    - thundershowers
+    - thunderstorm
+    - thunderstorms
+    - to pour
+    - tornado
+    - tornadoes
+    - twister
+    - typhoon
+    - very strong wind
+    - warm
+    - wet
+    - whirlwind
+    - wind
+    - windstorm
+    - windy
+    - weather
+
+- intent: temperature_weather
+  examples: |
+    - above zero
+    - atmospheric absolute pressure
+    - average temperature
+    - barometer
+    - below freezing
+    - below zero
+    - degrees
+    - degrees above zero
+    - degrees below zero
+    - degrees Celsius
+    - degrees centigrade
+    - degrees Fahrenheit
+    - mercury
+    - pressure
+    - synoptic
+    - temperature
+    - temperatures are in the mid
+    - thermometer
+    - usual temperature
+    - weather forecast
+    - weather station
+    - weatherman
+    - wind chill
+    - windchill
+
+- intent: ask_forecast_weather
+  examples: |
+    - Anybody notice the weather today?
+    - Are the roads flooded today?
+    - Awful weather, isn’t it?
+    - Do you know the weather forecast for today?
+    - Do I need to carry an umbrella today?
+    - Do I need to carry an umbrella tomorrow?
+    - How is the weather today?
+    - How cold is it going to get today?
+    - How cold is it going to be tomorrow?
+    - How hot is it going to get today?
+    - How hot is it going to be tomorrow?
+    - How humid is it going to get today?
+    - How humid is it going to be tomorrow?
+    - How rainy is it going to be today?
+    - How rainy is it going to be tomorrow?
+    - How’s the weather?
+    - How's the weather out in the country today?
+    - I wonder if there will be a storm?
+    - Is it cold outside?
+    - Is it expected to rain?
+    - Is it expected to snow?
+    - Is it snowing outside?
+    - Is it warm or cold?
+    - Is it windy out?
+    - It is so cloudy today, isn’t it?
+    - It is so sunny today, isn’t it?
+    - Is there much flooding on the roads today?
+    - Lovely day, huh?
+    - Nice weather today, isn’t it?
+    - So, what will the weather be like today?
+    - Tell me, what is the weather like today?
+    - Terrible weather, isn’t it?
+    - The forecast?
+    - What do you think the weather looks like?
+    - What is the humidity level right now?
+    - What is the temperature outside?
+    - What is the temperature?
+    - What is the weather expected to be like?
+    - What is the weather forecast saying?
+    - What is the weather forecast today?
+    - What is the weather today?
+    - What temperature do you think it is?
+    - What’s it like out there?
+    - What’s it like out?
+    - What's the humidity level right now?
+    - What’s the temperature like out there?
+    - What’s the temperature like
+    - What’s the temperature like out there?
+    - What’s the temperature like?
+    - What’s the temperature today?
+    - What’s the temperature?
+    - What’s the weather forecast?
+    - What’s the weather like?
+    - What's the forecast like?
+    - What's the forecast?
+    - What's the weather like today?
+    - Will the weather keep up?
+
+- intent: inquire_courses
+  examples: |
+    - What courses are offered in the School of Science?
+    - Can you tell me the courses available in the School of Arts?
+    - I'd like to know about the courses in the School of Business.
+    - Please provide the courses available in the School of Engineering.
+    - What courses are offered in Maseno University?
+    - Can you tell me the courses in the School of Law?
+    - I want to know about the courses in the School of Education.
+    - Tell me the courses available in the School of Medicine.
+    - What courses are available in the School of Agriculture?
+    - Please list the courses in the School of Environmental Studies.
+    - I want to know about courses in the [Computer Science](course) department
+    - Tell me about the [Engineering](course) courses
+
+- intent: inform
+  examples: |
+    - I am interested in courses from the School of Science
+    - I want to know about courses in the School of Business
+    - Tell me about courses in the School of Arts
+    - Courses offered by the School of Engineering please
+    - I am looking for courses in the School of Humanities
+    - I want to study courses from the School of Medicine
+    - Please provide information on courses in the School of Education
+    - I am interested in the School of Law
+    - Can you tell me about the School of Agriculture?
+    - I am looking for courses in the School of Environmental Studies
+
+- intent: search_online
+  examples: |
+    - Tell me about [Python programming](course).
+    - What is [blockchain](topic)?
+    - Who is the president of the USA?
+    - How does machine learning work?
+    - What's happening in Maseno University
+    - Where is Maseno University Located.
+    - Give me the direction to Maseno University
+    - Give the direction to University of Nairobi.
+    - What was the event that took place in Kisumu.
+    - Who is the Vice chancellor of Maseno University
+    - Can you tell me more about the [weather](topic)?
+    - I want to learn about [machine learning](topic)

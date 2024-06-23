@@ -52,7 +52,6 @@ from django.contrib import messages
 from django.shortcuts import redirect, render
 
 
-
 starttime = time.time()
 from python_scripts.lazyloader import lazy_load_model_with_cache
 timetoimport = time.time()
@@ -66,8 +65,8 @@ print(f"loader the model and cached it in {timetoload - timetoimport} secs")
 
 
 # logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-# logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-logging.basicConfig(filename=r'C:\Users\user\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+logging.basicConfig(filename=r'C:\Users\user\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+# logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 
 from .forms import UpdateStudentProfileForm
@@ -187,21 +186,13 @@ def recommend_courses(request):
         return render(request, 'academia_app/recommended_courses.html')       
 
             
-logger = logging.getLogger(__name__)        
+logger = logging.getLogger(__name__)
         
-def predict_probability(request, student_id=3): 
-    try: 
-
-        # model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        # model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+def predict_probability(request, student_id=3):
+    try:
         model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_prob_model2.joblib'
         model = joblib.load(model_path)
-
-        logging.info('Probability model proacted_prob_model2 loaded') 
-
         student_data = StudentUser.objects.get(id=student_id) 
-        lessonsattended = student_data.Lessons_Attended
         aggrpoints = student_data.Aggregate_points
         pcnt_of_lessons_attended = student_data.pcnt_of_lessons_attended 
         homework_submission_rates = student_data.homework_submission_rates
