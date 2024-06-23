@@ -186,19 +186,13 @@ def recommend_courses(request):
         return render(request, 'academia_app/recommended_courses.html')       
 
             
-logger = logging.getLogger(__name__)        
+logger = logging.getLogger(__name__)
         
-def predict_probability(request, student_id=3): 
-    try: 
-        # model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        # model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+def predict_probability(request, student_id=3):
+    try:
         model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_prob_model2.joblib'
         model = joblib.load(model_path)
-        logging.info('Probability model proacted_prob_model2 loaded') 
-
         student_data = StudentUser.objects.get(id=student_id) 
-        lessonsattended = student_data.Lessons_Attended
         aggrpoints = student_data.Aggregate_points
         pcnt_of_lessons_attended = student_data.pcnt_of_lessons_attended 
         homework_submission_rates = student_data.homework_submission_rates

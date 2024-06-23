@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INFO || 10-Jun-24 01:41:09 || Pro-Act-Ed 2024 Recommender Engine Initialized
 INFO || 10-Jun-24 01:41:34 || time recommender model has used: 25.71858024597168
 INFO || 10-Jun-24 01:41:37 || S-Bert 2024 Recommender Engine Initialized
@@ -15770,6 +15771,7 @@ WARNING || 12-Jun-24 19:55:07 || Not Found: /favicon.ico
 WARNING || 12-Jun-24 19:55:27 || Not Found: /favicon.ico
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 WARNING || 13-Jun-24 22:05:04 || Not Found: /favicon.ico
 WARNING || 13-Jun-24 22:05:28 || Not Found: /ws/academia_app/
 INFO || 13-Jun-24 22:06:27 || Forbidden (CSRF token from POST incorrect.): /auth/login/
@@ -15777,13 +15779,27 @@ ERROR || 13-Jun-24 22:06:47 || Internal Server Error: /admin/
 =======
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> ae6e4f234e0b374061eaa0c38d24128d1b56993b
 <<<<<<< HEAD
 >>>>>>> bd072ec40685e95427346e71dcbd112c7a3a8439
 ERROR || 13-Jun-24 11:58:14 || Internal Server Error: /api/course_data/18/
 =======
 =======
 >>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
+<<<<<<< HEAD
 >>>>>>> ce19b88cd5b052e7bffb03f8ff4cd77540fc4a5c
+=======
+=======
+WARNING || 13-Jun-24 22:05:04 || Not Found: /favicon.ico
+WARNING || 13-Jun-24 22:05:28 || Not Found: /ws/academia_app/
+INFO || 13-Jun-24 22:06:27 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+ERROR || 13-Jun-24 22:06:47 || Internal Server Error: /admin/
+=======
+<<<<<<< HEAD
+>>>>>>> 66703045e7bb35bb253ba50215afd31d3140d503
+>>>>>>> ae6e4f234e0b374061eaa0c38d24128d1b56993b
 =======
 >>>>>>> 0270e327f8d255da739368f57e05331895135a08
 INFO || 12-Jun-24 11:29:41 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
@@ -17598,6 +17614,7 @@ WARNING || 17-Jun-24 12:49:57 || Not Found: /favicon.ico
 WARNING || 17-Jun-24 12:50:46 || Not Found: /favicon.ico
 WARNING || 17-Jun-24 12:58:32 || Not Found: /favicon.ico
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0e4d088a004d3198de57ea6f5e1467aa797e9fef
 WARNING || 17-Jun-24 15:58:35 || Not Found: /favicon.ico
 CRITICAL || 17-Jun-24 16:00:28 || Something came up, please rerun the system...
@@ -17857,6 +17874,8 @@ WARNING || 20-Jun-24 18:14:25 || Not Found: /chat/path_to_bot_avatar.png
 WARNING || 20-Jun-24 21:14:19 || Not Found: /chat/path_to_bot_avatar.png
 =======
 =======
+>>>>>>> ae6e4f234e0b374061eaa0c38d24128d1b56993b
+=======
 >>>>>>> fa7b5e0b443fc9b5160a71b149b5f3e240958251
 INFO || 17-Jun-24 10:56:35 || C:\Users\Simon\proacted\AIacademia\academia_app\views.py changed, reloading.
 INFO || 17-Jun-24 10:57:51 || S-Bert 2024 Recommender Engine Initialized
@@ -18085,6 +18104,7 @@ WARNING || 19-Jun-24 00:52:25 || Not Found: /favicon.ico
 INFO || 19-Jun-24 00:53:45 || S-Bert 2024 Recommender Engine Initialized
 INFO || 19-Jun-24 00:54:04 || Time taken by sbert model: 19.175036430358887
 INFO || 19-Jun-24 00:54:04 || Recommender system has run
+<<<<<<< HEAD
 >>>>>>> ce19b88cd5b052e7bffb03f8ff4cd77540fc4a5c
 INFO || 22-Jun-24 17:18:21 || Use pytorch device_name: cpu
 INFO || 22-Jun-24 17:18:21 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
@@ -18237,3 +18257,242 @@ DEBUG || 22-Jun-24 18:29:58 || https://huggingface.co:443 "HEAD /sentence-transf
 DEBUG || 22-Jun-24 18:29:59 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
 DEBUG || 22-Jun-24 18:30:00 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6141
 DEBUG || 22-Jun-24 18:30:00 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6141
+=======
+=======
+>>>>>>> 0e4d088a004d3198de57ea6f5e1467aa797e9fef
+WARNING || 17-Jun-24 15:58:35 || Not Found: /favicon.ico
+CRITICAL || 17-Jun-24 16:00:28 || Something came up, please rerun the system...
+INFO || 17-Jun-24 16:00:28 || Recommender system has run
+ERROR || 17-Jun-24 16:00:29 || Internal Server Error: /recommend_courses/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view academia_app.views.recommend_courses didn't return an HttpResponse object. It returned None instead.
+INFO || 17-Jun-24 20:48:57 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 17-Jun-24 21:07:18 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+INFO || 18-Jun-24 06:06:01 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 18-Jun-24 06:32:21 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+INFO || 18-Jun-24 06:41:45 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 18-Jun-24 06:44:00 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+WARNING || 18-Jun-24 06:47:04 || Not Found: /favicon.ico
+WARNING || 18-Jun-24 06:49:16 || Not Found: /favicon.ico
+ERROR || 18-Jun-24 06:49:51 || Internal Server Error: /chat/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 624, in chat_page
+    return render(request, 'chat_page.html')
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: chat_page.html
+INFO || 18-Jun-24 06:51:25 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 18-Jun-24 06:52:30 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:52:37 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:52:55 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:52:56 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:53:09 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:54:02 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:54:03 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:54:03 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:54:03 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:54:03 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:33 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:33 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:34 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:34 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:34 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:34 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:34 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:34 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:39 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:39 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:39 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:47 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:48 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:49 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:50 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:50 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:51 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:51 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:51 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:51 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:51 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:52 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:52 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:52 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:52 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:52 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 06:55:53 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 10:10:14 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 10:10:14 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 10:10:15 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 10:10:15 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 10:10:15 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 10:10:15 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 10:10:17 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 10:10:17 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 10:10:17 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 10:10:17 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 10:10:17 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 10:10:17 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 10:10:17 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 11:01:21 || Not Found: /favicon.ico
+WARNING || 18-Jun-24 11:01:24 || Not Found: /favicon.ico
+WARNING || 18-Jun-24 11:08:08 || Not Found: /chat_with_bot/
+WARNING || 18-Jun-24 11:11:04 || Not Found: /favicon.ico
+INFO || 18-Jun-24 11:11:15 || Forbidden (CSRF token missing.): /rasa_chat/
+INFO || 18-Jun-24 11:22:31 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 18-Jun-24 11:28:41 || Forbidden (CSRF token missing.): /rasa_chat/
+INFO || 18-Jun-24 11:29:04 || Forbidden (CSRF token missing.): /rasa_chat/
+INFO || 18-Jun-24 11:29:15 || Forbidden (CSRF token missing.): /rasa_chat/
+INFO || 18-Jun-24 11:29:16 || Forbidden (CSRF token missing.): /rasa_chat/
+INFO || 18-Jun-24 11:30:02 || Forbidden (CSRF token missing.): /rasa_chat/
+WARNING || 18-Jun-24 11:30:15 || Not Found: /favicon.ico
+WARNING || 18-Jun-24 11:30:15 || Not Found: /favicon.ico
+WARNING || 18-Jun-24 11:30:15 || Not Found: /favicon.ico
+WARNING || 18-Jun-24 11:30:43 || Bad Request: /rasa_chat/
+WARNING || 18-Jun-24 11:30:43 || Bad Request: /rasa_chat/
+INFO || 18-Jun-24 11:45:08 || Forbidden (CSRF token missing.): /rasa_chat/
+INFO || 18-Jun-24 13:47:48 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 18-Jun-24 13:53:56 || Not Found: /favicon.ico
+DEBUG || 18-Jun-24 13:54:09 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 13:54:46 || Starting new HTTP connection (1): localhost:5005
+WARNING || 18-Jun-24 13:55:01 || Not Found: /favicon.ico
+WARNING || 18-Jun-24 13:55:06 || Bad Request: /rasa_chat/
+DEBUG || 18-Jun-24 13:55:49 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 13:55:54 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 38
+DEBUG || 18-Jun-24 13:55:55 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 38
+DEBUG || 18-Jun-24 13:55:56 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 38
+DEBUG || 18-Jun-24 13:56:19 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 13:56:22 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 38
+DEBUG || 18-Jun-24 13:56:38 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 13:56:40 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 38
+DEBUG || 18-Jun-24 13:56:51 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 13:56:53 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 38
+DEBUG || 18-Jun-24 13:57:02 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 13:57:04 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 38
+DEBUG || 18-Jun-24 13:57:14 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 13:57:15 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 13:57:16 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 38
+DEBUG || 18-Jun-24 13:57:18 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 38
+DEBUG || 18-Jun-24 13:57:18 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 13:57:20 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 38
+DEBUG || 18-Jun-24 13:58:21 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 13:58:23 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 38
+DEBUG || 18-Jun-24 13:58:34 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 13:58:36 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 38
+DEBUG || 18-Jun-24 14:03:45 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 14:03:48 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 38
+DEBUG || 18-Jun-24 14:13:27 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 14:13:29 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 38
+DEBUG || 18-Jun-24 14:13:37 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 14:13:39 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 38
+DEBUG || 18-Jun-24 14:13:45 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 14:13:48 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 38
+DEBUG || 18-Jun-24 14:13:55 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 14:13:57 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 38
+DEBUG || 18-Jun-24 14:14:05 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 14:14:08 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 38
+WARNING || 18-Jun-24 15:19:53 || Not Found: /favicon.ico
+DEBUG || 18-Jun-24 15:19:59 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 15:20:02 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 38
+INFO || 18-Jun-24 15:22:46 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 18-Jun-24 15:23:02 || Not Found: /favicon.ico
+WARNING || 18-Jun-24 15:28:03 || Not Found: /favicon.ico
+ERROR || 18-Jun-24 15:28:42 || Internal Server Error: /rasa_chat/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 621, in rasa_chat
+    rasa_response = requests.post(rasa_url, data=json.dumps(payload), headers=headers)
+NameError: name 'json' is not defined
+INFO || 18-Jun-24 15:29:39 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 18-Jun-24 15:31:43 || Not Found: /favicon.ico
+DEBUG || 18-Jun-24 15:31:49 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 15:31:52 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 38
+DEBUG || 18-Jun-24 15:32:20 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 15:32:23 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 38
+INFO || 18-Jun-24 15:42:28 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 18-Jun-24 15:45:35 || Not Found: /favicon.ico
+DEBUG || 18-Jun-24 15:45:46 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 15:45:50 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 70
+DEBUG || 18-Jun-24 15:46:23 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 15:46:26 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 70
+INFO || 18-Jun-24 15:47:00 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 18-Jun-24 15:49:41 || Not Found: /favicon.ico
+DEBUG || 18-Jun-24 15:49:46 || Starting new HTTP connection (1): localhost:5005
+DEBUG || 18-Jun-24 15:49:50 || http://localhost:5005 "POST /webhooks/rest/webhook HTTP/1.1" 200 70
+INFO || 18-Jun-24 15:55:11 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+>>>>>>> 66703045e7bb35bb253ba50215afd31d3140d503
+=======
+INFO || 17-Jun-24 22:17:32 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 17-Jun-24 22:17:32 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 17-Jun-24 22:17:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:17:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:17:34 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:17:34 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:17:34 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:17:35 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:17:36 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 17-Jun-24 22:17:36 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6132
+INFO || 17-Jun-24 22:17:36 || Use pytorch device_name: cpu
+INFO || 18-Jun-24 21:16:16 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 18-Jun-24 21:16:16 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 18-Jun-24 21:16:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:16:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:16:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:16:18 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:16:18 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:16:19 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:16:20 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:16:20 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6160
+INFO || 18-Jun-24 21:16:21 || Use pytorch device_name: cpu
+INFO || 18-Jun-24 21:44:48 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 18-Jun-24 21:44:48 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 18-Jun-24 21:44:49 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:44:49 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:44:50 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:44:50 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:44:51 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:44:51 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:44:53 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 18-Jun-24 21:44:54 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6160
+INFO || 18-Jun-24 21:44:54 || Use pytorch device_name: cpu
+>>>>>>> 3523931bd08954fe2202603cef2553bc639a3af3
+INFO || 22-Jun-24 16:01:47 || Use pytorch device_name: cpu
+INFO || 22-Jun-24 16:01:47 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 22-Jun-24 16:01:47 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 22-Jun-24 16:01:48 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 22-Jun-24 16:01:49 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 22-Jun-24 16:01:50 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 22-Jun-24 16:01:50 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 22-Jun-24 16:01:50 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 22-Jun-24 16:01:51 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 22-Jun-24 16:01:56 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 22-Jun-24 16:01:56 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6141
+DEBUG || 22-Jun-24 16:01:57 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6141
+WARNING || 22-Jun-24 16:04:18 || Not Found: /favicon.ico
+WARNING || 22-Jun-24 16:08:06 || Not Found: /favicon.ico
+WARNING || 22-Jun-24 16:24:43 || Not Found: /favicon.ico
+WARNING || 22-Jun-24 16:25:08 || Not Found: /favicon.ico
+WARNING || 22-Jun-24 16:26:18 || Not Found: /favicon.ico
+WARNING || 22-Jun-24 16:28:16 || Not Found: /favicon.ico
+DEBUG || 22-Jun-24 16:57:57 || Sending to Rasa: {'sender': '949f5749-53fd-4f51-a934-768f90678e0f', 'message': ''}
+DEBUG || 22-Jun-24 16:57:58 || Starting new HTTP connection (1): localhost:5005
+ERROR || 22-Jun-24 16:58:02 || Request to Rasa failed: HTTPConnectionPool(host='localhost', port=5005): Max retries exceeded with url: /webhooks/rest/webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE50B65D30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+ERROR || 22-Jun-24 16:58:02 || Internal Server Error: /rasa_chat/
+>>>>>>> ae6e4f234e0b374061eaa0c38d24128d1b56993b
