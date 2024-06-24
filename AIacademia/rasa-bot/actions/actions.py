@@ -1,26 +1,48 @@
+import sys
+import os
+import django
+import logging
+
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# Add the directory containing the Alacademia module to the PYTHONPATH
+base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'AIacademia'))
+sys.path.append(base_dir)
+logger.info(f"Base directory added to PYTHONPATH: {base_dir}")
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Alacademia.settings')
+
+try:
+    django.setup()
+    logger.info("Django setup completed successfully.")
+except Exception as e:
+    logger.error(f"Error setting up Django: {e}")
+
+from bs4 import BeautifulSoup
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from bot_data.models import MasenoInfo
 import requests
-from bs4 import BeautifulSoup
 
 DUCKDUCKGO_API_URL = "https://api.duckduckgo.com/"
 
-    def search_duckduckgo(query):
-        params = {
-            'q': query,
-            'format': 'json',
-            'pretty': 1
-        }
-        response = requests.get(DUCKDUCKGO_API_URL, params=params)
-        data = response.json()
-        return data['AbstractURL']
+def search_duckduckgo(query):
+    params = {
+        'q': query,
+        'format': 'json',
+        'pretty': 1
+    }
+    response = requests.get(DUCKDUCKGO_API_URL, params=params)
+    data = response.json()
+    return data['AbstractURL']
 
-    def get_webpage_content(url):
-        response = requests.get(url)
-        soup = BeautifulSoup(response.text, 'html.parser')
-        return soup
+def get_webpage_content(url):
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, 'html.parser')
+    return soup
+
 class ActionInformProgram(Action):
 
     def name(self) -> Text:
@@ -49,10 +71,11 @@ class ActionInformProgram(Action):
                 if 'RelatedTopics' in data and data['RelatedTopics']:
                     response = "\n".join([topic['Text'] for topic in data['RelatedTopics'][:5]])
                 else:
-                    response = "I couldn't find any program information online. Kindly rephrase your question"
+                    response = "I couldn't find any program information online. Kindly rephrase your question."
 
         dispatcher.utter_message(text=response)
         return []
+
 
 class ActionInformFeeStructure(Action):
 
