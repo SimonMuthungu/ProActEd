@@ -284,11 +284,3 @@ class ProbabilityDataTable(models.Model):
                 setattr(self, field, 0.0)
 
         super().save(*args, **kwargs)
-
-class MasenoInfo(models.Model):
-    category = models.CharField(max_length=255)
-    detail = models.CharField(max_length=255)
-    additional_info = models.TextField()
-
-    def __str__(self):
-        return f"{self.category} - {self.detail}"

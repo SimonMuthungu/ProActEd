@@ -1,6 +1,9 @@
 version: "3.1"
 
 intents:
+  - start_session
+  - keep_alive
+  - did_that_help
   - greet
   - goodbye
   - affirm
@@ -8,9 +11,16 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - Computer_Science_Courses
-  - Management_Courses
-  - Literature_Courses
+  - bot_creator
+  - bot_creation_date
+  - bot_version
+  - bot_purpose
+  - bot_capabilities
+  - bot_personal_info
+  - bot_name
+  - computer_science_fields
+  - management_fields
+  - literature_fields
   - mood_happy
   - mood_angry
   - mood_scared
@@ -24,107 +34,346 @@ intents:
   - ask_forecast_weather
   - inquire_courses
   - inform
-  - start_session
-  - keep_alive
-  - did_that_help
   - search_online
+  - ask_program_details
+  - ask_program_types
+  - ask_application_procedure
+  - ask_fee_structure
+  - ask_contact_information
+  - ask_general_information
+  - ask_university_management
+  - ask_university_council
+  - ask_joining_instructions
+  - ask_programs
+  - ask_education_style
+  - ask_campuses
+  - ask_directions
+  - ask_latest_news
+  - ask_trending_school
+  - ask_known_hotels
+  - ask_known_student_dwellings
+  - ask_university_hostels
+  - ask_most_loved_school
+  - ask_most_handsome_men_school
+  - ask_most_beautiful_girls_school
+  - ask_community_around_maseno
+  - ask_tribes_around_maseno
+  - ask_best_dishes_hotels
+  - ask_clubs_around_maseno
+  - ask_clubs_and_organizations
+  - ask_health_services
+  - ask_scholarship_application
+  - ask_exchange_programs
+  - ask_academic_calendar
+  - ask_alumni_network
+  - ask_library_services
+  - ask_career_services
 
 entities:
-  - school_name
-
-actions:
-  - action_fetch_courses
-  - action_session_start
-  - action_keep_alive
-  - action_fetch_course
-  - action_web_search
+  - program_level
+  - program_name
+  - course
+  - topic
 
 slots:
-  school_name:
+  program_level:
     type: text
-    influence_conversation: false
     mappings:
-      - type: from_entity
-        entity: school_name
+      - type: from_text
+  program_name:
+    type: text
+    mappings:
+      - type: from_text
+  course:
+    type: text
+    mappings:
+      - type: from_text
+  topic:
+    type: text
+    mappings:
+      - type: from_text
+  inquiry_type:
+    type: text
+    mappings:
+      - type: from_text
 
 responses:
-  utter_welcome_message:
-    - text: "Welcome! How can I help you today?"
+  utter_start_session:
+    - text: "Welcome! Let's start the session. How can I assist you today?"
+
+  utter_keep_alive:
+    - text: "The session is still active. How can I assist you further?"
+
+  utter_did_that_help:
+    - text: "Did that help? Do you need any further information?"
 
   utter_greet:
-    - text: "Hello! How can I assist you?"
+    - text: "Hello! How can I help you today?"
 
   utter_goodbye:
     - text: "Goodbye! Have a great day!"
 
-  utter_bot_challenge:
-    - text: "I am a bot, here to assist you with your inquiries."
-
-  utter_did_that_help:
-    - text: "Did that help?"
-
   utter_affirm:
-    - text: "Glad to hear that!"
+    - text: "Great! How can I assist you further?"
 
   utter_deny:
-    - text: "I'm sorry to hear that. How can I help further?"
-
-  utter_ask_school_name:
-    - text: "Please specify the school you're interested in."
+    - text: "Alright, what else would you like to know?"
 
   utter_mood_great:
-    - text: "That's wonderful to hear!"
+    - text: "That's wonderful to hear! How can I assist you today?"
 
   utter_mood_unhappy:
-    - text: "I'm sorry you're feeling down. How can I help?"
+    - text: "I'm sorry to hear that. How can I assist you to make your day better?"
 
-  utter_cheer_up:
-    - text: "Here's a joke to cheer you up: Why don't scientists trust atoms? Because they make up everything!"
+  utter_bot_challenge:
+    - text: |
+        I am an AI chatbot designed to assist you with your queries about Maseno University. Let me explain a bit about what a chatbot is and how it works:
 
-  utter_happy:
-    - text: "That's great to hear!"
+        A chatbot is a software application that uses artificial intelligence (AI) to simulate human-like conversations with users. Chatbots can interact with users via text or voice interfaces and are commonly used to provide customer support, answer questions, and automate tasks.
 
-  utter_computer_science_courses:
-    - text: "Here are some Computer Science courses: Python Programming, Java Programming, Data Science."
+        Technically speaking, a chatbot is built using several key components:
+        
+        1. **Natural Language Processing (NLP)**: This technology allows the chatbot to understand and interpret human language. NLP involves techniques for analyzing and generating text, enabling the chatbot to understand user inputs and respond appropriately.
 
-  utter_management_courses:
-    - text: "Here are some Management courses: Finance, Marketing, Human Resource Management."
+        2. **Machine Learning Models**: These models are trained on large datasets to recognize patterns and make predictions. In the context of a chatbot, machine learning models help in understanding user intents, extracting relevant information, and generating responses.
 
-  utter_literature_courses:
-    - text: "Here are some Literature courses: English Literature, French Literature, German Literature."
+        3. **Dialogue Management**: This component manages the flow of conversation, ensuring that interactions are coherent and contextually appropriate. It keeps track of the conversation history and guides the chatbot in generating responses that are relevant to the user's queries.
 
-  utter_ask_forecast_weather:
-    - text: "Today's weather is mostly sunny with a few clouds."
+        4. **Integration with External Systems**: Chatbots often integrate with databases, APIs, and other external systems to fetch information or perform actions. For example, a university chatbot might connect to the university's database to retrieve information about courses, programs, and contact details.
+
+        Overall, chatbots leverage AI technologies to provide efficient and interactive communication, enhancing the user experience by offering instant assistance and support. If you have any specific questions about Maseno University, feel free to ask, and I'll do my best to help you.
+
+  utter_bot_creator:
+    - text: |
+        This bot was developed by a team of experts:
+
+        - Amakalu Vitalis (Project Lead, Database Engineer, BSc Computer Science)
+        - Bentheaya Galavu (DevSecOps Engineer, BSc Mathematics and Computer Science)
+        - Mercy Achieng (UX/UI Engineer, BSc Computer Science)
+        - Simon Muthungu (AI/ML Engineer, BSc Computer Science)
+        - Cynthia Amol (Project Team Guide, Masters in Computer Science)
+
+        The team was supported by the Proacted team. All team members except Bentheaya Galavu were from the School of Computing and Informatics. Bentheaya Galavu was from the School of Mathematics. The project was guided by Lady Cynthia Amol, who was pursuing her Masters in Computer Science. The other team members were in their second year of their degree programs.
+
+        To contact the developers, you can reach them through these numbers:
+        
+        - Amakalu Vitalis: +254743720033
+        - Bentheaya Galavu: +254758635561
+        - Mercy Achieng: +254795748765
+        - Simon Muthungu: +254758958016
+        - Cynthia Amol: +254704591763
+
+  utter_bot_creation_date:
+    - text: "I was created to assist users with information about Maseno University."
+
+  utter_bot_version:
+    - text: "I am running on the latest version of our AI system."
+
+  utter_bot_purpose:
+    - text: "I am here to provide you with information about Maseno University."
+
+  utter_bot_capabilities:
+    - text: "I can assist you with queries about Maseno University's programs, admissions, campus life, and more."
+
+  utter_bot_personal_info:
+    - text: "I am a chatbot designed to assist you with information about Maseno University."
+
+  utter_bot_name:
+    - text: "I am the Maseno University chatbot. How can I assist you today?"
+
+  utter_computer_science_fields:
+    - text: "Maseno University offers various courses in Computer Science. You can learn more about them on our website."
+
+  utter_management_fields:
+    - text: "Maseno University offers various management courses. You can find detailed information on our website."
+
+  utter_literature_fields:
+    - text: "Maseno University offers various literature courses. For more details, please visit our website."
 
   utter_mood_happy:
-    - text: "I'm glad to hear you're happy!"
+    - text: "That's great to hear! How can I assist you today?"
 
   utter_mood_angry:
-    - text: "I understand how you feel. Let's try to find a solution together."
-
-  utter_mood_nervous:
-    - text: "It's okay to feel nervous sometimes. Try to take deep breaths."
-
-  utter_relax_suggestion:
-    - text: "Try to relax by taking deep breaths and focusing on something positive."
-
-  utter_mood_bored:
-    - text: "Maybe you can try a new hobby or read a book to pass the time."
-
-  utter_mood_excited:
-    - text: "That's exciting! What's making you feel this way?"
-
-  utter_mood_lonely:
-    - text: "Loneliness can be tough. Try reaching out to a friend or family member."
-
-  utter_mood_tired:
-    - text: "It sounds like you need some rest. Make sure to take care of yourself."
+    - text: "I'm sorry you're feeling this way. How can I assist you?"
 
   utter_mood_scared:
-    - text: "It's normal to feel scared sometimes. Try to stay calm and take things one step at a time."
+    - text: "I understand. How can I help you feel more at ease?"
+
+  utter_mood_nervous:
+    - text: "It's okay to feel nervous. How can I assist you?"
+
+  utter_mood_bored:
+    - text: "Let's find something interesting to talk about. How can I assist you?"
+
+  utter_mood_excited:
+    - text: "That's exciting! How can I assist you today?"
+
+  utter_mood_lonely:
+    - text: "I'm here to chat. How can I assist you?"
+
+  utter_mood_tired:
+    - text: "I'm sorry you're feeling tired. How can I assist you?"
 
   utter_type_weather:
-    - text: "Today's weather is mostly sunny with a few clouds."
+    - text: "The weather today is sunny and warm. How can I assist you further?"
 
   utter_temperature_weather:
-    - text: "The temperature today is around 25 degrees Celsius."
+    - text: "The current temperature is 25°C. How can I assist you further?"
+
+  utter_ask_forecast_weather:
+    - text: "Today's forecast shows clear skies. How can I assist you further?"
+
+  utter_inquire_courses:
+    - text: "Maseno University offers a wide range of courses. Which specific course or program are you interested in?"
+
+  utter_inform:
+    - text: "Sure, I can help you with that. What specific information are you looking for?"
+
+  utter_search_online:
+    - text: "Let me search for that information for you."
+
+  utter_ask_program_details:
+    - text: "Maseno University offers various programs. Could you specify the program level and name you are interested in?"
+
+  utter_ask_program_types:
+    - text: "Maseno University offers Doctorate, Masters, Bachelors, Diploma, and Certificate programs. What type of program are you interested in?"
+
+  utter_ask_application_procedure:
+    - text: "To apply to Maseno University, please visit the university website and follow the application instructions provided."
+
+  utter_ask_fee_structure:
+    - text: "The fee structure for Maseno University programs can be found on the university website. Would you like me to provide a direct link?"
+
+  utter_ask_contact_information:
+    - text: "You can contact Maseno University at info@maseno.ac.ke or call +254 - 57 - 351620/2. More contact details are available on the university website."
+
+  utter_ask_general_information:
+    - text: "Maseno University is committed to excellence in teaching, research, and development. For more detailed information, please visit our website."
+
+  utter_ask_university_management:
+    - text: "The university management includes Vice Chancellor Prof. Julius O. Nyabundi and several deputy vice chancellors. More details can be found on our website."
+
+  utter_ask_university_council:
+    - text: "The university council is chaired by Prof. N. Omolo Ongati. More information about the council members is available on our website."
+
+  utter_ask_joining_instructions:
+    - text: "Joining instructions for new students are available on the Maseno University website. Would you like a direct link to the instructions?"
+
+  utter_ask_programs:
+    - text: "Maseno University offers a wide range of programs across various disciplines. Could you specify the level and field of study you are interested in?"
+
+  utter_ask_education_style:
+    - text: "Maseno University provides a conducive learning environment with a focus on practical and research-oriented education. More details are available on our website."
+
+  utter_ask_campuses:
+    - text: "Maseno University has several campuses including the Main Campus, Kisumu Campus, and others. More information can be found on our website."
+
+  utter_ask_directions:
+    - text: "Maseno University is located along Kisumu-Busia road, 25 km from Kisumu City. For detailed directions, please visit our website."
+
+  utter_ask_latest_news:
+    - text: "For the latest news and updates from Maseno University, please visit our website's news section."
+
+  utter_ask_trending_school:
+    - text: "The most trending school at Maseno University currently is the School of Computing and Informatics."
+
+  utter_ask_known_hotels:
+    - text: "Popular hotels near Maseno University include Mama Farida, Shamim, Mams, Silver Spoon, and Jprenvia."
+
+  utter_ask_known_student_dwellings:
+    - text: "Students usually live in hostels like Orange House, Pink House, and White House around Maseno University."
+
+  utter_ask_university_hostels:
+    - text: "Maseno University offers several hostels, including Equator, Victoria, Nyabundi, and Kilimanjaro. These hostels provide on-campus accommodation for students. For more details, you can visit the Maseno University website. Additionally, there are off-campus hostels like Orange House, Pink House, and White House. To apply for hostel accommodation, visit the Maseno University Student Portal, follow the instructions, and apply for hostel accommodation. I hope this information is useful to you."
+
+  utter_ask_most_loved_school:
+    - text: "The most loved school at Maseno University is often considered to be the School of Medicine due to its high standards and excellent facilities. Students appreciate the quality of education and the opportunities it provides. Would you like more details about this school?"
+
+  utter_ask_most_handsome_men_school:
+    - text: "The School of Business at Maseno University is often noted for having many handsome men. It's a popular school that attracts a diverse group of students. Is there anything specific you would like to know about the School of Business?"
+
+  utter_ask_most_beautiful_girls_school:
+    - text: "The School of Arts and Social Sciences is often mentioned for having many beautiful girls. It offers a variety of programs that attract students from different backgrounds. Would you like more information about this school?"
+
+  utter_ask_community_around_maseno:
+    - text: "The community around Maseno University is vibrant and diverse, with a mix of local cultures and traditions. The university fosters good relations with the surrounding community, creating a supportive environment for students. For more insights into the community life, feel free to ask."
+
+  utter_ask_tribes_around_maseno:
+    - text: "The area around Maseno University is home to several tribes, including the Luo, Luhya, and Kisii, among others. This cultural diversity enriches the student experience at Maseno University. Would you like to know more about the local culture and traditions?"
+
+  utter_ask_best_dishes_hotels:
+    - text: "Hotels around Maseno University are known for their excellent dishes, including local and international cuisines. Some popular hotels with great food include Mama Farida, Shamim, Mams, Silver Spoon, and Jprenvia. If you need recommendations for specific dishes, let me know!"
+
+  utter_ask_clubs_around_maseno:
+    - text: "There are several popular clubs around Maseno University where students go to relax and have fun. Some notable ones include Pulse Club, Club Signature, and Amigos Club. These places offer a vibrant nightlife for students. Would you like more details on any specific club?"
+
+  utter_ask_alumni_network:
+    - text: "The Maseno University alumni network is active and offers various opportunities for graduates to stay connected. You can join the alumni association through the university's website, participate in events, and connect with fellow alumni. For more details, please visit the alumni section on the university's website."
+
+  utter_ask_library_services:
+    - text: "The Maseno University library offers a range of services including access to online journals, borrowing books, study spaces, and research assistance. The library is equipped with digital resources and quiet study areas. For more information, you can visit the library section on the university's website. How can I assist you further with library services?"
+
+  utter_ask_career_services:
+    - text: "Maseno University offers comprehensive career services including resume assistance, internship opportunities, career counseling, and job placement services. The career center also organizes workshops and job fairs to help students prepare for their professional careers. For more details, visit the career services section on the university's website. How can I assist you further with career services?"
+
+  utter_ask_clubs_and_organizations:
+    - text: "Maseno University has a variety of student clubs and organizations ranging from academic, cultural, sports, to volunteer groups. Joining these clubs is a great way to enhance your university experience. You can sign up for clubs through the student portal. For more details, visit the student life section on the university's website. How can I help you with clubs and organizations?"
+
+  utter_ask_health_services:
+    - text: "Maseno University provides health services through its on-campus clinic, which includes medical consultations, counseling services, and wellness programs. The clinic is equipped to handle emergencies and offers a range of healthcare services to students. For more details, visit the health services section on the university's website. How can I assist you further with health services?"
+
+  utter_ask_scholarship_application:
+    - text: "To apply for scholarships at Maseno University, you need to visit the university's website and check the scholarships section for eligibility criteria and application procedures. There are various scholarships available for academic excellence, need-based support, and specific programs. For more details, visit the scholarships section on the university's website. How can I assist you further with scholarship applications?"
+
+  utter_ask_exchange_programs:
+    - text: "Maseno University offers exchange programs in partnership with several international universities. To participate, you need to meet the eligibility criteria and follow the application procedures provided on the university's website. Exchange programs offer a great opportunity to study abroad and gain international experience. For more details, visit the exchange programs section on the university's website. How can I help you with exchange programs?"
+
+  utter_ask_academic_calendar:
+    - text: "The academic calendar for Maseno University outlines important dates such as the start and end of semesters, exam periods, and holidays. You can find the detailed academic calendar on the university's website. Would you like a direct link to the academic calendar or more specific dates?"
+
+  utter_default_fallback:
+    - text: "I'm sorry, I didn't understand that. Can you please rephrase?"
+
+forms:
+  program_form:
+    required_slots:
+      - program_level
+      - program_name
+
+  general_inquiry_form:
+    required_slots:
+      - inquiry_type
+
+actions:
+  - action_inform_program
+  - action_inform_fee_structure
+  - action_inform_contact_information
+  - action_inform_general_information
+  - action_inform_university_management
+  - action_inform_university_council
+  - action_inform_joining_instructions
+  - action_inform_programs
+  - action_inform_education_style
+  - action_inform_campuses
+  - action_inform_directions
+  - action_inform_latest_news
+  - action_inform_trending_school
+  - action_inform_known_hotels
+  - action_inform_known_student_dwellings
+  - action_inform_university_hostels
+  - action_inform_most_loved_school
+  - action_inform_most_handsome_men_school
+  - action_inform_most_beautiful_girls_school
+  - action_inform_community_around_maseno
+  - action_inform_tribes_around
+  - action_inform_best_dishes_hotels
+  - action_inform_clubs_around
+  - action_inform_alumni_network
+  - action_inform_library_services
+  - action_inform_career_services
+  - action_inform_clubs_and_organizations
+  - action_inform_health_services
+  - action_inform_scholarship_application
+  - action_inform_exchange_programs
+  - action_inform_academic_calendar
+  - action_inform_developers

@@ -3,125 +3,195 @@ version: "3.1"
 stories:
 - story: Start session
   steps:
-    - intent: start_session
-    - action: action_session_start
-    - action: utter_welcome_message
+  - intent: start_session
+  - action: utter_start_session
 
-- story: greet user
+- story: Keep session alive
   steps:
-    - intent: greet
-    - action: utter_greet
+  - intent: keep_alive
+  - action: utter_keep_alive
 
-- story: handle affirmation
+- story: Check if helpful
   steps:
-    - intent: affirm
-    - action: utter_affirm
+  - intent: did_that_help
+  - action: utter_did_that_help
 
-- story: handle denial
+- story: Greet and goodbye
   steps:
-    - intent: deny
-    - action: utter_deny
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
 
-- story: handle help
+- story: Affirmation and Denial
   steps:
-    - intent: did_that_help
-    - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_affirm
+  - intent: deny
+  - action: utter_deny
 
-- story: happy path
+- story: Mood tracking
   steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: mood_great
-    - action: utter_mood_great
+  - intent: mood_great
+  - action: utter_mood_great
+  - intent: mood_unhappy
+  - action: utter_mood_unhappy
+  - intent: mood_happy
+  - action: utter_mood_happy
+  - intent: mood_angry
+  - action: utter_mood_angry
+  - intent: mood_scared
+  - action: utter_mood_scared
+  - intent: mood_nervous
+  - action: utter_mood_nervous
+  - intent: mood_bored
+  - action: utter_mood_bored
+  - intent: mood_excited
+  - action: utter_mood_excited
+  - intent: mood_lonely
+  - action: utter_mood_lonely
+  - intent: mood_tired
+  - action: utter_mood_tired
 
-- story: sad path 1
+- story: Bot inquiries
   steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: mood_unhappy
-    - action: utter_mood_unhappy
-    - action: utter_cheer_up
-    - intent: affirm
-    - action: utter_happy
+  - intent: bot_challenge
+  - action: utter_bot_challenge
+  - intent: bot_creator
+  - action: utter_bot_creator
+  - intent: bot_creation_date
+  - action: utter_bot_creation_date
+  - intent: bot_version
+  - action: utter_bot_version
+  - intent: bot_purpose
+  - action: utter_bot_purpose
+  - intent: bot_capabilities
+  - action: utter_bot_capabilities
+  - intent: bot_personal_info
+  - action: utter_bot_personal_info
+  - intent: bot_name
+  - action: utter_bot_name
 
-- story: sad path 2
+- story: Course inquiries
   steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: mood_unhappy
-    - action: utter_mood_unhappy
-    - action: utter_cheer_up
-    - intent: deny
-    - action: utter_goodbye
+  - intent: computer_science_fields
+  - action: utter_computer_science_fields
+  - intent: management_fields
+  - action: utter_management_fields
+  - intent: literature_fields
+  - action: utter_literature_fields
+  - intent: inquire_courses
+  - action: utter_inquire_courses
 
-- story: course inquiry - computer science
+- story: Program inquiries
   steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: Computer_Science_Courses
-    - action: utter_computer_science_courses
+  - intent: ask_program_details
+  - action: utter_ask_program_details
+  - intent: ask_program_types
+  - action: utter_ask_program_types
+  - intent: ask_application_procedure
+  - action: utter_ask_application_procedure
+  - intent: ask_fee_structure
+  - action: utter_ask_fee_structure
 
-- story: course inquiry - management
+- story: General inquiries
   steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: Management_Courses
-    - action: utter_management_courses
+  - intent: ask_contact_information
+  - action: utter_ask_contact_information
+  - intent: ask_general_information
+  - action: utter_ask_general_information
+  - intent: ask_university_management
+  - action: utter_ask_university_management
+  - intent: ask_university_council
+  - action: utter_ask_university_council
+  - intent: ask_joining_instructions
+  - action: utter_ask_joining_instructions
+  - intent: ask_programs
+  - action: utter_ask_programs
+  - intent: ask_education_style
+  - action: utter_ask_education_style
+  - intent: ask_campuses
+  - action: utter_ask_campuses
+  - intent: ask_directions
+  - action: utter_ask_directions
+  - intent: ask_latest_news
+  - action: utter_ask_latest_news
+  - intent: ask_trending_school
+  - action: utter_ask_trending_school
+  - intent: ask_known_hotels
+  - action: utter_ask_known_hotels
+  - intent: ask_known_student_dwellings
+  - action: utter_ask_known_student_dwellings
+  - intent: ask_university_hostels
+  - action: utter_ask_university_hostels
+  - intent: ask_most_loved_school
+  - action: utter_ask_most_loved_school
+  - intent: ask_most_handsome_men_school
+  - action: utter_ask_most_handsome_men_school
+  - intent: ask_most_beautiful_girls_school
+  - action: utter_ask_most_beautiful_girls_school
+  - intent: ask_community_around_maseno
+  - action: utter_ask_community_around_maseno
+  - intent: ask_tribes_around_maseno
+  - action: utter_ask_tribes_around_maseno
+  - intent: ask_best_dishes_hotels
+  - action: utter_ask_best_dishes_hotels
 
-- story: literature course path
+- story: Clubs and organizations inquiries
   steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: Literature_Courses
-    - action: utter_literature_courses
+  - intent: ask_clubs_around_maseno
+  - action: utter_ask_clubs_around_maseno
+  - intent: ask_alumni_network
+  - action: utter_ask_alumni_network
+  - intent: ask_library_services
+  - action: utter_ask_library_services
+  - intent: ask_career_services
+  - action: utter_ask_career_services
+  - intent: ask_clubs_and_organizations
+  - action: utter_ask_clubs_and_organizations
 
-- story: checking the weather
+- story: Health and scholarship inquiries
   steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: ask_forecast_weather
-    - action: utter_ask_forecast_weather
+  - intent: ask_health_services
+  - action: utter_ask_health_services
+  - intent: ask_scholarship_application
+  - action: utter_ask_scholarship_application
 
-- story: mood happy reaction
+- story: Exchange programs and academic calendar inquiries
   steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: mood_happy
-    - action: utter_mood_happy
+  - intent: ask_exchange_programs
+  - action: utter_ask_exchange_programs
+  - intent: ask_academic_calendar
+  - action: utter_ask_academic_calendar
 
-- story: mood angry handling
+- story: Mixed inquiry
   steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: mood_angry
-    - action: utter_mood_angry
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_program_details
+  - action: utter_ask_program_details
+  - intent: ask_fee_structure
+  - action: utter_ask_fee_structure
+  - intent: goodbye
+  - action: utter_goodbye
 
-- story: feeling nervous path
+- story: Mood change and information request
   steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: mood_nervous
-    - action: utter_mood_nervous
-    - intent: affirm
-    - action: utter_relax_suggestion
+  - intent: mood_great
+  - action: utter_mood_great
+  - intent: inquire_courses
+  - action: utter_inquire_courses
 
-- story: unexpected bot challenge
+- story: Weather inquiries
   steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: bot_challenge
-    - action: utter_bot_challenge
+  - intent: type_weather
+  - action: utter_type_weather
+  - intent: temperature_weather
+  - action: utter_temperature_weather
+  - intent: ask_forecast_weather
+  - action: utter_ask_forecast_weather
 
-- story: fetch courses for a school
+- story: Fallback
   steps:
-    - intent: inquire_courses
-    - action: utter_ask_school_name
-    - intent: inform
-      entities:
-        - school_name: "Computing and Informatics"
-    - action: action_fetch_courses
-
-- story: perform web search
-  steps:
-    - intent: search_online
-    - action: action_web_search
+  - intent: nlu_fallback
+  - action: utter_default_fallback

@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'channels',  
-    
+    'bot_data',
 ]
 
 MIDDLEWARE = [
@@ -67,9 +67,14 @@ ASGI_APPLICATION = 'AIacademia.asgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / "db (galavu).sqlite3",
+        'NAME': BASE_DIR / 'db.sqlite3',
+    },
+    'bot_db': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'bot_db.sqlite3',
     }
 }
+DATABASE_ROUTERS = ['AIacademia.dbrouters.DatabaseRouter']
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [

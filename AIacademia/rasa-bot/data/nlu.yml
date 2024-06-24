@@ -115,55 +115,237 @@ nlu:
 
 - intent: bot_challenge
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-    - are you a robot?
-    - am I talking to an actual person?
-    - you're a bot aren't you?
-    - are you even a real person?
+    - Are you an AI?
+    - Is this a real person?
+    - Are you a machine?
+    - Are you just a program?
+    - Are you automated?
+    - Is this conversation with a human?
+    - Are you an automated system?
+    - Are you artificial intelligence?
+    - Is this a chatbot?
+    - Are you programmed to respond?
+    - Is there a person behind these responses?
+    - Are you a human or a bot?
+    - Are you a real human?
+    - Is this a real conversation with a person?
+    - Are you a computer?
+    - Is this an AI I'm talking to?
+    - Are you just software?
+    - Is there a real person answering?
+    - Are you a digital assistant?
+    - Are you real or artificial?
 
-- intent: Computer_Science_Courses
+- intent: bot_creator
   examples: |
-    - C++ Programming
-    - Python Programming
-    - Java Programming
-    - HTML / CSS
-    - Java Script
-    - Web Development
-    - Android Development
-    - Artificial Intelligence
-    - Deep Learning
-    - Machine Learning
-    - Data Science
-    - Operating System
-    - Networking
-    - Cyber Security
-    - Blockchain
+    - Who developed you?
+    - Who created you?
+    - Who made this bot?
+    - Who built you?
+    - Who is behind this chatbot?
+    - Who programmed you?
+    - Who is your developer?
+    - Who designed you?
+    - Who is responsible for creating you?
+    - Who is your maker?
+    - Who constructed this bot?
+    - Who is the mastermind behind you?
+    - Who engineered you?
+    - Who is your architect?
+    - Who's the person behind this bot?
+    - Who put you together?
+    - Who's the developer of this bot?
+    - Who's the creator of this chatbot?
+    - Who authored you?
+    - Who's the genius behind this bot?
 
-- intent: Management_Courses
+- intent: bot_creation_date
   examples: |
-    - Banking and Finance
-    - Finance
-    - Human Resource
-    - Marketing
-    - Consulting
-    - Digital Marketing
-    - Business Analytics
-    - Operations
-    - Product Management
-    - Project Management
-    - Policy Making
+    - When were you developed?
+    - When were you created?
+    - When was this bot made?
+    - When did you come into existence?
+    - When were you programmed?
+    - When did you start operating?
+    - When was your first version released?
+    - When was this chatbot launched?
+    - When was your inception?
+    - When did your development start?
+    - When did you go live?
+    - When was this bot's debut?
+    - When did you first appear?
+    - When did this bot become operational?
+    - When was your release date?
+    - When did this bot go public?
+    - When was your initial release?
+    - When did you make your first appearance?
+    - When did this chatbot start?
+    - When was your deployment?
 
-- intent: Literature_Courses
+- intent: bot_version
   examples: |
-    - English Literature
-    - French Literature
-    - Latin Literature
-    - Hindi Literature
-    - Sanskrit Literature
-    - German Literature
+    - What is your version?
+    - What version are you?
+    - What is the current version of this bot?
+    - What version of the software are you?
+    - Which version are you running?
+    - What iteration are you?
+    - What edition of the bot are you?
+    - What is your software version?
+    - Are you the latest version?
+    - Which version of the chatbot is this?
+    - What is your release number?
+    - What build are you on?
+    - What version number are you?
+    - What is the current build of this bot?
+    - What is your update version?
+    - What version code do you have?
+    - What software version are you running?
+    - What is your latest update?
+    - What is the current iteration of this bot?
+    - Which release are you?
+
+- intent: bot_purpose
+  examples: |
+    - What is your purpose?
+    - What are you designed to do?
+    - What is your function?
+    - What are you here for?
+    - Why do you exist?
+    - What is your main task?
+    - What are you programmed for?
+    - What is your role?
+    - What are you supposed to help with?
+    - What is your primary function?
+    - Why were you created?
+    - What are you intended for?
+    - What is your mission?
+    - What is your objective?
+    - What are you here to accomplish?
+    - What is your job?
+    - What do you do?
+    - What is your responsibility?
+    - What is your goal?
+
+- intent: bot_capabilities
+  examples: |
+    - What can you do?
+    - What are your capabilities?
+    - What functions can you perform?
+    - What services do you offer?
+    - What tasks can you handle?
+    - What are you able to do?
+    - What skills do you have?
+    - What features do you have?
+    - What can you assist with?
+    - What are your functionalities?
+    - What kind of tasks can you execute?
+    - What are your strengths?
+    - What operations can you perform?
+    - What kind of support can you provide?
+    - What jobs can you do?
+    - What actions can you carry out?
+    - What activities can you undertake?
+    - What are your abilities?
+    - What are your talents?
+    - What can you help with?
+
+- intent: bot_personal_info
+  examples: |
+    - Tell me about yourself.
+    - What are you?
+    - Give me some information about you.
+    - Can you tell me about yourself?
+    - Describe yourself.
+    - What should I know about you?
+    - What are you all about?
+    - Introduce yourself.
+    - Who is this bot?
+    - What can you tell me about you?
+    - Share some details about yourself.
+    - Give a brief about you.
+    - Can you provide a self-introduction?
+    - Tell me some details about you.
+    - Who am I speaking with?
+    - What is your background?
+    - Tell me something about you.
+    - Provide a description of yourself.
+    - Can you explain who you are?
+
+- intent: bot_name
+  examples: |
+    - What is your name?
+    - Can you tell me your name?
+    - What's your name?
+    - How are you called?
+    - May I know your name?
+    - Who are you?
+    - What's the name of this bot?
+    - Do you have a name?
+    - How should I address you?
+    - What do people call you?
+    - What do you go by?
+    - Who are you known as?
+    - Can you share your name with me?
+    - By what name are you called?
+    - Tell me your name.
+    - What is your designated name?
+    - How do I call you?
+    - What should I call you?
+    - Are you named?
+    - How do people refer to you?
+    - What is your identifier?
+    - What name were you given?
+    - Under what name are you known?
+    - Could you tell me your name?
+    - What is the name given to you?
+    - Can you provide your name?
+    - What’s your official name?
+    - What name do you respond to?
+    - How are you addressed?
+    - What is your title?
+
+
+- intent: computer_science_fields
+  examples: |
+    - What are the courses available in C++ Programming?
+    - Can you tell me about Python Programming?
+    - What does Java Programming cover?
+    - What are the topics in HTML/CSS?
+    - Can you list the courses in JavaScript?
+    - What is included in Web Development?
+    - Tell me about Android Development courses.
+    - What is taught in Artificial Intelligence?
+    - Can you explain Deep Learning?
+    - What does the Machine Learning course entail?
+    - What topics are covered in Data Science?
+    - What is included in Operating Systems?
+    - Can you tell me about Networking courses?
+    - What do Cyber Security courses cover?
+    - What is taught in Blockchain courses?
+
+- intent: management_fields
+  examples: |
+    - What courses are offered in Banking and Finance?
+    - Can you tell me about the Finance courses?
+    - What topics are covered in Human Resource courses?
+    - What does the Marketing program include?
+    - What is taught in Consulting courses?
+    - Can you list the Digital Marketing courses?
+    - What is covered in Business Analytics?
+    - What do Operations Management courses entail?
+    - Tell me about Product Management courses.
+    - What is included in Project Management?
+    - Can you explain the Policy Making courses?
+
+- intent: literature_fields
+  examples: |
+    - What are the courses in English Literature?
+    - Can you tell me about French Literature courses?
+    - What is included in Latin Literature?
+    - What topics are covered in Hindi Literature?
+    - What does the Sanskrit Literature program entail?
+    - Can you list the courses in German Literature?
 
 - intent: mood_happy
   examples: |
@@ -632,3 +814,547 @@ nlu:
     - Who is the Vice chancellor of Maseno University
     - Can you tell me more about the [weather](topic)?
     - I want to learn about [machine learning](topic)
+
+- intent: ask_program_details
+  examples: |
+    - Tell me about the [Doctorate](program_level) in [Environmental Science](program_name)
+    - What is the [Masters](program_level) program in [Genetics and Plant Breeding](program_name)?
+    - Give me details about the [Bachelors](program_level) in [Computer Science](program_name)
+    - What can I do with a degree in [Computer Science](program_name)?
+    - Can you give information about the [PhD](program_level) in [Physics](program_name)?
+    - What programs are available in [Computer Science](program_name)?
+    - What [Bachelor](program_level) programs do you offer?
+    - What [Masters](program_level) programs are there in [Agriculture](program_name)?
+    - What programs are offered at Maseno University?
+    - What courses does Maseno University offer?
+    - Can you list the programs available at Maseno?
+    - What are the academic programs at Maseno University?
+    - What fields of study can I pursue at Maseno?
+    - Can you list the doctorate programs available at Maseno?
+    - What PhD programs does Maseno University offer?
+    - What are the doctoral degrees available at Maseno?
+    - Does Maseno University offer any doctorate programs?
+    - Can you tell me about the PhD courses at Maseno?
+    - What master's programs are there in the field of Agriculture?
+    - What agriculture-related master's degrees are available at Maseno?
+    - Are there any postgraduate programs in Agriculture at Maseno University?
+    - What master's courses in Agriculture can I take at Maseno?
+    - Can you list the MSc programs in Agriculture at Maseno?
+    - Are there any bachelor's degrees in Computer Science at Maseno?
+    - Does Maseno University offer a bachelor's in Computer Science?
+    - Can I study Computer Science as an undergraduate at Maseno?
+    - What are the Computer Science bachelor's programs at Maseno?
+    - Is there a BSc in Computer Science available at Maseno University?
+    - What diploma courses can I take at Maseno University?
+    - Does Maseno offer any diploma programs?
+    - What diplomas are available at Maseno University?
+    - Can you list the diploma courses provided by Maseno?
+    - Are there any diploma options at Maseno University?
+    - Does Maseno University offer certificate programs in IT?
+    - Are there any IT certificate courses at Maseno?
+    - Can I enroll in a certificate program in IT at Maseno University?
+    - What certificate courses in IT does Maseno offer?
+    - Does Maseno have any short courses in IT?
+
+- intent: ask_program_types
+  examples: |
+    - What types of programs are offered at Maseno University?
+    - List all the program types available.
+    - What categories of programs are in Maseno ?
+    - What program types can I choose from at Maseno University?
+
+- intent: ask_application_procedure
+  examples: |
+    - What is the application procedure?
+    - How do I apply for a program at Maseno University?
+    - Which steps can I follow to apply for a course at Maseno University?
+    - Give steps to join Maseno University.
+    - What do I need to do to apply to Maseno University?
+    - How can I enroll in a program at Maseno University?
+    - What are the steps to apply for admission at Maseno University?
+    - Can you guide me on how to apply for a course at Maseno University?
+    - What is the process for applying to Maseno University?
+    - How do I submit an application to Maseno University?
+
+- intent: ask_fee_structure
+  examples: |
+    - What is the fee structure for Maseno University?
+    - How much does it cost to study at Maseno University?
+    - What are the tuition fees for programs at Maseno University?
+    - Can you provide the fee details for Maseno University?
+    - What is the cost of education at Maseno University?
+    - How much are the fees for courses at Maseno University?
+    - What are the charges for attending Maseno University?
+    - How much do I need to pay for tuition at Maseno University?
+    - What are the financial requirements for studying at Maseno University?
+    - Can you tell me the fee schedule for Maseno University?
+
+- intent: ask_contact_information
+  examples: |
+    - What are the contact details for Maseno University?
+    - How can I contact the university administration?
+    - Who can I reach out to at Maseno University for more information?
+    - Can you provide the contact information for Maseno University?
+    - How do I get in touch with Maseno University?
+    - What is the contact number for Maseno University?
+    - Where can I find the contact details for Maseno University?
+    - How can I communicate with Maseno University?
+    - Can you share the email address for Maseno University?
+    - What is the phone number for Maseno University's admissions office?
+
+- intent: ask_general_information
+  examples: |
+    - Tell me about Maseno University.
+    - Give me some general information about Maseno University.
+    - What should I know about Maseno University?
+    - Can you provide an overview of Maseno University?
+    - What is Maseno University known for?
+    - Can you share some details about Maseno University?
+    - What is the history of Maseno University?
+    - Can you tell me more about Maseno University?
+    - What makes Maseno University unique?
+    - What are the key features of Maseno Universit
+
+- intent: ask_university_management
+  examples: |
+    - Who is the Vice Chancellor of Maseno University?
+    - List the university management team.
+    - Who are the leaders at Maseno University?
+    - Can you tell me about the management of Maseno University?
+    - Who is in charge at Maseno University?
+    - Can you name the top administrators at Maseno University?
+    - Who are the key officials at Maseno University?
+    - Who heads Maseno University?
+    - Can you list the executive team at Maseno University?
+    - Who are the management personnel at Maseno University?
+
+- intent: ask_university_council
+  examples: |
+    - Who are the members of the university council?
+    - Tell me about the university council.
+    - Who serves on the council of Maseno University?
+    - Can you list the council members of Maseno University?
+    - Who are the council members at Maseno University?
+    - Can you tell me who is on the Maseno University council?
+    - Who are the representatives on the university council?
+    - Can you provide information about the university council members?
+    - Who makes up the council at Maseno University?
+    - Can you name the members of the Maseno University council?
+
+- intent: ask_joining_instructions
+  examples: |
+    - What are the joining instructions for new students?
+    - Give me the joining instructions for first-year students.
+    - How do new students get joining instructions at Maseno University?
+    - Where can I find the joining instructions for Maseno University?
+    - What instructions are there for joining Maseno University?
+    - Can you provide the joining guidelines for Maseno University?
+    - How do I obtain joining instructions for Maseno University?
+    - What do new students need to know to join Maseno University?
+    - Where can I access the joining instructions for Maseno University?
+    - What are the steps for new students to join Maseno University?
+
+- intent: ask_programs
+  examples: |
+    - What are some of the courses offered at Maseno University?
+    - What degree courses are available at Maseno University?
+    - What degrees can I get at Maseno University?
+    - Does Maseno University offer diploma courses?
+    - Tell me about the certificate programs at Maseno University.
+    - What academic programs are available at Maseno University?
+    - Can you list the programs at Maseno University?
+    - What fields of study does Maseno University offer?
+    - What courses can I take at Maseno University?
+    - Are there any short courses at Maseno University?
+
+- intent: ask_education_style
+  examples: |
+    - What is education like at Maseno University?
+    - How are the lectures conducted at Maseno University?
+    - What is the teaching style at Maseno University?
+    - Can you describe the learning environment at Maseno University?
+    - How do students learn at Maseno University?
+    - What is the mode of instruction at Maseno University?
+    - How are classes held at Maseno University?
+    - What is the educational approach at Maseno University?
+    - How does teaching happen at Maseno University?
+    - Can you explain the lecture format at Maseno University?
+
+- intent: ask_campuses
+  examples: |
+    - What are the campuses of Maseno University?
+    - List all the campuses of Maseno University.
+    - How many campuses does Maseno University have?
+    - Where are the campuses of Maseno University located?
+    - Can you name the different campuses of Maseno University?
+    - What campuses does Maseno University have?
+    - Where are the Maseno University campuses?
+    - Can you tell me about the campuses of Maseno University?
+    - How many locations does Maseno University operate?
+    - What are the names of the campuses at Maseno University?
+
+- intent: ask_directions
+  examples: |
+    - How do I get to Maseno University from Kisumu city?
+    - What is the route to Maseno University from Kisumu?
+    - Can you give me directions to Maseno University from Kisumu city?
+    - How can I travel to Maseno University from Kisumu?
+    - What is the best way to reach Maseno University from Kisumu city?
+    - How do I travel to Maseno University from Kisumu city?
+    - What are the directions to Maseno University from Kisumu?
+    - How far is Maseno University from Kisumu city, and how do I get there?
+    - What is the distance between Kisumu city and Maseno University, and how can I travel there?
+    - Can you provide the travel route to Maseno University from Kisumu?
+
+- intent: ask_latest_news
+  examples: |
+    - What is the latest news from Maseno University?
+    - Can you tell me what's trending at Maseno University?
+    - What's new at Maseno University?
+    - Are there any recent updates from Maseno University?
+    - What's currently happening at Maseno University?
+    - What are the latest events at Maseno University?
+    - What's the latest at Maseno University?
+    - Can you give me the recent news about Maseno University?
+    - What are the trending topics at Maseno University?
+    - Any new updates from Maseno University?
+
+- intent: ask_trending_school
+  examples: |
+    - Which is the most trending school at Maseno University?
+    - What is the most popular school at Maseno University?
+    - Which school is currently trending at Maseno University?
+    - Can you tell me the trending school at Maseno University?
+    - What is the most talked-about school at Maseno University?
+    - Which school is getting the most attention at Maseno University?
+    - Which is the hottest school at Maseno University right now?
+    - Which department is trending at Maseno University?
+    - What's the most trending faculty at Maseno University?
+    - Which is the most popular department at Maseno University?
+
+- intent: ask_known_hotels
+  examples: |
+    - What are the most known hotels in Maseno?
+    - Can you list the popular hotels near Maseno University?
+    - Where can I find the best hotels in Maseno?
+    - What are the well-known hotels around Maseno University?
+    - Can you name some famous hotels in Maseno?
+    - Which are the top hotels near Maseno University?
+    - Where are the popular places to stay in Maseno?
+    - What hotels are students talking about in Maseno?
+    - Which hotels are most recommended around Maseno University?
+    - What are the best accommodations in Maseno?
+
+- intent: ask_known_student_dwellings
+  examples: |
+    - Where do students usually live around Maseno University?
+    - What are the known student dwelling areas near Maseno?
+    - Can you list the popular residential areas for students at Maseno University?
+    - Where can I find student rentals near Maseno University?
+    - What are the most known places for students to stay around Maseno?
+    - Where do most students rent houses near Maseno University?
+    - Which areas are famous for student accommodations around Maseno?
+    - Can you name the popular student rental areas near Maseno University?
+    - What are the top places for students to live near Maseno University?
+    - Where do students prefer to stay around Maseno University?
+
+- intent: ask_university_hostels
+  examples: |
+    - What are the hostels available at Maseno University?
+    - Can you list the university hostels at Maseno?
+    - Where can students stay on campus at Maseno University?
+    - What are the accommodation options within Maseno University?
+    - Can you tell me about the hostels at Maseno University?
+    - What are the dormitory options at Maseno University?
+    - How are the hostels at Maseno University?
+    - What housing facilities are available for students at Maseno University?
+    - Which hostels are provided by Maseno University?
+    - Where can I find on-campus accommodations at Maseno University?
+
+- intent: ask_most_loved_school
+  examples: |
+    - Which is the most loved school at Maseno University?
+    - What is the favorite school at Maseno University?
+    - Which school do students love the most at Maseno University?
+    - Can you tell me the most admired school at Maseno University?
+    - What is the most cherished department at Maseno University?
+    - Which is the most popular faculty among students at Maseno University?
+    - Which school is the most appreciated at Maseno University?
+    - What's the most liked school at Maseno University?
+    - Which department do students prefer the most at Maseno University?
+    - What is the most beloved faculty at Maseno University?
+
+- intent: ask_most_handsome_men_school
+  examples: |
+    - Which school at Maseno University has the most handsome men?
+    - Where can I find the most handsome men at Maseno University?
+    - Which department is known for having handsome men at Maseno University?
+    - Can you tell me which faculty has the most attractive men at Maseno University?
+    - Which school is famous for handsome guys at Maseno University?
+    - Where are the most handsome men in Maseno University?
+    - Which department has the best-looking men at Maseno University?
+    - What is the school with the most handsome men at Maseno University?
+    - Which faculty has the most good-looking guys at Maseno University?
+    - Who are the most handsome men at Maseno University, and which school do they belong to?
+
+- intent: ask_most_beautiful_girls_school
+  examples: |
+    - Which school at Maseno University has the most beautiful girls?
+    - Where can I find the most beautiful girls at Maseno University?
+    - Which department is known for having beautiful girls at Maseno University?
+    - Can you tell me which faculty has the most attractive girls at Maseno University?
+    - Which school is famous for beautiful girls at Maseno University?
+    - Where are the most beautiful girls in Maseno University?
+    - Which department has the best-looking girls at Maseno University?
+    - What is the school with the most beautiful girls at Maseno University?
+    - Which faculty has the most good-looking girls at Maseno University?
+    - Who are the most beautiful girls at Maseno University, and which school do they belong to?
+
+- intent: ask_community_around_maseno
+  examples: |
+    - Can you tell me about the community around Maseno University?
+    - What is the community like around Maseno?
+    - How is the local community around Maseno University?
+    - What can you tell me about the people living near Maseno University?
+    - Describe the community surrounding Maseno University.
+    - What is the neighborhood like around Maseno University?
+    - How is the area around Maseno University?
+    - What kind of community is there around Maseno University?
+    - Can you describe the local area around Maseno University?
+    - What should I know about the community near Maseno University?
+
+- intent: ask_tribes_around_maseno
+  examples: |
+    - What tribes are found around Maseno University?
+    - Can you list the tribes living near Maseno?
+    - Which ethnic groups are present around Maseno University?
+    - What are the common tribes around Maseno University?
+    - Tell me about the tribes near Maseno University.
+    - What ethnic communities are there around Maseno?
+    - Can you name the tribes in the area around Maseno University?
+    - Which tribes can be found near Maseno University?
+    - What are the main tribes around Maseno University?
+    - Describe the tribal diversity around Maseno University.
+
+- intent: ask_tribes_around_maseno
+  examples: |
+    - What tribes are found around Maseno University?
+    - Can you list the tribes living near Maseno?
+    - Which ethnic groups are present around Maseno University?
+    - What are the common tribes around Maseno University?
+    - Tell me about the tribes near Maseno University.
+    - What ethnic communities are there around Maseno?
+    - Can you name the tribes in the area around Maseno University?
+    - Which tribes can be found near Maseno University?
+    - What are the main tribes around Maseno University?
+    - Describe the tribal diversity around Maseno University.
+
+- intent: ask_best_dishes_hotels
+  examples: |
+    - Which hotels around Maseno have the best dishes?
+    - Can you recommend hotels with great food near Maseno University?
+    - Where can I find the best dishes near Maseno University?
+    - What hotels serve the best food around Maseno?
+    - Tell me about hotels with top dishes near Maseno University.
+    - Which are the best places to eat near Maseno University?
+    - Where can I get delicious food around Maseno University?
+    - Can you list hotels with the best cuisine near Maseno?
+    - What are the best dining options near Maseno University?
+    - Which hotels are known for their excellent dishes near Maseno?
+
+- intent: ask_clubs_around_maseno
+  examples: |
+    - What clubs are around Maseno University?
+    - Can you list the clubs near Maseno?
+    - Where can students go clubbing near Maseno University?
+    - Tell me about the nightlife around Maseno University.
+    - Which are the popular clubs near Maseno University?
+    - Where can I find the best clubs around Maseno University?
+    - What are the top clubs near Maseno?
+    - Where do students go to have fun around Maseno University?
+    - What are the nightlife options near Maseno University?
+    - Can you recommend some clubs near Maseno University?
+
+- intent: ask_alumni_network
+  examples: |
+    - How can I join the Maseno University alumni network?
+    - Is there an alumni association for Maseno University graduates?
+    - What events does the Maseno University alumni network hold?
+    - Can I connect with other alumni from Maseno University?
+    - How do I stay in touch with Maseno University after graduation?
+    - What is the process to join the alumni network at Maseno University?
+    - Are there any benefits of joining the alumni association at Maseno?
+    - How can I participate in alumni events at Maseno University?
+    - Is there a way to network with fellow Maseno University alumni?
+    - How do I register for the Maseno University alumni network?
+    - What resources are available for Maseno University alumni?
+    - Can I get involved with the alumni activities at Maseno University?
+    - How do I update my contact information for the alumni network at Maseno?
+    - What are the requirements to join the Maseno University alumni association?
+    - How often does the alumni network meet at Maseno University?
+    - Are there any online groups for Maseno University alumni?
+    - Can I volunteer for alumni events at Maseno University?
+    - How can I support the Maseno University alumni network?
+    - What are the upcoming alumni events at Maseno University?
+    - How can I reconnect with my classmates through the Maseno University alumni network?
+
+- intent: ask_library_services
+  examples: |
+    - What library services are available at Maseno University?
+    - Can I access online journals through the Maseno University library?
+    - What are the library hours at Maseno University?
+    - How do I borrow books from the Maseno University library?
+    - Does Maseno University library offer study spaces?
+    - Are there any digital resources available in the Maseno University library?
+    - Can I get research assistance at the Maseno University library?
+    - What are the borrowing policies at Maseno University library?
+    - How can I access e-books at the Maseno University library?
+    - Is there a library membership for students at Maseno University?
+    - How do I renew books online at the Maseno University library?
+    - Are there any quiet study areas in the Maseno University library?
+    - Can I reserve a study room at the Maseno University library?
+    - What printing services are available at the Maseno University library?
+    - How do I find reference materials in the Maseno University library?
+    - Are there any workshops or seminars at the Maseno University library?
+    - Can I access past exam papers at the Maseno University library?
+    - How do I use the interlibrary loan service at Maseno University?
+    - Are there any special collections in the Maseno University library?
+    - Can I get help with citations at the Maseno University library?
+
+- intent: ask_career_services
+  examples: |
+    - What career services are offered at Maseno University?
+    - How can I get help with my resume at Maseno University?
+    - Are there internship opportunities available through Maseno University?
+    - Does Maseno University offer career counseling?
+    - Can I attend job fairs organized by Maseno University?
+    - What job placement services are available at Maseno University?
+    - How can I prepare for job interviews at Maseno University?
+    - Are there career workshops at Maseno University?
+    - Can I get help with job applications at Maseno University?
+    - How do I access the career resources at Maseno University?
+    - Does Maseno University provide networking opportunities with employers?
+    - What career development programs are available at Maseno University?
+    - Can I get mentorship through Maseno University career services?
+    - How do I book an appointment with a career advisor at Maseno University?
+    - Are there any career fairs at Maseno University?
+    - What are the steps to apply for internships through Maseno University?
+    - Can I get feedback on my cover letter at Maseno University?
+    - Are there any alumni career networks at Maseno University?
+    - How can I access the career library at Maseno University?
+    - What online career resources are available at Maseno University?
+
+- intent: ask_clubs_and_organizations
+  examples: |
+    - What student clubs are available at Maseno University?
+    - Can I join any organizations at Maseno University?
+    - Are there any cultural clubs at Maseno University?
+    - What sports teams can I join at Maseno University?
+    - How do I start a new club at Maseno University?
+    - What are the benefits of joining student organizations at Maseno University?
+    - Can I participate in academic clubs at Maseno University?
+    - Are there any volunteer groups at Maseno University?
+    - What are the most popular clubs at Maseno University?
+    - How do I sign up for clubs at Maseno University?
+    - Are there any art and music clubs at Maseno University?
+    - Can I join a debate club at Maseno University?
+    - What leadership opportunities are available in student organizations at Maseno University?
+    - Are there any environmental clubs at Maseno University?
+    - How do I find out about club meetings at Maseno University?
+    - Can I join more than one club at Maseno University?
+    - Are there any international student organizations at Maseno University?
+    - What are the requirements to join clubs at Maseno University?
+    - How can I get involved in extracurricular activities at Maseno University?
+    - Are there any entrepreneurship clubs at Maseno University?
+
+- intent: ask_health_services
+  examples: |
+    - What health services are available for students at Maseno University?
+    - Is there a health clinic on campus at Maseno University?
+    - Can I get counseling services at Maseno University?
+    - What mental health resources are available at Maseno University?
+    - How do I make an appointment at the Maseno University health center?
+    - Are there any wellness programs at Maseno University?
+    - What medical services are provided at Maseno University?
+    - Is there an emergency clinic at Maseno University?
+    - Can I get vaccinations at Maseno University health center?
+    - What are the operating hours of the health clinic at Maseno University?
+    - Are there dental services available at Maseno University?
+    - How do I access mental health support at Maseno University?
+    - Are there any health workshops or seminars at Maseno University?
+    - What is the process for getting medical assistance at Maseno University?
+    - Can I get health insurance through Maseno University?
+    - Are there fitness programs at Maseno University?
+    - How can I get nutritional advice at Maseno University?
+    - What are the costs of health services at Maseno University?
+    - Is there a pharmacy at Maseno University?
+    - Can I get a health check-up at Maseno University health center?
+
+- intent: ask_scholarship_application
+  examples: |
+    - How do I apply for scholarships at Maseno University?
+    - What scholarships are available for international students at Maseno University?
+    - What are the eligibility criteria for scholarships at Maseno University?
+    - Can I get a scholarship for academic excellence at Maseno University?
+    - What is the application process for scholarships at Maseno University?
+    - Are there any need-based scholarships at Maseno University?
+    - How do I find scholarship opportunities at Maseno University?
+    - Can I apply for multiple scholarships at Maseno University?
+    - What documents are required for scholarship applications at Maseno University?
+    - When is the deadline for scholarship applications at Maseno University?
+    - Are there any scholarships for sports at Maseno University?
+    - How do I know if I qualify for scholarships at Maseno University?
+    - Can I get a scholarship for research at Maseno University?
+    - What is the selection process for scholarships at Maseno University?
+    - Are there any scholarships for postgraduate studies at Maseno University?
+    - How do I apply for a merit-based scholarship at Maseno University?
+    - Can international students apply for scholarships at Maseno University?
+    - What financial aid options are available at Maseno University?
+    - Are there scholarships for specific programs at Maseno University?
+    - How can I get help with my scholarship application at Maseno University?
+
+- intent: ask_exchange_programs
+  examples: |
+    - Does Maseno University have exchange programs?
+    - How can I participate in an exchange program through Maseno University?
+    - What are the partner universities for exchange programs at Maseno University?
+    - Are there international exchange opportunities at Maseno University?
+    - How do I apply for an exchange program at Maseno University?
+    - What are the requirements for exchange programs at Maseno University?
+    - Can I study abroad through Maseno University exchange programs?
+    - What is the duration of exchange programs at Maseno University?
+    - Are there any scholarships for exchange programs at Maseno University?
+    - How do I find out about exchange programs at Maseno University?
+    - What support is available for students in exchange programs at Maseno University?
+    - Can I get credit for courses taken in exchange programs at Maseno University?
+    - What are the benefits of participating in exchange programs at Maseno University?
+    - How can I prepare for an exchange program at Maseno University?
+    - Are there summer exchange programs at Maseno University?
+    - How do I transfer credits from an exchange program to Maseno University?
+    - Can I do an internship during an exchange program at Maseno University?
+    - What are the costs associated with exchange programs at Maseno University?
+    - Are there any exchange programs for postgraduate students at Maseno University?
+    - How can I get more information about exchange programs at Maseno University?
+
+- intent: ask_academic_calendar
+  examples: |
+    - What is the academic calendar for Maseno University?
+    - When do classes start at Maseno University?
+    - What are the important dates for the academic year at Maseno University?
+    - Can you provide the schedule for exams at Maseno University?
+    - What are the holidays in the academic calendar of Maseno University?
+    - When does the semester begin at Maseno University?
+    - What is the timeline for the academic year at Maseno University?
+    - Can you tell me the term dates for Maseno University?
+    - What are the key dates in the academic schedule of Maseno University?
+    - How can I find the academic calendar for Maseno University?
+    - What is the schedule for the academic sessions at Maseno University?
+    - When are the breaks and holidays at Maseno University?
+    - What are the start and end dates for the semesters at Maseno University?
+    - How is the academic year divided at Maseno University?
+    - When are the registration dates for classes at Maseno University?
+    - What is the timeline for submitting assignments at Maseno University?
+    - When are the final exams scheduled at Maseno University?
+    - What are the dates for the mid-term exams at Maseno University?
+    - How can I access the academic calendar for Maseno University?
+    - What is the academic schedule like at Maseno University?

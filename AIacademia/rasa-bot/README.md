@@ -4,3 +4,7 @@
 * Windows users ; ensure you are in rasa-bot directory, run this `.\run_rasa_servers.bat` to run both servers
 Ensure the django server is also running
 `python manage.py runserver`
+## To makemigrations for the bot.
+ * `python manage.py makemigrations bot_data `
+##  To migrate for the bot_database
+ * ``

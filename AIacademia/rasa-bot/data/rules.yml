@@ -3,96 +3,335 @@ version: "3.1"
 rules:
 - rule: Start session
   steps:
-    - intent: start_session
-    - action: action_session_start
-    - action: utter_welcome_message
+  - intent: start_session
+  - action: utter_start_session
 
 - rule: Keep session alive
   steps:
-    - intent: keep_alive
-    - action: action_keep_alive
+  - intent: keep_alive
+  - action: utter_keep_alive
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: Did that help
   steps:
-    - intent: goodbye
-    - action: utter_goodbye
+  - intent: did_that_help
+  - action: utter_did_that_help
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Greet
   steps:
-    - intent: bot_challenge
-    - action: utter_bot_challenge
+  - intent: greet
+  - action: utter_greet
 
-- rule: Handle mood great
+- rule: Goodbye
   steps:
-    - intent: mood_great
-    - action: utter_mood_great
+  - intent: goodbye
+  - action: utter_goodbye
 
-- rule: Handle mood happy
+- rule: Affirm
   steps:
-    - intent: mood_happy
-    - action: utter_mood_happy
+  - intent: affirm
+  - action: utter_affirm
 
-- rule: Handle mood angry
+- rule: Deny
   steps:
-    - intent: mood_angry
-    - action: utter_mood_angry
+  - intent: deny
+  - action: utter_deny
 
-- rule: Handle mood nervous
+- rule: Mood great
   steps:
-    - intent: mood_nervous
-    - action: utter_mood_nervous
+  - intent: mood_great
+  - action: utter_mood_great
 
-- rule: Handle mood bored
+- rule: Mood unhappy
   steps:
-    - intent: mood_bored
-    - action: utter_mood_bored
+  - intent: mood_unhappy
+  - action: utter_mood_unhappy
 
-- rule: Handle mood excited
+- rule: Bot challenge
   steps:
-    - intent: mood_excited
-    - action: utter_mood_excited
+  - intent: bot_challenge
+  - action: utter_bot_challenge
 
-- rule: Handle mood lonely
+- rule: Bot creator
   steps:
-    - intent: mood_lonely
-    - action: utter_mood_lonely
+  - intent: bot_creator
+  - action: utter_bot_creator
 
-- rule: Handle mood tired
+- rule: Bot creation date
   steps:
-    - intent: mood_tired
-    - action: utter_mood_tired
+  - intent: bot_creation_date
+  - action: utter_bot_creation_date
 
-- rule: Handle mood scared
+- rule: Bot version
   steps:
-    - intent: mood_scared
-    - action: utter_mood_scared
+  - intent: bot_version
+  - action: utter_bot_version
 
-- rule: Handle type weather
+- rule: Bot purpose
   steps:
-    - intent: type_weather
-    - action: utter_type_weather
+  - intent: bot_purpose
+  - action: utter_bot_purpose
 
-- rule: Handle temperature weather
+- rule: Bot capabilities
   steps:
-    - intent: temperature_weather
-    - action: utter_temperature_weather
+  - intent: bot_capabilities
+  - action: utter_bot_capabilities
 
-- rule: Handle ask forecast weather
+- rule: Bot personal info
   steps:
-    - intent: ask_forecast_weather
-    - action: utter_ask_forecast_weather
+  - intent: bot_personal_info
+  - action: utter_bot_personal_info
+
+- rule: Bot name
+  steps:
+  - intent: bot_name
+  - action: utter_bot_name
+
+- rule: Computer science fields
+  steps:
+  - intent: computer_science_fields
+  - action: utter_computer_science_fields
+
+- rule: Management fields
+  steps:
+  - intent: management_fields
+  - action: utter_management_fields
+
+- rule: Literature fields
+  steps:
+  - intent: literature_fields
+  - action: utter_literature_fields
+
+- rule: Mood happy
+  steps:
+  - intent: mood_happy
+  - action: utter_mood_happy
+
+- rule: Mood angry
+  steps:
+  - intent: mood_angry
+  - action: utter_mood_angry
+
+- rule: Mood scared
+  steps:
+  - intent: mood_scared
+  - action: utter_mood_scared
+
+- rule: Mood nervous
+  steps:
+  - intent: mood_nervous
+  - action: utter_mood_nervous
+
+- rule: Mood bored
+  steps:
+  - intent: mood_bored
+  - action: utter_mood_bored
+
+- rule: Mood excited
+  steps:
+  - intent: mood_excited
+  - action: utter_mood_excited
+
+- rule: Mood lonely
+  steps:
+  - intent: mood_lonely
+  - action: utter_mood_lonely
+
+- rule: Mood tired
+  steps:
+  - intent: mood_tired
+  - action: utter_mood_tired
+
+- rule: Type weather
+  steps:
+  - intent: type_weather
+  - action: utter_type_weather
+
+- rule: Temperature weather
+  steps:
+  - intent: temperature_weather
+  - action: utter_temperature_weather
+
+- rule: Ask forecast weather
+  steps:
+  - intent: ask_forecast_weather
+  - action: utter_ask_forecast_weather
 
 - rule: Inquire courses
   steps:
-    - intent: inquire_courses
-    - action: utter_ask_school_name
+  - intent: inquire_courses
+  - action: utter_inquire_courses
 
-- rule: Inform school
+- rule: Inform
   steps:
-    - intent: inform
-    - action: action_fetch_courses
+  - intent: inform
+  - action: utter_inform
 
-- rule: Perform web search
+- rule: Search online
   steps:
-    - intent: search_online
-    - action: action_web_search
+  - intent: search_online
+  - action: utter_search_online
+
+- rule: Ask program details
+  steps:
+  - intent: ask_program_details
+  - action: utter_ask_program_details
+
+- rule: Ask program types
+  steps:
+  - intent: ask_program_types
+  - action: utter_ask_program_types
+
+- rule: Ask application procedure
+  steps:
+  - intent: ask_application_procedure
+  - action: utter_ask_application_procedure
+
+- rule: Ask fee structure
+  steps:
+  - intent: ask_fee_structure
+  - action: utter_ask_fee_structure
+
+- rule: Ask contact information
+  steps:
+  - intent: ask_contact_information
+  - action: utter_ask_contact_information
+
+- rule: Ask general information
+  steps:
+  - intent: ask_general_information
+  - action: utter_ask_general_information
+
+- rule: Ask university management
+  steps:
+  - intent: ask_university_management
+  - action: utter_ask_university_management
+
+- rule: Ask university council
+  steps:
+  - intent: ask_university_council
+  - action: utter_ask_university_council
+
+- rule: Ask joining instructions
+  steps:
+  - intent: ask_joining_instructions
+  - action: utter_ask_joining_instructions
+
+- rule: Ask programs
+  steps:
+  - intent: ask_programs
+  - action: utter_ask_programs
+
+- rule: Ask education style
+  steps:
+  - intent: ask_education_style
+  - action: utter_ask_education_style
+
+- rule: Ask campuses
+  steps:
+  - intent: ask_campuses
+  - action: utter_ask_campuses
+
+- rule: Ask directions
+  steps:
+  - intent: ask_directions
+  - action: utter_ask_directions
+
+- rule: Ask latest news
+  steps:
+  - intent: ask_latest_news
+  - action: utter_ask_latest_news
+
+- rule: Ask trending school
+  steps:
+  - intent: ask_trending_school
+  - action: utter_ask_trending_school
+
+- rule: Ask known hotels
+  steps:
+  - intent: ask_known_hotels
+  - action: utter_ask_known_hotels
+
+- rule: Ask known student dwellings
+  steps:
+  - intent: ask_known_student_dwellings
+  - action: utter_ask_known_student_dwellings
+
+- rule: Ask university hostels
+  steps:
+  - intent: ask_university_hostels
+  - action: utter_ask_university_hostels
+
+- rule: Ask most loved school
+  steps:
+  - intent: ask_most_loved_school
+  - action: utter_ask_most_loved_school
+
+- rule: Ask most handsome men school
+  steps:
+  - intent: ask_most_handsome_men_school
+  - action: utter_ask_most_handsome_men_school
+
+- rule: Ask most beautiful girls school
+  steps:
+  - intent: ask_most_beautiful_girls_school
+  - action: utter_ask_most_beautiful_girls_school
+
+- rule: Ask community around Maseno
+  steps:
+  - intent: ask_community_around_maseno
+  - action: utter_ask_community_around_maseno
+
+- rule: Ask tribes around Maseno
+  steps:
+  - intent: ask_tribes_around_maseno
+  - action: utter_ask_tribes_around_maseno
+
+- rule: Ask best dishes hotels
+  steps:
+  - intent: ask_best_dishes_hotels
+  - action: utter_ask_best_dishes_hotels
+
+- rule: Ask clubs around Maseno
+  steps:
+  - intent: ask_clubs_around_maseno
+  - action: utter_ask_clubs_around_maseno
+
+- rule: Ask alumni network
+  steps:
+  - intent: ask_alumni_network
+  - action: utter_ask_alumni_network
+
+- rule: Ask library services
+  steps:
+  - intent: ask_library_services
+  - action: utter_ask_library_services
+
+- rule: Ask career services
+  steps:
+  - intent: ask_career_services
+  - action: utter_ask_career_services
+
+- rule: Ask clubs and organizations
+  steps:
+  - intent: ask_clubs_and_organizations
+  - action: utter_ask_clubs_and_organizations
+
+- rule: Ask health services
+  steps:
+  - intent: ask_health_services
+  - action: utter_ask_health_services
+
+- rule: Ask scholarship application
+  steps:
+  - intent: ask_scholarship_application
+  - action: utter_ask_scholarship_application
+
+- rule: Ask exchange programs
+  steps:
+  - intent: ask_exchange_programs
+  - action: utter_ask_exchange_programs
+
+- rule: Ask academic calendar
+  steps:
+  - intent: ask_academic_calendar
+  - action: utter_ask_academic_calendar
