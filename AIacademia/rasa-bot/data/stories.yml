@@ -1,30 +1,127 @@
 version: "3.1"
 
 stories:
+- story: Start session
+  steps:
+    - intent: start_session
+    - action: action_session_start
+    - action: utter_welcome_message
+
+- story: greet user
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- story: handle affirmation
+  steps:
+    - intent: affirm
+    - action: utter_affirm
+
+- story: handle denial
+  steps:
+    - intent: deny
+    - action: utter_deny
+
+- story: handle help
+  steps:
+    - intent: did_that_help
+    - action: utter_did_that_help
 
 - story: happy path
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+    - intent: greet
+    - action: utter_greet
+    - intent: mood_great
+    - action: utter_mood_great
 
 - story: sad path 1
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+    - intent: greet
+    - action: utter_greet
+    - intent: mood_unhappy
+    - action: utter_mood_unhappy
+    - action: utter_cheer_up
+    - intent: affirm
+    - action: utter_happy
 
 - story: sad path 2
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+    - intent: greet
+    - action: utter_greet
+    - intent: mood_unhappy
+    - action: utter_mood_unhappy
+    - action: utter_cheer_up
+    - intent: deny
+    - action: utter_goodbye
+
+- story: course inquiry - computer science
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: Computer_Science_Courses
+    - action: utter_computer_science_courses
+
+- story: course inquiry - management
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: Management_Courses
+    - action: utter_management_courses
+
+- story: literature course path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: Literature_Courses
+    - action: utter_literature_courses
+
+- story: checking the weather
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_forecast_weather
+    - action: utter_ask_forecast_weather
+
+- story: mood happy reaction
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: mood_happy
+    - action: utter_mood_happy
+
+- story: mood angry handling
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: mood_angry
+    - action: utter_mood_angry
+
+- story: feeling nervous path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: mood_nervous
+    - action: utter_mood_nervous
+    - intent: affirm
+    - action: utter_relax_suggestion
+
+- story: unexpected bot challenge
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: bot_challenge
+    - action: utter_bot_challenge
+
+- story: fetch courses for a school
+  steps:
+    - intent: inquire_courses
+    - action: utter_ask_school_name
+    - intent: inform
+      entities:
+        - school_name: "Computing and Informatics"
+    - action: action_fetch_courses
+
+- story: perform web search
+  steps:
+    - intent: search_online
+    - action: action_web_search

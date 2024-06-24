@@ -8,27 +8,123 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - Computer_Science_Courses
+  - Management_Courses
+  - Literature_Courses
+  - mood_happy
+  - mood_angry
+  - mood_scared
+  - mood_nervous
+  - mood_bored
+  - mood_excited
+  - mood_lonely
+  - mood_tired
+  - type_weather
+  - temperature_weather
+  - ask_forecast_weather
+  - inquire_courses
+  - inform
+  - start_session
+  - keep_alive
+  - did_that_help
+  - search_online
+
+entities:
+  - school_name
+
+actions:
+  - action_fetch_courses
+  - action_session_start
+  - action_keep_alive
+  - action_fetch_course
+  - action_web_search
+
+slots:
+  school_name:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: school_name
 
 responses:
+  utter_welcome_message:
+    - text: "Welcome! How can I help you today?"
+
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
+    - text: "Hello! How can I assist you?"
 
   utter_goodbye:
-  - text: "Bye"
+    - text: "Goodbye! Have a great day!"
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_bot_challenge:
+    - text: "I am a bot, here to assist you with your inquiries."
 
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  utter_did_that_help:
+    - text: "Did that help?"
+
+  utter_affirm:
+    - text: "Glad to hear that!"
+
+  utter_deny:
+    - text: "I'm sorry to hear that. How can I help further?"
+
+  utter_ask_school_name:
+    - text: "Please specify the school you're interested in."
+
+  utter_mood_great:
+    - text: "That's wonderful to hear!"
+
+  utter_mood_unhappy:
+    - text: "I'm sorry you're feeling down. How can I help?"
+
+  utter_cheer_up:
+    - text: "Here's a joke to cheer you up: Why don't scientists trust atoms? Because they make up everything!"
+
+  utter_happy:
+    - text: "That's great to hear!"
+
+  utter_computer_science_courses:
+    - text: "Here are some Computer Science courses: Python Programming, Java Programming, Data Science."
+
+  utter_management_courses:
+    - text: "Here are some Management courses: Finance, Marketing, Human Resource Management."
+
+  utter_literature_courses:
+    - text: "Here are some Literature courses: English Literature, French Literature, German Literature."
+
+  utter_ask_forecast_weather:
+    - text: "Today's weather is mostly sunny with a few clouds."
+
+  utter_mood_happy:
+    - text: "I'm glad to hear you're happy!"
+
+  utter_mood_angry:
+    - text: "I understand how you feel. Let's try to find a solution together."
+
+  utter_mood_nervous:
+    - text: "It's okay to feel nervous sometimes. Try to take deep breaths."
+
+  utter_relax_suggestion:
+    - text: "Try to relax by taking deep breaths and focusing on something positive."
+
+  utter_mood_bored:
+    - text: "Maybe you can try a new hobby or read a book to pass the time."
+
+  utter_mood_excited:
+    - text: "That's exciting! What's making you feel this way?"
+
+  utter_mood_lonely:
+    - text: "Loneliness can be tough. Try reaching out to a friend or family member."
+
+  utter_mood_tired:
+    - text: "It sounds like you need some rest. Make sure to take care of yourself."
+
+  utter_mood_scared:
+    - text: "It's normal to feel scared sometimes. Try to stay calm and take things one step at a time."
+
+  utter_type_weather:
+    - text: "Today's weather is mostly sunny with a few clouds."
+
+  utter_temperature_weather:
+    - text: "The temperature today is around 25 degrees Celsius."

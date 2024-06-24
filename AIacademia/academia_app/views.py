@@ -54,7 +54,6 @@ from keras.models import Sequential
 
 
 
-
 starttime = time.time()
 from python_scripts.lazyloader import lazy_load_model_with_cache
 timetoimport = time.time()
@@ -67,8 +66,8 @@ timetoload= time.time()
 print(f"loader the model and cached it in {timetoload - timetoimport} secs") 
 
 
-logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-# logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+# logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+logging.basicConfig(filename=r'C:\Users\user\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 
@@ -77,7 +76,7 @@ from .models import (Attendance, BaseUser, Course, Message, Performance,
                      Recommender_training_data, School, StudentUser,
                      UserProfile, ProbabilityDataTable)
 
-logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+# logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log', level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
@@ -190,8 +189,8 @@ def recommend_courses(request):
         return render(request, 'academia_app/recommended_courses.html')       
 
             
-logger = logging.getLogger(__name__)        
-        
+logger = logging.getLogger(__name__)
+
 def predict_probability(request, student_id=3): 
     try: 
 
@@ -201,8 +200,8 @@ def predict_probability(request, student_id=3):
         model = joblib.load(model_path)
 
         logging.info('Probability model proacted_prob_model2 loaded') 
+
         student_data = StudentUser.objects.get(id=student_id) 
-        lessonsattended = student_data.Lessons_Attended
         aggrpoints = student_data.Aggregate_points
         pcnt_of_lessons_attended = student_data.pcnt_of_lessons_attended 
         homework_submission_rates = student_data.homework_submission_rates
