@@ -7,12 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Recommendation</title>
     <link rel="stylesheet" href="{% static 'css/course_recomm_styles.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.137.5/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
+
 </head>
 <body>
     <div class="container">
         <div class="left-panel">
             <h1>Welcome to the Course Selection Assistant</h1>
             <p>This side will provide guidance and additional information as you fill out the form.</p>
+            <div id="3d-avatar">
+
+                <p id="avatar-message" class="avatar-message">Welcome message here</p>
+
+                
+            </div>
+
         </div>
         <div class="right-panel">
             <form data-url="{% url 'recommend_courses' %}" id="course-recommendation-form" action="{% url 'recommend_courses' %}" method="POST">

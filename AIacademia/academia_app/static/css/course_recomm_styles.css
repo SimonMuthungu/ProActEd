@@ -13,6 +13,14 @@ body, html {
 .left-panel, .right-panel {
     flex: 1;
     padding: 20px;
+    flex: 1;
+    background-color: #32325d; /* Deep blue */
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center; /* Centers children horizontally */
+    overflow: hidden; /* Prevents children from overflowing */
 }
 
 .left-panel {
@@ -230,4 +238,27 @@ textarea#additionalInfo:focus {
     border-color: #0056b3; /* Changes the border color on focus */
     box-shadow: inset 0 2px 4px rgba(0,0,0,0.2); /* Changes the shadow on focus */
     outline: none; /* Removes the default focus outline */
+}
+
+#3d-avatar {
+    width: 350px; /* Adjusted width */
+    height: 350px; /* Adjusted height */
+    position: relative;
+    margin: 10px auto; /* Center in the left-panel */
+    border: 1px solid #ccc; /* Just to see the boundary */
+}
+
+#3d-avatar canvas {
+    width: 100%; /* Full width of the parent */
+    height: 100%; /* Full height of the parent */
+    display: block; /* Removes bottom margin/gap */
+}
+
+
+.avatar-message {
+    color: #fff; /* White text color */
+    background-color: #32325d; /* Matching deep blue background */
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 8px;
 }

@@ -18828,3 +18828,107 @@ WARNING || 23-Jun-24 23:12:53 || Not Found: /ws/academia_app/
 WARNING || 23-Jun-24 23:13:38 || Not Found: /ws/academia_app/
 WARNING || 23-Jun-24 23:19:27 || 5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000026872ADC2C0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
 WARNING || 23-Jun-24 23:19:29 || Not Found: /ws/academia_app/
+INFO || 23-Jun-24 23:40:53 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 23-Jun-24 23:40:53 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 23-Jun-24 23:40:54 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 23-Jun-24 23:40:54 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 23-Jun-24 23:40:54 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 23-Jun-24 23:40:55 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 23-Jun-24 23:40:55 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 23-Jun-24 23:40:56 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 23-Jun-24 23:40:57 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 23-Jun-24 23:40:57 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6148
+INFO || 23-Jun-24 23:40:57 || Use pytorch device_name: cpu
+WARNING || 23-Jun-24 23:41:44 || Not Found: /favicon.ico
+WARNING || 23-Jun-24 23:42:56 || Not Found: /favicon.ico
+WARNING || 23-Jun-24 23:44:25 || Not Found: /favicon.ico
+WARNING || 23-Jun-24 23:44:46 || Not Found: /favicon.ico
+WARNING || 23-Jun-24 23:44:48 || Not Found: /favicon.ico
+WARNING || 23-Jun-24 23:45:52 || Not Found: /favicon.ico
+WARNING || 23-Jun-24 23:48:36 || Not Found: /favicon.ico
+WARNING || 23-Jun-24 23:52:02 || Not Found: /favicon.ico
+WARNING || 23-Jun-24 23:53:53 || Not Found: /favicon.ico
+WARNING || 23-Jun-24 23:55:40 || Not Found: /favicon.ico
+WARNING || 23-Jun-24 23:55:55 || Not Found: /favicon.ico
+WARNING || 23-Jun-24 23:57:49 || Not Found: /favicon.ico
+WARNING || 23-Jun-24 23:59:48 || Not Found: /favicon.ico
+WARNING || 23-Jun-24 23:59:59 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:00:03 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:00:21 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:00:56 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:02:18 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:02:25 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:04:04 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:04:38 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:04:45 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:10:33 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:13:06 || Not Found: /course_recommendation/AIacademia/academia_app/static/avatars/6678727b5b9b62b38a2bcae8.glb
+WARNING || 24-Jun-24 00:13:07 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:14:38 || Not Found: /course_recommendation/AIacademia/academia_app/static/avatars/6678727b5b9b62b38a2bcae8.glb
+WARNING || 24-Jun-24 00:14:40 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:15:53 || Not Found: /course_recommendation/AIacademia/academia_app/static/avatars/6678727b5b9b62b38a2bcae8.glb
+WARNING || 24-Jun-24 00:16:00 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:16:05 || Not Found: /course_recommendation/AIacademia/academia_app/static/avatars/6678727b5b9b62b38a2bcae8.glb
+WARNING || 24-Jun-24 00:16:05 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:17:43 || Not Found: /course_recommendation/AIacademia/academia_app/static/avatars/6678727b5b9b62b38a2bcae8.glb
+WARNING || 24-Jun-24 00:17:43 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:19:14 || Not Found: /course_recommendation/AIacademia/academia_app/static/avatars/6678727b5b9b62b38a2bcae8.glb
+WARNING || 24-Jun-24 00:19:14 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:19:56 || Not Found: /course_recommendation/static/avatars/6678727b5b9b62b38a2bcae8.glb
+WARNING || 24-Jun-24 00:19:56 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:21:52 || Not Found: /avatars/6678727b5b9b62b38a2bcae8.glb
+WARNING || 24-Jun-24 00:21:53 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:22:15 || Not Found: /avatars/6678727b5b9b62b38a2bcae8.glb
+WARNING || 24-Jun-24 00:22:16 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:27:45 || Not Found: /course_recommendation/avatars/6678727b5b9b62b38a2bcae8.glb
+WARNING || 24-Jun-24 00:27:50 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:34:20 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:38:19 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:39:08 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:44:31 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:45:29 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:45:41 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:48:06 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:48:10 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:51:03 || Not Found: /favicon.ico
+INFO || 24-Jun-24 00:51:27 || S-Bert 2024 Recommender Engine Initialized
+INFO || 24-Jun-24 00:51:30 || Time taken by sbert model: 2.519165515899658
+INFO || 24-Jun-24 00:51:30 || Recommender system has run
+WARNING || 24-Jun-24 00:52:01 || Not Found: /ws/academia_app/
+WARNING || 24-Jun-24 00:55:03 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:55:17 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 00:58:06 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 01:00:49 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 01:01:21 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 01:01:46 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 01:02:27 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 01:08:00 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 01:14:22 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 01:17:21 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 01:31:43 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 01:54:15 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 01:59:23 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 01:59:44 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 01:59:54 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 02:01:09 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 02:01:29 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 02:03:02 || Not Found: /favicon.ico
+INFO || 24-Jun-24 02:03:53 || S-Bert 2024 Recommender Engine Initialized
+INFO || 24-Jun-24 02:03:54 || Time taken by sbert model: 0.4844982624053955
+INFO || 24-Jun-24 02:03:54 || Recommender system has run
+WARNING || 24-Jun-24 02:04:53 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 02:05:20 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 02:14:48 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 02:15:29 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 02:16:34 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 02:23:12 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 02:23:36 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 02:23:53 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 02:24:10 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 02:24:24 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 02:24:32 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 02:24:43 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 02:24:54 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 02:26:20 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 02:32:37 || Not Found: /favicon.ico
+WARNING || 24-Jun-24 02:32:54 || Not Found: /favicon.ico
