@@ -231,3 +231,113 @@ textarea#additionalInfo:focus {
     box-shadow: inset 0 2px 4px rgba(0,0,0,0.2); /* Changes the shadow on focus */
     outline: none; /* Removes the default focus outline */
 }
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/*.chat-avatar {
+    width: 60px;
+    height: 60px;
+    background: url("{% static 'avatars/excited.png' %}") no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}*/
+
+.chat-widget {
+    width: 300px;
+    height: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 90px;
+    left: 20px;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-title {
+    font-size: 16px;
+}
+
+.chat-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto; /* Add scroll feature for longer conversations */
+    display: flex;
+    flex-direction: column; /* Ensure messages stack vertically */
+}
+
+.chat-footer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+}
+
+.chat-send {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ .chat-message {
+    margin: 10px 0; /* Add margin to separate chat messages */
+    padding: 10px;
+    border-radius: 10px;
+    display: flex; /* Use flexbox for message alignment */
+    align-items: center;
+}
+
+.bot-message {
+    background:  #32325d;
+    align-self: flex-start;
+}
+
+.user-message {
+    background: #007bff;
+    color: white;
+    align-self: flex-end;
+}
+
+.chat-timestamp {
+    font-size: 12px; /* Smaller font size for timestamp */
+    color: #aaa; /* Grey color for timestamp */
+    margin-left: 10px; /* Space between message and timestamp */
+}

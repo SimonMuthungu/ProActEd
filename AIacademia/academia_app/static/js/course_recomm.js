@@ -1,4 +1,118 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const chatAvatar = document.getElementById('chatAvatar');
+    const chatWidget = document.getElementById('chatWidget');
+    const chatClose = document.getElementById('chatClose');
+    const chatSend = document.getElementById('chatSend');
+    const chatInput = document.getElementById('chatInput');
+    const chatBody = document.getElementById('chatBody');
+
+    // Generate a unique conversation ID and store it in sessionStorage
+    if (!sessionStorage.getItem('conversation_id')) {
+        sessionStorage.setItem('conversation_id', 'user-' + new Date().getTime());
+    }
+    const conversationId = sessionStorage.getItem('conversation_id');
+
+    chatAvatar.addEventListener('click', function() {
+        chatWidget.style.display = 'flex';
+    });
+
+    chatClose.addEventListener('click', function() {
+        chatWidget.style.display = 'none';
+    });
+
+    chatSend.addEventListener('click', function() {
+        sendMessage();
+    });
+
+    chatInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            sendMessage();
+        }
+    });
+
+    function sendMessage() {
+        const message = chatInput.value.trim();
+        if (message) {
+            var li = document.createElement('div');
+            li.classList.add('chat-message', 'user-message');
+            var userAvatar = document.createElement('div');
+            userAvatar.classList.add('chat-avatar-small');
+            var messageDiv = document.createElement('div');
+            messageDiv.textContent = message;
+            var timestamp = document.createElement('div');
+            timestamp.className = 'chat-timestamp';
+            timestamp.textContent = new Date().toLocaleTimeString();
+            li.appendChild(messageDiv);
+            li.appendChild(timestamp);
+            chatBody.appendChild(li);
+            chatInput.value = '';
+
+            // Send message to the Rasa server
+            fetch('http://localhost:5005/webhooks/rest/webhook', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ sender: conversationId, message: message })
+            }).then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Failed to fetch: ' + response.statusText);
+                }
+            }).then(data => {
+                console.log("Received data:", data);  // Log the data received
+                data.forEach(msg => {
+                    var li = document.createElement('div');
+                    var botAvatar = document.createElement('div');
+                    botAvatar.classList.add('chat-avatar-small');
+                    var messageDiv = document.createElement('div');
+                    messageDiv.textContent = msg.text;
+                    var timestamp = document.createElement('div');
+                    timestamp.className = 'chat-timestamp';
+                    timestamp.textContent = new Date().toLocaleTimeString();
+                    li.classList.add('chat-message', 'bot-message');
+                    li.appendChild(botAvatar);
+                    li.appendChild(messageDiv);
+                    li.appendChild(timestamp);
+                    chatBody.appendChild(li);
+                    chatBody.scrollTop = chatBody.scrollHeight;  // Scroll to bottom
+                });
+            }).catch(error => {
+                console.error('Error:', error);
+            });
+
+            chatBody.scrollTop = chatBody.scrollHeight;  // Scroll to bottom
+        }
+    }
+
+    // Reset session expiration on user activity
+    document.addEventListener('mousemove', () => {
+        sessionStorage.setItem('last_interaction', new Date().getTime());
+    });
+    document.addEventListener('keypress', () => {
+        sessionStorage.setItem('last_interaction', new Date().getTime());
+    });
+
+    // Check if the session should be renewed
+    setInterval(() => {
+        const lastInteraction = sessionStorage.getItem('last_interaction');
+        const now = new Date().getTime();
+        const tenMinutes = 10 * 60 * 1000;
+
+        if (now - lastInteraction > tenMinutes) {
+            sendMessage('/keep_alive');
+        }
+    }, 60000); // Check every minute
+
+
+
+
+
+
+
+    
     const form = document.getElementById('course-recommendation-form');
     const steps = document.querySelectorAll('.form-step');
     const nextButtons = document.querySelectorAll('.next-btn');
