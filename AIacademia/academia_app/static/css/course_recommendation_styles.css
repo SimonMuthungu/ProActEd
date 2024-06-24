@@ -270,3 +270,45 @@ textarea {
 #next-tutorial, #cancel-tutorial {
     display: none;
 }
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+
+.button-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust the space between buttons */
+}
+
+.interest-button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.interest-button[aria-pressed="true"] {
+    background-color: #007BFF; /* Active state color */
+    color: white;
+}
+
+.interest-button:focus {
+    outline: none;
+}
+
+.next-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

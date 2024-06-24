@@ -1,0 +1,115 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Recommendation</title>
+    <link rel="stylesheet" href="{% static 'css/course_recomm_styles.css' %}">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .chat-avatar {
+            width: 60px;
+            height: 60px;
+            background: url("{% static 'avatars/excited.png' %}") no-repeat center center;
+            background-size: cover;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .chat-avatar-small {
+            width: 30px; /* Small avatar size */
+            height: 30px;
+            background: url("{% static 'avatars/excited.png' %}") no-repeat center center;
+            background-size: cover;
+            border-radius: 50%;
+            margin-right: 10px; /* Space between avatar and message */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h1>Welcome to the Course Selection Assistant</h1>
+            <p>This side will provide guidance and additional information as you fill out the form.</p>
+
+            <div class="chat-avatar" id="chatAvatar"></div>
+            <div class="chat-widget" id="chatWidget">
+                <div class="chat-header">
+                    <span class="chat-title">Chat with Us</span>
+                    <button class="chat-close" id="chatClose">&times;</button>
+                </div>
+                <div class="chat-body" id="chatBody">
+                    <div class="chat-message bot-message">
+                        <div class="chat-avatar-small"></div>
+                        <div>
+                            <div>Hey! How can I help you today?</div>
+                            <div class="chat-timestamp">5:58 AM</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-footer">
+                    <textarea class="chat-input" id="chatInput" placeholder="Type your message..."></textarea>
+                    <button class="chat-send" id="chatSend"><i class='bx bx-send'></i></button>
+                </div>
+            </div>
+
+        </div>
+        <div class="right-panel">
+            <form data-url="{% url 'recommend_courses' %}" id="course-recommendation-form" action="{% url 'recommend_courses' %}" method="POST">
+                {% csrf_token %}
+                <!-- Step 1: Interests -->
+                <div id="step1" class="form-step active">
+                    <h2>Select Your Interests</h2>
+                    <div class="button-grid">
+                        {% for interest in interests %}
+                        <button type="button" class="interest-button" data-value="{{ interest }}" aria-pressed="false" onclick="toggleInterest('{{ interest.id }}')">
+                            {{ interest.name }}
+                        </button>
+                        <input type="hidden" name="interests[]" id="interest_{{ interest }}" value="">
+                        {% endfor %}
+                    </div>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+                <!-- Step 2: Additional Info -->
+                <div id="step2" class="form-step">
+                    <h2>Tell Us More About Yourself</h2>
+                    <textarea id="additionalInfo" name="additionalInfo" placeholder="E.g. I love music and art. Music is my passion. Since I was a child, I've always produced music and video entertainment. It makes me feel alive, that life is worth living. I also love media and video production"></textarea>
+                    <button type="button" class="next-btn">Next</button>
+                    <button type="button" class="back-btn">Back</button>
+                </div>
+                <!-- Step 3: Subjects -->
+                <div id="step3" class="form-step">
+                    <h2>Select Subjects You Excelled At</h2>
+                    <div class="button-grid">
+                        {% for subject in subjects %}
+                        <button type="button" class="subject-button" data-value="{{ subject }}" aria-pressed="false">
+                            {{ subject.name }}
+                        </button>
+                        <input type="hidden" id="input_subject_{{ subject }}" name="subjects[]" value="">
+                        {% endfor %}
+
+                    </div>
+                    <button type="submit" class="submit">Recommend Courses For Me Now!</button>
+                    <button type="button" class="back-btn">Back</button>
+                </div>
+            </form>
+            <!-- Recommendations Display Area -->
+            <div id="recommendations-area" style="display:none;">
+                <h2>Recommended Courses for You:</h2>
+                <ul class="courses-list">
+                    <!-- Recommendations will be inserted here -->
+                </ul>
+                <button id="loginButton" class="login-btn" data-url="{% url 'login' %}">Login</button>
+                <br>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/course_recomm.js' %}"></script>
+</body>
+</html>
+

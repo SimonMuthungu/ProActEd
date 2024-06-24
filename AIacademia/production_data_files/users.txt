@@ -1,0 +1,89 @@
+Three group of users:
+Super Admins
+Staff Users
+Student Users
+
+user models available
+adminuser      ----------->>>> (Super Admins)
+studentuser    ----------->>>> (Student Users)
+superadminuser ----------->>>> (Super Admins) In more power than the Staff Users.
+
+
+baseuser       ----------->>>> Contains all users.
+baseusergroup  ----------->>> matching a baseuser to their group.
+
+customeruser   ----------->>>>  Should contain all users. empty though.
+customeruser_groups ------>>>>  is Empty.
+
+auth_group -----> contain all the groups.
+
+##There should be groups which is correct:
+1. Super Admins
+2. Staff Users
+3. Student Users
+
+
+To Do tasks.
+
+Logout button. ----✔
+In Staff Sidebar, what they can't do -->removed\toggeled off. -----✅✔
+Create sessions for all users logging in.--------- ✅
+Make urls  to different pages presentable like login..-----✅
+On the side bar, home button, return to home.
+The Profile section pull details from the baseuser  table details.
+The Student table fields should be moved to studentuser
+
+Staff Cannot
+Add highschoolsubject.
+Changeschool Subject.
+View highschoolsubject
+
+
+Icons on sidebar.
+Dashboard
+;<box-icon type='solid' name='dashboard'></box-icon>(webcomponent)
+;<i class='bx bxs-dashboard'></i>(font)
+
+Recommend
+<box-icon name='edit-alt' type='solid' ></box-icon>
+<i class='bx bxs-edit-alt' ></i>
+
+Intervention
+<box-icon type='solid' name='pointer'></box-icon>
+<i class='bx bxs-pointer'></i>
+
+User.
+<box-icon type='solid' name='user'></box-icon>
+<i class='bx bxs-user'></i>
+
+School and Courses
+<box-icon name='school' type='solid' ></box-icon>(Web component)
+<i class='bx bxs-school' ></i>(Font)
+
+Message
+<box-icon name='message' type='solid' ></box-icon>
+<i class='bx bxs-message' ></i>
+
+Settings
+<box-icon name='cog' type='solid' ></box-icon>
+<i class='bx bxs-cog' ></i>
+
+-adminuser_backup.json
+-attendance_backup.json
+-baseuser_backup.json
+-course_backup.json
+-courseofinterest_backup.json
+-feeinformation_backup.json
+-fieldofinterest_backup.json
+-highschoolsubject_backup.json
+-message_backup.json
+-performance_backup.json
+-probabilitydatatable_backup.json
+-recommender_training_data_backup.json
+-recommender_training_data_byte_vectors_backup.json
+-recommender_training_data_number_vectors_backup.json
+-recommender_training_data_tokenized_sentences_backup.json
+-recommendersbertvectors_backup.json
+-school_backup.json
+-superadminuser_backup.json
+-userprofile_backup.json
