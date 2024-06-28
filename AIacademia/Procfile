@@ -1,1 +1,1 @@
-web: gunicorn AIacademia.wsgi
+web: gunicorn AIacademia.wsgi:application --log-file -

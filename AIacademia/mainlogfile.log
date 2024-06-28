@@ -19958,3 +19958,65 @@ DEBUG || 24-Jun-24 10:36:08 || https://huggingface.co:443 "HEAD /sentence-transf
 DEBUG || 24-Jun-24 10:36:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
 DEBUG || 24-Jun-24 10:36:17 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6148
 DEBUG || 24-Jun-24 10:36:18 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6148
+WARNING || 24-Jun-24 10:37:50 || Not Found: /favicon.ico
+INFO || 24-Jun-24 13:12:39 || Use pytorch device_name: cpu
+INFO || 24-Jun-24 13:12:39 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 24-Jun-24 13:12:39 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 24-Jun-24 13:12:40 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 24-Jun-24 13:12:41 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 24-Jun-24 13:12:41 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 24-Jun-24 13:12:41 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 24-Jun-24 13:12:42 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 24-Jun-24 13:12:42 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 24-Jun-24 13:12:52 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 24-Jun-24 13:12:52 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6148
+DEBUG || 24-Jun-24 13:12:53 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6148
+WARNING || 24-Jun-24 13:22:37 || Not Found: /favicon.ico
+INFO || 28-Jun-24 08:30:44 || Use pytorch device_name: cpu
+INFO || 28-Jun-24 08:30:44 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 28-Jun-24 08:30:44 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 28-Jun-24 08:30:47 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 28-Jun-24 08:30:48 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 28-Jun-24 08:30:48 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 28-Jun-24 08:30:49 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 28-Jun-24 08:30:49 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 28-Jun-24 08:30:50 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 28-Jun-24 08:31:05 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 28-Jun-24 08:31:06 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6134
+DEBUG || 28-Jun-24 08:31:07 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6134
+WARNING || 28-Jun-24 08:44:05 || Not Found: /favicon.ico
+WARNING || 28-Jun-24 09:03:32 || Not Found: /favicon.ico
+WARNING || 28-Jun-24 09:11:47 || Not Found: /favicon.ico
+INFO || 28-Jun-24 09:15:05 || S-Bert 2024 Recommender Engine Initialized
+INFO || 28-Jun-24 09:15:07 || S-Bert 2024 Recommender Engine Initialized
+INFO || 28-Jun-24 09:15:09 || S-Bert 2024 Recommender Engine Initialized
+INFO || 28-Jun-24 09:15:09 || Time taken by sbert model: 1.6019437313079834
+CRITICAL || 28-Jun-24 09:15:09 || Something came up, please rerun the system...
+INFO || 28-Jun-24 09:15:10 || Recommender system has run
+ERROR || 28-Jun-24 09:15:22 || Internal Server Error: /recommend_courses/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 173, in recommend_courses
+    sbert_recommendations = sbert_proactedrecomm2024(sbert_model, user_description_about_interests, user_activities_enjoyed)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\python_scripts\sbert_recommender.py", line 80, in sbert_proactedrecomm2024
+    return top_course_names
+UnboundLocalError: local variable 'top_course_names' referenced before assignment
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\views.py", line 184, in recommend_courses
+    return JsonResponse('an error occured')
+  File "C:\Users\user\Desktop\ProActEd\AIvenv\lib\site-packages\django\http\response.py", line 726, in __init__
+    raise TypeError(
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+INFO || 28-Jun-24 09:16:32 || Time taken by sbert model: 87.65927410125732
+INFO || 28-Jun-24 09:16:32 || Recommender system has run
+INFO || 28-Jun-24 09:16:33 || Time taken by sbert model: 83.70554566383362
+INFO || 28-Jun-24 09:16:33 || Recommender system has run
+INFO || 28-Jun-24 09:25:30 || S-Bert 2024 Recommender Engine Initialized
+INFO || 28-Jun-24 09:25:31 || Time taken by sbert model: 1.3463218212127686
+INFO || 28-Jun-24 09:25:31 || Recommender system has run
