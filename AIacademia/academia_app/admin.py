@@ -3,12 +3,23 @@ from django.contrib import admin
 from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import Group
-
+from .models import UserProfile
 from .models import (AdminUserProxy, Attendance, Course, CourseOfInterest,
                      FeeInformation, FieldOfInterest, HighSchoolSubject,
-                     Performance, School, Student, StudentUserProxy,
-                     SuperAdminUserProxy)
+                     Performance, School, StudentUserProxy, SuperAdminUserProxy, StudentUser)
 
+#bentheaya added this form to be able to create a student, should be a temporary change until solution is found
+class StudentUserCreationForm(forms.ModelForm):
+    class Meta:
+        model = StudentUser
+        fields = '__all__'
+
+    def save(self, commit=True):
+        user = super().save(commit=False)
+        user.set_password('changeme')  # maintained the default password
+        if commit:
+            user.save()
+        return user
 
 # Custom form for creating new users
 class UserCreationForm(forms.ModelForm):
@@ -56,9 +67,7 @@ class CustomUserAdmin(BaseUserAdmin):
             user.groups.add(group)
             user.is_staff = 'Staff Users' in group_name or 'Super Admins' in group_name  # Grant admin access if staff or super admin
             user.save()
-        
-        
-        
+
 # Custom Admin for SuperAdminUser
 class SuperAdminUserAdmin(CustomUserAdmin):
     model = SuperAdminUserProxy
@@ -74,13 +83,47 @@ class AdminUserAdmin(CustomUserAdmin):
 # Custom Admin for StudentUser
 class StudentUserAdmin(CustomUserAdmin):
     model = StudentUserProxy
-    list_display = ('first_name', 'last_name','username', 'email')
-    list_filter = ()
+    add_form = StudentUserCreationForm
+    list_display = (
+        'username', 'email', 'first_name', 'last_name', 'is_staff', 
+        'student_field', 'name', 'registration_number', 'course', 
+        'school', 'graduation_probability', 'profile_picture'
+    )
+    search_fields = ('username', 'email', 'registration_number', 'name')
+    list_filter = ('course', 'school', 'is_staff', 'is_active')
+    fieldsets = (
+        (None, {'fields': ('username', 'password')}),
+        ('Personal info', {'fields': ('first_name', 'last_name', 'email')}),
+        ('Student Details', {'fields': ('student_field', 'name', 'registration_number', 'course', 'school', 'graduation_probability', 'profile_picture')}),
+        ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser', 'user_permissions')}),
+    )
+    add_fieldsets = (
+        (None, {
+            'classes': ('wide',),
+            'fields': ('username', 'email', 'first_name', 'last_name', 'student_field', 'name', 'registration_number', 'course', 'school', 'graduation_probability', 'profile_picture'),
+        }),
+    )
+    def save_model(self, request, obj, form, change):
+        super().save_model(request, obj, form, change)
+        if not change:  # If creating a new user
+            obj.set_password('changeme')  # Set default password
+            self.assign_user_to_group(obj)  # Assign user to group based on type
 
-# Registering the custom admin classes
-admin.site.register(SuperAdminUserProxy, SuperAdminUserAdmin)
-admin.site.register(AdminUserProxy, AdminUserAdmin)
-admin.site.register(StudentUserProxy, StudentUserAdmin)
+    def assign_user_to_group(self, user):
+        # Check the type of user and assign to group
+        group_name = ''
+        if isinstance(user, AdminUserProxy):
+            group_name = 'Staff Users'
+        elif isinstance(user, StudentUserProxy):
+            group_name = 'Student Users'
+        elif isinstance(user, SuperAdminUserProxy):
+            group_name = 'Super Admins'
+        
+        if group_name:
+            group, _ = Group.objects.get_or_create(name=group_name)
+            user.groups.add(group)
+            user.is_staff = 'Staff Users' in group_name or 'Super Admins' in group_name  # Grant admin access if staff or super admin
+            user.save()
 
 # Custom Admin classes for other models
 class SchoolAdmin(admin.ModelAdmin):
@@ -91,11 +134,6 @@ class CourseAdmin(admin.ModelAdmin):
     list_display = ('name', 'prefix', 'school', 'students_count')
     list_filter = ('school',)
     search_fields = ('name', 'prefix')
-
-class StudentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'registration_number', 'course', 'school', 'graduation_probability')
-    list_filter = ('course', 'school')
-    search_fields = ('name', 'registration_number')
 
 class FeeInformationAdmin(admin.ModelAdmin):
     list_display = ('student', 'semester', 'required_fees', 'fees_paid')
@@ -127,13 +165,18 @@ if Group in admin.site._registry:
     admin.site.unregister(Group)
 admin.site.register(Group, CustomGroupAdmin)
 
+# Registering the custom admin classes
+admin.site.register(SuperAdminUserProxy, SuperAdminUserAdmin)
+admin.site.register(AdminUserProxy, AdminUserAdmin)
+admin.site.register(StudentUserProxy, StudentUserAdmin)
+
 # Register other models
 admin.site.register(School, SchoolAdmin)
 admin.site.register(Course, CourseAdmin)
-admin.site.register(Student, StudentAdmin)
 admin.site.register(FeeInformation, FeeInformationAdmin)
 admin.site.register(Attendance, AttendanceAdmin)
 admin.site.register(Performance, PerformanceAdmin)
 admin.site.register(FieldOfInterest)
 admin.site.register(HighSchoolSubject)
 admin.site.register(CourseOfInterest)
+admin.site.register(UserProfile)

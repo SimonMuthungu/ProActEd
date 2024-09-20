@@ -1,0 +1,8 @@
+I need to create a logic that at anypoint a user is created or added 
+to the system such that their data, goes to the baseuser, they are to
+ be added to a group too, and before that I wnat to add a field to 
+ the baseuser table called role, which will be filled dynamically,
+  it data will depend on the group the user is in, StudentUser,
+  will have the role of Student User, SuperAdminUser, will have 
+  the role of Super Administrator, StaffUser will have the role
+   of Administrator

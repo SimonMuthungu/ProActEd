@@ -1,124 +1,183 @@
-body{
-    background-color: rgb(3, 1, 35);
+/* Updated CSS */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, #e6e6fa, #f5f5f5, #d3d3d3, #a8a8a8); 
+    text-align: center;
 }
 
-h1{
+.header {
+    background-color: #020225;
+    color: #FFDB58;
+    padding: 10px;
     text-align: center;
-    color: rgb(139, 98, 49);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 1000; 
+    overflow: hidden; 
 }
-h2{
+
+.header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 100%;
+    background: linear-gradient(to left, rgba(2, 2, 37, 0), rgba(2, 2, 37, 0.1));
+    z-index: 1;
+}
+
+.nav {
+    color: #0d0dd9;
+    text-align: end;
+}
+
+.header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: end;
+}
+
+.header h1 {
+    margin: 0;
+    flex-grow: 1;
     text-align: center;
-    color: rgb(139, 98, 49);
 }
 
 .footer {
-    background-color: #333;
-<<<<<<< HEAD
-    color: #fff;
-<<<<<<< HEAD
-    padding: 0;
-=======
-    padding: 20;
->>>>>>> a8aafc1f4e0b7897d2500120900e0786f14f61be
-=======
-    padding-top: 20px; 
-    padding-bottom: 10px; 
->>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
+    background-color: #020225;
+    color: #FFDB58;
+    padding: 5px 0;
     text-align: center;
-    color: white; 
-    font-size: 14px;
-    margin-top: 500px; 
-}
-.navbar {
-    background-color: #333; /* Set your desired background color */
+    margin-top: auto; /* Pushes footer to the bottom */
+    width: 100%;
+    position: relative; /* Ensure relative positioning for gradient pseudo-element */
 }
 
-.navbar a {
-    color: white; /* Set the text color for navbar links */
-    padding: 15px; /* Set the padding for navbar links */
-    text-decoration: none; /* Remove underline from links */
-}
-
-.navbar a:hover {
-    background-color: #555; /* Set the background color on hover */
-}
-
-.navbar-brand {
-    color: white; /* Set the text color for the brand/logo */
-}
-
-.navbar-toggler-icon {
-    background-color: white; /* Set the color for the toggler icon */
-}
-
-@media (max-width: 768px) {
-    .navbar-collapse {
-        background-color: #333; 
-    }
-
-    .navbar-collapse a {
-        color: white; 
-        padding: 10px; 
-    }
-
-    .navbar-collapse a:hover {
-        background-color: #555; 
-    }
-}
-
-
-<<<<<<< HEAD
-.hover-container:hover .options {
-    display: block;
+.footer:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px; /* Width of the gradient opacity area */
+    height: 100%;
+    background: linear-gradient(to left, rgba(2, 2, 37, 0), rgba(2, 2, 37, 0.1)); /* Gradient background */
+    z-index: 1; /* Ensure it's below the content */
 }
 
 .sidebar {
-<<<<<<< HEAD
-    height: 100%;
-    background-color: #f1f1f1;
-=======
-    height: 20%;
-    /* background-color: #12dfea; */
->>>>>>> a8aafc1f4e0b7897d2500120900e0786f14f61be
     width: 250px;
-    padding-top: 20px;
-    position :fixed;
-    top:0;
-<<<<<<< HEAD
-=======
-    bottom: 200px;
->>>>>>> a8aafc1f4e0b7897d2500120900e0786f14f61be
-    left:0;
-     z-index: 100;
-}
-.sidebar ul{
-    list-style-type: none;
-    padding:0;
+    background-color: #06063d;
+    padding: 20px 0;
+    position: fixed;
+    height: calc(100vh - 90px);
+    border-radius: 10px; 
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+    top: 90px; 
+    left: 0;
+    z-index: 100;
+    background: linear-gradient(to bottom, rgba(6, 6, 61, 1), rgba(6, 6, 61, 0.7));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     
 }
-<<<<<<< HEAD
-.sidebar ul li{
-    color: pink;
-    padding:8px 16px;
-    
+
+.sidebar ul {
+    list-style-type: none; /* Remove default list styling */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
-.sidebar ul li a {
-    text-decoration: none;
-    color: white;
-=======
+
 .sidebar ul li {
-    margin-bottom: 10px;
-    
+    margin-bottom: 20px; /* Space between each list item */
 }
-    
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
 
 .sidebar ul li a {
-    text-decoration: none;
-    color: rgb(57, 187, 242);
->>>>>>> a8aafc1f4e0b7897d2500120900e0786f14f61be
-   
-    
+    text-decoration: none; /* Remove underline from links */
+    color: rgb(57, 187, 242); 
+    padding: 15px 20px; /* Padding for each link */
+    display: flex; /* Make the link flex */
+    align-items: center; /* Center the icon and text vertically */
+    transition: transform 0.2s ease-in-out, background-color 0.2s, border 0.2s, box-shadow 0.2s; /* Smooth transition for effects */
+    border: 2px solid transparent; /* Initial transparent border */
+    border-radius: 15px; /* Rounded corners */
 }
-/* Add more specific styles for your content as needed */
-=======
->>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
+
+.sidebar ul li a i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 24px; /* Adjust icon size if necessary */
+}
+
+.sidebar ul li a:hover {
+    background-color: #686; /* Change background color on hover */
+    transform: scale(1.02); /* Enlarge the item */
+    animation: bounce 0.6s; /* Apply the bounce animation */
+    border: 2px solid #FFDB58; /* Add a border on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a slight shadow for a 3D effect */
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Make sidebar full width on small screens */
+        height: auto;
+        position: relative;
+    }
+    .sidebar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+
+.content {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    margin-top: 100px; 
+}
+
+.container {
+    width: 60%;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.error-message {
+    color: #ff0000;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Notification dot */
+#inbox-notification {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #007BFF;
+    border-radius: 50%;
+    display: none; /* Hidden by default */
+}

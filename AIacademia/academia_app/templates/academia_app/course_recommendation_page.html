@@ -1,272 +1,210 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/course_recommendation_styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <title>Course Recommendation</title>
-
-    <style>
-        /* Your inline CSS styles go here */
-        .header {
-            background-color: #f8f9fa;
-            padding: 10px;
-            text-align: right;
-        }
-        .login-button {
-            padding: 8px 15px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-        .login-button:hover {
-            background-color: #0056b3;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background-color:blue ;
-        }
-        h1{
-            background-color:white;
-            text-color: pink;
-        }
-        form{
-            text-color:pink;
-            background-color: white;
-            border-radius: 10px;
-        }
-        .section form {
-            background-color: white;
-        }
-
-    </style>
-
 </head>
 <body>
     <div class="header">
-        <a href="{% url 'login' %}" class="login-button">Login</a>
+        <img src="{% static 'academia_app/logo.png' %}" alt="proacted_Logo" class="custom-logo">
+        <h1 style="color: #FFDB58"> HELLO&#128075;, WELCOME!! </h1>
+        <nav>
+            <a href="{% url 'login' %}" class="login-button">Login</a>
+        </nav>
     </div>
-
-    <h1 size='Quick'>SELECT YOUR SUBJECTS</h1>
     <form action="{% url 'recommend_courses' %}" method="post">
         {% csrf_token %}
-        <label for="subject1">
-            <input type="checkbox" id="MATHEMATICS" name="subjects[]" value="MATHEMATICS"> MATHEMATICS
-        </label>
-        <br>
-        <label for="subject2">
-            <input type="checkbox" id="ENGLISH" name="subjects[]" value="ENGLISH"> ENGLISH
-        </label>
-        <br>
-        <label for="subject3">
-            <input type="checkbox" id="KISWAHILI" name="subjects[]" value="KISWAHILI"> KISWAHILI
-        </label>
-        <br>
-        <label for="subject4">
-            <input type="checkbox" id="CHEMISTRY" name="subjects[]" value="CHEMISTRY"> CHEMISTRY
-        </label>
-        <br>
-        <label for="subject5">
-            <input type="checkbox" id="BIOLOGY" name="subjects[]" value="BIOLOGY"> BIOLOGY
-        </label>
-        <br>
-        <label for="subject6">
-            <input type="checkbox" id="PHYSICS" name="subjects[]" value="PHYSICS"> PHYSICS
-        </label>
-        <br>
-        <label for="subject2">
-            <input type="checkbox" id="CRE" name="subjects[]" value="CRE"> C.R.E
-        </label>
-        <br>
-        <label for="subject3">
-            <input type="checkbox" id="HISTORY" name="subjects[]" value="HISTORY"> HISTORY
-        </label>
-        <br>
-        <label for="subject4">
-            <input type="checkbox" id="GEOGRAPHY" name="subjects[]" value="GEOGRAPHY"> GEOGRAPHY
-        </label>
-        <br>
-        <label for="subject5">
-            <input type="checkbox" id="AGRICULTURE" name="subjects[]" value="AGRICULTURE"> AGRICULTURE
-        </label>
-        <br>
-        <label for="subject6">
-            <input type="checkbox" id="BUSINESS" name="subjects[]" value="BUSINESS STUDIES"> BUSINESS STUDIES
-        </label>
-        <br>
-        <label for="subject2">
-            <input type="checkbox" id="COMPUTER" name="subjects[]" value="COMPUTER STUDIES"> COMPUTER STUDIES
-        </label>
-        <br>
-        <label for="subject3">
-            <input type="checkbox" id="HOME" name="subjects[]" value="HOME SCIENCE"> HOME SCIENCE
-        </label>
-        <br>
+        <section>
+            <h3>Please Select Us Your Interests:</h3>
 
-    <section>
-        <h2>SELECT YOUR INTERESTS</h2>
+            <div class="custom-checkbox-grid tutorial-step" data-step="1">
+                {% for interest in interests %}   
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="interest_{{ interest.id }}" name="interests[]" value="{{ interest.id }}">
+                    <label for="interest_{{ interest.id }}">{{ interest.name }}</label>
+                </div>
+                {% endfor %}
+            </div>
+                <h2 for="additionalInfo">Please tell us more about yourself and your interests:</h2><br>
+            <div class="text-area tutorial-step" data-step="2">
+                
+                <textarea id="additionalInfo" name="additionalInfo" placeholder="E.g. I love music and art. Music is my passion. Since I was a child, I've always produced music and video entertainment. It makes me feel alive, that life is worth living. I also love media and video production"></textarea>
+            </div>
 
-            <label for="subject1">
-                <input type="checkbox" id="POLITICS" name="interests[]" value="POLITICS"> POLITICS
-            </label>
-            <br>
-            <label for="subject2">
-                <input type="checkbox" id="SCIENCE" name="interests[]" value="SCIENCE"> SCIENCE
-            </label>
-            <br>
-            <label for="subject3">
-                <input type="checkbox" id="DESIGN" name="interests[]" value="DESIGN">DESIGN
-            </label>
-            <br>
-            <label for="subject4">
-                <input type="checkbox" id="ARTS" name="interests[]" value="ARTS"> ARTS
-            </label>
-            <br>
-            <label for="subject5">
-                <input type="checkbox" id="TEACHING" name="interests[]" value="TEACHING"> TEACHING
-            </label>
-            <br>
-            <label for="subject6">
-                <input type="checkbox" id="PUBLIC SPEAKING" name="interests[]" value="PUBLIC SPEAKING"> PUBLIC SPEAKING
-            </label>
-            <br>
-            <label for="subject2">
-                <input type="checkbox" id="READING" name="interests[]" value="READING"> READING
-            </label>
-            <br>
-            <label for="subject3">
-                <input type="checkbox" id="OUTDOOR ACTIVITIES" name="interests[]" value="OUTDOOR ACTIVITIES"> OUTDOOR ACTIVITIES
-            </label>
-            <br>
-            <label for="subject4">
-                <input type="checkbox" id="MUSIC" name="interests[]" value="MUSIC"> MUSIC
-            </label>
-            <br>
-            <label for="subject5">
-                <input type="checkbox" id="ARTS AND CREATIVITY" name="interests[]" value="ART AND CREATIVITY Science">ART AND CREATIVITY
-            </label>
-            <br>
-            <label for="subject6">
-                <input type="checkbox" id="GARDENING" name="interests[]" value="GARDENING"> GARDENING
-            </label>
-            <br>
-            <label for="subject2">
-                <input type="checkbox" id="GAMING" name="interests[]" value="GAMING"> GAMING
-            </label>
-            <br>
-            <label for="subject3">
-                <input type="checkbox" id="WRITING" name="interests[]" value="WRITING"> WRITING
-            </label>
-            <br>
-            <label for="subject1">
-                <input type="checkbox" id="TRAVELLING" name="interests[]" value="TRAVELLING"> TRAVELLING
-            </label>
-            <br>
-            <label for="subject2">
-                <input type="checkbox" id="TECHNOLOGY" name="interests[]" value="TECHNOLOGY"> TECHNOLOGY
-            </label>
-            <br>
-            <label for="subject3">
-                <input type="checkbox" id="CODING" name="interests[]" value="CODING">CODING
-            </label>
-            <br>
-            <label for="subject4">
-                <input type="checkbox" id="VOLUNTEERING" name="interests[]" value="VOLUNTEERING"> VOLUNTEERING
-            </label>
-            <br>
-            <label for="subject5">
-                <input type="checkbox" id="COLLECTING" name="interests[]" value="COLLECTING"> COLLECTING
-            </label>
-            <br>
-            <label for="subject6">
-                <input type="checkbox" id="DANCE" name="interests[]" value="DANCE"> DANCE
-            </label>
-            <br>
-            <label for="subject2">
-                <input type="checkbox" id="FILM AND CINEMA" name="interests[]" value="FILM AND CINEMA"> FILM AND CINEMA
-            </label>
-            <br>
-            <label for="subject3">
-                <input type="checkbox" id="ANIMAL PETS" name="interests[]" value="ANIMAL PETS"> ANIMAL PETS
-            </label>
-            <br>
-            <label for="subject4">
-                <input type="checkbox" id="DIY AND CRAFTING" name="interests[]" value="DIY AND CRAFTING"> DIY AND CRAFTING
-            </label>
-            <br>
-            <label for="subject5">
-                <input type="checkbox" id="HISTORY AND GENEOLGY" name="interests[]" value="HISTORY AND GENEOLGY"> HISTORY AND GENEOLGY
-            </label>
-            <br>
-            <label for="subject6">
-                <input type="checkbox" id="ASTRONOMY" name="interests[]" value="ASTRONOMY"> ASTRONOMY
-            </label>
-            <br>
-            <label for="subject2">
-                <input type="checkbox" id="READING" name="interests[]" value="READING AND LEARNNG"> READING AND LEARNNG
-            </label>
-            <br>
-            <label for="subject3">
-                <input type="checkbox" id="FISHING" name="interests[]" value="FISHING"> FISHING
-            </label>
-            <br>
-            <label for="subject1">
-                <input type="checkbox" id="BIRD WATCHING" name="interests[]" value="BIRD WATCHING"> BIRD WATCHING
-            </label>
-            <br>
-            <label for="subject2">
-                <input type="checkbox" id="CYCLNG" name="interests[]" value="CYCLNG"> CYCLNG
-            </label>
-            <br>
-            <label for="subject3">
-                <input type="checkbox" id="ARCHERY" name="interests[]" value="ARCHERY">ARCHERY
-            </label>
-            <br>
-            <label for="subject4">
-                <input type="checkbox" id="MARTIAL ARTS" name="interests[]" value="MARTIAL ARTS"> MARTIAL ARTS
-            </label>
-            <br>
-            <label for="subject5">
-                <input type="checkbox" id="POTTERY AND CERAMICS" name="interests[]" value="POTTERY AND CERAMICS"> POTTERY AND CERAMICS
-            </label>
-            <br>
-            <label for="subject6">
-                <input type="checkbox" id="BOARD GAME DESIGN" name="interests[]" value="BOARD GAME DESIGN"> BOARD GAME DESIGN
-            </label>
-            <br>
-            <label for="subject2">
-                <input type="checkbox" id="HOME BREWING" name="interests[]" value="HOME BREWING"> HOME BREWING
-            </label>
-            <br>
-            <label for="subject3">
-                <input type="checkbox" id="PHOTOGRAPHY" name="interests[]" value="PHOTOGRAPHY"> PHOTOGRAPHY
-            </label>
-            <br>
-            <label for="subject4">
-                <input type="checkbox" id="GOLF" name="interests[]" value="GOLF"> GOLF
-            </label>
-            <br>
-            <label for="subject5">
-                <input type="checkbox" id="ROBOTICS" name="interests[]" value="ROBOTICS">ROBOTICS
-            </label>
-            <br>
-            <label for="subject6">
-                <input type="checkbox" id="CALLIGRAPHY" name="interests[]" value="CALLIGRAPHY"> CALLIGRAPHY
-            </label>
-            <br>
-            <label for="subject2">
-                <input type="checkbox" id="HOME IMPROVEMENT" name="interests[]" value="HOME IMPROVEMENT"> HOME IMPROVEMENT
-            </label>
-            <br>
-            <label for="subject3">
-                <input type="checkbox" id="METAL DETECTING" name="interests[]" value="METAL DETECTING"> METAL DETECTING
-            </label>
-            <br>
-         
+                <h2>Select The Subjects You Excelled At In High School</h2>
+            <section class="tutorial-step" data-step="3">
+                
+                
+                <div class="custom-checkbox-grid">
+                    {% for subject in subjects %}
+                        <div class="custom-checkbox">
+                            <input type="checkbox" id="subject_{{ subject.id }}" name="subjects[]" value="{{ subject.id }}">
+                            <label for="subject_{{ subject.id }}">{{ subject.name }}</label>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+        </section>
         <input type="submit" value="Submit">
     </form>
-</section>
-</body>
+
+    <!-- Guide Avatar and Text Bubble -->
+    <img id="guide-avatar" src="{% static 'avatars/happy.png' %}" alt="Guide Avatar">
+    <div id="text-bubble">Hello! I am here to guide you through the course recommendation process.</div>
    
+    {% comment %} Thi is chat prompt  {% endcomment %}
+    <div class="chat-prompt" style="cursor: pointer; color: blue; text-decoration: underline;">
+        <p>Do you have any queries about our institution or need guidance? <span onclick="window.location.href='/chat/'">Let's chat!</span></p>
+    </div>
+    
+    <!-- Tutorial Overlay -->
+    <div id="tutorial-overlay"></div>
+    <button id="next-tutorial">Next</button>
+    <button id="cancel-tutorial">Cancel Tutorial</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const guideAvatar = document.getElementById('guide-avatar');
+            const textBubble = document.getElementById('text-bubble');
+            const tutorialOverlay = document.getElementById('tutorial-overlay');
+            const nextTutorialBtn = document.getElementById('next-tutorial');
+            const cancelTutorialBtn = document.getElementById('cancel-tutorial');
+
+            // Elements to highlight in the tutorial
+            const tutorialSteps = document.querySelectorAll('.tutorial-step');
+            let currentStep = 0;
+
+            // Messages for each tutorial step
+            const tutorialMessages = [
+                "Please select your interests here.",
+                "Tell us more about yourself in this text area.",
+                "Here you select the subjects you excelled at in high school."
+            ];
+
+            // Function to show the text bubble with a message
+            function showTextBubble(message) {
+                textBubble.textContent = message;
+                textBubble.style.display = 'block';
+                setTimeout(() => {
+                    textBubble.style.display = 'none';
+                }, 4000); // Hide after 4 seconds
+            }
+
+            // Function to show the current tutorial step
+            function showTutorialStep() {
+                tutorialSteps.forEach((step, index) => {
+                    if (index === currentStep) {
+                        step.classList.add('highlight');
+                        step.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        showTextBubble(tutorialMessages[index]);
+                    } else {
+                        step.classList.remove('highlight');
+                    }
+                });
+            }
+
+            // Function to start the tutorial
+            function startTutorial() {
+                tutorialOverlay.style.display = 'block';
+                nextTutorialBtn.style.display = 'block';
+                cancelTutorialBtn.style.display = 'block';
+                showTutorialStep();
+            }
+
+            // Function to go to the next tutorial step
+            function nextTutorialStep() {
+                if (currentStep < tutorialSteps.length - 1) {
+                    currentStep++;
+                    showTutorialStep();
+                } else {
+                    endTutorial();
+                }
+            }
+
+            // Function to end the tutorial
+            function endTutorial() {
+                tutorialOverlay.style.display = 'none';
+                nextTutorialBtn.style.display = 'none';
+                cancelTutorialBtn.style.display = 'none';
+                tutorialSteps.forEach(step => {
+                    step.classList.remove('highlight');
+                });
+                currentStep = 0;
+            }
+
+            // Event listener for the cancel button
+            cancelTutorialBtn.addEventListener('click', endTutorial);
+
+            // Event listener for the next button
+            nextTutorialBtn.addEventListener('click', nextTutorialStep);
+
+            // Start tutorial on page load
+            showTextBubble('Welcome! Let me guide you through this page.');
+            setTimeout(startTutorial, 5000); // Start tutorial after 5 seconds
+
+            // Event listener for the guide avatar
+            guideAvatar.addEventListener('click', function() {
+                guideAvatar.src = "{% static 'avatars/curious.png' %}";
+                showTextBubble('Do you have any queries about our institution or need guidance? Let\'s chat!');
+            });
+        
+            guideAvatar.addEventListener('mouseleave', function() {
+                guideAvatar.src = "{% static 'avatars/happy.png' %}";
+                // Optionally clear the text bubble when the mouse leaves the avatar
+                textBubble.style.display = 'none';
+            });
+
+            // Change avatar expression based on form interactions
+            const form = document.querySelector('form');
+            form.addEventListener('submit', function() {
+                guideAvatar.src = "{% static 'avatars/excited.png' %}";
+                showTextBubble('Thank you for submitting your information!');
+            });
+
+            const interestsCheckboxes = document.querySelectorAll('input[name="interests[]"]');
+            interestsCheckboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    guideAvatar.src = "{% static 'avatars/happy.png' %}";
+                    showTextBubble('Great choice! Select more interests if you like.');
+                });
+            });
+
+            const subjectsCheckboxes = document.querySelectorAll('input[name="subjects[]"]');
+            subjectsCheckboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    guideAvatar.src = "{% static 'avatars/happy.png' %}";
+                    showTextBubble('You excelled in this subject? Awesome!');
+                });
+            });
+
+            const additionalInfoTextarea = document.getElementById('additionalInfo');
+            additionalInfoTextarea.addEventListener('focus', function() {
+                guideAvatar.src = "{% static 'avatars/happy.png' %}";
+                showTextBubble('Tell us more about your interests.');
+            });
+
+            additionalInfoTextarea.addEventListener('blur', function() {
+                guideAvatar.src = "{% static 'avatars/sad.png' %}";
+                showTextBubble('Why did you stop? Keep writing!');
+            });
+        });
+    </script>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>Email: info@proacted.com</p>
+                <p>Phone: +254 (7) 437-20033</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 ProActEd; Maseno University. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
 </html>

@@ -45,11 +45,6 @@ body {
         background-color: #ff6347;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    .sidebar {
-        background-color: #f1f1f1;
-=======
     /* .sidebar {
         background-color: #c41919;
 >>>>>>> a8aafc1f4e0b7897d2500120900e0786f14f61be
@@ -79,10 +74,7 @@ body {
     }
 =======
     } */
->>>>>>> a8aafc1f4e0b7897d2500120900e0786f14f61be
-=======
     }
->>>>>>> 7fd201a8a0800bf612e088bca5388551e51c8d39
 
     .content {
         float: left;

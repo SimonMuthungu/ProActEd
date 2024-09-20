@@ -1,0 +1,1 @@
+[{"model": "academia_app.feeinformation", "pk": 1, "fields": {"student": 44, "semester": "1", "required_fees": "60000.00", "fees_paid": "54000.00"}}]

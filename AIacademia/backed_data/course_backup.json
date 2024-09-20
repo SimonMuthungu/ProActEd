@@ -1,0 +1,1 @@
+[{"model": "academia_app.course", "pk": 1, "fields": {"name": "Mathematics And Computer Science", "prefix": "TMC", "school": 3, "students_count": 500, "graduation_probability": 92.0}}]

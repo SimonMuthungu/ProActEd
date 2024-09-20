@@ -1,0 +1,28 @@
+{% load static %}
+{% load admin_urls %}
+<div class="stats-container">
+    <div class="stat-box">
+        <h3>Total Students</h3>
+        <p>{{ total_students }}</p>
+    </div>
+    <div class="stat-box">
+        <h3>Total Staff</h3>
+        <p>{{ total_staff }}</p>
+    </div>
+    <div class="stat-box">
+        <h3>Total Admins</h3>
+        <p>{{ total_admins }}</p>
+    </div>
+    <div class="stat-box">
+        <h3>Total Schools</h3>
+        <p>{{ total_schools }}</p>
+    </div>
+    <div class="stat-box">
+        <h3>Total Courses</h3>
+        <p>{{ total_courses }}</p>
+    </div>
+</div>
+
+{% comment %} <div class="chart-container">
+    <canvas id="studentsChart"></canvas>
+</div> {% endcomment %}
