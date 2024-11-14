@@ -32,6 +32,7 @@ We will communicate in due course on how the system can be set up locally.
 - AI Probability Determiner
 
 ### Installation
+
 Use these version of python : python3.10
 Provide step-by-step installation instructions.
 
@@ -39,10 +40,20 @@ Provide step-by-step installation instructions.
 
 Explain how to use your project. Include examples if applicable.
 
-
 Contributing
 
 Explain how others can contribute to your project.
+
+
+Student user;
+
+* Username- benaya
+* Password- testing12345678
+* Username- mercy
+* Password- testing12345678
+
+Super admin User
+
 
 ## License
 
