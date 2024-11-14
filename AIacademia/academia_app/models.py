@@ -106,22 +106,34 @@ class StudentUser(BaseUser):
     registration_number = models.CharField(max_length=20, unique=True)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     school = models.ForeignKey(School, on_delete=models.CASCADE)
-    graduation_probability = models.FloatField(default=0.0)
     profile_picture = models.ImageField(upload_to='profile_pictures/', null=True, blank=True)
-    Lessons_Attended = models.FloatField(default=100)
-    Total_lessons_in_that_period = models.FloatField(default=234)
-    Aggregate_points = models.FloatField(default=50)
-    pcnt_of_lessons_attended = models.FloatField(default=47)
-    homework_submission_rates = models.FloatField(default=74)
-    activity_on_learning_platforms = models.FloatField(default=75)
-    CAT_1_marks = models.FloatField(default=20)
-    CAT_2_marks = models.FloatField(default=18)
-    Deadline_Adherence = models.TextField()
-    teachers_comments_so_far = models.TextField()
-    activity_on_elearning_platforms = models.FloatField(default=74)
 
     def __str__(self):
         return f"Student User: {self.username}"
+
+# to track student perfomance
+class PerformanceMetric(models.Model):
+    student_user = models.ForeignKey('StudentUser', on_delete=models.CASCADE, related_name='performance_records')
+    semester = models.PositiveIntegerField()
+    year_of_study = models.PositiveIntegerField()
+    date = models.DateField(auto_now_add=True)
+
+    graduation_probability = models.FloatField(default=0.0)
+    Lessons_Attended = models.FloatField(default=0)
+    Total_lessons_in_that_period = models.FloatField(default=0)
+    Aggregate_points = models.FloatField(default=0)
+    pcnt_of_lessons_attended = models.FloatField(default=0)
+    homework_submission_rates = models.FloatField(default=0)
+    activity_on_learning_platforms = models.FloatField(default=0)
+    CAT_1_marks = models.FloatField(default=0)
+    CAT_2_marks = models.FloatField(default=0)
+    Deadline_Adherence = models.TextField(blank=True, null=True)
+    teachers_comments_so_far = models.TextField(blank=True, null=True)
+    activity_on_elearning_platforms = models.FloatField(default=0)
+
+    def __str__(self):
+        return f"Performance Record of {self.student_user.username} - Semester {self.semester}, Year {self.year_of_study}"
+
 
 # Proxy Models for different user roles
 class AdminUserProxy(AdminUser):
@@ -136,33 +148,11 @@ class StudentUserProxy(StudentUser):
         verbose_name = 'Student User'
         verbose_name_plural = 'Student Users'
 
-
 class SuperAdminUserProxy(SuperAdminUser):
     class Meta:
         proxy = True
         verbose_name = 'Super Admin'
         verbose_name_plural = 'Super Admins'
-
-# Fee Information Model
-class FeeInformation(models.Model):
-    student = models.ForeignKey(StudentUser, on_delete=models.CASCADE)
-    semester = models.CharField(max_length=20)
-    required_fees = models.DecimalField(max_digits=10, decimal_places=2)
-    fees_paid = models.DecimalField(max_digits=10, decimal_places=2)
-
-# Attendance Model
-class Attendance(models.Model):
-    student = models.ForeignKey(StudentUser, on_delete=models.CASCADE)
-    semester = models.CharField(max_length=20)
-    total_classes = models.PositiveIntegerField()
-    attended_classes = models.PositiveIntegerField()
-
-# Performance Model
-class Performance(models.Model):
-    student = models.ForeignKey(StudentUser, on_delete=models.CASCADE)
-    semester = models.CharField(max_length=20)
-    aggregate_points = models.DecimalField(max_digits=4, decimal_places=2)
-    agp = models.CharField(max_length=10)
 
 
 class FieldOfInterest(models.Model):
@@ -176,12 +166,6 @@ class HighSchoolSubject(models.Model):
 
     def __str__(self):
         return self.name
-
-
-class CourseOfInterest(models.Model):
-    name = models.CharField(max_length=100)
-    fields_of_interest = models.ManyToManyField(FieldOfInterest, related_name='courses_of_interest')
-    required_high_school_subjects = models.ManyToManyField(HighSchoolSubject, related_name='required_for_courses')
 
 # Course Data for Recommender Model
 class Recommender_training_data(models.Model):
@@ -249,13 +233,7 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return f'Profile of {self.user.username}'
-    
-class Unit(models.Model):
-    title = models.CharField(max_length=100)
-    semester = models.CharField(max_length=20)  # For simplicity, we're using a CharField
-    def __str__(self):
-        return self.username
-    
+        
 class ProbabilityDataTable(models.Model):
     Lessons_Attended = models.FloatField()
     Total_lessons_in_that_period = models.FloatField()

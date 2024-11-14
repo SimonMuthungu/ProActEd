@@ -2,57 +2,41 @@
 import logging
 import os
 import sys
+import json
+import uuid
 import time
 import joblib
 import logging
-import numpy as np
 import requests
-import uuid
+import numpy as np
 import tensorflow as tf
+from .models import *
 from django import forms
 from telnetlib import LOGOUT
 from datetime import datetime
 from django.db.models import Q
 from sre_constants import BRANCH
+from django.db.models import Max
 from django.utils import timezone
+from keras.models import Sequential
 from django.contrib import messages
 from django.urls import reverse_lazy
 from django.core.mail import send_mail
+from django.db.models import Count, Sum
 from .forms import UpdateStudentProfileForm
 from django.contrib.auth.models import User
 from django.contrib.auth.views import LoginView
+# from tensorflow.keras.models import load_model
 from django.utils.dateparse import parse_datetime
-from django.contrib.auth.decorators import login_required
-# from python_scripts.proacted_recommender2024 import proacted2024
-from django.shortcuts import get_object_or_404, redirect, render
-from django.core.mail import send_mail
-from django.db.models import Q
-import requests
-from django.http import JsonResponse
-import json
-from django.http import (Http404, HttpRequest, HttpResponse, HttpResponseRedirect, JsonResponse)
-from django.shortcuts import get_object_or_404, redirect, render
-from django.urls import reverse_lazy
-from django.contrib.auth import authenticate, get_user_model, login, logout
-from django.http import (Http404, HttpRequest, HttpResponse,HttpResponseRedirect, JsonResponse)
-from .models import *
-from .models import BaseUser,UserProfile,Course,School,Performance,Message, ProbabilityDataTable, NewMessageNotification
-from django.urls import reverse_lazy 
-from python_scripts.recommender_engine import load_model
-#from .models import StudentUser, AdminUser, SuperAdminUser, Attendance, Performance, Course, School, Recommender_training_data
-from .forms import UpdateStudentProfileForm
-from .models import *
-from django.db.models import Count, Sum
-from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
+from django.core.exceptions import ObjectDoesNotExist
+from python_scripts.recommender_engine import load_model
+from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import requires_csrf_token
-from django.contrib.auth import authenticate, login
-from django.contrib import messages
-from django.shortcuts import redirect, render
-from tensorflow.keras.models import Sequential, load_model
-
-
-
+from django.shortcuts import get_object_or_404, redirect, render
+#from python_scripts.proacted_recommender2024 import proacted2024
+from django.contrib.auth import authenticate, get_user_model, login, logout
+from django.http import (Http404, HttpRequest, HttpResponse, HttpResponseRedirect, JsonResponse)
 
 
 starttime = time.time()
@@ -60,27 +44,15 @@ from python_scripts.lazyloader import lazy_load_model_with_cache
 timetoimport = time.time()
 
 print(f"imported the lazy loader in {timetoimport - starttime} secs")
-
+# *************************************************** #
 sbert_model = lazy_load_model_with_cache()
+# *************************************************** #
 timetoload= time.time()
 
-print(f"loader the model and cached it in {timetoload - timetoimport} secs") 
+print(f"loaded the model and cached it in {timetoload - timetoimport} secs") 
 
-
-# logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-logging.basicConfig(filename=r'C:\Users\user\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-# logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-
-
-from .forms import UpdateStudentProfileForm
-from .models import (Attendance, BaseUser, Course, Message, Performance,
-                     Recommender_training_data, School, StudentUser,
-                     UserProfile, ProbabilityDataTable)
-
-# logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\user\proacted\AIacademia\mainlogfile.log', level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-# logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 logging.basicConfig(filename=r'C:\Users\user\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 model_path =os.path.join(settings.BASE_DIR, 'trained_models', 'probability_model.joblib')
 
@@ -150,11 +122,9 @@ def recommend_courses(request):
         user_subjects_done = request.POST.getlist('subjects[]')
         user_subjects_done = ' '.join(user_subjects_done).lower() 
 
-
         # Getting values from the interests field
         user_activities_enjoyed = request.POST.getlist('interests[]')
         user_activities_enjoyed = ' '.join(user_activities_enjoyed).lower() 
-
 
         # textarea
         user_description_about_interests = request.POST.getlist('additionalInfo')
@@ -173,6 +143,7 @@ def recommend_courses(request):
 
             print(f"Initializing Sbert recommender")
             sbert_recommendations = sbert_proactedrecomm2024(sbert_model, user_description_about_interests, user_activities_enjoyed)
+            
             print(f"here are the sbert_recommendations: {sbert_recommendations}") 
             context = {'sbert_recommendations': sbert_recommendations}
 
@@ -189,140 +160,199 @@ def recommend_courses(request):
             logging.info('Recommender system has run')
     else:
         return render(request, 'academia_app/recommended_courses.html')       
-
             
 logger = logging.getLogger(__name__)
 
-def predict_probability(request, student_id=10): 
-    try: 
-        logging.info('Probability model proacted_prob_model2 loaded') 
+def predict_probability(request, student_id=3):
+    try:
+        # Load the machine learning model
+        model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
         model = joblib.load(model_path)
+        print('Probability model loaded successfully')
 
-        # Student user object
-        student_data = StudentUser.objects.get(id=student_id) 
+        # Fetch the student data
+        student = StudentUser.objects.get(id=student_id)
 
-        aggrpoints = student_data.Aggregate_points
-        lessonsattended = student_data.Lessons_Attended
-        pcnt_of_lessons_attended = student_data.pcnt_of_lessons_attended 
-        homework_submission_rates = student_data.homework_submission_rates
-        activity_on_learning_platforms = student_data.activity_on_learning_platforms
-        CAT_1_marks = student_data.CAT_1_marks
-        CAT_2_marks = student_data.CAT_2_marks
-        activity_on_elearning_platforms = student_data.activity_on_elearning_platforms
+        # Fetch the student's performance metrics
+        try:
+            metrics = PerformanceMetric.objects.get(student_user=student)
+        except PerformanceMetric.DoesNotExist:
+            print(f"No performance metrics found for student {student_id}")
+            return render(request, "academia_app/student_page.html")
+
+        # Extract the input data for prediction from the PerformanceMetric model
+        lessons_attended = metrics.Lessons_Attended
+        aggrpoints = metrics.Aggregate_points
+        pcnt_of_lessons_attended = metrics.pcnt_of_lessons_attended
+        homework_submission_rates = metrics.homework_submission_rates
+        cat_1_marks = metrics.CAT_1_marks
+        cat_2_marks = metrics.CAT_2_marks
+        activity_on_elearning_platforms = metrics.activity_on_elearning_platforms
 
     except StudentUser.DoesNotExist:
-        # the student doesnt exist
-        print('the student doesnt exist')
+        # The student does not exist
+        print('The student does not exist')
         return render(request, "academia_app/student_page.html")
 
-    # input_data = [[lessonsattended, aggrpoints, pcnt_of_lessons_attended, homework_submission_rates, CAT_1_marks, CAT_2_marks, activity_on_elearning_platforms]] 
+    # Check if the logged-in user belongs to the 'Student Users' group
     if request.user.groups.filter(name='Student Users').exists():
-        student_first_name = request.user.first_name
-        if not student_first_name:
-            student_first_name = request.user.username
-        print(student_first_name)
-    # Convert input data to numpy array and reshape it
-    input_data = np.array([[lessonsattended, aggrpoints, pcnt_of_lessons_attended, 
-                            homework_submission_rates, CAT_1_marks, CAT_2_marks, 
-                            activity_on_elearning_platforms]])
-    input_data = np.array(input_data).astype(np.float32)
-    print(input_data)
-    # Ensure the input data has the correct shape
+        student_first_name = request.user.first_name or request.user.username
+        print(f"Student's first name: {student_first_name}")
+
+    # Prepare input data for prediction
+    input_data = np.array([[
+        lessons_attended,
+        aggrpoints,
+        pcnt_of_lessons_attended,
+        homework_submission_rates,
+        cat_1_marks,
+        cat_2_marks,
+        activity_on_elearning_platforms
+    ]]).astype(np.float32)
+
+    print(f"Input data for prediction: {input_data}")
+
+    # Ensure the input data has the correct shape for prediction
     input_data = tf.reshape(input_data, [1, 7])
-    
-    # Predict probabilities
-    prediction = model.predict(input_data)
 
-    context = {'student_first_name':student_first_name,'prediction': prediction[0][0], 'refined_prediction': f"{prediction[0][0]*100:.3f}"}
-    print(f"\n\nStudent {student_id} with lessonsattended: {lessonsattended} and aggrpoints: {aggrpoints}, lessons_attended: {pcnt_of_lessons_attended}, homework_submission_rates: {homework_submission_rates}, activity_on_learning_platforms: {activity_on_learning_platforms}, CAT_1_marks: {CAT_1_marks}, CAT_2_marks: {CAT_2_marks}, activity_on_elearning_platforms: {activity_on_elearning_platforms} ; 'prediction': {prediction[0][0]}, 'refined_prediction': {prediction[0][0]*100:.3f}\n\n")
+    try:
+        # Predict the probability of graduation
+        prediction = model.predict(input_data)
+        probability = prediction[0][0]
+        refined_prediction = f"{probability * 100:.3f}%"
 
-    return render(request, "academia_app/student_page.html",context = context)
-    
-import joblib
-from .models import StudentUser, Course
+        print(f"\nPrediction for student {student_id}: {probability}, Refined prediction: {refined_prediction}\n")
+
+        # Prepare the context for rendering the template
+        context = {
+            'student_first_name': student_first_name,
+            'prediction': probability,
+            'refined_prediction': refined_prediction
+        }
+
+        return render(request, "academia_app/student_page.html", context=context)
+
+    except Exception as e:
+        print(f"Error during prediction: {e}")
+        return render(request, "academia_app/student_page.html")
 
 def update_probabilities(course_id=None, school_id=None):
+    # Define the path to your trained model
+    model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+    try:
+        # Load the machine learning model
+        model = joblib.load(model_path)
+    except Exception as e:
+        print(f"Error loading the model: {e}")
+        return
+
     if course_id and not school_id:
         try:
-            # Getting all students associated with the given course ID
+            # Fetch all students associated with the given course ID
             students = StudentUser.objects.filter(course_id=course_id)
-
-            # # Loading the machine learning model
-            # model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\probability_model.joblib'
-            # # 'C:\Users\Simon\proacted\AIacademia\trained_models\probability_model.joblib'
-            model = joblib.load(model_path)
 
             total_probability = 0.0
 
             for student in students:
-                # Prepare input data for prediction
+                # Fetch the student's performance metrics
+                try:
+                    metrics = PerformanceMetric.objects.get(student=student)
+                except PerformanceMetric.DoesNotExist:
+                    print(f"No performance metrics found for student {student.id}")
+                    continue
+
+                # Prepare input data for prediction based on PerformanceMetric fields
                 input_data = [[
-                    student.Lessons_Attended,
-                    student.Aggregate_points,
-                    student.pcnt_of_lessons_attended,
-                    student.homework_submission_rates,
-                    student.CAT_1_marks,
-                    student.CAT_2_marks,
-                    student.activity_on_elearning_platforms
+                    metrics.Lessons_Attended,
+                    metrics.Aggregate_points,
+                    metrics.pcnt_of_lessons_attended,
+                    metrics.homework_submission_rates,
+                    metrics.CAT_1_marks,
+                    metrics.CAT_2_marks,
+                    metrics.activity_on_elearning_platforms
                 ]]
 
-                # Predict student real-time probabilities
-                prediction = model.predict(input_data)
-                print(f'prediction for {student}: {prediction[0][0]}')
+                try:
+                    # Predict the probability of graduation
+                    prediction = model.predict(input_data)
+                    probability = prediction[0][0]
+                    print(f'Prediction for student {student.id}: {probability}')
 
-                # Write the probability to the table
-                student.graduation_probability = prediction[0][0]
-                student.save()
+                    # Update the student's graduation probability
+                    student.graduation_probability = probability
+                    student.save()
 
-                # Update total probability
-                total_probability += prediction[0][0]
+                    # Update total probability for the course
+                    total_probability += probability
 
-            course = Course.objects.get(id=course_id)
-            course.graduation_probability = total_probability
-            course.save()
-            print(f'saved data for course {course_id}: in course table as {total_probability}')
+                except Exception as e:
+                    print(f"Prediction error for student {student.id}: {e}")
+
+            # Update the course graduation probability
+            try:
+                course = Course.objects.get(id=course_id)
+                course.graduation_probability = total_probability
+                course.save()
+                print(f'Saved graduation probability for course {course_id}: {total_probability}')
+            except Course.DoesNotExist:
+                print(f"Course with ID {course_id} does not exist.")
 
         except Exception as e:
-            print(f"\n\nError: {e}\n\n")
+            print(f"Error processing course {course_id}: {e}")
 
     elif school_id:
         try:
-            # logic for school id
+            # Iterate through all courses in the given school
             courses = Course.objects.filter(school_id=school_id)
+
             for course in courses:
                 students = StudentUser.objects.filter(course=course)
-
                 total_probability = 0.0
 
                 for student in students:
-                    # Prepare input data for prediction
-                    input_data = [[
-                        student.Lessons_Attended,
-                        student.Aggregate_points,
-                        student.pcnt_of_lessons_attended,
-                        student.homework_submission_rates,
-                        student.CAT_1_marks,
-                        student.CAT_2_marks,
-                        student.activity_on_elearning_platforms
-                    ]]
+                    try:
+                        # Fetch the student's performance metrics
+                        metrics = PerformanceMetric.objects.get(student=student)
 
-                    # Predict student real-time probabilities
-                    prediction = model.predict(input_data)
-                    print(f'prediction for {student}: {prediction[0][0]}')
+                        # Prepare input data for prediction
+                        input_data = [[
+                            metrics.Lessons_Attended,
+                            metrics.Aggregate_points,
+                            metrics.pcnt_of_lessons_attended,
+                            metrics.homework_submission_rates,
+                            metrics.CAT_1_marks,
+                            metrics.CAT_2_marks,
+                            metrics.activity_on_elearning_platforms
+                        ]]
 
-                    # Write the probability to the table
-                    student.graduation_probability = prediction[0][0]
-                    student.save()
+                        # Predict the probability of graduation
+                        prediction = model.predict(input_data)
+                        probability = prediction[0][0]
+                        print(f'Prediction for student {student.id}: {probability}')
 
-                    # Update total probability
-                    total_probability += prediction[0][0]
+                        # Update the student's graduation probability
+                        student.graduation_probability = probability
+                        student.save()
 
-                course.graduation_probability = total_probability
-                course.save()
-                print(f'saved data for course {course.id}: in course table as {total_probability}')
+                        # Accumulate the total probability for the course
+                        total_probability += probability
+
+                    except PerformanceMetric.DoesNotExist:
+                        print(f"No performance metrics found for student {student.id}")
+                    except Exception as e:
+                        print(f"Prediction error for student {student.id}: {e}")
+
+                # Update the course graduation probability
+                try:
+                    course.graduation_probability = total_probability
+                    course.save()
+                    print(f'Saved graduation probability for course {course.id}: {total_probability}')
+                except Exception as e:
+                    print(f"Error updating course {course.id}: {e}")
 
         except Exception as e:
-            print(f"\n\nError: {e}\n\n")
+            print(f"Error processing school {school_id}: {e}")
+
 
 def UpdateStudentsCountView(request): 
     """This function counts the number of students taking a certain course and updates the db in real time"""
@@ -403,28 +433,35 @@ def school_data(request, school_id):
     except School.DoesNotExist:
         return JsonResponse({"error": "School not found"}, status=404)
     
-
-
 # View to fetch data for courses for pie charts
 def course_data(request, course_id):
     try:
         # Update probabilities before fetching data
         update_probabilities(course_id=course_id)
 
+        # Get the course instance
         course = Course.objects.get(id=course_id)
         students = StudentUser.objects.filter(course=course)
-        
-        # Example data, adjust as needed
-        graduation_probabilities = [student.graduation_probability for student in students]
-        student_ids = [student.id for student in students]
 
+        # Get the latest performance metrics for each student
+        performance_metrics = PerformanceMetric.objects.filter(student_user__in=students).order_by('student_user', '-date').distinct('student_user')
+
+        # Extract graduation probabilities and student IDs
+        graduation_probabilities = [metric.graduation_probability for metric in performance_metrics]
+        student_ids = [metric.student_user.id for metric in performance_metrics]
+
+        # Prepare the response data
         data = {
             "graduation_probabilities": graduation_probabilities,
             "student_ids": student_ids
         }
         return JsonResponse(data)
+
     except Course.DoesNotExist:
         return JsonResponse({"error": "Course not found"}, status=404)
+
+    except ObjectDoesNotExist:
+        return JsonResponse({"error": "Performance data not found"}, status=404)
     
     
 def school_detail(request, school_id):

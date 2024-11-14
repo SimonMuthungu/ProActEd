@@ -3,10 +3,7 @@ from django.contrib import admin
 from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import Group
-from .models import UserProfile
-from .models import (AdminUserProxy, Attendance, Course, CourseOfInterest,
-                     FeeInformation, FieldOfInterest, HighSchoolSubject,
-                     Performance, School, StudentUserProxy, SuperAdminUserProxy, StudentUser)
+from .models import *
 
 #bentheaya added this form to be able to create a student, should be a temporary change until solution is found
 class StudentUserCreationForm(forms.ModelForm):
@@ -20,7 +17,7 @@ class StudentUserCreationForm(forms.ModelForm):
         if commit:
             user.save()
         return user
-
+    
 # Custom form for creating new users
 class UserCreationForm(forms.ModelForm):
     class Meta:
@@ -87,22 +84,23 @@ class StudentUserAdmin(CustomUserAdmin):
     list_display = (
         'username', 'email', 'first_name', 'last_name', 'is_staff', 
         'student_field', 'name', 'registration_number', 'course', 
-        'school', 'graduation_probability', 'profile_picture'
+        'school', 'profile_picture'
     )
     search_fields = ('username', 'email', 'registration_number', 'name')
     list_filter = ('course', 'school', 'is_staff', 'is_active')
     fieldsets = (
         (None, {'fields': ('username', 'password')}),
         ('Personal info', {'fields': ('first_name', 'last_name', 'email')}),
-        ('Student Details', {'fields': ('student_field', 'name', 'registration_number', 'course', 'school', 'graduation_probability', 'profile_picture')}),
+        ('Student Details', {'fields': ('student_field', 'name', 'registration_number', 'course', 'school', 'profile_picture')}),
         ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser', 'user_permissions')}),
     )
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('username', 'email', 'first_name', 'last_name', 'student_field', 'name', 'registration_number', 'course', 'school', 'graduation_probability', 'profile_picture'),
+            'fields': ('username', 'email', 'first_name', 'last_name', 'student_field', 'name', 'registration_number', 'course', 'school', 'profile_picture'),
         }),
-    )
+    ) 
+
     def save_model(self, request, obj, form, change):
         super().save_model(request, obj, form, change)
         if not change:  # If creating a new user
@@ -111,7 +109,7 @@ class StudentUserAdmin(CustomUserAdmin):
 
     def assign_user_to_group(self, user):
         # Check the type of user and assign to group
-        group_name = ''
+        group_name = 'Student Users'
         if isinstance(user, AdminUserProxy):
             group_name = 'Staff Users'
         elif isinstance(user, StudentUserProxy):
@@ -134,21 +132,6 @@ class CourseAdmin(admin.ModelAdmin):
     list_display = ('name', 'prefix', 'school', 'students_count')
     list_filter = ('school',)
     search_fields = ('name', 'prefix')
-
-class FeeInformationAdmin(admin.ModelAdmin):
-    list_display = ('student', 'semester', 'required_fees', 'fees_paid')
-    list_filter = ('semester',)
-    search_fields = ('student__name',)
-
-class AttendanceAdmin(admin.ModelAdmin):
-    list_display = ('student', 'semester', 'total_classes', 'attended_classes')
-    list_filter = ('semester',)
-    search_fields = ('student__name',)
-
-class PerformanceAdmin(admin.ModelAdmin):
-    list_display = ('student', 'semester', 'aggregate_points', 'agp')
-    list_filter = ('semester',)
-    search_fields = ('student__name',)
 
 # Custom GroupAdmin
 class CustomGroupAdmin(admin.ModelAdmin):
@@ -173,10 +156,7 @@ admin.site.register(StudentUserProxy, StudentUserAdmin)
 # Register other models
 admin.site.register(School, SchoolAdmin)
 admin.site.register(Course, CourseAdmin)
-admin.site.register(FeeInformation, FeeInformationAdmin)
-admin.site.register(Attendance, AttendanceAdmin)
-admin.site.register(Performance, PerformanceAdmin)
 admin.site.register(FieldOfInterest)
 admin.site.register(HighSchoolSubject)
-admin.site.register(CourseOfInterest)
 admin.site.register(UserProfile)
+admin.site.register(PerformanceMetric)

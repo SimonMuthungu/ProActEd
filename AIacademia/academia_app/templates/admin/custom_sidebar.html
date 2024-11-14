@@ -78,24 +78,13 @@
                 <a href="{% url 'admin:academia_app_highschoolsubject_changelist' %}">View Highschool Subjects</a>
                 {% endif %}
             </div>
-            <span class="collapsible-item">Courses of Interest</span>
-            <div class="sub-content">
-                {% if perms.academia_app.add_courseofinterest %}
-                <a href="{% url 'admin:academia_app_courseofinterest_add' %}">Add Courses of Interest</a>
-                {% endif %}
-                {% if perms.academia_app.change_courseofinterest %}
-                <a href="{% url 'admin:academia_app_courseofinterest_changelist' %}">Change Courses of Interest</a>
-                {% endif %}
-                {% if perms.academia_app.view_courseofinterest %}
-                <a href="{% url 'admin:academia_app_courseofinterest_changelist' %}">View Courses of Interest</a>
-                {% endif %}
-            </div>
+            
         </div>
     </div>
     {% endif %}
 
     <!-- Intervention Section -->
-    {% if perms.academia_app.add_performance or perms.academia_app.change_performance or perms.academia_app.view_performance or perms.academia_app.add_attendance or perms.academia_app.change_attendance or perms.academia_app.view_attendance or perms.academia_app.add_feeinformation or perms.academia_app.change_feeinformation %}
+    {% if perms.academia_app.add_performancemetric or perms.academia_app.change_performancemetric or perms.academia_app.view_performancemetric %}
     <div class="sidebar-section">
         <h3 class="collapsible">
             <i class='bx bxs-pointer'></i>
@@ -104,35 +93,14 @@
         <div class="side_bar_content">
             <span class="collapsible-item">Performance</span>
             <div class="sub-content">
-                {% if perms.academia_app.add_performance %}
-                <a href="{% url 'admin:academia_app_performance_add' %}">Add Performance</a>
+                {% if perms.academia_app.add_performancemetric %}
+                <a href="{% url 'admin:academia_app_performancemetric_add' %}">Add Performance</a>
                 {% endif %}
-                {% if perms.academia_app.change_performance %}
-                <a href="{% url 'admin:academia_app_performance_changelist' %}">Change Performance</a>
+                {% if perms.academia_app.change_performancemetric %}
+                <a href="{% url 'admin:academia_app_performancemetric_changelist' %}">Change Performance</a>
                 {% endif %}
-                {% if perms.academia_app.view_performance %}
-                <a href="{% url 'admin:academia_app_performance_changelist' %}">View Performance</a>
-                {% endif %}
-            </div>
-            <span class="collapsible-item">Attendance</span>
-            <div class="sub-content">
-                {% if perms.academia_app.add_attendance %}
-                <a href="{% url 'admin:academia_app_attendance_add' %}">Add Attendance</a>
-                {% endif %}
-                {% if perms.academia_app.change_attendance %}
-                <a href="{% url 'admin:academia_app_attendance_changelist' %}">Change Attendances</a>
-                {% endif %}
-                {% if perms.academia_app.view_attendance %}
-                <a href="{% url 'admin:academia_app_attendance_changelist' %}">View Attendances</a>
-                {% endif %}
-            </div>
-            <span class="collapsible-item">Fee Information</span>
-            <div class="sub-content">
-                {% if perms.academia_app.add_feeinformation %}
-                <a href="{% url 'admin:academia_app_feeinformation_add' %}">Add Fee Information</a>
-                {% endif %}
-                {% if perms.academia_app.change_feeinformation %}
-                <a href="{% url 'admin:academia_app_feeinformation_changelist' %}">Change Fee Information</a>
+                {% if perms.academia_app.view_performancemetric %}
+                <a href="{% url 'admin:academia_app_performancemetric_changelist' %}">View Performance</a>
                 {% endif %}
             </div>
         </div>
