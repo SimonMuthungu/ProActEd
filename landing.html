@@ -13,6 +13,7 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+
 <!-- Header -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
@@ -42,21 +43,43 @@
     </div>
 
     <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+        <input class="form-control d-none d-md-block mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success d-none d-md-block my-2 my-sm-0" type="submit">Search</button>
+    </form>
   </nav>
 
-<!-- Hero Section -->
+
 <!-- Hero Section -->
 <section class="hero d-flex align-items-center">
     <img src="logo.png" alt="Proacted Logo" class="logo me-3"> <!-- Logo on the left -->
     <div class="text-container">
-        <h1>PROACTED</h1>
-        <p class="tagline">AI-Driven Course Recommendations & Real-Time Academic Monitoring</p>
+        <h1 class="typed-text">PROACTED</h1>
+        <p class="tagline typdtext">AI-Driven Course Recommendations & Real-Time Academic Monitoring</p>
     </div>
 </section>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+<script>
+  var typed = new Typed('.typed-text', {
+  strings: ['PROACTED'],
+  typeSpeed: 200, // Very slow typing speed
+  backSpeed: 500,
+  smartBackspace: true,
+  fadeOut: true,
+  loop: true
+});
+</script>
+
+<script>
+  var typed = new Typed('.typd-text', {
+  strings: ['AI-Driven Course Recommendations & Real-Time Academic Monitoring'],
+  typeSpeed: 80, // Very slow typing speed
+  backSpeed: 300,
+  smartBackspace: true,
+  fadeOut: true,
+  loop: true
+});
+</script>
 <br>
 
 <!-- Features Section -->
@@ -68,24 +91,24 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="d-block w-100" src="wallpaperflare.com_wallpaper_5_WukZzXN.jpg" alt="First slide">
-        <div class="carousel-caption d-none d-md-block">
-            <h5>Proaced</h5>
-            <p>blah blah</p>
+        <img class="d-block w-100" src="graduation-cap-in-cloudy-sky-tod1tubspy6iws6n.jpg" alt="First slide">
+        <div class="carousel-caption">
+            <h5 style="color: #333;">Improved Learning Outcomes</h5>
+            <p style="color: #333;"><i>Improve graduation rates through the power of Artificial Intelligence</i></p>
         </div>
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="suprised.png" alt="Second slide">
-        <div class="carousel-caption d-none d-md-block">
-            <h5>Proaced</h5>
-            <p>blah blah</p>
+        <img class="d-block w-100" src="nice engineers sunset backlit.jpg" alt="Second slide">
+        <div class="carousel-caption">
+            <h5 style="color: #aaa;">Course Recommendations</h5>
+            <p style="color: #aaa;"><i>Unlock learners potential through AI-guided course selection</i></p>
         </div>
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100 " src="wallpaperflare.com_wallpaper_5_WukZzXN.jpg" alt="Third slide">
-        <div class="carousel-caption d-none d-md-block">
-            <h5>Proaced</h5>
-            <p>blah blah</p>
+        <img class="d-block w-100 " src="reading-a-bar-chart-versus-a-line-graph-biases-our-judgement-l.jpg" alt="Third slide">
+        <div class="carousel-caption">
+            <h5 style="color: #333;">Proactive Monitoring</h5>
+            <p style="color: #333;"><i>Learners and educators can see in real time the chances of graduation and take measures beforehand!</i></p>
         </div>
       </div>
     </div>
@@ -106,13 +129,13 @@
     <p>Kenya's students face a serious crisis. Many struggle to navigate their academic journey, leading to delayed graduation and lost opportunities.</p>
 
     <div class="statistics">
-        <div class="stat">
-            <img src="logo.png" alt="Confused Student">
-            <p>80% of students <b>struggle to make informed course</b> choices</p>
+         <div class="stat"> <!-- cartoon-vector-illustration-of-stick-man-thinking-hard-about-something-JT41PN.jpg  -->
+            <img src="undraw_code_thinking_re_gka2.svg" alt="Confused Student">
+            <p>Many students <b>struggle to make informed course</b> choice</p>
         </div>
         <div class="stat">
-            <img src="logo.png" alt="Stressed Student">
-            <p>70% lack <b>effective tracking tools</b> to stay on track</p>
+            <img src="undraw_personal_goals_re_iow7 (1).svg" alt="Stressed Student">
+            <p>79.78% lack <b>effective monitoring tools</b> to stay on track</p>
         </div>
     </div>
     <br>
@@ -123,25 +146,20 @@
 </section>
 
 <section class="solutions-section">
-    <div class="solution-content">
-        <h2>Our Solution: A Brighter Academic Future</h2>
-        <p>We're revolutionizing education with a cutting-edge solution that empowers students and institutions alike.</p>
-        <p><b><u>Our innovative app provides:</u></b></p>
-        <ul>
-            <li><b>Personalized Course Recommendations:</b> Tailored to individual strengths, interests, and career goals.</li>
-            <li><b>Proactive Progress Tracking:</b> Real-time monitoring of student performance to identify potential roadblocks early on.</li>
-            <li><b>Data-Driven Insights:</b> Actionable analytics to optimize learning strategies and improve outcomes.</li>
-        </ul>
+  <div class="solution-content">
+    <h2>A Brighter Academic Future</h2>
+    <p>Empowering students and institutions with innovative solutions. Our app provides <i>personalized course recommendations, proactive progress tracking, and data-driven insights.</i></p>
     </div>
     <div class="solution-image">
-        <img src="logo.png" alt="App Interface">
+        <img src="undraw_predictive_analytics_re_wxt8.svg" alt="App Interface">
     </div>
 </section>
 
 <!-- Call to Action Section -->
 <section class="cta-section">
-    <button class="cta-btn">Try Our Course Recommender</button>
-    <button class="cta-btn">Explore Academic Monitoring</button>
+  <h2>Try Our Models</h2> 
+    <button class="cta-btn pulse">Try Our Course Recommender</button>
+    <button class="cta-btn pulse">Explore Academic Monitoring</button>
 </section>
 
 <!-- Team Section -->
@@ -151,7 +169,7 @@
         <h2>Meet Our Team</h2>
     </div> -->
     <div class="team-content">
-        <p>Driven by a shared passion for innovation, our team is dedicated to transforming education in Kenya. We're committed to empowering students and institutions alike with sustainable solutions that address real-world challenges.</p>
+        <p style="text-align: justify;">Driven by a shared passion for innovation, our team is dedicated to transforming education in Kenya. We're committed to empowering students and institutions alike with sustainable solutions that address real-world challenges.</p>
     </div>
     <div class="team-members">
         <div class="team-member">
@@ -181,3 +199,5 @@
 <script src="landing.js"></script>
 </body>
 </html>
+
+<!-- colors (green, transitions), animations, nice svg images, mobile designs, host -->

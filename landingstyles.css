@@ -49,7 +49,7 @@ header {
 /* to try override bootstrap css */
 
 .carousel-item {
-    height: 90vh; 
+    height: 70vh; 
 }
 
 .carousel-item img {
@@ -95,10 +95,32 @@ header {
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s;
+    animation: pulse 2s infinite alternate;
+}
+
+.cta-btn:nth-child(2) { /* Target the second button */
+    animation-delay: 1s; /* Delay the animation for the second button */
 }
 
 .cta-btn:hover {
     background: #005f99;
+}
+
+/* .cta-btn.pulse {
+    /* animation: pulse 1s ease-in-out infinite alternate; */
+  /*} */
+
+@keyframes pulse {
+0% {
+    transform: scale(1);
+}
+50% {
+    transform: scale(1.1);
+}
+100% {
+    transform: scale(1);
+
+}
 }
 
 .statistics {
@@ -145,7 +167,7 @@ footer {
 }
 
 .stat img {
-    max-width: 70%;
+    max-width: 50%;
     height: auto;
     margin-bottom: 10px;
 }
@@ -155,14 +177,17 @@ footer {
     line-height: 1.5;
 }
 
-.cta-button {
+.cta-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff;
+    margin: 10px;
+    border: none;
+    background: #007acc;
     color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-}
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s ease-in-out;
+  }
 
 .solutions-section {
     display: flex;
@@ -225,3 +250,44 @@ footer {
     margin-bottom: 20px; 
     display: block;
 }
+
+/* .typed-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+  } */
+
+
+  @media (max-width: 768px) {
+    .navbar-toggler {
+        position: absolute;
+        right: 0;
+        top: 1px;
+      }
+
+    .statistics {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center the elements horizontally */
+      }
+      
+      .stat {
+        text-align: center;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        margin-bottom: 20px; /* Add spacing between the stats */
+      }
+      
+      .stat img {
+        display: block; /* Make the image block-level to stack it below the text */
+        max-width: 50%;
+        height: auto;
+        margin-bottom: 10px;
+      }
+      
+      .stat p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+  }
