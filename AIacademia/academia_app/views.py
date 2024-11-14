@@ -227,6 +227,7 @@ def predict_probability(request, student_id=3):
         context = {
             'student_first_name': student_first_name,
             'prediction': probability,
+            'metrics': metrics,
             'refined_prediction': refined_prediction
         }
 
@@ -633,9 +634,10 @@ def profile(request):
     except UserProfile.DoesNotExist:
         user_profile = UserProfile(user=student_user)
         user_profile.save()
-
-    attendance_records = Attendance.objects.filter(student=student_user)
-    performance_records = Performance.objects.filter(student=student_user)
+    metrics = PerformanceMetric.objects.get(student_user=student_user)
+    
+    attendance_records = metrics.Lessons_Attended
+    performance_records = metrics.Aggregate_points
 
     courses = Course.objects.all()
     schools = School.objects.all()
@@ -659,6 +661,7 @@ def profile(request):
         'form': form,
         'courses': courses,
         'schools': schools,
+        'metric': metrics,
     }
 
     return render(request, 'academia_app/Profile.html', context)

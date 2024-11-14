@@ -32,19 +32,13 @@
                         <p><strong>Registration Number:</strong> {{ student.registration_number }}</p>
                         <p><strong>Course:</strong> {{ student.course.name }}</p>
                         <p><strong>School:</strong> {{ student.school.name }}</p>
-                        <p><strong>Graduation Probability:</strong> {{ student.graduation_probability }}%</p>
-                        <p><strong>Attendance:</strong></p>
-                        <ul>
-                            {% for attendance in attendance_records %}
-                                <li>Semester: {{ attendance.semester }} - Attendance: {{ attendance.attended_classes }}/{{ attendance.total_classes }}</li>
-                            {% endfor %}
-                        </ul>
-                        <p><strong>Performance:</strong></p>
-                        <ul>
-                            {% for performance in performance_records %}
-                                <li>Semester: {{ performance.semester }} - AGP: {{ performance.aggregate_points }}</li>
-                            {% endfor %}
-                        </ul>
+                        <p><strong>Graduation Probability:</strong> {{ metric.graduation_probability }}%</p>
+                        <p><strong>Attendance:</strong>
+                        Semester: {{ metric.semester }} - Attendance: {{ attendance_records }}/{{ metric.Total_lessons_in_that_period }}
+                        </p>
+                        <p><strong>Performance:</strong>
+                        Semester: {{ metric.semester }} - Aggregate points: {{ metric.Aggregate_points }}</li>
+                        </p>
                         <button id="updateProfileBtn">Update Profile</button>
                     </div>
                 </div>
