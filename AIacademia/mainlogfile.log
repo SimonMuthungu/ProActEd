@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 INFO || 17-Jun-24 22:17:32 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
 DEBUG || 17-Jun-24 22:17:32 || Starting new HTTPS connection (1): huggingface.co:443
@@ -115,7 +113,6 @@ Traceback (most recent call last):
   File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
     child_clause, needed_inner = self.build_filter(
                                  ^^^^^^^^^^^^^^^^^^
-<<<<<<< HEAD
   File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
     condition = self.build_lookup(lookups, col, value)
                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -418,8 +415,6 @@ Traceback (most recent call last):
   File "C:\Users\Simon\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
     return super().execute(query, params)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-<<<<<<< HEAD
-=======
 django.db.utils.OperationalError: database is locked
 INFO || 07-Jun-24 22:11:05 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\models.py changed, reloading.
 INFO || 07-Jun-24 22:35:07 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\models.py changed, reloading.
@@ -741,8 +736,6 @@ Traceback (most recent call last):
     raise NoReverseMatch(msg)
 django.urls.exceptions.NoReverseMatch: Reverse for 'send_message' with keyword arguments '{'user_id': 1}' not found. 2 pattern(s) tried: ['student_page/send_message/(?P<recipient_id>[0-9]+)/\\Z', 'send_message/(?P<recipient_id>[0-9]+)/\\Z']
 INFO || 08-Jun-24 22:01:29 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
-<<<<<<< HEAD 
->>>>>>> 5e6fdc823e157813b6895b6fbc6728bfa370f41c
 INFO || 08-Jun-24 22:25:22 || C:\Users\user\Desktop\ProActEd\AIacademia\python_scripts\recommender_engine.py changed, reloading.
 WARNING || 08-Jun-24 22:26:36 || Not Found: /favicon.ico
 INFO || 08-Jun-24 22:29:51 || C:\Users\user\Desktop\ProActEd\AIacademia\academia_app\models.py changed, reloading.
@@ -19945,6 +19938,7 @@ WARNING || 24-Jun-24 06:59:09 || Not Found: /favicon.ico
 WARNING || 24-Jun-24 07:00:47 || Not Found: /chat/path_to_user_avatar.png
 WARNING || 24-Jun-24 07:01:17 || Not Found: /chat/path_to_user_avatar.png
 WARNING || 24-Jun-24 07:09:50 || Not Found: /favicon.ico
+<<<<<<< HEAD
 >>>>>>> 5b47d6f85272367a1e5bd1a3747c08fb0d1da4b8
 INFO || 24-Jun-24 10:36:04 || Use pytorch device_name: cpu
 INFO || 24-Jun-24 10:36:04 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
@@ -21368,3 +21362,1788 @@ DEBUG || 14-Nov-24 06:05:58 || https://huggingface.co:443 "HEAD /sentence-transf
 DEBUG || 14-Nov-24 06:06:00 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
 DEBUG || 14-Nov-24 06:06:00 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6700
 DEBUG || 14-Nov-24 06:06:01 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6700
+=======
+INFO || 24-Jun-24 07:35:22 || Use pytorch device_name: cpu
+INFO || 24-Jun-24 07:35:22 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 24-Jun-24 07:35:22 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 24-Jun-24 07:35:24 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 24-Jun-24 07:35:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 24-Jun-24 07:35:26 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 24-Jun-24 07:35:26 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 24-Jun-24 07:35:27 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 24-Jun-24 07:35:27 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 24-Jun-24 07:35:37 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 24-Jun-24 07:35:39 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6148
+DEBUG || 24-Jun-24 07:35:39 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6148
+WARNING || 24-Jun-24 07:36:48 || Not Found: /favicon.ico
+INFO || 24-Jun-24 07:49:29 || S-Bert 2024 Recommender Engine Initialized
+INFO || 24-Jun-24 07:49:49 || Time taken by sbert model: 20.47146773338318
+INFO || 24-Jun-24 07:49:49 || Recommender system has run
+INFO || 24-Jun-24 07:51:10 || S-Bert 2024 Recommender Engine Initialized
+INFO || 24-Jun-24 07:51:10 || Time taken by sbert model: 0.22699189186096191
+INFO || 24-Jun-24 07:51:10 || Recommender system has run
+INFO || 24-Jun-24 07:52:59 || S-Bert 2024 Recommender Engine Initialized
+INFO || 24-Jun-24 07:52:59 || Time taken by sbert model: 0.20485186576843262
+INFO || 24-Jun-24 07:52:59 || Recommender system has run
+INFO || 24-Jun-24 07:56:02 || S-Bert 2024 Recommender Engine Initialized
+INFO || 24-Jun-24 07:56:02 || Time taken by sbert model: 0.28705763816833496
+INFO || 24-Jun-24 07:56:02 || Recommender system has run
+INFO || 24-Jun-24 07:58:01 || S-Bert 2024 Recommender Engine Initialized
+INFO || 24-Jun-24 07:58:01 || Time taken by sbert model: 0.2659587860107422
+INFO || 24-Jun-24 07:58:01 || Recommender system has run
+INFO || 25-Jun-24 13:33:36 || Use pytorch device_name: cpu
+INFO || 25-Jun-24 13:33:36 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 25-Jun-24 13:33:36 || Starting new HTTPS connection (1): huggingface.co:443
+WARNING || 25-Jun-24 13:33:36 || No sentence-transformers model found with name sentence-transformers/all-MiniLM-L6-v2. Creating a new one with mean pooling.
+DEBUG || 25-Jun-24 13:33:36 || Starting new HTTPS connection (2): huggingface.co:443
+INFO || 25-Jun-24 13:33:37 || Use pytorch device_name: cpu
+INFO || 25-Jun-24 13:33:37 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 25-Jun-24 13:33:37 || Starting new HTTPS connection (1): huggingface.co:443
+WARNING || 25-Jun-24 13:33:37 || No sentence-transformers model found with name sentence-transformers/all-MiniLM-L6-v2. Creating a new one with mean pooling.
+DEBUG || 25-Jun-24 13:33:37 || Starting new HTTPS connection (2): huggingface.co:443
+INFO || 25-Jun-24 13:36:40 || Use pytorch device_name: cpu
+INFO || 25-Jun-24 13:36:40 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 25-Jun-24 13:36:40 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 25-Jun-24 13:36:40 || Starting new HTTPS connection (2): huggingface.co:443
+DEBUG || 25-Jun-24 13:36:40 || Starting new HTTPS connection (3): huggingface.co:443
+DEBUG || 25-Jun-24 13:36:40 || Starting new HTTPS connection (4): huggingface.co:443
+DEBUG || 25-Jun-24 13:36:40 || Starting new HTTPS connection (5): huggingface.co:443
+DEBUG || 25-Jun-24 13:36:40 || Starting new HTTPS connection (6): huggingface.co:443
+DEBUG || 25-Jun-24 13:36:51 || Starting new HTTPS connection (7): huggingface.co:443
+DEBUG || 25-Jun-24 13:36:52 || Starting new HTTPS connection (8): huggingface.co:443
+DEBUG || 25-Jun-24 13:36:52 || Starting new HTTPS connection (9): huggingface.co:443
+WARNING || 25-Jun-24 13:37:17 || Not Found: /favicon.ico
+INFO || 25-Jun-24 13:48:22 || S-Bert 2024 Recommender Engine Initialized
+INFO || 25-Jun-24 13:48:44 || Time taken by sbert model: 22.48206329345703
+INFO || 25-Jun-24 13:48:44 || Recommender system has run
+<<<<<<< HEAD
+>>>>>>> 7bc2f625 (added some untracked files)
+=======
+INFO || 01-Oct-24 12:46:11 || Use pytorch device_name: cpu
+INFO || 01-Oct-24 12:46:11 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 01-Oct-24 12:46:11 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 01-Oct-24 12:46:12 || Starting new HTTPS connection (2): huggingface.co:443
+DEBUG || 01-Oct-24 12:46:12 || Starting new HTTPS connection (3): huggingface.co:443
+DEBUG || 01-Oct-24 12:46:12 || Starting new HTTPS connection (4): huggingface.co:443
+DEBUG || 01-Oct-24 12:46:12 || Starting new HTTPS connection (5): huggingface.co:443
+DEBUG || 01-Oct-24 12:46:12 || Starting new HTTPS connection (6): huggingface.co:443
+DEBUG || 01-Oct-24 12:46:27 || Starting new HTTPS connection (7): huggingface.co:443
+DEBUG || 01-Oct-24 12:46:36 || Starting new HTTPS connection (8): huggingface.co:443
+DEBUG || 01-Oct-24 12:46:36 || Starting new HTTPS connection (9): huggingface.co:443
+WARNING || 01-Oct-24 12:52:26 || Not Found: /favicon.ico
+INFO || 01-Oct-24 12:52:51 || S-Bert 2024 Recommender Engine Initialized
+INFO || 01-Oct-24 12:53:34 || S-Bert 2024 Recommender Engine Initialized
+INFO || 01-Oct-24 12:54:16 || Time taken by sbert model: 42.04308080673218
+INFO || 01-Oct-24 12:54:16 || Time taken by sbert model: 84.84541273117065
+INFO || 01-Oct-24 12:54:16 || Recommender system has run
+INFO || 01-Oct-24 12:54:16 || Recommender system has run
+INFO || 01-Oct-24 12:57:30 || Probability model proacted_prob_model2 loaded
+ERROR || 01-Oct-24 12:57:31 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 487, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 225, in predict_probability
+    input_data = np.array([[lessonsattended, aggrpoints, pcnt_of_lessons_attended,
+                           ^^^^^^^^^^^^^^^
+NameError: name 'lessonsattended' is not defined
+WARNING || 06-Nov-24 08:03:02 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 06-Nov-24 08:03:11 || Use pytorch device_name: cpu
+INFO || 06-Nov-24 08:03:11 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 06-Nov-24 08:03:11 || Starting new HTTPS connection (1): huggingface.co:443
+WARNING || 06-Nov-24 08:03:11 || No sentence-transformers model found with name sentence-transformers/all-MiniLM-L6-v2. Creating a new one with mean pooling.
+DEBUG || 06-Nov-24 08:03:11 || Starting new HTTPS connection (2): huggingface.co:443
+WARNING || 07-Nov-24 22:58:34 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 07-Nov-24 22:58:46 || Use pytorch device_name: cpu
+INFO || 07-Nov-24 22:58:46 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 07-Nov-24 22:58:46 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 07-Nov-24 22:58:50 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 07-Nov-24 22:58:51 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 07-Nov-24 22:58:53 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 07-Nov-24 22:58:54 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 07-Nov-24 22:58:54 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 07-Nov-24 22:58:55 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 07-Nov-24 22:59:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/model.safetensors HTTP/11" 302 0
+DEBUG || 07-Nov-24 22:59:21 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 07-Nov-24 22:59:21 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/vocab.txt HTTP/11" 200 0
+DEBUG || 07-Nov-24 22:59:22 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer.json HTTP/11" 200 0
+DEBUG || 07-Nov-24 22:59:22 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/added_tokens.json HTTP/11" 404 0
+DEBUG || 07-Nov-24 22:59:23 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/special_tokens_map.json HTTP/11" 200 0
+DEBUG || 07-Nov-24 22:59:24 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6660
+DEBUG || 07-Nov-24 22:59:24 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 07-Nov-24 22:59:26 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/fa97f6e7cb1a59073dff9e6b13e2715cf7475ac9/1_Pooling/config.json HTTP/11" 200 0
+DEBUG || 07-Nov-24 22:59:26 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6660
+WARNING || 07-Nov-24 23:14:01 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 07-Nov-24 23:14:16 || Use pytorch device_name: cpu
+INFO || 07-Nov-24 23:14:16 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 07-Nov-24 23:14:17 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 07-Nov-24 23:14:19 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 07-Nov-24 23:14:21 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 07-Nov-24 23:14:22 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 07-Nov-24 23:14:22 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 07-Nov-24 23:14:23 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 07-Nov-24 23:14:23 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 07-Nov-24 23:14:31 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 07-Nov-24 23:14:33 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6660
+DEBUG || 07-Nov-24 23:14:34 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6660
+WARNING || 07-Nov-24 23:19:43 || Not Found: /favicon.ico
+INFO || 07-Nov-24 23:21:01 || S-Bert 2024 Recommender Engine Initialized
+INFO || 07-Nov-24 23:21:07 || S-Bert 2024 Recommender Engine Initialized
+INFO || 07-Nov-24 23:21:07 || S-Bert 2024 Recommender Engine Initialized
+INFO || 07-Nov-24 23:21:10 || S-Bert 2024 Recommender Engine Initialized
+INFO || 07-Nov-24 23:21:23 || Time taken by sbert model: 16.13834285736084
+INFO || 07-Nov-24 23:21:23 || Time taken by sbert model: 16.2608482837677
+INFO || 07-Nov-24 23:21:23 || Recommender system has run
+INFO || 07-Nov-24 23:21:24 || Recommender system has run
+INFO || 07-Nov-24 23:21:24 || Time taken by sbert model: 13.891749382019043
+INFO || 07-Nov-24 23:21:24 || Time taken by sbert model: 22.399749755859375
+INFO || 07-Nov-24 23:21:24 || Recommender system has run
+INFO || 07-Nov-24 23:21:24 || Recommender system has run
+WARNING || 11-Nov-24 23:37:36 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 11-Nov-24 23:37:51 || Use pytorch device_name: cpu
+INFO || 11-Nov-24 23:37:51 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 11-Nov-24 23:37:52 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 11-Nov-24 23:37:53 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 11-Nov-24 23:37:54 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 11-Nov-24 23:37:55 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 11-Nov-24 23:37:55 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 11-Nov-24 23:37:56 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 11-Nov-24 23:37:56 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 11-Nov-24 23:38:18 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 11-Nov-24 23:38:27 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6680
+DEBUG || 11-Nov-24 23:38:28 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6681
+WARNING || 12-Nov-24 03:38:16 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 12-Nov-24 03:38:34 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 03:38:34 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 03:38:34 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 03:38:47 || Starting new HTTPS connection (2): huggingface.co:443
+DEBUG || 12-Nov-24 03:39:06 || Starting new HTTPS connection (3): huggingface.co:443
+DEBUG || 12-Nov-24 03:39:28 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 12-Nov-24 03:39:29 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 03:39:30 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 03:39:30 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 03:39:57 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 03:39:59 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6680
+DEBUG || 12-Nov-24 03:40:00 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6681
+WARNING || 12-Nov-24 05:35:15 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 12-Nov-24 05:35:23 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 05:35:23 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 05:35:24 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 05:35:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 05:35:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 05:35:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 12-Nov-24 05:35:26 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 05:35:26 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 05:35:26 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 05:35:32 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 05:35:33 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6681
+DEBUG || 12-Nov-24 05:35:33 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6681
+WARNING || 12-Nov-24 05:50:45 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 12-Nov-24 05:50:50 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 05:50:50 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 05:50:50 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 05:50:59 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 05:51:00 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 05:51:02 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 12-Nov-24 05:51:05 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 05:51:07 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 05:51:07 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 05:51:12 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 05:51:14 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6681
+DEBUG || 12-Nov-24 05:51:15 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6681
+WARNING || 12-Nov-24 07:04:12 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 12-Nov-24 07:04:22 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 07:04:22 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 07:04:22 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 07:04:26 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 07:04:27 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 07:04:28 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 12-Nov-24 07:04:29 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 07:04:34 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 07:04:42 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 07:04:47 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 07:04:48 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6681
+DEBUG || 12-Nov-24 07:04:49 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6680
+WARNING || 12-Nov-24 07:22:26 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 12-Nov-24 07:22:31 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 07:22:31 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 07:22:31 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 07:22:32 || Starting new HTTPS connection (2): huggingface.co:443
+DEBUG || 12-Nov-24 07:22:32 || Starting new HTTPS connection (3): huggingface.co:443
+DEBUG || 12-Nov-24 07:22:32 || Starting new HTTPS connection (4): huggingface.co:443
+DEBUG || 12-Nov-24 07:22:32 || Starting new HTTPS connection (5): huggingface.co:443
+DEBUG || 12-Nov-24 07:22:32 || Starting new HTTPS connection (6): huggingface.co:443
+DEBUG || 12-Nov-24 07:22:37 || Starting new HTTPS connection (7): huggingface.co:443
+DEBUG || 12-Nov-24 07:22:37 || Starting new HTTPS connection (8): huggingface.co:443
+DEBUG || 12-Nov-24 07:22:37 || Starting new HTTPS connection (9): huggingface.co:443
+WARNING || 12-Nov-24 07:25:09 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 12-Nov-24 07:25:13 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 07:25:13 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 07:25:13 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 07:25:14 || Starting new HTTPS connection (2): huggingface.co:443
+DEBUG || 12-Nov-24 07:25:14 || Starting new HTTPS connection (3): huggingface.co:443
+DEBUG || 12-Nov-24 07:25:14 || Starting new HTTPS connection (4): huggingface.co:443
+DEBUG || 12-Nov-24 07:25:14 || Starting new HTTPS connection (5): huggingface.co:443
+DEBUG || 12-Nov-24 07:25:14 || Starting new HTTPS connection (6): huggingface.co:443
+DEBUG || 12-Nov-24 07:25:18 || Starting new HTTPS connection (7): huggingface.co:443
+DEBUG || 12-Nov-24 07:25:18 || Starting new HTTPS connection (8): huggingface.co:443
+DEBUG || 12-Nov-24 07:25:18 || Starting new HTTPS connection (9): huggingface.co:443
+WARNING || 12-Nov-24 07:51:01 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 12-Nov-24 07:51:06 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 07:51:06 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 07:51:06 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 07:51:08 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 07:51:09 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 07:51:10 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 12-Nov-24 07:51:11 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 07:51:11 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 07:51:12 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 07:51:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 07:51:17 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6681
+DEBUG || 12-Nov-24 07:51:18 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6681
+WARNING || 12-Nov-24 07:52:02 || Not Found: /favicon.ico
+ERROR || 12-Nov-24 07:52:28 || Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'academia_app_courseofinterest_add' not found. 'academia_app_courseofinterest_add' is not a valid view function or pattern name.
+ERROR || 12-Nov-24 07:57:40 || Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'academia_app_courseofinterest_add' not found. 'academia_app_courseofinterest_add' is not a valid view function or pattern name.
+WARNING || 12-Nov-24 07:57:40 || Not Found: /favicon.ico
+ERROR || 12-Nov-24 07:58:34 || Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'academia_app_performance_add' not found. 'academia_app_performance_add' is not a valid view function or pattern name.
+WARNING || 12-Nov-24 07:58:34 || Not Found: /favicon.ico
+ERROR || 12-Nov-24 08:00:24 || Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'academia_app_attendance_add' not found. 'academia_app_attendance_add' is not a valid view function or pattern name.
+WARNING || 12-Nov-24 08:00:24 || Not Found: /favicon.ico
+ERROR || 12-Nov-24 08:00:48 || Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'academia_app_feeinformation_add' not found. 'academia_app_feeinformation_add' is not a valid view function or pattern name.
+WARNING || 12-Nov-24 08:00:48 || Not Found: /favicon.ico
+WARNING || 12-Nov-24 08:01:07 || Not Found: /favicon.ico
+ERROR || 12-Nov-24 08:06:01 || Internal Server Error: /api/course_data/15/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 392, in course_data
+    graduation_probabilities = [student.graduation_probability for student in students]
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'StudentUser' object has no attribute 'graduation_probability'
+ERROR || 12-Nov-24 08:06:09 || Internal Server Error: /api/course_data/18/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 392, in course_data
+    graduation_probabilities = [student.graduation_probability for student in students]
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'StudentUser' object has no attribute 'graduation_probability'
+ERROR || 12-Nov-24 08:12:33 || Internal Server Error: /api/course_data/73/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 392, in course_data
+    graduation_probabilities = [student.graduation_probability for student in students]
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'StudentUser' object has no attribute 'graduation_probability'
+INFO || 12-Nov-24 08:23:24 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 12-Nov-24 08:26:56 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 12-Nov-24 08:27:00 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 08:27:00 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 08:27:00 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 08:27:03 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 08:27:03 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 08:27:04 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 12-Nov-24 08:27:04 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 08:27:05 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 08:27:06 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 08:27:11 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 08:27:12 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6680
+DEBUG || 12-Nov-24 08:27:12 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6680
+INFO || 12-Nov-24 08:27:51 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 12-Nov-24 08:30:37 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 12-Nov-24 08:30:48 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 08:30:48 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 08:30:48 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 08:30:50 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 08:30:50 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 08:30:50 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 12-Nov-24 08:30:51 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 08:30:51 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 08:30:52 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 08:31:21 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 08:31:26 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6680
+DEBUG || 12-Nov-24 08:31:27 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6681
+INFO || 12-Nov-24 10:34:04 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 12-Nov-24 10:38:51 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 12-Nov-24 10:39:01 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 10:39:01 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 10:39:01 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 10:39:03 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 10:39:04 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 10:39:05 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 12-Nov-24 10:39:06 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 10:39:07 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 10:39:08 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 10:39:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 12-Nov-24 10:39:20 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6681
+DEBUG || 12-Nov-24 10:39:20 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6680
+ERROR || 12-Nov-24 10:42:02 || Internal Server Error: /api/course_data/13/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 453, in course_data
+    graduation_probabilities = [metric.graduation_probability for metric in performance_metrics]
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1561, in execute_sql
+    sql, params = self.as_sql()
+                  ^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 796, in as_sql
+    distinct_result, distinct_params = self.connection.ops.distinct_sql(
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\base\operations.py", line 205, in distinct_sql
+    raise NotSupportedError(
+django.db.utils.NotSupportedError: DISTINCT ON fields is not supported by this database backend
+WARNING || 13-Nov-24 22:41:49 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 13-Nov-24 22:42:05 || Use pytorch device_name: cpu
+INFO || 13-Nov-24 22:42:05 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 13-Nov-24 22:42:05 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 13-Nov-24 22:42:06 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 22:42:07 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 22:42:07 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 13-Nov-24 22:42:07 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 22:42:08 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 22:42:09 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 22:42:27 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 22:42:29 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 13-Nov-24 22:42:30 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+WARNING || 13-Nov-24 22:44:57 || Not Found: /favicon.ico
+INFO || 13-Nov-24 22:45:26 || S-Bert 2024 Recommender Engine Initialized
+INFO || 13-Nov-24 22:45:29 || S-Bert 2024 Recommender Engine Initialized
+INFO || 13-Nov-24 22:45:31 || S-Bert 2024 Recommender Engine Initialized
+INFO || 13-Nov-24 22:45:31 || S-Bert 2024 Recommender Engine Initialized
+INFO || 13-Nov-24 22:45:31 || Time taken by sbert model: 0.8867239952087402
+INFO || 13-Nov-24 22:45:31 || Time taken by sbert model: 5.6896538734436035
+INFO || 13-Nov-24 22:45:32 || Recommender system has run
+INFO || 13-Nov-24 22:45:32 || Recommender system has run
+INFO || 13-Nov-24 22:45:32 || Time taken by sbert model: 2.863110303878784
+INFO || 13-Nov-24 22:45:32 || Time taken by sbert model: 0.883148193359375
+INFO || 13-Nov-24 22:45:32 || Recommender system has run
+INFO || 13-Nov-24 22:45:32 || Recommender system has run
+INFO || 13-Nov-24 23:00:05 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\admin.py changed, reloading.
+WARNING || 13-Nov-24 23:04:38 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 13-Nov-24 23:04:43 || Use pytorch device_name: cpu
+INFO || 13-Nov-24 23:04:43 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 13-Nov-24 23:04:44 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 13-Nov-24 23:04:45 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 23:04:45 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 23:04:46 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 13-Nov-24 23:04:46 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 23:04:46 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 23:04:47 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 23:04:52 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 23:04:53 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 13-Nov-24 23:04:53 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+INFO || 13-Nov-24 23:13:06 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\admin.py changed, reloading.
+WARNING || 13-Nov-24 23:19:48 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 13-Nov-24 23:20:02 || Use pytorch device_name: cpu
+INFO || 13-Nov-24 23:20:02 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 13-Nov-24 23:20:02 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 13-Nov-24 23:20:04 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 23:20:05 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 23:20:06 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 13-Nov-24 23:20:07 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 23:20:08 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 23:20:08 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 23:20:19 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 23:20:22 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 13-Nov-24 23:20:22 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+INFO || 13-Nov-24 23:24:54 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\admin.py changed, reloading.
+WARNING || 13-Nov-24 23:27:53 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 13-Nov-24 23:27:59 || Use pytorch device_name: cpu
+INFO || 13-Nov-24 23:27:59 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 13-Nov-24 23:27:59 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 13-Nov-24 23:28:00 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 23:28:01 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 23:28:02 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 13-Nov-24 23:28:02 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 23:28:02 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 23:28:03 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 23:28:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 13-Nov-24 23:28:17 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 13-Nov-24 23:28:18 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+ERROR || 13-Nov-24 23:32:04 || Internal Server Error: /admin/academia_app/studentuserproxy/add/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\admin\options.py", line 839, in get_form
+    return modelform_factory(self.model, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\forms\models.py", line 654, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\forms\models.py", line 334, in __new__
+    raise FieldError(message)
+django.core.exceptions.FieldError: Unknown field(s) (graduation_probability) specified for StudentUserProxy
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\admin\options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\admin\sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\views\decorators\debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\admin.py", line 121, in add_view
+    return self._add_view(request, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\admin.py", line 149, in _add_view
+    return super().add_view(request, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\admin\options.py", line 1961, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\admin\options.py", line 1820, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\admin\options.py", line 1855, in _changeform_view
+    ModelForm = self.get_form(
+                ^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\admin.py", line 98, in get_form
+    return super().get_form(request, obj, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\admin\options.py", line 841, in get_form
+    raise FieldError(
+django.core.exceptions.FieldError: Unknown field(s) (graduation_probability) specified for StudentUserProxy. Check fields/fieldsets/exclude attributes of class StudentUserAdmin.
+WARNING || 14-Nov-24 00:05:19 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 00:05:37 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 00:05:37 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 00:05:37 || Starting new HTTPS connection (1): huggingface.co:443
+WARNING || 14-Nov-24 00:05:38 || No sentence-transformers model found with name sentence-transformers/all-MiniLM-L6-v2. Creating a new one with mean pooling.
+DEBUG || 14-Nov-24 00:05:38 || Starting new HTTPS connection (2): huggingface.co:443
+WARNING || 14-Nov-24 00:44:31 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 00:44:37 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 00:44:37 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 00:44:37 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 00:44:40 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 00:44:41 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 00:44:41 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 14-Nov-24 00:44:42 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 00:44:42 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 00:44:43 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 00:44:47 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 00:44:48 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 14-Nov-24 00:44:49 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+WARNING || 14-Nov-24 03:07:38 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 03:07:43 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 03:07:43 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 03:07:43 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 03:07:45 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 03:07:45 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 03:07:45 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 14-Nov-24 03:07:46 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 03:07:46 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 03:07:47 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 03:07:53 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 03:07:54 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 14-Nov-24 03:07:54 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+WARNING || 14-Nov-24 03:15:56 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 03:16:06 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 03:16:06 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 03:16:06 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 03:16:08 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 03:16:09 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 03:16:10 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 14-Nov-24 03:16:10 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 03:16:11 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 03:16:11 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 03:16:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 03:16:19 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 14-Nov-24 03:16:20 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+WARNING || 14-Nov-24 03:21:54 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 03:22:00 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 03:22:00 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 03:22:00 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 03:22:02 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 03:22:02 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 03:22:02 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 14-Nov-24 03:22:03 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 03:22:04 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 03:22:05 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 03:22:11 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 03:22:11 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 14-Nov-24 03:22:12 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+WARNING || 14-Nov-24 04:19:50 || Not Found: /favicon.ico
+WARNING || 14-Nov-24 04:20:09 || Not Found: /favicon.ico
+ERROR || 14-Nov-24 04:21:01 || Internal Server Error: /admin/academia_app/studentuserproxy/add/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\admin\options.py", line 839, in get_form
+    return modelform_factory(self.model, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\forms\models.py", line 654, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\forms\models.py", line 334, in __new__
+    raise FieldError(message)
+django.core.exceptions.FieldError: Unknown field(s) (graduation_probability) specified for StudentUserProxy
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\admin\options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\admin\sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\views\decorators\debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\admin.py", line 121, in add_view
+    return self._add_view(request, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\admin.py", line 149, in _add_view
+    return super().add_view(request, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\admin\options.py", line 1961, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\admin\options.py", line 1820, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\admin\options.py", line 1855, in _changeform_view
+    ModelForm = self.get_form(
+                ^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\admin.py", line 98, in get_form
+    return super().get_form(request, obj, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\admin\options.py", line 841, in get_form
+    raise FieldError(
+django.core.exceptions.FieldError: Unknown field(s) (graduation_probability) specified for StudentUserProxy. Check fields/fieldsets/exclude attributes of class StudentUserAdmin.
+INFO || 14-Nov-24 04:28:37 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\admin.py changed, reloading.
+WARNING || 14-Nov-24 04:36:23 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 04:36:56 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 04:36:56 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 04:36:56 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 04:36:58 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 04:36:58 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 04:36:58 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 14-Nov-24 04:36:59 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 04:37:00 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 04:37:00 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 04:37:08 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 04:37:09 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 14-Nov-24 04:37:10 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+DEBUG || 14-Nov-24 04:54:12 || STREAM b'IHDR' 16 13
+DEBUG || 14-Nov-24 04:54:12 || STREAM b'sRGB' 41 1
+DEBUG || 14-Nov-24 04:54:12 || STREAM b'gAMA' 54 4
+DEBUG || 14-Nov-24 04:54:12 || STREAM b'pHYs' 70 9
+DEBUG || 14-Nov-24 04:54:12 || STREAM b'IDAT' 91 65445
+DEBUG || 14-Nov-24 04:54:12 || Importing BlpImagePlugin
+DEBUG || 14-Nov-24 04:54:12 || Importing BmpImagePlugin
+DEBUG || 14-Nov-24 04:54:12 || Importing BufrStubImagePlugin
+DEBUG || 14-Nov-24 04:54:12 || Importing CurImagePlugin
+DEBUG || 14-Nov-24 04:54:12 || Importing DcxImagePlugin
+DEBUG || 14-Nov-24 04:54:12 || Importing DdsImagePlugin
+DEBUG || 14-Nov-24 04:54:12 || Importing EpsImagePlugin
+DEBUG || 14-Nov-24 04:54:12 || Importing FitsImagePlugin
+DEBUG || 14-Nov-24 04:54:12 || Importing FliImagePlugin
+DEBUG || 14-Nov-24 04:54:12 || Importing FpxImagePlugin
+DEBUG || 14-Nov-24 04:54:13 || Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG || 14-Nov-24 04:54:13 || Importing FtexImagePlugin
+DEBUG || 14-Nov-24 04:54:13 || Importing GbrImagePlugin
+DEBUG || 14-Nov-24 04:54:13 || Importing GifImagePlugin
+DEBUG || 14-Nov-24 04:54:13 || Importing GribStubImagePlugin
+DEBUG || 14-Nov-24 04:54:13 || Importing Hdf5StubImagePlugin
+DEBUG || 14-Nov-24 04:54:13 || Importing IcnsImagePlugin
+DEBUG || 14-Nov-24 04:54:13 || Importing IcoImagePlugin
+DEBUG || 14-Nov-24 04:54:13 || Importing ImImagePlugin
+DEBUG || 14-Nov-24 04:54:13 || Importing ImtImagePlugin
+DEBUG || 14-Nov-24 04:54:13 || Importing IptcImagePlugin
+DEBUG || 14-Nov-24 04:54:13 || Importing JpegImagePlugin
+DEBUG || 14-Nov-24 04:54:13 || Importing Jpeg2KImagePlugin
+DEBUG || 14-Nov-24 04:54:13 || Importing McIdasImagePlugin
+DEBUG || 14-Nov-24 04:54:13 || Importing MicImagePlugin
+DEBUG || 14-Nov-24 04:54:13 || Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG || 14-Nov-24 04:54:13 || Importing MpegImagePlugin
+DEBUG || 14-Nov-24 04:54:13 || Importing MpoImagePlugin
+DEBUG || 14-Nov-24 04:54:13 || Importing MspImagePlugin
+DEBUG || 14-Nov-24 04:54:14 || Importing PalmImagePlugin
+DEBUG || 14-Nov-24 04:54:14 || Importing PcdImagePlugin
+DEBUG || 14-Nov-24 04:54:14 || Importing PcxImagePlugin
+DEBUG || 14-Nov-24 04:54:14 || Importing PdfImagePlugin
+DEBUG || 14-Nov-24 04:54:14 || Importing PixarImagePlugin
+DEBUG || 14-Nov-24 04:54:14 || Importing PngImagePlugin
+DEBUG || 14-Nov-24 04:54:14 || Importing PpmImagePlugin
+DEBUG || 14-Nov-24 04:54:14 || Importing PsdImagePlugin
+DEBUG || 14-Nov-24 04:54:14 || Importing QoiImagePlugin
+DEBUG || 14-Nov-24 04:54:14 || Importing SgiImagePlugin
+DEBUG || 14-Nov-24 04:54:14 || Importing SpiderImagePlugin
+DEBUG || 14-Nov-24 04:54:14 || Importing SunImagePlugin
+DEBUG || 14-Nov-24 04:54:14 || Importing TgaImagePlugin
+DEBUG || 14-Nov-24 04:54:14 || Importing TiffImagePlugin
+DEBUG || 14-Nov-24 04:54:14 || Importing WebPImagePlugin
+DEBUG || 14-Nov-24 04:54:15 || Importing WmfImagePlugin
+DEBUG || 14-Nov-24 04:54:15 || Importing XbmImagePlugin
+DEBUG || 14-Nov-24 04:54:15 || Importing XpmImagePlugin
+DEBUG || 14-Nov-24 04:54:15 || Importing XVThumbImagePlugin
+ERROR || 14-Nov-24 05:07:45 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 523, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 178, in predict_probability
+    metrics = PerformanceMetric.objects.get(student=student)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\query.py", line 635, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\sql\query.py", line 1609, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\sql\query.py", line 1641, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\sql\query.py", line 1303, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\sql\query.py", line 1768, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'student' into field. Choices are: Aggregate_points, CAT_1_marks, CAT_2_marks, Deadline_Adherence, Lessons_Attended, Total_lessons_in_that_period, activity_on_elearning_platforms, activity_on_learning_platforms, date, graduation_probability, homework_submission_rates, id, pcnt_of_lessons_attended, semester, student_user, student_user_id, teachers_comments_so_far, year_of_study
+INFO || 14-Nov-24 05:19:29 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 14-Nov-24 05:23:37 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 05:23:43 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 05:23:43 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 05:23:43 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 05:23:46 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 05:23:46 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 05:23:47 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 14-Nov-24 05:23:47 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 05:23:48 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 05:23:49 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 05:23:55 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 05:23:55 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 14-Nov-24 05:23:56 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+ERROR || 14-Nov-24 05:39:00 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 523, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 184, in predict_probability
+    lessons_attended = metrics.lessons_attended
+                       ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PerformanceMetric' object has no attribute 'lessons_attended'. Did you mean: 'Lessons_Attended'?
+INFO || 14-Nov-24 05:41:44 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 14-Nov-24 05:45:20 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 05:45:26 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 05:45:26 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 05:45:27 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 05:45:28 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 05:45:29 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 05:45:29 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 14-Nov-24 05:45:30 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 05:45:30 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 05:45:30 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 05:45:35 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 05:45:35 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 14-Nov-24 05:45:36 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+ERROR || 14-Nov-24 05:46:13 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 523, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 186, in predict_probability
+    pcnt_of_lessons_attended = metrics.percent_of_lessons_attended
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PerformanceMetric' object has no attribute 'percent_of_lessons_attended'. Did you mean: 'pcnt_of_lessons_attended'?
+INFO || 14-Nov-24 05:48:03 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 14-Nov-24 05:52:18 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 05:52:23 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 05:52:23 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 05:52:23 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 05:52:24 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 05:52:26 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 05:52:26 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 14-Nov-24 05:52:26 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 05:52:27 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 05:52:27 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 05:52:32 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 05:52:33 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 14-Nov-24 05:52:33 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+ERROR || 14-Nov-24 05:58:59 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 523, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 188, in predict_probability
+    cat_1_marks = metrics.CAT_1_marks
+                  ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PerformanceMetric' object has no attribute 'cat_1_marks'. Did you mean: 'CAT_1_marks'?
+INFO || 14-Nov-24 05:59:44 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 14-Nov-24 06:02:22 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 06:02:25 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 06:02:25 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 06:02:26 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 06:02:26 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:02:27 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:02:27 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:02:28 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:02:28 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:02:29 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:02:32 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:02:32 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 14-Nov-24 06:02:32 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+WARNING || 14-Nov-24 06:03:14 || Not Found: /ws/academia_app/
+WARNING || 14-Nov-24 06:03:43 || Not Found: /ws/academia_app/
+WARNING || 14-Nov-24 06:03:43 || Not Found: /favicon.ico
+WARNING || 14-Nov-24 06:05:25 || Not Found: /ws/academia_app/
+WARNING || 14-Nov-24 06:05:25 || Not Found: /favicon.ico
+<<<<<<< HEAD
+>>>>>>> 300e7272 (Cleaned The Database)
+=======
+WARNING || 14-Nov-24 06:13:08 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 06:13:21 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 06:13:21 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 06:13:21 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 06:13:22 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:13:23 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:13:23 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:13:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:13:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:13:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:13:34 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:13:34 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 14-Nov-24 06:13:35 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+ERROR || 14-Nov-24 06:22:48 || Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 640, in profile
+    attendance_records = Attendance.objects.filter(student=student_user)
+                         ^^^^^^^^^^
+NameError: name 'Attendance' is not defined
+WARNING || 14-Nov-24 06:22:53 || Not Found: /ws/academia_app/
+INFO || 14-Nov-24 06:27:34 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 14-Nov-24 06:31:31 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 06:31:37 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 06:31:37 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 06:31:37 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 06:31:39 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:31:39 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:31:40 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:31:40 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:31:41 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:31:41 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:31:45 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:31:46 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 14-Nov-24 06:31:46 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+INFO || 14-Nov-24 06:31:59 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 14-Nov-24 06:35:05 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 06:35:08 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 06:35:08 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 06:35:08 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 06:35:09 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:35:10 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:35:10 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:35:11 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:35:11 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:35:11 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:35:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:35:16 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 14-Nov-24 06:35:16 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+WARNING || 14-Nov-24 06:36:15 || Not Found: /ws/academia_app/
+WARNING || 14-Nov-24 06:36:15 || Not Found: /favicon.ico
+ERROR || 14-Nov-24 06:36:32 || Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 640, in profile
+    metrics = PerformanceMetric.objects.get(student=student)
+                                                    ^^^^^^^
+NameError: name 'student' is not defined
+INFO || 14-Nov-24 06:37:13 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 14-Nov-24 06:39:07 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 06:39:12 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 06:39:12 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 06:39:12 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 06:39:13 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:39:14 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:39:14 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:39:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:39:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:39:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:39:18 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:39:19 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 14-Nov-24 06:39:19 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+ERROR || 14-Nov-24 06:39:32 || Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 640, in profile
+    metrics = PerformanceMetric.objects.get(student_user=student)
+                                                         ^^^^^^^
+NameError: name 'student' is not defined
+INFO || 14-Nov-24 06:41:20 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 14-Nov-24 06:42:37 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 06:42:38 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 06:42:38 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 06:42:38 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 06:42:39 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:42:40 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:42:40 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:42:40 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:42:41 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:42:41 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:42:52 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:42:53 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 14-Nov-24 06:42:53 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+ERROR || 14-Nov-24 06:43:30 || Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 669, in profile
+    return render(request, 'academia_app/Profile.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\template\defaulttags.py", line 198, in render
+    values = list(values)
+             ^^^^^^^^^^^^
+TypeError: 'float' object is not iterable
+INFO || 14-Nov-24 06:52:02 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+WARNING || 14-Nov-24 06:55:39 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 06:55:45 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 06:55:45 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 06:55:45 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 06:55:45 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:55:46 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:55:47 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:55:48 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:55:48 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:55:48 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:55:54 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 06:55:55 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 14-Nov-24 06:55:56 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+ERROR || 14-Nov-24 06:56:32 || Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 667, in profile
+    'metric': metric,
+              ^^^^^^
+NameError: name 'metric' is not defined. Did you mean: 'metrics'?
+WARNING || 14-Nov-24 06:56:34 || Not Found: /favicon.ico
+INFO || 14-Nov-24 06:57:05 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 14-Nov-24 06:59:59 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 07:00:05 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 07:00:05 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 07:00:06 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 07:00:07 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:00:08 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:00:09 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:00:09 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:00:09 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:00:10 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:00:14 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:00:15 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 14-Nov-24 07:00:15 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+WARNING || 14-Nov-24 07:04:54 || Not Found: /favicon.ico
+WARNING || 14-Nov-24 07:05:31 || Not Found: /favicon.ico
+WARNING || 14-Nov-24 07:05:37 || Not Found: /favicon.ico
+WARNING || 14-Nov-24 07:05:58 || Not Found: /favicon.ico
+WARNING || 14-Nov-24 07:07:41 || Not Found: /favicon.ico
+>>>>>>> fd5202a2 (preparing a pull from main)
+WARNING || 14-Nov-24 07:36:17 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 07:36:29 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 07:36:29 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 07:36:29 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 07:36:31 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:36:31 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:36:32 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:36:32 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:36:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:36:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:36:42 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:36:44 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 14-Nov-24 07:36:45 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+ERROR || 14-Nov-24 07:42:26 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 522, in student_page
+    return predict_probability(request, student_id=student_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 170, in predict_probability
+    model = joblib.load(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Hp\\Desktop\\ProActEd\\AIacademia\\trained_models\\proacted_model_2.2_with5morefeatures.joblib'
+INFO || 14-Nov-24 07:44:03 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+WARNING || 14-Nov-24 07:51:24 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 07:51:34 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 07:51:34 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 07:51:34 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 07:51:36 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:51:36 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:51:37 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:51:38 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:51:38 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:51:38 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:51:44 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:51:45 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 14-Nov-24 07:51:45 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+ERROR || 14-Nov-24 07:52:11 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: academia_app_performancemetric
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 522, in student_page
+    return predict_probability(request, student_id=student_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\views.py", line 178, in predict_probability
+    metrics = PerformanceMetric.objects.get(student_user=student)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: academia_app_performancemetric
+WARNING || 14-Nov-24 07:57:13 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 07:57:22 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 07:57:22 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 07:57:22 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 07:57:23 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:57:24 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:57:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:57:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:57:26 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:57:27 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:57:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 07:57:37 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 14-Nov-24 07:57:37 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+WARNING || 14-Nov-24 08:02:26 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 08:02:29 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 08:02:29 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 08:02:29 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 08:02:35 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 08:02:37 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 08:02:37 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 14-Nov-24 08:02:37 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 08:02:38 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 08:02:39 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 08:02:58 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 08:03:05 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 14-Nov-24 08:03:05 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+WARNING || 14-Nov-24 08:05:42 || Not Found: /ws/academia_app/
+WARNING || 14-Nov-24 08:06:10 || Not Found: /ws/academia_app/

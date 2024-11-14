@@ -305,8 +305,8 @@ header#header {
 }
 
 .profile-box .profile-picture {
-    width: 40%;
-    height: auto;
+    width: 30%;
+    height: 30%;
     border-radius: 50%; 
 }
 
