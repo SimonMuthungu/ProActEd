@@ -1,10 +1,12 @@
+#AIacademia\academia_app\urls.py
 from django.contrib.auth.views import LogoutView
 from django.urls import include, path
 from django.contrib.auth import views as auth_views
 
 from . import views
+
 urlpatterns = [
-    path('', views.course_recommendation, name='course_recommendation'),
+    path('', include('academia_app.auth_urls')),
     path('admin_dashboard/', views.admin_dashboard, name='admin_dashboard'),
     path('dashboard/', views.dashboard, name='dashboard'),
     path('api/school_data/<int:school_id>/', views.school_data, name='school_data'),

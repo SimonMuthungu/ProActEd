@@ -10,11 +10,7 @@ from django import forms
 from django.forms.renderers import TemplatesSetting
 import django_heroku
 import dj_database_url
-#
-#
-#
-#
-#
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -73,7 +69,7 @@ ASGI_APPLICATION = 'AIacademia.asgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db (galavu).sqlite3',
     },
     'bot_db': {
         'ENGINE': 'django.db.backends.sqlite3',

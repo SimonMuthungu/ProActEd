@@ -12,15 +12,18 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 from sklearn.cluster import KMeans
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+from django.conf import settings
+from pathlib import Path
 
 
+log_file_path =Path(settings.BASE_DIR) / 'mainlogfile.log'
 
-logging.basicConfig(filename=r'C:\Users\user\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-
-# logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-#logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-
-
+logging.basicConfig(
+    filename=str(log_file_path),
+    level=logging.DEBUG,
+    format='%(levelname)s || %(asctime)s || %(message)s',
+    datefmt='%d-%b-%y %H:%M:%S'
+)
 
 # Define a function to preprocess text
 def preprocess_text(text):

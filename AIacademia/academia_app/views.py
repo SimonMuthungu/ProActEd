@@ -1,4 +1,4 @@
-#vies.py
+#views.py
 import logging
 import os
 import sys
@@ -41,7 +41,6 @@ from django.urls import reverse_lazy
 from python_scripts.recommender_engine import load_model
 #from .models import StudentUser, AdminUser, SuperAdminUser, Attendance, Performance, Course, School, Recommender_training_data
 from .forms import UpdateStudentProfileForm
-# from tensorflow.keras.models import load_model
 from .models import *
 from django.db.models import Count, Sum
 from django.shortcuts import render
@@ -50,7 +49,9 @@ from django.views.decorators.csrf import requires_csrf_token
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.shortcuts import redirect, render
-from keras.models import Sequential
+from tensorflow.keras.models import Sequential, load_model
+
+
 
 
 
@@ -81,6 +82,7 @@ from .models import (Attendance, BaseUser, Course, Message, Performance,
 # logging.basicConfig(filename=r'C:\Users\Simon\proacted\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 # logging.basicConfig(filename=r'C:\Users\Hp\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 logging.basicConfig(filename=r'C:\Users\user\Desktop\ProActEd\AIacademia\mainlogfile.log',level=logging.DEBUG, format='%(levelname)s || %(asctime)s || %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+model_path =os.path.join(settings.BASE_DIR, 'trained_models', 'probability_model.joblib')
 
 # @requires_csrf_token
 def custom_csrf_failure(request, reason=""):
@@ -191,18 +193,16 @@ def recommend_courses(request):
             
 logger = logging.getLogger(__name__)
 
-def predict_probability(request, student_id=3): 
+def predict_probability(request, student_id=10): 
     try: 
-
-        # model_path = r'C:\Users\user\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-        # model_path = r'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        logging.info('Probability model proacted_prob_model2 loaded') 
         model = joblib.load(model_path)
 
-        logging.info('Probability model proacted_prob_model2 loaded') 
-
+        # Student user object
         student_data = StudentUser.objects.get(id=student_id) 
+
         aggrpoints = student_data.Aggregate_points
+        lessonsattended = student_data.Lessons_Attended
         pcnt_of_lessons_attended = student_data.pcnt_of_lessons_attended 
         homework_submission_rates = student_data.homework_submission_rates
         activity_on_learning_platforms = student_data.activity_on_learning_platforms
@@ -247,9 +247,9 @@ def update_probabilities(course_id=None, school_id=None):
             # Getting all students associated with the given course ID
             students = StudentUser.objects.filter(course_id=course_id)
 
-            # Loading the machine learning model
-            model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
-            # 'C:\Users\Simon\proacted\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+            # # Loading the machine learning model
+            # model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\probability_model.joblib'
+            # # 'C:\Users\Simon\proacted\AIacademia\trained_models\probability_model.joblib'
             model = joblib.load(model_path)
 
             total_probability = 0.0
@@ -350,8 +350,6 @@ def UpdateStudentsCountView(request):
 
 @login_required
 def dashboard(request):
-    print("Visited Dashboard")
-    # Redirect users based on their type
     if request.user.is_superuser or request.user.is_staff:
         total_students = StudentUser.objects.count()
         total_staff = AdminUser.objects.count()
@@ -373,7 +371,7 @@ def dashboard(request):
 
         return render(request, 'admin/profile.html', context)
     else:
-        return redirect('student_page')  # Students to student page
+        return redirect('student_page')
 
 # View to fetch data for schools for pie charts
 def school_data(request, school_id):
@@ -478,17 +476,15 @@ def student_page(request):
         student_first_name = request.user.first_name
         if not student_first_name:
             student_first_name = request.user.username
-
         # Get the associated StudentUser object of the logged-in user
         try:
             student_user = StudentUser.objects.get(username=request.user.username)
             student_id = student_user.id
             print(f"Student ID: {student_id}")
-            return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
-            # return render(request, "academia_app/student_page.html", context={'student_name': student_first_name})
+            return predict_probability(request, student_id=student_id)
         except StudentUser.DoesNotExist:
             print("StudentUser object does not exist for the current user")
-            return redirect('login') # student doesnt exist, so they login first
+            return redirect('login')
     else:
         if request.user.is_superuser or request.user.is_staff:
             return redirect('/admin/')

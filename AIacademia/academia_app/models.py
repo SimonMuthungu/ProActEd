@@ -18,8 +18,8 @@ class CustomUserManager(BaseUserManager):
             user.groups.add(group)
             role_map = {
                 'SuperAdminUser': 'Super Administrator',
-                'StaffUser': 'Administrator',
-                'StudentUser': 'Student User',
+                'Staff Users': 'Administrator',
+                'Student Users': 'Student User',
             }
             user.role = role_map.get(group_name, '')
             user.save()
@@ -63,7 +63,7 @@ class BaseUserGroup(models.Model):
     group = models.ForeignKey(Group, on_delete=models.CASCADE)
 
 
-# Admin User Model
+# Admin User Modelsuper
 class AdminUser(BaseUser):
     admin_field = models.CharField(max_length=100)
 

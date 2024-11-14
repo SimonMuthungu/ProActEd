@@ -1,5 +1,3 @@
-# lazy_load_model_with_cache.py
-
 import os
 from sentence_transformers import SentenceTransformer
 from django.core.cache import cache
@@ -17,6 +15,4 @@ def lazy_load_model_with_cache():
         print("Loaded and cached SentenceTransformer model.")
     else:
         print("Using cached SentenceTransformer model.")
-
     return model
-

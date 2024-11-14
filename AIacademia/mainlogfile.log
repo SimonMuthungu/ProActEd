@@ -20020,3 +20020,1351 @@ INFO || 28-Jun-24 09:16:33 || Recommender system has run
 INFO || 28-Jun-24 09:25:30 || S-Bert 2024 Recommender Engine Initialized
 INFO || 28-Jun-24 09:25:31 || Time taken by sbert model: 1.3463218212127686
 INFO || 28-Jun-24 09:25:31 || Recommender system has run
+INFO || 22-Oct-24 09:15:38 || Use pytorch device_name: cpu
+INFO || 22-Oct-24 09:15:38 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 22-Oct-24 09:15:38 || Starting new HTTPS connection (1): huggingface.co:443
+WARNING || 22-Oct-24 09:15:38 || No sentence-transformers model found with name sentence-transformers/all-MiniLM-L6-v2. Creating a new one with mean pooling.
+DEBUG || 22-Oct-24 09:15:38 || Starting new HTTPS connection (2): huggingface.co:443
+INFO || 22-Oct-24 09:15:38 || Use pytorch device_name: cpu
+INFO || 22-Oct-24 09:15:38 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 22-Oct-24 09:15:38 || Starting new HTTPS connection (1): huggingface.co:443
+WARNING || 22-Oct-24 09:15:38 || No sentence-transformers model found with name sentence-transformers/all-MiniLM-L6-v2. Creating a new one with mean pooling.
+DEBUG || 22-Oct-24 09:15:38 || Starting new HTTPS connection (2): huggingface.co:443
+INFO || 22-Oct-24 17:38:59 || Use pytorch device_name: cpu
+INFO || 22-Oct-24 17:38:59 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 22-Oct-24 17:38:59 || Starting new HTTPS connection (1): huggingface.co:443
+WARNING || 22-Oct-24 17:38:59 || No sentence-transformers model found with name sentence-transformers/all-MiniLM-L6-v2. Creating a new one with mean pooling.
+DEBUG || 22-Oct-24 17:38:59 || Starting new HTTPS connection (2): huggingface.co:443
+INFO || 22-Oct-24 17:38:59 || Use pytorch device_name: cpu
+INFO || 22-Oct-24 17:38:59 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 22-Oct-24 17:38:59 || Starting new HTTPS connection (1): huggingface.co:443
+WARNING || 22-Oct-24 17:38:59 || No sentence-transformers model found with name sentence-transformers/all-MiniLM-L6-v2. Creating a new one with mean pooling.
+DEBUG || 22-Oct-24 17:38:59 || Starting new HTTPS connection (2): huggingface.co:443
+INFO || 22-Oct-24 17:47:55 || D:\My_Projects\ProActEd\AIacademia\python_scripts\lazyloader.py changed, reloading.
+INFO || 22-Oct-24 17:48:27 || Use pytorch device_name: cpu
+INFO || 22-Oct-24 17:48:27 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 22-Oct-24 17:48:28 || Starting new HTTPS connection (1): huggingface.co:443
+WARNING || 22-Oct-24 17:48:28 || No sentence-transformers model found with name sentence-transformers/all-MiniLM-L6-v2. Creating a new one with mean pooling.
+DEBUG || 22-Oct-24 17:48:28 || Starting new HTTPS connection (2): huggingface.co:443
+INFO || 22-Oct-24 17:48:28 || Use pytorch device_name: cpu
+INFO || 22-Oct-24 17:48:28 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 22-Oct-24 17:48:28 || Starting new HTTPS connection (1): huggingface.co:443
+WARNING || 22-Oct-24 17:48:28 || No sentence-transformers model found with name sentence-transformers/all-MiniLM-L6-v2. Creating a new one with mean pooling.
+DEBUG || 22-Oct-24 17:48:28 || Starting new HTTPS connection (2): huggingface.co:443
+INFO || 22-Oct-24 17:55:05 || D:\My_Projects\ProActEd\AIacademia\python_scripts\lazyloader.py changed, reloading.
+INFO || 22-Oct-24 17:55:35 || Use pytorch device_name: cpu
+INFO || 22-Oct-24 17:55:35 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 22-Oct-24 17:55:35 || Starting new HTTPS connection (1): huggingface.co:443
+WARNING || 22-Oct-24 17:55:35 || No sentence-transformers model found with name sentence-transformers/all-MiniLM-L6-v2. Creating a new one with mean pooling.
+DEBUG || 22-Oct-24 17:55:35 || Starting new HTTPS connection (2): huggingface.co:443
+INFO || 22-Oct-24 17:55:35 || Use pytorch device_name: cpu
+INFO || 22-Oct-24 17:55:35 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 22-Oct-24 17:55:35 || Starting new HTTPS connection (1): huggingface.co:443
+WARNING || 22-Oct-24 17:55:35 || No sentence-transformers model found with name sentence-transformers/all-MiniLM-L6-v2. Creating a new one with mean pooling.
+DEBUG || 22-Oct-24 17:55:35 || Starting new HTTPS connection (2): huggingface.co:443
+INFO || 23-Oct-24 13:47:53 || Use pytorch device_name: cpu
+INFO || 23-Oct-24 13:47:53 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 23-Oct-24 13:47:53 || Starting new HTTPS connection (1): huggingface.co:443
+WARNING || 23-Oct-24 13:47:53 || No sentence-transformers model found with name sentence-transformers/all-MiniLM-L6-v2. Creating a new one with mean pooling.
+DEBUG || 23-Oct-24 13:47:53 || Starting new HTTPS connection (2): huggingface.co:443
+INFO || 23-Oct-24 13:47:53 || Use pytorch device_name: cpu
+INFO || 23-Oct-24 13:47:53 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 23-Oct-24 13:47:53 || Starting new HTTPS connection (1): huggingface.co:443
+WARNING || 23-Oct-24 13:47:53 || No sentence-transformers model found with name sentence-transformers/all-MiniLM-L6-v2. Creating a new one with mean pooling.
+DEBUG || 23-Oct-24 13:47:53 || Starting new HTTPS connection (2): huggingface.co:443
+INFO || 23-Oct-24 14:49:01 || D:\My_Projects\ProActEd\AIacademia\python_scripts\lazyloader.py changed, reloading.
+INFO || 01-Nov-24 07:50:04 || Use pytorch device_name: cpu
+INFO || 01-Nov-24 07:50:04 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 01-Nov-24 07:50:04 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 01-Nov-24 07:50:05 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 07:50:05 || Attempting to acquire lock 2698849550688 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+DEBUG || 01-Nov-24 07:50:05 || Lock 2698849550688 acquired on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+DEBUG || 01-Nov-24 07:50:05 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 349
+DEBUG || 01-Nov-24 07:50:05 || Attempting to release lock 2698849550688 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+DEBUG || 01-Nov-24 07:50:05 || Lock 2698849550688 released on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+DEBUG || 01-Nov-24 07:50:06 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 07:50:06 || Attempting to acquire lock 2698849554336 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+DEBUG || 01-Nov-24 07:50:06 || Lock 2698849554336 acquired on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+DEBUG || 01-Nov-24 07:50:07 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 116
+DEBUG || 01-Nov-24 07:50:07 || Attempting to release lock 2698849554336 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+DEBUG || 01-Nov-24 07:50:07 || Lock 2698849554336 released on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+DEBUG || 01-Nov-24 07:50:08 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 07:50:08 || Attempting to acquire lock 2698849554240 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\8cfec92309f5626a223304af2423e332f6d31887.lock
+DEBUG || 01-Nov-24 07:50:08 || Lock 2698849554240 acquired on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\8cfec92309f5626a223304af2423e332f6d31887.lock
+DEBUG || 01-Nov-24 07:50:08 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 10659
+DEBUG || 01-Nov-24 07:50:08 || Attempting to release lock 2698849554240 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\8cfec92309f5626a223304af2423e332f6d31887.lock
+DEBUG || 01-Nov-24 07:50:08 || Lock 2698849554240 released on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\8cfec92309f5626a223304af2423e332f6d31887.lock
+DEBUG || 01-Nov-24 07:50:08 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 07:50:09 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 07:50:09 || Attempting to acquire lock 2698849551840 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\59d594003bf59880a884c574bf88ef7555bb0202.lock
+DEBUG || 01-Nov-24 07:50:09 || Lock 2698849551840 acquired on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\59d594003bf59880a884c574bf88ef7555bb0202.lock
+DEBUG || 01-Nov-24 07:50:10 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 53
+DEBUG || 01-Nov-24 07:50:10 || Attempting to release lock 2698849551840 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\59d594003bf59880a884c574bf88ef7555bb0202.lock
+DEBUG || 01-Nov-24 07:50:10 || Lock 2698849551840 released on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\59d594003bf59880a884c574bf88ef7555bb0202.lock
+DEBUG || 01-Nov-24 07:50:10 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 07:50:10 || Attempting to acquire lock 2698849551840 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\72b987fd805cfa2b58c4c8c952b274a11bfd5a00.lock
+DEBUG || 01-Nov-24 07:50:10 || Lock 2698849551840 acquired on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\72b987fd805cfa2b58c4c8c952b274a11bfd5a00.lock
+DEBUG || 01-Nov-24 07:50:10 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 612
+DEBUG || 01-Nov-24 07:50:10 || Attempting to release lock 2698849551840 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\72b987fd805cfa2b58c4c8c952b274a11bfd5a00.lock
+DEBUG || 01-Nov-24 07:50:10 || Lock 2698849551840 released on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\72b987fd805cfa2b58c4c8c952b274a11bfd5a00.lock
+DEBUG || 01-Nov-24 07:50:13 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/model.safetensors HTTP/1.1" 302 0
+DEBUG || 01-Nov-24 07:50:13 || Attempting to acquire lock 2698852927808 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+DEBUG || 01-Nov-24 07:50:13 || Lock 2698852927808 acquired on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+DEBUG || 01-Nov-24 07:50:13 || Starting new HTTPS connection (1): cdn-lfs.hf.co:443
+DEBUG || 01-Nov-24 07:50:14 || https://cdn-lfs.hf.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1730694346&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMDY5NDM0Nn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zZW50ZW5jZS10cmFuc2Zvcm1lcnMvYWxsLU1pbmlMTS1MNi12Mi81M2FhNTExNzJkMTQyYzg5ZDkwMTJjY2UxNWFlNGQ2Y2MwY2E2ODk1ODk1MTE0Mzc5Y2FjYjRmYWIxMjhkOWRiP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=sY3yIZ4-MOCUwpOD-pufSxHbMmeZ4jwPv4TQzzVRsa4l-sblVs9sC8pW1sHsTv6TUOhL6qt4ykyBYonWMlipC9eA7P3yryUKFMV9ymp4xOA-PAjIdUEri1BRtcwUv60HurB9NqCmRu5rZY438cuOC0F7TD83gyW634ce7UBsiotwrp3ObMPba~kdrJoa6WVcQ0OjVM0sXbUBDtjAk6H6WDlIIo2v21uHRJYaZxMUHhF6H~Nry43MFa1z7dsQ-3x5hqVC8o1Gfi8PmjIi65CE2hNvsilU2v3wqG0JQfcG7mMK1NKYYnlt9w5Fz8DCYqyAKTrT-vCLJYm5Ui0HjFEv0Q__&Key-Pair-Id=K3RPWS32NSSJCE HTTP/1.1" 200 90868376
+DEBUG || 01-Nov-24 07:50:56 || Attempting to release lock 2698852927808 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+DEBUG || 01-Nov-24 07:50:56 || Lock 2698852927808 released on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+DEBUG || 01-Nov-24 07:50:58 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 07:50:58 || Attempting to acquire lock 2698849725120 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\c79f2b6a0cea6f4b564fed1938984bace9d30ff0.lock
+DEBUG || 01-Nov-24 07:50:58 || Lock 2698849725120 acquired on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\c79f2b6a0cea6f4b564fed1938984bace9d30ff0.lock
+DEBUG || 01-Nov-24 07:50:58 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 350
+DEBUG || 01-Nov-24 07:50:58 || Attempting to release lock 2698849725120 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\c79f2b6a0cea6f4b564fed1938984bace9d30ff0.lock
+DEBUG || 01-Nov-24 07:50:58 || Lock 2698849725120 released on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\c79f2b6a0cea6f4b564fed1938984bace9d30ff0.lock
+DEBUG || 01-Nov-24 07:50:59 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/vocab.txt HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 07:50:59 || Attempting to acquire lock 2698849725024 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fb140275c155a9c7c5a3b3e0e77a9e839594a938.lock
+DEBUG || 01-Nov-24 07:50:59 || Lock 2698849725024 acquired on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fb140275c155a9c7c5a3b3e0e77a9e839594a938.lock
+DEBUG || 01-Nov-24 07:50:59 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/vocab.txt HTTP/1.1" 200 231508
+DEBUG || 01-Nov-24 07:51:00 || Attempting to release lock 2698849725024 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fb140275c155a9c7c5a3b3e0e77a9e839594a938.lock
+DEBUG || 01-Nov-24 07:51:00 || Lock 2698849725024 released on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fb140275c155a9c7c5a3b3e0e77a9e839594a938.lock
+DEBUG || 01-Nov-24 07:51:01 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 07:51:01 || Attempting to acquire lock 2698849725168 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\cb202bfe2e3c98645018a6d12f182a434c9d3e02.lock
+DEBUG || 01-Nov-24 07:51:01 || Lock 2698849725168 acquired on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\cb202bfe2e3c98645018a6d12f182a434c9d3e02.lock
+DEBUG || 01-Nov-24 07:51:01 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer.json HTTP/1.1" 200 466247
+DEBUG || 01-Nov-24 07:51:01 || Attempting to release lock 2698849725168 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\cb202bfe2e3c98645018a6d12f182a434c9d3e02.lock
+DEBUG || 01-Nov-24 07:51:01 || Lock 2698849725168 released on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\cb202bfe2e3c98645018a6d12f182a434c9d3e02.lock
+DEBUG || 01-Nov-24 07:51:02 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/added_tokens.json HTTP/1.1" 404 0
+DEBUG || 01-Nov-24 07:51:02 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/special_tokens_map.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 07:51:02 || Attempting to acquire lock 2698849722912 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\e7b0375001f109a6b8873d756ad4f7bbb15fbaa5.lock
+DEBUG || 01-Nov-24 07:51:02 || Lock 2698849722912 acquired on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\e7b0375001f109a6b8873d756ad4f7bbb15fbaa5.lock
+DEBUG || 01-Nov-24 07:51:02 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/special_tokens_map.json HTTP/1.1" 200 112
+DEBUG || 01-Nov-24 07:51:03 || Attempting to release lock 2698849722912 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\e7b0375001f109a6b8873d756ad4f7bbb15fbaa5.lock
+DEBUG || 01-Nov-24 07:51:03 || Lock 2698849722912 released on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\e7b0375001f109a6b8873d756ad4f7bbb15fbaa5.lock
+DEBUG || 01-Nov-24 07:51:03 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6560
+DEBUG || 01-Nov-24 07:51:03 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 01-Nov-24 07:51:05 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/ea78891063587eb050ed4166b20062eaf978037c/1_Pooling/config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 07:51:05 || Attempting to acquire lock 2698853154528 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\d1514c3162bbe87b343f565fadc62e6c06f04f03.lock
+DEBUG || 01-Nov-24 07:51:05 || Lock 2698853154528 acquired on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\d1514c3162bbe87b343f565fadc62e6c06f04f03.lock
+DEBUG || 01-Nov-24 07:51:05 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/ea78891063587eb050ed4166b20062eaf978037c/1_Pooling/config.json HTTP/1.1" 200 190
+DEBUG || 01-Nov-24 07:51:05 || Attempting to release lock 2698853154528 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\d1514c3162bbe87b343f565fadc62e6c06f04f03.lock
+DEBUG || 01-Nov-24 07:51:05 || Lock 2698853154528 released on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\d1514c3162bbe87b343f565fadc62e6c06f04f03.lock
+DEBUG || 01-Nov-24 07:51:06 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6560
+WARNING || 01-Nov-24 07:51:34 || Not Found: /favicon.ico
+INFO || 01-Nov-24 07:52:38 || S-Bert 2024 Recommender Engine Initialized
+INFO || 01-Nov-24 07:52:42 || S-Bert 2024 Recommender Engine Initialized
+INFO || 01-Nov-24 07:52:48 || Time taken by sbert model: 6.4993369579315186
+INFO || 01-Nov-24 07:52:48 || Recommender system has run
+INFO || 01-Nov-24 07:52:48 || Time taken by sbert model: 10.045518636703491
+INFO || 01-Nov-24 07:52:48 || Recommender system has run
+INFO || 01-Nov-24 08:03:51 || D:\My_Projects\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+INFO || 01-Nov-24 08:04:50 || Use pytorch device_name: cpu
+INFO || 01-Nov-24 08:04:50 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 01-Nov-24 08:04:50 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 01-Nov-24 08:04:50 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:04:51 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:04:51 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:04:51 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:04:51 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:04:52 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:04:53 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:04:53 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6561
+DEBUG || 01-Nov-24 08:04:54 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6560
+INFO || 01-Nov-24 08:07:23 || D:\My_Projects\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+INFO || 01-Nov-24 08:08:57 || Use pytorch device_name: cpu
+INFO || 01-Nov-24 08:08:57 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 01-Nov-24 08:08:57 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 01-Nov-24 08:08:57 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:08:58 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:08:58 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:08:58 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:08:59 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:08:59 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:09:05 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:09:06 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6560
+DEBUG || 01-Nov-24 08:09:06 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6561
+INFO || 01-Nov-24 08:14:05 || D:\My_Projects\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+INFO || 01-Nov-24 08:16:07 || Use pytorch device_name: cpu
+INFO || 01-Nov-24 08:16:07 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 01-Nov-24 08:16:07 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 01-Nov-24 08:16:07 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:16:08 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:16:08 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:16:08 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:16:08 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:16:09 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:16:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:16:16 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6561
+DEBUG || 01-Nov-24 08:16:17 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6561
+INFO || 01-Nov-24 08:19:57 || D:\My_Projects\ProActEd\AIacademia\academia_app\urls.py changed, reloading.
+INFO || 01-Nov-24 08:20:45 || Use pytorch device_name: cpu
+INFO || 01-Nov-24 08:20:45 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 01-Nov-24 08:20:45 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 01-Nov-24 08:20:45 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:20:46 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:20:46 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:20:47 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:20:47 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:20:47 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:20:49 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:20:49 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6560
+DEBUG || 01-Nov-24 08:20:50 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6561
+WARNING || 01-Nov-24 08:21:07 || Not Found: /
+INFO || 01-Nov-24 08:21:45 || D:\My_Projects\ProActEd\AIacademia\AIacademia\urls.py changed, reloading.
+INFO || 01-Nov-24 08:22:59 || Use pytorch device_name: cpu
+INFO || 01-Nov-24 08:22:59 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 01-Nov-24 08:22:59 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 01-Nov-24 08:22:59 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:23:00 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:23:00 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:23:00 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:23:00 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:23:01 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:23:05 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:23:06 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6561
+DEBUG || 01-Nov-24 08:23:06 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6560
+WARNING || 01-Nov-24 08:25:20 || Not Found: /
+INFO || 01-Nov-24 08:26:28 || D:\My_Projects\ProActEd\AIacademia\academia_app\auth_urls.py changed, reloading.
+INFO || 01-Nov-24 08:27:37 || Use pytorch device_name: cpu
+INFO || 01-Nov-24 08:27:37 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 01-Nov-24 08:27:37 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 01-Nov-24 08:27:37 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:27:38 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:27:38 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:27:38 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:27:39 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:27:39 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:27:45 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:27:46 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6560
+DEBUG || 01-Nov-24 08:27:47 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6560
+WARNING || 01-Nov-24 08:28:44 || Not Found: /
+INFO || 01-Nov-24 08:29:04 || D:\My_Projects\ProActEd\AIacademia\academia_app\auth_urls.py changed, reloading.
+INFO || 01-Nov-24 08:29:49 || Use pytorch device_name: cpu
+INFO || 01-Nov-24 08:29:49 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 01-Nov-24 08:29:49 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 01-Nov-24 08:29:49 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:29:51 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:29:51 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:29:51 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:29:52 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:29:52 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:29:53 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 08:29:54 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6561
+DEBUG || 01-Nov-24 08:29:54 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6560
+INFO || 01-Nov-24 09:33:06 || Use pytorch device_name: cpu
+INFO || 01-Nov-24 09:33:06 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 01-Nov-24 09:33:06 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 01-Nov-24 09:33:07 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 09:33:08 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 09:33:09 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 09:33:10 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 09:33:10 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 09:33:11 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 09:33:13 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 01-Nov-24 09:33:13 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6560
+DEBUG || 01-Nov-24 09:33:14 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6561
+INFO || 01-Nov-24 10:22:28 || S-Bert 2024 Recommender Engine Initialized
+INFO || 01-Nov-24 10:22:48 || Time taken by sbert model: 19.408951997756958
+INFO || 01-Nov-24 10:22:48 || Recommender system has run
+INFO || 07-Nov-24 17:49:12 || Use pytorch device_name: cpu
+INFO || 07-Nov-24 17:49:12 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 07-Nov-24 17:49:12 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 07-Nov-24 17:49:14 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 07-Nov-24 17:49:14 || Attempting to acquire lock 2600280067376 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+DEBUG || 07-Nov-24 17:49:14 || Lock 2600280067376 acquired on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+DEBUG || 07-Nov-24 17:49:14 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 349
+DEBUG || 07-Nov-24 17:49:14 || Attempting to release lock 2600280067376 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+DEBUG || 07-Nov-24 17:49:14 || Lock 2600280067376 released on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+DEBUG || 07-Nov-24 17:49:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 07-Nov-24 17:49:15 || Attempting to acquire lock 2600280067568 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+DEBUG || 07-Nov-24 17:49:15 || Lock 2600280067568 acquired on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+DEBUG || 07-Nov-24 17:49:15 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 116
+DEBUG || 07-Nov-24 17:49:15 || Attempting to release lock 2600280067568 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+DEBUG || 07-Nov-24 17:49:15 || Lock 2600280067568 released on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+DEBUG || 07-Nov-24 17:49:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 07-Nov-24 17:49:15 || Attempting to acquire lock 2600280067376 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\8cfec92309f5626a223304af2423e332f6d31887.lock
+DEBUG || 07-Nov-24 17:49:15 || Lock 2600280067376 acquired on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\8cfec92309f5626a223304af2423e332f6d31887.lock
+DEBUG || 07-Nov-24 17:49:16 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 10659
+DEBUG || 07-Nov-24 17:49:16 || Attempting to release lock 2600280067376 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\8cfec92309f5626a223304af2423e332f6d31887.lock
+DEBUG || 07-Nov-24 17:49:16 || Lock 2600280067376 released on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\8cfec92309f5626a223304af2423e332f6d31887.lock
+DEBUG || 07-Nov-24 17:49:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 07-Nov-24 17:49:18 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 07-Nov-24 17:49:18 || Attempting to acquire lock 2600280143328 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\59d594003bf59880a884c574bf88ef7555bb0202.lock
+DEBUG || 07-Nov-24 17:49:18 || Lock 2600280143328 acquired on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\59d594003bf59880a884c574bf88ef7555bb0202.lock
+DEBUG || 07-Nov-24 17:49:18 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 53
+DEBUG || 07-Nov-24 17:49:18 || Attempting to release lock 2600280143328 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\59d594003bf59880a884c574bf88ef7555bb0202.lock
+DEBUG || 07-Nov-24 17:49:18 || Lock 2600280143328 released on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\59d594003bf59880a884c574bf88ef7555bb0202.lock
+DEBUG || 07-Nov-24 17:49:19 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 07-Nov-24 17:49:19 || Attempting to acquire lock 2600280143664 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\72b987fd805cfa2b58c4c8c952b274a11bfd5a00.lock
+DEBUG || 07-Nov-24 17:49:19 || Lock 2600280143664 acquired on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\72b987fd805cfa2b58c4c8c952b274a11bfd5a00.lock
+DEBUG || 07-Nov-24 17:49:19 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 612
+DEBUG || 07-Nov-24 17:49:19 || Attempting to release lock 2600280143664 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\72b987fd805cfa2b58c4c8c952b274a11bfd5a00.lock
+DEBUG || 07-Nov-24 17:49:19 || Lock 2600280143664 released on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\72b987fd805cfa2b58c4c8c952b274a11bfd5a00.lock
+DEBUG || 07-Nov-24 17:49:21 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/model.safetensors HTTP/1.1" 302 0
+DEBUG || 07-Nov-24 17:49:21 || Attempting to acquire lock 2600283529568 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+DEBUG || 07-Nov-24 17:49:21 || Lock 2600283529568 acquired on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+DEBUG || 07-Nov-24 17:49:21 || Starting new HTTPS connection (1): cdn-lfs.hf.co:443
+DEBUG || 07-Nov-24 17:49:22 || https://cdn-lfs.hf.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1731248199&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMTI0ODE5OX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zZW50ZW5jZS10cmFuc2Zvcm1lcnMvYWxsLU1pbmlMTS1MNi12Mi81M2FhNTExNzJkMTQyYzg5ZDkwMTJjY2UxNWFlNGQ2Y2MwY2E2ODk1ODk1MTE0Mzc5Y2FjYjRmYWIxMjhkOWRiP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=DKpNYVsh-rlVq3bDoh5105hKduNRKMVssUyKa3Ee8lFT2I2qyGqx60hcU7ILiKLemgbfusAO1AJ-RPvb99r8sriYLzxgpesZiXTRjSNS5~-iAGtJ02YPjrllfsQmYRRzj1EFKsY7VKYFeh16680SULQaWZorDMAaLXrDgbB8attRVc6CYylSOyTNBK-pROeVUjydi9TL1KA3O2TDfnmmoOO~eqNQqVShd73PKvfyN0~6M0pfaN4WL9jAPnoEfmSk-8HkKF~kfraSRc0Bm8Q4GIa5r7ag1LrprL5QDZyuBAZBuQdf~3IyL9Z02BufPU2PYopP9KiykgAAzFJyH31EkQ__&Key-Pair-Id=K3RPWS32NSSJCE HTTP/1.1" 200 90868376
+DEBUG || 07-Nov-24 17:50:15 || Attempting to release lock 2600283529568 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+DEBUG || 07-Nov-24 17:50:15 || Lock 2600283529568 released on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+DEBUG || 07-Nov-24 17:50:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 07-Nov-24 17:50:16 || Attempting to acquire lock 2600281519824 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\c79f2b6a0cea6f4b564fed1938984bace9d30ff0.lock
+DEBUG || 07-Nov-24 17:50:16 || Lock 2600281519824 acquired on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\c79f2b6a0cea6f4b564fed1938984bace9d30ff0.lock
+DEBUG || 07-Nov-24 17:50:17 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 350
+DEBUG || 07-Nov-24 17:50:17 || Attempting to release lock 2600281519824 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\c79f2b6a0cea6f4b564fed1938984bace9d30ff0.lock
+DEBUG || 07-Nov-24 17:50:17 || Lock 2600281519824 released on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\c79f2b6a0cea6f4b564fed1938984bace9d30ff0.lock
+DEBUG || 07-Nov-24 17:50:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/vocab.txt HTTP/1.1" 200 0
+DEBUG || 07-Nov-24 17:50:17 || Attempting to acquire lock 2600281519824 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fb140275c155a9c7c5a3b3e0e77a9e839594a938.lock
+DEBUG || 07-Nov-24 17:50:17 || Lock 2600281519824 acquired on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fb140275c155a9c7c5a3b3e0e77a9e839594a938.lock
+DEBUG || 07-Nov-24 17:50:18 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/vocab.txt HTTP/1.1" 200 231508
+DEBUG || 07-Nov-24 17:50:18 || Attempting to release lock 2600281519824 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fb140275c155a9c7c5a3b3e0e77a9e839594a938.lock
+DEBUG || 07-Nov-24 17:50:18 || Lock 2600281519824 released on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\fb140275c155a9c7c5a3b3e0e77a9e839594a938.lock
+DEBUG || 07-Nov-24 17:50:19 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer.json HTTP/1.1" 200 0
+DEBUG || 07-Nov-24 17:50:19 || Attempting to acquire lock 2600281519824 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\cb202bfe2e3c98645018a6d12f182a434c9d3e02.lock
+DEBUG || 07-Nov-24 17:50:19 || Lock 2600281519824 acquired on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\cb202bfe2e3c98645018a6d12f182a434c9d3e02.lock
+DEBUG || 07-Nov-24 17:50:19 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer.json HTTP/1.1" 200 466247
+DEBUG || 07-Nov-24 17:50:20 || Attempting to release lock 2600281519824 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\cb202bfe2e3c98645018a6d12f182a434c9d3e02.lock
+DEBUG || 07-Nov-24 17:50:20 || Lock 2600281519824 released on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\cb202bfe2e3c98645018a6d12f182a434c9d3e02.lock
+DEBUG || 07-Nov-24 17:50:21 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/added_tokens.json HTTP/1.1" 404 0
+DEBUG || 07-Nov-24 17:50:21 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/special_tokens_map.json HTTP/1.1" 200 0
+DEBUG || 07-Nov-24 17:50:21 || Attempting to acquire lock 2600283458912 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\e7b0375001f109a6b8873d756ad4f7bbb15fbaa5.lock
+DEBUG || 07-Nov-24 17:50:21 || Lock 2600283458912 acquired on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\e7b0375001f109a6b8873d756ad4f7bbb15fbaa5.lock
+DEBUG || 07-Nov-24 17:50:21 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/special_tokens_map.json HTTP/1.1" 200 112
+DEBUG || 07-Nov-24 17:50:22 || Attempting to release lock 2600283458912 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\e7b0375001f109a6b8873d756ad4f7bbb15fbaa5.lock
+DEBUG || 07-Nov-24 17:50:22 || Lock 2600283458912 released on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\e7b0375001f109a6b8873d756ad4f7bbb15fbaa5.lock
+DEBUG || 07-Nov-24 17:50:23 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6660
+DEBUG || 07-Nov-24 17:50:23 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 07-Nov-24 17:50:24 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/fa97f6e7cb1a59073dff9e6b13e2715cf7475ac9/1_Pooling/config.json HTTP/1.1" 200 0
+DEBUG || 07-Nov-24 17:50:24 || Attempting to acquire lock 2600283719232 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\d1514c3162bbe87b343f565fadc62e6c06f04f03.lock
+DEBUG || 07-Nov-24 17:50:24 || Lock 2600283719232 acquired on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\d1514c3162bbe87b343f565fadc62e6c06f04f03.lock
+DEBUG || 07-Nov-24 17:50:24 || https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/fa97f6e7cb1a59073dff9e6b13e2715cf7475ac9/1_Pooling/config.json HTTP/1.1" 200 190
+DEBUG || 07-Nov-24 17:50:24 || Attempting to release lock 2600283719232 on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\d1514c3162bbe87b343f565fadc62e6c06f04f03.lock
+DEBUG || 07-Nov-24 17:50:24 || Lock 2600283719232 released on C:\Users\Ms-Echo\.cache\huggingface\hub\.locks\models--sentence-transformers--all-MiniLM-L6-v2\d1514c3162bbe87b343f565fadc62e6c06f04f03.lock
+DEBUG || 07-Nov-24 17:50:25 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6660
+INFO || 11-Nov-24 22:55:20 || Use pytorch device_name: cpu
+INFO || 11-Nov-24 22:55:20 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 11-Nov-24 22:55:20 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 11-Nov-24 22:55:21 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 22:55:21 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 22:55:22 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 22:55:23 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 22:55:23 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 22:55:24 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 22:55:27 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 22:55:28 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6681
+DEBUG || 11-Nov-24 22:55:28 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6680
+WARNING || 11-Nov-24 22:57:28 || Not Found: /favicon.ico
+ERROR || 11-Nov-24 22:59:57 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 487, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 200, in predict_probability
+    model = joblib.load(model_path)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\joblib\numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Hp\\Desktop\\ProActEd\\AIacademia\\trained_models\\proacted_model_2.2_with5morefeatures.joblib'
+INFO || 11-Nov-24 23:07:43 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 11-Nov-24 23:08:18 || Use pytorch device_name: cpu
+INFO || 11-Nov-24 23:08:18 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 11-Nov-24 23:08:18 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 11-Nov-24 23:08:20 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:08:21 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:08:22 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:08:23 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:08:23 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:08:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:08:26 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:08:27 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6681
+DEBUG || 11-Nov-24 23:08:28 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6681
+INFO || 11-Nov-24 23:20:42 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 11-Nov-24 23:22:16 || Use pytorch device_name: cpu
+INFO || 11-Nov-24 23:22:16 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 11-Nov-24 23:22:16 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 11-Nov-24 23:22:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:22:18 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:22:18 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:22:19 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:22:19 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:22:19 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:22:24 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:22:25 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6680
+DEBUG || 11-Nov-24 23:22:26 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6680
+INFO || 11-Nov-24 23:23:43 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 11-Nov-24 23:25:46 || Use pytorch device_name: cpu
+INFO || 11-Nov-24 23:25:46 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 11-Nov-24 23:25:46 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 11-Nov-24 23:25:47 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:25:47 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:25:48 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:25:48 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:25:49 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:25:49 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:25:51 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:25:51 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6681
+DEBUG || 11-Nov-24 23:25:52 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6680
+INFO || 11-Nov-24 23:30:09 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 11-Nov-24 23:31:15 || Use pytorch device_name: cpu
+INFO || 11-Nov-24 23:31:15 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 11-Nov-24 23:31:15 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 11-Nov-24 23:31:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:31:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:31:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:31:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:31:18 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:31:19 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:31:22 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:31:22 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6680
+DEBUG || 11-Nov-24 23:31:23 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6680
+ERROR || 11-Nov-24 23:31:44 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 489, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 202, in predict_probability
+    model = joblib.load(model_path)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\joblib\numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\My_Projects\\ProActEd\\AIacademia\\AIacademia\\trained_models\\proacted_model_2.2_with5morefeatures.joblib'
+INFO || 11-Nov-24 23:36:30 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 11-Nov-24 23:37:22 || Use pytorch device_name: cpu
+INFO || 11-Nov-24 23:37:22 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 11-Nov-24 23:37:22 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 11-Nov-24 23:37:23 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:37:24 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:37:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:37:26 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:37:26 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:37:27 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:37:28 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:37:29 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6680
+DEBUG || 11-Nov-24 23:37:29 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6680
+ERROR || 11-Nov-24 23:37:46 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 489, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 202, in predict_probability
+    model = joblib.load(model_path)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\joblib\numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\My_Projects\\ProActEd\\AIacademia\\trained_models\\proacted_model_2.2_with5morefeatures.joblib'
+INFO || 11-Nov-24 23:43:34 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 11-Nov-24 23:44:12 || Use pytorch device_name: cpu
+INFO || 11-Nov-24 23:44:12 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 11-Nov-24 23:44:12 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 11-Nov-24 23:44:14 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:44:14 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:44:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:44:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:44:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:44:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:44:18 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 11-Nov-24 23:44:19 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6680
+DEBUG || 11-Nov-24 23:44:19 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6680
+ERROR || 11-Nov-24 23:47:30 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 489, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 202, in predict_probability
+    model = joblib.load(model_path)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1212, in load
+    dispatch[key[0]](self)
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1537, in load_stack_global
+    self.append(self.find_class(module, name))
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1579, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src'
+INFO || 11-Nov-24 23:57:23 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 11-Nov-24 23:58:10 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 11-Nov-24 23:58:11 || Creating converter from 7 to 5
+DEBUG || 11-Nov-24 23:58:11 || Creating converter from 5 to 7
+DEBUG || 11-Nov-24 23:58:11 || Creating converter from 7 to 5
+DEBUG || 11-Nov-24 23:58:11 || Creating converter from 5 to 7
+DEBUG || 12-Nov-24 00:04:32 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 12-Nov-24 00:04:33 || Creating converter from 7 to 5
+DEBUG || 12-Nov-24 00:04:33 || Creating converter from 5 to 7
+DEBUG || 12-Nov-24 00:04:33 || Creating converter from 7 to 5
+DEBUG || 12-Nov-24 00:04:33 || Creating converter from 5 to 7
+INFO || 12-Nov-24 00:04:51 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 00:04:51 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 00:04:51 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 00:04:52 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 00:04:52 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 00:04:52 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 00:04:53 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 00:04:54 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 00:04:54 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 00:04:55 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 00:04:56 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6681
+DEBUG || 12-Nov-24 00:04:56 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6680
+ERROR || 12-Nov-24 00:05:07 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 490, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 203, in predict_probability
+    model = joblib.load(model_path)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1212, in load
+    dispatch[key[0]](self)
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1537, in load_stack_global
+    self.append(self.find_class(module, name))
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1579, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src'
+DEBUG || 12-Nov-24 00:10:03 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 12-Nov-24 00:10:04 || Creating converter from 7 to 5
+DEBUG || 12-Nov-24 00:10:04 || Creating converter from 5 to 7
+DEBUG || 12-Nov-24 00:10:04 || Creating converter from 7 to 5
+DEBUG || 12-Nov-24 00:10:04 || Creating converter from 5 to 7
+INFO || 12-Nov-24 00:10:27 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 00:10:27 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 00:10:27 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 00:10:28 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 00:10:28 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 00:10:29 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 00:10:29 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 00:10:30 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 00:10:30 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 00:10:32 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 00:10:33 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6680
+DEBUG || 12-Nov-24 00:10:33 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6680
+ERROR || 12-Nov-24 00:11:23 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 490, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 203, in predict_probability
+    model = joblib.load(model_path)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1212, in load
+    dispatch[key[0]](self)
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1537, in load_stack_global
+    self.append(self.find_class(module, name))
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1579, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src'
+ERROR || 12-Nov-24 00:11:31 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 490, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 203, in predict_probability
+    model = joblib.load(model_path)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1212, in load
+    dispatch[key[0]](self)
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1537, in load_stack_global
+    self.append(self.find_class(module, name))
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1579, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src'
+INFO || 12-Nov-24 03:20:30 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 12-Nov-24 03:21:34 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 12-Nov-24 03:21:39 || Creating converter from 7 to 5
+DEBUG || 12-Nov-24 03:21:39 || Creating converter from 5 to 7
+DEBUG || 12-Nov-24 03:21:39 || Creating converter from 7 to 5
+DEBUG || 12-Nov-24 03:21:39 || Creating converter from 5 to 7
+INFO || 12-Nov-24 03:22:22 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 03:22:22 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 03:22:22 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 03:22:26 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:22:26 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:22:27 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:22:28 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:22:29 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:22:30 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:22:33 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:22:33 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6680
+DEBUG || 12-Nov-24 03:22:34 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6680
+ERROR || 12-Nov-24 03:22:37 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 490, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 203, in predict_probability
+    model = joblib.load(model_path)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1212, in load
+    dispatch[key[0]](self)
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1537, in load_stack_global
+    self.append(self.find_class(module, name))
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1579, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src'
+DEBUG || 12-Nov-24 03:24:19 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 12-Nov-24 03:24:20 || Creating converter from 7 to 5
+DEBUG || 12-Nov-24 03:24:20 || Creating converter from 5 to 7
+DEBUG || 12-Nov-24 03:24:20 || Creating converter from 7 to 5
+DEBUG || 12-Nov-24 03:24:20 || Creating converter from 5 to 7
+INFO || 12-Nov-24 03:24:40 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 03:24:40 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 03:24:40 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 03:24:41 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:24:42 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:24:43 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:24:43 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:24:44 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:24:45 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:24:47 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:24:48 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6680
+DEBUG || 12-Nov-24 03:24:59 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6680
+ERROR || 12-Nov-24 03:25:23 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 490, in student_page
+    return predict_probability(request, student_id=student_id) #run the probabiltiy model instead
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 203, in predict_probability
+    model = joblib.load(model_path)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1212, in load
+    dispatch[key[0]](self)
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1537, in load_stack_global
+    self.append(self.find_class(module, name))
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1579, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src'
+INFO || 12-Nov-24 03:27:36 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 12-Nov-24 03:28:06 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 12-Nov-24 03:28:08 || Creating converter from 7 to 5
+DEBUG || 12-Nov-24 03:28:08 || Creating converter from 5 to 7
+DEBUG || 12-Nov-24 03:28:08 || Creating converter from 7 to 5
+DEBUG || 12-Nov-24 03:28:08 || Creating converter from 5 to 7
+INFO || 12-Nov-24 03:28:47 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 03:28:47 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 03:28:47 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 03:28:51 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:28:55 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:28:56 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:28:57 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:28:59 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:29:01 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:29:06 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:29:15 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6681
+DEBUG || 12-Nov-24 03:29:17 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6681
+INFO || 12-Nov-24 03:31:32 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 12-Nov-24 03:32:42 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 12-Nov-24 03:32:43 || Creating converter from 7 to 5
+DEBUG || 12-Nov-24 03:32:43 || Creating converter from 5 to 7
+DEBUG || 12-Nov-24 03:32:43 || Creating converter from 7 to 5
+DEBUG || 12-Nov-24 03:32:43 || Creating converter from 5 to 7
+INFO || 12-Nov-24 03:32:51 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 03:32:51 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 03:32:51 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 03:32:52 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:32:53 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:32:53 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:32:54 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:32:54 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:32:55 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:32:58 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:33:07 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6680
+DEBUG || 12-Nov-24 03:33:16 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6681
+ERROR || 12-Nov-24 03:33:31 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 490, in student_page
+    return predict_probability(request, student_id=student_id)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 203, in predict_probability
+    model = joblib.load(model_path)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1212, in load
+    dispatch[key[0]](self)
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1537, in load_stack_global
+    self.append(self.find_class(module, name))
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1579, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src'
+INFO || 12-Nov-24 03:33:37 || Forbidden (CSRF token from POST incorrect.): /auth/login/
+ERROR || 12-Nov-24 03:34:25 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 490, in student_page
+    return predict_probability(request, student_id=student_id)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 203, in predict_probability
+    model = joblib.load(model_path)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1212, in load
+    dispatch[key[0]](self)
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1537, in load_stack_global
+    self.append(self.find_class(module, name))
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1579, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src'
+DEBUG || 12-Nov-24 03:55:37 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 12-Nov-24 03:55:38 || Creating converter from 7 to 5
+DEBUG || 12-Nov-24 03:55:38 || Creating converter from 5 to 7
+DEBUG || 12-Nov-24 03:55:38 || Creating converter from 7 to 5
+DEBUG || 12-Nov-24 03:55:38 || Creating converter from 5 to 7
+INFO || 12-Nov-24 03:55:44 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 03:55:44 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 03:55:44 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 03:55:46 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:55:47 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:55:47 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:55:48 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:55:50 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:55:50 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 03:56:02 || Starting new HTTPS connection (2): huggingface.co:443
+DEBUG || 12-Nov-24 03:56:02 || Starting new HTTPS connection (3): huggingface.co:443
+ERROR || 12-Nov-24 03:59:13 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 490, in student_page
+    return predict_probability(request, student_id=student_id)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 203, in predict_probability
+    model = joblib.load(model_path)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1212, in load
+    dispatch[key[0]](self)
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1537, in load_stack_global
+    self.append(self.find_class(module, name))
+  File "C:\Users\Ms-Echo\AppData\Local\Programs\Python\Python39\lib\pickle.py", line 1579, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'keras.src'
+DEBUG || 12-Nov-24 06:47:27 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 12-Nov-24 06:47:30 || Creating converter from 7 to 5
+DEBUG || 12-Nov-24 06:47:30 || Creating converter from 5 to 7
+DEBUG || 12-Nov-24 06:47:30 || Creating converter from 7 to 5
+DEBUG || 12-Nov-24 06:47:30 || Creating converter from 5 to 7
+INFO || 12-Nov-24 06:47:46 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 06:47:46 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 06:47:46 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 06:47:47 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:47:48 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:47:48 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:47:49 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:47:50 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:47:50 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:47:52 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:47:52 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6680
+DEBUG || 12-Nov-24 06:47:53 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6681
+INFO || 12-Nov-24 06:50:07 || Probability model proacted_prob_model2 loaded
+ERROR || 12-Nov-24 06:50:07 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 490, in student_page
+    return predict_probability(request, student_id=student_id)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 228, in predict_probability
+    input_data = np.array([[lessonsattended, aggrpoints, pcnt_of_lessons_attended,
+NameError: name 'lessonsattended' is not defined
+INFO || 12-Nov-24 06:51:39 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 12-Nov-24 06:52:00 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 12-Nov-24 06:52:02 || Creating converter from 7 to 5
+DEBUG || 12-Nov-24 06:52:02 || Creating converter from 5 to 7
+DEBUG || 12-Nov-24 06:52:02 || Creating converter from 7 to 5
+DEBUG || 12-Nov-24 06:52:02 || Creating converter from 5 to 7
+INFO || 12-Nov-24 06:52:20 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 06:52:20 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 06:52:20 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 06:52:21 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:52:21 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:52:22 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:52:23 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:52:23 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:52:23 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:52:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:52:25 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6680
+DEBUG || 12-Nov-24 06:52:26 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6680
+INFO || 12-Nov-24 06:57:53 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 12-Nov-24 06:58:18 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 12-Nov-24 06:58:19 || Creating converter from 7 to 5
+DEBUG || 12-Nov-24 06:58:19 || Creating converter from 5 to 7
+DEBUG || 12-Nov-24 06:58:19 || Creating converter from 7 to 5
+DEBUG || 12-Nov-24 06:58:19 || Creating converter from 5 to 7
+INFO || 12-Nov-24 06:58:36 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 06:58:36 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 06:58:36 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 06:58:37 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:58:38 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:58:38 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:58:39 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:58:39 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:58:40 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:58:42 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:58:42 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6681
+DEBUG || 12-Nov-24 06:58:43 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6681
+INFO || 12-Nov-24 06:58:48 || Probability model proacted_prob_model2 loaded
+ERROR || 12-Nov-24 06:58:49 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 491, in student_page
+    return predict_probability(request, student_id=student_id)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 229, in predict_probability
+    input_data = np.array([[lessonsattended, aggrpoints, pcnt_of_lessons_attended,
+NameError: name 'Lessons_Attended' is not defined
+INFO || 12-Nov-24 06:59:21 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+DEBUG || 12-Nov-24 06:59:38 || Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG || 12-Nov-24 06:59:39 || Creating converter from 7 to 5
+DEBUG || 12-Nov-24 06:59:39 || Creating converter from 5 to 7
+DEBUG || 12-Nov-24 06:59:39 || Creating converter from 7 to 5
+DEBUG || 12-Nov-24 06:59:39 || Creating converter from 5 to 7
+INFO || 12-Nov-24 06:59:54 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 06:59:54 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 06:59:54 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 06:59:55 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:59:55 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:59:56 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:59:56 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:59:57 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:59:57 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:59:59 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 06:59:59 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6681
+DEBUG || 12-Nov-24 06:59:59 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6681
+INFO || 12-Nov-24 07:02:19 || Probability model proacted_prob_model2 loaded
+ERROR || 12-Nov-24 07:02:19 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 491, in student_page
+    return predict_probability(request, student_id=student_id)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 235, in predict_probability
+    input_data = tf.reshape(input_data, [1, 7])
+NameError: name 'tf' is not defined
+INFO || 12-Nov-24 07:03:45 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Nov-24 07:04:21 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 07:04:21 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 07:04:21 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 07:04:22 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 07:04:23 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 07:04:24 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 07:04:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 07:04:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 07:04:26 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 07:04:27 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 07:04:28 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6681
+DEBUG || 12-Nov-24 07:04:28 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6680
+INFO || 12-Nov-24 07:06:01 || Probability model proacted_prob_model2 loaded
+WARNING || 12-Nov-24 07:06:06 || Not Found: /ws/academia_app/
+WARNING || 12-Nov-24 09:42:43 || Not Found: /ws/academia_app/
+INFO || 12-Nov-24 09:48:15 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Nov-24 09:49:14 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 09:49:14 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 09:49:14 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 09:49:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:49:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:49:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:49:18 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:49:19 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:49:20 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:49:22 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:49:23 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6680
+DEBUG || 12-Nov-24 09:49:23 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6681
+INFO || 12-Nov-24 09:50:27 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Nov-24 09:51:39 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 09:51:39 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 09:51:39 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 09:51:40 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:51:41 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:51:42 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:51:43 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:51:44 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:51:45 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:51:48 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:51:49 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6680
+DEBUG || 12-Nov-24 09:51:52 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6681
+INFO || 12-Nov-24 09:52:27 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Nov-24 09:53:17 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 09:53:17 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 09:53:17 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 09:53:19 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:53:20 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:53:20 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:53:20 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:53:21 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:53:21 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:53:24 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:53:24 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6680
+DEBUG || 12-Nov-24 09:53:25 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6680
+INFO || 12-Nov-24 09:56:14 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Nov-24 09:57:18 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 09:57:18 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 09:57:18 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 09:57:22 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:57:23 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:57:23 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:57:24 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:57:24 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:57:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:57:27 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 09:57:28 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6681
+DEBUG || 12-Nov-24 09:57:29 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6680
+INFO || 12-Nov-24 09:59:07 || Probability model proacted_prob_model2 loaded
+ERROR || 12-Nov-24 09:59:10 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 481, in student_page
+    return predict_probability(request, student_id=student_id)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 236, in predict_probability
+    return render(request, "academia_app/student_page.html",context = context)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '' not found. '' is not a valid view function or pattern name.
+INFO || 12-Nov-24 09:59:35 || Probability model proacted_prob_model2 loaded
+ERROR || 12-Nov-24 09:59:37 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 481, in student_page
+    return predict_probability(request, student_id=student_id)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 236, in predict_probability
+    return render(request, "academia_app/student_page.html",context = context)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for ' ' not found. ' ' is not a valid view function or pattern name.
+INFO || 12-Nov-24 10:00:27 || Probability model proacted_prob_model2 loaded
+ERROR || 12-Nov-24 10:00:29 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 481, in student_page
+    return predict_probability(request, student_id=student_id)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 236, in predict_probability
+    return render(request, "academia_app/student_page.html",context = context)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for ' ' not found. ' ' is not a valid view function or pattern name.
+INFO || 12-Nov-24 10:00:52 || Probability model proacted_prob_model2 loaded
+WARNING || 12-Nov-24 10:00:55 || Not Found: /ws/academia_app/
+INFO || 12-Nov-24 10:01:19 || Probability model proacted_prob_model2 loaded
+WARNING || 12-Nov-24 10:01:21 || 5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000013888B32940> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING || 12-Nov-24 10:01:22 || Not Found: /ws/academia_app/
+INFO || 12-Nov-24 10:02:10 || Probability model proacted_prob_model2 loaded
+WARNING || 12-Nov-24 10:02:11 || 6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x00000138887F9940> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING || 12-Nov-24 10:02:12 || Not Found: /ws/academia_app/
+WARNING || 12-Nov-24 10:02:30 || Not Found: /ws/academia_app/
+INFO || 12-Nov-24 10:05:34 || Probability model proacted_prob_model2 loaded
+WARNING || 12-Nov-24 10:05:41 || Not Found: /ws/academia_app/
+WARNING || 12-Nov-24 10:05:58 || Not Found: /ws/academia_app/
+INFO || 12-Nov-24 10:20:57 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 10:20:57 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 10:20:57 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 10:20:58 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 10:20:58 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 10:20:59 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 10:21:00 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 10:21:00 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 10:21:00 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 10:21:03 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 10:21:04 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6680
+DEBUG || 12-Nov-24 10:21:04 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6680
+INFO || 12-Nov-24 10:25:07 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 10:25:07 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 10:25:07 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 10:25:08 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 10:25:09 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 10:25:09 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 10:25:10 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 10:25:11 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 10:25:11 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 10:25:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 10:25:17 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6681
+DEBUG || 12-Nov-24 10:25:17 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6681
+INFO || 12-Nov-24 10:26:13 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 10:26:13 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 10:26:13 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 10:26:14 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 10:26:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 10:26:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 10:26:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 10:26:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 10:26:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 10:26:19 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 10:26:20 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6680
+DEBUG || 12-Nov-24 10:26:20 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6680
+INFO || 12-Nov-24 10:43:47 || Probability model proacted_prob_model2 loaded
+WARNING || 12-Nov-24 10:43:49 || Not Found: /ws/academia_app/
+INFO || 12-Nov-24 10:44:07 || Probability model proacted_prob_model2 loaded
+WARNING || 12-Nov-24 10:44:11 || Not Found: /ws/academia_app/
+INFO || 12-Nov-24 11:07:22 || Probability model proacted_prob_model2 loaded
+WARNING || 12-Nov-24 11:07:25 || Not Found: /ws/academia_app/
+INFO || 12-Nov-24 11:07:48 || Probability model proacted_prob_model2 loaded
+WARNING || 12-Nov-24 11:07:50 || Not Found: /ws/academia_app/
+INFO || 12-Nov-24 11:08:28 || Probability model proacted_prob_model2 loaded
+WARNING || 12-Nov-24 11:08:34 || Not Found: /favicon.ico
+WARNING || 12-Nov-24 11:08:34 || Not Found: /ws/academia_app/
+INFO || 12-Nov-24 11:08:39 || Probability model proacted_prob_model2 loaded
+WARNING || 12-Nov-24 11:08:43 || Not Found: /ws/academia_app/
+INFO || 12-Nov-24 11:08:58 || Probability model proacted_prob_model2 loaded
+WARNING || 12-Nov-24 11:09:01 || Not Found: /ws/academia_app/
+INFO || 12-Nov-24 11:15:21 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Nov-24 11:17:18 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 11:17:18 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 11:17:18 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 11:17:19 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:17:20 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:17:20 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:17:21 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:17:22 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:17:22 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:17:24 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:17:25 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6700
+DEBUG || 12-Nov-24 11:17:25 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6700
+INFO || 12-Nov-24 11:23:54 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Nov-24 11:25:12 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 11:25:12 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 11:25:12 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 11:25:13 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:25:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:25:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:25:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:25:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:25:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:25:19 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:25:20 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6700
+DEBUG || 12-Nov-24 11:25:21 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6700
+INFO || 12-Nov-24 11:25:27 || Probability model proacted_prob_model2 loaded
+WARNING || 12-Nov-24 11:25:34 || Not Found: /ws/academia_app/
+INFO || 12-Nov-24 11:25:39 || Probability model proacted_prob_model2 loaded
+WARNING || 12-Nov-24 11:25:44 || Not Found: /ws/academia_app/
+INFO || 12-Nov-24 11:26:55 || Probability model proacted_prob_model2 loaded
+WARNING || 12-Nov-24 11:27:01 || Not Found: /ws/academia_app/
+INFO || 12-Nov-24 11:27:04 || Probability model proacted_prob_model2 loaded
+WARNING || 12-Nov-24 11:27:08 || Not Found: /ws/academia_app/
+INFO || 12-Nov-24 11:29:19 || Probability model proacted_prob_model2 loaded
+WARNING || 12-Nov-24 11:29:21 || 5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000001F70241F9D0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING || 12-Nov-24 11:29:22 || Not Found: /ws/academia_app/
+INFO || 12-Nov-24 11:33:56 || Probability model proacted_prob_model2 loaded
+WARNING || 12-Nov-24 11:33:58 || 6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000001F702533CA0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING || 12-Nov-24 11:33:59 || Not Found: /ws/academia_app/
+INFO || 12-Nov-24 11:40:36 || D:\My_Projects\ProActEd\AIacademia\AIacademia\settings.py changed, reloading.
+INFO || 12-Nov-24 11:41:57 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 11:41:57 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 11:41:57 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 11:42:02 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:42:03 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:42:04 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:42:04 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:42:05 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:42:06 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:42:09 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:42:09 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6700
+DEBUG || 12-Nov-24 11:42:10 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6700
+WARNING || 12-Nov-24 11:42:43 || Not Found: /favicon.ico
+INFO || 12-Nov-24 11:44:55 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 11:44:55 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 11:44:55 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 11:44:56 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:44:57 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:44:57 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:44:58 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:44:59 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:44:59 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:45:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:45:18 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6700
+DEBUG || 12-Nov-24 11:45:18 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6700
+INFO || 12-Nov-24 11:57:54 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Nov-24 11:58:55 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 11:58:55 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 11:58:55 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 11:59:00 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:59:00 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:59:01 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:59:01 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:59:02 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:59:02 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:59:04 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 11:59:05 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6700
+DEBUG || 12-Nov-24 11:59:05 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6700
+INFO || 12-Nov-24 11:59:36 || Probability model proacted_prob_model2 loaded
+ERROR || 12-Nov-24 11:59:38 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 484, in student_page
+    return predict_probability(request, student_id=student_id)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 236, in predict_probability
+    context = {'student_first_name':student_first_name,'prediction': prediction[0][0], 'refined_prediction': f"{prediction[0][0]*100:.3f}"}
+UnboundLocalError: local variable 'student_first_name' referenced before assignment
+INFO || 12-Nov-24 12:01:12 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Nov-24 12:02:45 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 12:02:45 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 12:02:45 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 12:02:46 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 12:02:47 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 12:02:48 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 12:02:48 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 12:02:49 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 12:02:49 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 12:02:54 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 12:02:54 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6700
+DEBUG || 12-Nov-24 12:02:55 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6700
+INFO || 12-Nov-24 12:03:02 || Probability model proacted_prob_model2 loaded
+ERROR || 12-Nov-24 12:03:08 || Internal Server Error: /student_page/
+Traceback (most recent call last):
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\myvenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 485, in student_page
+    return predict_probability(request, student_id=student_id)
+  File "D:\My_Projects\ProActEd\AIacademia\academia_app\views.py", line 236, in predict_probability
+    context = {'student_first_name':student_first_name,'prediction': prediction[0][0], 'refined_prediction': f"{prediction[0][0]*100:.3f}"}
+UnboundLocalError: local variable 'student_first_name' referenced before assignment
+WARNING || 12-Nov-24 12:03:09 || Not Found: /favicon.ico
+INFO || 12-Nov-24 12:06:12 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Nov-24 12:08:27 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 12:08:27 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 12:08:27 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 12-Nov-24 12:08:37 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 12:08:37 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 12:08:37 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 12:08:38 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 12:08:38 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 12:08:39 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 12:08:43 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 12-Nov-24 12:08:44 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6700
+DEBUG || 12-Nov-24 12:08:46 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6700
+INFO || 12-Nov-24 13:18:32 || D:\My_Projects\ProActEd\AIacademia\academia_app\views.py changed, reloading.
+INFO || 12-Nov-24 13:19:34 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 13:19:34 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 13:19:34 || Starting new HTTPS connection (1): huggingface.co:443
+WARNING || 12-Nov-24 13:19:34 || No sentence-transformers model found with name sentence-transformers/all-MiniLM-L6-v2. Creating a new one with mean pooling.
+DEBUG || 12-Nov-24 13:19:34 || Starting new HTTPS connection (2): huggingface.co:443
+INFO || 12-Nov-24 13:19:35 || Use pytorch device_name: cpu
+INFO || 12-Nov-24 13:19:35 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 12-Nov-24 13:19:35 || Starting new HTTPS connection (1): huggingface.co:443
+WARNING || 12-Nov-24 13:19:35 || No sentence-transformers model found with name sentence-transformers/all-MiniLM-L6-v2. Creating a new one with mean pooling.
+DEBUG || 12-Nov-24 13:19:35 || Starting new HTTPS connection (2): huggingface.co:443
+INFO || 13-Nov-24 16:20:14 || Use pytorch device_name: cpu
+INFO || 13-Nov-24 16:20:14 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 13-Nov-24 16:20:14 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 13-Nov-24 16:20:15 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Nov-24 16:20:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 13-Nov-24 16:20:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 13-Nov-24 16:20:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Nov-24 16:20:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 13-Nov-24 16:20:17 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 13-Nov-24 16:20:20 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 13-Nov-24 16:20:21 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6700
+DEBUG || 13-Nov-24 16:20:22 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6700
+INFO || 13-Nov-24 16:50:13 || D:\My_Projects\ProActEd\AIacademia\academia_app\models.py changed, reloading.
+INFO || 13-Nov-24 16:51:44 || Use pytorch device_name: cpu
+INFO || 13-Nov-24 16:51:44 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 13-Nov-24 16:51:44 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 13-Nov-24 16:51:47 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Nov-24 16:51:51 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 13-Nov-24 16:51:51 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 13-Nov-24 16:51:52 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Nov-24 16:51:53 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 13-Nov-24 16:51:54 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 13-Nov-24 16:51:58 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 13-Nov-24 16:51:59 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6700
+DEBUG || 13-Nov-24 16:52:02 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6700
+INFO || 13-Nov-24 17:16:05 || Use pytorch device_name: cpu
+INFO || 13-Nov-24 17:16:05 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 13-Nov-24 17:16:05 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 13-Nov-24 17:16:06 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Nov-24 17:16:06 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 13-Nov-24 17:16:07 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 13-Nov-24 17:16:07 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 13-Nov-24 17:16:08 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 13-Nov-24 17:16:09 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 13-Nov-24 17:16:11 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 13-Nov-24 17:16:12 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6700
+DEBUG || 13-Nov-24 17:16:12 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6700
+INFO || 14-Nov-24 05:53:10 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 05:53:10 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 05:53:10 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 05:53:11 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 14-Nov-24 05:53:11 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 14-Nov-24 05:53:12 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 14-Nov-24 05:53:13 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 14-Nov-24 05:53:13 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 14-Nov-24 05:53:13 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 14-Nov-24 05:53:16 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 14-Nov-24 05:53:17 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6700
+DEBUG || 14-Nov-24 05:53:17 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6700
+INFO || 14-Nov-24 06:05:55 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 06:05:55 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 06:05:55 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 06:05:56 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 14-Nov-24 06:05:57 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 14-Nov-24 06:05:57 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 14-Nov-24 06:05:57 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 14-Nov-24 06:05:58 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 14-Nov-24 06:05:58 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 14-Nov-24 06:06:00 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 14-Nov-24 06:06:00 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6700
+DEBUG || 14-Nov-24 06:06:01 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6700
