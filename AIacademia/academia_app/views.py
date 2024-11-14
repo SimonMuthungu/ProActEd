@@ -166,7 +166,7 @@ logger = logging.getLogger(__name__)
 def predict_probability(request, student_id=3):
     try:
         # Load the machine learning model
-        model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+        model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\probability_model.joblib'
         model = joblib.load(model_path)
         print('Probability model loaded successfully')
 
@@ -239,7 +239,7 @@ def predict_probability(request, student_id=3):
 
 def update_probabilities(course_id=None, school_id=None):
     # Define the path to your trained model
-    model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\proacted_model_2.2_with5morefeatures.joblib'
+    model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\probability_model.joblib'
     try:
         # Load the machine learning model
         model = joblib.load(model_path)
