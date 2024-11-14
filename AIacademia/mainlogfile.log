@@ -23147,3 +23147,43 @@ DEBUG || 14-Nov-24 08:03:05 || https://huggingface.co:443 "GET /api/models/sente
 DEBUG || 14-Nov-24 08:03:05 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
 WARNING || 14-Nov-24 08:05:42 || Not Found: /ws/academia_app/
 WARNING || 14-Nov-24 08:06:10 || Not Found: /ws/academia_app/
+WARNING || 14-Nov-24 08:21:17 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 08:21:35 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 08:21:35 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 08:21:35 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 08:21:48 || Starting new HTTPS connection (2): huggingface.co:443
+DEBUG || 14-Nov-24 08:22:00 || Starting new HTTPS connection (3): huggingface.co:443
+DEBUG || 14-Nov-24 08:22:12 || Starting new HTTPS connection (4): huggingface.co:443
+DEBUG || 14-Nov-24 08:22:25 || Starting new HTTPS connection (5): huggingface.co:443
+DEBUG || 14-Nov-24 08:22:25 || Starting new HTTPS connection (6): huggingface.co:443
+DEBUG || 14-Nov-24 08:25:19 || Starting new HTTPS connection (7): huggingface.co:443
+DEBUG || 14-Nov-24 08:25:23 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 08:25:28 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 14-Nov-24 08:25:29 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+INFO || 14-Nov-24 08:45:56 || C:\Users\Hp\Desktop\ProActEd\AIacademia\academia_app\auth_urls.py changed, reloading.
+WARNING || 14-Nov-24 08:52:48 || From C:\Program Files\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 14-Nov-24 08:53:22 || Use pytorch device_name: cpu
+INFO || 14-Nov-24 08:53:22 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 14-Nov-24 08:53:22 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 14-Nov-24 08:53:25 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 08:53:26 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 08:53:27 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+DEBUG || 14-Nov-24 08:53:27 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 08:53:28 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 08:53:28 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 08:53:53 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG || 14-Nov-24 08:53:54 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6700
+DEBUG || 14-Nov-24 08:53:55 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6700
+WARNING || 14-Nov-24 08:55:36 || Not Found: /landingstyles.css
+WARNING || 14-Nov-24 08:55:38 || Not Found: /graduation-cap-in-cloudy-sky-tod1tubspy6iws6n.jpg
+WARNING || 14-Nov-24 08:55:38 || Not Found: /nice engineers sunset backlit.jpg
+WARNING || 14-Nov-24 08:55:38 || Not Found: /reading-a-bar-chart-versus-a-line-graph-biases-our-judgement-l.jpg
+WARNING || 14-Nov-24 08:55:38 || Not Found: /undraw_code_thinking_re_gka2.svg
+WARNING || 14-Nov-24 08:55:38 || Not Found: /landing.js
+WARNING || 14-Nov-24 08:55:39 || Not Found: /undraw_personal_goals_re_iow7 (1).svg
+WARNING || 14-Nov-24 08:55:39 || Not Found: /undraw_predictive_analytics_re_wxt8.svg
+WARNING || 14-Nov-24 08:55:39 || Not Found: /logo.png
+WARNING || 14-Nov-24 08:55:46 || Not Found: /logo.png
+WARNING || 14-Nov-24 08:55:47 || Not Found: /logo.png

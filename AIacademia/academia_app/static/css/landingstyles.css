@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    background: #f4f4f4;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo, .dynamic-text, .phamburger {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.logo {
+    width: 150px; 
+    height: auto;
+}
+
+
+.hero {
+    padding: 60px 20px;
+    background: #007acc;
+    color: #fff;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* to try override bootstrap css */
+
+.carousel-item {
+    height: 70vh; 
+}
+
+.carousel-item img {
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.navbar-brand {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } 
+
+.tagline {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.features-carousel {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    gap: 0;
+}
+
+
+
+.problem-section, .solutions-section, .cta-section {
+    padding: 40px 20px;
+    text-align: center;
+    background: #f9f9f9;
+    margin: 20px 0;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    background: #007acc;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    animation: pulse 2s infinite alternate;
+}
+
+.cta-btn:nth-child(2) { /* Target the second button */
+    animation-delay: 1s; /* Delay the animation for the second button */
+}
+
+.cta-btn:hover {
+    background: #005f99;
+}
+
+/* .cta-btn.pulse {
+    /* animation: pulse 1s ease-in-out infinite alternate; */
+  /*} */
+
+@keyframes pulse {
+0% {
+    transform: scale(1);
+}
+50% {
+    transform: scale(1.1);
+}
+100% {
+    transform: scale(1);
+
+}
+}
+
+.statistics {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #333;
+    color: #fff;
+}
+
+/* problem-section */
+.problem-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.problem-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.problem-section p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.statistics {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stat {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.stat img {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.stat p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    background: #007acc;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s ease-in-out;
+  }
+
+.solutions-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.solution-content {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.solution-image {
+    flex: 1;
+    text-align: center;
+}
+
+.solution-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.team-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+    padding: 50px 0;
+    
+}
+
+.team-content {
+    flex: 1;
+    padding-right: 30px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.team-member {
+    text-align: center;
+    margin: 20px;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 20px; 
+    display: block;
+}
+
+/* .typed-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+  } */
+
+
+  @media (max-width: 768px) {
+    .navbar-toggler {
+        position: absolute;
+        right: 0;
+        top: 1px;
+      }
+
+    .statistics {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center the elements horizontally */
+      }
+      
+      .stat {
+        text-align: center;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        margin-bottom: 20px; /* Add spacing between the stats */
+      }
+      
+      .stat img {
+        display: block; /* Make the image block-level to stack it below the text */
+        max-width: 50%;
+        height: auto;
+        margin-bottom: 10px;
+      }
+      
+      .stat p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+  }

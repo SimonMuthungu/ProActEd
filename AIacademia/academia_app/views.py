@@ -97,6 +97,10 @@ def admin_login_view(request):
 def predict(request):
     return render(request, 'academia_app/predict.html')
 
+
+def landing_page(request):
+    return render(request, 'academia_app/landing.html')
+
 @login_required
 def admin_dashboard(request):
     user_group = None
