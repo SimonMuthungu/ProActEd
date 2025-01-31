@@ -19768,3 +19768,18 @@ WARNING || 25-Jun-24 13:37:17 || Not Found: /favicon.ico
 INFO || 25-Jun-24 13:48:22 || S-Bert 2024 Recommender Engine Initialized
 INFO || 25-Jun-24 13:48:44 || Time taken by sbert model: 22.48206329345703
 INFO || 25-Jun-24 13:48:44 || Recommender system has run
+WARNING || 31-Jan-25 16:07:56 || From C:\Users\USER\AppData\Local\Programs\Python\Python311\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO || 31-Jan-25 16:07:57 || Use pytorch device_name: cpu
+INFO || 31-Jan-25 16:07:57 || Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+DEBUG || 31-Jan-25 16:07:57 || Starting new HTTPS connection (1): huggingface.co:443
+DEBUG || 31-Jan-25 16:07:59 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 31-Jan-25 16:07:59 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+DEBUG || 31-Jan-25 16:07:59 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG || 31-Jan-25 16:08:00 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+DEBUG || 31-Jan-25 16:08:00 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+DEBUG || 31-Jan-25 16:08:02 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG || 31-Jan-25 16:08:04 || https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG || 31-Jan-25 16:08:04 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6789
+DEBUG || 31-Jan-25 16:08:05 || https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6789
+WARNING || 31-Jan-25 16:08:19 || Not Found: /favicon.ico
