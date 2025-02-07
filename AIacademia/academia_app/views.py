@@ -166,7 +166,9 @@ logger = logging.getLogger(__name__)
 def predict_probability(request, student_id=3):
     try:
         # Load the machine learning model
-        model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\probability_model.joblib'
+        # model_path = r'C:\Users\Hp\Desktop\ProActEd\AIacademia\trained_models\probability_model.joblib'
+        model_path = r'C:\Users\Simon\cleanproacted\ProActEd\AIacademia\trained_models\probability_model.joblib'
+
         model = joblib.load(model_path)
         print('Probability model loaded successfully')
 

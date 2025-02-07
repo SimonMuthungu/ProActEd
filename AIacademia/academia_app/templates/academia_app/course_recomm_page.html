@@ -29,13 +29,91 @@
             border-radius: 50%;
             margin-right: 10px; /* Space between avatar and message */
         }
+
+        .content-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .big-avatar {
+            width: 520px;
+            height: 520px;
+            background: url("{% static 'avatars/happy.png' %}") no-repeat center center;
+            background-size: cover;
+            border-radius: 10%;
+            position: absolute;
+            transform: translateX(100%);
+            transition: transform 1s ease;
+        }
+
+        .video-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: transform 1s ease;
+            z-index: 1;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .content-container:hover .video-container {
+            transform: translateX(-100%);
+        }
+
+        .content-container:hover .big-avatar {
+            transform: translateX(0);
+        }
+
+
+
     </style>
 </head>
 <body>
     <div class="container">
         <div class="left-panel">
-            <h1>Welcome to the Course Selection Assistant</h1>
-            <p>This side will provide guidance and additional information as you fill out the form.</p>
+
+
+            <!-- <h1>Welcome to PROACTED</h1>
+            <h3> Let me help you find a course.</h3>
+
+            <div class="big-avatar"></div> 
+
+            <div class="video-container">
+                <video autoplay muted loop>
+                  <source src="{% static 'Video/Bo.mp4' %}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div> -->
+
+
+              <!-- The more ambitious approach -->
+
+              <!-- <h1>Welcome to PROACTED</h1>
+                <h3>Let me help you find a course.</h3> -->
+
+                <div class="content-container">
+                    <div class="big-avatar"></div> <!-- Avatar div -->
+                    <div class="video-container">
+                        <video autoplay muted loop>
+                            <source src="{% static 'Video/Bo.mp4' %}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div> <!-- Video div -->
+                </div>
+
+              
+              <!-- sample quick description of a tech and art student: tech-Ever since I was a kid, I've always been curious about how things work — I was that kid who'd take apart toys just to see if I could put them back together. When I got my first computer, I was hooked. I started teaching myself basic coding, and it felt like unlocking secret worlds. What fascinates me most about tech is how it blends logic and creativity, especially when building software that solves real-life problems. I’m always excited by the idea of creating something from scratch, whether it's an app or a website, and seeing it come to life. Tech never stops evolving, and there's always something new to learn, which keeps me motivated.
+
+              and art-Art has always been my way of making sense of the world. As a kid, I would spend hours drawing, painting, or just imagining new creations. Over time, I realized that art isn't just about expression — it's about telling stories and connecting with people. I love experimenting with different styles and mediums, from digital illustrations to hands-on sculpture work. What excites me the most is how art can shape perspectives and spark conversations. Whether it's designing visuals for a brand or creating something abstract that makes people pause, I want to keep exploring the endless possibilities that art offers. -->
 
             <div class="chat-avatar" id="chatAvatar"></div>
             <div class="chat-widget" id="chatWidget">
@@ -64,7 +142,7 @@
                 {% csrf_token %}
                 <!-- Step 1: Interests -->
                 <div id="step1" class="form-step active">
-                    <h2>Select Your Interests</h2>
+                    <h2>PROACTED - Let us help you find a course - Select Your Interests</h2>
                     <div class="button-grid">
                         {% for interest in interests %}
                         <button type="button" class="interest-button" data-value="{{ interest }}" aria-pressed="false" onclick="toggleInterest('{{ interest.id }}')">
@@ -74,6 +152,7 @@
                         {% endfor %}
                     </div>
                     <button type="button" class="next-btn">Next</button>
+                    <button id="loginButton" class="login-btn" data-url="{% url 'login' %}">Login</button>
                 </div>
                 <!-- Step 2: Additional Info -->
                 <div id="step2" class="form-step">
@@ -81,6 +160,8 @@
                     <textarea id="additionalInfo" name="additionalInfo" placeholder="E.g I love music and art. Music is my passion. Since I was a child, I've always produced music and video entertainment. It makes me feel alive, that life is worth living. I also love media and video production"></textarea>
                     <button type="button" class="next-btn">Next</button>
                     <button type="button" class="back-btn">Back</button>
+                    <br>
+                    <!-- <button id="loginButton" class="login-btn" data-url="{% url 'login' %}">Login</button> -->
                 </div>
                 <!-- Step 3: Subjects -->
                 <div id="step3" class="form-step">
@@ -96,6 +177,8 @@
                     </div>
                     <button type="submit" class="submit">Recommend Courses For Me Now!</button>
                     <button type="button" class="back-btn">Back</button>
+                    <br>
+                    <button id="loginButton" class="login-btn" data-url="{% url 'login' %}">Login</button>
                 </div>
             </form>
             <!-- Recommendations Display Area -->
@@ -105,6 +188,7 @@
                     <!-- Recommendations will be inserted here -->
                 </ul>
                 <button id="loginButton" class="login-btn" data-url="{% url 'login' %}">Login</button>
+                <button type="button" class="login-btn" onclick="window.location.href='http://127.0.0.1:8000/course_recommendation/'">Try Again</button>
                 <br>
             </div>
         </div>
